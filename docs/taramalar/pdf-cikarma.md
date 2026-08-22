@@ -1,0 +1,32 @@
+# PDF çıkarma araçları taraması
+
+## Depolar
+- PyMuPDF · https://github.com/pymupdf/PyMuPDF · AGPL-3.0 (Artifex ticari lisans ayrı) · push 2026-08-22, son sürüm 1.28.2 (2026-08-06) · 10.5k yıldız, 58 açık issue, ~363 MB depo.
+- pdfplumber · https://github.com/jsvine/pdfplumber · MIT · push 2026-08-06, son sürüm v0.11.10 (2026-06-15) · 10.7k yıldız, 97 açık issue, ~22 MB. pdfminer.six üstünde saf Python.
+- camelot-dev/camelot · https://github.com/camelot-dev/camelot · MIT · push 2026-08-06, son sürüm v2.0.0 (2026-06-04) · 3.8k yıldız, 52 açık issue. **Görevdeki `atlanhq/camelot` arşivlenmiş** (son push 2023-01-05, son etiket v0.7.2 2019, lisans NOASSERTION) — bakımlı çatal camelot-dev.
+- Unstructured-IO/unstructured · https://github.com/Unstructured-IO/unstructured · Apache-2.0 · push 2026-08-21, sürüm 0.27.1 (2026-08-21) · 15.3k yıldız, 295 açık issue, ~237 MB.
+- pypdfium2 (AGPL'siz yedek) · https://github.com/pypdfium2-team/pypdfium2 · Apache-2.0/BSD-3 (PDFium BSD) · push 2026-08-22 · 811 yıldız, 2 açık issue.
+- mupdf.js (Node yolu) · https://github.com/ArtifexSoftware/mupdf.js · AGPL-3.0 · push 2026-07-01 · 607 yıldız.
+
+## Alınacak fikirler
+- **Görsel + konum tek geçişte PyMuPDF ile.** Depo belgelerinde `get_image_info`, `get_image_rects` ve `extract_image` adları doğrulandı; ilk ikisi görselin sayfadaki dikdörtgenini, üçüncüsü orijinal gömülü baytı (yeniden sıkıştırmasız) verir. Quizloop'ta soru üretiminin "görseli sayfa koordinatıyla birlikte sakla" adımına oturur: aynı görsel hem soru gövdesine basılır hem sayfa numarasıyla kaynağa bağlanır. pdfplumber'ın `.images` listesi bbox verir ama gömülü baytı sökmez — kırpma için sayfayı raster'a çevirmek gerekir, bu da vektör şema ve formülleri bulanıklaştırır.
+- **`/Outlines` → bölüm-sayfa aralığı.** PyMuPDF'te `get_toc`/`set_toc` belgelerde doğrulandı; TOC düz liste olarak `[seviye, başlık, sayfa]` döner. Ardışık girdilerin sayfa farkından bölüm aralığı türetmek bizim tarafımızda ~30 satırlık iş. LANGE kitabının kendi outline ağacı olduğu için modül sınırlarını AI'ya sordurmadan deterministik kurabiliriz — üretim maliyeti ve tutarsızlık birlikte düşer.
+- **Camelot'un tablo başına kalite metriği.** v2.0.0 sürüm notlarına göre backend `pypdf`+`pdfminer.six`'ten `playa-pdf`'e taşındı, varsayılan görüntü backend'i pypdfium2 (sistem bağımlılığı yok) ve her tablo için accuracy/whitespace/confidence üretiliyor, `TableList.filter(...)` ile eşiğin altı atılıyor. Quizloop'ta değerli olan tablo çıkarmanın kendisi değil, **çıkanı otomatik çöpe atabilme**: eşiği geçmeyen tabloyu soru üretimine hiç sokmayız, sessiz bozuk tablo ekrana basılmaz.
+
+## Kaçınılacaklar
+- **PyMuPDF'i uygulamaya gömmek.** COPYING dosyası saf AGPL-3.0; README ikili lisansı açıkça yazıyor: açık kaynak için AGPL, tescilli uygulama için Artifex'ten ayrı ticari lisans. MIT yayınlamayı planlıyorsak PyMuPDF'i kütüphane olarak Electron paketine koymak MIT ile bağdaşmaz — AGPL, ağ üzerinden kullanımı da kapsar. İki temiz çıkış var: (a) çıkarıcıyı ayrı bir AGPL depo/araç olarak tutup Quizloop'un yalnız üretilmiş JSON'u tüketmesi, (b) motoru pypdfium2 (BSD/Apache) + pdfplumber (MIT) üstüne kurup PyMuPDF'i hiç dağıtmamak. mupdf.js de AGPL olduğu için "Node tarafına geçince lisans sorunu çözülür" yanlıştır.
+- **Unstructured'ı tek kapı yapmak.** Kod Apache-2.0 ama README `[all-docs]` kurulumu için sistem düzeyinde `libmagic-dev`, `poppler-utils`, `tesseract-ocr` istiyor; PDF için poppler+tesseract açıkça şart koşuluyor. Bizim kaynağın metin katmanı temiz, OCR gerekmiyor — yani ödediğimiz kurulum yükünün karşılığını almıyoruz. 295 açık issue ve depo boyutu (~237 MB) da bakım yüzeyini büyütüyor. Ek olarak `hi_res` yolu PyTorch model indirir; Electron dağıtımına sığmaz.
+- **atlanhq/camelot'a bağımlılık.** Arşivli, son etiketli sürüm 2019, lisans alanı NOASSERTION (SPDX çözülemiyor) — dağıtılan üründe lisans belirsizliği tek başına yeter sebep. Tasarımı okunur, bağımlılığı kurulmaz.
+- **Camelot'un `ml` backend'i (Table Transformer).** README borderless tablolarda FinTabNet üzerinde TEDS'i "roughly doubles" diyor; bu sayı bizce **doğrulanamadı** ve bizim veri türüne aktarılabilirliği belirsiz. PyTorch bağımlılığı da opsiyonel ama ağır. Metin katmanı ruled tablolar için `lattice` yeterli olmalı, ölçmeden ml'e geçilmez.
+- **Tabloyu "çözülmüş veri" sanmak.** Camelot da pdfplumber da ruled olmayan, hücre birleştirmeli ve sayfa aşan tablolarda sessizce yanlış üretir. Quizloop'ta tablo yanlışsa soru yanlış olur; bu yüzden tablo çıktısı ya metrik eşiğinden geçer ya da o bölge **görsel olarak kırpılıp** resim gibi basılır. İkinci yol her zaman elde kalan güvenli seçenek.
+
+## Doğrulanamayanlar
+- 401 MB / 1468 sayfalık dosyada bellek davranışı hakkında **hiçbir birincil kaynak ölçümü yok — doğrulanamadı.** MuPDF sayfaları tembel yükler ama PyMuPDF'te uzun döngülerde sayfa nesnesi birikimi bilinen bir konudur; karar öncesi kendi ölçümümüzü almalıyız (200'er sayfalık parçalar, parça başına ayrı süreç, süreç RSS'i kayda alınır). pdfplumber saf Python olduğu için sayfa başına nesne sayısıyla doğrusal şişer; README'de `.close()` ve sayfa bazlı temizlik gerektiği belirtilir, bu ölçekte en riskli aday odur.
+- Node/Electron entegrasyonu için saf JS, AGPL'siz ve **konumlu gömülü görsel** çıkaran olgun bir kütüphane bulunamadı. pdf.js (Apache-2.0, 53.7k yıldız, aktif) sayfayı render eder ve operatör listesi üzerinden görsel yerleşimine ulaşılabilir, ama bu düşük seviyeli ve bizde denenmedi — **doğrulanamadı**. Pratik yol: çıkarma işini Python yan-sürecine vermek, Electron'un yalnız JSONL/dosya tüketmesi. Bu aynı zamanda lisans sınırını süreç sınırıyla örtüştürür.
+
+## Karar önerisi
+- Çıkarma boru hattı ayrı bir Python yan-süreci olsun; Electron ona sadece dosya yolu verir, JSONL alır. Süreç sınırı hem bellek hem lisans sınırıdır.
+- MIT yayın planı sürüyorsa dağıtılan motor **pypdfium2 + pdfplumber** olsun; PyMuPDF yalnız bizim iç kullandığımız, dağıtılmayan üretim aracında kalsın veya Artifex ticari lisansı fiyatlansın.
+- `/Outlines` ağacından modül-sayfa aralığı deterministik türetilsin, AI'ya bölüm sınırı sordurulmasın.
+- Tablo için camelot-dev/camelot v2 denensin, ama kabul koşulu accuracy/confidence eşiği olsun; eşiği geçmeyen bölge tablo değil **kırpılmış görsel** olarak basılsın.
+- İlk iş, karar vermeden önce LANGE dosyasında parça başına bellek ve süre ölçümü — bu belgedeki bellek satırları ölçümle değiştirilecek.

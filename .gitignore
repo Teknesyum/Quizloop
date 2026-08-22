@@ -1,0 +1,25 @@
+node_modules/
+dist/
+dist-electron/
+release/
+out/
+.vite/
+*.log
+.DS_Store
+Thumbs.db
+.env
+.env.*
+!.env.example
+
+# Content modules never ship with the engine.
+modules/*
+!modules/_ornek/
+!modules/_ornek/**
+
+# Local caches produced while building modules.
+.quizloop-cache/
+sources/
+
+# Local agent/relay working state.
+.claude/relay/
+.claude/agent-memory/
