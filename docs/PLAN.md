@@ -116,8 +116,17 @@ taşımıyor. **İlk dışa aktarma hedefi GIFT.**
 (Perseus `rationale`, Moodle `question_answers.feedback`, H5P `tipsAndFeedback`).
 Sonradan eklenen bir alan değil — şemaya ilk günden zorunlu girer.
 
+Dışa aktarma tarafında iki kapı kapandı: `genanki-js` AGPL-3.0, `qti-components`
+GPL-3.0. İkisinden de yalnız desen alınabilir. Zaten ikisi de bizim şık başına
+açıklamamızı doğal taşımıyor — Anki şablonu seçilen şıkkı kaydetmiyor, QTI'de her
+çeldirici için ayrı işleme kuralı ve ayrı geri bildirim bloğu gerekiyor (soru başına
+kırk satır XML). **GIFT birincil ve tek dışa aktarma hedefi kalıyor**; düz metin bir
+biçim olduğu için kütüphane de gerektirmiyor.
+
 Dağıtım: modül paketi **zip + METADATA** olarak taşınır, ilerleme paketin dışında
-kalır ve kalıcı soru kimliğiyle bağlanır. Obsidian'ın aralıklı tekrar eklentisi
+kalır ve kalıcı soru kimliğiyle bağlanır. Yazma tarafı `archiver`, **açma tarafı ayrı
+kurulur** (`yauzl` + METADATA beyaz listesi) — `archiver` yalnız zip yazar, açmaz. Açma
+sırasında arşiv içindeki yol hedef klasörün dışına çıkıyorsa dosya reddedilir. Obsidian'ın aralıklı tekrar eklentisi
 zamanlama verisini içeriğin içine gömüp pişman olmuş; Mnemosyne kalıcı kimlikli kayıt
 akışıyla doğru çözmüş. Bizim ayrımımız Mnemosyne'ninki.
 
@@ -149,10 +158,36 @@ noktasız i, tire, satır sonu tiresi, NFC birleştirme.
 
 ### Veritabanı sürücüsü
 
+Sorgu katmanı **`kysely`**. Sebep tek bir teknik ayrıntı: `MigrationProvider` bir
+arayüz, göçler dosya sisteminden okunmak zorunda değil — statik bir nesne haritası
+verilebilir. Drizzle'ın çalışma anındaki göç aracı ise göç klasörünü diskten okuyor
+(`meta/_journal.json`), yani `asar` paketinde `extraResources` ayarlanmazsa üretimde
+patlıyor ve `drizzle-kit` paketlenmiş uygulamada hiç koşmuyor. `kysely`'nin
+`SqliteDatabase` tipi de yapısal bir arayüz — sürücüyü değiştirmek tek dosya.
+*Uyarı*: `kysely` 0.29'dan beri `node >= 22` istiyor; Electron'un Node sürümüne göre
+0.28.x'e sabitlemek gerekebilir.
+
+Göç konusunda üç bağımsız tarama aynı yere çıktı: **göç dosyalarını çalışma zamanında
+keşfetme, koda göm.** `asar` paketinde `glob` ve dizin taraması kırılır. `umzug`'un
+"doğrudan göç listesi" kipi ile `kysely`'nin statik sağlayıcısı aynı şeyi söylüyor;
+`kysely` zaten sorgu katmanı olduğu için göç de ondan alınır, `umzug` desen olarak kalır.
+
 `better-sqlite3` **12.x'e sabitlenir**. 13.0.0 N-API'ye geçip önceden derlenmiş ikilileri
 npm paketine gömdü — derleme zincirini elemenin yolu bu, ama sürüm bir aylık ve açık bir
 segfault kaydı var. Yeniden derleme yalnız `electron-builder` aşamasında çalışır,
 **çapraz derleme yok**: her işletim sistemi kendi artefaktını üretir.
+
+### Kimlik ile içerik ayrı şeylerdir
+
+Taramanın en keskin bulgusu bu. Anki notta `guid` (kalıcı kimlik) ile `csum` (ilk alanın
+sağlaması) ayrı tutuyor ve içe aktarımda **önce `guid` eşleşmesi** arıyor. Sağlama
+kimlik değil, yalnızca "bu soru değişti" sinyali.
+
+Quizloop'ta aynısı: `id` modül üretilirken bir kez atanan kalıcı bir kimliktir, asla
+içerikten türetilmez. `contentHash` yalnız değişim tespiti içindir.
+
+Silinen soru **silinmez, işaretlenir** (Anki'nin `graves` deseni). Yoksa modül eski bir
+sürüme dönerse ilerleme geri gelmez.
 
 ### Modül sürümlendiğinde
 
@@ -192,8 +227,19 @@ içerik yapay zekâ üretimidir, ham HTML'e izin verilmez.
 Formül: **KaTeX**, MathJax değil. Ölçüldü: `katex.min.js` 277 KB + 23 KB CSS,
 MathJax'in `tex-mml-chtml.js` 1,17 MB. Masaüstü paketinde bu fark gereksiz.
 
-Durum: `zustand` (oturum içi arayüz) + `@tanstack/react-query` (IPC önbelleği).
+Durum: yalnız `zustand`. **`@tanstack/react-query` elendi** — varsayılanlarının tamamı
+HTTP dünyası için yazılmış (bayatlama süresi sıfır, odakta yeniden çekme, üç deneme) ve
+IPC'de doğru kullanımı bunları tek tek kapatmak demek. Üstelik tek yazar ana süreç
+olduğu için çözülecek bir önbellek geçersizleştirme sorunu yok.
+
 Oturum makinesi ayrıştırıcı birleşim ile; XState gerekmiyor, beş durumluk bir makine.
+Zustand'ın `set` işlevi tek seviye birleştirdiği için **birleşim kökte değil `phase`
+alanında durur** — kökte durursa `set(x, true)` çağrısı aksiyonları siler ve tip sistemi
+bunu yakalamaz.
+
+Test `vitest`. FSRS'i sahte saatle değil **saat enjeksiyonuyla** test ederiz: `ts-fsrs`
+zaten `now` parametresi alıyor, sistem saatini taklit etmeye gerek yok. Ana süreç ile
+renderer testleri `test.projects` ile ayrılır.
 
 ### Typer efekti
 
@@ -261,6 +307,13 @@ Seçilen zincir:
 Birim = **alt başlık**, sayfa değil. Sayfa sınırı kavramı ortadan böler. PDF'in
 `/Outlines` ağacı okunur, tipik birim 3-8 sayfa. Görseller sökülüp `webp`'e çevrilir.
 
+Görsel dönüştürme `sharp` ile yapılır ama **yalnız `quizforge` içinde kalır.** Deponun
+kendisi Apache-2.0, fakat çalışması için gereken platform ikilileri
+(`@img/sharp-libvips-*`) LGPL-3.0-or-later ve libvips'in kendisi LGPL-2.1. GPL değil
+ama copyleft: Electron paketine gömülürse lisans metni iletme ve yeniden bağlama
+yükümlülüğü doğar. Uygulama zaten üretilmiş `webp` dosyalarını okuyor — bu ayrım
+`asarUnpack` derdini de baştan siliyor.
+
 ### Kontrol noktası
 
 `build/checkpoint.json`, atomik yazım (`.tmp` sonra rename):
@@ -300,6 +353,25 @@ soruların **yalnız son 200 kökü**. Önceki çıktılar bağlama girmez.
 - doğru cevap harf dağılımı χ² denetimi (model "C" şıkkını sever)
 
 Rapor `build/verify-report.json`. `pack`, `verify` geçmeden çalışmaz.
+
+### Modele bağlanma
+
+`@anthropic-ai/sdk`. Yapılandırılmış çıktı `messages.parse()` + `zodOutputFormat()` ile
+sunucu tarafında `json_schema` olarak zorlanıyor ve SDK içeride `zod/v4` kullanıyor —
+şema kararımızla birebir örtüşüyor, araya ek bir katman girmiyor.
+
+HTTP yeniden denemesi de SDK'nın içinde: `retry-after` başlığına uyuyor, üstel geri
+çekilme ve dağıtım (jitter) uygulanmış. **`instructor-js` elendi** — OpenAI istemcisini
+zorunlu eş bağımlılık yapıyor, tipleri zod v4'te olmayan bir isme dayanıyor ve
+2025-01'den beri commit almamış. Onarım turu deseni alınır, paket alınmaz.
+
+Şema uyumsuzluğunda onarım turu `p-retry` ile kurulur (`shouldRetry`,
+`shouldConsumeRetry`, `onFailedAttempt`). Varsayılanları ezmek şart: on deneme ve
+tavansız bekleme kabul edilemez. **Tek yeniden deneme katmanı olacak** — SDK'nınki ile
+bizimki üst üste binerse hata bir yerine dört kez gider.
+
+Akış (streaming) gerekmiyor: yalnız çok büyük yanıtlarda zorunlu hale geliyor, bizim
+birim başına çıktımız o eşiğin çok altında.
 
 ### Kaynak sadakati — sıra önemli
 
@@ -342,6 +414,16 @@ altında, bellek 400 MB altında.
 **Dalga 4 — deneyim.** Puan sistemi ve şıksız bilme bonusu, "çözümü tekrar anlat",
 istatistik ekranı, **"bu soru bozuk" bayrağı** (`flags.json` → quizforge o birimi
 yeniden üretir), klavye kısayolları, koyu tema.
+
+Grafikler `visx`, altı paketle sınırlı. Primitifleri stilsiz SVG olduğu için renk
+doğrudan tema değişkenlerimizden geçiyor, kütüphane kendi paletini dayatmıyor — ısı
+haritası da hazır geliyor. `recharts` elendi: ısı haritası bileşeni yok ve tepki veren
+kabı sabit ebeveynde küçülmüyor (2023'ten beri açık kayıt).
+
+Uzun listeler (soru bankası, istatistik) `@tanstack/virtual` ile sanallaştırılır — sınav
+ekranında değil, orada tek soru var. **Klavye gezinmesi indeks tabanlı yazılmalı**:
+görünmeyen satır DOM'da olmadığı için seçim düğüme bağlanırsa Tab ve ekran okuyucu
+bozulur.
 *Kabul*: fare kullanmadan tam bir oturum tamamlanabiliyor.
 
 **Dalga 5 — dağıtım.** `electron-builder` üç hedef, `electron-updater`, gömülü örnek
@@ -390,9 +472,15 @@ başına dört dereceye yetmiyor, şık denemesi sonucuyla birleşince yetiyor.
 İkisi de haklı — A istenen davranışı yapıyor, B aralıklı tekrarın doğrusunu. Varsayılan
 A, ayarla açılan ikinci kip B.
 
-**PDF kütüphanesi.** A `mupdf`, B `pdfjs-dist` önerdi. **İkisi de düşürüldü**: tarama
-mupdf'in AGPL olduğunu, `pdfjs-dist`'in ise görsel ve `/Outlines` çıkarımında zayıf
-kaldığını gösterdi. Zincir `pypdfium2` + `pdfplumber` + `camelot` + `docling` oldu.
+**PDF kütüphanesi.** A `mupdf`, B `pdfjs-dist` önerdi. **İkisi de düşürüldü**, ama
+gerekçeleri farklı: `mupdf` AGPL olduğu için alınamaz. `pdfjs-dist` ise lisans olarak
+temiz ve `getOutline()` birinci sınıf, belgelenmiş bir API — zayıf olan yalnız görsel
+çıkarma tarafı. Elenme sebebi ikinci bir PDF motorunu ayakta tutmanın maliyeti: zincir
+zaten Python yan-sürecinde `pypdfium2` + `pdfplumber` + `camelot` + `docling` ile
+kuruluyor, içindekiler ağacını da orası veriyor.
+
+`pdf-lib` hiç değerlendirmeye girmedi: son yayını 2022, kendi belgeleri sayfa metni
+çıkaramadığını söylüyor ve `/Outlines` API'si yok.
 
 **Parçalama birimi.** A ~15 sayfalık sabit dilim, B alt başlık. B alındı: sabit sayfa
 dilimi kavramı ortadan böler.
