@@ -56,20 +56,30 @@ odur. Mekanik kapalıysa Easy hiç üretilmez, FSRS bundan zarar görmez. Yanlı
 
 ### Emeklilik
 
-Kullanıcı "anladım" dediği soruyu bir daha görmek istemiyor. Varsayılan davranış bunu
-harfiyen uygular: `retired_at` damgalanır, kart kuyruktan çıkar, **silinmez** ve
-istenirse geri getirilir. FSRS durumu yine kaydedilir.
+Kullanıcı "anladım" dediği soruyu bir daha görmek istemiyor. Davranış bunu harfiyen
+uygular: `retired_at` damgalanır, kart kuyruktan çıkar, **silinmez** ve istenirse geri
+getirilir. FSRS durumu yine kaydedilir.
 
-Ayarlarda ikinci bir kip bulunur — *yumuşak emeklilik*: kart ancak `stability > 365 gün`
-ve son üç tekrar Good/Easy ise emekli olur. Aralıklı tekrarın asıl davranışı budur;
-tek "anladım" tıklamasıyla emekli olan kart altı ay sonra unutulmuş olabilir.
-Varsayılan istenen davranış, ikincisi bir bayrak.
+*Yumuşak emeklilik* kipi (kart ancak kararlılığı bir yılı geçince emekli olsun)
+**v1'de yok.** Alan duruyor, ikinci davranış yolu yok — ayar yüzeyi olmayan bir bayrak
+için iki kod yolu taşımaya değmez. Aralıklı tekrarın asıl davranışı budur ve gerekirse
+sonra açılır; kayıt `docs/kararlar/0002-derece-eslemesi.md` dosyasında.
 
 ### Kuyruk politikası
 
 Vadesi geçmiş ve `lapses >= 2` olanlar önce, sonra vadesi gelenler, sonra hiç
 görülmemişler, en sona kısmen anlaşılanlar. **Kavram gömme**: aynı `conceptId`'den
 günde en fazla bir soru — binlerce soruda aynı bilgiyi beş kez sormayı engeller.
+
+**Oturum içi yeniden-öğrenme kuyruğu.** FSRS'in Again vadesi gün mertebesinde olabilir,
+ama kullanıcı "anlamadım" dediği soruyu aynı oturumda tekrar görmek istiyor. Bu kuyruk
+FSRS'ten bağımsızdır ve bellekte yaşar: "anlamadım" işaretlenen kart oturum kuyruğunun
+sonuna eklenir, oturum kapanınca kaybolur. Kalıcı vadeyi yine FSRS yazar. Bu ayrım
+olmadan Dalga 1 kendi kabul ölçüsünü karşılayamaz.
+
+**Gün sınırı.** "Günde en fazla bir soru" ve "vadesi gelmiş" hesapları için günün
+nerede başladığı ayarlanabilir olmalı (varsayılan 04:00). Gece çalışan kullanıcı için
+gece yarısı yanlış sınırdır.
 
 Parametre optimizasyonu birinci sürümde yok. Tarama eşiği doğruladı: anlamlı
 optimizasyon için birkaç yüz tekrar gerekiyor, soğuk başlangıçta FSRS-6 varsayılan
@@ -141,10 +151,21 @@ card         module_id, question_id, concept_id, content_hash,
              last_review, retired_at
 review_log   card_id, ts, rating, self_assess, revealed_choices,
              wrong_picks, duration_ms
-session      setting
+session      id, started_at, ended_at, module_id, seen, correct, score
 ```
 
 `review_log` asla özetlenmez, ham kalır.
+
+**Ayarlar bu veritabanında durmaz.** Tema, kısayollar, gün başlangıç saati ve modül
+klasörü yolu `electron-store` tarafında yaşar. Tek doğruluk kaynağı kuralı: SQLite
+yalnız ilerleme, `electron-store` yalnız ayar. İkisinde birden duran hiçbir alan olmaz.
+
+### Yedekleme ve bozulma
+
+Açılışta `PRAGMA integrity_check`. Bozuksa kullanıcıya sorulur, sessizce onarılmaz.
+
+Her şema göçünden **önce** `quizloop.db.bak-v<N>` kopyası alınır. Bir akşamlık iş, ama
+sonradan eklenirse ilk veri kaybı çoktan yaşanmış olur — bu yüzden Dalga 1'de.
 
 ### Türkçe arama — ölçülmüş tuzak
 
@@ -155,6 +176,10 @@ SQLite FTS5'in `unicode61` katlaması Türkçe'de bozuk: `IŞIK` → `isik`, ama
 Kural: **katlama TypeScript tarafında `tr` yerelinde yapılır**, SQLite'a hazır belirteç
 verilir. Aynı normalizasyon `source.quote` doğrulamasında da kullanılır — noktalı ve
 noktasız i, tire, satır sonu tiresi, NFC birleştirme.
+
+**FTS5 sanal tablosu ve üçlü-gram indeksi v1'de kurulmaz.** Hiçbir dalga arama ekranı
+açmıyor; kurulacak tek şey `fold(tr)` işlevi, o da `quizforge` alıntı doğrulaması için
+zaten yazılıyor. İndeks, soru bankası ekranı gerçekten arama isteyince gelir.
 
 ### Veritabanı sürücüsü
 
@@ -241,6 +266,10 @@ Test `vitest`. FSRS'i sahte saatle değil **saat enjeksiyonuyla** test ederiz: `
 zaten `now` parametresi alıyor, sistem saatini taklit etmeye gerek yok. Ana süreç ile
 renderer testleri `test.projects` ile ayrılır.
 
+**Arayüz v1'de tek dilli (Türkçe).** `i18next` yığına bilinçli olarak alınmadı; taramada
+değerlendirildi ve ertelendi. Bu satır burada duruyor ki Dalga 0'da biri "eksik" sanıp
+kurmasın.
+
 ### Typer efekti
 
 İki ayrı sorun var, ikisinin de çözümü tarandı:
@@ -272,6 +301,27 @@ koşabilmelidir. Uygulamaya sonradan "forge'u çağıran ince bir sekme" ekleneb
 tersi mümkün değildir.
 
 Komutlar: `init` · `plan` · `run` · `verify` · `pack`.
+
+### Anahtar ve maliyet tavanı
+
+Anahtar `ANTHROPIC_API_KEY` ortam değişkeninden okunur, yoksa `~/.quizforge/config.json`
+dosyasından. **`rules.yaml` içinde anahtar alanı yoktur** — kural dosyası modülle
+birlikte paylaşılabilir olmalı, anahtar taşıyan bir dosya paylaşılamaz. `.gitignore`
+kural dosyasını değil, `~/.quizforge` dizinini korur; depo içinde anahtar aranacak bir
+yer bırakılmaz.
+
+`run --max-usd <n>` (veya token tavanı) **zorunlu bir güvenlik kemeri**, süs değil.
+`checkpoint.costTokens` zaten sayılıyor ama duracak bir eşik yok; hatalı bir döngü
+1468 sayfalık bir kitapta faturayla fark edilir. Tavan aşılınca `run` temiz durur ve
+kontrol noktası tutarlı kalır.
+
+### Python ortamı
+
+Çıkarma katmanı Python. Ortam `uv` ile kurulur, sürümler `tools/quizforge/py/requirements.txt`
+dosyasında **pinlenir**, hedef sürüm tek yerde yazılıdır. `quizforge doctor` komutu
+ortamı sınar: Python var mı, paketler doğru sürümde mi, `camelot` çalışıyor mu.
+Windows'ta `docling` ve `camelot` kurulumu Dalga 2'nin ilk günüdür — plansız girilirse
+gün orada gider.
 
 ### Kural dosyası
 
@@ -394,15 +444,25 @@ kalmaz ve web kipi denetlenemez hale gelir.
 **Dalga 0 — iskelet ve dağıtım hattı.** `electron-vite`, TS strict, veritabanı katmanı,
 şema, `ts-fsrs`. Üç-OS Actions matrisi **şimdi** kurulur, sonra değil.
 *Kabul*: `npm run dev` pencere açar **ve paketlenmiş derlemede** veritabanı açma
-denemesi geçer. *Ölçü*: üç platformda artefakt inip çalışıyor.
+denemesi geçer. *Ölçü*: Windows ve Linux'ta artefakt inip çalışıyor; macOS'ta
+**`xattr -cr` sonrası** açılıyor — imzasız paket Gatekeeper'a takılır, ölçü bunu
+hesaba katmazsa Dalga 0 hiç kapanmaz.
 
 **Dalga 1 — dikey dilim.** Elle yazılmış beş soruluk `modules/_ornek/` uçtan uca
 oynanır: soru göster, şık aç, yanlış eleme ve o şıkka özel daktilo, çözüm blokları,
 üç dereceli işaretleme, veritabanına yazım, FSRS vadesi. Şemalar bu dalgada donar.
+
+Bu dalgaya ayrıca **ilk açılış deneyimi** girer: modül yokken boş durum ekranı,
+`module:install` dosya diyaloğu ve sürükle-bırak, gömülü `_ornek`'in kurulması. İlk elle
+test bile bunu isteyecek, Dalga 5'e ertelenemez. Yedekleme ve `integrity_check` de burada.
+
 *Kabul*: uygulamayı kapat-aç, vadeler korunmuş. *Ölçü*: üç soruyu "anlamadım" işaretle,
-üçü de aynı oturumda geri gelsin; "anladım"lar gelmesin.
+üçü de **aynı oturumda** geri gelsin (oturum içi yeniden-öğrenme kuyruğu);
+"anladım"lar gelmesin.
 
 **Dalga 2 — `quizforge`.** LANGE kitabının tek bölümünde (~40 sayfa) uçtan uca çalışır.
+Python ortamı ve `quizforge doctor` bu dalganın ilk işi. Maliyet tavanı (`--max-usd`)
+ilk `run`'dan önce yerinde olmalı.
 *Ölçü*: Ctrl+C ile kes ve yeniden başlat, aynı birim ikinci kez modele gitmesin;
 alıntı doğrulamasında en az %95 geçiş; üretilen ilk 40 sorunun elle okunmasında en az
 %85 kabul. **Bu eşik tutmadan Dalga 3'e geçilmez.**
@@ -426,11 +486,47 @@ görünmeyen satır DOM'da olmadığı için seçim düğüme bağlanırsa Tab v
 bozulur.
 *Kabul*: fare kullanmadan tam bir oturum tamamlanabiliyor.
 
-**Dalga 5 — dağıtım.** `electron-builder` üç hedef, `electron-updater`, gömülü örnek
-modül, GIFT dışa aktarma, İngilizce README, her ana klasöre yönlendirici `AGENTS.md`.
+**Dalga 5 — dağıtım.** `electron-builder` üç hedef, İngilizce README, sürüm etiketiyle
+tetiklenen çıkış akışı.
+
+Güncelleme politikası platform başına ayrı, çünkü tek bir çözüm yok:
+
+| Platform | Davranış |
+|---|---|
+| Windows | Gerçek otomatik güncelleme |
+| Linux | Yeni sürüm bildirimi + indirme bağlantısı |
+| macOS | **Yalnız pasif bildirim** |
+
+macOS'ta otomatik güncelleme hiçbir modülle çözülmüyor — Squirrel.Mac imza şartı
+koyuyor ve bu Apple Developer ID istiyor. Modül seçimiyle aşılacak bir şey değil.
+
+GIFT dışa aktarma **v1.1'e ertelendi**: tüketen bir sistem yok, tek kullanıcı var.
+Şemadaki karşılığı (şık başına açıklama) zaten donduğu için sonra eklemek ucuz.
+
 *Ölçü*: temiz bir Windows makinesinde kurulumdan ilk soruya 60 saniyeden az.
 
 ---
+
+## 5b. Dalga 0'ın ilk saati
+
+Üç somut tuzak. Üçü de `npm install`'dan **önce** karara bağlanır.
+
+**1. Sürüm üçgeni.** Electron sürümü gömülü Node sürümünü belirler; `kysely` 0.29
+`node >= 22` istiyor; `better-sqlite3` 12.x'in ABI'si de aynı sürüme bakıyor. Electron
+35'in altındaysa `kysely` 0.28.x'e sabitlenir. Karar `package.json` içindeki `engines`
+alanına yazılır, kafada tutulmaz. `quizforge`'un hedef Node sürümü de aynı anda seçilir
+— `commander`, `p-retry` ve `archiver` sürümleri ona bağlı.
+
+**2. `sandbox: true` preload'u kırar.** `electron-vite` şablonu preload'u ESM üretebilir
+ve örneklerinin çoğu `sandbox: false` varsayar. Sandbox açıkken preload CJS olmak ve
+yalnız `contextBridge` kullanmak zorunda. Güvenlik üçlüsü **ilk commit'te** şablon
+varsayılanının üzerine açıkça yazılır; "sonra sıkılaştırırız" diye bırakılan ayar
+sıkılaştırılmıyor.
+
+**3. Vitest yerel modülü segfault ettirebilir.** Ana süreç test projesi `pool: 'forks'`
+ile başlatılır. `threads` havuzunda yerel modül kırılması bilinen bir sorun; ters
+sırayla gidilirse ilk saat segfault ayıklamakla geçer. Çalıştığı ölçülürse `threads`'e
+dönülür.
 
 ## 6. Riskler
 
@@ -465,12 +561,16 @@ bağımlılık listesine AGPL girmez.
 **Derece eşlemesi.** Üye A üçlü beyanı doğrudan FSRS notuna eşledi. Üye B nesnel
 sinyali de kattı. B'nin eşlemesi alındı: şıksız bilme bonusuna işlev kazandırıyor ve
 öznel iyimserliği düzeltiyor. A'nın önerisi daha basit ve savunulabilir; karmaşıklık
-sorun olursa geri dönülecek yer burasıdır. Tarama B'yi destekledi — üç seçenek tek
-başına dört dereceye yetmiyor, şık denemesi sonucuyla birleşince yetiyor.
+sorun olursa geri dönülecek yer burasıdır.
+
+Burada bir çelişki vardı ve kapatıldı: `docs/taramalar/fsrs.md` "üç seçenekle Easy
+üretilmez" diyor, çünkü yalnız öznel beyanı sayıyor. Bizim eşlememizde Easy'nin kaynağı
+beyan değil, **şıksız bilme** olayı. İki ifade aynı şeyi söylemiyor; taramanın kapsamı
+dar. Karar `docs/kararlar/0002-derece-eslemesi.md` dosyasında.
 
 **Emeklilik.** A "anladım" der demez emekli ediyor, B `stability > 365g` şartı koyuyor.
-İkisi de haklı — A istenen davranışı yapıyor, B aralıklı tekrarın doğrusunu. Varsayılan
-A, ayarla açılan ikinci kip B.
+A alındı — kullanıcının açık isteği bu. B'nin uyarısı geçerli ama v1'de ikinci bir kod
+yolu açmıyoruz; gerekirse sonra gelir.
 
 **PDF kütüphanesi.** A `mupdf`, B `pdfjs-dist` önerdi. **İkisi de düşürüldü**, ama
 gerekçeleri farklı: `mupdf` AGPL olduğu için alınamaz. `pdfjs-dist` ise lisans olarak
