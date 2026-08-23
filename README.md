@@ -28,4 +28,6 @@ Planning. See `docs/PLAN.md` for the architecture and milestones, and
 
 ## License
 
-MIT
+AGPL-3.0-or-later — see [LICENSE](LICENSE).
+
+Copyright (C) 2026 Teknesyum
