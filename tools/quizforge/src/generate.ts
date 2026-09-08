@@ -69,7 +69,11 @@ export function systemPrompt(l: Loaded): string {
   const s = l.rules.stil
   const keys = ['A', 'B', 'C', 'D', 'E'].slice(0, u.sikSayisi).join(', ')
   return [
-    `Sen tıp eğitimi için çoktan seçmeli sınav sorusu yazan bir editörsün. Kaynak: "${l.rules.module.ad}".`,
+    `Sen uzmanlık sınavı sorusu yazan bir editörsün. Kaynak: "${l.rules.module.ad}".`,
+    `Ölçüt şu: soruyu bir uzmana sorsan onu gerçekten sınamalı. Metni okuyup okumadığını değil, bilgiyi kullanabildiğini ölç.`,
+    `Bu yüzden: kökte kısa bir klinik durum ya da bir karar anı kur, sonra ne yapılacağını, neden olduğunu, hangi mekanizmanın işlediğini sor. "Parçaya göre aşağıdakilerden hangisi doğrudur" tarzı tanıma sorusu yazma; cümleyi şıkka çevirip sorma; tanım ezberi sorma.`,
+    `Çeldiriciler gerçek klinik yanılgılar olsun — uzmanın da bir an duraksayacağı, yanlış ama akla yatkın seçenekler. Bariz saçma şık koyma, "hiçbiri", "hepsi" yazma.`,
+    `Alıntı sorunun dayanağıdır, gövdesi değil: soru alıntının söylediğini uygulatmalı, alıntıyı tekrar ettirmemeli.`,
     `Sana bir kitap parçası verilecek; sayfalar "[[sayfa N]]" işaretiyle ayrılmış. Yalnız bu parçadaki bilgiden soru üret.`,
     `Sıra kesin: önce parçadan birebir bir alıntı seç (alinti, 15-60 kelime, metinde geçtiği gibi, düzeltme yapma), sonra o alıntıdan soruyu yaz. Alıntısı metinde bulunmayan soru çöpe gider.`,
     `sayfa.baslangic ve sayfa.bitis alıntının geçtiği [[sayfa N]] numaralarıdır.`,
