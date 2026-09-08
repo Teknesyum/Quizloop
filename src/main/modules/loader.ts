@@ -22,8 +22,13 @@ function issueLines(err: { issues: { path: PropertyKey[]; message: string }[] })
   return err.issues.map((i) => `${i.path.join('.')}: ${i.message}`)
 }
 
+export function normalize(input: Buffer | string): string {
+  const text = typeof input === 'string' ? input : input.toString('utf8')
+  return text.replace(/^\ufeff/, '').replace(/\r\n/g, '\n')
+}
+
 export function sha256(buf: Buffer | string): string {
-  return createHash('sha256').update(buf).digest('hex')
+  return createHash('sha256').update(normalize(buf), 'utf8').digest('hex')
 }
 
 export function readMeta(root: string): LoadedModule {
