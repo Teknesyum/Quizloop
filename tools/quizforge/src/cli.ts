@@ -18,7 +18,7 @@ const HELP = `quizforge <komut> --rules <rules.yaml> [seçenekler]
   init      PDF metin katmanını çıkar: sources/<id>/pages.jsonl + chapters.json
   plan      bölüm haritasından üretim birimlerini çıkar: build/plan.json
   run       birimleri modele gönder   --max-usd <n> zorunlu, --model, --limit, --chapter, --dry-run
-  brief     birim istemlerini dosyaya yaz (alt ajanla üretim için)   --chapter, --limit
+  brief     birim istemlerini dosyaya yaz (alt ajanla üretim için)   --chapter, --limit, --force
   ingest    ajanların yazdığı build/raw/*.json dosyalarını soruya çevir
   verify    deterministik denetim: build/verify-report.json
   pack      modules/<id>/ yaz; verify geçmeden çalışmaz
@@ -42,6 +42,7 @@ function main(argv: string[]): number {
       limit: { type: 'string' },
       chapter: { type: 'string' },
       'dry-run': { type: 'boolean', default: false },
+      force: { type: 'boolean', default: false },
       help: { type: 'boolean', short: 'h', default: false }
     }
   })
@@ -122,7 +123,9 @@ function main(argv: string[]): number {
   if (cmd === 'brief') {
     const plan = loadPlan(l)
     const cp0 = loadCheckpoint(l, c.sha256)
-    let units = plan.units.filter((u) => cp0.units[u.hash]?.status !== 'done')
+    let units = values.force
+      ? plan.units.slice()
+      : plan.units.filter((u) => cp0.units[u.hash]?.status !== 'done')
     if (values.chapter !== undefined) units = units.filter((u) => u.chapter === Number(values.chapter))
     if (values.limit !== undefined) units = units.slice(0, Number(values.limit))
     const files = writeBriefs(l, c, plan, units)
