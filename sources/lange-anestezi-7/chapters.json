@@ -1,0 +1,727 @@
+{
+ "file": "LANGE 7. BASKI.pdf",
+ "sha256": "e257e19d6f6cb8ffa387cddd64e738765f85ec8ac38378d6f5810cc8c5018ab7",
+ "pageOffset": 21,
+ "frontMatter": [
+  1,
+  21
+ ],
+ "body": [
+  22,
+  1411
+ ],
+ "index": [
+  1412,
+  1465
+ ],
+ "chapters": [
+  {
+   "chapter": 1,
+   "title": "Anestezi Uygulaması",
+   "pdfPages": [
+    22,
+    29
+   ],
+   "bookPages": [
+    1,
+    8
+   ]
+  },
+  {
+   "chapter": 2,
+   "title": "Ameliyathane Ortamı",
+   "pdfPages": [
+    30,
+    53
+   ],
+   "bookPages": [
+    9,
+    32
+   ]
+  },
+  {
+   "chapter": 3,
+   "title": "Solunum Sistemleri",
+   "pdfPages": [
+    54,
+    67
+   ],
+   "bookPages": [
+    33,
+    46
+   ]
+  },
+  {
+   "chapter": 4,
+   "title": "Anestezi iş istasyonu",
+   "pdfPages": [
+    68,
+    95
+   ],
+   "bookPages": [
+    47,
+    74
+   ]
+  },
+  {
+   "chapter": 5,
+   "title": "Kardiyovasküler Monitorizasyon",
+   "pdfPages": [
+    96,
+    133
+   ],
+   "bookPages": [
+    75,
+    112
+   ]
+  },
+  {
+   "chapter": 6,
+   "title": "Kardiyovasküler Dışı Monitörizasyon",
+   "pdfPages": [
+    134,
+    153
+   ],
+   "bookPages": [
+    113,
+    132
+   ]
+  },
+  {
+   "chapter": 7,
+   "title": "Farmakolojik Prensipler",
+   "pdfPages": [
+    154,
+    163
+   ],
+   "bookPages": [
+    133,
+    142
+   ]
+  },
+  {
+   "chapter": 8,
+   "title": "İnhalasyon Anestezikleri",
+   "pdfPages": [
+    164,
+    185
+   ],
+   "bookPages": [
+    143,
+    164
+   ]
+  },
+  {
+   "chapter": 9,
+   "title": "intravenöz Anestezikler",
+   "pdfPages": [
+    186,
+    201
+   ],
+   "bookPages": [
+    165,
+    180
+   ]
+  },
+  {
+   "chapter": 10,
+   "title": "Analjezik Ajanlar",
+   "pdfPages": [
+    202,
+    213
+   ],
+   "bookPages": [
+    181,
+    192
+   ]
+  },
+  {
+   "chapter": 11,
+   "title": "Nöromusküler Bloke Edici Ajanlar",
+   "pdfPages": [
+    214,
+    237
+   ],
+   "bookPages": [
+    193,
+    216
+   ]
+  },
+  {
+   "chapter": 12,
+   "title": "Kolinesteraz inhibitörleri ve Diğer Farmakolojik Nöromusküler Ajanların Antagonistleri",
+   "pdfPages": [
+    238,
+    249
+   ],
+   "bookPages": [
+    217,
+    228
+   ]
+  },
+  {
+   "chapter": 13,
+   "title": "Antikolinerjik İlaçlar",
+   "pdfPages": [
+    250,
+    255
+   ],
+   "bookPages": [
+    229,
+    234
+   ]
+  },
+  {
+   "chapter": 14,
+   "title": "Adrenerjik Agonist ve Antagonistler",
+   "pdfPages": [
+    256,
+    271
+   ],
+   "bookPages": [
+    235,
+    250
+   ]
+  },
+  {
+   "chapter": 15,
+   "title": "Hipotansif Ajanlar",
+   "pdfPages": [
+    272,
+    279
+   ],
+   "bookPages": [
+    251,
+    258
+   ]
+  },
+  {
+   "chapter": 16,
+   "title": "Lokal Anestezikler",
+   "pdfPages": [
+    280,
+    295
+   ],
+   "bookPages": [
+    259,
+    274
+   ]
+  },
+  {
+   "chapter": 17,
+   "title": "Anestezide Yardımcı İlaçlar",
+   "pdfPages": [
+    296,
+    315
+   ],
+   "bookPages": [
+    275,
+    294
+   ]
+  },
+  {
+   "chapter": 18,
+   "title": "Ameliyat Öncesi Değerlendirme Premedikasyon ve Perioperatif Dokümantasyon",
+   "pdfPages": [
+    316,
+    327
+   ],
+   "bookPages": [
+    295,
+    306
+   ]
+  },
+  {
+   "chapter": 19,
+   "title": "Havayolu Yönetimi",
+   "pdfPages": [
+    328,
+    365
+   ],
+   "bookPages": [
+    307,
+    344
+   ]
+  },
+  {
+   "chapter": 20,
+   "title": "Kardiyovasküler Fizyoloji ve Anestezi",
+   "pdfPages": [
+    366,
+    403
+   ],
+   "bookPages": [
+    345,
+    382
+   ]
+  },
+  {
+   "chapter": 21,
+   "title": "Kardiyovasküler Hastalığı Olan Hastalarda Anestezi",
+   "pdfPages": [
+    404,
+    465
+   ],
+   "bookPages": [
+    383,
+    444
+   ]
+  },
+  {
+   "chapter": 22,
+   "title": "Kardiyovasküler Cerrahide Anestezi",
+   "pdfPages": [
+    466,
+    519
+   ],
+   "bookPages": [
+    445,
+    498
+   ]
+  },
+  {
+   "chapter": 23,
+   "title": "Solunum Fizyolojisi ve Anestezisi",
+   "pdfPages": [
+    520,
+    557
+   ],
+   "bookPages": [
+    499,
+    536
+   ]
+  },
+  {
+   "chapter": 24,
+   "title": "Solunum Sistemi Hastalığı Olan Hastalarda Anestezi",
+   "pdfPages": [
+    558,
+    575
+   ],
+   "bookPages": [
+    537,
+    554
+   ]
+  },
+  {
+   "chapter": 25,
+   "title": "Toraks Cerrahisinde için Anestezi",
+   "pdfPages": [
+    576,
+    605
+   ],
+   "bookPages": [
+    555,
+    584
+   ]
+  },
+  {
+   "chapter": 26,
+   "title": "NörofizyoloJİ ve Anestezi",
+   "pdfPages": [
+    606,
+    623
+   ],
+   "bookPages": [
+    585,
+    602
+   ]
+  },
+  {
+   "chapter": 27,
+   "title": "Nörocerrahide Anestezi",
+   "pdfPages": [
+    624,
+    643
+   ],
+   "bookPages": [
+    603,
+    622
+   ]
+  },
+  {
+   "chapter": 28,
+   "title": "Nörolojik ve Psikiyatrik Hastalığı Olanlarda Anestezi",
+   "pdfPages": [
+    644,
+    659
+   ],
+   "bookPages": [
+    623,
+    638
+   ]
+  },
+  {
+   "chapter": 29,
+   "title": "Nöromusküler Hastalığı Olanlarda Anestezi",
+   "pdfPages": [
+    660,
+    675
+   ],
+   "bookPages": [
+    639,
+    654
+   ]
+  },
+  {
+   "chapter": 30,
+   "title": "Böbrek Fizyolojisi ve Anestezi",
+   "pdfPages": [
+    676,
+    699
+   ],
+   "bookPages": [
+    655,
+    678
+   ]
+  },
+  {
+   "chapter": 31,
+   "title": "Böbrek Hastalığı Olan Hastalarda Anestezi",
+   "pdfPages": [
+    700,
+    719
+   ],
+   "bookPages": [
+    679,
+    698
+   ]
+  },
+  {
+   "chapter": 32,
+   "title": "Genitoüriner Cerrahide Anestezi",
+   "pdfPages": [
+    720,
+    739
+   ],
+   "bookPages": [
+    699,
+    718
+   ]
+  },
+  {
+   "chapter": 33,
+   "title": "Hepatik Fizyoloji ve Anestezi",
+   "pdfPages": [
+    740,
+    757
+   ],
+   "bookPages": [
+    719,
+    736
+   ]
+  },
+  {
+   "chapter": 34,
+   "title": "Karaciğer Hastalığı Olan Hastalarda Anestezi",
+   "pdfPages": [
+    758,
+    777
+   ],
+   "bookPages": [
+    737,
+    756
+   ]
+  },
+  {
+   "chapter": 35,
+   "title": "Endokrin Hastalıklarda Anestezi Yönetimi",
+   "pdfPages": [
+    778,
+    797
+   ],
+   "bookPages": [
+    757,
+    776
+   ]
+  },
+  {
+   "chapter": 36,
+   "title": "Oftalmik Cerrahide Anestezi",
+   "pdfPages": [
+    798,
+    811
+   ],
+   "bookPages": [
+    777,
+    790
+   ]
+  },
+  {
+   "chapter": 37,
+   "title": "Otolaringoloji-Baş ve Boyun Cerrahisi Anestezisi",
+   "pdfPages": [
+    812,
+    827
+   ],
+   "bookPages": [
+    791,
+    806
+   ]
+  },
+  {
+   "chapter": 38,
+   "title": "Ortopedik Cerrahide Anestezi",
+   "pdfPages": [
+    828,
+    843
+   ],
+   "bookPages": [
+    807,
+    822
+   ]
+  },
+  {
+   "chapter": 39,
+   "title": "Travma ve Acil Cerrahi için Anestezi",
+   "pdfPages": [
+    844,
+    869
+   ],
+   "bookPages": [
+    823,
+    848
+   ]
+  },
+  {
+   "chapter": 40,
+   "title": "Maternal ve Fetal Fizyoloji ve Anestezi",
+   "pdfPages": [
+    870,
+    885
+   ],
+   "bookPages": [
+    849,
+    864
+   ]
+  },
+  {
+   "chapter": 41,
+   "title": "Obstetrik Anestezi",
+   "pdfPages": [
+    886,
+    921
+   ],
+   "bookPages": [
+    865,
+    900
+   ]
+  },
+  {
+   "chapter": 42,
+   "title": "Pediatrik Anestezi",
+   "pdfPages": [
+    922,
+    953
+   ],
+   "bookPages": [
+    901,
+    932
+   ]
+  },
+  {
+   "chapter": 43,
+   "title": "Geriatrik Anestezi",
+   "pdfPages": [
+    954,
+    969
+   ],
+   "bookPages": [
+    933,
+    948
+   ]
+  },
+  {
+   "chapter": 44,
+   "title": "Günübirlik ve Ameliyathane Dışı Anestezi",
+   "pdfPages": [
+    970,
+    985
+   ],
+   "bookPages": [
+    949,
+    964
+   ]
+  },
+  {
+   "chapter": 45,
+   "title": "Spinal, Epidural ve Kaudal Bloklar",
+   "pdfPages": [
+    986,
+    1027
+   ],
+   "bookPages": [
+    965,
+    1006
+   ]
+  },
+  {
+   "chapter": 46,
+   "title": "Periferik Sinir Blokları",
+   "pdfPages": [
+    1028,
+    1089
+   ],
+   "bookPages": [
+    1007,
+    1068
+   ]
+  },
+  {
+   "chapter": 47,
+   "title": "Kronik Ağrı Tedavisi",
+   "pdfPages": [
+    1090,
+    1155
+   ],
+   "bookPages": [
+    1069,
+    1134
+   ]
+  },
+  {
+   "chapter": 48,
+   "title": "Gelişmiş iyileşme Protokolleri ve Perioperatif Sonuçların Optimizasyonu",
+   "pdfPages": [
+    1156,
+    1177
+   ],
+   "bookPages": [
+    1135,
+    1156
+   ]
+  },
+  {
+   "chapter": 49,
+   "title": "Sıvı ve Elektrolit Dengesizlikleri Olan Hastaların Yönetimi",
+   "pdfPages": [
+    1178,
+    1213
+   ],
+   "bookPages": [
+    1157,
+    1192
+   ]
+  },
+  {
+   "chapter": 50,
+   "title": "Asit-Baz Yönetimi",
+   "pdfPages": [
+    1214,
+    1233
+   ],
+   "bookPages": [
+    1193,
+    1212
+   ]
+  },
+  {
+   "chapter": 51,
+   "title": "Sıvı Yönetimi ve Kan Ürünleri Tedavisi",
+   "pdfPages": [
+    1234,
+    1259
+   ],
+   "bookPages": [
+    1213,
+    1238
+   ]
+  },
+  {
+   "chapter": 52,
+   "title": "Termoregülasyon, Hipotermi ve Malign Hipertermi",
+   "pdfPages": [
+    1260,
+    1267
+   ],
+   "bookPages": [
+    1239,
+    1246
+   ]
+  },
+  {
+   "chapter": 53,
+   "title": "Perioperatif ve Yoğun Bakımda Beslenme",
+   "pdfPages": [
+    1268,
+    1273
+   ],
+   "bookPages": [
+    1247,
+    1252
+   ]
+  },
+  {
+   "chapter": 54,
+   "title": "Anestezi Komplikasyonları",
+   "pdfPages": [
+    1274,
+    1303
+   ],
+   "bookPages": [
+    1253,
+    1282
+   ]
+  },
+  {
+   "chapter": 55,
+   "title": "Kardiyopulmoner Resüsitasyon (CPR)",
+   "pdfPages": [
+    1304,
+    1333
+   ],
+   "bookPages": [
+    1283,
+    1312
+   ]
+  },
+  {
+   "chapter": 56,
+   "title": "Postanestezik Bakım",
+   "pdfPages": [
+    1334,
+    1355
+   ],
+   "bookPages": [
+    1313,
+    1334
+   ]
+  },
+  {
+   "chapter": 57,
+   "title": "Yoğun Bakım Uygulamalarında Karşılaşılan Sorunlar",
+   "pdfPages": [
+    1356,
+    1379
+   ],
+   "bookPages": [
+    1335,
+    1358
+   ]
+  },
+  {
+   "chapter": 58,
+   "title": "Postoperatif Bakım Ünitesi ve Yoğun Bakımda inhalasyon Tedavisi ve Mekanik Ventilasyon",
+   "pdfPages": [
+    1380,
+    1403
+   ],
+   "bookPages": [
+    1359,
+    1382
+   ]
+  },
+  {
+   "chapter": 59,
+   "title": "Güvenlik, Kalite ve Performans İyileştirme",
+   "pdfPages": [
+    1404,
+    1411
+   ],
+   "bookPages": [
+    1383,
+    1390
+   ]
+  }
+ ]
+}

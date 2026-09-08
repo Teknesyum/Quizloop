@@ -1,0 +1,332 @@
+{
+  "blockId": "0001",
+  "questions": [
+    {
+      "id": "ornek-0001",
+      "conceptId": "srs-aralikli-tekrar",
+      "stem": {
+        "md": "Aralıklı tekrar (spaced repetition) yönteminin temel dayanağı aşağıdakilerden hangisidir?"
+      },
+      "choices": [
+        {
+          "key": "A",
+          "md": "Bilgiyi tek oturumda çok sayıda okumak"
+        },
+        {
+          "key": "B",
+          "md": "Unutma eğrisinin dibine yaklaşırken tekrar etmek"
+        },
+        {
+          "key": "C",
+          "md": "Soruları her zaman aynı sırayla çözmek"
+        },
+        {
+          "key": "D",
+          "md": "Yalnızca sınav öncesi yoğun çalışmak"
+        },
+        {
+          "key": "E",
+          "md": "Doğru cevabı ezberleyip şıkları okumamak"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Tek oturumda yığma çalışma kısa vadede tanıdıklık yaratır, uzun vadeli hatırlamayı artırmaz.",
+        "C": "Sabit sıra, sıra ipucuna dayanan sahte bir hatırlama üretir.",
+        "D": "Sınav öncesi yoğunlaşma yığma çalışmanın bir biçimidir, aralıklandırma değildir.",
+        "E": "Şıksız ezber, kavramı ayırt etme becerisini ölçmez."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "Aralıklı tekrar, hatırlama olasılığı düşmeye başladığı anda yapılan tekrarın izi en çok güçlendirdiği gözlemine dayanır."
+        },
+        {
+          "type": "hint",
+          "md": "Tekrar zamanı geldiğinde soru zor gelmelidir; kolay geliyorsa aralık çok kısadır."
+        }
+      ],
+      "source": {
+        "file": "ornek-notlar.md",
+        "pages": [
+          1,
+          1
+        ],
+        "quote": "Tekrar, hatırlama olasılığı düşmeye başladığı anda yapıldığında bellek izini en çok güçlendirir.",
+        "chapter": "Aralıklı tekrar"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "srs",
+        "temel"
+      ],
+      "deleted": false,
+      "contentHash": "c53d4bd1fe6543bead2a76afaffad8beef9d5428f77a03a4c41765392143c6b2"
+    },
+    {
+      "id": "ornek-0002",
+      "conceptId": "fsrs-kararlilik",
+      "stem": {
+        "md": "FSRS modelinde **kararlılık** (stability) neyi ifade eder?"
+      },
+      "choices": [
+        {
+          "key": "A",
+          "md": "Kartın kaç kez gösterildiğini"
+        },
+        {
+          "key": "B",
+          "md": "Hatırlama olasılığının belirli bir eşiğe düşmesi için geçmesi gereken süreyi"
+        },
+        {
+          "key": "C",
+          "md": "Kullanıcının o gün kaç soru çözdüğünü"
+        },
+        {
+          "key": "D",
+          "md": "Sorunun metin uzunluğunu"
+        },
+        {
+          "key": "E",
+          "md": "Yanlış cevap sayısını"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Gösterim sayısı `reps` alanında tutulur, kararlılıkla doğrudan aynı şey değildir.",
+        "C": "Günlük hacim planlamayı etkiler ama kart kararlılığını tanımlamaz.",
+        "D": "Metin uzunluğu modelin girdisi değildir.",
+        "E": "Yanlış sayısı `lapses` olarak tutulur, kararlılığı düşürür ama onu tanımlamaz."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "Kararlılık, hatırlama olasılığının hedef orana düşmesi için gereken gün sayısıdır. Aralık bu değerden türetilir."
+        },
+        {
+          "type": "formula",
+          "tex": "R(t) = \\left(1 + \\frac{t}{9S}\\right)^{-1}"
+        }
+      ],
+      "source": {
+        "file": "ornek-notlar.md",
+        "pages": [
+          2,
+          2
+        ],
+        "quote": "Kararlılık, hatırlama olasılığının hedef orana düşmesi için geçmesi gereken gün sayısıdır.",
+        "chapter": "FSRS"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "fsrs",
+        "model"
+      ],
+      "deleted": false,
+      "contentHash": "07c099cbf89e8f1457aaff2582aace20979c9db551b558b317530c357f301fe9"
+    },
+    {
+      "id": "ornek-0003",
+      "conceptId": "quizloop-emeklilik",
+      "stem": {
+        "md": "Quizloop bir soruyu ne zaman emekli eder?"
+      },
+      "choices": [
+        {
+          "key": "A",
+          "md": "Kullanıcı çözümü okuyup **Anladım** dediğinde"
+        },
+        {
+          "key": "B",
+          "md": "Soru üç kez üst üste doğru cevaplandığında"
+        },
+        {
+          "key": "C",
+          "md": "Modül silindiğinde"
+        },
+        {
+          "key": "D",
+          "md": "Aralık 30 günü geçtiğinde"
+        },
+        {
+          "key": "E",
+          "md": "Soru işaretlendiğinde"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Ardışık doğru sayısı aralığı uzatır; emekliliğe kullanıcının kendi beyanı karar verir.",
+        "C": "Modül silinince ilerleme kaydı ayrı dosyada kalır, soru emekli sayılmaz.",
+        "D": "Uzun aralık emeklilik değildir; soru sırası geldiğinde yine sorulur.",
+        "E": "İşaretleme yalnızca not düşer, planlamayı değiştirmez."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "Emeklilik kararı kullanıcınındır. **Anladım** yanıtı satıra `retired_at` yazar; satır asla silinmez, böylece geçmiş korunur."
+        },
+        {
+          "type": "hint",
+          "md": "Emekli bir soru bir daha kuyruğa girmez, ama istatistikte sayılmaya devam eder."
+        }
+      ],
+      "source": {
+        "file": "ornek-notlar.md",
+        "pages": [
+          3,
+          3
+        ],
+        "quote": "Anladım yanıtı satıra retired_at yazar; satır asla silinmez.",
+        "chapter": "Oturum akışı"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "quizloop",
+        "oturum"
+      ],
+      "deleted": false,
+      "contentHash": "cd991a6826c50a8705a857412cebac58d37cd0051d22f64cf39c8c0c96cfe9b2"
+    },
+    {
+      "id": "ornek-0004",
+      "conceptId": "quizloop-kavram-gomme",
+      "stem": {
+        "md": "Aynı kavramı ölçen iki sorunun aynı gün arka arkaya sorulmaması hangi mekanizmayla sağlanır?"
+      },
+      "choices": [
+        {
+          "key": "A",
+          "md": "Rastgele karıştırma"
+        },
+        {
+          "key": "B",
+          "md": "`conceptId` üzerinden kavram gömme"
+        },
+        {
+          "key": "C",
+          "md": "Günlük soru sınırı"
+        },
+        {
+          "key": "D",
+          "md": "Zorluk etiketleri"
+        },
+        {
+          "key": "E",
+          "md": "Kaynak sayfası eşleşmesi"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Karıştırma sırayı değiştirir, aynı kavramın iki sorusunu ayırmayı garanti etmez.",
+        "C": "Sınır hacmi kontrol eder, kavram tekrarını engellemez.",
+        "D": "Zorluk yalnızca sıralamaya girdi olur.",
+        "E": "Aynı sayfadan gelen iki soru farklı kavramları ölçebilir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "Kuyruk kurulurken her `conceptId` için o güne en fazla bir soru alınır. İkinci soru bir sonraki güne kalır."
+        },
+        {
+          "type": "table",
+          "header": [
+            "Kavram",
+            "Kuyruğa giren",
+            "Ertelenen"
+          ],
+          "rows": [
+            [
+              "srs-aralikli-tekrar",
+              "1",
+              "0"
+            ],
+            [
+              "fsrs-kararlilik",
+              "1",
+              "2"
+            ]
+          ],
+          "caption": "Kavram gömmenin kuyruğa etkisi"
+        }
+      ],
+      "source": {
+        "file": "ornek-notlar.md",
+        "pages": [
+          4,
+          4
+        ],
+        "quote": "Her conceptId için bir günde en fazla bir soru kuyruğa alınır.",
+        "chapter": "Kuyruk"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "quizloop",
+        "kuyruk"
+      ],
+      "deleted": false,
+      "contentHash": "e01c36750130e3215f01a3c494b116c34057865c66ed1f358929a3d868298284"
+    },
+    {
+      "id": "ornek-0005",
+      "conceptId": "quizloop-modul-butunlugu",
+      "stem": {
+        "md": "Bir modül dosyası değiştiğinde Quizloop ilerlemeyi nasıl korur?"
+      },
+      "choices": [
+        {
+          "key": "A",
+          "md": "Tüm ilerlemeyi siler"
+        },
+        {
+          "key": "B",
+          "md": "`contentHash` değişikliği görür, çekirdek değiştiyse yumuşak sıfırlama yapar"
+        },
+        {
+          "key": "C",
+          "md": "Modülü salt okunur kilitler"
+        },
+        {
+          "key": "D",
+          "md": "Değişikliği yok sayar"
+        },
+        {
+          "key": "E",
+          "md": "Kullanıcıdan modülü yeniden kurmasını ister"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "İlerleme ayrı veritabanında durur ve içerik düzenlemesi yüzünden silinmez.",
+        "C": "Modüller zaten salt okunur okunur; kilit bir çözüm değildir.",
+        "D": "Değişiklik yok sayılsaydı yanlış çözümle eski soru eşleşirdi.",
+        "E": "Yeniden kurulum gerekmez; eşitleme açılışta kendiliğinden çalışır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "Her soru için `contentHash` tutulur. Kök alanlar (gövde, doğru şık, şıklar) değişmişse `core_hash` da değişir ve kart yumuşak sıfırlanır."
+        },
+        {
+          "type": "hint",
+          "md": "Yalnız yazım düzeltmesi yapıldıysa kart planı bozulmaz."
+        }
+      ],
+      "source": {
+        "file": "ornek-notlar.md",
+        "pages": [
+          5,
+          5
+        ],
+        "quote": "Kök alanlar değişmişse kart yumuşak sıfırlanır, yalnız biçim düzeltmesi planı bozmaz.",
+        "chapter": "Eşitleme"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "quizloop",
+        "esitleme"
+      ],
+      "deleted": false,
+      "contentHash": "8f197224dfce3cf431444920bfdd661dc05b80904c600c2c890a7b0500ea6726"
+    }
+  ]
+}
