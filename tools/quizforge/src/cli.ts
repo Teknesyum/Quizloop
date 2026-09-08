@@ -7,14 +7,19 @@ import { loadRules } from './rules.ts'
 import { loadCorpus } from './corpus.ts'
 import { buildPlan, loadPlan, savePlan } from './plan.ts'
 import { PRICES, run } from './generate.ts'
+import { loadCheckpoint } from './checkpoint.ts'
 import { verify } from './verify.ts'
 import { pack } from './pack.ts'
+import { writeBriefs, briefDir } from './brief.ts'
+import { ingest } from './ingest.ts'
 
 const HELP = `quizforge <komut> --rules <rules.yaml> [seçenekler]
 
   init      PDF metin katmanını çıkar: sources/<id>/pages.jsonl + chapters.json
   plan      bölüm haritasından üretim birimlerini çıkar: build/plan.json
   run       birimleri modele gönder   --max-usd <n> zorunlu, --model, --limit, --chapter, --dry-run
+  brief     birim istemlerini dosyaya yaz (alt ajanla üretim için)   --chapter, --limit
+  ingest    ajanların yazdığı build/raw/*.json dosyalarını soruya çevir
   verify    deterministik denetim: build/verify-report.json
   pack      modules/<id>/ yaz; verify geçmeden çalışmaz
   doctor    ortamı sına: python, pypdf, ANTHROPIC_API_KEY, külliyat dosyaları
@@ -112,6 +117,26 @@ function main(argv: string[]): number {
         process.exitCode = 1
       })
     return 0
+  }
+
+  if (cmd === 'brief') {
+    const plan = loadPlan(l)
+    const cp0 = loadCheckpoint(l, c.sha256)
+    let units = plan.units.filter((u) => cp0.units[u.hash]?.status !== 'done')
+    if (values.chapter !== undefined) units = units.filter((u) => u.chapter === Number(values.chapter))
+    if (values.limit !== undefined) units = units.slice(0, Number(values.limit))
+    const files = writeBriefs(l, c, plan, units)
+    console.log(`${files.length} brief → ${path.relative(l.root, briefDir(l))}`)
+    for (const f of files) console.log('  ' + path.relative(l.root, f))
+    return 0
+  }
+
+  if (cmd === 'ingest') {
+    const plan = loadPlan(l)
+    const rows = ingest(l, c, plan)
+    for (const r of rows) console.log(`  ${r.unitId}: ${r.error ? 'HATA ' + r.error : `${r.questions} soru, ${r.dropped} düşen`}`)
+    console.log(`${rows.length} birim işlendi`)
+    return rows.some((r) => r.error) ? 1 : 0
   }
 
   if (cmd === 'verify') {

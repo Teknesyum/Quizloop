@@ -9,7 +9,7 @@ kaynak:
   sha256: e257e19d6f6cb8ffa387cddd64e738765f85ec8ac38378d6f5810cc8c5018ab7
   kulliyat: sources/lange-anestezi-7/pages.jsonl
   bolumHaritasi: sources/lange-anestezi-7/chapters.json
-  sayfaNumarasi: pdf
+  sayfaNumarasi: kitap
   sayfaOfseti: 21
   govde: [22, 1411]
   atlanacakSayfalar:
