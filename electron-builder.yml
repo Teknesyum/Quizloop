@@ -1,0 +1,51 @@
+appId: com.teknesyum.quizloop
+productName: Quizloop
+directories:
+  buildResources: build
+files:
+  - '!**/.vscode/*'
+  - '!src/*'
+  - '!docs/*'
+  - '!modules/*'
+  - '!schema/*'
+  - '!scripts/*'
+  - '!teknesyum-ui/*'
+  - '!electron.vite.config.{js,ts,mjs,cjs}'
+  - '!vitest.config.{js,ts,mjs,cjs}'
+  - '!{.eslintcache,eslint.config.mjs,.prettierignore,.prettierrc.yaml,dev-app-update.yml,CHANGELOG.md,README.md,CONTRIBUTING.md,DCO}'
+  - '!{.env,.env.*,.npmrc,pnpm-lock.yaml}'
+  - '!{tsconfig.json,tsconfig.node.json,tsconfig.web.json}'
+extraResources:
+  - from: modules/_ornek
+    to: ornek
+asarUnpack:
+  - resources/**
+  - '**/*.node'
+npmRebuild: false
+win:
+  executableName: quizloop
+  target:
+    - nsis
+nsis:
+  artifactName: ${name}-${version}-setup.${ext}
+  shortcutName: ${productName}
+  uninstallDisplayName: ${productName}
+  createDesktopShortcut: always
+mac:
+  entitlementsInherit: build/entitlements.mac.plist
+  notarize: false
+  artifactName: ${name}-${version}-unsigned.${ext}
+dmg:
+  artifactName: ${name}-${version}-unsigned.${ext}
+linux:
+  target:
+    - AppImage
+    - deb
+  maintainer: Teknesyum
+  category: Education
+appImage:
+  artifactName: ${name}-${version}.${ext}
+publish:
+  provider: github
+  owner: Teknesyum
+  repo: Quizloop

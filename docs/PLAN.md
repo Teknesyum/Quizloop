@@ -21,7 +21,7 @@ Ayrışan yerler en altta, gerekçeleriyle.
 | İlerleme | Ayrı SQLite veritabanı, kullanıcı veri klasöründe |
 | Şema | `zod` v4 — `z.infer` + `safeParse` + `z.toJSONSchema` tek tanımdan |
 | Üretim hattı | Ayrı CLI (`quizforge`), uygulamanın içinde değil |
-| Lisans | MIT — **bağımlılıklarda AGPL yasak** |
+| Lisans | AGPL-3.0-or-later — bkz. `docs/kararlar/0003-lisans-agpl.md` |
 
 ---
 
@@ -334,7 +334,10 @@ uretim:   parcaBasinaSoru, sikSayisi, zorlukDagilimi, cozumBloklari[], yasakli[]
 stil:     ton, uzunluk
 ```
 
-### PDF çıkarma katmanı — AGPL'siz zincir
+### PDF çıkarma katmanı — copyleft zincir
+
+> 0003 kararından sonra bu bölümdeki "AGPL alınamaz" gerekçeleri geçersizdir;
+> araç seçimi artık yalnız kaliteye bakar. Sıralama tarihsel kayıt olarak duruyor.
 
 Tarama net bir uyarı verdi: **PyMuPDF ve mupdf saf AGPL-3.0**, MIT dağıtım planıyla
 bağdaşmıyor. Konumlu görsel çıkarmada en sağlamı o ama alınamaz.
@@ -550,9 +553,10 @@ piksellik çöp döker. *Nasıl anlarız*: `assets/img/` içinde 2 KB altındaki
 sınır kutusunu iste, kırp. Pahalı ama her PDF'te çalışır. **Dalga 2 bu yedek denenmeden
 kapatılmaz.**
 
-**4. Lisans sızması.** MIT dağıtım planı, ekosistemin en iyi araçlarının AGPL olmasıyla
-çatışıyor (PyMuPDF, mupdf, Anki). Kural: AGPL kodundan **desen alınır, kod alınmaz**;
-bağımlılık listesine AGPL girmez.
+**4. Lisans sızması.** Bu risk 0003 kararıyla kapandı: dağıtım AGPL-3.0-or-later
+olduğu için PyMuPDF, mupdf ve Anki türevi copyleft araçlar artık bağımlılık olarak
+alınabilir. Kalan kural tersine döndü — **AGPL uyumsuz** (özel, ticari kısıtlı ya da
+yalnız-GPLv2) paket girmez ve her copyleft bağımlılığın lisans metni pakete iletilir.
 
 ---
 

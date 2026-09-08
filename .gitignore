@@ -18,8 +18,15 @@ modules/*
 
 # Local caches produced while building modules.
 .quizloop-cache/
-sources/
+sources/**/pages.jsonl
+sources/**/build/
 
 # Local agent/relay working state.
 .claude/relay/
 .claude/agent-memory/
+
+# Raw source books (copyrighted, hundreds of MB) never enter git.
+database/
+
+# Lint cache.
+.eslintcache

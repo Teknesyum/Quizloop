@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "id": "ornek",
+  "name": "Quizloop Örnek Modülü",
+  "version": "1.0.0",
+  "language": "tr",
+  "description": "Motorun nasıl çalıştığını anlatan beş soruluk tanıtım modülü.",
+  "source": {
+    "title": "Quizloop örnek notları",
+    "file": "ornek-notlar.md",
+    "pages": 5
+  },
+  "blocks": [
+    {
+      "file": "blocks/0001.json",
+      "count": 5,
+      "sha256": "f422507ffc452416388a6fca8be5e6c0279430b8fa4553c530c246038ec99c65"
+    }
+  ],
+  "questionCount": 5,
+  "createdAt": "2026-09-08T00:00:00.000Z"
+}

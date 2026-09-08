@@ -1,0 +1,688 @@
+:root {
+  --ql-i: 0;
+  --ql-h: 0%;
+  --ql-titlebar-h: var(--tk-titlebar-h-max);
+  --ql-tint-blue: color-mix(in srgb, var(--tk-blue) 10%, transparent);
+  --ql-tint-purple: color-mix(in srgb, var(--tk-purple) 12%, transparent);
+  --ql-tint-danger: color-mix(in srgb, var(--tk-danger) 12%, transparent);
+  --ql-tint-success: color-mix(in srgb, var(--tk-success) 12%, transparent);
+  --ql-veil: color-mix(in srgb, var(--tk-surface) 82%, transparent);
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+.ql-shell {
+  display: grid;
+  grid-template-rows: var(--ql-titlebar-h) minmax(0, 1fr);
+  height: 100%;
+  overflow: hidden;
+}
+
+.ql-body {
+  display: grid;
+  grid-template-columns: var(--tk-sidebar-w) minmax(0, 1fr);
+  min-height: 0;
+}
+
+.ql-body-focus {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.ql-main {
+  min-width: 0;
+  overflow-y: auto;
+  padding: var(--tk-sp-5);
+}
+
+/* --- title bar --- */
+
+.ql-titlebar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--tk-sp-4);
+  padding-left: var(--tk-sp-4);
+  border-bottom: var(--tk-border-w) solid var(--tk-border);
+  background: var(--ql-veil);
+}
+
+.ql-titlebar-brand {
+  display: flex;
+  align-items: center;
+  gap: var(--tk-sp-2);
+}
+
+.ql-titlebar-mark {
+  width: var(--tk-icon-1);
+  height: var(--tk-icon-1);
+  border-radius: 50%;
+  border: 2px solid var(--tk-blue);
+  background: var(--ql-tint-blue);
+}
+
+.ql-titlebar-right {
+  display: flex;
+  align-items: center;
+  gap: var(--tk-sp-4);
+}
+
+.ql-signature {
+  display: flex;
+  align-items: center;
+  gap: var(--tk-sp-2);
+  font-size: var(--tk-fs-1);
+}
+
+.ql-signature a {
+  color: var(--tk-purple-text);
+  text-decoration: none;
+  transition: color var(--tk-t-instant) var(--tk-e-out);
+}
+
+.ql-signature a:hover {
+  color: var(--tk-pink-text);
+}
+
+.ql-win-controls {
+  display: flex;
+  align-items: stretch;
+  height: var(--ql-titlebar-h);
+}
+
+.ql-win-controls button {
+  width: calc(var(--tk-sp-5) * 2);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: 0;
+  color: var(--tk-text);
+  cursor: pointer;
+  transition: background-color var(--tk-t-instant) var(--tk-e-out),
+    color var(--tk-t-instant) var(--tk-e-out);
+}
+
+.ql-win-controls button:hover {
+  background-color: var(--ql-tint-blue);
+  color: var(--tk-blue);
+}
+
+.ql-win-close:hover {
+  background-color: var(--ql-tint-danger);
+  color: var(--tk-danger-text);
+  transition: background-color var(--tk-t-instant) var(--tk-e-out),
+    color var(--tk-t-instant) var(--tk-e-out);
+}
+
+/* --- sidebar --- */
+
+.ql-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: var(--tk-sp-1);
+  padding: var(--tk-sp-4) var(--tk-sp-3);
+  border-right: var(--tk-border-w) solid var(--tk-border);
+  background: var(--ql-veil);
+}
+
+.ql-nav {
+  display: flex;
+  align-items: center;
+  gap: var(--tk-sp-3);
+  padding: var(--tk-sp-3);
+  font-family: inherit;
+  font-size: var(--tk-fs-2);
+  text-align: left;
+  color: var(--tk-text);
+  background: transparent;
+  border: var(--tk-border-w) solid transparent;
+  border-radius: var(--tk-r);
+  cursor: pointer;
+  transition: background-color var(--tk-t-fast) var(--tk-e-out),
+    border-color var(--tk-t-fast) var(--tk-e-out), color var(--tk-t-fast) var(--tk-e-out);
+}
+
+.ql-nav:hover {
+  background-color: var(--ql-tint-purple);
+  color: var(--tk-purple-text);
+}
+
+.ql-nav-glyph {
+  font-size: var(--tk-fs-3);
+  line-height: var(--tk-lh-heading);
+}
+
+.ql-nav-active {
+  border-color: var(--tk-border);
+  background-color: var(--ql-tint-blue);
+  color: var(--tk-blue);
+}
+
+/* --- screens --- */
+
+.ql-screen {
+  display: flex;
+  flex-direction: column;
+  gap: var(--tk-section-gap);
+  max-width: calc(var(--tk-measure) * 2);
+  margin: 0 auto;
+}
+
+.ql-screen-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--tk-sp-4);
+  flex-wrap: wrap;
+}
+
+.ql-head-actions {
+  display: flex;
+  gap: var(--tk-sp-3);
+  flex-wrap: wrap;
+}
+
+.ql-btn-sm {
+  padding: var(--tk-sp-2) var(--tk-sp-3);
+  font-size: var(--tk-fs-1);
+}
+
+.ql-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: var(--tk-sp-4);
+}
+
+.ql-empty {
+  display: flex;
+  flex-direction: column;
+  gap: var(--tk-sp-3);
+  align-items: flex-start;
+}
+
+/* --- module card --- */
+
+.ql-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--tk-sp-3);
+}
+
+.ql-card-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--tk-sp-3);
+}
+
+.ql-card-version {
+  font-size: var(--tk-fs-1);
+}
+
+.ql-card-stats {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--tk-sp-2);
+  margin: 0;
+}
+
+.ql-card-stats dt {
+  margin: 0;
+}
+
+.ql-stat-hot dt {
+  color: var(--tk-blue);
+}
+
+.ql-progress {
+  height: var(--tk-sp-1);
+  border-radius: var(--tk-r);
+  background: var(--ql-tint-purple);
+  overflow: hidden;
+}
+
+.ql-progress span {
+  display: block;
+  height: 100%;
+  background: var(--tk-purple);
+}
+
+.ql-card-foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--tk-sp-3);
+  flex-wrap: wrap;
+}
+
+.ql-card-actions {
+  display: flex;
+  gap: var(--tk-sp-2);
+}
+
+.ql-drop-veil {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: var(--tk-scrim);
+  border: 2px dashed var(--tk-border-strong);
+  pointer-events: none;
+}
+
+/* --- session --- */
+
+.ql-session {
+  max-width: calc(var(--tk-measure) * 1.4);
+}
+
+.ql-session-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--tk-sp-4);
+  flex-wrap: wrap;
+}
+
+.ql-session-meta {
+  display: flex;
+  align-items: center;
+  gap: var(--tk-sp-3);
+  flex-wrap: wrap;
+}
+
+.ql-badge-relearn {
+  color: var(--tk-warning);
+  border: var(--tk-border-w) solid var(--tk-warning-border);
+  border-radius: var(--tk-r);
+  padding: var(--tk-sp-1) var(--tk-sp-2);
+}
+
+.ql-badge-known {
+  color: var(--tk-success);
+  border: var(--tk-border-w) solid var(--tk-success);
+  border-radius: var(--tk-r);
+  padding: var(--tk-sp-1) var(--tk-sp-2);
+}
+
+.ql-score {
+  font-size: var(--tk-fs-3);
+}
+
+.ql-question {
+  display: flex;
+  flex-direction: column;
+  gap: var(--tk-sp-5);
+}
+
+.ql-stem {
+  display: flex;
+  flex-direction: column;
+  gap: var(--tk-sp-4);
+}
+
+.ql-stem-text {
+  font-size: var(--tk-fs-3);
+}
+
+.ql-typing {
+  cursor: pointer;
+}
+
+.ql-stem-img {
+  max-width: 100%;
+  border-radius: var(--tk-r);
+  border: var(--tk-border-w) solid var(--tk-border);
+}
+
+.ql-actions {
+  display: flex;
+  gap: var(--tk-sp-3);
+  flex-wrap: wrap;
+}
+
+kbd {
+  font-family: var(--font-mono, monospace);
+  font-size: var(--tk-fs-1);
+  padding: 0 var(--tk-sp-1);
+  border: var(--tk-border-w) solid currentColor;
+  border-radius: var(--tk-r);
+}
+
+/* --- choices --- */
+
+.ql-choices {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--tk-sp-3);
+  margin: 0;
+  padding: 0;
+}
+
+.ql-choice > button {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  gap: var(--tk-sp-3);
+  padding: var(--tk-sp-3) var(--tk-sp-4);
+  font-family: inherit;
+  font-size: var(--tk-fs-2);
+  line-height: var(--tk-lh-body);
+  text-align: left;
+  color: var(--tk-text);
+  background: transparent;
+  border: var(--tk-border-w) solid var(--tk-border);
+  border-radius: var(--tk-r);
+  cursor: pointer;
+  transition: background-color var(--tk-t-fast) var(--tk-e-out),
+    border-color var(--tk-t-fast) var(--tk-e-out), transform var(--tk-t-instant) var(--tk-e-out);
+}
+
+.ql-choice > button:hover {
+  background-color: var(--ql-tint-blue);
+  border-color: var(--tk-border);
+}
+
+.ql-choice > button:active {
+  border-color: var(--tk-border-strong);
+  background-color: var(--ql-tint-blue);
+  transform: scale(0.98);
+}
+
+.ql-choice > button:disabled {
+  cursor: not-allowed;
+  color: var(--tk-text);
+  background-color: transparent;
+  border-color: var(--tk-border);
+}
+
+.ql-choice-key {
+  flex: 0 0 auto;
+}
+
+.ql-choice-text {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.ql-choice-img {
+  max-width: var(--tk-sidebar-w);
+  border-radius: var(--tk-r);
+}
+
+.ql-choice-wrong > button {
+  border-color: var(--tk-danger);
+  color: var(--tk-danger-text);
+}
+
+.ql-choice-right > button {
+  border-color: var(--tk-success);
+  background-color: var(--ql-tint-success);
+  color: var(--tk-success);
+}
+
+.ql-distractor {
+  padding: var(--tk-sp-2) var(--tk-sp-4) 0;
+}
+
+/* --- solution --- */
+
+.ql-solution {
+  display: flex;
+  flex-direction: column;
+  gap: var(--tk-sp-4);
+}
+
+.ql-hint-block {
+  border-left: 2px solid var(--tk-purple-text);
+  padding-left: var(--tk-sp-3);
+  color: var(--tk-purple-text);
+}
+
+.ql-figure {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--tk-sp-2);
+}
+
+.ql-figure img {
+  max-width: 100%;
+  border-radius: var(--tk-r);
+}
+
+.ql-table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: var(--tk-fs-1);
+}
+
+.ql-table th,
+.ql-table td {
+  border: var(--tk-border-w) solid var(--tk-border);
+  padding: var(--tk-sp-2);
+  text-align: left;
+}
+
+.ql-table th {
+  color: var(--tk-text-label);
+}
+
+.ql-source {
+  margin: 0;
+  padding: var(--tk-sp-3) var(--tk-sp-4);
+  border-left: 2px solid var(--tk-border);
+  display: flex;
+  flex-direction: column;
+  gap: var(--tk-sp-2);
+}
+
+.ql-grade {
+  display: flex;
+  flex-direction: column;
+  gap: var(--tk-sp-3);
+}
+
+.ql-grade-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--tk-sp-3);
+}
+
+.ql-grade-row .tk-btn {
+  flex-direction: column;
+  gap: var(--tk-sp-1);
+}
+
+.ql-grade-main {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--tk-sp-2);
+}
+
+.ql-grade-hint {
+  font-size: var(--tk-fs-1);
+  font-weight: var(--tk-fw-body);
+  letter-spacing: normal;
+}
+
+.ql-graded-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--tk-sp-4);
+  flex-wrap: wrap;
+}
+
+.ql-keys {
+  text-align: center;
+  color: var(--tk-purple-text);
+}
+
+/* --- summary and stats --- */
+
+.ql-summary {
+  display: flex;
+  flex-direction: column;
+  gap: var(--tk-sp-5);
+}
+
+.ql-summary-score {
+  display: flex;
+  flex-direction: column;
+  gap: var(--tk-sp-2);
+  align-items: center;
+}
+
+.ql-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: var(--tk-sp-4);
+  margin: 0;
+}
+
+.ql-summary-grid dd {
+  margin: 0;
+  font-size: var(--tk-fs-4);
+  line-height: var(--tk-lh-heading);
+}
+
+.ql-tiles {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: var(--tk-sp-4);
+}
+
+.ql-tile {
+  display: flex;
+  flex-direction: column;
+  gap: var(--tk-sp-2);
+}
+
+.ql-tile-value {
+  font-size: var(--tk-fs-5);
+  color: var(--tk-blue);
+}
+
+.ql-bars {
+  list-style: none;
+  display: flex;
+  align-items: flex-end;
+  gap: var(--tk-sp-1);
+  height: calc(var(--tk-sp-5) * 5);
+  margin: var(--tk-sp-4) 0 0;
+  padding: 0;
+}
+
+.ql-bar {
+  flex: 1 1 0;
+  display: flex;
+  align-items: flex-end;
+  height: 100%;
+}
+
+.ql-bar-fill {
+  width: 100%;
+  height: var(--ql-h);
+  min-height: var(--tk-border-w);
+  border-radius: var(--tk-r);
+  background: var(--tk-purple);
+  transform-origin: bottom;
+  animation: ql-grow var(--tk-t-slow) var(--tk-e-out) both;
+  animation-delay: calc(var(--ql-i) * var(--tk-stagger));
+}
+
+/* --- settings --- */
+
+.ql-settings {
+  display: flex;
+  flex-direction: column;
+  gap: var(--tk-sp-4);
+}
+
+.ql-segment {
+  display: flex;
+  gap: var(--tk-sp-2);
+  flex-wrap: wrap;
+}
+
+.ql-dir-row {
+  display: flex;
+  align-items: center;
+  gap: var(--tk-sp-3);
+  flex-wrap: wrap;
+}
+
+.ql-dir-value {
+  flex: 1 1 240px;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.ql-about {
+  display: flex;
+  flex-direction: column;
+  gap: var(--tk-sp-2);
+}
+
+.ql-about p {
+  margin: 0;
+}
+
+/* --- skeleton --- */
+
+.ql-skeleton {
+  display: flex;
+  flex-direction: column;
+  gap: var(--tk-sp-3);
+}
+
+.ql-skeleton-line {
+  height: var(--tk-sp-4);
+  border-radius: var(--tk-r);
+  background: var(--ql-tint-purple);
+  animation: ql-skeleton-pulse var(--tk-loading-loop-min) var(--tk-e-out) infinite alternate;
+}
+
+/* --- motion --- */
+
+@keyframes ql-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes ql-grow {
+  from {
+    opacity: 0;
+    transform: scaleY(0);
+  }
+  to {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+}
+
+@keyframes ql-skeleton-pulse {
+  from {
+    opacity: 0.35;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.ql-transition-in {
+  animation: ql-in var(--tk-t-base) var(--tk-e-out) both;
+  animation-delay: calc(min(var(--ql-i), var(--tk-stagger-max)) * var(--tk-stagger));
+}
