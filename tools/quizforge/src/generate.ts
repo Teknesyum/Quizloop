@@ -8,9 +8,9 @@ import {
   type Question as QuestionT,
   type SolutionBlock
 } from '../../../src/shared/schema/question.ts'
-import { quoteInText } from '../../../src/shared/text.ts'
+import { quoteFound } from './text.ts'
 import type { Loaded } from './rules.ts'
-import { rangeText, unitText, type Corpus } from './corpus.ts'
+import { rangeText, toPdf, toShown, unitText, type Corpus } from './corpus.ts'
 import type { Plan, Unit } from './plan.ts'
 import {
   cleanPartials,
@@ -23,7 +23,7 @@ import { canonical, sha256 } from './hash.ts'
 
 const Key = z.enum(['A', 'B', 'C', 'D', 'E'])
 
-const Generated = z.object({
+export const Generated = z.object({
   sorular: z.array(
     z.object({
       alinti: z.string(),
@@ -73,11 +73,12 @@ export function systemPrompt(l: Loaded): string {
     `Sana bir kitap parçası verilecek; sayfalar "[[sayfa N]]" işaretiyle ayrılmış. Yalnız bu parçadaki bilgiden soru üret.`,
     `Sıra kesin: önce parçadan birebir bir alıntı seç (alinti, 15-60 kelime, metinde geçtiği gibi, düzeltme yapma), sonra o alıntıdan soruyu yaz. Alıntısı metinde bulunmayan soru çöpe gider.`,
     `sayfa.baslangic ve sayfa.bitis alıntının geçtiği [[sayfa N]] numaralarıdır.`,
-    `Parça başına ${u.parcaBasinaSoru} soru. Her soruda ${u.sikSayisi} şık (${keys}); tek doğru. Doğru şıkkın harfi sorular arasında dengeli dağılsın.`,
+    `Parça başına ${u.parcaBasinaSoru} soru. Her soruda ${u.sikSayisi} şık (${keys}); tek doğru. Doğru şıkkın harfini eşit dağıt: ${keys} harflerinin her biri en az bir kez doğru olsun, hiçbiri üç kereden fazla olmasın.`,
     `celdiriciler: her yanlış şık için ayrı bir açıklama — neden yanlış olduğu, tek cümle. Doğru şık için açıklama yazma.`,
     `cozum: sıralı bloklar; türler ${u.cozumBloklari.join(', ')}. İlk blok text türünde, doğru cevabı kaynağa dayanarak açıklar.`,
     `Zorluk dağılımı yaklaşık kolay %${Math.round(u.zorlukDagilimi.kolay * 100)}, orta %${Math.round(u.zorlukDagilimi.orta * 100)}, zor %${Math.round(u.zorlukDagilimi.zor * 100)}.`,
     `kavram: sorunun sınadığı tek kavram, 2-5 kelime. etiketler: 1-4 kısa konu etiketi.`,
+    `Çözümde ve çeldirici açıklamalarında şık harfi anma ("doğru cevap A'dır" yazma); bilgiyi anlat.`,
     u.yasakli.length
       ? `Yasak: ${u.yasakli.join(', ')}. Şekil, tablo veya görsele atıf yapan soru yazma.`
       : '',
@@ -106,14 +107,110 @@ function slug(s: string): string {
     .slice(0, 48)
 }
 
-function toQuestion(l: Loaded, c: Corpus, unit: Unit, g: Generated['sorular'][number]): QuestionT {
+export function findPages(c: Corpus, unit: Unit, quote: string): [number, number] | null {
+  const a = Math.max(1, unit.pages[0] - 1)
+  const b = unit.pages[1] + 1
+  for (let i = a; i <= b; i++) if (quoteFound(quote, rangeText(c, i, i))) return [i, i]
+  for (let i = a; i < b; i++) if (quoteFound(quote, rangeText(c, i, i + 1))) return [i, i + 1]
+  return null
+}
+
+export function mapUnit(
+  l: Loaded,
+  c: Corpus,
+  unit: Unit,
+  gen: Generated
+): { questions: QuestionT[]; dropped: { kok: string; reason: string }[]; badQuotes: string[] } {
+  const questions: QuestionT[] = []
+  const dropped: { kok: string; reason: string }[] = []
+  const badQuotes: string[] = []
+  const keys = ['A', 'B', 'C', 'D', 'E'].slice(0, l.rules.uretim.sikSayisi)
+  let slot = parseInt(unit.hash.slice(0, 4), 16) % keys.length
+  for (const g of gen.sorular) {
+    const found = findPages(c, unit, g.alinti)
+    if (!found) {
+      badQuotes.push(g.alinti)
+      dropped.push({ kok: g.kok, reason: 'alıntı metinde yok' })
+      continue
+    }
+    const q = fixAnswerRefs(balance(toQuestion(l, c, unit, g, found), keys[slot % keys.length]!))
+    slot++
+    const v = Question.safeParse(q)
+    if (!v.success) {
+      dropped.push({
+        kok: g.kok,
+        reason: v.error.issues.map((i) => i.path.join('.') + ': ' + i.message).join('; ')
+      })
+      continue
+    }
+    questions.push(v.data)
+  }
+  return { questions, dropped, badQuotes }
+}
+
+const LETTER_REF = /(ceva(?:p|bı)\s+|şık\s+|seçenek\s+)([A-E])|([A-E])(?=['’]?\s*(?:şıkkı|seçeneği|şıkkında|seçeneğinde))/g
+
+function swapLetters(text: string, a: string, b: string): string {
+  return text.replace(LETTER_REF, (m, pre: string | undefined, k1: string | undefined, k2: string | undefined) => {
+    const k = k1 ?? k2 ?? ''
+    const to = k === a ? b : k === b ? a : k
+    return (pre ?? '') + m.slice((pre ?? '').length).replace(k, to)
+  })
+}
+
+const ANSWER_REF = /(\bceva(?:p|b\u0131|b\u0131m\u0131z)?\s+|\byan\u0131t\s+)([A-E])\b/g
+
+function fixAnswerRefs(q: QuestionT): QuestionT {
+  const fix = (t: string): string => t.replace(ANSWER_REF, (_m, pre: string, _k: string) => pre + q.correct)
+  const solution: SolutionBlock[] = q.solution.map((b) => ('md' in b ? { ...b, md: fix(b.md) } : b))
+  const distractors: Record<string, string> = {}
+  for (const [k, v] of Object.entries(q.distractors)) distractors[k] = fix(v)
+  return {
+    ...q,
+    solution,
+    distractors: distractors as QuestionT['distractors'],
+    contentHash: sha256(
+      canonical({ stem: q.stem, choices: q.choices, correct: q.correct, solution })
+    )
+  }
+}
+
+function balance(q: QuestionT, target: string): QuestionT {
+  if (q.correct === target || !q.choices.some((ch) => ch.key === target)) return q
+  const from = q.correct
+  const choices = q.choices.map((ch) => {
+    if (ch.key === from) return { ...ch, md: q.choices.find((x) => x.key === target)!.md }
+    if (ch.key === target) return { ...ch, md: q.choices.find((x) => x.key === from)!.md }
+    return ch
+  })
+  const distractors: Record<string, string> = {}
+  for (const [k, v] of Object.entries(q.distractors))
+    distractors[k === target ? from : k] = swapLetters(v, from, target)
+  const solution: SolutionBlock[] = q.solution.map((b) =>
+    'md' in b ? { ...b, md: swapLetters(b.md, from, target) } : b
+  )
+  return {
+    ...q,
+    choices,
+    solution,
+    correct: target as QuestionT['correct'],
+    distractors: distractors as QuestionT['distractors'],
+    contentHash: sha256(canonical({ stem: q.stem, choices, correct: target, solution }))
+  }
+}
+
+function toQuestion(
+  l: Loaded,
+  c: Corpus,
+  unit: Unit,
+  g: Generated['sorular'][number],
+  found: [number, number]
+): QuestionT {
   const stem = { md: g.kok.trim() }
   const choices = g.siklar.map((s) => ({ key: s.anahtar, md: s.metin.trim() }))
   const solution: SolutionBlock[] = g.cozum.map((b) => ({ type: b.tur, md: b.metin.trim() }))
   const chapter = c.chapters.find((x) => x.chapter === unit.chapter)
-  const a = Math.min(g.sayfa.baslangic, g.sayfa.bitis)
-  const b = Math.max(g.sayfa.baslangic, g.sayfa.bitis)
-  const pages: [number, number] = [Math.max(a, unit.pages[0]), Math.min(b, unit.pages[1])]
+  const pages: [number, number] = [toShown(l, c, found[0]), toShown(l, c, found[1])]
   return {
     id: `${l.rules.module.id}-${sha256(unit.hash + '\n' + stem.md).slice(0, 12)}`,
     conceptId: slug(g.kavram) || 'genel',
@@ -180,7 +277,7 @@ export async function run(l: Loaded, c: Corpus, plan: Plan, o: RunOptions): Prom
         '\n--- system ---\n' +
           system +
           '\n\n--- user (ilk birim) ---\n' +
-          userPrompt(first, unitText(c, ...first.pages), []).slice(0, 3000) +
+          userPrompt(first, unitText(l, c, ...first.pages), []).slice(0, 3000) +
           '\n...'
       )
     return cp
@@ -192,8 +289,7 @@ export async function run(l: Loaded, c: Corpus, plan: Plan, o: RunOptions): Prom
       console.log(`tavan doldu: $${cp.totals.usd.toFixed(2)} >= $${o.maxUsd}`)
       break
     }
-    const text = unitText(c, ...unit.pages)
-    const haystack = rangeText(c, unit.pages[0] - 1, unit.pages[1] + 1)
+    const text = unitText(l, c, ...unit.pages)
     const messages: Anthropic.MessageParam[] = [
       { role: 'user', content: userPrompt(unit, text, previous.slice(-200)) }
     ]
@@ -235,26 +331,11 @@ export async function run(l: Loaded, c: Corpus, plan: Plan, o: RunOptions): Prom
         cp.totals.usd += usd
         if (res.stop_reason !== 'end_turn' || !res.parsed_output)
           throw new Error(`stop_reason=${res.stop_reason}`)
-        questions = []
+        const mapped = mapUnit(l, c, unit, res.parsed_output)
+        questions = mapped.questions
         dropped.length = 0
-        const bad: string[] = []
-        for (const g of res.parsed_output.sorular) {
-          if (!quoteInText(g.alinti, haystack)) {
-            bad.push(g.alinti)
-            dropped.push({ kok: g.kok, reason: 'alıntı metinde yok' })
-            continue
-          }
-          const q = toQuestion(l, c, unit, g)
-          const v = Question.safeParse(q)
-          if (!v.success) {
-            dropped.push({
-              kok: g.kok,
-              reason: v.error.issues.map((i) => i.path.join('.') + ': ' + i.message).join('; ')
-            })
-            continue
-          }
-          questions.push(v.data)
-        }
+        dropped.push(...mapped.dropped)
+        const bad = mapped.badQuotes
         if (bad.length * 2 <= res.parsed_output.sorular.length || attempt === 1) break
         const text0 = res.content.find((b) => b.type === 'text')
         messages.push({

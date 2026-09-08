@@ -86,7 +86,7 @@ export function buildPlan(l: Loaded, c: Corpus): Plan {
     for (const seg of segments(l, c, pages)) {
       const a = seg[0]!
       const b = seg[seg.length - 1]!
-      const text = unitText(c, a, b)
+      const text = unitText(l, c, a, b)
       units.push({
         unitId: `b${String(ch.chapter).padStart(2, '0')}-p${a}-${b}`,
         chapter: ch.chapter,

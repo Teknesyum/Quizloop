@@ -1,9 +1,10 @@
 import fs from 'node:fs'
 import path from 'node:path'
 import { Question, type Question as QuestionT } from '../../../src/shared/schema/question.ts'
-import { jaccard, quoteInText, trigrams } from '../../../src/shared/text.ts'
+import { jaccard, trigrams } from '../../../src/shared/text.ts'
+import { quoteFound } from './text.ts'
 import type { Loaded } from './rules.ts'
-import { rangeText, type Corpus } from './corpus.ts'
+import { rangeText, toPdf, type Corpus } from './corpus.ts'
 import { loadOutputs } from './generate.ts'
 
 export interface Report {
@@ -44,10 +45,11 @@ export function verify(l: Loaded, c: Corpus): Report {
       const q = v.data
       if (ids.has(q.id)) errors.push({ id: q.id, code: 'dup-id', message: 'aynı id iki kez' })
       ids.add(q.id)
-      const [a, b] = q.source.pages
+      const a = toPdf(l, c, q.source.pages[0])
+      const b = toPdf(l, c, q.source.pages[1])
       if (a > b || a < g0 || b > g1)
         errors.push({ id: q.id, code: 'pages', message: `sayfa aralığı gövde dışında: ${a}-${b}` })
-      else if (!quoteInText(q.source.quote, rangeText(c, a, b)))
+      else if (!quoteFound(q.source.quote, rangeText(c, a, b)))
         errors.push({ id: q.id, code: 'quote', message: 'alıntı kaynak sayfalarında yok' })
       for (const ch of q.choices) {
         if (ch.imageRef && !fs.existsSync(path.join(l.dir, ch.imageRef)))

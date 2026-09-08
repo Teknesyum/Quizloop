@@ -21,6 +21,7 @@ export interface Corpus {
   chapters: Chapter[]
   sha256: string
   file: string
+  pageOffset: number
 }
 
 const HEADER = /^\s*(\d{1,4}\s+KISIM\b.*|BÖLÜM\s+\d{1,2}\s+.*\s\d{1,4})\s*$/
@@ -37,9 +38,16 @@ export function loadCorpus(l: Loaded): Corpus {
   const map = JSON.parse(fs.readFileSync(mapFile, 'utf8')) as {
     sha256: string
     file: string
+    pageOffset: number
     chapters: Chapter[]
   }
-  return { pages, chapters: map.chapters, sha256: map.sha256, file: map.file }
+  return {
+    pages,
+    chapters: map.chapters,
+    sha256: map.sha256,
+    file: map.file,
+    pageOffset: map.pageOffset
+  }
 }
 
 export function bodyText(p: Page): string {
@@ -48,7 +56,15 @@ export function bodyText(p: Page): string {
   return lines.join('\n')
 }
 
-export function unitText(c: Corpus, a: number, b: number): string {
+export function toShown(l: Loaded, c: Corpus, pdfPage: number): number {
+  return l.rules.kaynak.sayfaNumarasi === 'kitap' ? pdfPage - c.pageOffset : pdfPage
+}
+
+export function toPdf(l: Loaded, c: Corpus, shown: number): number {
+  return l.rules.kaynak.sayfaNumarasi === 'kitap' ? shown + c.pageOffset : shown
+}
+
+export function unitText(l: Loaded, c: Corpus, a: number, b: number): string {
   const out: string[] = []
   for (let i = a; i <= b; i++) {
     const p = c.pages.get(i)
