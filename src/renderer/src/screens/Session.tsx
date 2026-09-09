@@ -12,67 +12,19 @@ import { useApp } from '@renderer/store/app'
 import { useSession } from '@renderer/store/session'
 import { Summary } from './Summary'
 
-function escapeRe(s: string): string {
-  return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
-}
-
-const STOP = new Set([
-  'tarihi',
-  'ajanlari',
-  'ajanları',
-  'genel',
-  'temel',
-  'klinik',
-  'hasta',
-  'tedavi',
-  'yonetim',
-  'yönetim'
-])
-
-function terms(tags: string[]): string[][] {
-  const out: string[][] = []
-  const seen = new Set<string>()
-  for (const tag of tags) {
-    const words: string[] = []
-    for (const word of tag.split(/[\s,/]+/)) {
-      const w = word.trim()
-      if (w.length < 5) continue
-      const low = w.toLocaleLowerCase('tr')
-      if (STOP.has(low) || seen.has(low)) continue
-      seen.add(low)
-      words.push(w)
-    }
-    if (words.length) out.push(words)
-  }
-  return out
-}
-
 function mark(md: string, term: string, wrap: string): string {
-  return md.replace(
-    new RegExp(`(?<![\\p{L}*])(${escapeRe(term)}\\p{L}{0,8})(?![\\p{L}*])`, 'giu'),
-    (m: string) => (m.includes('*') ? m : `${wrap}${m}${wrap}`)
-  )
+  const at = md.indexOf(term)
+  if (at === -1) return md
+  if (md.slice(Math.max(0, at - 2), at).includes('*')) return md
+  return md.slice(0, at) + wrap + term + wrap + md.slice(at + term.length)
 }
 
-function emphasize(md: string, tags: string[]): string {
+function emphasize(md: string, vurgu: string[]): string {
   let out = md
-  terms(tags).forEach((words, i) => {
-    const wrap = i % 2 === 0 ? '**' : '*'
-    const whole = words.join(' ')
-    const tried = words.length > 1 ? mark(out, whole, wrap) : out
-    if (tried !== out) {
-      out = tried
-      return
-    }
-    for (const w of words) out = mark(out, w, wrap)
+  vurgu.forEach((term, i) => {
+    out = mark(out, term, i % 2 === 0 ? '**' : '*')
   })
   return out
-}
-
-const MODALITY = /(?<![\p{L}*])(\p{L}{3,}\s+anestezi\p{L}{0,8})(?![\p{L}*])/giu
-
-function markModality(md: string): string {
-  return md.replace(MODALITY, (m: string) => (m.includes('*') ? m : `**${m}**`))
 }
 
 function splitAsk(md: string): { body: string; ask: string } {
@@ -92,8 +44,8 @@ function Stem({
 }): React.JSX.Element {
   const full = useMemo(() => {
     const { body, ask } = splitAsk(q.stem.md)
-    const marked = markModality(emphasize(body, q.tags))
-    const markedAsk = markModality(emphasize(ask, q.tags))
+    const marked = emphasize(body, q.vurgu)
+    const markedAsk = emphasize(ask, q.vurgu)
     return {
       body: marked,
       ask: markedAsk,

@@ -253,6 +253,13 @@
         "type": "string"
       }
     },
+    "vurgu": {
+      "default": [],
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
     "contentHash": {
       "type": "string",
       "minLength": 64,

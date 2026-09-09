@@ -82,6 +82,7 @@ export class SessionMachine {
       choices: q.choices,
       difficulty: q.difficulty,
       tags: q.tags,
+      vurgu: q.vurgu,
       assetBase: this.deps.assetBase(s.moduleId),
       relearn: c.relearn
     }

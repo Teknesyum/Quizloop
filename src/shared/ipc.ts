@@ -34,6 +34,7 @@ export interface QuestionView {
   choices: Choice[]
   difficulty: string
   tags: string[]
+  vurgu: string[]
   assetBase: string
   relearn: boolean
 }

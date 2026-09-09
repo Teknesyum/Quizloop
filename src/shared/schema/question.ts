@@ -49,6 +49,7 @@ export const Question = z
     source: Source,
     difficulty: Difficulty,
     tags: z.array(z.string()).default([]),
+    vurgu: z.array(z.string()).default([]),
     contentHash: z.string().length(64),
     deleted: z.boolean().default(false)
   })
