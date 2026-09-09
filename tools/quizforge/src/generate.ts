@@ -10,7 +10,7 @@ import {
 } from '../../../src/shared/schema/question.ts'
 import { quoteFound } from './text.ts'
 import type { Loaded } from './rules.ts'
-import { rangeText, toPdf, toShown, unitText, type Corpus } from './corpus.ts'
+import { rangeText, toShown, unitText, type Corpus } from './corpus.ts'
 import type { Plan, Unit } from './plan.ts'
 import {
   cleanPartials,
@@ -27,6 +27,8 @@ export const Generated = z.object({
   sorular: z.array(
     z.object({
       alinti: z.string(),
+      gorsel: z.string().optional(),
+      cozumGorseli: z.string().optional(),
       sayfa: z.object({ baslangic: z.number().int(), bitis: z.number().int() }),
       kavram: z.string(),
       kok: z.string(),
@@ -102,6 +104,22 @@ export function userPrompt(unit: Unit, text: string, previous: string[]): string
   return `Bölüm ${unit.chapter}: ${unit.title}\nPDF sayfaları ${unit.pages[0]}-${unit.pages[1]}\n\n<parca>\n${text}\n</parca>${prev}`
 }
 
+export function assetRef(name: string): string {
+  return 'assets/img/' + path.basename(name)
+}
+
+export function figuresDir(l: Loaded): string {
+  return path.join(l.buildDir, 'figures')
+}
+
+export function imageRefs(q: QuestionT): string[] {
+  const refs: string[] = []
+  if (q.stem.imageRef) refs.push(q.stem.imageRef)
+  for (const ch of q.choices) if (ch.imageRef) refs.push(ch.imageRef)
+  for (const b of q.solution) if (b.type === 'image') refs.push(b.ref)
+  return refs
+}
+
 function slug(s: string): string {
   return s
     .toLocaleLowerCase('tr')
@@ -165,7 +183,7 @@ function swapLetters(text: string, a: string, b: string): string {
 const ANSWER_REF = /(\bceva(?:p|b\u0131|b\u0131m\u0131z)?\s+|\byan\u0131t\s+)([A-E])\b/g
 
 function fixAnswerRefs(q: QuestionT): QuestionT {
-  const fix = (t: string): string => t.replace(ANSWER_REF, (_m, pre: string, _k: string) => pre + q.correct)
+  const fix = (t: string): string => t.replace(ANSWER_REF, (_m, pre: string) => pre + q.correct)
   const solution: SolutionBlock[] = q.solution.map((b) => ('md' in b ? { ...b, md: fix(b.md) } : b))
   const distractors: Record<string, string> = {}
   for (const [k, v] of Object.entries(q.distractors)) distractors[k] = fix(v)
@@ -210,9 +228,12 @@ function toQuestion(
   g: Generated['sorular'][number],
   found: [number, number]
 ): QuestionT {
-  const stem = { md: g.kok.trim() }
+  const stem = g.gorsel
+    ? { md: g.kok.trim(), imageRef: assetRef(g.gorsel) }
+    : { md: g.kok.trim() }
   const choices = g.siklar.map((s) => ({ key: s.anahtar, md: s.metin.trim() }))
   const solution: SolutionBlock[] = g.cozum.map((b) => ({ type: b.tur, md: b.metin.trim() }))
+  if (g.cozumGorseli) solution.push({ type: 'image', ref: assetRef(g.cozumGorseli) })
   const chapter = c.chapters.find((x) => x.chapter === unit.chapter)
   const pages: [number, number] = [toShown(l, c, found[0]), toShown(l, c, found[1])]
   return {

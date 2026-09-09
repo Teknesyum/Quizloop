@@ -4,7 +4,7 @@ import { ModuleMeta } from '../../../src/shared/schema/module.ts'
 import { Block, type Question as QuestionT } from '../../../src/shared/schema/question.ts'
 import type { Loaded } from './rules.ts'
 import type { Corpus } from './corpus.ts'
-import { loadOutputs } from './generate.ts'
+import { figuresDir, imageRefs, loadOutputs } from './generate.ts'
 import { sha256 } from './hash.ts'
 import type { Report } from './verify.ts'
 
@@ -30,6 +30,14 @@ export function pack(l: Loaded, c: Corpus): string {
     const file = `blocks/${blockId}.json`
     fs.writeFileSync(path.join(outDir, file), data)
     blocks.push({ file, count: block.questions.length, sha256: sha256(data) })
+  }
+  const assetDir = path.join(outDir, 'assets', 'img')
+  fs.rmSync(path.join(outDir, 'assets'), { recursive: true, force: true })
+  const refs = new Set(questions.flatMap(imageRefs))
+  if (refs.size) {
+    fs.mkdirSync(assetDir, { recursive: true })
+    for (const ref of refs)
+      fs.copyFileSync(path.join(figuresDir(l), path.basename(ref)), path.join(outDir, ref))
   }
   const meta = ModuleMeta.parse({
     schemaVersion: 1,
