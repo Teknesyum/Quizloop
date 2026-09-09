@@ -1,4 +1,4 @@
-import { contextBridge, ipcRenderer, webUtils } from 'electron'
+import { contextBridge, ipcRenderer, webFrame, webUtils } from 'electron'
 import { CH, type QuizloopApi, type Settings } from '@shared/ipc'
 import type { ChoiceKey } from '@shared/schema/question'
 
@@ -27,17 +27,20 @@ const api: QuizloopApi = {
   settings: {
     get: () => ipcRenderer.invoke(CH.settingsGet),
     set: (patch: Partial<Settings>) => ipcRenderer.invoke(CH.settingsSet, patch),
-    pickModulesDir: () => ipcRenderer.invoke(CH.settingsPickDir)
+    pickModulesDir: () => ipcRenderer.invoke(CH.settingsPickDir),
+    zoom: (factor: number) => webFrame.setZoomFactor(factor)
   },
   module: {
     list: () => ipcRenderer.invoke(CH.moduleList),
     install: (path: string) => ipcRenderer.invoke(CH.moduleInstall, path),
     installSample: () => ipcRenderer.invoke(CH.moduleInstallSample),
     pick: () => ipcRenderer.invoke(CH.modulePick),
-    remove: (id: string) => ipcRenderer.invoke(CH.moduleRemove, id)
+    remove: (id: string) => ipcRenderer.invoke(CH.moduleRemove, id),
+    chapters: (id: string) => ipcRenderer.invoke(CH.moduleChapters, id)
   },
   session: {
-    start: (moduleId: string) => ipcRenderer.invoke(CH.sessionStart, moduleId),
+    start: (moduleId: string, chapter?: string | null) =>
+      ipcRenderer.invoke(CH.sessionStart, moduleId, chapter ?? null),
     known: (id: string) => ipcRenderer.invoke(CH.sessionKnown, id),
     reveal: (id: string) => ipcRenderer.invoke(CH.sessionReveal, id),
     answer: (id: string, key: ChoiceKey) => ipcRenderer.invoke(CH.sessionAnswer, id, key),

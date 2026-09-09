@@ -1,7 +1,10 @@
 import { useEffect } from 'react'
+import { tinykeys } from 'tinykeys'
+import { FONT_SCALES } from '@shared/ipc'
 import { TitleBar } from './components/TitleBar'
 import { Toasts } from './components/Toast'
 import { t } from './i18n'
+import { Chapters } from './screens/Chapters'
 import { Library } from './screens/Library'
 import { Session } from './screens/Session'
 import { Settings } from './screens/Settings'
@@ -19,11 +22,41 @@ export default function App(): React.JSX.Element {
   const go = useApp((s) => s.go)
   const loadSettings = useApp((s) => s.loadSettings)
   const loadInfo = useApp((s) => s.loadInfo)
+  const settings = useApp((s) => s.settings)
+  const saveSettings = useApp((s) => s.saveSettings)
+  const scale = settings?.fontScale ?? 1
 
   useEffect(() => {
     loadSettings()
     loadInfo()
   }, [loadSettings, loadInfo])
+
+  useEffect(() => {
+    window.quizloop.settings.zoom(scale)
+  }, [scale])
+
+  useEffect(() => {
+    const step = (dir: number): void => {
+      const i = FONT_SCALES.indexOf(scale as (typeof FONT_SCALES)[number])
+      const at = i === -1 ? FONT_SCALES.indexOf(1) : i
+      const next = FONT_SCALES[Math.min(FONT_SCALES.length - 1, Math.max(0, at + dir))]
+      if (next !== scale) saveSettings({ fontScale: next })
+    }
+    return tinykeys(window, {
+      '$mod+Equal': (e) => {
+        e.preventDefault()
+        step(1)
+      },
+      '$mod+Minus': (e) => {
+        e.preventDefault()
+        step(-1)
+      },
+      '$mod+Digit0': (e) => {
+        e.preventDefault()
+        if (scale !== 1) saveSettings({ fontScale: 1 })
+      }
+    })
+  }, [scale, saveSettings])
 
   const inSession = route.name === 'session'
 
@@ -54,7 +87,10 @@ export default function App(): React.JSX.Element {
           {route.name === 'library' && <Library />}
           {route.name === 'stats' && <Stats />}
           {route.name === 'settings' && <Settings />}
-          {route.name === 'session' && <Session moduleId={route.moduleId} />}
+          {route.name === 'chapters' && <Chapters moduleId={route.moduleId} />}
+          {route.name === 'session' && (
+            <Session moduleId={route.moduleId} chapter={route.chapter ?? null} />
+          )}
         </main>
       </div>
       <Toasts />

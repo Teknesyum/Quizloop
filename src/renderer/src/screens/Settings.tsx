@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import type { Settings as S } from '@shared/ipc'
+import { FONT_SCALES, type Settings as S } from '@shared/ipc'
 import { Skeleton } from '@renderer/components/Skeleton'
 import { t, type Key } from '@renderer/i18n'
 import { useApp } from '@renderer/store/app'
@@ -89,6 +89,25 @@ export function Settings(): React.JSX.Element {
                 ))}
               </div>
               <span className="tk-hint">{t('settings.typerHelp')}</span>
+            </div>
+
+            <div className="tk-field">
+              <span className="tk-label">{t('settings.fontScale')}</span>
+              <div className="ql-segment" role="radiogroup" aria-label={t('settings.fontScale')}>
+                {FONT_SCALES.map((f) => (
+                  <button
+                    key={f}
+                    type="button"
+                    role="radio"
+                    aria-checked={settings.fontScale === f}
+                    className={`tk-btn ${settings.fontScale === f ? 'tk-btn-primary' : 'tk-btn-ghost'} ql-btn-sm tk-mono`}
+                    onClick={() => apply({ fontScale: f })}
+                  >
+                    {Math.round(f * 100)}%
+                  </button>
+                ))}
+              </div>
+              <span className="tk-hint">{t('settings.fontScaleHelp')}</span>
             </div>
 
             <div className="tk-field">

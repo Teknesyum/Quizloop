@@ -5,7 +5,8 @@ export type Route =
   | { name: 'library' }
   | { name: 'stats' }
   | { name: 'settings' }
-  | { name: 'session'; moduleId: string }
+  | { name: 'chapters'; moduleId: string }
+  | { name: 'session'; moduleId: string; chapter?: string | null }
 
 export type ToastKind = 'success' | 'warning' | 'danger'
 

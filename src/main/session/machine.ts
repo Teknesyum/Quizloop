@@ -46,6 +46,7 @@ export interface MachineDeps {
   assetBase(moduleId: string): string
   dayStart(now: Date): Date
   limit(): number
+  seed?: () => number
   now?: () => Date
 }
 
@@ -58,9 +59,11 @@ const SCORE_WRONG_PENALTY = 3
 export class SessionMachine {
   private live = new Map<string, Live>()
   private readonly clock: () => Date
+  private readonly seed: () => number
 
   constructor(private readonly deps: MachineDeps) {
     this.clock = deps.now ?? (() => new Date())
+    this.seed = deps.seed ?? (() => (Math.random() * 4294967296) >>> 0)
   }
 
   private get(id: string): Live {
@@ -113,14 +116,17 @@ export class SessionMachine {
   }
 
   async start(
-    moduleId: string
+    moduleId: string,
+    chapter?: string | null
   ): Promise<{ sessionId: string; first: QuestionView | null; total: number }> {
     const now = this.clock()
     const queue = await buildQueue(this.deps.db, {
       moduleId,
       now,
       dayStart: this.deps.dayStart(now),
-      limit: this.deps.limit()
+      limit: this.deps.limit(),
+      seed: this.seed(),
+      chapter: chapter ?? null
     })
     const id = randomUUID()
     const s: Live = {

@@ -26,7 +26,8 @@ async function machine(): Promise<SessionMachine> {
     assetBase: (id) => `quizloop://module/${id}/`,
     dayStart: (now) => new Date(now.getTime() - 9 * 3600000),
     limit: () => 50,
-    now: () => NOW
+    now: () => NOW,
+    seed: () => 1
   })
 }
 

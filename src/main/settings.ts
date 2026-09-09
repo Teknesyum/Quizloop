@@ -8,7 +8,8 @@ const DEFAULTS: Settings = {
   modulesDir: null,
   typerSpeed: 'normal',
   sessionLimit: 40,
-  soundOn: false
+  soundOn: false,
+  fontScale: 1
 }
 
 let cache: Settings | null = null
