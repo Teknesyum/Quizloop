@@ -8,11 +8,13 @@ import { useApp } from '@renderer/store/app'
 function ModuleCard({
   m,
   index,
-  onRemove
+  onRemove,
+  onReset
 }: {
   m: ModuleSummary
   index: number
   onRemove(): void
+  onReset(): void
 }): React.JSX.Element {
   const go = useApp((s) => s.go)
   return (
@@ -53,6 +55,9 @@ function ModuleCard({
           <button type="button" className="tk-btn tk-btn-ghost ql-btn-sm" onClick={onRemove}>
             {t('library.remove')}
           </button>
+          <button type="button" className="tk-btn tk-btn-ghost ql-btn-sm" onClick={onReset}>
+            {t('library.reset')}
+          </button>
           <button
             type="button"
             className="tk-btn tk-btn-primary ql-btn-sm"
@@ -71,6 +76,7 @@ export function Library(): React.JSX.Element {
   const loadModules = useApp((s) => s.loadModules)
   const toast = useApp((s) => s.toast)
   const [removing, setRemoving] = useState<ModuleSummary | null>(null)
+  const [resetting, setResetting] = useState<ModuleSummary | null>(null)
   const [dragging, setDragging] = useState(false)
   const [busy, setBusy] = useState(false)
 
@@ -170,12 +176,32 @@ export function Library(): React.JSX.Element {
       {modules !== null && modules.length > 0 && (
         <div className="ql-grid">
           {modules.map((m, i) => (
-            <ModuleCard key={m.id} m={m} index={i} onRemove={() => setRemoving(m)} />
+            <ModuleCard
+              key={m.id}
+              m={m}
+              index={i}
+              onRemove={() => setRemoving(m)}
+              onReset={() => setResetting(m)}
+            />
           ))}
         </div>
       )}
 
       {dragging && <div className="ql-drop-veil tk-label">{t('library.dropHint')}</div>}
+
+      {resetting && (
+        <Confirm
+          text={t('library.resetConfirm', { name: resetting.name })}
+          danger
+          onNo={() => setResetting(null)}
+          onYes={async () => {
+            await window.quizloop.module.reset(resetting.id)
+            setResetting(null)
+            await loadModules()
+            toast('success', t('library.resetDone'))
+          }}
+        />
+      )}
 
       {removing && (
         <Confirm

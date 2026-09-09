@@ -36,6 +36,7 @@ const api: QuizloopApi = {
     installSample: () => ipcRenderer.invoke(CH.moduleInstallSample),
     pick: () => ipcRenderer.invoke(CH.modulePick),
     remove: (id: string) => ipcRenderer.invoke(CH.moduleRemove, id),
+    reset: (id: string) => ipcRenderer.invoke(CH.moduleReset, id),
     chapters: (id: string) => ipcRenderer.invoke(CH.moduleChapters, id)
   },
   session: {

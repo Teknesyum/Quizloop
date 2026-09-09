@@ -2,7 +2,7 @@ import { app, BrowserWindow, dialog, ipcMain, type IpcMainInvokeEvent } from 'el
 import type { Kysely } from 'kysely'
 import type { Database } from '@main/db/types'
 import { assetBase } from '@main/assets/protocol'
-import { installFrom, removeModule, samplePath } from '@main/modules/install'
+import { installFrom, removeModule, resetModule, samplePath } from '@main/modules/install'
 import { QuestionIndex, readMeta } from '@main/modules/loader'
 import { chapterCounts, countDue } from '@main/scheduler/queue'
 import { SessionMachine } from '@main/session/machine'
@@ -142,6 +142,10 @@ export function registerHandlers(ctx: Context): { rootOf(moduleId: string): stri
     await removeModule(db, z.string().parse(id))
     indexes.clear()
     await refreshRoots()
+  })
+
+  ipcMain.handle(CH.moduleReset, async (_e, id: unknown) => {
+    await resetModule(db, z.string().parse(id))
   })
 
   ipcMain.handle(CH.moduleChapters, async (_e, moduleId: unknown): Promise<ChapterSummary[]> => {
