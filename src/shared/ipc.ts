@@ -126,6 +126,7 @@ export interface QuizloopApi {
     installSample(): Promise<InstallResult>
     pick(): Promise<InstallResult | null>
     remove(moduleId: string): Promise<void>
+    reset(moduleId: string): Promise<void>
     chapters(moduleId: string): Promise<ChapterSummary[]>
   }
   session: {
@@ -160,6 +161,7 @@ export const CH = {
   moduleInstallSample: 'module:installSample',
   modulePick: 'module:pick',
   moduleRemove: 'module:remove',
+  moduleReset: 'module:reset',
   moduleChapters: 'module:chapters',
   sessionStart: 'session:start',
   sessionKnown: 'session:known',
