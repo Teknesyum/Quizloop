@@ -108,6 +108,7 @@ export function registerHandlers(ctx: Context): { rootOf(moduleId: string): stri
         name: r.name,
         version: r.version,
         path: r.path,
+        assetBase: assetBase(r.id),
         questionCount: r.question_count,
         ...c
       })
@@ -152,7 +153,12 @@ export function registerHandlers(ctx: Context): { rootOf(moduleId: string): stri
     await refreshRoots()
     const id = z.string().parse(moduleId)
     const rows = await chapterCounts(db, id, new Date())
-    return rows.map((r) => ({ chapter: r.chapter, total: r.total, ...r.count }))
+    return rows.map((r) => ({
+      chapter: r.chapter,
+      assetBase: assetBase(id),
+      total: r.total,
+      ...r.count
+    }))
   })
 
   ipcMain.handle(CH.sessionStart, async (_e, moduleId: unknown, chapter: unknown) => {
