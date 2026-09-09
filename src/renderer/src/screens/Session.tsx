@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { tinykeys } from 'tinykeys'
 import type { QuestionView, SelfAssess } from '@shared/ipc'
 import type { ChoiceKey, SolutionBlock } from '@shared/schema/question'
@@ -12,6 +12,34 @@ import { useApp } from '@renderer/store/app'
 import { useSession } from '@renderer/store/session'
 import { Summary } from './Summary'
 
+function escapeRe(s: string): string {
+  return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+}
+
+function emphasize(md: string, tags: string[]): string {
+  let out = md
+  const seen = new Set<string>()
+  tags.forEach((tag, i) => {
+    const term = tag.trim()
+    if (term.length < 4 || seen.has(term.toLocaleLowerCase('tr'))) return
+    seen.add(term.toLocaleLowerCase('tr'))
+    const mark = i % 2 === 0 ? '**' : '*'
+    out = out.replace(
+      new RegExp(`(?<![\\p{L}*])(${escapeRe(term)})(?![\\p{L}*])`, 'giu'),
+      `${mark}$1${mark}`
+    )
+  })
+  return out
+}
+
+function splitAsk(md: string): { body: string; ask: string } {
+  const m = md.match(/(?:^|(?<=[.!?]\s))([^.!?]*\?)\s*$/)
+  if (!m || m.index === undefined) return { body: md, ask: '' }
+  const body = md.slice(0, m.index).trim()
+  if (!body) return { body: md, ask: '' }
+  return { body, ask: (m[1] ?? '').trim() }
+}
+
 function Stem({
   q,
   speed
@@ -19,10 +47,21 @@ function Stem({
   q: QuestionView
   speed: 'slow' | 'normal' | 'fast' | 'off'
 }): React.JSX.Element {
-  const { shown, done, skip } = useTyper(q.stem.md, speed)
+  const full = useMemo(() => {
+    const { body, ask } = splitAsk(q.stem.md)
+    const marked = emphasize(body, q.tags)
+    return { body: marked, ask, text: ask ? marked + '\n' + ask : marked }
+  }, [q.questionId])
+  const { shown, done, skip } = useTyper(full.text, speed)
+  const cut = shown.length
+  const bodyShown = shown.slice(0, Math.min(cut, full.body.length))
+  const askShown = cut > full.body.length ? shown.slice(full.body.length + 1) : ''
   return (
     <div className={`ql-stem ${done ? '' : 'ql-typing'}`} onClick={skip}>
-      <Markdown md={shown} assetBase={q.assetBase} className="tk-prose ql-stem-text" />
+      <Markdown md={bodyShown} assetBase={q.assetBase} className="tk-prose ql-stem-text" />
+      {full.ask && askShown && (
+        <Markdown md={askShown} assetBase={q.assetBase} className="tk-prose ql-stem-ask" />
+      )}
       {q.stem.imageRef && (
         <img className="ql-stem-img" src={q.assetBase + q.stem.imageRef} alt="" />
       )}
@@ -88,7 +127,13 @@ function whenLabel(iso: string): string {
   return d.toLocaleDateString('tr', { day: '2-digit', month: 'short' })
 }
 
-export function Session({ moduleId }: { moduleId: string }): React.JSX.Element {
+export function Session({
+  moduleId,
+  chapter
+}: {
+  moduleId: string
+  chapter: string | null
+}): React.JSX.Element {
   const s = useSession()
   const settings = useApp((x) => x.settings)
   const go = useApp((x) => x.go)
@@ -99,9 +144,9 @@ export function Session({ moduleId }: { moduleId: string }): React.JSX.Element {
   const state = s.state
 
   useEffect(() => {
-    s.start(moduleId)
+    s.start(moduleId, chapter)
     return () => s.reset()
-  }, [moduleId])
+  }, [moduleId, chapter])
 
   const flag = async (): Promise<void> => {
     if (s.flagged) return
@@ -133,12 +178,27 @@ export function Session({ moduleId }: { moduleId: string }): React.JSX.Element {
       },
       [KEYS.known]: () => {
         if (state.phase === 'stem') s.known()
-        else s.pick('B')
+        else if (state.phase === 'choices') s.pick('B')
       },
-      ...Object.fromEntries(Object.entries(picks).filter(([code]) => code !== KEYS.known)),
-      [KEYS.grade[1]]: () => s.grade(1),
-      [KEYS.grade[2]]: () => s.grade(2),
-      [KEYS.grade[3]]: () => s.grade(3),
+      ...Object.fromEntries(
+        Object.entries(picks)
+          .filter(([code]) => code !== KEYS.known)
+          .map(([code, run]) => [
+            code,
+            () => {
+              if (state.phase === 'choices') run()
+            }
+          ])
+      ),
+      [KEYS.grade[1]]: () => {
+        if (state.phase === 'solved') s.grade(1)
+      },
+      [KEYS.grade[2]]: () => {
+        if (state.phase === 'solved') s.grade(2)
+      },
+      [KEYS.grade[3]]: () => {
+        if (state.phase === 'solved') s.grade(3)
+      },
       [KEYS.flag]: () => flag(),
       [KEYS.end]: () => {
         if (!ending) setEnding(true)
@@ -150,8 +210,8 @@ export function Session({ moduleId }: { moduleId: string }): React.JSX.Element {
     return (
       <Summary
         summary={state.summary}
-        onBack={() => go({ name: 'library' })}
-        onAgain={() => s.start(moduleId)}
+        onBack={() => go({ name: 'chapters', moduleId })}
+        onAgain={() => s.start(moduleId, chapter)}
       />
     )
   }
@@ -185,6 +245,31 @@ export function Session({ moduleId }: { moduleId: string }): React.JSX.Element {
   const solved = state.phase === 'solved' ? state.result : null
   const graded = state.phase === 'graded' ? state.grade : null
   const showChoices = state.phase !== 'stem'
+  const hints: [string, Key][] =
+    state.phase === 'stem'
+      ? [
+          ['␣', 'session.hint.reveal'],
+          ['B', 'session.hint.known'],
+          ['F', 'session.hint.flag'],
+          ['Esc', 'session.hint.end']
+        ]
+      : state.phase === 'choices'
+        ? [
+            ['A–E', 'session.hint.pick'],
+            ['F', 'session.hint.flag'],
+            ['Esc', 'session.hint.end']
+          ]
+        : state.phase === 'solved'
+          ? [
+              ['1 2 3', 'session.hint.grade'],
+              ['F', 'session.hint.flag'],
+              ['Esc', 'session.hint.end']
+            ]
+          : [
+              ['↵', 'session.hint.next'],
+              ['Ctrl + / −', 'session.hint.zoom'],
+              ['Esc', 'session.hint.end']
+            ]
   const known = 'known' in state && state.known
 
   return (
@@ -302,7 +387,7 @@ export function Session({ moduleId }: { moduleId: string }): React.JSX.Element {
                   <button
                     key={g}
                     type="button"
-                    className={`tk-btn ${g === 3 ? 'tk-btn-primary' : g === 1 ? 'tk-btn-danger' : 'tk-btn-ghost'}`}
+                    className={`tk-btn tk-btn-ghost ql-grade-btn ql-grade-${g}`}
                     onClick={() => s.grade(g)}
                   >
                     <span className="ql-grade-main">
@@ -338,7 +423,14 @@ export function Session({ moduleId }: { moduleId: string }): React.JSX.Element {
         )}
       </article>
 
-      <p className="tk-hint ql-keys">{t('session.keys')}</p>
+      <p className="tk-hint ql-keys">
+        {hints.map(([k, key]) => (
+          <span key={k} className="ql-key">
+            <kbd>{k}</kbd>
+            <span className="ql-key-label">{t(key)}</span>
+          </span>
+        ))}
+      </p>
 
       {ending && (
         <Confirm text={t('session.endConfirm')} onNo={() => setEnding(false)} onYes={finish} />

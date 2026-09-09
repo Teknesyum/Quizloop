@@ -7,6 +7,15 @@ export interface QueueOptions {
   now: Date
   dayStart: Date
   limit: number
+  seed?: number
+  chapter?: string | null
+}
+
+function jitter(seed: number, id: number): number {
+  let h = (seed ^ id) >>> 0
+  h = Math.imul(h ^ (h >>> 16), 2246822507)
+  h = Math.imul(h ^ (h >>> 13), 3266489909)
+  return ((h ^ (h >>> 16)) >>> 0) / 4294967296
 }
 
 function rank(c: Card, now: Date): number {
@@ -25,6 +34,7 @@ export async function buildQueue(db: Kysely<Database>, opt: QueueOptions): Promi
     .where('module_id', '=', opt.moduleId)
     .where('retired_at', 'is', null)
     .where('orphaned', '=', 0)
+    .$if(opt.chapter != null, (qb) => qb.where('chapter', '=', opt.chapter as string))
     .execute()
 
   const reviewedToday = await db
@@ -43,7 +53,8 @@ export async function buildQueue(db: Kysely<Database>, opt: QueueOptions): Promi
     .sort((a, b) => {
       const r = rank(a, opt.now) - rank(b, opt.now)
       if (r !== 0) return r
-      return a.due.localeCompare(b.due)
+      if (opt.seed === undefined) return a.due.localeCompare(b.due)
+      return jitter(opt.seed, a.id) - jitter(opt.seed, b.id)
     })
 
   const out: Card[] = []
@@ -56,11 +67,49 @@ export async function buildQueue(db: Kysely<Database>, opt: QueueOptions): Promi
   return out
 }
 
+export interface DueCount {
+  dueToday: number
+  unseen: number
+  retired: number
+  learning: number
+}
+
+export async function chapterCounts(
+  db: Kysely<Database>,
+  moduleId: string,
+  now: Date
+): Promise<{ chapter: string; total: number; count: DueCount }[]> {
+  const rows = await db
+    .selectFrom('card')
+    .select(['state', 'due', 'retired_at', 'orphaned', 'chapter'])
+    .where('module_id', '=', moduleId)
+    .execute()
+  const iso = now.toISOString()
+  const map = new Map<string, { total: number; count: DueCount }>()
+  for (const r of rows) {
+    if (r.orphaned) continue
+    const key = r.chapter ?? ''
+    let e = map.get(key)
+    if (!e) {
+      e = { total: 0, count: { dueToday: 0, unseen: 0, retired: 0, learning: 0 } }
+      map.set(key, e)
+    }
+    e.total++
+    if (r.retired_at) e.count.retired++
+    else if (r.state === State.New) e.count.unseen++
+    else if (r.due <= iso) e.count.dueToday++
+    else e.count.learning++
+  }
+  return [...map.entries()]
+    .map(([chapter, v]) => ({ chapter, ...v }))
+    .sort((a, b) => a.chapter.localeCompare(b.chapter, 'tr', { numeric: true }))
+}
+
 export async function countDue(
   db: Kysely<Database>,
   moduleId: string,
   now: Date
-): Promise<{ dueToday: number; unseen: number; retired: number; learning: number }> {
+): Promise<DueCount> {
   const rows = await db
     .selectFrom('card')
     .select(['state', 'due', 'retired_at', 'orphaned'])

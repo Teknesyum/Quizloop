@@ -74,6 +74,7 @@ export async function syncModule(
             concept_id: q.conceptId,
             content_hash: q.contentHash,
             core_hash: coreHash(q),
+            chapter: q.source.chapter ?? null,
             orphaned: 0,
             retired_at: null,
             last_self_assess: null,
@@ -85,6 +86,10 @@ export async function syncModule(
       }
       if (row.orphaned) {
         await trx.updateTable('card').set({ orphaned: 0 }).where('id', '=', row.id).execute()
+      }
+      const chapter = q.source.chapter ?? null
+      if (row.chapter !== chapter) {
+        await trx.updateTable('card').set({ chapter }).where('id', '=', row.id).execute()
       }
       if (row.content_hash === q.contentHash) continue
 
@@ -119,7 +124,8 @@ export async function syncModule(
             ...softReset(row, now),
             content_hash: q.contentHash,
             core_hash: core,
-            concept_id: q.conceptId
+            concept_id: q.conceptId,
+            chapter: q.source.chapter ?? null
           })
           .where('id', '=', row.id)
           .execute()
@@ -127,7 +133,12 @@ export async function syncModule(
       } else {
         await trx
           .updateTable('card')
-          .set({ content_hash: q.contentHash, core_hash: core, concept_id: q.conceptId })
+          .set({
+            content_hash: q.contentHash,
+            core_hash: core,
+            concept_id: q.conceptId,
+            chapter: q.source.chapter ?? null
+          })
           .where('id', '=', row.id)
           .execute()
         report.updated++

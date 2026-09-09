@@ -30,6 +30,7 @@ export interface CardTable {
   retired_at: string | null
   orphaned: number
   last_self_assess: number | null
+  chapter: string | null
 }
 
 export interface ReviewLogTable {

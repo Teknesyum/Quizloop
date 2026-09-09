@@ -328,6 +328,25 @@ body,
 
 .ql-stem-text {
   font-size: var(--tk-fs-3);
+  color: var(--tk-text);
+}
+
+.ql-stem-text strong {
+  color: var(--tk-text-label);
+  font-weight: var(--tk-fw-body);
+}
+
+.ql-stem-text em {
+  color: var(--tk-pink-text);
+  font-style: normal;
+}
+
+.ql-stem-ask {
+  font-size: var(--tk-fs-4);
+  line-height: var(--tk-lh-heading);
+  color: var(--tk-text);
+  padding-top: var(--tk-sp-3);
+  border-top: var(--tk-border-w) solid var(--tk-border);
 }
 
 .ql-typing {
@@ -360,7 +379,7 @@ kbd {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: var(--tk-sp-3);
+  gap: var(--tk-sp-4);
   margin: 0;
   padding: 0;
 }
@@ -368,11 +387,11 @@ kbd {
 .ql-choice > button {
   width: 100%;
   display: flex;
-  align-items: flex-start;
-  gap: var(--tk-sp-3);
-  padding: var(--tk-sp-3) var(--tk-sp-4);
+  align-items: center;
+  gap: var(--tk-sp-4);
+  padding: var(--tk-sp-4) var(--tk-sp-5);
   font-family: inherit;
-  font-size: var(--tk-fs-2);
+  font-size: var(--tk-fs-3);
   line-height: var(--tk-lh-body);
   text-align: left;
   color: var(--tk-text);
@@ -404,11 +423,46 @@ kbd {
 
 .ql-choice-key {
   flex: 0 0 auto;
+  display: inline-flex;
+  transition: color var(--tk-t-fast) var(--tk-e-out),
+    border-color var(--tk-t-fast) var(--tk-e-out);
+  align-items: center;
+  justify-content: center;
+  width: var(--tk-sp-5);
+  height: var(--tk-sp-5);
+  border-radius: var(--tk-r);
+  border: var(--tk-border-w) solid var(--tk-border-strong);
+  color: var(--tk-text-label);
+  font-size: var(--tk-fs-2);
+  line-height: 1;
+}
+
+.ql-choice > button:hover .ql-choice-key {
+  color: var(--tk-blue);
+  border-color: var(--tk-blue);
+}
+
+.ql-choice-wrong .ql-choice-key {
+  color: var(--tk-danger-text);
+  border-color: var(--tk-danger);
+}
+
+.ql-choice-right .ql-choice-key {
+  color: var(--tk-success);
+  border-color: var(--tk-success);
 }
 
 .ql-choice-text {
   flex: 1 1 auto;
   min-width: 0;
+}
+
+.ql-choice-text > :first-child {
+  margin-top: 0;
+}
+
+.ql-choice-text > :last-child {
+  margin-bottom: 0;
 }
 
 .ql-choice-img {
@@ -521,8 +575,69 @@ kbd {
 }
 
 .ql-keys {
-  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: var(--tk-sp-2) var(--tk-sp-5);
+  color: var(--tk-pink-text);
+}
+
+.ql-key {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--tk-sp-2);
+}
+
+.ql-key > kbd {
+  color: var(--tk-text-label);
+}
+
+.ql-key-label {
+  color: var(--tk-pink-text);
+}
+
+.ql-grade-btn {
+  border-color: var(--tk-border-strong);
+  transition: background-color var(--tk-t-fast) var(--tk-e-out),
+    border-color var(--tk-t-fast) var(--tk-e-out);
+}
+
+.ql-grade-1 {
+  color: var(--tk-danger-text);
+  transition: background-color var(--tk-t-fast) var(--tk-e-out),
+    border-color var(--tk-t-fast) var(--tk-e-out);
+}
+
+.ql-grade-1:hover {
+  background-color: var(--ql-tint-danger);
+  border-color: var(--tk-danger);
+}
+
+.ql-grade-2 {
   color: var(--tk-purple-text);
+  transition: background-color var(--tk-t-fast) var(--tk-e-out),
+    border-color var(--tk-t-fast) var(--tk-e-out);
+}
+
+.ql-grade-2:hover {
+  background-color: var(--ql-tint-purple);
+  border-color: var(--tk-purple);
+}
+
+.ql-grade-3 {
+  color: var(--tk-text-label);
+  transition: background-color var(--tk-t-fast) var(--tk-e-out),
+    border-color var(--tk-t-fast) var(--tk-e-out);
+}
+
+.ql-grade-3:hover {
+  background-color: var(--ql-tint-blue);
+  border-color: var(--tk-blue);
+}
+
+.ql-grade-row .ql-grade-hint {
+  color: var(--tk-text);
 }
 
 /* --- summary and stats --- */

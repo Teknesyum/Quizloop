@@ -4,12 +4,13 @@ import type { Database } from '@main/db/types'
 import { assetBase } from '@main/assets/protocol'
 import { installFrom, removeModule, samplePath } from '@main/modules/install'
 import { QuestionIndex, readMeta } from '@main/modules/loader'
-import { countDue } from '@main/scheduler/queue'
+import { chapterCounts, countDue } from '@main/scheduler/queue'
 import { SessionMachine } from '@main/session/machine'
 import { dayStart, getSettings, setSettings } from '@main/settings'
 import {
   CH,
   type IntegrityReport,
+  type ChapterSummary,
   type ModuleSummary,
   type Settings,
   type StatsOverview
@@ -143,9 +144,19 @@ export function registerHandlers(ctx: Context): { rootOf(moduleId: string): stri
     await refreshRoots()
   })
 
-  ipcMain.handle(CH.sessionStart, async (_e, moduleId: unknown) => {
+  ipcMain.handle(CH.moduleChapters, async (_e, moduleId: unknown): Promise<ChapterSummary[]> => {
     await refreshRoots()
-    return machine.start(z.string().parse(moduleId))
+    const id = z.string().parse(moduleId)
+    const rows = await chapterCounts(db, id, new Date())
+    return rows.map((r) => ({ chapter: r.chapter, total: r.total, ...r.count }))
+  })
+
+  ipcMain.handle(CH.sessionStart, async (_e, moduleId: unknown, chapter: unknown) => {
+    await refreshRoots()
+    return machine.start(
+      z.string().parse(moduleId),
+      z.string().nullable().optional().parse(chapter) ?? null
+    )
   })
   ipcMain.handle(CH.sessionKnown, (_e, id: unknown) => machine.known(z.string().parse(id)))
   ipcMain.handle(CH.sessionReveal, (_e, id: unknown) => machine.reveal(z.string().parse(id)))

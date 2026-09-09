@@ -102,8 +102,24 @@ const m0001: Migration = {
   }
 }
 
+const m0002: Migration = {
+  async up(db: Kysely<unknown>) {
+    await db.schema.alterTable('card').addColumn('chapter', 'text').execute()
+    await db.schema
+      .createIndex('card_chapter')
+      .on('card')
+      .columns(['module_id', 'chapter'])
+      .execute()
+  },
+  async down(db: Kysely<unknown>) {
+    await db.schema.dropIndex('card_chapter').execute()
+    await db.schema.alterTable('card').dropColumn('chapter').execute()
+  }
+}
+
 export const migrations: Record<string, Migration> = {
-  '0001_initial': m0001
+  '0001_initial': m0001,
+  '0002_card_chapter': m0002
 }
 
 export const provider: MigrationProvider = {

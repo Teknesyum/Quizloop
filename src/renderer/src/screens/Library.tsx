@@ -56,7 +56,7 @@ function ModuleCard({
           <button
             type="button"
             className="tk-btn tk-btn-primary ql-btn-sm"
-            onClick={() => go({ name: 'session', moduleId: m.id })}
+            onClick={() => go({ name: 'chapters', moduleId: m.id })}
           >
             {t('library.start')}
           </button>

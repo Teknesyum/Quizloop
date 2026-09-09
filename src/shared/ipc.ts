@@ -3,6 +3,15 @@ import type { Choice, ChoiceKey, SolutionBlock, Source } from './schema/question
 export type SelfAssess = 1 | 2 | 3
 export type FsrsRating = 1 | 2 | 3 | 4
 
+export interface ChapterSummary {
+  chapter: string
+  total: number
+  dueToday: number
+  unseen: number
+  retired: number
+  learning: number
+}
+
 export interface ModuleSummary {
   id: string
   name: string
@@ -74,7 +83,10 @@ export interface Settings {
   typerSpeed: 'slow' | 'normal' | 'fast' | 'off'
   sessionLimit: number
   soundOn: boolean
+  fontScale: number
 }
+
+export const FONT_SCALES = [0.9, 1, 1.1, 1.25, 1.4, 1.6] as const
 
 export interface InstallResult {
   ok: boolean
@@ -105,6 +117,7 @@ export interface QuizloopApi {
   settings: {
     get(): Promise<Settings>
     set(patch: Partial<Settings>): Promise<Settings>
+    zoom(factor: number): void
     pickModulesDir(): Promise<string | null>
   }
   module: {
@@ -113,10 +126,12 @@ export interface QuizloopApi {
     installSample(): Promise<InstallResult>
     pick(): Promise<InstallResult | null>
     remove(moduleId: string): Promise<void>
+    chapters(moduleId: string): Promise<ChapterSummary[]>
   }
   session: {
     start(
-      moduleId: string
+      moduleId: string,
+      chapter?: string | null
     ): Promise<{ sessionId: string; first: QuestionView | null; total: number }>
     known(sessionId: string): Promise<void>
     reveal(sessionId: string): Promise<void>
@@ -145,6 +160,7 @@ export const CH = {
   moduleInstallSample: 'module:installSample',
   modulePick: 'module:pick',
   moduleRemove: 'module:remove',
+  moduleChapters: 'module:chapters',
   sessionStart: 'session:start',
   sessionKnown: 'session:known',
   sessionReveal: 'session:reveal',
