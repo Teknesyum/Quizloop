@@ -5,7 +5,7 @@ import { jaccard, trigrams } from '../../../src/shared/text.ts'
 import { quoteFound } from './text.ts'
 import type { Loaded } from './rules.ts'
 import { rangeText, toPdf, type Corpus } from './corpus.ts'
-import { loadOutputs } from './generate.ts'
+import { figuresDir, imageRefs, loadOutputs } from './generate.ts'
 
 export interface Report {
   ok: boolean
@@ -51,9 +51,9 @@ export function verify(l: Loaded, c: Corpus): Report {
         errors.push({ id: q.id, code: 'pages', message: `sayfa aralığı gövde dışında: ${a}-${b}` })
       else if (!quoteFound(q.source.quote, rangeText(c, a, b)))
         errors.push({ id: q.id, code: 'quote', message: 'alıntı kaynak sayfalarında yok' })
-      for (const ch of q.choices) {
-        if (ch.imageRef && !fs.existsSync(path.join(l.dir, ch.imageRef)))
-          errors.push({ id: q.id, code: 'asset', message: ch.imageRef })
+      for (const ref of imageRefs(q)) {
+        if (!fs.existsSync(path.join(figuresDir(l), path.basename(ref))))
+          errors.push({ id: q.id, code: 'asset', message: ref })
       }
       all.push(q)
     }
