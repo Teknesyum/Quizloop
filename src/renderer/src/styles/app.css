@@ -168,6 +168,7 @@ body,
   display: flex;
   flex-direction: column;
   gap: var(--tk-section-gap);
+  width: 100%;
   max-width: calc(var(--tk-measure) * 2);
   margin: 0 auto;
 }
@@ -685,4 +686,75 @@ kbd {
 .ql-transition-in {
   animation: ql-in var(--tk-t-base) var(--tk-e-out) both;
   animation-delay: calc(min(var(--ql-i), var(--tk-stagger-max)) * var(--tk-stagger));
+}
+
+/* --- wide screens --- */
+
+@media (min-height: 860px) {
+  .ql-main:has(> .ql-session) {
+    display: grid;
+    align-content: center;
+    min-height: 100%;
+  }
+}
+
+@media (min-width: 1700px) {
+  .ql-main {
+    padding: var(--tk-sp-5) calc(var(--tk-sp-5) * 2);
+  }
+
+  .ql-screen {
+    max-width: calc(var(--tk-measure) * 2.4);
+  }
+
+  .ql-session {
+    max-width: calc(var(--tk-measure) * 1.7);
+  }
+
+  .ql-grid {
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  }
+
+  .ql-tiles {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  }
+
+  .ql-bars {
+    height: calc(var(--tk-sp-5) * 7);
+  }
+}
+
+@media (min-width: 2200px) {
+  :root {
+    --tk-fs-1: 16px;
+    --tk-fs-2: 20px;
+    --tk-fs-3: 24px;
+    --tk-fs-4: 30px;
+    --tk-fs-5: 38px;
+    --tk-titlebar-h-max: 48px;
+  }
+
+  .ql-main {
+    padding: calc(var(--tk-sp-5) * 1.5) calc(var(--tk-sp-5) * 3);
+  }
+
+  .ql-screen {
+    max-width: calc(var(--tk-measure) * 2.6);
+  }
+
+  .ql-session {
+    max-width: calc(var(--tk-measure) * 1.8);
+  }
+
+  .ql-grid {
+    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+  }
+
+  .ql-tiles {
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  }
+
+  .ql-bars {
+    height: calc(var(--tk-sp-5) * 9);
+  }
 }
