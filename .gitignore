@@ -31,3 +31,4 @@ database/
 # Lint cache.
 .eslintcache
 trash/
+__pycache__/
