@@ -63,6 +63,8 @@
   "session.endConfirm": "Oturum bitirilsin mi? Çözülen sorular kaydedildi.",
   "session.wrong": "Yanlış, tekrar dene",
   "session.correct": "Doğru cevap",
+  "session.verdictRight": "Doğru",
+  "session.verdictWrong": "Yanlış",
   "session.solution": "Çözüm",
   "session.source": "Kaynak",
   "session.sourceLine": "{file}, sayfa {from}–{to}",

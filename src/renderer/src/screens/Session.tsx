@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { tinykeys } from 'tinykeys'
 import type { QuestionView, SelfAssess } from '@shared/ipc'
 import type { ChoiceKey, SolutionBlock } from '@shared/schema/question'
@@ -69,6 +69,12 @@ function emphasize(md: string, tags: string[]): string {
   return out
 }
 
+const MODALITY = /(?<![\p{L}*])(\p{L}{3,}\s+anestezi\p{L}{0,8})(?![\p{L}*])/giu
+
+function markModality(md: string): string {
+  return md.replace(MODALITY, (m: string) => (m.includes('*') ? m : `**${m}**`))
+}
+
 function splitAsk(md: string): { body: string; ask: string } {
   const m = md.match(/(?:^|(?<=[.!?]\s))([^.!?]*\?)\s*$/)
   if (!m || m.index === undefined) return { body: md, ask: '' }
@@ -86,8 +92,8 @@ function Stem({
 }): React.JSX.Element {
   const full = useMemo(() => {
     const { body, ask } = splitAsk(q.stem.md)
-    const marked = emphasize(body, q.tags)
-    const markedAsk = emphasize(ask, q.tags)
+    const marked = markModality(emphasize(body, q.tags))
+    const markedAsk = markModality(emphasize(ask, q.tags))
     return {
       body: marked,
       ask: markedAsk,
@@ -182,6 +188,7 @@ export function Session({
   const toast = useApp((x) => x.toast)
   const loadModules = useApp((x) => x.loadModules)
   const [ending, setEnding] = useState(false)
+  const solvedRef = useRef<HTMLDivElement | null>(null)
   const speed = settings?.typerSpeed ?? 'normal'
   const state = s.state
 
@@ -201,6 +208,11 @@ export function Session({
     await s.end()
     await loadModules()
   }
+
+  useEffect(() => {
+    if (state.phase !== 'solved') return
+    solvedRef.current?.scrollIntoView({ block: 'start', behavior: 'smooth' })
+  }, [state.phase])
 
   const autoNext =
     state.phase === 'graded' && state.grade.retired && state.grade.next ? state.q.questionId : null
@@ -294,6 +306,7 @@ export function Session({
   const q = state.q
   const wrong = state.phase === 'choices' || state.phase === 'solved' ? state.wrong : {}
   const solved = state.phase === 'solved' ? state.result : null
+  const firstTry = Object.keys(wrong).length === 0
   const graded = state.phase === 'graded' ? state.grade : null
   const showChoices = state.phase !== 'stem'
   const hints: [string, Key][] =
@@ -338,7 +351,9 @@ export function Session({
         </div>
         <div className="ql-session-meta">
           <span className="tk-label">{t('session.score')}</span>
-          <span className="tk-mono ql-score">{s.score}</span>
+          <span key={s.score} className="tk-mono ql-score ql-score-bump">
+            {s.score}
+          </span>
           <button
             type="button"
             className="tk-btn tk-btn-ghost ql-btn-sm"
@@ -421,15 +436,21 @@ export function Session({
         )}
 
         {solved && (
-          <div className="ql-solved ql-transition-in">
-            <hr className="tk-divider" />
+          <div className="ql-solved ql-transition-in" ref={solvedRef}>
+            <p
+              className={`ql-verdict ${firstTry ? 'ql-verdict-right' : 'ql-verdict-wrong'}`}
+              role="status"
+            >
+              <span aria-hidden="true">{firstTry ? '✔' : '✕'}</span>
+              <span>{firstTry ? t('session.verdictRight') : t('session.verdictWrong')}</span>
+            </p>
             <h3 className="tk-h3">{t('session.solution')}</h3>
             {solved.solution && <Solution blocks={solved.solution} assetBase={q.assetBase} />}
             {solved.source && (
               <blockquote className="ql-source">
-                <span className="tk-label">{t('session.source')}</span>
-                <p className="tk-prose">“{solved.source.quote}”</p>
-                <span className="tk-hint">
+                <span className="tk-label ql-source-label">{t('session.source')}</span>
+                <p className="ql-source-quote">{solved.source.quote}</p>
+                <span className="tk-hint ql-source-line">
                   {t('session.sourceLine', {
                     file: solved.source.file,
                     from: solved.source.pages[0],

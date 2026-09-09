@@ -6,6 +6,10 @@
   --ql-tint-purple: color-mix(in srgb, var(--tk-purple) 12%, transparent);
   --ql-tint-danger: color-mix(in srgb, var(--tk-danger) 12%, transparent);
   --ql-tint-success: color-mix(in srgb, var(--tk-success) 12%, transparent);
+  --ql-paper: color-mix(in srgb, var(--tk-text) 6%, var(--tk-surface));
+  --ql-paper-rule: color-mix(in srgb, var(--tk-text) 9%, transparent);
+  --ql-paper-edge: color-mix(in srgb, var(--tk-text) 22%, transparent);
+  --ql-paper-ink: color-mix(in srgb, var(--tk-text) 62%, transparent);
   --ql-veil: color-mix(in srgb, var(--tk-surface) 82%, transparent);
 }
 
@@ -362,7 +366,7 @@ body,
 }
 
 .ql-stem-text {
-  font-size: var(--tk-fs-3);
+  font-size: var(--tk-fs-4);
   color: var(--tk-text);
 }
 
@@ -377,7 +381,7 @@ body,
 }
 
 .ql-stem-ask {
-  font-size: var(--tk-fs-4);
+  font-size: var(--tk-fs-3);
   line-height: var(--tk-lh-heading);
   color: var(--tk-text);
   padding-top: var(--tk-sp-3);
@@ -567,12 +571,84 @@ kbd {
 }
 
 .ql-source {
+  position: relative;
   margin: 0;
-  padding: var(--tk-sp-3) var(--tk-sp-4);
-  border-left: 2px solid var(--tk-border);
+  padding: var(--tk-sp-4) var(--tk-sp-5) var(--tk-sp-3);
   display: flex;
   flex-direction: column;
   gap: var(--tk-sp-2);
+  border: var(--tk-border-w) solid var(--ql-paper-edge);
+  border-left: 2px solid var(--ql-paper-edge);
+  border-radius: var(--tk-r-box);
+  background-color: var(--ql-paper);
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent 0,
+    transparent calc(var(--tk-sp-5) - var(--tk-border-w)),
+    var(--ql-paper-rule) calc(var(--tk-sp-5) - var(--tk-border-w)),
+    var(--ql-paper-rule) var(--tk-sp-5)
+  );
+  box-shadow: var(--tk-shadow-panel);
+}
+
+.ql-source-label {
+  color: var(--ql-paper-ink);
+}
+
+.ql-source-quote {
+  margin: 0;
+  font-family: var(--font-mono, monospace);
+  font-size: var(--tk-fs-2);
+  line-height: var(--tk-lh-mono);
+  color: var(--tk-text);
+  text-indent: var(--tk-sp-5);
+}
+
+.ql-source-quote::before {
+  content: 'C';
+  position: absolute;
+  top: var(--tk-sp-2);
+  left: var(--tk-sp-2);
+  font-size: var(--tk-fs-5);
+  line-height: var(--tk-lh-heading);
+  color: var(--ql-paper-edge);
+}
+
+.ql-source-quote::after {
+  content: 'D';
+}
+
+.ql-source-line {
+  align-self: flex-end;
+  font-style: italic;
+  color: var(--ql-paper-ink);
+}
+
+.ql-verdict {
+  display: flex;
+  align-items: center;
+  gap: var(--tk-sp-3);
+  margin: 0;
+  padding: var(--tk-sp-3) var(--tk-sp-4);
+  border: var(--tk-border-w) solid currentcolor;
+  border-radius: var(--tk-r-box);
+  font-size: var(--tk-fs-4);
+  line-height: var(--tk-lh-heading);
+}
+
+.ql-verdict-right {
+  color: var(--tk-success);
+  background-color: var(--ql-tint-success);
+}
+
+.ql-verdict-wrong {
+  color: var(--tk-danger-text);
+  background-color: var(--ql-tint-danger);
+}
+
+.ql-score-bump {
+  display: inline-block;
+  animation: ql-bump var(--tk-t-base) var(--tk-e-spring) both;
 }
 
 .ql-grade {
@@ -835,6 +911,17 @@ kbd {
   to {
     opacity: 1;
     transform: scaleY(1);
+  }
+}
+
+@keyframes ql-bump {
+  from {
+    opacity: 0.4;
+    transform: scale(var(--tk-scale-press));
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
   }
 }
 

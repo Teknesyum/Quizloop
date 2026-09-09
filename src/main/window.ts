@@ -24,7 +24,10 @@ export function createWindow(icon: string): BrowserWindow {
     }
   })
 
-  win.on('ready-to-show', () => win.show())
+  win.on('ready-to-show', () => {
+    win.maximize()
+    win.show()
+  })
   win.on('maximize', () => win.webContents.send(CH.winMaxChanged, true))
   win.on('unmaximize', () => win.webContents.send(CH.winMaxChanged, false))
 
