@@ -102,7 +102,8 @@ body,
   border: 0;
   color: var(--tk-text);
   cursor: pointer;
-  transition: background-color var(--tk-t-instant) var(--tk-e-out),
+  transition:
+    background-color var(--tk-t-instant) var(--tk-e-out),
     color var(--tk-t-instant) var(--tk-e-out);
 }
 
@@ -114,7 +115,8 @@ body,
 .ql-win-close:hover {
   background-color: var(--ql-tint-danger);
   color: var(--tk-danger-text);
-  transition: background-color var(--tk-t-instant) var(--tk-e-out),
+  transition:
+    background-color var(--tk-t-instant) var(--tk-e-out),
     color var(--tk-t-instant) var(--tk-e-out);
 }
 
@@ -142,8 +144,10 @@ body,
   border: var(--tk-border-w) solid transparent;
   border-radius: var(--tk-r);
   cursor: pointer;
-  transition: background-color var(--tk-t-fast) var(--tk-e-out),
-    border-color var(--tk-t-fast) var(--tk-e-out), color var(--tk-t-fast) var(--tk-e-out);
+  transition:
+    background-color var(--tk-t-fast) var(--tk-e-out),
+    border-color var(--tk-t-fast) var(--tk-e-out),
+    color var(--tk-t-fast) var(--tk-e-out);
 }
 
 .ql-nav:hover {
@@ -278,7 +282,7 @@ body,
 /* --- session --- */
 
 .ql-session {
-  max-width: calc(var(--tk-measure) * 1.4);
+  max-width: calc(var(--tk-measure) * 1.8);
 }
 
 .ql-session-bar {
@@ -399,8 +403,10 @@ kbd {
   border: var(--tk-border-w) solid var(--tk-border);
   border-radius: var(--tk-r);
   cursor: pointer;
-  transition: background-color var(--tk-t-fast) var(--tk-e-out),
-    border-color var(--tk-t-fast) var(--tk-e-out), transform var(--tk-t-instant) var(--tk-e-out);
+  transition:
+    background-color var(--tk-t-fast) var(--tk-e-out),
+    border-color var(--tk-t-fast) var(--tk-e-out),
+    transform var(--tk-t-instant) var(--tk-e-out);
 }
 
 .ql-choice > button:hover {
@@ -424,7 +430,8 @@ kbd {
 .ql-choice-key {
   flex: 0 0 auto;
   display: inline-flex;
-  transition: color var(--tk-t-fast) var(--tk-e-out),
+  transition:
+    color var(--tk-t-fast) var(--tk-e-out),
     border-color var(--tk-t-fast) var(--tk-e-out);
   align-items: center;
   justify-content: center;
@@ -575,11 +582,18 @@ kbd {
 }
 
 .ql-keys {
+  position: sticky;
+  bottom: 0;
+  z-index: 1;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   gap: var(--tk-sp-2) var(--tk-sp-5);
+  margin: 0;
+  padding: var(--tk-sp-3) var(--tk-sp-4);
+  border-top: var(--tk-border-w) solid var(--tk-border);
+  background-color: var(--tk-surface);
   color: var(--tk-pink-text);
 }
 
@@ -599,13 +613,15 @@ kbd {
 
 .ql-grade-btn {
   border-color: var(--tk-border-strong);
-  transition: background-color var(--tk-t-fast) var(--tk-e-out),
+  transition:
+    background-color var(--tk-t-fast) var(--tk-e-out),
     border-color var(--tk-t-fast) var(--tk-e-out);
 }
 
 .ql-grade-1 {
   color: var(--tk-danger-text);
-  transition: background-color var(--tk-t-fast) var(--tk-e-out),
+  transition:
+    background-color var(--tk-t-fast) var(--tk-e-out),
     border-color var(--tk-t-fast) var(--tk-e-out);
 }
 
@@ -616,7 +632,8 @@ kbd {
 
 .ql-grade-2 {
   color: var(--tk-purple-text);
-  transition: background-color var(--tk-t-fast) var(--tk-e-out),
+  transition:
+    background-color var(--tk-t-fast) var(--tk-e-out),
     border-color var(--tk-t-fast) var(--tk-e-out);
 }
 
@@ -627,7 +644,8 @@ kbd {
 
 .ql-grade-3 {
   color: var(--tk-text-label);
-  transition: background-color var(--tk-t-fast) var(--tk-e-out),
+  transition:
+    background-color var(--tk-t-fast) var(--tk-e-out),
     border-color var(--tk-t-fast) var(--tk-e-out);
 }
 
@@ -823,7 +841,7 @@ kbd {
   }
 
   .ql-session {
-    max-width: calc(var(--tk-measure) * 1.7);
+    max-width: calc(var(--tk-measure) * 2.1);
   }
 
   .ql-grid {
@@ -858,7 +876,7 @@ kbd {
   }
 
   .ql-session {
-    max-width: calc(var(--tk-measure) * 1.8);
+    max-width: calc(var(--tk-measure) * 2.3);
   }
 
   .ql-grid {

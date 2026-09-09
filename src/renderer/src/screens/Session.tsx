@@ -16,18 +16,55 @@ function escapeRe(s: string): string {
   return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
 }
 
+const STOP = new Set([
+  'tarihi',
+  'ajanlari',
+  'ajanları',
+  'genel',
+  'temel',
+  'klinik',
+  'hasta',
+  'tedavi',
+  'yonetim',
+  'yönetim'
+])
+
+function terms(tags: string[]): string[][] {
+  const out: string[][] = []
+  const seen = new Set<string>()
+  for (const tag of tags) {
+    const words: string[] = []
+    for (const word of tag.split(/[\s,/]+/)) {
+      const w = word.trim()
+      if (w.length < 5) continue
+      const low = w.toLocaleLowerCase('tr')
+      if (STOP.has(low) || seen.has(low)) continue
+      seen.add(low)
+      words.push(w)
+    }
+    if (words.length) out.push(words)
+  }
+  return out
+}
+
+function mark(md: string, term: string, wrap: string): string {
+  return md.replace(
+    new RegExp(`(?<![\\p{L}*])(${escapeRe(term)}\\p{L}{0,8})(?![\\p{L}*])`, 'giu'),
+    (m: string) => (m.includes('*') ? m : `${wrap}${m}${wrap}`)
+  )
+}
+
 function emphasize(md: string, tags: string[]): string {
   let out = md
-  const seen = new Set<string>()
-  tags.forEach((tag, i) => {
-    const term = tag.trim()
-    if (term.length < 4 || seen.has(term.toLocaleLowerCase('tr'))) return
-    seen.add(term.toLocaleLowerCase('tr'))
-    const mark = i % 2 === 0 ? '**' : '*'
-    out = out.replace(
-      new RegExp(`(?<![\\p{L}*])(${escapeRe(term)})(?![\\p{L}*])`, 'giu'),
-      `${mark}$1${mark}`
-    )
+  terms(tags).forEach((words, i) => {
+    const wrap = i % 2 === 0 ? '**' : '*'
+    const whole = words.join(' ')
+    const tried = words.length > 1 ? mark(out, whole, wrap) : out
+    if (tried !== out) {
+      out = tried
+      return
+    }
+    for (const w of words) out = mark(out, w, wrap)
   })
   return out
 }
@@ -50,7 +87,12 @@ function Stem({
   const full = useMemo(() => {
     const { body, ask } = splitAsk(q.stem.md)
     const marked = emphasize(body, q.tags)
-    return { body: marked, ask, text: ask ? marked + '\n' + ask : marked }
+    const markedAsk = emphasize(ask, q.tags)
+    return {
+      body: marked,
+      ask: markedAsk,
+      text: markedAsk ? marked + '\n' + markedAsk : marked
+    }
   }, [q.questionId])
   const { shown, done, skip } = useTyper(full.text, speed)
   const cut = shown.length
@@ -159,6 +201,15 @@ export function Session({
     await s.end()
     await loadModules()
   }
+
+  const autoNext =
+    state.phase === 'graded' && state.grade.retired && state.grade.next ? state.q.questionId : null
+
+  useEffect(() => {
+    if (autoNext === null) return
+    const id = window.setTimeout(() => s.next(), 1600)
+    return () => window.clearTimeout(id)
+  }, [autoNext])
 
   useEffect(() => {
     const picks = Object.fromEntries(
@@ -291,6 +342,13 @@ export function Session({
           <button
             type="button"
             className="tk-btn tk-btn-ghost ql-btn-sm"
+            onClick={() => go({ name: 'chapters', moduleId })}
+          >
+            {t('session.back')}
+          </button>
+          <button
+            type="button"
+            className="tk-btn tk-btn-ghost ql-btn-sm"
             onClick={flag}
             disabled={s.flagged}
             title={s.flagged ? t('session.flagged') : t('session.flag')}
@@ -415,7 +473,11 @@ export function Session({
                   : t('session.dueIn', { when: whenLabel(graded.dueAt) })}
               </span>
               <button type="button" className="tk-btn tk-btn-primary" onClick={s.next} autoFocus>
-                {graded.next ? t('session.next') : t('session.end')}
+                {autoNext === null
+                  ? graded.next
+                    ? t('session.next')
+                    : t('session.end')
+                  : t('session.autoNext')}
                 <kbd>↵</kbd>
               </button>
             </div>
