@@ -4,6 +4,10 @@ import json
 import sys
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+
+from vurgu_suzgec import temiz
+
 MAX_WORDS = 3
 
 
@@ -21,7 +25,7 @@ def apply_one(block_path, phrases):
         keep = []
         for p in got:
             p = p.strip()
-            if not p or p not in q["stem"]["md"] or len(p.split()) > MAX_WORDS:
+            if not p or p not in q["stem"]["md"] or len(p.split()) > MAX_WORDS or not temiz(p):
                 dropped += 1
                 continue
             if p not in keep:
