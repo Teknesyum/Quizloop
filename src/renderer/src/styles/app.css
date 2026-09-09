@@ -226,6 +226,37 @@ body,
 
 .ql-card-version {
   font-size: var(--tk-fs-1);
+  color: var(--tk-disabled);
+}
+
+.ql-cover-card {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.ql-cover {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  opacity: 0.16;
+  mask-image: linear-gradient(to bottom, #000 0%, transparent 78%);
+  pointer-events: none;
+}
+
+.ql-cover-card .ql-card-head {
+  align-items: center;
+}
+
+.ql-percent {
+  flex: 0 0 auto;
+  font-size: var(--tk-fs-5);
+  line-height: var(--tk-lh-heading);
+  color: var(--tk-text-label);
 }
 
 .ql-card-stats {

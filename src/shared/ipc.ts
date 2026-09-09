@@ -5,6 +5,7 @@ export type FsrsRating = 1 | 2 | 3 | 4
 
 export interface ChapterSummary {
   chapter: string
+  assetBase: string
   total: number
   dueToday: number
   unseen: number
@@ -17,6 +18,7 @@ export interface ModuleSummary {
   name: string
   version: string
   path: string
+  assetBase: string
   questionCount: number
   dueToday: number
   unseen: number

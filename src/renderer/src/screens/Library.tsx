@@ -19,12 +19,15 @@ function ModuleCard({
   const go = useApp((s) => s.go)
   return (
     <article
-      className="tk-panel ql-card ql-transition-in"
+      className="tk-panel ql-card ql-cover-card ql-transition-in"
       style={{ '--ql-i': index } as React.CSSProperties}
     >
+      <img className="ql-cover" src={`${m.assetBase}assets/kapak.webp`} alt="" />
       <header className="ql-card-head">
         <h3 className="tk-h3">{m.name}</h3>
-        <span className="tk-mono ql-card-version">v{m.version}</span>
+        <span className="tk-mono ql-percent">
+          {m.questionCount ? Math.round((m.retired / m.questionCount) * 100) : 0}%
+        </span>
       </header>
       <dl className="ql-card-stats">
         <div className={m.dueToday ? 'ql-stat-hot' : ''}>
@@ -51,6 +54,7 @@ function ModuleCard({
       </div>
       <footer className="ql-card-foot">
         <span className="tk-hint">{t('library.card.questions', { count: m.questionCount })}</span>
+        <span className="tk-mono ql-card-version">v{m.version}</span>
         <div className="ql-card-actions">
           <button type="button" className="tk-btn tk-btn-ghost ql-btn-sm" onClick={onRemove}>
             {t('library.remove')}

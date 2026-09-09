@@ -4,6 +4,11 @@ import { Skeleton } from '@renderer/components/Skeleton'
 import { t } from '@renderer/i18n'
 import { useApp } from '@renderer/store/app'
 
+function chapterCover(c: ChapterSummary): string | null {
+  const m = c.chapter.match(/^\s*(\d+)/)
+  return m ? `${c.assetBase}assets/bolum/${m[1]}.webp` : null
+}
+
 export function Chapters({ moduleId }: { moduleId: string }): React.JSX.Element {
   const go = useApp((s) => s.go)
   const modules = useApp((s) => s.modules)
@@ -55,11 +60,17 @@ export function Chapters({ moduleId }: { moduleId: string }): React.JSX.Element 
           {rows.map((c, i) => (
             <article
               key={c.chapter || 'none'}
-              className="tk-panel ql-card ql-transition-in"
+              className="tk-panel ql-card ql-cover-card ql-transition-in"
               style={{ '--ql-i': i } as React.CSSProperties}
             >
+              {chapterCover(c) && (
+                <img className="ql-cover" src={chapterCover(c) as string} alt="" />
+              )}
               <header className="ql-card-head">
                 <h3 className="tk-h3">{c.chapter || t('chapters.unsorted')}</h3>
+                <span className="tk-mono ql-percent">
+                  {c.total ? Math.round((c.retired / c.total) * 100) : 0}%
+                </span>
               </header>
               <dl className="ql-card-stats">
                 <div className={c.dueToday ? 'ql-stat-hot' : ''}>
