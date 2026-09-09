@@ -50,7 +50,17 @@ export function writeBriefs(l: Loaded, c: Corpus, plan: Plan, units: Unit[]): st
   fs.writeFileSync(
     path.join(dir, 'index.json'),
     JSON.stringify(
-      { createdAt: new Date().toISOString(), units: units.map((u) => ({ unitId: u.unitId, hash: u.hash, chapter: u.chapter, pages: u.pages, brief: path.join(dir, u.unitId + '.md'), raw: path.join(rawDir(l), u.unitId + '.json') })) },
+      {
+        createdAt: new Date().toISOString(),
+        units: units.map((u) => ({
+          unitId: u.unitId,
+          hash: u.hash,
+          chapter: u.chapter,
+          pages: u.pages,
+          brief: path.join(dir, u.unitId + '.md'),
+          raw: path.join(rawDir(l), u.unitId + '.json')
+        }))
+      },
       null,
       1
     )

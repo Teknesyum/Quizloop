@@ -126,7 +126,8 @@ function main(argv: string[]): number {
     let units = values.force
       ? plan.units.slice()
       : plan.units.filter((u) => cp0.units[u.hash]?.status !== 'done')
-    if (values.chapter !== undefined) units = units.filter((u) => u.chapter === Number(values.chapter))
+    if (values.chapter !== undefined)
+      units = units.filter((u) => u.chapter === Number(values.chapter))
     if (values.limit !== undefined) units = units.slice(0, Number(values.limit))
     const files = writeBriefs(l, c, plan, units)
     console.log(`${files.length} brief → ${path.relative(l.root, briefDir(l))}`)
@@ -137,7 +138,10 @@ function main(argv: string[]): number {
   if (cmd === 'ingest') {
     const plan = loadPlan(l)
     const rows = ingest(l, c, plan)
-    for (const r of rows) console.log(`  ${r.unitId}: ${r.error ? 'HATA ' + r.error : `${r.questions} soru, ${r.dropped} düşen`}`)
+    for (const r of rows)
+      console.log(
+        `  ${r.unitId}: ${r.error ? 'HATA ' + r.error : `${r.questions} soru, ${r.dropped} düşen`}`
+      )
     console.log(`${rows.length} birim işlendi`)
     return rows.some((r) => r.error) ? 1 : 0
   }

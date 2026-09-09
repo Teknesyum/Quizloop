@@ -59,7 +59,11 @@ export function ingest(l: Loaded, c: Corpus, plan: Plan): IngestResult[] {
     state.questionIds = mapped.questions.map((q) => q.id)
     delete state.error
     cp.units[unit.hash] = state
-    out.push({ unitId: unit.unitId, questions: mapped.questions.length, dropped: mapped.dropped.length })
+    out.push({
+      unitId: unit.unitId,
+      questions: mapped.questions.length,
+      dropped: mapped.dropped.length
+    })
   }
   saveCheckpoint(l, cp)
   return out

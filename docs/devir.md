@@ -1,22 +1,33 @@
-# Devir — LANGE 7. Baskı Modülü
+# Devir — Quizloop
 
-Son güncelleme: 2026-09-09. Bu dosya yeni bir oturumun "git pull ve devam et"
-dedikten sonra okuyacağı tek dosyadır.
+Son güncelleme: 2026-09-09 17:05. "git pull ve devam et" denince okunacak tek
+dosya budur. Sonraki adım aşağıda **Sıradaki iş** başlığında.
 
-## Nerede kaldık
+## Ne aşamadayız
 
-Metin geçişi bitti: `build/units/` içinde 322 birim, toplam **2564 soru**.
-Sekiz sorunun altında kalan 5 birim var — `b19-p363-365` kaynakça bölümü olduğu
-için kalıcı olarak 0; `b16-p286-290`, `b23-p531-534`, `b41-p913-917`,
-`b52-p1260-1267` yedişer soruda kaldı (ingest bir soruyu düşürdü).
+**Uygulama (motor) hazır ve yeşil.** Electron 42 + React 19 iskeleti çalışıyor;
+kütüphane, oturum, özet ve ayarlar ekranları canlı, FSRS-6 zamanlaması ve SQLite
+ilerleme veritabanı yerinde. `npm run typecheck`, `npm test` (29 test), `npm run
+lint` (0 hata, 2 bilinen exhaustive-deps uyarısı) temiz; CI üç işletim
+sisteminde yeşil. Son doğrulama bu devir turunda yapıldı.
 
-Görsel geçişi yarıda: 187 birimin **150'si** bitti, `build/rawgorsel/` içinde
-**429 görsel soru** duruyor. Kuyrukta **37 birim** kaldı. Bu sorular henüz
-`raw/` ile birleştirilmedi, dolayısıyla `units/` ve paket bunları görmüyor.
+**Modül üretimi (quizforge) yarıda.** LANGE 7. baskı için:
 
-## Kaldığın yerden sürme
+| Aşama | Durum |
+| --- | --- |
+| Metin geçişi | Bitti — `build/units/` 322 birim, 2564 soru |
+| Görsel geçişi | **150 / 187 birim.** `build/rawgorsel/` içinde 429 soru bekliyor |
+| Birleştirme | Yapılmadı — görsel sorular `raw/` içine eklenmedi |
+| Paket | 2026-09-09 06:04 tarihli, 51 blok, 2532 soru, **görselsiz ve bir tur eski** |
 
-Kuyruk dosyaya bağlı değil, farktan üretilir:
+Sekiz sorunun altında kalan beş birim var: `b19-p363-365` kaynakça olduğu için
+kalıcı olarak 0; `b16-p286-290`, `b23-p531-534`, `b41-p913-917`,
+`b52-p1260-1267` yedişer soruda kaldı (ingest birer soru düşürdü).
+
+## Sıradaki iş
+
+**1. Görsel kuyruğunu bitir (37 birim).** Kuyruk dosyaya bağlı değil, farktan
+üretilir:
 
     cd sources/lange-anestezi-7/build
     ls gorsel | sed 's/\.md$//' | sort > /tmp/a.txt
@@ -38,18 +49,21 @@ birebir şudur:
 Tavan aşılırsa "Concurrent subagent limit reached" döner ve o gönderim kaybolur;
 biriminin kuyrukta kalmasına dikkat et.
 
-## Kuyruk boşalınca
+**2. Kuyruk boşalınca birleştir.** Ekleme yapar; ingest kötü olanı zaten düşürür:
 
-1. `rawgorsel` → `raw` birleştirme (ekleme; ingest kötü olanı zaten düşürür):
+    cd sources/lange-anestezi-7/build
+    node -e "const fs=require('fs');let a=0;for(const f of fs.readdirSync('rawgorsel')){const x=JSON.parse(fs.readFileSync('rawgorsel/'+f,'utf8'));const o=JSON.parse(fs.readFileSync('raw/'+f,'utf8'));o.sorular=o.sorular.concat(x.sorular);a+=x.sorular.length;fs.writeFileSync('raw/'+f,JSON.stringify(o,null,2));}console.log('eklenen',a)"
 
-        cd sources/lange-anestezi-7/build
-        node -e "const fs=require('fs');let a=0;for(const f of fs.readdirSync('rawgorsel')){const x=JSON.parse(fs.readFileSync('rawgorsel/'+f,'utf8'));const o=JSON.parse(fs.readFileSync('raw/'+f,'utf8'));o.sorular=o.sorular.concat(x.sorular);a+=x.sorular.length;fs.writeFileSync('raw/'+f,JSON.stringify(o,null,2));}console.log('eklenen',a)"
+**3. Yeniden üret.** Üçü de aynı kural dosyasıyla, adı `rules.yaml` (`.yml`
+değil):
 
-2. `ingest` → `verify` → `pack`, hepsi aynı kural dosyasıyla:
+    node --experimental-strip-types tools/quizforge/src/cli.ts ingest --rules "sources/lange-anestezi-7/rules.yaml"
 
-        node --experimental-strip-types tools/quizforge/src/cli.ts ingest --rules "sources/lange-anestezi-7/rules.yaml"
+Sonra `verify`, sonra `pack`. Paket `assets/img/` altına PNG kopyalar; `verify`
+dosyası eksikse `asset` hatası verir.
 
-   Kural dosyasının adı `rules.yaml`, `.yml` değil.
+**4. Paketi uygulamada aç.** `npm run dev`, modülü kur, görselli bir soruya kadar
+git. Bu tur hiç yapılmadı — görselli soru uygulamada henüz görülmedi.
 
 ## Bilinmesi gerekenler
 
@@ -61,15 +75,26 @@ sayfasını taşır, `sayfaOfseti: 21`.
 
 Görsel kuralları karar 0005'te: sabit kota yok, şekil başına en çok bir soru,
 cevap sızıntısı olan şekil kökte gösterilmez — `gorsel` boş bırakılıp
-`cozumGorseli` doldurulur.
+`cozumGorseli` doldurulur. Şekil envanteri `docs/olcumler/0001`'de: 634 şekil,
+415 sayfada.
 
 Şema yuvaları: `stem.imageRef`, `choice.imageRef`, çözümde `image{ref, caption}`.
-`pack` referans verilen PNG'leri `assets/img/` altına kopyalar, `verify` dosyası
-yoksa `asset` hatası verir.
+
+Blok özetleri satır sonundan bağımsızdır: okuyucu da paketleyici de BOM'u atıp
+CRLF'i LF'e katlayarak hash alır.
 
 ## Git dışında kalanlar
 
-`sources/**/build/`, `sources/**/pages.jsonl` ve `database/` gitignore'da —
-telifli kaynak ve ondan türeyen her şey depoya girmez. Bunların yedeği
-`D:\!Tmp\Projeler\QuizLoop` altındadır. Yeni makinede çalışılacaksa bu klasör
-`sources/lange-anestezi-7/` içine geri konmalıdır.
+`sources/**/build/`, `sources/**/pages.jsonl`, `modules/*` (yalnız `_ornek`
+girer) ve `database/` gitignore'da — telifli kaynak ve ondan türeyen her şey
+depo dışıdır. Tamamının yedeği `D:\!Tmp\Projeler\QuizLoop` altındadır ve bu
+turda tazelendi:
+
+    build\        196 MB   birim, raw, rawgorsel, görev dosyaları, şekil PNG'leri
+    pages.jsonl   4,9 MB   sayfa korpusu
+    modules\      5,9 MB   paketlenmiş lange-anestezi-7
+    database\     393 MB   LANGE 7. BASKI.pdf
+
+Yeni bir makinede çalışılacaksa `build\` ve `pages.jsonl`
+`sources/lange-anestezi-7/` içine, `modules\lange-anestezi-7` proje kökündeki
+`modules/` içine, PDF ise `database/` içine geri konur.
