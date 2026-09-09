@@ -170,14 +170,18 @@ export function mapUnit(
   return { questions, dropped, badQuotes }
 }
 
-const LETTER_REF = /(ceva(?:p|bı)\s+|şık\s+|seçenek\s+)([A-E])|([A-E])(?=['’]?\s*(?:şıkkı|seçeneği|şıkkında|seçeneğinde))/g
+const LETTER_REF =
+  /(ceva(?:p|bı)\s+|şık\s+|seçenek\s+)([A-E])|([A-E])(?=['’]?\s*(?:şıkkı|seçeneği|şıkkında|seçeneğinde))/g
 
 function swapLetters(text: string, a: string, b: string): string {
-  return text.replace(LETTER_REF, (m, pre: string | undefined, k1: string | undefined, k2: string | undefined) => {
-    const k = k1 ?? k2 ?? ''
-    const to = k === a ? b : k === b ? a : k
-    return (pre ?? '') + m.slice((pre ?? '').length).replace(k, to)
-  })
+  return text.replace(
+    LETTER_REF,
+    (m, pre: string | undefined, k1: string | undefined, k2: string | undefined) => {
+      const k = k1 ?? k2 ?? ''
+      const to = k === a ? b : k === b ? a : k
+      return (pre ?? '') + m.slice((pre ?? '').length).replace(k, to)
+    }
+  )
 }
 
 const ANSWER_REF = /(\bceva(?:p|b\u0131|b\u0131m\u0131z)?\s+|\byan\u0131t\s+)([A-E])\b/g
@@ -228,9 +232,7 @@ function toQuestion(
   g: Generated['sorular'][number],
   found: [number, number]
 ): QuestionT {
-  const stem = g.gorsel
-    ? { md: g.kok.trim(), imageRef: assetRef(g.gorsel) }
-    : { md: g.kok.trim() }
+  const stem = g.gorsel ? { md: g.kok.trim(), imageRef: assetRef(g.gorsel) } : { md: g.kok.trim() }
   const choices = g.siklar.map((s) => ({ key: s.anahtar, md: s.metin.trim() }))
   const solution: SolutionBlock[] = g.cozum.map((b) => ({ type: b.tur, md: b.metin.trim() }))
   if (g.cozumGorseli) solution.push({ type: 'image', ref: assetRef(g.cozumGorseli) })
