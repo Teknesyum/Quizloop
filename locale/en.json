@@ -63,6 +63,8 @@
   "session.endConfirm": "End the session? Answered questions are saved.",
   "session.wrong": "Wrong, try again",
   "session.correct": "Correct answer",
+  "session.verdictRight": "Correct",
+  "session.verdictWrong": "Wrong",
   "session.solution": "Solution",
   "session.source": "Source",
   "session.sourceLine": "{file}, pages {from}–{to}",

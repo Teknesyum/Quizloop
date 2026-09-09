@@ -1,6 +1,5 @@
 import io
 import json
-import re
 import sys
 from pathlib import Path
 
@@ -20,24 +19,10 @@ def render(doc, page_no, out):
     out.write_bytes(pix.pil_tobytes(format="WEBP", quality=72))
 
 
-def main(pdf_path, module_dir):
+def main(pdf_path, module_dir, chapters_path):
     module_dir = Path(module_dir)
-    meta = json.loads((module_dir / "module.json").read_text(encoding="utf-8"))
-    starts = {}
-    for block in meta["blocks"]:
-        data = json.loads((module_dir / block["file"]).read_text(encoding="utf-8"))
-        for q in data["questions"] if isinstance(data, dict) else data:
-            src = q["source"]
-            chapter = src.get("chapter")
-            if not chapter:
-                continue
-            m = re.match(r"\s*(\d+)", chapter)
-            if not m:
-                continue
-            n = int(m.group(1))
-            page = src["pages"][0]
-            if n not in starts or page < starts[n]:
-                starts[n] = page
+    meta = json.loads(Path(chapters_path).read_text(encoding="utf-8"))
+    starts = {c["chapter"]: c["pdfPages"][0] for c in meta["chapters"]}
 
     doc = pymupdf.open(pdf_path)
     assets = module_dir / "assets"
@@ -49,4 +34,4 @@ def main(pdf_path, module_dir):
 
 
 if __name__ == "__main__":
-    main(sys.argv[1], sys.argv[2])
+    main(sys.argv[1], sys.argv[2], sys.argv[3])
