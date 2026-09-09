@@ -6,10 +6,10 @@
   --ql-tint-purple: color-mix(in srgb, var(--tk-purple) 12%, transparent);
   --ql-tint-danger: color-mix(in srgb, var(--tk-danger) 12%, transparent);
   --ql-tint-success: color-mix(in srgb, var(--tk-success) 12%, transparent);
-  --ql-paper: color-mix(in srgb, var(--tk-text) 6%, var(--tk-surface));
-  --ql-paper-rule: color-mix(in srgb, var(--tk-text) 9%, transparent);
-  --ql-paper-edge: color-mix(in srgb, var(--tk-text) 22%, transparent);
-  --ql-paper-ink: color-mix(in srgb, var(--tk-text) 62%, transparent);
+  --ql-paper: color-mix(in srgb, var(--tk-warning) 4%, var(--tk-surface));
+  --ql-paper-edge: color-mix(in srgb, var(--tk-warning) 24%, transparent);
+  --ql-paper-ink: color-mix(in srgb, var(--tk-warning) 34%, var(--tk-text));
+  --ql-paper-stamp: color-mix(in srgb, var(--tk-warning) 72%, var(--tk-text));
   --ql-veil: color-mix(in srgb, var(--tk-surface) 82%, transparent);
 }
 
@@ -570,29 +570,28 @@ kbd {
   color: var(--tk-text-label);
 }
 
+.ql-solved {
+  display: flex;
+  flex-direction: column;
+  gap: var(--tk-sp-5);
+}
+
 .ql-source {
   position: relative;
   margin: 0;
-  padding: var(--tk-sp-4) var(--tk-sp-5) var(--tk-sp-3);
+  padding: var(--tk-sp-4) var(--tk-sp-5);
   display: flex;
   flex-direction: column;
-  gap: var(--tk-sp-2);
+  gap: var(--tk-sp-3);
   border: var(--tk-border-w) solid var(--ql-paper-edge);
-  border-left: 2px solid var(--ql-paper-edge);
+  border-left: 2px solid var(--ql-paper-stamp);
   border-radius: var(--tk-r-box);
   background-color: var(--ql-paper);
-  background-image: repeating-linear-gradient(
-    to bottom,
-    transparent 0,
-    transparent calc(var(--tk-sp-5) - var(--tk-border-w)),
-    var(--ql-paper-rule) calc(var(--tk-sp-5) - var(--tk-border-w)),
-    var(--ql-paper-rule) var(--tk-sp-5)
-  );
   box-shadow: var(--tk-shadow-panel);
 }
 
 .ql-source-label {
-  color: var(--ql-paper-ink);
+  color: var(--ql-paper-stamp);
 }
 
 .ql-source-quote {
@@ -600,28 +599,21 @@ kbd {
   font-family: var(--font-mono, monospace);
   font-size: var(--tk-fs-2);
   line-height: var(--tk-lh-mono);
-  color: var(--tk-text);
-  text-indent: var(--tk-sp-5);
+  color: var(--ql-paper-ink);
 }
 
 .ql-source-quote::before {
-  content: 'C';
-  position: absolute;
-  top: var(--tk-sp-2);
-  left: var(--tk-sp-2);
-  font-size: var(--tk-fs-5);
-  line-height: var(--tk-lh-heading);
-  color: var(--ql-paper-edge);
+  content: '“';
 }
 
 .ql-source-quote::after {
-  content: 'D';
+  content: '”';
 }
 
 .ql-source-line {
   align-self: flex-end;
   font-style: italic;
-  color: var(--ql-paper-ink);
+  color: var(--ql-paper-stamp);
 }
 
 .ql-verdict {
