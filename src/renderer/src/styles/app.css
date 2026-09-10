@@ -2,6 +2,7 @@
   --ql-i: 0;
   --ql-h: 0%;
   --ql-titlebar-h: var(--tk-titlebar-h-max);
+  --ql-keys-h: var(--tk-titlebar-h-min);
   --ql-tint-blue: color-mix(in srgb, var(--tk-blue) 10%, transparent);
   --ql-tint-purple: color-mix(in srgb, var(--tk-purple) 12%, transparent);
   --ql-tint-danger: color-mix(in srgb, var(--tk-danger) 12%, transparent);
@@ -40,6 +41,11 @@ body,
   min-width: 0;
   overflow-y: auto;
   padding: var(--tk-sp-5);
+  scroll-padding-bottom: var(--ql-keys-h);
+}
+
+.ql-main:has(> .ql-session) {
+  padding-bottom: calc(var(--ql-keys-h) + var(--tk-sp-5));
 }
 
 /* --- title bar --- */
@@ -681,19 +687,28 @@ kbd {
 }
 
 .ql-keys {
-  position: sticky;
+  position: fixed;
+  inset-inline: 0;
   bottom: 0;
-  z-index: 1;
+  z-index: 2;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   align-items: center;
   justify-content: center;
-  gap: var(--tk-sp-2) var(--tk-sp-5);
+  gap: var(--tk-sp-4);
+  min-height: var(--ql-keys-h);
   margin: 0;
-  padding: var(--tk-sp-3) var(--tk-sp-4);
+  padding: 0 var(--tk-sp-4);
+  overflow-x: auto;
   border-top: var(--tk-border-w) solid var(--tk-border);
   background-color: var(--tk-surface);
   color: var(--tk-pink-text);
+  font-size: var(--tk-fs-1);
+  white-space: nowrap;
+}
+
+.ql-shell:has(.ql-session) .tk-toast-stack {
+  bottom: calc(var(--ql-keys-h) + var(--tk-sp-4));
 }
 
 .ql-key {
@@ -936,7 +951,7 @@ kbd {
 @media (min-height: 860px) {
   .ql-main:has(> .ql-session) {
     display: grid;
-    align-content: center;
+    align-content: safe center;
     min-height: 100%;
   }
 }

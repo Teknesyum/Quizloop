@@ -163,7 +163,7 @@ export function Session({
 
   useEffect(() => {
     if (state.phase !== 'solved') return
-    solvedRef.current?.scrollIntoView({ block: 'start', behavior: 'smooth' })
+    solvedRef.current?.scrollIntoView({ block: 'nearest', behavior: 'smooth' })
   }, [state.phase])
 
   const autoNext =
