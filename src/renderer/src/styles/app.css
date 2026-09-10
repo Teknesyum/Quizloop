@@ -709,6 +709,11 @@ kbd {
 
 .ql-shell:has(.ql-session) .tk-toast-stack {
   bottom: calc(var(--ql-keys-h) + var(--tk-sp-4));
+  z-index: 3;
+}
+
+.ql-shell:has(.ql-session) .tk-toast-stack > .tk-toast:nth-last-child(n + 4) {
+  display: none;
 }
 
 .ql-key {
