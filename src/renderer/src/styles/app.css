@@ -915,14 +915,26 @@ kbd {
   font: inherit;
   color: var(--ql-paper-stamp);
   cursor: pointer;
-  transition: color var(--tk-t-instant) var(--tk-e-out),
-              border-color var(--tk-t-instant) var(--tk-e-out);
+  transition:
+    color var(--tk-t-instant) var(--tk-e-out),
+    border-color var(--tk-t-instant) var(--tk-e-out);
 }
 
 .ql-source-page:hover,
 .ql-source-page:focus-visible {
   color: var(--tk-text);
   border-bottom-color: var(--tk-text);
+}
+
+.ql-source-page:active {
+  color: var(--tk-text);
+  transform: scale(var(--tk-scale-press));
+}
+
+.ql-source-page:disabled {
+  cursor: not-allowed;
+  color: var(--ql-paper-ink);
+  border-bottom-color: var(--ql-paper-edge);
 }
 
 .ql-book-scrim {
@@ -977,8 +989,9 @@ kbd {
   min-width: 0;
   transform-style: preserve-3d;
   backface-visibility: hidden;
-  transition: transform var(--tk-t-slow) var(--tk-e-out),
-              opacity var(--tk-t-slow) var(--tk-e-out);
+  transition:
+    transform var(--tk-t-slow) var(--tk-e-out),
+    opacity var(--tk-t-slow) var(--tk-e-out);
 }
 
 .ql-book-leaf-left {
@@ -1028,7 +1041,6 @@ kbd {
 
 .ql-book-underline {
   border-bottom: 2px solid var(--tk-warning);
-  background: color-mix(in srgb, var(--tk-warning) 18%, transparent);
 }
 
 .ql-book-outline {
@@ -1050,6 +1062,12 @@ kbd {
   margin: 0 auto var(--tk-sp-3);
   border: var(--tk-border-w) solid var(--ql-paper-edge);
   border-radius: var(--tk-r-box);
+}
+
+.ql-book-source {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--tk-sp-3);
 }
 
 .ql-book-quote {
