@@ -81,6 +81,7 @@ export class SessionMachine {
       stem: q.stem,
       choices: q.choices,
       difficulty: q.difficulty,
+      kind: q.kind,
       tags: q.tags,
       vurgu: q.vurgu,
       assetBase: this.deps.assetBase(s.moduleId),
@@ -166,9 +167,22 @@ export class SessionMachine {
     if (c && c.phase === 'stem') c.knownWithoutChoices = true
   }
 
-  reveal(id: string): void {
+  reveal(id: string): AnswerResult | null {
     const c = this.get(id).current
-    if (c && c.phase === 'stem') c.phase = 'choices'
+    if (!c || c.phase !== 'stem') return null
+    const q = c.question
+    if (q.kind === 'acik-uclu') {
+      c.phase = 'solved'
+      return {
+        correct: true,
+        beklenenCevap: q.beklenenCevap,
+        solution: q.solution,
+        source: q.source,
+        wrongPicks: c.wrongPicks
+      }
+    }
+    c.phase = 'choices'
+    return null
   }
 
   answer(id: string, key: ChoiceKey): AnswerResult {

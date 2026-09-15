@@ -261,6 +261,7 @@ export function Session({
   const firstTry = Object.keys(wrong).length === 0
   const graded = state.phase === 'graded' ? state.grade : null
   const showChoices = state.phase !== 'stem'
+  const open = q.kind === 'acik-uclu'
   const hints: [string, Key][] =
     state.phase === 'stem'
       ? [
@@ -342,13 +343,13 @@ export function Session({
               <kbd>B</kbd>
             </button>
             <button type="button" className="tk-btn tk-btn-primary" onClick={s.reveal}>
-              {t('session.showChoices')}
+              {open ? t('session.showAnswer') : t('session.showChoices')}
               <kbd>␣</kbd>
             </button>
           </div>
         )}
 
-        {showChoices && (
+        {showChoices && q.choices.length > 0 && (
           <ol className="ql-choices">
             {q.choices.map((c, i) => {
               const isWrong = Boolean(wrong[c.key])
@@ -389,13 +390,25 @@ export function Session({
 
         {solved && (
           <div className="ql-solved ql-transition-in" ref={solvedRef}>
-            <p
-              className={`ql-verdict ${firstTry ? 'ql-verdict-right' : 'ql-verdict-wrong'}`}
-              role="status"
-            >
-              <span aria-hidden="true">{firstTry ? '✔' : '✕'}</span>
-              <span>{firstTry ? t('session.verdictRight') : t('session.verdictWrong')}</span>
-            </p>
+            {!open && (
+              <p
+                className={`ql-verdict ${firstTry ? 'ql-verdict-right' : 'ql-verdict-wrong'}`}
+                role="status"
+              >
+                <span aria-hidden="true">{firstTry ? '✔' : '✕'}</span>
+                <span>{firstTry ? t('session.verdictRight') : t('session.verdictWrong')}</span>
+              </p>
+            )}
+            {solved.beklenenCevap && (
+              <div className="ql-expected">
+                <span className="tk-label ql-expected-label">{t('session.expected')}</span>
+                <Markdown
+                  md={solved.beklenenCevap}
+                  assetBase={q.assetBase}
+                  className="tk-prose ql-expected-body"
+                />
+              </div>
+            )}
             <h3 className="tk-h3">{t('session.solution')}</h3>
             {solved.solution && <Solution blocks={solved.solution} assetBase={q.assetBase} />}
             {solved.source && (

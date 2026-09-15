@@ -1021,3 +1021,22 @@ kbd {
     height: calc(var(--tk-sp-5) * 9);
   }
 }
+
+.ql-expected {
+  display: flex;
+  flex-direction: column;
+  gap: var(--tk-sp-2);
+  padding: var(--tk-sp-4) var(--tk-sp-5);
+  border: var(--tk-border-w) solid var(--tk-border);
+  border-left: 2px solid var(--tk-blue);
+  border-radius: var(--tk-r-box);
+  background-color: var(--ql-tint-blue);
+}
+
+.ql-expected-label {
+  color: var(--tk-blue-text);
+}
+
+.ql-expected-body {
+  font-size: var(--tk-fs-3);
+}
