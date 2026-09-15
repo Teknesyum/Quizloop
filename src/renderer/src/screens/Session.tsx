@@ -142,7 +142,7 @@ export function Session({
   const loadModules = useApp((x) => x.loadModules)
   const [ending, setEnding] = useState(false)
   const [book, setBook] = useState<SourceBook | null>(null)
-  const [reading, setReading] = useState(false)
+  const [reading, setReading] = useState<string | null>(null)
   const solvedRef = useRef<HTMLDivElement | null>(null)
   const speed = settings?.typerSpeed ?? 'normal'
   const state = s.state
@@ -154,7 +154,6 @@ export function Session({
 
   useEffect(() => {
     let dead = false
-    setBook(null)
     window.quizloop.source.book(moduleId).then(
       (b) => {
         if (!dead) setBook(b)
@@ -167,10 +166,6 @@ export function Session({
       dead = true
     }
   }, [moduleId])
-
-  useEffect(() => {
-    setReading(false)
-  }, [s.state.phase])
 
   const flag = async (): Promise<void> => {
     if (s.flagged) return
@@ -199,7 +194,7 @@ export function Session({
   }, [autoNext])
 
   useEffect(() => {
-    if (reading) return
+    if (reading !== null) return
     const picks = Object.fromEntries(
       (Object.entries(KEYS.pick) as [ChoiceKey, string][]).map(([k, code]) => [
         code,
@@ -446,7 +441,7 @@ export function Session({
                     <button
                       type="button"
                       className="ql-source-page"
-                      onClick={() => setReading(true)}
+                      onClick={() => setReading(q.questionId)}
                       title={t('book.open')}
                     >
                       {t('session.sourcePages', {
@@ -525,12 +520,15 @@ export function Session({
         <Confirm text={t('session.endConfirm')} onNo={() => setEnding(false)} onYes={finish} />
       )}
 
-      {reading && solved?.source && (
+      {reading === q.questionId && solved?.source && (
         <BookViewer
+          key={book?.path ?? 'kesit'}
           book={book}
+          moduleId={moduleId}
           source={solved.source}
           assetBase={q.assetBase}
-          onClose={() => setReading(false)}
+          onBook={setBook}
+          onClose={() => setReading(null)}
         />
       )}
     </section>
