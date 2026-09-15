@@ -202,7 +202,7 @@ function fixAnswerRefs(q: QuestionT): QuestionT {
 }
 
 function balance(q: QuestionT, target: string): QuestionT {
-  if (q.correct === target || !q.choices.some((ch) => ch.key === target)) return q
+  if (!q.correct || q.correct === target || !q.choices.some((ch) => ch.key === target)) return q
   const from = q.correct
   const choices = q.choices.map((ch) => {
     if (ch.key === from) return { ...ch, md: q.choices.find((x) => x.key === target)!.md }
@@ -242,6 +242,7 @@ function toQuestion(
     id: `${l.rules.module.id}-${sha256(unit.hash + '\n' + stem.md).slice(0, 12)}`,
     conceptId: slug(g.kavram) || 'genel',
     stem,
+    kind: 'coktan-secmeli',
     choices,
     correct: g.dogru,
     distractors: Object.fromEntries(
@@ -256,6 +257,7 @@ function toQuestion(
     },
     difficulty: g.zorluk,
     tags: g.etiketler.map((t) => t.trim()).filter(Boolean),
+    vurgu: [],
     contentHash: sha256(canonical({ stem, choices, correct: g.dogru, solution })),
     deleted: false
   }
