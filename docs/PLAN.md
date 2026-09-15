@@ -601,3 +601,64 @@ TypeBox elendi: `sinclairzx81/typebox` 1.x hattına geçmiş ve TypeScript 6 + y
 **Her iki üye de** brifingdeki "anladıkları bir daha gelmez" ifadesinin aralıklı
 tekrarın tanımıyla çeliştiğini bağımsız olarak işaretledi. Yukarıdaki iki kipli çözüm
 bu uyarıya cevaptır.
+
+## 8. Kaynağa dönüş dalgası — plan
+
+Beş iş. Sıra, birbirine bağımlılığa göre seçildi; J1 ile J2 bağımsız, J3 J2'nin
+çözücüsünü kullanır, J4 J2'nin varlık paketlemesini bekler.
+
+### J1 — Şıksız soru
+
+Her sorunun beş şıkkı olmak zorunda değil. Şemaya `kind` girer:
+
+    kind: 'coktan-secmeli' | 'acik-uclu'   (öntanımlı: coktan-secmeli)
+
+`acik-uclu` olduğunda `choices` boş, `correct` ve `distractors` yok; yerine
+`beklenenCevap: string` gelir. Oturum akışı: kök → *cevabı gör* → çözüm →
+kendini puanla. `session:answer` çağrılmaz, `session:reveal` zaten var.
+
+`contentHash` alanları `{stem, choices, correct, solution}`; `kind` ve
+`beklenenCevap` hash'e girmez, mevcut sorular bozulmaz.
+
+### J2 — Kaynak kesiti
+
+`source.kesit` eklenir:
+
+    kesit: { pdfSayfa: number, bbox: [x0, y0, x1, y1], ref: ImageRef }
+
+Üretimi deterministik: `py/kaynak_kes.py` alıntıyı `page.search_for` ile PDF
+sayfasında arar, bulunan dikdörtgenleri birleştirir, kenar payı ekler, webp
+olarak `assets/kaynak/` altına yazar. Model çağrılmaz.
+
+`ImageRef` deseni `assets/(img|tbl|kaynak)/` olacak şekilde genişler.
+
+Alıntı bulunamazsa kesit yazılmaz; soru kesitsiz yaşar, rapora düşer (J5).
+
+### J3 — Kitap görüntüleyici
+
+Çözümdeki sayfa numarası tıklanabilir. Tıklayınca kitap görünümü açılır:
+
+- Çift sayfa; 14 dendiğinde 14-15 açılır.
+- Sayfa çevirirken `rotateY` ile kitap sayfası efekti, süre `--tk-t-*`.
+- İlgili cümlenin ya da şeklin etrafında iki kez yanıp sönen anahat.
+
+PDF'i renderer `pdfjs-dist` ile okur; dosyayı `quizloop://kaynak/<modul>`
+adresinden alır. PDF kullanıcının diskinde yoksa görüntüleyici açılmaz,
+kesit görseli (J2) gösterilir. Modül paketi PDF taşımaz.
+
+### J4 — Görsel ve tablo soruları
+
+`rules.yaml` içindeki `uretim.yasakli: [table, image]` görsel geçişte kalkar.
+`build/gorsel/` altında 187 birim istemi hazır, `build/figures/index.json`
+şekil koordinatlarını taşıyor.
+
+Öncesinde `pack` düzeltilir: şu an `assets/` klasörünü siliyor, kapakları ve
+kesitleri de götürüyor. `img`, `tbl`, `kaynak`, `bolum` ve `kapak` birlikte
+paketlenir.
+
+### J5 — Kaynak ayıklama kalitesi
+
+`kaynak_kes.py` çözemediği her alıntıyı `build/kaynak-raporu.json` içine
+yazar: soru kimliği, sayfa, alıntı, sebep (sayfada yok, sayfa aralığı yanlış,
+kırpılmış alıntı). Rapor J2'nin çıktısıdır, J3'ün anahat vurgusu aynı
+çözücüyü kullanır.
