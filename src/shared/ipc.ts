@@ -1,4 +1,4 @@
-import type { Choice, ChoiceKey, SolutionBlock, Source } from './schema/question'
+import type { Choice, ChoiceKey, QuestionKind, SolutionBlock, Source } from './schema/question'
 
 export type SelfAssess = 1 | 2 | 3
 export type FsrsRating = 1 | 2 | 3 | 4
@@ -31,6 +31,7 @@ export interface QuestionView {
   index: number
   total: number
   stem: { md: string; imageRef?: string }
+  kind: QuestionKind
   choices: Choice[]
   difficulty: string
   tags: string[]
@@ -41,7 +42,8 @@ export interface QuestionView {
 
 export interface AnswerResult {
   correct: boolean
-  key: ChoiceKey
+  key?: ChoiceKey
+  beklenenCevap?: string
   explanation?: string
   correctKey?: ChoiceKey
   solution?: SolutionBlock[]
@@ -138,7 +140,7 @@ export interface QuizloopApi {
       chapter?: string | null
     ): Promise<{ sessionId: string; first: QuestionView | null; total: number }>
     known(sessionId: string): Promise<void>
-    reveal(sessionId: string): Promise<void>
+    reveal(sessionId: string): Promise<AnswerResult | null>
     answer(sessionId: string, key: ChoiceKey): Promise<AnswerResult>
     grade(sessionId: string, selfAssess: SelfAssess, durationMs: number): Promise<GradeResult>
     flag(sessionId: string, note?: string): Promise<void>
