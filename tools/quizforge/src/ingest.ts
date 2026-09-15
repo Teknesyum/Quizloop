@@ -22,8 +22,10 @@ export function ingest(l: Loaded, c: Corpus, plan: Plan, gorsel = false): Ingest
   for (const unit of plan.units) {
     const file = path.join(dir, unit.unitId + '.json')
     if (!fs.existsSync(file)) continue
-    const state = cp.units[unit.hash] ?? {
-      unitId: unit.unitId,
+    const outId = gorsel ? unit.unitId + '-gorsel' : unit.unitId
+    const cpKey = gorsel ? unit.hash + ':gorsel' : unit.hash
+    const state = cp.units[cpKey] ?? {
+      unitId: outId,
       hash: unit.hash,
       status: 'failed' as const,
       attempts: 0,
@@ -46,19 +48,19 @@ export function ingest(l: Loaded, c: Corpus, plan: Plan, gorsel = false): Ingest
     }
     const mapped = mapUnit(l, c, unit, parsed.data)
     const unitOut: UnitOutput = {
-      unitId: unit.unitId,
+      unitId: outId,
       hash: unit.hash,
       pages: unit.pages,
       questions: mapped.questions,
       dropped: mapped.dropped
     }
-    const target = path.join(unitsDir(l), unit.unitId + '.json')
+    const target = path.join(unitsDir(l), outId + '.json')
     writeAtomic(target, JSON.stringify(unitOut, null, 1))
     state.status = 'done'
     state.file = path.relative(l.buildDir, target)
     state.questionIds = mapped.questions.map((q) => q.id)
     delete state.error
-    cp.units[unit.hash] = state
+    cp.units[cpKey] = state
     out.push({
       unitId: unit.unitId,
       questions: mapped.questions.length,
