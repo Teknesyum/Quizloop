@@ -19,7 +19,8 @@ const HELP = `quizforge <komut> --rules <rules.yaml> [seçenekler]
   plan      bölüm haritasından üretim birimlerini çıkar: build/plan.json
   run       birimleri modele gönder   --max-usd <n> zorunlu, --model, --limit, --chapter, --dry-run
   brief     birim istemlerini dosyaya yaz (alt ajanla üretim için)   --chapter, --limit, --force
-  ingest    ajanların yazdığı build/raw/*.json dosyalarını soruya çevir
+            --gorsel  şekil ve tablo turu: istemler build/gorsel/, cevaplar build/rawgorsel/
+  ingest    ajanların yazdığı build/raw/*.json dosyalarını soruya çevir   --gorsel
   verify    deterministik denetim: build/verify-report.json
   pack      modules/<id>/ yaz; verify geçmeden çalışmaz
   doctor    ortamı sına: python, pypdf, ANTHROPIC_API_KEY, külliyat dosyaları
@@ -43,6 +44,7 @@ function main(argv: string[]): number {
       chapter: { type: 'string' },
       'dry-run': { type: 'boolean', default: false },
       force: { type: 'boolean', default: false },
+      gorsel: { type: 'boolean', default: false },
       help: { type: 'boolean', short: 'h', default: false }
     }
   })
@@ -129,15 +131,16 @@ function main(argv: string[]): number {
     if (values.chapter !== undefined)
       units = units.filter((u) => u.chapter === Number(values.chapter))
     if (values.limit !== undefined) units = units.slice(0, Number(values.limit))
-    const files = writeBriefs(l, c, plan, units)
-    console.log(`${files.length} brief → ${path.relative(l.root, briefDir(l))}`)
+    const files = writeBriefs(l, c, plan, units, values.gorsel)
+    const dir = values.gorsel ? path.join(l.buildDir, 'gorsel') : briefDir(l)
+    console.log(`${files.length} brief → ${path.relative(l.root, dir)}`)
     for (const f of files) console.log('  ' + path.relative(l.root, f))
     return 0
   }
 
   if (cmd === 'ingest') {
     const plan = loadPlan(l)
-    const rows = ingest(l, c, plan)
+    const rows = ingest(l, c, plan, values.gorsel)
     for (const r of rows)
       console.log(
         `  ${r.unitId}: ${r.error ? 'HATA ' + r.error : `${r.questions} soru, ${r.dropped} düşen`}`
