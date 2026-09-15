@@ -12,6 +12,7 @@ export type Phase =
   | { phase: 'idle' }
   | { phase: 'loading' }
   | { phase: 'empty' }
+  | { phase: 'failed'; message: string }
   | { phase: 'stem'; q: QuestionView; known: boolean }
   | {
       phase: 'choices'
@@ -53,6 +54,11 @@ function show(q: QuestionView | null): Phase {
   return q ? { phase: 'stem', q, known: false } : { phase: 'empty' }
 }
 
+function messageOf(e: unknown): string {
+  const raw = e instanceof Error ? e.message : String(e)
+  return raw.replace(/^Error invoking remote method '[^']*':\s*/, '')
+}
+
 export const useSession = create<SessionState>((set, get) => ({
   sessionId: null,
   moduleId: null,
@@ -63,13 +69,17 @@ export const useSession = create<SessionState>((set, get) => ({
   flagged: false,
   start: async (moduleId, chapter) => {
     set({ state: { phase: 'loading' }, moduleId, score: 0, flagged: false })
-    const r = await window.quizloop.session.start(moduleId, chapter ?? null)
-    set({
-      sessionId: r.sessionId,
-      total: r.total,
-      state: show(r.first),
-      shownAt: performance.now()
-    })
+    try {
+      const r = await window.quizloop.session.start(moduleId, chapter ?? null)
+      set({
+        sessionId: r.sessionId,
+        total: r.total,
+        state: show(r.first),
+        shownAt: performance.now()
+      })
+    } catch (e) {
+      set({ state: { phase: 'failed', message: messageOf(e) } })
+    }
   },
   known: async () => {
     const { state, sessionId } = get()

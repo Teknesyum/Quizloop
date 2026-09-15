@@ -260,6 +260,34 @@ export function Session({
     )
   }
 
+  if (state.phase === 'failed') {
+    return (
+      <section className="ql-screen ql-session">
+        <div className="tk-panel ql-empty ql-transition-in">
+          <h3 className="tk-h3">{t('session.failed.title')}</h3>
+          <p className="tk-prose">{t('session.failed.body')}</p>
+          <p className="tk-prose ql-failed-detail">{state.message}</p>
+          <div className="ql-failed-actions">
+            <button
+              type="button"
+              className="tk-btn tk-btn-primary"
+              onClick={() => s.start(moduleId, chapter)}
+            >
+              {t('session.failed.retry')}
+            </button>
+            <button
+              type="button"
+              className="tk-btn"
+              onClick={() => go({ name: 'chapters', moduleId })}
+            >
+              {t('summary.back')}
+            </button>
+          </div>
+        </div>
+      </section>
+    )
+  }
+
   if (state.phase === 'empty') {
     return (
       <section className="ql-screen ql-session">
