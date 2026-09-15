@@ -35,7 +35,7 @@ export const Generated = z.object({
       tip: z.enum(['coktan-secmeli', 'acik-uclu']).optional(),
       vurgu: z.array(z.string()).optional(),
       siklar: z.array(z.object({ anahtar: Key, metin: z.string() })).default([]),
-      dogru: Key.optional(),
+      dogru: z.preprocess((v) => (v === '' ? undefined : v), Key.optional()),
       beklenenCevap: z.string().optional(),
       celdiriciler: z.array(z.object({ anahtar: Key, aciklama: z.string() })).default([]),
       cozum: z.array(z.object({ tur: z.enum(['text', 'hint']), metin: z.string() })),
