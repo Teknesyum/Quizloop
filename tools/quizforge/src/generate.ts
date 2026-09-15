@@ -32,9 +32,12 @@ export const Generated = z.object({
       sayfa: z.object({ baslangic: z.number().int(), bitis: z.number().int() }),
       kavram: z.string(),
       kok: z.string(),
-      siklar: z.array(z.object({ anahtar: Key, metin: z.string() })),
-      dogru: Key,
-      celdiriciler: z.array(z.object({ anahtar: Key, aciklama: z.string() })),
+      tip: z.enum(['coktan-secmeli', 'acik-uclu']).optional(),
+      vurgu: z.array(z.string()).optional(),
+      siklar: z.array(z.object({ anahtar: Key, metin: z.string() })).default([]),
+      dogru: Key.optional(),
+      beklenenCevap: z.string().optional(),
+      celdiriciler: z.array(z.object({ anahtar: Key, aciklama: z.string() })).default([]),
       cozum: z.array(z.object({ tur: z.enum(['text', 'hint']), metin: z.string() })),
       zorluk: z.enum(['kolay', 'orta', 'zor']),
       etiketler: z.array(z.string())
@@ -66,7 +69,7 @@ export interface UnitOutput {
   dropped: { kok: string; reason: string }[]
 }
 
-export function systemPrompt(l: Loaded): string {
+export function systemPrompt(l: Loaded, gorsel = false): string {
   const u = l.rules.uretim
   const s = l.rules.stil
   const keys = ['A', 'B', 'C', 'D', 'E'].slice(0, u.sikSayisi).join(', ')
@@ -85,9 +88,13 @@ export function systemPrompt(l: Loaded): string {
     `Zorluk dağılımı yaklaşık kolay %${Math.round(u.zorlukDagilimi.kolay * 100)}, orta %${Math.round(u.zorlukDagilimi.orta * 100)}, zor %${Math.round(u.zorlukDagilimi.zor * 100)}.`,
     `kavram: sorunun sınadığı tek kavram, 2-5 kelime. etiketler: 1-4 kısa konu etiketi.`,
     `Çözümde ve çeldirici açıklamalarında şık harfi anma ("doğru cevap A'dır" yazma); bilgiyi anlat.`,
-    u.yasakli.length
-      ? `Yasak: ${u.yasakli.join(', ')}. Şekil, tablo veya görsele atıf yapan soru yazma.`
-      : '',
+    gorsel
+      ? `Bu turda soru şeklin ya da tablonun kendisinden çıkar: verilen görseli okumayı sına — neyi gösterdiğini, hangi değerin hangi durumu işaret ettiğini, eğrinin nereye gittiğini sor. Kullandığın görselin dosya adını gorsel alanına yaz; görseli anlatarak kökün içinde tekrar etme.`
+      : u.yasakli.length
+        ? `Yasak: ${u.yasakli.join(', ')}. Şekil, tablo veya görsele atıf yapan soru yazma.`
+        : '',
+    `Her soru şıklı olmak zorunda değil. Cevabı tek bir kavram, değer ya da kısa bir gerekçe olan soruyu açık uçlu yaz: tip "acik-uclu", siklar boş, dogru yok, beklenenCevap alanında beklenen cevabı bir iki cümleyle yaz. Şık uydurmak zorunda kaldığını hissettiğin her yerde açık uçlu yaz.`,
+    `vurgu: kökteki en ayırt edici 1-3 ifade, her biri en çok üç kelime ve kökte harfiyen geçen. Fiil ya da fiilden türemiş kelime seçme; terim, değer ve sayı seç.`,
     s.ton ? `Ton: ${s.ton}.` : '',
     s.uzunluk ? `Uzunluk: ${s.uzunluk}.` : '',
     `Daha önce üretilmiş kökler listesi verilirse aynı bilgiyi ikinci kez sorma.`,
@@ -187,6 +194,7 @@ function swapLetters(text: string, a: string, b: string): string {
 const ANSWER_REF = /(\bceva(?:p|b\u0131|b\u0131m\u0131z)?\s+|\byan\u0131t\s+)([A-E])\b/g
 
 function fixAnswerRefs(q: QuestionT): QuestionT {
+  if (!q.correct) return q
   const fix = (t: string): string => t.replace(ANSWER_REF, (_m, pre: string) => pre + q.correct)
   const solution: SolutionBlock[] = q.solution.map((b) => ('md' in b ? { ...b, md: fix(b.md) } : b))
   const distractors: Record<string, string> = {}
@@ -238,16 +246,22 @@ function toQuestion(
   if (g.cozumGorseli) solution.push({ type: 'image', ref: assetRef(g.cozumGorseli) })
   const chapter = c.chapters.find((x) => x.chapter === unit.chapter)
   const pages: [number, number] = [toShown(l, c, found[0]), toShown(l, c, found[1])]
+  const open = g.tip === 'acik-uclu' || !g.dogru || choices.length < 2
   return {
     id: `${l.rules.module.id}-${sha256(unit.hash + '\n' + stem.md).slice(0, 12)}`,
     conceptId: slug(g.kavram) || 'genel',
     stem,
-    kind: 'coktan-secmeli',
-    choices,
-    correct: g.dogru,
-    distractors: Object.fromEntries(
-      g.celdiriciler.filter((d) => d.anahtar !== g.dogru).map((d) => [d.anahtar, d.aciklama.trim()])
-    ) as QuestionT['distractors'],
+    kind: open ? 'acik-uclu' : 'coktan-secmeli',
+    choices: open ? [] : choices,
+    correct: open ? undefined : g.dogru,
+    beklenenCevap: open ? g.beklenenCevap?.trim() : undefined,
+    distractors: open
+      ? {}
+      : (Object.fromEntries(
+          g.celdiriciler
+            .filter((d) => d.anahtar !== g.dogru)
+            .map((d) => [d.anahtar, d.aciklama.trim()])
+        ) as QuestionT['distractors']),
     solution,
     source: {
       file: c.file,
@@ -257,8 +271,18 @@ function toQuestion(
     },
     difficulty: g.zorluk,
     tags: g.etiketler.map((t) => t.trim()).filter(Boolean),
-    vurgu: [],
-    contentHash: sha256(canonical({ stem, choices, correct: g.dogru, solution })),
+    vurgu: (g.vurgu ?? [])
+      .map((v) => v.trim())
+      .filter((v) => v && v.split(' ').length <= 3 && stem.md.includes(v))
+      .slice(0, 3),
+    contentHash: sha256(
+      canonical({
+        stem,
+        choices: open ? [] : choices,
+        correct: open ? undefined : g.dogru,
+        solution
+      })
+    ),
     deleted: false
   }
 }

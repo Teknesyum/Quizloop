@@ -32,7 +32,7 @@ export function pack(l: Loaded, c: Corpus): string {
     blocks.push({ file, count: block.questions.length, sha256: sha256(data) })
   }
   const assetDir = path.join(outDir, 'assets', 'img')
-  fs.rmSync(path.join(outDir, 'assets'), { recursive: true, force: true })
+  fs.rmSync(assetDir, { recursive: true, force: true })
   const refs = new Set(questions.flatMap(imageRefs))
   if (refs.size) {
     fs.mkdirSync(assetDir, { recursive: true })

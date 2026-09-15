@@ -14,8 +14,8 @@ export interface IngestResult {
   error?: string
 }
 
-export function ingest(l: Loaded, c: Corpus, plan: Plan): IngestResult[] {
-  const dir = rawDir(l)
+export function ingest(l: Loaded, c: Corpus, plan: Plan, gorsel = false): IngestResult[] {
+  const dir = rawDir(l, gorsel)
   const cp = loadCheckpoint(l, c.sha256)
   const out: IngestResult[] = []
   if (!fs.existsSync(dir)) return out
