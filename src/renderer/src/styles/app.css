@@ -219,6 +219,17 @@ body,
   align-items: flex-start;
 }
 
+.ql-failed-detail {
+  color: var(--tk-danger-text);
+  font-family: var(--font-mono, monospace);
+}
+
+.ql-failed-actions {
+  display: flex;
+  gap: var(--tk-sp-2);
+  flex-wrap: wrap;
+}
+
 /* --- module card --- */
 
 .ql-card {
