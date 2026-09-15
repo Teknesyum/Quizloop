@@ -66,13 +66,18 @@ export function verify(l: Loaded, c: Corpus): Report {
     }
   }
   const letters: Record<string, number> = {}
-  for (const q of all) letters[q.correct] = (letters[q.correct] ?? 0) + 1
+  let sikli = 0
+  for (const q of all) {
+    if (!q.correct) continue
+    sikli++
+    letters[q.correct] = (letters[q.correct] ?? 0) + 1
+  }
   const k = l.rules.uretim.sikSayisi
-  const expected = all.length / k
+  const expected = sikli / k
   let chi2 = 0
   for (const key of ['A', 'B', 'C', 'D', 'E'].slice(0, k))
     chi2 += expected ? ((letters[key] ?? 0) - expected) ** 2 / expected : 0
-  if (all.length >= 50 && chi2 > CHI2_P05_DF4)
+  if (sikli >= 50 && chi2 > CHI2_P05_DF4)
     warnings.push({
       id: '*',
       code: 'letter-bias',
