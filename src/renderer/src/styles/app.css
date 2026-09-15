@@ -617,6 +617,8 @@ kbd {
 }
 
 .ql-source-line {
+  display: inline-flex;
+  align-items: baseline;
   align-self: flex-end;
   font-style: italic;
   color: var(--ql-paper-stamp);
@@ -900,6 +902,188 @@ kbd {
   border-radius: var(--tk-r);
   background: var(--ql-tint-purple);
   animation: ql-skeleton-pulse var(--tk-loading-loop-min) var(--tk-e-out) infinite alternate;
+}
+
+/* --- book viewer --- */
+
+.ql-source-page {
+  appearance: none;
+  border: 0;
+  border-bottom: var(--tk-border-w) dashed var(--ql-paper-stamp);
+  padding: 0;
+  background: none;
+  font: inherit;
+  color: var(--ql-paper-stamp);
+  cursor: pointer;
+  transition: color var(--tk-t-instant) var(--tk-e-out),
+              border-color var(--tk-t-instant) var(--tk-e-out);
+}
+
+.ql-source-page:hover,
+.ql-source-page:focus-visible {
+  color: var(--tk-text);
+  border-bottom-color: var(--tk-text);
+}
+
+.ql-book-scrim {
+  padding: var(--tk-sp-4);
+}
+
+.ql-book {
+  display: flex;
+  flex-direction: column;
+  gap: var(--tk-sp-4);
+  width: min(1400px, 96vw);
+  height: min(940px, 94vh);
+  overflow: hidden;
+}
+
+.ql-book-bar,
+.ql-book-foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--tk-sp-4);
+  flex-wrap: wrap;
+}
+
+.ql-book-meta {
+  display: flex;
+  align-items: center;
+  gap: var(--tk-sp-3);
+}
+
+.ql-book-spread {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--tk-sp-1);
+  min-height: 0;
+  flex: 1 1 auto;
+  place-items: start center;
+  overflow: auto;
+  perspective: 2400px;
+  perspective-origin: center center;
+  background: var(--ql-paper);
+  border: var(--tk-border-w) solid var(--ql-paper-edge);
+  border-radius: var(--tk-r-box);
+}
+
+.ql-book-single {
+  grid-template-columns: 1fr;
+}
+
+.ql-book-leaf {
+  position: relative;
+  min-width: 0;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  transition: transform var(--tk-t-slow) var(--tk-e-out),
+              opacity var(--tk-t-slow) var(--tk-e-out);
+}
+
+.ql-book-leaf-left {
+  transform-origin: right center;
+  justify-self: end;
+}
+
+.ql-book-leaf-right {
+  transform-origin: left center;
+  justify-self: start;
+}
+
+.ql-book-flip-next .ql-book-leaf-right {
+  transform: rotateY(-88deg);
+  opacity: 0.35;
+}
+
+.ql-book-flip-prev .ql-book-leaf-left {
+  transform: rotateY(88deg);
+  opacity: 0.35;
+}
+
+.ql-book-sheet {
+  position: relative;
+  box-shadow: var(--tk-shadow-panel);
+}
+
+.ql-book-canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.ql-book-folio {
+  position: absolute;
+  right: var(--tk-sp-3);
+  bottom: var(--tk-sp-2);
+  color: var(--ql-paper-stamp);
+  font-size: var(--tk-fs-1);
+}
+
+.ql-book-mark {
+  position: absolute;
+  pointer-events: none;
+  animation: ql-book-blink var(--tk-t-slow) var(--tk-e-out) 4 alternate both;
+}
+
+.ql-book-underline {
+  border-bottom: 2px solid var(--tk-warning);
+  background: color-mix(in srgb, var(--tk-warning) 18%, transparent);
+}
+
+.ql-book-outline {
+  border: 2px solid var(--tk-warning);
+  border-radius: var(--tk-r-cell);
+}
+
+.ql-book-loading,
+.ql-book-kesit {
+  grid-column: 1 / -1;
+  margin: 0;
+  padding: var(--tk-sp-5);
+  justify-self: stretch;
+}
+
+.ql-book-kesit img {
+  display: block;
+  max-width: 100%;
+  margin: 0 auto var(--tk-sp-3);
+  border: var(--tk-border-w) solid var(--ql-paper-edge);
+  border-radius: var(--tk-r-box);
+}
+
+.ql-book-quote {
+  margin: 0;
+  flex: 1 1 320px;
+  font-family: var(--font-mono, monospace);
+  font-size: var(--tk-fs-1);
+  color: var(--ql-paper-ink);
+}
+
+@keyframes ql-book-blink {
+  from {
+    opacity: 0.15;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ql-book-mark {
+    animation: none;
+    opacity: 1;
+  }
+
+  .ql-book-leaf {
+    transition: none;
+  }
+
+  .ql-book-flip-next .ql-book-leaf-right,
+  .ql-book-flip-prev .ql-book-leaf-left {
+    transform: none;
+    opacity: 1;
+  }
 }
 
 /* --- motion --- */

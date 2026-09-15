@@ -17,7 +17,8 @@ export const ModuleMeta = z.object({
     .object({
       title: z.string(),
       file: z.string().optional(),
-      pages: z.number().int().positive().optional()
+      pages: z.number().int().positive().optional(),
+      sayfaOfseti: z.number().int().default(0)
     })
     .optional(),
   blocks: z.array(ModuleBlockRef).min(1),

@@ -1,7 +1,8 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { tinykeys } from 'tinykeys'
-import type { QuestionView, SelfAssess } from '@shared/ipc'
+import type { QuestionView, SelfAssess, SourceBook } from '@shared/ipc'
 import type { ChoiceKey, SolutionBlock } from '@shared/schema/question'
+import { BookViewer } from '@renderer/components/BookViewer'
 import { Confirm } from '@renderer/components/Confirm'
 import { Markdown } from '@renderer/components/Markdown'
 import { Skeleton } from '@renderer/components/Skeleton'
@@ -140,6 +141,8 @@ export function Session({
   const toast = useApp((x) => x.toast)
   const loadModules = useApp((x) => x.loadModules)
   const [ending, setEnding] = useState(false)
+  const [book, setBook] = useState<SourceBook | null>(null)
+  const [reading, setReading] = useState(false)
   const solvedRef = useRef<HTMLDivElement | null>(null)
   const speed = settings?.typerSpeed ?? 'normal'
   const state = s.state
@@ -148,6 +151,26 @@ export function Session({
     s.start(moduleId, chapter)
     return () => s.reset()
   }, [moduleId, chapter])
+
+  useEffect(() => {
+    let dead = false
+    setBook(null)
+    window.quizloop.source.book(moduleId).then(
+      (b) => {
+        if (!dead) setBook(b)
+      },
+      () => {
+        if (!dead) setBook(null)
+      }
+    )
+    return () => {
+      dead = true
+    }
+  }, [moduleId])
+
+  useEffect(() => {
+    setReading(false)
+  }, [s.state.phase])
 
   const flag = async (): Promise<void> => {
     if (s.flagged) return
@@ -176,6 +199,7 @@ export function Session({
   }, [autoNext])
 
   useEffect(() => {
+    if (reading) return
     const picks = Object.fromEntries(
       (Object.entries(KEYS.pick) as [ChoiceKey, string][]).map(([k, code]) => [
         code,
@@ -219,7 +243,7 @@ export function Session({
         if (!ending) setEnding(true)
       }
     })
-  }, [state, ending])
+  }, [state, ending, reading])
 
   if (state.phase === 'summary') {
     return (
@@ -288,6 +312,7 @@ export function Session({
               ['Esc', 'session.hint.end']
             ]
   const known = 'known' in state && state.known
+  const readable = Boolean(solved?.source && (book?.available || solved.source.kesit))
 
   return (
     <section className="ql-screen ql-session">
@@ -416,11 +441,27 @@ export function Session({
                 <span className="tk-label ql-source-label">{t('session.source')}</span>
                 <p className="ql-source-quote">{solved.source.quote}</p>
                 <span className="tk-hint ql-source-line">
-                  {t('session.sourceLine', {
-                    file: solved.source.file,
-                    from: solved.source.pages[0],
-                    to: solved.source.pages[1]
-                  })}
+                  {t('session.sourceFile', { file: solved.source.file })}
+                  {readable ? (
+                    <button
+                      type="button"
+                      className="ql-source-page"
+                      onClick={() => setReading(true)}
+                      title={t('book.open')}
+                    >
+                      {t('session.sourcePages', {
+                        from: solved.source.pages[0],
+                        to: solved.source.pages[1]
+                      })}
+                    </button>
+                  ) : (
+                    <span>
+                      {t('session.sourcePages', {
+                        from: solved.source.pages[0],
+                        to: solved.source.pages[1]
+                      })}
+                    </span>
+                  )}
                 </span>
               </blockquote>
             )}
@@ -482,6 +523,15 @@ export function Session({
 
       {ending && (
         <Confirm text={t('session.endConfirm')} onNo={() => setEnding(false)} onYes={finish} />
+      )}
+
+      {reading && solved?.source && (
+        <BookViewer
+          book={book}
+          source={solved.source}
+          assetBase={q.assetBase}
+          onClose={() => setReading(false)}
+        />
       )}
     </section>
   )
