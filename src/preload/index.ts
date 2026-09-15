@@ -49,6 +49,11 @@ const api: QuizloopApi = {
     flag: (id: string, note?: string) => ipcRenderer.invoke(CH.sessionFlag, id, note),
     end: (id: string) => ipcRenderer.invoke(CH.sessionEnd, id)
   },
+  source: {
+    book: (moduleId: string) => ipcRenderer.invoke(CH.sourceBook, moduleId),
+    pickBook: (moduleId: string) => ipcRenderer.invoke(CH.sourcePickBook, moduleId),
+    forgetBook: (moduleId: string) => ipcRenderer.invoke(CH.sourceForgetBook, moduleId)
+  },
   stats: {
     overview: () => ipcRenderer.invoke(CH.statsOverview)
   }

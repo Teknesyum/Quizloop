@@ -37,6 +37,7 @@
     "better-sqlite3": "^12.4.1",
     "katex": "^0.18.7",
     "kysely": "^0.29.5",
+    "pdfjs-dist": "^6.3.289",
     "react": "^19.2.1",
     "react-dom": "^19.2.1",
     "react-markdown": "^10.1.0",

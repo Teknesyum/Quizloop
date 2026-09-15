@@ -15,7 +15,8 @@ const CSP = [
   "img-src 'self' quizloop: data:",
   "style-src 'self' 'unsafe-inline'",
   "font-src 'self'",
-  "connect-src 'self'"
+  "connect-src 'self' quizloop:",
+  "worker-src 'self' blob:"
 ].join('; ')
 
 async function boot(): Promise<void> {
@@ -30,8 +31,8 @@ async function boot(): Promise<void> {
   if (firstRun && existsSync(samplePath())) await installFrom(opened.db, samplePath(), now)
   await resyncAll(opened.db, now)
 
-  const { rootOf } = registerHandlers({ db: opened.db, integrity: opened.integrity })
-  registerAssetProtocol(rootOf)
+  const { rootOf, pdfOf } = registerHandlers({ db: opened.db, integrity: opened.integrity })
+  registerAssetProtocol(rootOf, pdfOf)
 
   session.defaultSession.webRequest.onHeadersReceived((details, cb) => {
     cb({ responseHeaders: { ...details.responseHeaders, 'Content-Security-Policy': [CSP] } })

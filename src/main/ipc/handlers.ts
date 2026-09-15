@@ -1,6 +1,7 @@
 import { app, BrowserWindow, dialog, ipcMain, type IpcMainInvokeEvent } from 'electron'
 import type { Kysely } from 'kysely'
 import type { Database } from '@main/db/types'
+import { forgetPdf, kaynakBase, rememberPdf, resolvePdf } from '@main/assets/kaynak'
 import { assetBase } from '@main/assets/protocol'
 import { installFrom, removeModule, resetModule, samplePath } from '@main/modules/install'
 import { QuestionIndex, readMeta } from '@main/modules/loader'
@@ -13,6 +14,7 @@ import {
   type ChapterSummary,
   type ModuleSummary,
   type Settings,
+  type SourceBook,
   type StatsOverview
 } from '@shared/ipc'
 import { ChoiceKey } from '@shared/schema/question'
@@ -38,7 +40,10 @@ function windowOf(e: IpcMainInvokeEvent): BrowserWindow | null {
   return BrowserWindow.fromWebContents(e.sender)
 }
 
-export function registerHandlers(ctx: Context): { rootOf(moduleId: string): string | undefined } {
+export function registerHandlers(ctx: Context): {
+  rootOf(moduleId: string): string | undefined
+  pdfOf(moduleId: string): string | null
+} {
   const { db } = ctx
   const roots = new Map<string, string>()
   const indexes = new Map<string, QuestionIndex>()
@@ -51,6 +56,25 @@ export function registerHandlers(ctx: Context): { rootOf(moduleId: string): stri
     const idx = new QuestionIndex(readMeta(root))
     indexes.set(moduleId, idx)
     return idx
+  }
+
+  const bookOf = (moduleId: string): SourceBook => {
+    const root = roots.get(moduleId)
+    if (!root) return { available: false, url: null, path: null, sayfaOfseti: 0, pages: null }
+    let src: { file?: string; pages?: number; sayfaOfseti: number } | undefined
+    try {
+      src = readMeta(root).meta.source
+    } catch {
+      src = undefined
+    }
+    const path = resolvePdf(moduleId, root, src?.file)
+    return {
+      available: Boolean(path),
+      url: path ? kaynakBase(moduleId) : null,
+      path,
+      sayfaOfseti: src?.sayfaOfseti ?? 0,
+      pages: src?.pages ?? null
+    }
   }
 
   const machine = new SessionMachine({
@@ -181,6 +205,31 @@ export function registerHandlers(ctx: Context): { rootOf(moduleId: string): stri
   )
   ipcMain.handle(CH.sessionEnd, (_e, id: unknown) => machine.end(z.string().parse(id)))
 
+  ipcMain.handle(CH.sourceBook, async (_e, moduleId: unknown): Promise<SourceBook> => {
+    await refreshRoots()
+    return bookOf(z.string().parse(moduleId))
+  })
+
+  ipcMain.handle(CH.sourcePickBook, async (e, moduleId: unknown): Promise<SourceBook> => {
+    await refreshRoots()
+    const id = z.string().parse(moduleId)
+    const w = windowOf(e)
+    const r = await dialog.showOpenDialog(w ?? new BrowserWindow({ show: false }), {
+      properties: ['openFile'],
+      filters: [{ name: 'PDF', extensions: ['pdf'] }]
+    })
+    const picked = r.canceled ? null : (r.filePaths[0] ?? null)
+    if (picked) rememberPdf(id, picked)
+    return bookOf(id)
+  })
+
+  ipcMain.handle(CH.sourceForgetBook, async (_e, moduleId: unknown): Promise<SourceBook> => {
+    await refreshRoots()
+    const id = z.string().parse(moduleId)
+    forgetPdf(id)
+    return bookOf(id)
+  })
+
   ipcMain.handle(CH.statsOverview, async (): Promise<StatsOverview> => {
     const now = new Date()
     const modules = await db
@@ -248,5 +297,5 @@ export function registerHandlers(ctx: Context): { rootOf(moduleId: string): stri
     }
   })
 
-  return { rootOf: (id) => roots.get(id) }
+  return { rootOf: (id) => roots.get(id), pdfOf: (id) => bookOf(id).path }
 }

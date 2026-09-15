@@ -102,6 +102,14 @@ export interface InstallResult {
   error?: string
 }
 
+export interface SourceBook {
+  available: boolean
+  url: string | null
+  path: string | null
+  sayfaOfseti: number
+  pages: number | null
+}
+
 export interface IntegrityReport {
   ok: boolean
   detail: string
@@ -146,6 +154,11 @@ export interface QuizloopApi {
     flag(sessionId: string, note?: string): Promise<void>
     end(sessionId: string): Promise<SessionSummary>
   }
+  source: {
+    book(moduleId: string): Promise<SourceBook>
+    pickBook(moduleId: string): Promise<SourceBook>
+    forgetBook(moduleId: string): Promise<SourceBook>
+  }
   stats: {
     overview(): Promise<StatsOverview>
   }
@@ -175,5 +188,8 @@ export const CH = {
   sessionGrade: 'session:grade',
   sessionFlag: 'session:flag',
   sessionEnd: 'session:end',
+  sourceBook: 'source:book',
+  sourcePickBook: 'source:pickBook',
+  sourceForgetBook: 'source:forgetBook',
   statsOverview: 'stats:overview'
 } as const
