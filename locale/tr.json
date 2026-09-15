@@ -45,6 +45,8 @@
   "session.relearnBadge": "Bu oturumda tekrar",
   "session.showChoices": "Şıkları göster",
   "session.showAnswer": "Cevabı gör",
+  "session.kindChoices": "Çoktan seçmeli",
+  "session.kindOpen": "Açık uçlu",
   "session.known": "Cevabı biliyorum",
   "session.knownMarked": "Şıksız bildin, ekstra puan",
   "session.flag": "Soruyu işaretle",
