@@ -45,6 +45,8 @@
   "session.relearnBadge": "Relearn this session",
   "session.showChoices": "Show choices",
   "session.showAnswer": "Show the answer",
+  "session.kindChoices": "Multiple choice",
+  "session.kindOpen": "Open-ended",
   "session.known": "I know the answer",
   "session.knownMarked": "Known without choices, bonus points",
   "session.flag": "Flag question",

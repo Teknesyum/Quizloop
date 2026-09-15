@@ -355,6 +355,20 @@ body,
   padding: var(--tk-sp-1) var(--tk-sp-2);
 }
 
+.ql-badge-choices {
+  color: var(--tk-blue);
+  border: var(--tk-border-w) solid var(--tk-blue);
+  border-radius: var(--tk-r);
+  padding: var(--tk-sp-1) var(--tk-sp-2);
+}
+
+.ql-badge-open {
+  color: var(--tk-purple-text);
+  border: var(--tk-border-w) solid var(--tk-purple-text);
+  border-radius: var(--tk-r);
+  padding: var(--tk-sp-1) var(--tk-sp-2);
+}
+
 .ql-score {
   font-size: var(--tk-fs-3);
 }

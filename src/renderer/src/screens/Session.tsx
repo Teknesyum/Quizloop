@@ -317,6 +317,9 @@ export function Session({
             {t('session.progress', { index: q.index, total: s.total })}
           </span>
           <span className="tk-label">{t(`session.difficulty.${q.difficulty}` as Key)}</span>
+          <span className={`tk-label ${open ? 'ql-badge-open' : 'ql-badge-choices'}`}>
+            {open ? t('session.kindOpen') : t('session.kindChoices')}
+          </span>
           {q.relearn && (
             <span className="tk-label ql-badge-relearn">{t('session.relearnBadge')}</span>
           )}
