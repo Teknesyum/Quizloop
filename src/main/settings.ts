@@ -9,7 +9,8 @@ const DEFAULTS: Settings = {
   typerSpeed: 'normal',
   sessionLimit: 40,
   soundOn: false,
-  fontScale: 1
+  fontScale: 1,
+  blinkSeconds: 5
 }
 
 let cache: Settings | null = null

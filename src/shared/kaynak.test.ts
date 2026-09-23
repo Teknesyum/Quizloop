@@ -46,6 +46,19 @@ describe('findQuoteRuns', () => {
     expect(hit?.probe.length).toBeLessThan(60)
   })
 
+  it('ignores spaces the scan put inside words and numbers', () => {
+    const hit = findQuoteRuns(
+      ['Eter 1 842', "'de Craw ford W. Long"],
+      "Eter 1842'de Crawford W. Long"
+    )
+    expect(hit?.runs).toEqual([0, 1])
+  })
+
+  it('finds the tail when the head drifts', () => {
+    const hit = findQuoteRuns(runs, 'Lokal anestezi derinliği bispektral indeks ile izlenir.')
+    expect(hit?.runs).toEqual([1, 2])
+  })
+
   it('returns nothing when the page does not carry the quote', () => {
     expect(findQuoteRuns(runs, 'kardiyopulmoner baypas')).toBeNull()
   })

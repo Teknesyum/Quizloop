@@ -33,7 +33,8 @@ const SettingsPatch = z
     modulesDir: z.string().nullable(),
     typerSpeed: z.enum(['slow', 'normal', 'fast', 'off']),
     sessionLimit: z.number().int().min(5).max(200),
-    soundOn: z.boolean()
+    soundOn: z.boolean(),
+    blinkSeconds: z.number().int().min(0).max(30)
   })
   .partial()
 

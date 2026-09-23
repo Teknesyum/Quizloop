@@ -118,6 +118,24 @@ export function Settings(): React.JSX.Element {
             </div>
 
             <div className="tk-field">
+              <label className="tk-label" htmlFor="blinkSeconds">
+                {t('settings.blink')}
+              </label>
+              <input
+                id="blinkSeconds"
+                className="tk-input tk-mono"
+                type="number"
+                min={0}
+                max={30}
+                value={settings.blinkSeconds}
+                onChange={(e) =>
+                  apply({ blinkSeconds: Math.max(0, Math.min(30, Number(e.target.value) || 0)) })
+                }
+              />
+              <span className="tk-hint">{t('settings.blinkHelp')}</span>
+            </div>
+
+            <div className="tk-field">
               <span className="tk-label">{t('settings.typer')}</span>
               <div className="ql-segment" role="radiogroup" aria-label={t('settings.typer')}>
                 {SPEEDS.map((sp) => (

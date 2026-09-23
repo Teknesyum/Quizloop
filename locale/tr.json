@@ -214,5 +214,7 @@
   "settings.transferExported": "{modules} modülle paket yazıldı: {path}",
   "settings.transferImported": "Paket alındı, uygulama yeniden başlıyor",
   "settings.transferFailed": "Taşıma başarısız",
-  "settings.transferNotPackage": "Seçilen klasör bir Quizloop taşıma paketi değil"
+  "settings.transferNotPackage": "Seçilen klasör bir Quizloop taşıma paketi değil",
+  "settings.blink": "Kitap vurgusu yanıp sönme süresi (sn)",
+  "settings.blinkHelp": "Kitap açıldığında ilgili bölüm bu kadar saniye yanıp söner. 0 kapatır."
 }

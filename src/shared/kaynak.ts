@@ -28,9 +28,9 @@ function probes(quote: string): string[] {
   const words = quote.split(' ').filter(Boolean)
   const out = [quote]
   for (const n of [12, 8, 5, 3]) {
-    if (words.length > n) out.push(words.slice(0, n).join(' '))
+    if (words.length > n) out.push(words.slice(0, n).join(' '), words.slice(-n).join(' '))
   }
-  return out
+  return out.map((p) => p.replace(/\s+/g, ''))
 }
 
 export function findQuoteRuns(runs: string[], quote: string): QuoteHit | null {
@@ -39,12 +39,7 @@ export function findQuoteRuns(runs: string[], quote: string): QuoteHit | null {
   let flat = ''
   const owner: number[] = []
   runs.forEach((run, i) => {
-    const piece = normalizeQuote(run)
-    if (!piece) return
-    if (flat) {
-      flat += ' '
-      owner.push(i)
-    }
+    const piece = normalizeQuote(run).replace(/\s+/g, '')
     for (let c = 0; c < piece.length; c++) owner.push(i)
     flat += piece
   })

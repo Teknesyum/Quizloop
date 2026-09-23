@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
-import { getDocument, GlobalWorkerOptions, type PDFDocumentProxy } from 'pdfjs-dist'
+import { getDocument, GlobalWorkerOptions, Util, type PDFDocumentProxy } from 'pdfjs-dist'
 import workerUrl from 'pdfjs-dist/build/pdf.worker.min.mjs?url'
 import { tinykeys } from 'tinykeys'
 import type { SourceBook } from '@shared/ipc'
@@ -7,6 +7,7 @@ import type { Source } from '@shared/schema/question'
 import { findQuoteRuns, pdfPageOf, spreadOf } from '@shared/kaynak'
 import { Skeleton } from '@renderer/components/Skeleton'
 import { t } from '@renderer/i18n'
+import { useApp } from '@renderer/store/app'
 
 GlobalWorkerOptions.workerSrc = workerUrl
 
@@ -28,11 +29,72 @@ function reduced(): boolean {
   return window.matchMedia('(prefers-reduced-motion: reduce)').matches
 }
 
-function flipMs(): number {
-  if (reduced()) return 0
+function slowMs(): number {
   const raw = getComputedStyle(document.documentElement).getPropertyValue('--tk-t-slow').trim()
   const n = Number.parseFloat(raw)
-  return Number.isFinite(n) ? (raw.endsWith('ms') ? n : n * 1000) : 0
+  return Number.isFinite(n) && n > 0 ? (raw.endsWith('ms') ? n : n * 1000) : 1
+}
+
+type Role =
+  | 'left'
+  | 'right'
+  | 'single'
+  | 'hidden'
+  | 'front-next'
+  | 'back-next'
+  | 'front-prev'
+  | 'back-prev'
+  | 'single-next'
+  | 'single-prev'
+
+type Flip = 'next' | 'prev' | null
+
+function slots(left: number, single: boolean, flip: Flip): [number, Role][] {
+  if (single) {
+    if (flip === 'next')
+      return [
+        [left - 1, 'hidden'],
+        [left + 1, 'single'],
+        [left, 'single-next']
+      ]
+    if (flip === 'prev')
+      return [
+        [left + 1, 'hidden'],
+        [left, 'single'],
+        [left - 1, 'single-prev']
+      ]
+    return [
+      [left - 1, 'hidden'],
+      [left + 1, 'hidden'],
+      [left, 'single']
+    ]
+  }
+  if (flip === 'next')
+    return [
+      [left - 2, 'hidden'],
+      [left - 1, 'hidden'],
+      [left, 'left'],
+      [left + 3, 'right'],
+      [left + 1, 'front-next'],
+      [left + 2, 'back-next']
+    ]
+  if (flip === 'prev')
+    return [
+      [left + 2, 'hidden'],
+      [left + 3, 'hidden'],
+      [left - 2, 'left'],
+      [left + 1, 'right'],
+      [left, 'front-prev'],
+      [left - 1, 'back-prev']
+    ]
+  return [
+    [left - 2, 'hidden'],
+    [left - 1, 'hidden'],
+    [left + 2, 'hidden'],
+    [left + 3, 'hidden'],
+    [left, 'left'],
+    [left + 1, 'right']
+  ]
 }
 
 function Leaf({
@@ -40,18 +102,27 @@ function Leaf({
   pdfPage,
   width,
   highlight,
-  side
+  role
 }: {
   doc: PDFDocumentProxy | null
   pdfPage: number
   width: number
   highlight: Highlight | null
-  side: 'left' | 'right'
+  role: Role
 }): React.JSX.Element {
   const canvasRef = useRef<HTMLCanvasElement | null>(null)
   const [rects, setRects] = useState<Rect[]>([])
   const [box, setBox] = useState<{ w: number; h: number } | null>(null)
   const blank = !doc || pdfPage < 1 || pdfPage > doc.numPages
+  const sheetRef = useRef<HTMLDivElement | null>(null)
+  const shown = role === 'left' || role === 'right' || role === 'single'
+
+  useEffect(() => {
+    if (!shown || rects.length === 0) return
+    sheetRef.current
+      ?.querySelector('.ql-book-mark')
+      ?.scrollIntoView({ block: 'center', behavior: reduced() ? 'auto' : 'smooth' })
+  }, [rects, shown])
 
   useEffect(() => {
     let dead = false
@@ -116,12 +187,11 @@ function Leaf({
         hit.runs.flatMap((idx) => {
           const item = items[idx]
           if (!item || !item.str.trim()) return []
-          const x = item.transform[4] ?? 0
-          const y = item.transform[5] ?? 0
+          const at = Util.transform(viewport.transform, item.transform)
           return [
             {
-              left: x * scale,
-              top: (unit.height - y) * scale,
+              left: at[4] ?? 0,
+              top: at[5] ?? 0,
               width: Math.max(item.width, 1) * scale,
               height: Math.max(item.height, 1) * scale * 0.18,
               outline: false
@@ -138,8 +208,12 @@ function Leaf({
   }, [doc, blank, pdfPage, width, highlight])
 
   return (
-    <div className={`ql-book-leaf ql-book-leaf-${side}`} aria-hidden={blank}>
-      <div className="ql-book-sheet" style={box ? { width: box.w, height: box.h } : undefined}>
+    <div className={`ql-book-leaf ql-book-${role}`} aria-hidden={blank || role === 'hidden'}>
+      <div
+        ref={sheetRef}
+        className="ql-book-sheet"
+        style={box ? { width: box.w, height: box.h } : undefined}
+      >
         <canvas ref={canvasRef} className="ql-book-canvas" />
         {rects.map((r, i) => (
           <span
@@ -177,8 +251,10 @@ export function BookViewer({
     const start = source.kesit ? source.kesit.pdfSayfa - off : source.pages[0]
     return spreadOf(Math.max(1, start))[0]
   })
-  const [flip, setFlip] = useState<'next' | 'prev' | null>(null)
+  const [flip, setFlip] = useState<Flip>(null)
   const [leafWidth, setLeafWidth] = useState(0)
+  const [ratio, setRatio] = useState(1.4)
+  const blinkSeconds = useApp((s) => s.settings?.blinkSeconds ?? 5)
   const [single, setSingle] = useState(false)
   const spreadRef = useRef<HTMLDivElement | null>(null)
   const usePdf = Boolean(book?.available && book.url)
@@ -189,7 +265,12 @@ export function BookViewer({
     const task = getDocument({ url: book.url })
     task.promise.then(
       (d) => {
-        if (!dead) setDoc(d)
+        if (dead) return
+        setDoc(d)
+        d.getPage(1).then((pg) => {
+          const vp = pg.getViewport({ scale: 1 })
+          if (!dead && vp.width > 0) setRatio(vp.height / vp.width)
+        })
       },
       () => {
         if (!dead) setFailed(true)
@@ -221,26 +302,40 @@ export function BookViewer({
   const last = doc ? doc.numPages : (book?.pages ?? source.pages[1])
   const offset = book?.sayfaOfseti ?? 0
 
+  const maxLeft = Math.max(1, last - offset)
   const turning = useRef(false)
+  const flipDir = useRef<Flip>(null)
+  const timer = useRef(0)
+  const commit = useCallback(() => {
+    window.clearTimeout(timer.current)
+    if (!turning.current) return
+    setLeft((p) => {
+      const d = flipDir.current === 'next' ? step : -step
+      return Math.max(1, Math.min(p + d, maxLeft))
+    })
+    setFlip(null)
+    turning.current = false
+  }, [step, maxLeft])
   const turn = useCallback(
     (dir: 'next' | 'prev') => {
       if (turning.current) return
+      if (dir === 'prev' && left - step < 1) return
+      if (dir === 'next' && left + step > maxLeft) return
       turning.current = true
+      flipDir.current = dir
+      if (reduced() || !doc || document.hidden) {
+        commit()
+        return
+      }
       setFlip(dir)
-      window.setTimeout(
-        () => {
-          setLeft((p) => {
-            const next = dir === 'next' ? p + step : p - step
-            return Math.max(1, Math.min(next, Math.max(1, last - offset)))
-          })
-          setFlip(null)
-          turning.current = false
-        },
-        Math.max(flipMs(), 1)
-      )
+      timer.current = window.setTimeout(commit, slowMs() * 2.2 + 200)
     },
-    [step, last, offset]
+    [left, step, maxLeft, doc, commit]
   )
+
+  const onTurnEnd = (e: React.AnimationEvent<HTMLDivElement>): void => {
+    if (e.animationName.startsWith('ql-turn-leaf')) commit()
+  }
 
   useEffect(() => {
     return tinykeys(window, {
@@ -264,6 +359,8 @@ export function BookViewer({
   }, [source])
 
   const pages = single ? [left] : [left, left + 1]
+  const leafH = Math.round(leafWidth * ratio)
+  const blinkN = Math.max(1, Math.round((blinkSeconds * 1000) / slowMs()) | 1)
   const kesitRef = source.kesit?.ref
   const showPick = !usePdf || failed
   const showForget = Boolean(book?.path) && !failed
@@ -289,7 +386,8 @@ export function BookViewer({
   return (
     <div className="tk-modal-scrim ql-book-scrim" data-tk-modal="confirm" role="presentation">
       <div
-        className="tk-panel ql-book ql-transition-in"
+        className={`tk-panel ql-book ql-transition-in ${blinkSeconds === 0 ? 'ql-book-still' : ''}`}
+        style={{ '--ql-blink-n': blinkN } as React.CSSProperties}
         role="dialog"
         aria-modal="true"
         aria-label={t('book.title')}
@@ -314,6 +412,7 @@ export function BookViewer({
               type="button"
               className="tk-btn tk-btn-ghost ql-btn-sm"
               onClick={() => turn('next')}
+              disabled={left + step > maxLeft}
             >
               {t('book.next')}
             </button>
@@ -328,22 +427,30 @@ export function BookViewer({
           </div>
         </header>
 
-        <div
-          ref={spreadRef}
-          className={`ql-book-spread ${single ? 'ql-book-single' : ''} ${flip ? `ql-book-flip-${flip}` : ''}`}
-        >
+        <div ref={spreadRef} className={`ql-book-spread ${single ? 'ql-book-single' : ''}`}>
           {usePdf && !failed ? (
             doc ? (
-              pages.map((p, i) => (
-                <Leaf
-                  key={p}
-                  doc={doc}
-                  pdfPage={pdfPageOf(p, offset)}
-                  width={leafWidth}
-                  highlight={highlight}
-                  side={i === 0 && !single ? 'left' : 'right'}
-                />
-              ))
+              <div
+                className={`ql-book-stage ${flip ? `ql-book-turning-${flip}` : ''}`}
+                style={
+                  {
+                    '--ql-leaf-w': `${leafWidth}px`,
+                    '--ql-leaf-h': `${leafH}px`
+                  } as React.CSSProperties
+                }
+                onAnimationEnd={onTurnEnd}
+              >
+                {slots(left, single, flip).map(([p, role]) => (
+                  <Leaf
+                    key={p}
+                    doc={doc}
+                    pdfPage={pdfPageOf(p, offset)}
+                    width={leafWidth}
+                    highlight={highlight}
+                    role={role}
+                  />
+                ))}
+              </div>
             ) : (
               <div className="ql-book-loading">
                 <Skeleton lines={6} />

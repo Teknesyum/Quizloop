@@ -214,5 +214,7 @@
   "settings.transferExported": "Package written with {modules} modules: {path}",
   "settings.transferImported": "Package imported, the app is restarting",
   "settings.transferFailed": "Transfer failed",
-  "settings.transferNotPackage": "The chosen folder is not a Quizloop transfer package"
+  "settings.transferNotPackage": "The chosen folder is not a Quizloop transfer package",
+  "settings.blink": "Book highlight blink (s)",
+  "settings.blinkHelp": "How long the quoted passage blinks when the book opens. 0 turns it off."
 }
