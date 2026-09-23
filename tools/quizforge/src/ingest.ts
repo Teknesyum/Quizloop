@@ -6,6 +6,7 @@ import type { Plan } from './plan.ts'
 import { Generated, mapUnit, unitsDir, type UnitOutput } from './generate.ts'
 import { loadCheckpoint, saveCheckpoint, writeAtomic } from './checkpoint.ts'
 import { rawDir } from './brief.ts'
+import { consumeFlags } from './flags.ts'
 
 export interface IngestResult {
   unitId: string
@@ -61,6 +62,7 @@ export function ingest(l: Loaded, c: Corpus, plan: Plan, gorsel = false): Ingest
     state.questionIds = mapped.questions.map((q) => q.id)
     delete state.error
     cp.units[cpKey] = state
+    consumeFlags(l, outId)
     out.push({
       unitId: unit.unitId,
       questions: mapped.questions.length,

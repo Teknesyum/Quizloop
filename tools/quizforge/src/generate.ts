@@ -20,6 +20,7 @@ import {
   type Checkpoint
 } from './checkpoint.ts'
 import { canonical, sha256 } from './hash.ts'
+import { consumeFlags, flagNote } from './flags.ts'
 
 const Key = z.enum(['A', 'B', 'C', 'D', 'E'])
 
@@ -330,7 +331,10 @@ export async function run(l: Loaded, c: Corpus, plan: Plan, o: RunOptions): Prom
         '\n--- system ---\n' +
           system +
           '\n\n--- user (ilk birim) ---\n' +
-          userPrompt(first, unitText(l, c, ...first.pages), []).slice(0, 3000) +
+          (userPrompt(first, unitText(l, c, ...first.pages), []) + flagNote(l, first.unitId)).slice(
+            0,
+            3000
+          ) +
           '\n...'
       )
     return cp
@@ -344,7 +348,10 @@ export async function run(l: Loaded, c: Corpus, plan: Plan, o: RunOptions): Prom
     }
     const text = unitText(l, c, ...unit.pages)
     const messages: Anthropic.MessageParam[] = [
-      { role: 'user', content: userPrompt(unit, text, previous.slice(-200)) }
+      {
+        role: 'user',
+        content: userPrompt(unit, text, previous.slice(-200)) + flagNote(l, unit.unitId)
+      }
     ]
     const state = cp.units[unit.hash] ?? {
       unitId: unit.unitId,
@@ -413,6 +420,7 @@ export async function run(l: Loaded, c: Corpus, plan: Plan, o: RunOptions): Prom
       state.file = path.relative(l.buildDir, file)
       state.questionIds = questions.map((q) => q.id)
       delete state.error
+      consumeFlags(l, unit.unitId)
       previous.push(...questions.map((q) => q.stem.md))
       console.log(
         `${unit.unitId}: ${questions.length} soru, ${dropped.length} düşen, $${state.usd.toFixed(3)} (toplam $${cp.totals.usd.toFixed(2)})`
