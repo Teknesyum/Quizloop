@@ -5,6 +5,7 @@ import { unitText, type Corpus } from './corpus.ts'
 import type { Plan, Unit } from './plan.ts'
 import { systemPrompt, userPrompt, unitsDir } from './generate.ts'
 import { loadOutputs } from './generate.ts'
+import { flagNote } from './flags.ts'
 
 export function briefDir(l: Loaded): string {
   return path.join(l.buildDir, 'briefs')
@@ -72,7 +73,8 @@ export function writeBriefs(
       '',
       `RAW: ${raw}`,
       '',
-      userPrompt(unit, unitText(l, c, ...unit.pages), previous.slice(-120)),
+      userPrompt(unit, unitText(l, c, ...unit.pages), previous.slice(-120)) +
+        flagNote(l, gorsel ? unit.unitId + '-gorsel' : unit.unitId),
       gorsel ? `\n<gorseller>\n${list}\n</gorseller>` : ''
     ]
       .filter(Boolean)

@@ -12,6 +12,7 @@ import { verify } from './verify.ts'
 import { pack } from './pack.ts'
 import { writeBriefs, briefDir } from './brief.ts'
 import { ingest } from './ingest.ts'
+import { FlagFile, applyFlags, formatFlagPlan, planFlags } from './flags.ts'
 
 const HELP = `quizforge <komut> --rules <rules.yaml> [seçenekler]
 
@@ -23,6 +24,8 @@ const HELP = `quizforge <komut> --rules <rules.yaml> [seçenekler]
   ingest    ajanların yazdığı build/raw/*.json dosyalarını soruya çevir   --gorsel
   verify    deterministik denetim: build/verify-report.json
   pack      modules/<id>/ yaz; verify geçmeden çalışmaz
+  flags     uygulamanın flags.json dosyasını oku, soruları birimlerine eşle, o birimleri
+            yeniden üretim kuyruğuna koy   --flags <dosya> zorunlu, --gorsel, --dry-run
   doctor    ortamı sına: python, pypdf, ANTHROPIC_API_KEY, külliyat dosyaları
 `
 
@@ -45,6 +48,7 @@ function main(argv: string[]): number {
       'dry-run': { type: 'boolean', default: false },
       force: { type: 'boolean', default: false },
       gorsel: { type: 'boolean', default: false },
+      flags: { type: 'string' },
       help: { type: 'boolean', short: 'h', default: false }
     }
   })
@@ -127,7 +131,9 @@ function main(argv: string[]): number {
     const cp0 = loadCheckpoint(l, c.sha256)
     let units = values.force
       ? plan.units.slice()
-      : plan.units.filter((u) => cp0.units[u.hash]?.status !== 'done')
+      : plan.units.filter(
+          (u) => cp0.units[values.gorsel ? u.hash + ':gorsel' : u.hash]?.status !== 'done'
+        )
     if (values.chapter !== undefined)
       units = units.filter((u) => u.chapter === Number(values.chapter))
     if (values.limit !== undefined) units = units.slice(0, Number(values.limit))
@@ -156,6 +162,19 @@ function main(argv: string[]): number {
     )
     for (const e of r.errors.slice(0, 20)) console.log(`  HATA ${e.id} ${e.code}: ${e.message}`)
     return r.ok ? 0 : 1
+  }
+
+  if (cmd === 'flags') {
+    if (!values.flags) throw new Error('--flags <dosya> gerekli')
+    const file = FlagFile.parse(JSON.parse(fs.readFileSync(values.flags, 'utf8')))
+    const plan = loadPlan(l)
+    const cp = loadCheckpoint(l, c.sha256)
+    const fp = planFlags(l, plan, cp, file, values.gorsel)
+    if (!values['dry-run'] && fp.groups.length) applyFlags(l, cp, fp)
+    if (file.surum && file.surum !== l.rules.module.surum)
+      console.log(`uyarı: bayrak sürümü ${file.surum}, kural sürümü ${l.rules.module.surum}`)
+    console.log(formatFlagPlan(fp, values.gorsel, values['dry-run']))
+    return fp.unmapped.length ? 1 : 0
   }
 
   if (cmd === 'pack') {
