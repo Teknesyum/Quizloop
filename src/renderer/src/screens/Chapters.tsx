@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { tinykeys } from 'tinykeys'
 import type { ChapterSummary } from '@shared/ipc'
 import { Skeleton } from '@renderer/components/Skeleton'
 import { t } from '@renderer/i18n'
@@ -18,6 +19,39 @@ export function Chapters({ moduleId }: { moduleId: string }): React.JSX.Element 
   useEffect(() => {
     window.quizloop.module.chapters(moduleId).then(setRows)
   }, [moduleId])
+
+  const [active, setActive] = useState(0)
+
+  useEffect(() => {
+    if (!rows?.length) return
+    const count = rows.length
+    const focus = (i: number): void => {
+      const next = (i + count) % count
+      setActive(next)
+      document.getElementById(`ql-chapter-${next}`)?.focus()
+    }
+    const step = (d: number) => (e: KeyboardEvent) => {
+      e.preventDefault()
+      focus(active + d)
+    }
+    return tinykeys(window, {
+      ArrowDown: step(1),
+      ArrowRight: step(1),
+      ArrowUp: step(-1),
+      ArrowLeft: step(-1),
+      Enter: (e) => {
+        if ((e.target as HTMLElement).closest('button')) return
+        const c = rows[active]
+        if (!c) return
+        e.preventDefault()
+        go({ name: 'session', moduleId, chapter: c.chapter })
+      },
+      Escape: (e) => {
+        e.preventDefault()
+        go({ name: 'library' })
+      }
+    })
+  }, [rows, active, go, moduleId])
 
   return (
     <section className="ql-screen">
@@ -60,7 +94,11 @@ export function Chapters({ moduleId }: { moduleId: string }): React.JSX.Element 
           {rows.map((c, i) => (
             <article
               key={c.chapter || 'none'}
-              className="tk-panel ql-card ql-cover-card ql-transition-in"
+              id={`ql-chapter-${i}`}
+              tabIndex={i === active ? 0 : -1}
+              aria-label={c.chapter || t('chapters.unsorted')}
+              onFocus={() => setActive(i)}
+              className={`tk-panel ql-card ql-cover-card ql-transition-in ${i === active ? 'ql-card-active' : ''}`}
               style={{ '--ql-i': i } as React.CSSProperties}
             >
               {chapterCover(c) && (

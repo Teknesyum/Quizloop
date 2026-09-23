@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { useUpdate } from '@renderer/hooks/useUpdate'
 import { t } from '@renderer/i18n'
 
 const GITHUB = 'https://github.com/Teknesyum'
@@ -19,6 +20,8 @@ export function TitleBar(): React.JSX.Element {
     return window.quizloop.window.onMaximized(setMax)
   }, [])
   const w = window.quizloop.window
+  const up = useUpdate()
+  const v = { version: up.version ?? '' }
   return (
     <header className="tk-titlebar ql-titlebar">
       <div className="ql-titlebar-brand">
@@ -26,6 +29,37 @@ export function TitleBar(): React.JSX.Element {
         <span className="tk-label">{t('app.name')}</span>
       </div>
       <div className="ql-titlebar-right">
+        {(up.state === 'available' || up.state === 'downloading') && (
+          <span className="ql-update tk-hint" role="status">
+            {up.state === 'downloading'
+              ? t('update.downloading', { percent: up.percent ?? 0 })
+              : t('update.available', v)}
+          </span>
+        )}
+        {up.state === 'ready' && (
+          <span className="ql-update tk-no-drag" role="status">
+            <span className="tk-hint">{t('update.ready', v)}</span>
+            <button
+              type="button"
+              className="tk-btn tk-btn-primary ql-btn-xs"
+              onClick={() => window.quizloop.update.install()}
+            >
+              {t('update.restart')}
+            </button>
+          </span>
+        )}
+        {up.state === 'notice' && (
+          <span className="ql-update tk-no-drag" role="status">
+            <span className="tk-hint">{t('update.notice', v)}</span>
+            <button
+              type="button"
+              className="tk-btn tk-btn-ghost ql-btn-xs"
+              onClick={() => window.quizloop.update.open()}
+            >
+              {t('update.open')}
+            </button>
+          </span>
+        )}
         <div className="ql-signature tk-no-drag">
           <a href={GITHUB} target="_blank" rel="noreferrer" title={t('sig.github')}>
             {t('sig.by')}

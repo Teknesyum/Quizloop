@@ -40,6 +40,8 @@ jobs:
             dist/*.zip
             dist/*.AppImage
             dist/*.deb
+            dist/*.blockmap
+            dist/latest*.yml
           if-no-files-found: error
 
   publish:

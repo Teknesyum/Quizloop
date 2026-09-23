@@ -7,6 +7,7 @@ export type Route =
   | { name: 'settings' }
   | { name: 'chapters'; moduleId: string }
   | { name: 'session'; moduleId: string; chapter?: string | null }
+  | { name: 'bank'; moduleId: string; filter?: 'all' | 'flagged' }
 
 export type ToastKind = 'success' | 'warning' | 'danger'
 
