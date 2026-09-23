@@ -34,6 +34,10 @@ export function useTyper(
   const raf = useRef(0)
 
   useEffect(() => {
+    if (typeof document !== 'undefined' && document.visibilityState === 'hidden') {
+      setCount(text.length)
+      return
+    }
     const started = performance.now()
     const tick = (now: number): void => {
       const n = perChar === 0 ? text.length : Math.floor((now - started) / perChar)
