@@ -138,6 +138,7 @@ export interface Settings {
   sessionLimit: number
   soundOn: boolean
   fontScale: number
+  blinkSeconds: number
 }
 
 export const FONT_SCALES = [0.9, 1, 1.1, 1.25, 1.4, 1.6] as const

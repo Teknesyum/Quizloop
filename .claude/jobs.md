@@ -1,0 +1,2 @@
+- [x] Kitap sayfa çevirme animasyonu: arka sayfa görünsün, gerçek sayfa dönüşü
+- [x] İlgili bölüm 5 sn yanıp sönsün, süre ayarlardan
