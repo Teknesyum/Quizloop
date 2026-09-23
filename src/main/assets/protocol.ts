@@ -8,7 +8,13 @@ export const SCHEME = 'quizloop'
 protocol.registerSchemesAsPrivileged([
   {
     scheme: SCHEME,
-    privileges: { standard: true, secure: true, supportFetchAPI: true, stream: true }
+    privileges: {
+      standard: true,
+      secure: true,
+      supportFetchAPI: true,
+      stream: true,
+      corsEnabled: true
+    }
   }
 ])
 
@@ -18,7 +24,7 @@ export function registerAssetProtocol(
   rootOf: (moduleId: string) => string | undefined,
   pdfOf: (moduleId: string) => string | null = () => null
 ): void {
-  protocol.handle(SCHEME, (req) => {
+  protocol.handle(SCHEME, async (req) => {
     const url = new URL(req.url)
     if (url.hostname === 'kaynak') {
       const [, moduleId] = url.pathname.split('/')
@@ -27,7 +33,14 @@ export function registerAssetProtocol(
       if (!target) return new Response(null, { status: 404 })
       if (!/\.pdf$/i.test(target)) return new Response(null, { status: 403 })
       if (!existsSync(target)) return new Response(null, { status: 404 })
-      return net.fetch(pathToFileURL(target).toString())
+      const range = req.headers.get('range')
+      const res = await net.fetch(pathToFileURL(target).toString(), {
+        headers: range ? { range } : undefined
+      })
+      const headers = new Headers(res.headers)
+      headers.set('access-control-allow-origin', '*')
+      headers.set('access-control-expose-headers', 'content-length, content-range, accept-ranges')
+      return new Response(res.body, { status: res.status, headers })
     }
     if (url.hostname !== 'module') return new Response(null, { status: 404 })
     const [, moduleId, ...rest] = url.pathname.split('/')

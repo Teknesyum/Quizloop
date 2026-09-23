@@ -53,6 +53,8 @@
   "session.back": "Chapters",
   "session.flagged": "Question flagged",
   "session.hint.reveal": "show the choices",
+  "session.hint.answer": "show the answer",
+  "session.hint.knownOpen": "I know the answer",
   "session.hint.known": "knew it without choices",
   "session.hint.pick": "mark a choice",
   "session.hint.grade": "grade yourself: 1 lost · 2 partly · 3 got it",

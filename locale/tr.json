@@ -53,6 +53,8 @@
   "session.back": "Bölümler",
   "session.flagged": "Soru işaretlendi",
   "session.hint.reveal": "şıkları aç",
+  "session.hint.answer": "cevabı gör",
+  "session.hint.knownOpen": "cevabı biliyorum",
   "session.hint.known": "şıksız biliyorum",
   "session.hint.pick": "şıkkı işaretle",
   "session.hint.grade": "kendini puanla: 1 anlamadım · 2 kısmen · 3 anladım",

@@ -312,8 +312,8 @@ export function Session({
   const hints: [string, Key][] =
     state.phase === 'stem'
       ? [
-          ['␣', 'session.hint.reveal'],
-          ['B', 'session.hint.known'],
+          ['␣', open ? 'session.hint.answer' : 'session.hint.reveal'],
+          ['B', open ? 'session.hint.knownOpen' : 'session.hint.known'],
           ['F', 'session.hint.flag'],
           ['Esc', 'session.hint.end']
         ]
