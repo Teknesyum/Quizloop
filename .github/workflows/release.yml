@@ -35,11 +35,11 @@ jobs:
         with:
           name: quizloop-${{ matrix.os }}
           path: |
-            release/**/*.exe
-            release/**/*.dmg
-            release/**/*.zip
-            release/**/*.AppImage
-            release/**/*.deb
+            dist/*.exe
+            dist/*.dmg
+            dist/*.zip
+            dist/*.AppImage
+            dist/*.deb
           if-no-files-found: error
 
   publish:
