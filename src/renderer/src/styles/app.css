@@ -1267,3 +1267,285 @@ kbd {
 .ql-expected-body {
   font-size: var(--tk-fs-3);
 }
+
+/* --- stats charts --- */
+
+.ql-chart {
+  width: 100%;
+  overflow: hidden;
+}
+
+.ql-chart svg {
+  display: block;
+}
+
+.ql-chart-label {
+  fill: var(--tk-text-label);
+  font-size: var(--tk-fs-1);
+  font-family: inherit;
+}
+
+.ql-heat-cell {
+  transition: fill-opacity var(--tk-t-fast) var(--tk-e-out);
+}
+
+.ql-heat-cell:hover {
+  stroke: var(--tk-text);
+  stroke-width: 1;
+}
+
+.ql-stack {
+  display: flex;
+  height: var(--tk-sp-3);
+  border-radius: var(--tk-r);
+  overflow: hidden;
+  background: var(--tk-border);
+}
+
+.ql-stack-part {
+  width: var(--ql-w);
+  background: var(--ql-fill);
+}
+
+.ql-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--tk-sp-4);
+  margin: var(--tk-sp-3) 0 0;
+  padding: 0;
+  list-style: none;
+  font-size: var(--tk-fs-1);
+}
+
+.ql-legend li {
+  display: flex;
+  align-items: center;
+  gap: var(--tk-sp-2);
+}
+
+.ql-legend-dot {
+  width: var(--tk-sp-2);
+  height: var(--tk-sp-2);
+  border-radius: 50%;
+  background: var(--ql-fill);
+}
+
+.ql-progress-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--tk-sp-3);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ql-progress-list li {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr) auto;
+  align-items: center;
+  gap: var(--tk-sp-3);
+}
+
+.ql-progress-name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ql-progress-track {
+  position: relative;
+  height: var(--tk-sp-2);
+  border-radius: var(--tk-r);
+  background: var(--ql-tint-purple);
+  overflow: hidden;
+}
+
+.ql-progress-seen,
+.ql-progress-retired {
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: var(--ql-w);
+}
+
+.ql-progress-seen {
+  background: color-mix(in srgb, var(--tk-purple) 40%, transparent);
+}
+
+.ql-progress-retired {
+  background: var(--tk-purple);
+}
+
+/* --- question bank --- */
+
+.ql-bank-tools,
+.ql-row {
+  display: flex;
+  align-items: center;
+  gap: var(--tk-sp-3);
+  flex-wrap: wrap;
+}
+
+.ql-bank-bar {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--tk-sp-4);
+  flex-wrap: wrap;
+}
+
+.ql-bank-search {
+  display: flex;
+  flex-direction: column;
+  gap: var(--tk-sp-1);
+  flex: 1 1 280px;
+  max-width: var(--tk-measure);
+}
+
+.ql-bank-body {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--tk-sp-4);
+}
+
+.ql-bank-split {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+}
+
+.ql-bank-list {
+  position: relative;
+  height: 62vh;
+  min-height: 240px;
+  overflow-y: auto;
+  padding: 0;
+}
+
+.ql-bank-canvas {
+  position: relative;
+  height: var(--ql-h);
+}
+
+.ql-bank-empty {
+  padding: var(--tk-sp-4);
+}
+
+.ql-bank-row {
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: var(--ql-row);
+  transform: translateY(var(--ql-y));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--tk-sp-1);
+  padding: 0 var(--tk-sp-4);
+  border-bottom: var(--tk-border-w) solid var(--tk-border);
+  border-left: 2px solid transparent;
+  cursor: pointer;
+  transition: background-color var(--tk-t-instant) var(--tk-e-out);
+}
+
+.ql-bank-row:hover {
+  background: var(--ql-tint-blue);
+}
+
+.ql-bank-row-active {
+  background: var(--ql-tint-purple);
+  border-left-color: var(--tk-purple);
+}
+
+.ql-bank-stem {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ql-bank-meta {
+  display: flex;
+  align-items: center;
+  gap: var(--tk-sp-3);
+  font-size: var(--tk-fs-1);
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.ql-bank-flag {
+  color: var(--tk-warning);
+}
+
+.ql-dot {
+  width: var(--tk-sp-2);
+  height: var(--tk-sp-2);
+  border-radius: 50%;
+  flex: none;
+  background: var(--tk-border-strong);
+}
+
+.ql-dot-ogreniyor {
+  background: var(--tk-pink);
+}
+
+.ql-dot-tekrar {
+  background: var(--tk-blue);
+}
+
+.ql-dot-emekli {
+  background: var(--tk-success);
+}
+
+.ql-bank-detail {
+  height: 62vh;
+  min-height: 240px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--tk-sp-3);
+}
+
+.ql-bank-detail-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--tk-sp-3);
+}
+
+.ql-bank-detail-body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--tk-sp-4);
+}
+
+.ql-bank-choices {
+  display: flex;
+  flex-direction: column;
+  gap: var(--tk-sp-2);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ql-bank-choices li {
+  display: flex;
+  gap: var(--tk-sp-3);
+  padding: var(--tk-sp-2) var(--tk-sp-3);
+  border: var(--tk-border-w) solid var(--tk-border);
+  border-radius: var(--tk-r-box);
+}
+
+.ql-bank-correct {
+  border-color: var(--tk-success);
+  background: var(--ql-tint-success);
+}
+
+/* --- update banner --- */
+
+.ql-update {
+  display: flex;
+  align-items: center;
+  gap: var(--tk-sp-2);
+  font-size: var(--tk-fs-1);
+}
+
+.ql-btn-xs {
+  padding: var(--tk-sp-1) var(--tk-sp-2);
+  font-size: var(--tk-fs-1);
+}

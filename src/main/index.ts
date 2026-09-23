@@ -7,6 +7,8 @@ import { registerAssetProtocol } from './assets/protocol'
 import { openDatabase } from './db'
 import { registerHandlers } from './ipc/handlers'
 import { installFrom, resyncAll, samplePath } from './modules/install'
+import { applyPendingTransfer, registerTransfer } from './transfer'
+import { registerUpdates } from './update'
 import { createWindow } from './window'
 
 const CSP = [
@@ -24,6 +26,7 @@ async function boot(): Promise<void> {
   app.on('browser-window-created', (_, w) => optimizer.watchWindowShortcuts(w))
 
   const dbFile = join(app.getPath('userData'), 'quizloop.db')
+  applyPendingTransfer(dbFile)
   const firstRun = !existsSync(dbFile)
   const opened = await openDatabase(dbFile)
   const now = new Date()
@@ -33,6 +36,8 @@ async function boot(): Promise<void> {
 
   const { rootOf, pdfOf } = registerHandlers({ db: opened.db, integrity: opened.integrity })
   registerAssetProtocol(rootOf, pdfOf)
+  registerTransfer(opened.db)
+  registerUpdates()
 
   session.defaultSession.webRequest.onHeadersReceived((details, cb) => {
     cb({ responseHeaders: { ...details.responseHeaders, 'Content-Security-Policy': [CSP] } })

@@ -35,8 +35,8 @@ export function useTyper(
 
   useEffect(() => {
     if (typeof document !== 'undefined' && document.visibilityState === 'hidden') {
-      setCount(text.length)
-      return
+      const id = window.setTimeout(() => setCount(text.length), 0)
+      return () => window.clearTimeout(id)
     }
     const started = performance.now()
     const tick = (now: number): void => {

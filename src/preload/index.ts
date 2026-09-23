@@ -1,5 +1,5 @@
 import { contextBridge, ipcRenderer, webFrame, webUtils } from 'electron'
-import { CH, type QuizloopApi, type Settings } from '@shared/ipc'
+import { CH, type QuizloopApi, type Settings, type UpdateStatus } from '@shared/ipc'
 import type { ChoiceKey } from '@shared/schema/question'
 
 const api: QuizloopApi = {
@@ -37,7 +37,29 @@ const api: QuizloopApi = {
     pick: () => ipcRenderer.invoke(CH.modulePick),
     remove: (id: string) => ipcRenderer.invoke(CH.moduleRemove, id),
     reset: (id: string) => ipcRenderer.invoke(CH.moduleReset, id),
-    chapters: (id: string) => ipcRenderer.invoke(CH.moduleChapters, id)
+    chapters: (id: string) => ipcRenderer.invoke(CH.moduleChapters, id),
+    questions: (id: string) => ipcRenderer.invoke(CH.moduleQuestions, id),
+    question: (id: string, qid: string) => ipcRenderer.invoke(CH.moduleQuestion, id, qid)
+  },
+  flags: {
+    set: (id: string, qid: string, flagged: boolean, note?: string) =>
+      ipcRenderer.invoke(CH.flagSet, id, qid, flagged, note),
+    export: (id: string) => ipcRenderer.invoke(CH.flagExport, id)
+  },
+  update: {
+    status: () => ipcRenderer.invoke(CH.updateStatus),
+    check: () => ipcRenderer.invoke(CH.updateCheck),
+    install: () => ipcRenderer.send(CH.updateInstall),
+    open: () => ipcRenderer.send(CH.updateOpen),
+    onStatus: (cb) => {
+      const h = (_: unknown, s: UpdateStatus): void => cb(s)
+      ipcRenderer.on(CH.updateChanged, h)
+      return () => ipcRenderer.removeListener(CH.updateChanged, h)
+    }
+  },
+  transfer: {
+    exportTo: () => ipcRenderer.invoke(CH.transferExport),
+    importFrom: () => ipcRenderer.invoke(CH.transferImport)
   },
   session: {
     start: (moduleId: string, chapter?: string | null) =>

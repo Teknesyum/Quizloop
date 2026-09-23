@@ -7,6 +7,7 @@ import { installFrom, removeModule, resetModule, samplePath } from '@main/module
 import { QuestionIndex, readMeta } from '@main/modules/loader'
 import { chapterCounts, countDue } from '@main/scheduler/queue'
 import { SessionMachine } from '@main/session/machine'
+import { registerBank } from './bank'
 import { dayStart, getSettings, setSettings } from '@main/settings'
 import {
   CH,
@@ -259,7 +260,7 @@ export function registerHandlers(ctx: Context): {
       .select(db.fn.countAll<number>().as('n'))
       .where('kind', '!=', 'migration')
       .executeTakeFirstOrThrow()
-    const since = new Date(now.getTime() - 30 * 86400000).toISOString()
+    const since = new Date(now.getTime() - 182 * 86400000).toISOString()
     const logs = await db
       .selectFrom('review_log')
       .select(['ts', 'wrong_picks'])
@@ -285,7 +286,33 @@ export function registerHandlers(ctx: Context): {
       streak++
       cursor.setDate(cursor.getDate() - 1)
     }
+    const stateRows = await db
+      .selectFrom('card')
+      .select(['module_id', 'state', 'retired_at', 'reps'])
+      .where('orphaned', '=', 0)
+      .execute()
+    const states = { yeni: 0, ogreniyor: 0, tekrar: 0, emekli: 0 }
+    const perModule = new Map<string, { total: number; seen: number; retired: number }>()
+    for (const c of stateRows) {
+      if (c.retired_at) states.emekli++
+      else if (c.state === 0) states.yeni++
+      else if (c.state === 2) states.tekrar++
+      else states.ogreniyor++
+      const m = perModule.get(c.module_id) ?? { total: 0, seen: 0, retired: 0 }
+      m.total++
+      if (c.reps > 0 || c.retired_at) m.seen++
+      if (c.retired_at) m.retired++
+      perModule.set(c.module_id, m)
+    }
+    const names = await db.selectFrom('module').select(['id', 'name']).orderBy('name').execute()
+    const progress = names.map((n) => ({
+      id: n.id,
+      name: n.name,
+      ...(perModule.get(n.id) ?? { total: 0, seen: 0, retired: 0 })
+    }))
     return {
+      states,
+      progress,
       modules: Number(modules.n),
       cards: Number(cards.n),
       dueToday: Number(dueToday.n),
@@ -296,6 +323,8 @@ export function registerHandlers(ctx: Context): {
       perDay
     }
   })
+
+  registerBank({ db, rootOf: (id) => roots.get(id), refresh: refreshRoots, indexFor })
 
   return { rootOf: (id) => roots.get(id), pdfOf: (id) => bookOf(id).path }
 }

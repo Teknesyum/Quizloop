@@ -13,7 +13,9 @@ beforeEach(() => {
 })
 
 it('yukleme patlarsa faz failed olur, iskelette kalmaz', async () => {
-  stubStart(() => Promise.reject(new Error("Error invoking remote method 'session:start': block hash mismatch")))
+  stubStart(() =>
+    Promise.reject(new Error("Error invoking remote method 'session:start': block hash mismatch"))
+  )
   await useSession.getState().start('m1', null)
   const s = useSession.getState().state
   expect(s.phase).toBe('failed')

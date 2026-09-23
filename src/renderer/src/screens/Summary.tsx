@@ -1,3 +1,5 @@
+import { useEffect } from 'react'
+import { tinykeys } from 'tinykeys'
 import type { SessionSummary } from '@shared/ipc'
 import { t } from '@renderer/i18n'
 
@@ -14,6 +16,16 @@ export function Summary({ summary, onBack, onAgain }: Props): React.JSX.Element 
     [t('summary.retired'), summary.retired],
     [t('summary.relearned'), summary.relearned]
   ]
+  useEffect(
+    () =>
+      tinykeys(window, {
+        Escape: (e) => {
+          e.preventDefault()
+          onBack()
+        }
+      }),
+    [onBack]
+  )
   return (
     <section className="ql-screen ql-session">
       <div className="tk-panel ql-summary ql-transition-in">

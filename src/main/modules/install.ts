@@ -43,9 +43,10 @@ export async function installFrom(
 export async function resyncAll(db: Kysely<Database>, now: Date): Promise<void> {
   const rows = await db.selectFrom('module').select(['id', 'path']).execute()
   for (const r of rows) {
-    if (!existsSync(join(r.path, 'module.json'))) continue
+    const root = existsSync(join(r.path, 'module.json')) ? r.path : join(modulesDir(), r.id)
+    if (!existsSync(join(root, 'module.json'))) continue
     try {
-      await syncModule(db, readMeta(r.path), now)
+      await syncModule(db, readMeta(root), now)
     } catch {
       continue
     }

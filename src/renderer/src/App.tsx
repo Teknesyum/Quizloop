@@ -4,6 +4,7 @@ import { FONT_SCALES } from '@shared/ipc'
 import { TitleBar } from './components/TitleBar'
 import { Toasts } from './components/Toast'
 import { t } from './i18n'
+import { Bank } from './screens/Bank'
 import { Chapters } from './screens/Chapters'
 import { Library } from './screens/Library'
 import { Session } from './screens/Session'
@@ -88,6 +89,7 @@ export default function App(): React.JSX.Element {
           {route.name === 'stats' && <Stats />}
           {route.name === 'settings' && <Settings />}
           {route.name === 'chapters' && <Chapters moduleId={route.moduleId} />}
+          {route.name === 'bank' && <Bank moduleId={route.moduleId} filter={route.filter} />}
           {route.name === 'session' && (
             <Session moduleId={route.moduleId} chapter={route.chapter ?? null} />
           )}

@@ -80,6 +80,55 @@ export interface StatsOverview {
   retired: number
   streakDays: number
   perDay: { day: string; reviews: number; correct: number }[]
+  states: Record<CardStatus, number>
+  progress: { id: string; name: string; total: number; seen: number; retired: number }[]
+}
+
+export type CardStatus = 'yeni' | 'ogreniyor' | 'tekrar' | 'emekli'
+
+export interface BankRow {
+  questionId: string
+  chapter: string | null
+  kind: QuestionKind
+  difficulty: string
+  stem: string
+  status: CardStatus
+  due: string | null
+  flagged: boolean
+  note: string | null
+}
+
+export interface BankQuestion {
+  questionId: string
+  stem: { md: string; imageRef?: string }
+  kind: QuestionKind
+  choices: Choice[]
+  correct?: ChoiceKey
+  beklenenCevap?: string
+  solution: SolutionBlock[]
+  source: Source
+  assetBase: string
+}
+
+export interface FlagExport {
+  ok: boolean
+  path?: string
+  count?: number
+}
+
+export interface UpdateStatus {
+  state: 'idle' | 'checking' | 'none' | 'available' | 'downloading' | 'ready' | 'notice' | 'error'
+  version?: string
+  percent?: number
+  url?: string
+  error?: string
+}
+
+export interface TransferResult {
+  ok: boolean
+  path?: string
+  modules?: number
+  error?: string
 }
 
 export interface Settings {
@@ -141,6 +190,23 @@ export interface QuizloopApi {
     remove(moduleId: string): Promise<void>
     reset(moduleId: string): Promise<void>
     chapters(moduleId: string): Promise<ChapterSummary[]>
+    questions(moduleId: string): Promise<BankRow[]>
+    question(moduleId: string, questionId: string): Promise<BankQuestion | null>
+  }
+  flags: {
+    set(moduleId: string, questionId: string, flagged: boolean, note?: string): Promise<void>
+    export(moduleId: string): Promise<FlagExport>
+  }
+  update: {
+    status(): Promise<UpdateStatus>
+    check(): Promise<UpdateStatus>
+    install(): void
+    open(): void
+    onStatus(cb: (s: UpdateStatus) => void): () => void
+  }
+  transfer: {
+    exportTo(): Promise<TransferResult>
+    importFrom(): Promise<TransferResult>
   }
   session: {
     start(
@@ -181,6 +247,17 @@ export const CH = {
   moduleRemove: 'module:remove',
   moduleReset: 'module:reset',
   moduleChapters: 'module:chapters',
+  moduleQuestions: 'module:questions',
+  moduleQuestion: 'module:question',
+  flagSet: 'flags:set',
+  flagExport: 'flags:export',
+  updateStatus: 'update:status',
+  updateCheck: 'update:check',
+  updateInstall: 'update:install',
+  updateOpen: 'update:open',
+  updateChanged: 'update:changed',
+  transferExport: 'transfer:export',
+  transferImport: 'transfer:import',
   sessionStart: 'session:start',
   sessionKnown: 'session:known',
   sessionReveal: 'session:reveal',

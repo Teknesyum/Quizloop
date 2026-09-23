@@ -1,6 +1,8 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { FONT_SCALES, type Settings as S } from '@shared/ipc'
+import { Confirm } from '@renderer/components/Confirm'
 import { Skeleton } from '@renderer/components/Skeleton'
+import { useUpdate } from '@renderer/hooks/useUpdate'
 import { t, type Key } from '@renderer/i18n'
 import { useApp } from '@renderer/store/app'
 
@@ -12,6 +14,9 @@ export function Settings(): React.JSX.Element {
   const save = useApp((s) => s.saveSettings)
   const loadInfo = useApp((s) => s.loadInfo)
   const toast = useApp((s) => s.toast)
+  const up = useUpdate()
+  const [importing, setImporting] = useState(false)
+  const [busy, setBusy] = useState(false)
 
   useEffect(() => {
     if (!info) loadInfo()
@@ -20,6 +25,46 @@ export function Settings(): React.JSX.Element {
   const apply = async (patch: Partial<S>): Promise<void> => {
     await save(patch)
     toast('success', t('settings.saved'))
+  }
+
+  const upLine = (): string => {
+    const v = { version: up.version ?? '', percent: up.percent ?? 0 }
+    if (up.state === 'checking') return t('update.checking')
+    if (up.state === 'none') return t('update.none')
+    if (up.state === 'available') return t('update.available', v)
+    if (up.state === 'downloading') return t('update.downloading', v)
+    if (up.state === 'ready') return t('update.ready', v)
+    if (up.state === 'notice') return t('update.notice', v)
+    if (up.state === 'error') return t('update.error')
+    return ''
+  }
+
+  const exportPkg = async (): Promise<void> => {
+    setBusy(true)
+    try {
+      const r = await window.quizloop.transfer.exportTo()
+      if (r.ok)
+        toast(
+          'success',
+          t('settings.transferExported', { modules: r.modules ?? 0, path: r.path ?? '' })
+        )
+      else if (r.error) toast('danger', `${t('settings.transferFailed')}: ${r.error}`)
+    } finally {
+      setBusy(false)
+    }
+  }
+
+  const importPkg = async (): Promise<void> => {
+    setImporting(false)
+    setBusy(true)
+    try {
+      const r = await window.quizloop.transfer.importFrom()
+      if (r.ok) toast('success', t('settings.transferImported'))
+      else if (r.error === 'not-a-package') toast('danger', t('settings.transferNotPackage'))
+      else if (r.error) toast('danger', `${t('settings.transferFailed')}: ${r.error}`)
+    } finally {
+      setBusy(false)
+    }
   }
 
   return (
@@ -143,9 +188,75 @@ export function Settings(): React.JSX.Element {
             </div>
           </div>
 
+          <div className="tk-panel ql-transition-in" style={{ '--ql-i': 1 } as React.CSSProperties}>
+            <h3 className="tk-h3 tk-h3-rule">{t('settings.transfer')}</h3>
+            <p className="tk-hint">{t('settings.transferHelp')}</p>
+            <div className="ql-row">
+              <button
+                type="button"
+                className="tk-btn tk-btn-ghost ql-btn-sm"
+                disabled={busy}
+                title={busy ? t('common.loading') : undefined}
+                onClick={exportPkg}
+              >
+                {t('settings.transferExport')}
+              </button>
+              <button
+                type="button"
+                className="tk-btn tk-btn-ghost ql-btn-sm"
+                disabled={busy}
+                title={busy ? t('common.loading') : undefined}
+                onClick={() => setImporting(true)}
+              >
+                {t('settings.transferImport')}
+              </button>
+            </div>
+          </div>
+
+          <div className="tk-panel ql-transition-in" style={{ '--ql-i': 2 } as React.CSSProperties}>
+            <h3 className="tk-h3 tk-h3-rule">{t('settings.updates')}</h3>
+            <p className="tk-hint">{t('settings.updatesHelp')}</p>
+            <div className="ql-row">
+              <button
+                type="button"
+                className="tk-btn tk-btn-ghost ql-btn-sm"
+                disabled={up.state === 'checking' || up.state === 'downloading'}
+                title={
+                  up.state === 'checking' || up.state === 'downloading'
+                    ? t('update.checking')
+                    : undefined
+                }
+                onClick={() => window.quizloop.update.check()}
+              >
+                {t('update.check')}
+              </button>
+              {up.state === 'ready' && (
+                <button
+                  type="button"
+                  className="tk-btn tk-btn-primary ql-btn-sm"
+                  onClick={() => window.quizloop.update.install()}
+                >
+                  {t('update.restart')}
+                </button>
+              )}
+              {up.state === 'notice' && (
+                <button
+                  type="button"
+                  className="tk-btn tk-btn-ghost ql-btn-sm"
+                  onClick={() => window.quizloop.update.open()}
+                >
+                  {t('update.open')}
+                </button>
+              )}
+              <span className="tk-hint" role="status">
+                {upLine()}
+              </span>
+            </div>
+          </div>
+
           <div
             className="tk-panel ql-transition-in ql-about"
-            style={{ '--ql-i': 1 } as React.CSSProperties}
+            style={{ '--ql-i': 3 } as React.CSSProperties}
           >
             <h3 className="tk-h3 tk-h3-rule">{t('settings.about')}</h3>
             <p className="tk-hint">
@@ -165,6 +276,15 @@ export function Settings(): React.JSX.Element {
             )}
           </div>
         </div>
+      )}
+
+      {importing && (
+        <Confirm
+          text={t('settings.transferConfirm')}
+          danger
+          onNo={() => setImporting(false)}
+          onYes={importPkg}
+        />
       )}
     </section>
   )

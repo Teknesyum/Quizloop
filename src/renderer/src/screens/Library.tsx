@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { tinykeys } from 'tinykeys'
 import type { InstallResult, ModuleSummary } from '@shared/ipc'
 import { Confirm } from '@renderer/components/Confirm'
 import { Skeleton } from '@renderer/components/Skeleton'
@@ -8,18 +9,26 @@ import { useApp } from '@renderer/store/app'
 function ModuleCard({
   m,
   index,
+  active,
+  onFocus,
   onRemove,
   onReset
 }: {
   m: ModuleSummary
   index: number
+  active: boolean
+  onFocus(): void
   onRemove(): void
   onReset(): void
 }): React.JSX.Element {
   const go = useApp((s) => s.go)
   return (
     <article
-      className="tk-panel ql-card ql-cover-card ql-transition-in"
+      id={`ql-module-${index}`}
+      tabIndex={active ? 0 : -1}
+      aria-label={m.name}
+      onFocus={onFocus}
+      className={`tk-panel ql-card ql-cover-card ql-transition-in ${active ? 'ql-card-active' : ''}`}
       style={{ '--ql-i': index } as React.CSSProperties}
     >
       <img className="ql-cover" src={`${m.assetBase}assets/kapak.webp`} alt="" />
@@ -64,6 +73,13 @@ function ModuleCard({
           </button>
           <button
             type="button"
+            className="tk-btn tk-btn-ghost ql-btn-sm"
+            onClick={() => go({ name: 'bank', moduleId: m.id })}
+          >
+            {t('library.bank')}
+          </button>
+          <button
+            type="button"
             className="tk-btn tk-btn-primary ql-btn-sm"
             onClick={() => go({ name: 'chapters', moduleId: m.id })}
           >
@@ -83,10 +99,42 @@ export function Library(): React.JSX.Element {
   const [resetting, setResetting] = useState<ModuleSummary | null>(null)
   const [dragging, setDragging] = useState(false)
   const [busy, setBusy] = useState(false)
+  const [active, setActive] = useState(0)
+  const go = useApp((s) => s.go)
 
   useEffect(() => {
     loadModules()
   }, [loadModules])
+
+  useEffect(() => {
+    if (!modules?.length || removing || resetting) return
+    const count = modules.length
+    const focus = (i: number): void => {
+      const next = (i + count) % count
+      setActive(next)
+      document.getElementById(`ql-module-${next}`)?.focus()
+    }
+    const inField = (e: KeyboardEvent): boolean =>
+      e.target instanceof HTMLInputElement || e.target instanceof HTMLTextAreaElement
+    const step = (d: number) => (e: KeyboardEvent) => {
+      if (inField(e)) return
+      e.preventDefault()
+      focus(active + d)
+    }
+    return tinykeys(window, {
+      ArrowDown: step(1),
+      ArrowRight: step(1),
+      ArrowUp: step(-1),
+      ArrowLeft: step(-1),
+      Enter: (e) => {
+        if (inField(e) || (e.target as HTMLElement).closest('button')) return
+        const m = modules[active]
+        if (!m) return
+        e.preventDefault()
+        go({ name: 'chapters', moduleId: m.id })
+      }
+    })
+  }, [modules, active, removing, resetting, go])
 
   const report = async (r: InstallResult | null): Promise<void> => {
     if (!r) return
@@ -184,11 +232,17 @@ export function Library(): React.JSX.Element {
               key={m.id}
               m={m}
               index={i}
+              active={i === active}
+              onFocus={() => setActive(i)}
               onRemove={() => setRemoving(m)}
               onReset={() => setResetting(m)}
             />
           ))}
         </div>
+      )}
+
+      {modules !== null && modules.length > 0 && (
+        <p className="tk-hint ql-keys">{t('library.keys')}</p>
       )}
 
       {dragging && <div className="ql-drop-veil tk-label">{t('library.dropHint')}</div>}
