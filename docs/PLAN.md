@@ -662,3 +662,47 @@ paketlenir.
 yazar: soru kimliği, sayfa, alıntı, sebep (sayfada yok, sayfa aralığı yanlış,
 kırpılmış alıntı). Rapor J2'nin çıktısıdır, J3'ün anahat vurgusu aynı
 çözücüyü kullanır.
+
+## 9. Son Dalgalar — Plan (2026-09-23)
+
+Sıra: J9 (Dalga 4 kalanı) → J10 (Dalga 5) → J11 (ertelenenler). Her iş paketlenmiş
+uygulamada CDP ile sürülerek sınanır; birim testi yetmez.
+
+### J9 — Dalga 4 kalanı
+
+1. Bağımlılık: `@visx/group`, `scale`, `shape`, `heatmap`, `axis` (beş paket, sınır altı)
+   ve `@tanstack/react-virtual`. Hepsi renderer'da, `devDependencies`.
+2. İstatistik: `StatsOverview` 26 haftalık günlük seri, kart durum dağılımı ve bölüm
+   bazında ilerleme taşır. Ekran: ısı haritası (hafta × gün), 30 günlük çubuk grafik,
+   durum dağılımı. Renkler yalnız `--tk-*` değişkenlerinden.
+3. Soru bankası ekranı: `module:questions` her soruyu tek satır özetle döndürür.
+   Liste sanal; seçim **indeks tabanlı** (`aria-activedescendant`), ↑ ↓ PgUp PgDn
+   Home End ile gezilir, Enter ayrıntıyı açar, F bayrağı açar/kapar, `/` aramaya odaklar.
+   Süzgeç: tümü / işaretliler (J11'in işaretli sorular ekranı budur).
+4. Bayrak dışa aktarma: `flags:export` → kayıt diyaloğu → `flags.json`
+   (`modul`, `surum`, soru kimliği, not, kaynak). `quizforge flags` bu dosyayı okur,
+   soruları birimlerine eşler, o birimleri yeniden üretim kuyruğuna koyar.
+5. Klavye: Kütüphane ve Bölümler ↑ ↓ Enter; Özet ekranında Enter yeni oturum, Esc
+   kütüphane. *Kabul*: fare olmadan açılıştan özete tam oturum.
+
+### J10 — Dalga 5
+
+1. `electron-updater` (main, `dependencies`). Windows paketlide gerçek güncelleme;
+   Linux ve macOS'ta GitHub `releases/latest` sorgusu, yeni sürümde bildirim +
+   indirme bağlantısı. Renderer'a `update:status` olayı, başlık çubuğunda şerit.
+2. Çıkış akışı `latest*.yml` ve `*.blockmap` dosyalarını da yükler; güncelleyici
+   onları okur.
+3. README yeniden yazılır (kurulum, modüller, quizforge, güncelleme, lisans).
+4. İlk sürüm: `v0.1.0` etiketi → Actions → taslak → yayın.
+5. Ölçüm: kurulumdan ilk soruya süre; Dalga 3'ün 300 ms / 400 MB kabulü de aynı
+   turda ölçülür. Sonuç `docs/olcumler/` altına.
+
+### J11 — Ertelenenler
+
+1. İşaretli sorular ekranı: J9-3'teki süzgeç.
+2. Taşıma: Ayarlar → "Taşıma paketi". Dışa aktar: seçilen klasöre `quizloop.db`
+   (`VACUUM INTO`), `settings.json` ve kurulu modüller. İçe aktar: paketi doğrular,
+   modülleri kopyalar, eski veritabanını `.bak-tasima` diye saklar, uygulamayı
+   yeniden başlatır.
+3. `b55-p1324-1328`: boş `p1327-1.png` yeniden kırpılır ya da görsel soru düşürülür.
+4. Zorluk etiketleri: `istem` mi `etiketleme` mi kararı kullanıcıda.
