@@ -9,6 +9,7 @@ import {
   type SolutionBlock
 } from '../../../src/shared/schema/question.ts'
 import { quoteFound } from './text.ts'
+import { ZORLUK_OLCUTU } from './zorluk.ts'
 import type { Loaded } from './rules.ts'
 import { rangeText, toShown, unitText, type Corpus } from './corpus.ts'
 import type { Plan, Unit } from './plan.ts'
@@ -86,7 +87,8 @@ export function systemPrompt(l: Loaded, gorsel = false): string {
     `Parça başına ${u.parcaBasinaSoru} soru. Her soruda ${u.sikSayisi} şık (${keys}); tek doğru. Doğru şıkkın harfini eşit dağıt: ${keys} harflerinin her biri en az bir kez doğru olsun, hiçbiri üç kereden fazla olmasın.`,
     `celdiriciler: her yanlış şık için ayrı bir açıklama — neden yanlış olduğu, tek cümle. Doğru şık için açıklama yazma.`,
     `cozum: sıralı bloklar; türler ${u.cozumBloklari.join(', ')}. İlk blok text türünde, doğru cevabı kaynağa dayanarak açıklar.`,
-    `Zorluk dağılımı yaklaşık kolay %${Math.round(u.zorlukDagilimi.kolay * 100)}, orta %${Math.round(u.zorlukDagilimi.orta * 100)}, zor %${Math.round(u.zorlukDagilimi.zor * 100)}.`,
+    `zorluk alanı için ölçüt:
+${ZORLUK_OLCUTU}`,
     `kavram: sorunun sınadığı tek kavram, 2-5 kelime. etiketler: 1-4 kısa konu etiketi.`,
     `Çözümde ve çeldirici açıklamalarında şık harfi anma ("doğru cevap A'dır" yazma); bilgiyi anlat.`,
     gorsel

@@ -13,6 +13,14 @@ import { pack } from './pack.ts'
 import { writeBriefs, briefDir } from './brief.ts'
 import { ingest } from './ingest.ts'
 import { FlagFile, applyFlags, formatFlagPlan, planFlags } from './flags.ts'
+import {
+  agreement,
+  applyLabels,
+  exportBatches,
+  formatApply,
+  readLabels,
+  zorlukDir
+} from './zorluk.ts'
 
 const HELP = `quizforge <komut> --rules <rules.yaml> [seçenekler]
 
@@ -26,6 +34,10 @@ const HELP = `quizforge <komut> --rules <rules.yaml> [seçenekler]
   pack      modules/<id>/ yaz; verify geçmeden çalışmaz
   flags     uygulamanın flags.json dosyasını oku, soruları birimlerine eşle, o birimleri
             yeniden üretim kuyruğuna koy   --flags <dosya> zorunlu, --gorsel, --dry-run
+  zorluk    tek ölçütle yeniden etiketleme
+            export  soruları build/zorluk/in/NNN.json partilerine ve istem.md'ye yaz
+            apply   build/zorluk/out/*.json etiketlerini birimlere yaz   --dry-run
+            uyum    out/ ile ikinci etiketleme (build/zorluk/kontrol/) arasındaki uyumu ölç
   doctor    ortamı sına: python, pypdf, ANTHROPIC_API_KEY, külliyat dosyaları
 `
 
@@ -175,6 +187,32 @@ function main(argv: string[]): number {
       console.log(`uyarı: bayrak sürümü ${file.surum}, kural sürümü ${l.rules.module.surum}`)
     console.log(formatFlagPlan(fp, values.gorsel, values['dry-run']))
     return fp.unmapped.length ? 1 : 0
+  }
+
+  if (cmd === 'zorluk') {
+    const sub = positionals[1]
+    if (sub === 'export') {
+      const files = exportBatches(l)
+      console.log(`${files.length} parti → ${path.relative(l.root, path.join(zorlukDir(l), 'in'))}`)
+      return 0
+    }
+    if (sub === 'apply') {
+      const r = applyLabels(l, readLabels(path.join(zorlukDir(l), 'out')), values['dry-run'])
+      console.log(formatApply(r, values['dry-run']))
+      return r.missing.length || r.unknown.length ? 1 : 0
+    }
+    if (sub === 'uyum') {
+      const a = agreement(
+        readLabels(path.join(zorlukDir(l), 'out')),
+        readLabels(path.join(zorlukDir(l), 'kontrol'))
+      )
+      const p = (n: number): string => ((n / Math.max(1, a.n)) * 100).toFixed(1) + '%'
+      console.log(
+        `${a.n} soru: aynı ${a.same} (${p(a.same)}), bir seviye fark ${a.adjacent} (${p(a.adjacent)}), iki seviye fark ${a.far} (${p(a.far)})`
+      )
+      return 0
+    }
+    throw new Error('zorluk export | apply | uyum')
   }
 
   if (cmd === 'pack') {

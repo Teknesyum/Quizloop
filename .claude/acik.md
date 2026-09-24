@@ -1,6 +1,4 @@
-- [x] J9 Dalga 4 kalan: visx istatistik + isi haritasi, sanal liste, bayrak → quizforge yeniden uretim — 2026-09-23 12:17 — jobs.md
-- [x] J10 Dalga 5: electron-builder uc hedef, surum etiketi akisi, Windows otomatik guncelleme, Linux/macOS bildirim, ilk surum — 2026-09-23 12:17 — jobs.md
-- [x] J11 Ertelenenler: isaretli sorular ekrani, USB tasima, b55-p1324-1328 gorseli — 2026-09-23 12:17
-- [ ] J11 zorluk etiketleri — kararın: istemle mi üretilsin, sonradan etiketleme mi
-- [ ] Bellek kabulü 400 MB — kararın: private 359-379 MB geçiyor, working set 451-473 MB geçmiyor; hangisi ölçü (docs/olcumler/0002-oturum-ve-bellek.md)
-- [x] ajan: quizforge flags + b55 fix — 2026-09-23 12:27 — rapor .claude/raporlar/2026-09-23-quizforge-flags-b55.md
+- [x] J11 zorluk etiketleri — ikisi: istemde ortak ölçüt + sonradan etiketleme (karar 0007)
+- [x] Zorluk etiketlerini tutarlı hale getir (3030 soru yeniden etiketlensin) — 1864 etiket değişti, uyum %76-85 (olcumler/0003)
+- [x] ajan: Etiketle 009-012 — tamam, zcheck geçti (kolay 225, orta 152, zor 23)
+- [x] ajan: Etiketle 021-024 — tamam, zcheck geçti
