@@ -2,7 +2,7 @@
 
 Module production line. Separate package, same repo, never bundled into the app.
 
-- `src/cli.ts` — `init | plan | brief | ingest | run | verify | pack | flags | doctor`. Every command takes `--rules <file>`.
+- `src/cli.ts` — `init | plan | brief | ingest | run | verify | pack | flags | zorluk | doctor`. Every command takes `--rules <file>`.
 - `py/extract.py` — PDF text layer to `pages.jsonl` + `chapters.json` (pypdf, no AGPL).
 - Rules live next to the source: `sources/<id>/rules.yaml`; build state in `sources/<id>/build/`.
 - Question schema is imported from `src/shared/schema` — never duplicated here.
@@ -11,5 +11,7 @@ Module production line. Separate package, same repo, never bundled into the app.
   `ANTHROPIC_API_KEY` plus a `--max-usd` cap. `pack` refuses without a clean `verify`.
 - `source.pages` carries book pages; the corpus is PDF-indexed and converted with `sayfaOfseti`.
 - `flags` maps app-exported flagged ids to units and requeues them; notes in `build/bayraklar/`.
+- `zorluk` relabels difficulty with the single rubric in `src/zorluk.ts` (also used by the
+  generation prompt): `export` batches, subagents write `build/zorluk/out/`, `apply` writes back.
 - Tests: `npx vitest run --config tools/quizforge/vitest.config.ts`.
 - No comments in code. Prompts to the model are Turkish.

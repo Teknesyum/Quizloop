@@ -330,7 +330,7 @@ gün orada gider.
 ```
 module:   ad, sürüm, dil
 kaynak:   tip (pdf | web), yol, atlanacakBolumler[]
-uretim:   parcaBasinaSoru, sikSayisi, zorlukDagilimi, cozumBloklari[], yasakli[]
+uretim:   parcaBasinaSoru, sikSayisi, cozumBloklari[], yasakli[]
 stil:     ton, uzunluk
 ```
 

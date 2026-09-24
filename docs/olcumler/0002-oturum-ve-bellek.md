@@ -34,7 +34,7 @@ utility     ws  57 MB  private  16 MB
 renderer    ws 115 MB  private  56 MB
 ```
 
-Kabul 400 MB altı: **private ile geçiyor, working set ile geçmiyor.** Working set paylaşılan
+Kabul 400 MB altı: **private ile geçiyor, working set ile geçmiyor.** Karar (2026-09-24): ölçü private; kabul **geçti**. Working set paylaşılan
 Chromium DLL sayfalarını her süreçte yeniden sayıyor; kabulün hangi ölçüyle okunacağı karar
 ister. Renderer'ın kendisi 56 MB private; en büyük pay GPU süreci ve main.
 

@@ -30,9 +30,6 @@ export const Rules = z.object({
     parcaSayfaAraligi: Range.default([3, 8]),
     parcaBasinaSoru: z.number().int().positive().default(8),
     sikSayisi: z.number().int().min(2).max(5).default(5),
-    zorlukDagilimi: z
-      .object({ kolay: z.number(), orta: z.number(), zor: z.number() })
-      .default({ kolay: 0.3, orta: 0.5, zor: 0.2 }),
     cozumBloklari: z
       .array(z.enum(['text', 'hint', 'formula', 'table', 'image']))
       .default(['text', 'hint']),
