@@ -2,6 +2,7 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 import { tinykeys } from 'tinykeys'
 import type { QuestionView, SelfAssess, SourceBook } from '@shared/ipc'
 import type { ChoiceKey } from '@shared/schema/question'
+import { BookButton } from '@renderer/components/BookButton'
 import { BookViewer } from '@renderer/components/BookViewer'
 import { Solution } from '@renderer/components/Solution'
 import { Confirm } from '@renderer/components/Confirm'
@@ -285,7 +286,6 @@ export function Session({
               ['Esc', 'session.hint.end']
             ]
   const known = 'known' in state && state.known
-  const readable = Boolean(solved?.source && (book?.available || solved.source.kesit))
 
   return (
     <section className="ql-screen ql-session">
@@ -418,27 +418,14 @@ export function Session({
                 <p className="ql-source-quote">{solved.source.quote}</p>
                 <span className="tk-hint ql-source-line">
                   {t('session.sourceFile', { file: solved.source.file })}
-                  {readable ? (
-                    <button
-                      type="button"
-                      className="ql-source-page"
-                      onClick={() => setReading(q.questionId)}
-                      title={t('book.open')}
-                    >
-                      {t('session.sourcePages', {
-                        from: solved.source.pages[0],
-                        to: solved.source.pages[1]
-                      })}
-                    </button>
-                  ) : (
-                    <span>
-                      {t('session.sourcePages', {
-                        from: solved.source.pages[0],
-                        to: solved.source.pages[1]
-                      })}
-                    </span>
-                  )}
+                  <span>
+                    {t('session.sourcePages', {
+                      from: solved.source.pages[0],
+                      to: solved.source.pages[1]
+                    })}
+                  </span>
                 </span>
+                <BookButton file={solved.source.file} onOpen={() => setReading(q.questionId)} />
               </blockquote>
             )}
             <div className="ql-grade">

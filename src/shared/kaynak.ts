@@ -56,3 +56,15 @@ export function findQuoteRuns(runs: string[], quote: string): QuoteHit | null {
   }
   return null
 }
+
+export function bookLocative(file: string): string | null {
+  const base = file.split(/[\\/]/).pop() ?? ''
+  const word = base.replace(/\.[^.]*$/, '').match(/\p{L}+/u)?.[0]
+  if (!word) return null
+  const lower = word.toLocaleLowerCase('tr')
+  const name = lower.charAt(0).toLocaleUpperCase('tr') + lower.slice(1)
+  const vowel = [...lower].reverse().find((c) => 'aeıioöuü'.includes(c))
+  const back = !vowel || 'aıou'.includes(vowel)
+  const hard = 'fstkçşhp'.includes(lower.charAt(lower.length - 1))
+  return `${name}'${hard ? 't' : 'd'}${back ? 'a' : 'e'}`
+}

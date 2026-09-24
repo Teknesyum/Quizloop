@@ -76,6 +76,8 @@
   "session.sourceFile": "{file}, page ",
   "session.sourcePages": "{from}–{to}",
   "book.title": "Book view",
+  "book.show": "Show in the book",
+  "book.showAny": "Show in the book",
   "book.open": "Open the source page",
   "book.spread": "pages {from}–{to}",
   "book.prev": "Previous",

@@ -76,6 +76,8 @@
   "session.sourceFile": "{file}, sayfa ",
   "session.sourcePages": "{from}–{to}",
   "book.title": "Kitap görünümü",
+  "book.show": "{yer} gör",
+  "book.showAny": "Kitapta gör",
   "book.open": "Kaynak sayfayı aç",
   "book.spread": "sayfa {from}–{to}",
   "book.prev": "Önceki",

@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { findQuoteRuns, normalizeQuote, pdfPageOf, spreadOf } from './kaynak'
+import { bookLocative, findQuoteRuns, normalizeQuote, pdfPageOf, spreadOf } from './kaynak'
 
 describe('pdfPageOf', () => {
   it('adds the module offset', () => {
@@ -61,5 +61,20 @@ describe('findQuoteRuns', () => {
 
   it('returns nothing when the page does not carry the quote', () => {
     expect(findQuoteRuns(runs, 'kardiyopulmoner baypas')).toBeNull()
+  })
+})
+
+describe('bookLocative', () => {
+  it('names the book from its file with the Turkish locative suffix', () => {
+    expect(bookLocative('LANGE 7. BASKI.pdf')).toBe("Lange'de")
+    expect(bookLocative('kitaplar/Guyton.pdf')).toBe("Guyton'da")
+    expect(bookLocative('Harrison.pdf')).toBe("Harrison'da")
+    expect(bookLocative('Robbins Patoloji.pdf')).toBe("Robbins'te")
+    expect(bookLocative('Netter.pdf')).toBe("Netter'de")
+    expect(bookLocative('Cecil.pdf')).toBe("Cecil'de")
+    expect(bookLocative('Stoelting.pdf')).toBe("Stoelting'de")
+    expect(bookLocative('Miller Anestezi.pdf')).toBe("Miller'de")
+    expect(bookLocative('Barash Klinik.pdf')).toBe("Barash'ta")
+    expect(bookLocative('123.pdf')).toBeNull()
   })
 })
