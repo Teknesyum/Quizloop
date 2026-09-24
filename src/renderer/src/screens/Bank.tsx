@@ -1,7 +1,9 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { useVirtualizer } from '@tanstack/react-virtual'
 import { tinykeys } from 'tinykeys'
-import type { BankQuestion, BankRow } from '@shared/ipc'
+import type { BankQuestion, BankRow, SourceBook } from '@shared/ipc'
+import { BookButton } from '@renderer/components/BookButton'
+import { BookViewer } from '@renderer/components/BookViewer'
 import { Markdown } from '@renderer/components/Markdown'
 import { Skeleton } from '@renderer/components/Skeleton'
 import { Solution } from '@renderer/components/Solution'
@@ -16,7 +18,7 @@ function fold(s: string): string {
   return s.toLocaleLowerCase('tr').normalize('NFD').replace(/\p{M}/gu, '')
 }
 
-function Detail({ q }: { q: BankQuestion }): React.JSX.Element {
+function Detail({ q, onBook }: { q: BankQuestion; onBook(): void }): React.JSX.Element {
   return (
     <div className="ql-bank-detail-body">
       <Markdown md={q.stem.md} assetBase={q.assetBase} />
@@ -49,6 +51,7 @@ function Detail({ q }: { q: BankQuestion }): React.JSX.Element {
             {t('session.sourcePages', { from: q.source.pages[0], to: q.source.pages[1] })}
           </span>
         </span>
+        <BookButton file={q.source.file} onOpen={onBook} />
       </blockquote>
     </div>
   )
@@ -70,8 +73,25 @@ export function Bank({
   const [query, setQuery] = useState('')
   const [active, setActive] = useState(0)
   const [open, setOpen] = useState<BankQuestion | null>(null)
+  const [reading, setReading] = useState(false)
+  const [book, setBook] = useState<SourceBook | null>(null)
   const listRef = useRef<HTMLDivElement | null>(null)
   const searchRef = useRef<HTMLInputElement | null>(null)
+
+  useEffect(() => {
+    let dead = false
+    window.quizloop.source.book(moduleId).then(
+      (b) => {
+        if (!dead) setBook(b)
+      },
+      () => {
+        if (!dead) setBook(null)
+      }
+    )
+    return () => {
+      dead = true
+    }
+  }, [moduleId])
 
   useEffect(() => {
     if (!modules) loadModules()
@@ -170,6 +190,7 @@ export function Bank({
         e.preventDefault()
         move(f(at.current))
       }
+    if (reading) return
     return tinykeys(window, {
       ArrowDown: to((i) => i + 1),
       ArrowUp: to((i) => i - 1),
@@ -196,7 +217,7 @@ export function Bank({
         else go({ name: 'library' })
       }
     })
-  }, [move, show, toggleFlag, open, go])
+  }, [move, show, toggleFlag, open, go, reading])
 
   const onSearchKey = (e: React.KeyboardEvent<HTMLInputElement>): void => {
     if (e.key === 'ArrowDown' || e.key === 'Enter') {
@@ -344,7 +365,7 @@ export function Bank({
                   {t('book.close')}
                 </button>
               </header>
-              <Detail q={open} />
+              <Detail q={open} onBook={() => setReading(true)} />
             </aside>
           )}
         </div>
@@ -366,6 +387,17 @@ export function Bank({
           </span>
         ))}
       </p>
+      {reading && open && (
+        <BookViewer
+          key={book?.path ?? 'kesit'}
+          book={book}
+          moduleId={moduleId}
+          source={open.source}
+          assetBase={open.assetBase}
+          onBook={setBook}
+          onClose={() => setReading(false)}
+        />
+      )}
     </section>
   )
 }

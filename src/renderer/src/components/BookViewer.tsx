@@ -1,10 +1,13 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
+import { createPortal } from 'react-dom'
+import { PageFlip } from 'page-flip'
+import 'page-flip/src/Style/stPageFlip.css'
 import { getDocument, GlobalWorkerOptions, Util, type PDFDocumentProxy } from 'pdfjs-dist'
 import workerUrl from 'pdfjs-dist/build/pdf.worker.min.mjs?url'
 import { tinykeys } from 'tinykeys'
 import type { SourceBook } from '@shared/ipc'
 import type { Source } from '@shared/schema/question'
-import { findQuoteRuns, pdfPageOf, spreadOf } from '@shared/kaynak'
+import { findQuoteRuns, pdfPageOf } from '@shared/kaynak'
 import { Skeleton } from '@renderer/components/Skeleton'
 import { t } from '@renderer/i18n'
 import { useApp } from '@renderer/store/app'
@@ -35,87 +38,24 @@ function slowMs(): number {
   return Number.isFinite(n) && n > 0 ? (raw.endsWith('ms') ? n : n * 1000) : 1
 }
 
-type Role =
-  | 'left'
-  | 'right'
-  | 'single'
-  | 'hidden'
-  | 'front-next'
-  | 'back-next'
-  | 'front-prev'
-  | 'back-prev'
-  | 'single-next'
-  | 'single-prev'
-
-type Flip = 'next' | 'prev' | null
-
-function slots(left: number, single: boolean, flip: Flip): [number, Role][] {
-  if (single) {
-    if (flip === 'next')
-      return [
-        [left - 1, 'hidden'],
-        [left + 1, 'single'],
-        [left, 'single-next']
-      ]
-    if (flip === 'prev')
-      return [
-        [left + 1, 'hidden'],
-        [left, 'single'],
-        [left - 1, 'single-prev']
-      ]
-    return [
-      [left - 1, 'hidden'],
-      [left + 1, 'hidden'],
-      [left, 'single']
-    ]
-  }
-  if (flip === 'next')
-    return [
-      [left - 2, 'hidden'],
-      [left - 1, 'hidden'],
-      [left, 'left'],
-      [left + 3, 'right'],
-      [left + 1, 'front-next'],
-      [left + 2, 'back-next']
-    ]
-  if (flip === 'prev')
-    return [
-      [left + 2, 'hidden'],
-      [left + 3, 'hidden'],
-      [left - 2, 'left'],
-      [left + 1, 'right'],
-      [left, 'front-prev'],
-      [left - 1, 'back-prev']
-    ]
-  return [
-    [left - 2, 'hidden'],
-    [left - 1, 'hidden'],
-    [left + 2, 'hidden'],
-    [left + 3, 'hidden'],
-    [left, 'left'],
-    [left + 1, 'right']
-  ]
-}
-
 function Leaf({
   doc,
   pdfPage,
   width,
   highlight,
-  role
+  shown
 }: {
   doc: PDFDocumentProxy | null
   pdfPage: number
   width: number
   highlight: Highlight | null
-  role: Role
+  shown: boolean
 }): React.JSX.Element {
   const canvasRef = useRef<HTMLCanvasElement | null>(null)
   const [rects, setRects] = useState<Rect[]>([])
   const [box, setBox] = useState<{ w: number; h: number } | null>(null)
   const blank = !doc || pdfPage < 1 || pdfPage > doc.numPages
   const sheetRef = useRef<HTMLDivElement | null>(null)
-  const shown = role === 'left' || role === 'right' || role === 'single'
 
   useEffect(() => {
     if (!shown || rects.length === 0) return
@@ -208,7 +148,7 @@ function Leaf({
   }, [doc, blank, pdfPage, width, highlight])
 
   return (
-    <div className={`ql-book-leaf ql-book-${role}`} aria-hidden={blank || role === 'hidden'}>
+    <div className="ql-book-leaf" aria-hidden={blank || !shown}>
       <div
         ref={sheetRef}
         className="ql-book-sheet"
@@ -246,12 +186,16 @@ export function BookViewer({
   const [doc, setDoc] = useState<PDFDocumentProxy | null>(null)
   const [failed, setFailed] = useState(false)
   const [busy, setBusy] = useState(false)
-  const [left, setLeft] = useState(() => {
+  const [cur, setCur] = useState(() => {
     const off = book?.sayfaOfseti ?? 0
     const start = source.kesit ? source.kesit.pdfSayfa - off : source.pages[0]
-    return spreadOf(Math.max(1, start))[0]
+    return Math.max(1, start)
   })
-  const [flip, setFlip] = useState<Flip>(null)
+  const [portrait, setPortrait] = useState(false)
+  const [pageEls, setPageEls] = useState<HTMLElement[]>([])
+  const hostRef = useRef<HTMLDivElement | null>(null)
+  const flipRef = useRef<PageFlip | null>(null)
+  const curRef = useRef(cur)
   const [leafWidth, setLeafWidth] = useState(0)
   const [ratio, setRatio] = useState(1.4)
   const blinkSeconds = useApp((s) => s.settings?.blinkSeconds ?? 5)
@@ -298,44 +242,66 @@ export function BookViewer({
     return () => ro.disconnect()
   }, [usePdf, failed])
 
-  const step = single ? 1 : 2
   const last = doc ? doc.numPages : (book?.pages ?? source.pages[1])
   const offset = book?.sayfaOfseti ?? 0
-
   const maxLeft = Math.max(1, last - offset)
-  const turning = useRef(false)
-  const flipDir = useRef<Flip>(null)
-  const timer = useRef(0)
-  const commit = useCallback(() => {
-    window.clearTimeout(timer.current)
-    if (!turning.current) return
-    setLeft((p) => {
-      const d = flipDir.current === 'next' ? step : -step
-      return Math.max(1, Math.min(p + d, maxLeft))
-    })
-    setFlip(null)
-    turning.current = false
-  }, [step, maxLeft])
-  const turn = useCallback(
-    (dir: 'next' | 'prev') => {
-      if (turning.current) return
-      if (dir === 'prev' && left - step < 1) return
-      if (dir === 'next' && left + step > maxLeft) return
-      turning.current = true
-      flipDir.current = dir
-      if (reduced() || !doc || document.hidden) {
-        commit()
-        return
-      }
-      setFlip(dir)
-      timer.current = window.setTimeout(commit, slowMs() * 2.2 + 200)
-    },
-    [left, step, maxLeft, doc, commit]
-  )
+  const leafH = Math.round(leafWidth * ratio)
+  const left = portrait ? cur : cur - (cur % 2)
 
-  const onTurnEnd = (e: React.AnimationEvent<HTMLDivElement>): void => {
-    if (e.animationName.startsWith('ql-turn-leaf')) commit()
-  }
+  useEffect(() => {
+    curRef.current = cur
+  }, [cur])
+
+  useEffect(() => {
+    const host = hostRef.current
+    if (!doc || !host || leafWidth <= 0 || leafH <= 0) return
+    const root = document.createElement('div')
+    host.appendChild(root)
+    const els = Array.from({ length: maxLeft + 1 }, () => {
+      const el = document.createElement('div')
+      el.className = 'ql-book-page'
+      return el
+    })
+    root.append(...els)
+    const pf = new PageFlip(root, {
+      width: leafWidth,
+      height: leafH,
+      size: 'fixed',
+      startPage: Math.min(curRef.current, maxLeft),
+      showCover: false,
+      usePortrait: true,
+      autoSize: true,
+      drawShadow: true,
+      maxShadowOpacity: 0.45,
+      flippingTime: slowMs() * 2.2,
+      mobileScrollSupport: false,
+      showPageCorners: true
+    })
+    pf.loadFromHTML(els)
+    pf.on('flip', (e) => setCur(Number(e.data)))
+    pf.on('changeOrientation', (e) => setPortrait(e.data === 'portrait'))
+    flipRef.current = pf
+    setPageEls(els)
+    setCur(pf.getCurrentPageIndex())
+    setPortrait(pf.getOrientation() === 'portrait')
+    return () => {
+      flipRef.current = null
+      setPageEls([])
+      pf.destroy()
+      root.remove()
+    }
+  }, [doc, leafWidth, leafH, maxLeft])
+
+  const step = portrait ? 1 : 2
+  const turn = useCallback((dir: 'next' | 'prev') => {
+    const pf = flipRef.current
+    if (!pf) return
+    if (reduced() || document.hidden) {
+      if (dir === 'next') pf.turnToNextPage()
+      else pf.turnToPrevPage()
+    } else if (dir === 'next') pf.flipNext()
+    else pf.flipPrev()
+  }, [])
 
   useEffect(() => {
     return tinykeys(window, {
@@ -358,8 +324,7 @@ export function BookViewer({
     return { quote: source.quote }
   }, [source])
 
-  const pages = single ? [left] : [left, left + 1]
-  const leafH = Math.round(leafWidth * ratio)
+  const pages = portrait ? [Math.max(1, left)] : [Math.max(1, left), Math.min(left + 1, maxLeft)]
   const blinkN = Math.max(1, Math.round((blinkSeconds * 1000) / slowMs()) | 1)
   const kesitRef = source.kesit?.ref
   const showPick = !usePdf || failed
@@ -431,25 +396,30 @@ export function BookViewer({
           {usePdf && !failed ? (
             doc ? (
               <div
-                className={`ql-book-stage ${flip ? `ql-book-turning-${flip}` : ''}`}
+                ref={hostRef}
+                className="ql-book-stage"
                 style={
                   {
                     '--ql-leaf-w': `${leafWidth}px`,
                     '--ql-leaf-h': `${leafH}px`
                   } as React.CSSProperties
                 }
-                onAnimationEnd={onTurnEnd}
               >
-                {slots(left, single, flip).map(([p, role]) => (
-                  <Leaf
-                    key={p}
-                    doc={doc}
-                    pdfPage={pdfPageOf(p, offset)}
-                    width={leafWidth}
-                    highlight={highlight}
-                    role={role}
-                  />
-                ))}
+                {pageEls.map((el, i) =>
+                  i >= 1 && i >= left - 2 && i <= left + 3
+                    ? createPortal(
+                        <Leaf
+                          doc={doc}
+                          pdfPage={pdfPageOf(i, offset)}
+                          width={leafWidth}
+                          highlight={highlight}
+                          shown={portrait ? i === cur : i === left || i === left + 1}
+                        />,
+                        el,
+                        String(i)
+                      )
+                    : null
+                )}
               </div>
             ) : (
               <div className="ql-book-loading">

@@ -997,9 +997,7 @@ kbd {
   min-height: 0;
   flex: 1 1 auto;
   place-items: start center;
-  overflow: auto;
-  perspective: 2400px;
-  perspective-origin: center center;
+  overflow: hidden auto;
   background: var(--ql-paper);
   border: var(--tk-border-w) solid var(--ql-paper-edge);
   border-radius: var(--tk-r-box);
@@ -1010,243 +1008,25 @@ kbd {
 }
 
 .ql-book-stage {
-  position: relative;
   grid-column: 1 / -1;
   justify-self: center;
   width: calc(var(--ql-leaf-w) * 2);
-  height: var(--ql-leaf-h);
-  perspective: 2600px;
-  perspective-origin: center 40%;
-  transform-style: preserve-3d;
+  min-height: var(--ql-leaf-h);
 }
 
 .ql-book-single .ql-book-stage {
   width: var(--ql-leaf-w);
 }
 
-.ql-book-stage::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: calc(var(--ql-leaf-w) - var(--tk-sp-5));
-  width: calc(var(--tk-sp-5) * 2);
-  pointer-events: none;
-  z-index: 4;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    color-mix(in srgb, var(--tk-scrim) 45%, transparent) 50%,
-    transparent
-  );
-}
-
-.ql-book-single .ql-book-stage::after {
-  display: none;
-}
-
-.ql-book-leaf {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: var(--ql-leaf-w);
-  height: var(--ql-leaf-h);
-  z-index: 1;
-  backface-visibility: hidden;
-  transform-style: preserve-3d;
+.ql-book-page {
+  overflow: hidden;
   background: var(--ql-paper);
 }
 
-.ql-book-leaf::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  opacity: 0;
-}
-
-.ql-book-hidden {
-  visibility: hidden;
-  z-index: 0;
-}
-
-.ql-book-right,
-.ql-book-front-next,
-.ql-book-back-prev {
-  left: var(--ql-leaf-w);
-}
-
-.ql-book-front-next,
-.ql-book-back-prev,
-.ql-book-single-next,
-.ql-book-single-prev {
-  transform-origin: left center;
-}
-
-.ql-book-back-next,
-.ql-book-front-prev {
-  transform-origin: right center;
-}
-
-.ql-book-front-next,
-.ql-book-back-next,
-.ql-book-front-prev,
-.ql-book-back-prev,
-.ql-book-single-next,
-.ql-book-single-prev {
-  z-index: 3;
-  animation: var(--ql-turn) var(--tk-e-in) both;
-  animation-duration: calc(var(--tk-t-slow) * 2.2);
-}
-
-.ql-book-front-next {
-  --ql-turn: ql-turn-leaf-a;
-}
-
-.ql-book-back-next {
-  --ql-turn: ql-turn-leaf-b;
-}
-
-.ql-book-front-prev {
-  --ql-turn: ql-turn-leaf-c;
-}
-
-.ql-book-back-prev {
-  --ql-turn: ql-turn-leaf-d;
-}
-
-.ql-book-single-next {
-  --ql-turn: ql-turn-leaf-a;
-}
-
-.ql-book-single-prev {
-  --ql-turn: ql-turn-leaf-d;
-}
-
-.ql-book-front-next::after,
-.ql-book-single-next::after {
-  background: linear-gradient(90deg, var(--tk-scrim), transparent 70%);
-  animation: ql-turn-shade-in calc(var(--tk-t-slow) * 2.2) var(--tk-e-in) both;
-}
-
-.ql-book-front-prev::after {
-  background: linear-gradient(270deg, var(--tk-scrim), transparent 70%);
-  animation: ql-turn-shade-in calc(var(--tk-t-slow) * 2.2) var(--tk-e-in) both;
-}
-
-.ql-book-back-next::after {
-  background: linear-gradient(270deg, var(--tk-scrim), transparent 70%);
-  animation: ql-turn-shade-out calc(var(--tk-t-slow) * 2.2) var(--tk-e-out) both;
-}
-
-.ql-book-back-prev::after,
-.ql-book-single-prev::after {
-  background: linear-gradient(90deg, var(--tk-scrim), transparent 70%);
-  animation: ql-turn-shade-out calc(var(--tk-t-slow) * 2.2) var(--tk-e-out) both;
-}
-
-.ql-book-turning-next .ql-book-right::after,
-.ql-book-turning-next .ql-book-single::after {
-  background: linear-gradient(90deg, var(--tk-scrim), transparent 55%);
-  animation: ql-turn-shade-out calc(var(--tk-t-slow) * 2.2) var(--tk-e-in) both;
-}
-
-.ql-book-turning-prev .ql-book-left::after {
-  background: linear-gradient(270deg, var(--tk-scrim), transparent 55%);
-  animation: ql-turn-shade-out calc(var(--tk-t-slow) * 2.2) var(--tk-e-in) both;
-}
-
-.ql-book-turning-next .ql-book-left::after,
-.ql-book-turning-prev .ql-book-right::after,
-.ql-book-turning-prev .ql-book-single::after {
-  background: var(--tk-scrim);
-  animation: ql-turn-shade-cover calc(var(--tk-t-slow) * 2.2) var(--tk-e-out) both;
-}
-
-@keyframes ql-turn-leaf-a {
-  from {
-    animation-timing-function: var(--tk-e-in);
-    transform: rotateY(0deg);
-  }
-  50% {
-    animation-timing-function: var(--tk-e-out);
-    transform: rotateY(-90deg) scale(1.02);
-  }
-  to {
-    transform: rotateY(-180deg);
-  }
-}
-
-@keyframes ql-turn-leaf-b {
-  from {
-    animation-timing-function: var(--tk-e-in);
-    transform: rotateY(180deg);
-  }
-  50% {
-    animation-timing-function: var(--tk-e-out);
-    transform: rotateY(90deg) scale(1.02);
-  }
-  to {
-    transform: rotateY(0deg);
-  }
-}
-
-@keyframes ql-turn-leaf-c {
-  from {
-    animation-timing-function: var(--tk-e-in);
-    transform: rotateY(0deg);
-  }
-  50% {
-    animation-timing-function: var(--tk-e-out);
-    transform: rotateY(90deg) scale(1.02);
-  }
-  to {
-    transform: rotateY(180deg);
-  }
-}
-
-@keyframes ql-turn-leaf-d {
-  from {
-    animation-timing-function: var(--tk-e-in);
-    transform: rotateY(-180deg);
-  }
-  50% {
-    animation-timing-function: var(--tk-e-out);
-    transform: rotateY(-90deg) scale(1.02);
-  }
-  to {
-    transform: rotateY(0deg);
-  }
-}
-
-@keyframes ql-turn-shade-in {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 0.85;
-  }
-}
-
-@keyframes ql-turn-shade-out {
-  from {
-    opacity: 0.85;
-  }
-  to {
-    opacity: 0;
-  }
-}
-
-@keyframes ql-turn-shade-cover {
-  from {
-    opacity: 0;
-  }
-  50% {
-    opacity: 0.25;
-  }
-  to {
-    opacity: 0;
-  }
+.ql-book-leaf {
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
 
 .ql-book-sheet {
@@ -1326,11 +1106,6 @@ kbd {
   .ql-book-mark {
     animation: none;
     opacity: 1;
-  }
-
-  .ql-book-leaf,
-  .ql-book-leaf::after {
-    animation: none;
   }
 }
 
