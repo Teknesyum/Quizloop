@@ -1,0 +1,94 @@
+{
+  "url": "file:///C:/Users/Administrator/Desktop/Projeler/Quizloop/dist/win-unpacked/resources/app.asar/out/renderer/index.html",
+  "esik": 7,
+  "hedef": 24,
+  "checked": 26,
+  "pairs": [
+    {
+      "text": "Kurulu modüller ve bugünkü sıra",
+      "selector": "section.ql-screen > header.ql-screen-head.ql-transition-in > div > p.tk-hint",
+      "fg": "#ffffff",
+      "bg": "#ffffff",
+      "ratio": 1,
+      "uncertain": true
+    },
+    {
+      "text": "Kütüphane",
+      "selector": "section.ql-screen > header.ql-screen-head.ql-transition-in > div > h2.tk-h2",
+      "fg": "#00f3ff",
+      "bg": "#ffffff",
+      "ratio": 1.38,
+      "uncertain": true
+    },
+    {
+      "text": "Örnek modülü kur",
+      "selector": "section.ql-screen > header.ql-screen-head.ql-transition-in > div.ql-head-actions > button.tk-btn.tk-btn-ghost",
+      "fg": "#c67eff",
+      "bg": "#f7e9ff",
+      "ratio": 2.31,
+      "uncertain": true
+    },
+    {
+      "text": "v",
+      "selector": "article#ql-module-0 > footer.ql-card-foot > span.tk-mono.ql-card-version",
+      "fg": "#71717a",
+      "bg": "#151616",
+      "ratio": 3.77,
+      "uncertain": true
+    },
+    {
+      "text": "by Teknesyum",
+      "selector": "header.tk-titlebar.ql-titlebar > div.ql-titlebar-right > div.ql-signature.tk-no-drag > a",
+      "fg": "#c67eff",
+      "bg": "#353536",
+      "ratio": 4.54,
+      "uncertain": true
+    },
+    {
+      "text": "☕",
+      "selector": "header.tk-titlebar.ql-titlebar > div.ql-titlebar-right > div.ql-signature.tk-no-drag > a",
+      "fg": "#c67eff",
+      "bg": "#353536",
+      "ratio": 4.54,
+      "uncertain": true
+    },
+    {
+      "text": "Modülü kaldır",
+      "selector": "article#ql-module-0 > footer.ql-card-foot > div.ql-card-actions > button.tk-btn.tk-btn-ghost",
+      "fg": "#c67eff",
+      "bg": "#25172d",
+      "ratio": 6.31,
+      "uncertain": true
+    },
+    {
+      "text": "Sıfırla",
+      "selector": "article#ql-module-0 > footer.ql-card-foot > div.ql-card-actions > button.tk-btn.tk-btn-ghost",
+      "fg": "#c67eff",
+      "bg": "#25172d",
+      "ratio": 6.31,
+      "uncertain": true
+    },
+    {
+      "text": "Soru bankası",
+      "selector": "article#ql-module-0 > footer.ql-card-foot > div.ql-card-actions > button.tk-btn.tk-btn-ghost",
+      "fg": "#c67eff",
+      "bg": "#25172d",
+      "ratio": 6.31,
+      "uncertain": true
+    }
+  ],
+  "targets": [
+    {
+      "selector": "header.tk-titlebar.ql-titlebar > div.ql-titlebar-right > div.ql-signature.tk-no-drag > a",
+      "text": "by Teknesyum",
+      "width": 86.1,
+      "height": 21
+    },
+    {
+      "selector": "header.tk-titlebar.ql-titlebar > div.ql-titlebar-right > div.ql-signature.tk-no-drag > a",
+      "text": "☕",
+      "width": 19.2,
+      "height": 21
+    }
+  ]
+}

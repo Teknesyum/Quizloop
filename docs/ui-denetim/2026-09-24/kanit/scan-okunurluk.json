@@ -1,0 +1,57 @@
+[
+  {
+    "file": "src/renderer/src/styles/app.css",
+    "line": 125,
+    "rule": "okunurluk/pair-contrast",
+    "severity": "error",
+    "message": "bg var(--ql-tint-danger) (#ff00ea 12%) on fg var(--tk-danger-text) (#ff54eb) — 6.8:1, below 7:1",
+    "fix": null,
+    "fixed": false,
+    "ignored": false,
+    "reason": null
+  },
+  {
+    "file": "src/renderer/src/styles/app.css",
+    "line": 163,
+    "rule": "okunurluk/pair-contrast",
+    "severity": "error",
+    "message": "bg var(--ql-tint-purple) (#b026ff 12%) on fg var(--tk-purple-text) (#c67eff) — 6.9:1, below 7:1",
+    "fix": null,
+    "fixed": false,
+    "ignored": false,
+    "reason": null
+  },
+  {
+    "file": "src/renderer/src/styles/app.css",
+    "line": 669,
+    "rule": "okunurluk/pair-contrast",
+    "severity": "error",
+    "message": "bg var(--ql-tint-danger) (#ff00ea 12%) on fg var(--tk-danger-text) (#ff54eb) — 6.8:1, below 7:1",
+    "fix": null,
+    "fixed": false,
+    "ignored": false,
+    "reason": null
+  },
+  {
+    "file": "teknesyum-ui/css/theme.css",
+    "line": 334,
+    "rule": "okunurluk/pair-contrast",
+    "severity": "error",
+    "message": "bg var(--tk-danger) (#ff00ea) on fg #000 — 6.4:1, below 7:1",
+    "fix": null,
+    "fixed": false,
+    "ignored": false,
+    "reason": null
+  },
+  {
+    "file": "teknesyum-ui/react/theme.css",
+    "line": 334,
+    "rule": "okunurluk/pair-contrast",
+    "severity": "error",
+    "message": "bg var(--tk-danger) (#ff00ea) on fg #000 — 6.4:1, below 7:1",
+    "fix": null,
+    "fixed": false,
+    "ignored": false,
+    "reason": null
+  }
+]

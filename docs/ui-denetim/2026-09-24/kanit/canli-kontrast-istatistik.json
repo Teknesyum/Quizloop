@@ -1,0 +1,94 @@
+{
+  "url": "file:///C:/Users/Administrator/Desktop/Projeler/Quizloop/dist/win-unpacked/resources/app.asar/out/renderer/index.html",
+  "esik": 7,
+  "hedef": 24,
+  "checked": 43,
+  "pairs": [
+    {
+      "text": "Tüm modüller, ham tekrar kaydından",
+      "selector": "section.ql-screen > header.ql-screen-head.ql-transition-in > div > p.tk-hint",
+      "fg": "#ffffff",
+      "bg": "#ffffff",
+      "ratio": 1,
+      "uncertain": true
+    },
+    {
+      "text": "İstatistik",
+      "selector": "section.ql-screen > header.ql-screen-head.ql-transition-in > div > h2.tk-h2",
+      "fg": "#00f3ff",
+      "bg": "#ffffff",
+      "ratio": 1.38,
+      "uncertain": true
+    },
+    {
+      "text": "0 günlük seri",
+      "selector": "main.ql-main > section.ql-screen > header.ql-screen-head.ql-transition-in > span.tk-label",
+      "fg": "#00f3ff",
+      "bg": "#ffffff",
+      "ratio": 1.38,
+      "uncertain": true
+    },
+    {
+      "text": "by Teknesyum",
+      "selector": "header.tk-titlebar.ql-titlebar > div.ql-titlebar-right > div.ql-signature.tk-no-drag > a",
+      "fg": "#c67eff",
+      "bg": "#353536",
+      "ratio": 4.54,
+      "uncertain": true
+    },
+    {
+      "text": "☕",
+      "selector": "header.tk-titlebar.ql-titlebar > div.ql-titlebar-right > div.ql-signature.tk-no-drag > a",
+      "fg": "#c67eff",
+      "bg": "#353536",
+      "ratio": 4.54,
+      "uncertain": true
+    },
+    {
+      "text": "3030",
+      "selector": "div.tk-panel.ql-transition-in > ul.ql-legend > li > span.tk-mono",
+      "fg": "#ff54eb",
+      "bg": "#151616",
+      "ratio": 6.69,
+      "uncertain": true
+    },
+    {
+      "text": "0",
+      "selector": "div.tk-panel.ql-transition-in > ul.ql-legend > li > span.tk-mono",
+      "fg": "#ff54eb",
+      "bg": "#151616",
+      "ratio": 6.69,
+      "uncertain": true
+    },
+    {
+      "text": "0",
+      "selector": "div.tk-panel.ql-transition-in > ul.ql-legend > li > span.tk-mono",
+      "fg": "#ff54eb",
+      "bg": "#151616",
+      "ratio": 6.69,
+      "uncertain": true
+    },
+    {
+      "text": "0",
+      "selector": "div.tk-panel.ql-transition-in > ul.ql-legend > li > span.tk-mono",
+      "fg": "#ff54eb",
+      "bg": "#151616",
+      "ratio": 6.69,
+      "uncertain": true
+    }
+  ],
+  "targets": [
+    {
+      "selector": "header.tk-titlebar.ql-titlebar > div.ql-titlebar-right > div.ql-signature.tk-no-drag > a",
+      "text": "by Teknesyum",
+      "width": 86.1,
+      "height": 21
+    },
+    {
+      "selector": "header.tk-titlebar.ql-titlebar > div.ql-titlebar-right > div.ql-signature.tk-no-drag > a",
+      "text": "☕",
+      "width": 19.2,
+      "height": 21
+    }
+  ]
+}

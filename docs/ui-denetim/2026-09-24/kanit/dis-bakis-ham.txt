@@ -1,0 +1,28 @@
+İşi yapmamış alt ajana yalnız beş ekran görüntüsü verildi (kutuphane-100-once.png,
+istatistik-100-once.png, ayarlar-100-once.png, ayarlar-125-once.png, ayarlar-150-once.png).
+Ham dönüşü:
+
+**Bulgular**
+
+- `screen-kutuphane.png` — Kütüphane sekmesi: kesik yazı, taşma veya düşük kontrastlı buton
+  yok. "Oturuma başla" (camgöbeği) birincil eylem net ayırt ediliyor.
+- `screen-statistik.png` — İstatistik sekmesi: kart başlıkları, ısı haritası (Pzt–Paz) ve
+  "Kartların durumu" çubuğu düzgün hizalı, taşma yok.
+- `screen-Ayarlar.png` — Ayarlar sekmesi (%100): tüm alan başlıkları, input kutuları ve
+  buton grupları (Yazı akışı hızı, Yazı boyutu) net; "Hızlı" ve "100%" seçili durumları
+  camgöbeği dolgu ile ayırt ediliyor.
+- `screen-kutuphane-125.png` (Ayarlar, %125): içerik %100 sürümüyle aynı yerleşimde,
+  kayma/örtüşme yok; "Taşıma paketi" bölümü de görünür durumda.
+- `screen-kutuphane-150.png` (Ayarlar, %150, 3072x1680): %125'e göre aynı düzen korunuyor,
+  hiçbir öğe kesilmiyor veya üst üste binmiyor.
+
+Ölçek artışında (%100 → %125 → %150) düzen bozulması gözlenmedi; sol menü, kart sınırları
+ve buton grupları tüm ölçeklerde tutarlı kaldı.
+
+Genel değerlendirme: incelenen 5 görüntüde kesik/taşan yazı, düşük kontrastlı buton, taşan
+öğe veya belirsiz birincil eylem tespit edilmedi — sorun yok.
+
+Not: %125/%150 görüntüleri gerçekte Ayarlar ekranının CDP deviceScaleFactor ile ölçeklenmiş
+hâlidir (dosya adındaki "kutuphane" yalnız betik değişken adından kalmıştır); ajana
+Ayarlar ekranı olarak doğru şekilde tarif edildi ve ajan da içeriği Ayarlar olarak
+tanımladı.

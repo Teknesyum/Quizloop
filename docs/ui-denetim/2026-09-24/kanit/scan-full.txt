@@ -1,0 +1,8 @@
+src/main/update.ts:0  guncelleme/panel-yok  this project updates itself but carries no installer window: run scaffold.js kur <Name>.
+src/renderer/src/components/Solution.tsx:1  core/list-without-motion  list render, no position animation
+src/renderer/src/styles/app.css:125  okunurluk/pair-contrast  bg var(--ql-tint-danger) (#ff00ea 12%) on fg var(--tk-danger-text) (#ff54eb) — 6.8:1, below 7:1
+src/renderer/src/styles/app.css:163  okunurluk/pair-contrast  bg var(--ql-tint-purple) (#b026ff 12%) on fg var(--tk-purple-text) (#c67eff) — 6.9:1, below 7:1
+src/renderer/src/styles/app.css:669  okunurluk/pair-contrast  bg var(--ql-tint-danger) (#ff00ea 12%) on fg var(--tk-danger-text) (#ff54eb) — 6.8:1, below 7:1
+teknesyum-ui/css/theme.css:334  okunurluk/pair-contrast  bg var(--tk-danger) (#ff00ea) on fg #000 — 6.4:1, below 7:1
+teknesyum-ui/react/theme.css:334  okunurluk/pair-contrast  bg var(--tk-danger) (#ff00ea) on fg #000 — 6.4:1, below 7:1
+177 files · 7 open · 0 fixed · 6 error(s) · 0 ignored

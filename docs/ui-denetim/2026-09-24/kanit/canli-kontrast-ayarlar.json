@@ -1,0 +1,38 @@
+{
+  "url": "file:///C:/Users/Administrator/Desktop/Projeler/Quizloop/dist/win-unpacked/resources/app.asar/out/renderer/index.html",
+  "esik": 7,
+  "hedef": 24,
+  "checked": 9,
+  "pairs": [
+    {
+      "text": "by Teknesyum",
+      "selector": "header.tk-titlebar.ql-titlebar > div.ql-titlebar-right > div.ql-signature.tk-no-drag > a",
+      "fg": "#c67eff",
+      "bg": "#353536",
+      "ratio": 4.54,
+      "uncertain": true
+    },
+    {
+      "text": "☕",
+      "selector": "header.tk-titlebar.ql-titlebar > div.ql-titlebar-right > div.ql-signature.tk-no-drag > a",
+      "fg": "#c67eff",
+      "bg": "#353536",
+      "ratio": 4.54,
+      "uncertain": true
+    }
+  ],
+  "targets": [
+    {
+      "selector": "header.tk-titlebar.ql-titlebar > div.ql-titlebar-right > div.ql-signature.tk-no-drag > a",
+      "text": "by Teknesyum",
+      "width": 86.1,
+      "height": 21
+    },
+    {
+      "selector": "header.tk-titlebar.ql-titlebar > div.ql-titlebar-right > div.ql-signature.tk-no-drag > a",
+      "text": "☕",
+      "width": 19.2,
+      "height": 21
+    }
+  ]
+}
