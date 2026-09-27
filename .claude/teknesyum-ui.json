@@ -24,7 +24,7 @@
   },
   "note": "",
   "installedAt": "2026-09-08T16:47:04.919Z",
-  "duzen": "52e0c6b7355cba20",
+  "duzen": "a0eaf97ec84216aa",
   "ignore": [
     {
       "rule": "guncelleme/panel-yok",
@@ -42,9 +42,15 @@
       "reason": "Tek .map çağrısı NAV dizisini TitleBar sekme verisine çeviriyor (const TABS); ekrana liste basılmıyor. Sekmeleri TitleBar çiziyor ve hareketi titlebar.css taşıyor."
     }
   ],
-  "plugin": "0.20.0",
+  "plugin": "0.26.0",
   "denetim": {
-    "tarih": "2026-09-27T04:34:01.763Z",
-    "duzen": "52e0c6b7355cba20"
+    "tarih": "2026-09-27T14:50:31.466Z",
+    "duzen": "a0eaf97ec84216aa"
+  },
+  "uc": {
+    "surum": "0.20.0",
+    "duzen": "52e0c6b7355cba20",
+    "commit": "4f2f08b9c6d9b1099f81ddd0f34390b729626a85",
+    "tarih": "2026-09-27"
   }
 }

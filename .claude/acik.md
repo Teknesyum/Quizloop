@@ -1,12 +1,2 @@
-- [x] uc çalıştır: UI hiç → 0.20.0 (`node "C:\Users\Administrator\.claude\plugins\cache\teknesyum\teknesyum-ui\0.20.0\scripts\uc.js"` çıktısını izle, bitince `--bitti`) — 2026-09-27 06:47 — teknesyum-ui
-- [x] Düzeni tazele: setup.js --apply --template benim, 0 fark — 2026-09-27 06:59 — jobs.md
-- [x] ui-duzeni kitabını oku — 2026-09-27 06:59 — jobs.md
-- [x] Ekran envanteri + labels.tr/en.json bağlantısı — 2026-09-27 06:59 — jobs.md
-- [x] scan.js 0.20.0 → 0 hata — 2026-09-27 06:59 — jobs.md
-- [x] Canlı kontrast + axe, her ekran, her hâl, 3 ölçek — 2026-09-27 06:59 — jobs.md
-- [x] Önizleme ↔ uygulama yan yana görüntü — 2026-09-27 06:59 — jobs.md
-- [x] Dış göz — 2026-09-27 06:59 — jobs.md
-- [x] Artık ölçümü (artik.js) — 2026-09-27 06:59 — jobs.md
-- [x] Simge temayla uyumlu + kısayollar — 2026-09-27 06:59 — jobs.md
-- [x] esle.js --denetle 0 fark — 2026-09-27 06:59 — jobs.md
-- [x] Rapor, beş denetim, commit, push, uc.js --bitti — 2026-09-27 06:59 — jobs.md
+- [ ] Simge onayı: program simgesi (4f2f08b) sahibin onayı alınmadan değişti. Eski ve yeni simgenin önizlemesini pencere, görev çubuğu ve masaüstü boyutunda yan yana göster, açıkça onay iste. Onay gelene kadar simgeyi exe'ye, yükleyiciye, kısayola koyma ve yayınlama; geri bildirime göre tasarıma devam et. — 2026-09-27 11:38 — sahibin onayı bekleniyor; v0.2.0 eski simgeyle çıktı, yeni simge yalnız scripts/icon.mjs ile üretilebilir halde
+- [x] uc çalıştır: UI 0.20.0 → 0.26.0 (`node "C:\Users\Administrator\.claude\plugins\cache\teknesyum\teknesyum-ui\0.26.0\scripts\uc.js"` çıktısını izle, bitince `--bitti`) — 2026-09-27 17:46 — teknesyum-ui
