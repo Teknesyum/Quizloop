@@ -1,12 +1,12 @@
-- [ ] uc çalıştır: UI hiç → 0.20.0 (`node "C:\Users\Administrator\.claude\plugins\cache\teknesyum\teknesyum-ui\0.20.0\scripts\uc.js"` çıktısını izle, bitince `--bitti`) — 2026-09-27 06:47 — teknesyum-ui
-- [ ] Düzeni tazele: setup.js --apply --template benim, 0 fark — 2026-09-27 06:59 — jobs.md
-- [ ] ui-duzeni kitabını oku — 2026-09-27 06:59 — jobs.md
-- [ ] Ekran envanteri + labels.tr/en.json bağlantısı — 2026-09-27 06:59 — jobs.md
-- [ ] scan.js 0.20.0 → 0 hata — 2026-09-27 06:59 — jobs.md
-- [ ] Canlı kontrast + axe, her ekran, her hâl, 3 ölçek — 2026-09-27 06:59 — jobs.md
-- [ ] Önizleme ↔ uygulama yan yana görüntü — 2026-09-27 06:59 — jobs.md
-- [ ] Dış göz — 2026-09-27 06:59 — jobs.md
-- [ ] Artık ölçümü (artik.js) — 2026-09-27 06:59 — jobs.md
-- [ ] Simge temayla uyumlu + kısayollar — 2026-09-27 06:59 — jobs.md
-- [ ] esle.js --denetle 0 fark — 2026-09-27 06:59 — jobs.md
-- [ ] Rapor, beş denetim, commit, push, uc.js --bitti — 2026-09-27 06:59 — jobs.md
+- [x] uc çalıştır: UI hiç → 0.20.0 (`node "C:\Users\Administrator\.claude\plugins\cache\teknesyum\teknesyum-ui\0.20.0\scripts\uc.js"` çıktısını izle, bitince `--bitti`) — 2026-09-27 06:47 — teknesyum-ui
+- [x] Düzeni tazele: setup.js --apply --template benim, 0 fark — 2026-09-27 06:59 — jobs.md
+- [x] ui-duzeni kitabını oku — 2026-09-27 06:59 — jobs.md
+- [x] Ekran envanteri + labels.tr/en.json bağlantısı — 2026-09-27 06:59 — jobs.md
+- [x] scan.js 0.20.0 → 0 hata — 2026-09-27 06:59 — jobs.md
+- [x] Canlı kontrast + axe, her ekran, her hâl, 3 ölçek — 2026-09-27 06:59 — jobs.md
+- [x] Önizleme ↔ uygulama yan yana görüntü — 2026-09-27 06:59 — jobs.md
+- [x] Dış göz — 2026-09-27 06:59 — jobs.md
+- [x] Artık ölçümü (artik.js) — 2026-09-27 06:59 — jobs.md
+- [x] Simge temayla uyumlu + kısayollar — 2026-09-27 06:59 — jobs.md
+- [x] esle.js --denetle 0 fark — 2026-09-27 06:59 — jobs.md
+- [x] Rapor, beş denetim, commit, push, uc.js --bitti — 2026-09-27 06:59 — jobs.md
