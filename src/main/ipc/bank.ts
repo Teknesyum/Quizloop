@@ -17,12 +17,12 @@ function statusOf(c: { state: number; retired_at: string | null } | undefined): 
 }
 
 function plain(md: string): string {
-  return md
+  const s = md
     .replace(/!\[[^\]]*\]\([^)]*\)/g, '')
     .replace(/[*_`#>$]/g, '')
     .replace(/\s+/g, ' ')
     .trim()
-    .slice(0, 220)
+  return s.length > 220 ? s.slice(0, 219).trimEnd() + '…' : s
 }
 
 export function registerBank(deps: {

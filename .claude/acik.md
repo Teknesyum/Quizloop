@@ -1,10 +1,12 @@
-- [x] Eski token adlarını benim adlarına taşı (app.css, Stats.tsx) — 2026-09-27 01:51 — jobs.md
-- [x] scan.js 0.11.0 → 0 hata (güncelleme paneli dahil) — 2026-09-27 01:51 — jobs.md
-- [x] Ekran envanteri — 2026-09-27 01:51 — jobs.md
-- [x] Önce görüntüleri 100/125/150 — 2026-09-27 01:51 — jobs.md
-- [x] Canlı kontrast + axe her hâlde — 2026-09-27 01:51 — jobs.md
-- [x] Dış gözden geçirme — 2026-09-27 01:51 — jobs.md
-- [x] Düzelt, yeniden ölç, sonra görüntüleri — 2026-09-27 01:51 — jobs.md
-- [x] Raf kitapları: depo, guncelleme-paneli, kurulum-paneli, lisans, readme-protokolu, ui, ui-duzeni — 2026-09-27 01:51 — jobs.md
-- [x] Rapor docs/ui-denetim/2026-09-27.md — 2026-09-27 01:51 — jobs.md
-- [x] Beş denetim, commit, push — 2026-09-27 01:51 — jobs.md
+- [ ] uc çalıştır: UI hiç → 0.20.0 (`node "C:\Users\Administrator\.claude\plugins\cache\teknesyum\teknesyum-ui\0.20.0\scripts\uc.js"` çıktısını izle, bitince `--bitti`) — 2026-09-27 06:47 — teknesyum-ui
+- [ ] Düzeni tazele: setup.js --apply --template benim, 0 fark — 2026-09-27 06:59 — jobs.md
+- [ ] ui-duzeni kitabını oku — 2026-09-27 06:59 — jobs.md
+- [ ] Ekran envanteri + labels.tr/en.json bağlantısı — 2026-09-27 06:59 — jobs.md
+- [ ] scan.js 0.20.0 → 0 hata — 2026-09-27 06:59 — jobs.md
+- [ ] Canlı kontrast + axe, her ekran, her hâl, 3 ölçek — 2026-09-27 06:59 — jobs.md
+- [ ] Önizleme ↔ uygulama yan yana görüntü — 2026-09-27 06:59 — jobs.md
+- [ ] Dış göz — 2026-09-27 06:59 — jobs.md
+- [ ] Artık ölçümü (artik.js) — 2026-09-27 06:59 — jobs.md
+- [ ] Simge temayla uyumlu + kısayollar — 2026-09-27 06:59 — jobs.md
+- [ ] esle.js --denetle 0 fark — 2026-09-27 06:59 — jobs.md
+- [ ] Rapor, beş denetim, commit, push, uc.js --bitti — 2026-09-27 06:59 — jobs.md

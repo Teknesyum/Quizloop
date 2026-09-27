@@ -485,7 +485,12 @@ export function Session({
       </p>
 
       {ending && (
-        <Confirm text={t('session.endConfirm')} onNo={() => setEnding(false)} onYes={finish} />
+        <Confirm
+          title={t('session.endConfirmTitle')}
+          text={t('session.endConfirm')}
+          onNo={() => setEnding(false)}
+          onYes={finish}
+        />
       )}
 
       {reading === q.questionId && solved?.source && (

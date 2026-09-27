@@ -561,6 +561,7 @@ kbd {
 .ql-source-line {
   display: inline-flex;
   align-items: baseline;
+  gap: var(--tk-sp-1);
   align-self: flex-end;
   font-style: italic;
   color: var(--ql-paper-stamp);
@@ -594,9 +595,15 @@ kbd {
 }
 
 .ql-grade {
+  position: sticky;
+  bottom: calc(-1 * var(--tk-sp-5));
+  border-top: var(--tk-border-w) solid var(--tk-border);
+  z-index: 1;
   display: flex;
   flex-direction: column;
   gap: var(--tk-sp-3);
+  padding-block: var(--tk-sp-3);
+  background: var(--tk-surface);
 }
 
 .ql-grade-row {
@@ -607,6 +614,7 @@ kbd {
 
 .ql-grade-row .tk-btn {
   flex-direction: column;
+  padding-block: var(--tk-sp-2);
   gap: var(--tk-sp-1);
 }
 
@@ -651,7 +659,7 @@ kbd {
   white-space: nowrap;
 }
 
-.ql-shell:has(.ql-session) .tk-toast-stack {
+.ql-shell:has(.ql-keys) .tk-toast-stack {
   bottom: calc(var(--ql-keys-h) + var(--tk-sp-4));
   z-index: 3;
 }
@@ -1293,6 +1301,7 @@ kbd {
   border-radius: var(--tk-r);
   background: var(--ql-tint-purple);
   overflow: hidden;
+  box-shadow: inset 0 0 0 var(--tk-border-w) var(--tk-border-strong);
 }
 
 .ql-progress-seen,

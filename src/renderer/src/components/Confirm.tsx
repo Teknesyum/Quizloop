@@ -1,7 +1,8 @@
-import { useEffect } from 'react'
+import { useEffect, useId } from 'react'
 import { t } from '@renderer/i18n'
 
 interface Props {
+  title: string
   text: string
   danger?: boolean
   yes?: string
@@ -9,7 +10,8 @@ interface Props {
   onNo(): void
 }
 
-export function Confirm({ text, danger, yes, onYes, onNo }: Props): React.JSX.Element {
+export function Confirm({ title, text, danger, yes, onYes, onNo }: Props): React.JSX.Element {
+  const id = useId()
   useEffect(() => {
     const h = (e: KeyboardEvent): void => {
       if (e.code === 'Escape') onNo()
@@ -24,8 +26,11 @@ export function Confirm({ text, danger, yes, onYes, onNo }: Props): React.JSX.El
         className="tk-panel tk-modal ql-transition-in"
         role="dialog"
         aria-modal="true"
-        aria-label={text}
+        aria-labelledby={id}
       >
+        <p className="tk-h3" id={id}>
+          {title}
+        </p>
         <p className="tk-modal-body">{text}</p>
         <div className="tk-modal-actions">
           <button type="button" className="tk-btn tk-btn-ghost" onClick={onNo} autoFocus>

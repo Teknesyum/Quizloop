@@ -205,3 +205,200 @@ Tur 6 ham yanıt (kapak maskesi yalnız bölüm kartlarına uygulandıktan sonra
 Başlıkla ilgisi olmayan bir kalıntı var: 150%'de kartların alt kısmında, "N soru" ve "Oturuma başla" satırının arkasında çok soluk küçük metin satırları hâlâ seçiliyor (örneğin kart 1, 2, 5, 7 ve 8). 100%'de aynı bölgede yalnız soluk noktalar görünüyor. Okunurluğu bozmuyor. [küçük]
 
 Yeni ciddi sorun yok.
+
+
+===== Tur 7 (0.20.0, *-tur2.png + yanyana/ + build/icon.png) =====
+
+Tur 7 bitti. Ana bulgular:
+
+- **Değerlendirme düğmeleri alt çubuğa basıyor:** oturum-cozum ekranında üç ölçekte de düğmeler alt tuş çubuğuna yapışık, kartın alt kenarı görünmüyor.
+- **Uzun banka satırları ortadan kesiliyor:** Satır sonunda "…" yok, "unsurlar a" gibi yarım kalıyor.
+- **Kitap sayfası uyuşmuyor:** 100 ve 125'te modal başlığındaki sayfa aralığı, kaynaktaki sayfayla aynı değil. 150'de ikisi de "1–1", orada sorun yok.
+- **"sayfaN–N" boşluksuz:** Üç ölçekte de "sayfa" ile sayı bitişik.
+- **Düğmeler dar:** 100%'de yazı çerçeveye değiyor, en belirgin sorun.
+
+Her görüntünün bulgusu aşağıda.
+
+**%100**
+- **kutuphane:** "Örnek modülü kur" ve "Klasör seç" düğmelerinde yazı çerçeveye değiyor.
+- **bolumler:**
+  - Üst düğmeler dar.
+  - 18. kart görüntü kenarında kesiliyor (kaydırma).
+  - Kart altlarında soluk noktalar duruyor.
+- **oturum-soru:** "Cevabı biliyorum" ve "Şıkları göster" düğmeleri dar.
+- **oturum-siklar:** bulgu yok.
+- **oturum-cozum:**
+  - Kaydırılan içerik üst çubuğun altına giriyor ("gelişiyor." yarım görünüyor).
+  - Değerlendirme düğmeleri alt çubuğa yapışık, kartın alt kenarı görünmüyor.
+  - "sayfa5–5" boşluksuz.
+- **oturum-cozum-alt:** "sayfa5–5" boşluksuz.
+- **kitap:**
+  - Başlıkta "sayfa 4–5", kaynakta "sayfa5–5" yazıyor; uyuşmuyor.
+  - "Kitabı seç" düğmesi dar.
+- **onay:** "Vazgeç" ve "Onayla" dar.
+- **ozet:** Alt düğmeler dar.
+- **banka:**
+  - Uzun satır "…" olmadan kesiliyor.
+  - Arama kutusunda yer tutucu yazı yok.
+  - "Bayrakları dışa aktar" gri (pasif).
+- **bildirim:** Bildirim kutusu alt çubuğun hemen üstüne yapışık.
+- **istatistik:**
+  - Altı sayı kutusu tam genişliği doldurmuyor.
+  - Isı haritası yalnız solda duruyor.
+- **ayarlar:** Güncellemeler bölümü kenarda kesiliyor (kaydırma).
+- **onay-kaldir:** Düğmeler dar.
+- **bos-kutuphane:** bulgu yok.
+- **bos-istatistik:** Sayı kutuları tam genişliği doldurmuyor.
+
+**%125**
+- **kutuphane:** Üst düğmeler hafif dar.
+- **bolumler:** 4. sıra kenarda kesiliyor (kaydırma).
+- **oturum-soru, oturum-siklar:** bulgu yok.
+- **oturum-cozum:**
+  - Değerlendirme düğmeleri alt çubuğa yapışık, kartın kenarı görünmüyor.
+  - "sayfa6–6" boşluksuz.
+- **oturum-cozum-alt:** "sayfa6–6" boşluksuz.
+- **kitap:** Başlıkta "sayfa 6–7", kaynakta "sayfa6–6"; uyuşmuyor.
+- **onay, ozet:** bulgu yok.
+- **banka:**
+  - Son satırın alt satırı liste kutusunda kesiliyor.
+  - Uzun satır "…" olmadan kesiliyor.
+- **bildirim:** Bildirim kutusu alt çubuğa değiyor.
+- **istatistik:** "Modül ilerlemesi" kenarda kesiliyor (kaydırma).
+- **ayarlar:** Taşıma paketi düğmeleri görüntü kenarında (kaydırma).
+- **onay-kaldir, bos-kutuphane, bos-istatistik:** bulgu yok.
+
+**%150**
+- **kutuphane:** bulgu yok.
+- **bolumler:**
+  - Kartların alt düğme sırasının arkasında soluk küçük yazı hâlâ var.
+  - 3. sıra kenarda kesiliyor (kaydırma).
+- **oturum-soru:** bulgu yok.
+- **oturum-siklar:**
+  - Dosya adı şıklar ekranını söylüyor ama görüntü çözüm ekranı.
+  - Değerlendirme düğmeleri alt çubuğun altında kalıyor, görünmüyor. Birincil eylem görünmüyor.
+- **oturum-cozum:**
+  - Değerlendirme düğmeleri alt çubuğa yapışık.
+  - Düğme yazısı üst ve alt kenara değiyor.
+  - "sayfa1–1" boşluksuz.
+- **oturum-cozum-alt:**
+  - Değerlendirme düğmelerinde yazı dar.
+  - "sayfa1–1" boşluksuz.
+- **kitap:** Başlık ve kaynak ikisi de "1–1", uyuşuyor. bulgu yok.
+- **onay:** bulgu yok.
+- **ozet:** Düğmeler dar.
+- **banka:**
+  - Uzun satır "…" olmadan kesiliyor ("unsurlar a").
+  - Arama kutusunda yer tutucu yazı yok.
+- **bildirim:** Bildirim kutusu liste kutusunun sağ alt köşesine biniyor ve alt çubuğa değiyor.
+- **istatistik:**
+  - Isı haritası yalnız solda duruyor.
+  - "Kartların durumu" kenarda kesiliyor (kaydırma).
+- **ayarlar:** bulgu yok.
+- **onay-kaldir:** Arkadaki kartın sol üst köşesinde soluk küçük bir kare var.
+- **bos-kutuphane:** bulgu yok.
+- **bos-istatistik:** Isı haritası yalnız solda duruyor.
+
+**Yanyana (solda önizleme, sağda uygulama)**
+- **ustcubuk--kutuphane:** bulgu yok. Önizlemedeki eşitleme ve güncelleme rozetleri uygulamada yok; bu durum bağlıyor, göze batmıyor.
+- **modal--onay:** Önizlemedeki pencerenin bir başlığı var ("Kayıt silinsin mi?"). Uygulamadaki onay penceresi başlıksız, yalnız bir gövde satırı.
+- **bildirimler--bildirim:**
+  - Önizlemede bildirimin renkli bir başlığı ve gövdesi var; uygulamada tek satır.
+  - Uygulamada bildirim alt çubuğa yapışık.
+- **formlar--ayarlar:** bulgu yok.
+- **dugmeler--oturum-siklar:** bulgu yok.
+- **ilerleme--istatistik:**
+  - Önizlemede çubuğun yanında yüzde yazıyor, uygulamada yok.
+  - Uygulamadaki modül ilerleme çubuğu zeminde neredeyse görünmüyor.
+- **tipografi--oturum-cozum:**
+  - İçerik üst çubuğun altına giriyor.
+  - Değerlendirme düğmeleri alt çubuğa yapışık.
+- **arka--bos-kutuphane:** bulgu yok.
+- **rozetler--ozet:** bulgu yok.
+- **kaydirma--kitap:** Kitap başlığı ile kaynak uyuşmuyor ("4–5" / "5–5").
+
+**build\icon.png**
+- Açık zeminde net duruyor. Koyu görev çubuğunda koyu kare zeminle kaynaşıyor, yalnız mavi halka seçiliyor.
+- Ok ucu halkanın ucuna oturmuyor: arada küçük bir kayma var. Ucun tabanı yay ucuyla hizalı değil.
+
+Yok
+
+
+===== Tur 8 (düzeltmelerden sonra) =====
+
+Tur 8: çözüm ekranında 125%'te bir gerileme var. Kitap penceresindeki sayfa uyuşmazlığı ve dar düğmeler de sürüyor. Onay penceresi, bildirim, banka satır sonları, "sayfa" yazısı ve simge düzelmiş.
+
+**Çözüm ekranı, değerlendirme düğmeleri**
+- **oturum-cozum-100:** Düğmeler artık aşağıda sabit duruyor ve alt çubukla arasında boşluk var. Arkadan kayan "Lange'de gör" düğmesi, düğme alanının üst kenarında keskin biçimde kesiliyor.
+- **oturum-cozum-125 (gerileme):** Sabit düğme alanı ekranın en altına oturmuyor. Altında ile alt çubuk arasında Kaynak kutusunun yazısı ve "sayfa 4–4" satırı görünüyor. "Ne kadar anladın?" başlığı çözüm metnine yapışık.
+- **oturum-cozum-150:** Düğmeler görünüyor ve alt çubuğun üstünde. "Lange'de gör" düğmesi yarım kesiliyor.
+- **oturum-cozum-alt-100:** bulgu yok.
+- **oturum-siklar-150:** Görüntü artık gerçekten şıklar ekranı. bulgu yok.
+
+**Onay penceresi**
+- **onay-100:** Başlık eklenmiş. "Vazgeç" ve "Onayla" hâlâ dar, yazı çerçeveye değiyor.
+- **onay-125:** bulgu yok.
+- **onay-150:** Başlık ile gövde satırı arasında boşluk çok az.
+- **onay-kaldir-100:** Başlık eklenmiş. Düğmeler dar.
+
+**Bildirim**
+- **bildirim-100:** bulgu yok. Başlık ("Tamamlandı") ve gövde var, alt çubuktan ayrı duruyor.
+- **bildirim-125:**
+  - Bildirim düzgün.
+  - Listenin son satırının ("Aspirasyon…") alt satırı liste kutusunda kesiliyor.
+- **bildirim-150:** Bildirim, liste kutusunun sağ alt köşesine ve son satırın üstüne biniyor.
+
+**Banka satır sonları**
+- **banka-100:** "…" eklenmiş ("unsurlar…", "heyecanı a…"). Arama kutusunda yer tutucu yazı hâlâ yok.
+- **banka-125:**
+  - "…" var.
+  - Son satırın alt satırı kesik.
+  - Yer tutucu yazı yok.
+
+**Kaynak satırındaki "sayfa"**
+- **Çözüm ekranları:** Artık "sayfa 6–6" ve "sayfa 4–4" biçiminde, boşluk var.
+- **kitap-100:** Başlık "6–7", kaynak "6–6"; hâlâ uyuşmuyor.
+- **kitap-125:** Başlık "4–5", kaynak "4–4"; hâlâ uyuşmuyor.
+
+**İstatistik ilerleme çubuğu**
+- **istatistik-100:**
+  - Modül ilerleme çubuğunun izi artık görünüyor, sağında "0 görüldü, 0 emekli, 3030 soru" yazıyor.
+  - Altı sayı kutusu hâlâ tam genişliği doldurmuyor (yaklaşık 1610'da bitiyor, paneller 1855'te).
+- **istatistik-125:**
+  - Sayı kutuları tam genişlikte.
+  - Isı haritası solda yarım genişlikte duruyor.
+
+**Yanyana**
+- **modal--onay:** Onay penceresinin artık bir başlığı var, önizlemeyle uyumlu. Kalan fark düğme iç boşluğu.
+- **bildirimler--bildirim:** Başlık, gövde ve renkli kenar önizlemeyle uyumlu. bulgu yok.
+- **ilerleme--istatistik:** Önizlemedeki yüzde yazısının yerine sağda sayılar var; çubuğun dolgusu 0 olduğu için görünmüyor. Göze batmıyor.
+- **tipografi--oturum-cozum:** "Lange'de gör" düğmesi sabit düğme alanının altında kesik.
+- **kaydirma--kitap:** Kitap başlığı ile kaynak uyuşmuyor ("6–7" / "6–6").
+
+**build\icon.png**
+- Mavi dış çerçeve eklenmiş, simge koyu zeminde artık seçiliyor.
+- Ok ucu hâlâ halkanın ucuna tam oturmuyor.
+
+Bu turda yeniden açmadıklarım: kutuphane, bolumler, oturum-soru, ozet, ayarlar, bos-*, oturum-cozum-alt-125/150, kitap-150, banka-150, istatistik-150, bos-istatistik ve kalan beş yanyana görüntü. Bunlar için tur 7 bulguları geçerli sayılmalı.
+
+Yok
+
+
+=== Tur 9 ===
+Tur 9: 125%'teki gerileme düzelmiş, değerlendirme satırının altında artık Kaynak yazısı yok. "Lange'de gör" düğmesi üç ekranda da tam görünüyor. 150%'te ise sert kesilme başka bir öğeye geçmiş.
+
+- **oturum-cozum-100-tur2:** düzeldi.
+  - "Lange'de gör" tam görünüyor.
+  - "Ne kadar anladın?" satırının üstünde ayırıcı bir çizgi var.
+  - Düğmeler alt çubuğun üstünde duruyor.
+- **oturum-cozum-125-tur2:** düzeldi.
+  - Değerlendirme satırının altında Kaynak yazısı görünmüyor.
+  - "Lange'de gör" tam görünüyor, "sayfa 6–6" yazısı temiz.
+- **oturum-cozum-150-tur2:** sürüyor, kesilen öğe değişti.
+  - Artık "Yanlış" kutusunun üst kenarı, değerlendirme alanının üst sınırında sert kesiliyor: gölge ve geçiş yok, yalnız pembe bir çizgi kalıyor.
+  - Yeni sorun: en üstteki "1 / 10 · Kolay" satırı ve üst sağdaki düğmeler (Bölümler, Soruyu işaretle, Oturumu bitir) üst çubuğun altında yarım kesik görünüyor.
+- **oturum-cozum-alt-100-tur2:** düzeldi, bulgu yok.
+- **oturum-cozum-alt-125-tur2:** düzeldi, bulgu yok.
+- **oturum-cozum-alt-150-tur2:** düzeldi, bulgu yok.
+
+Yok

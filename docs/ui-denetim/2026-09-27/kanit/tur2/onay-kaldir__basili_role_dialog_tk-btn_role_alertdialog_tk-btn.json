@@ -1,0 +1,14 @@
+{
+ "ekran": "onay-kaldir",
+ "hal": "basili [role=\"dialog\"] .tk-btn, [role=\"alertdialog\"] .tk-btn",
+ "olcek": "1.5",
+ "denetim": {
+  "url": "file:///C:/Users/Administrator/Desktop/Projeler/Quizloop/dist/win-unpacked/resources/app.asar/out/renderer/index.html",
+  "esik": 7,
+  "hedef": 24,
+  "checked": 29,
+  "pairs": [],
+  "targets": []
+ },
+ "axe": []
+}

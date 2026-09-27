@@ -1,0 +1,13 @@
+  702.4 MB  node_modules  (node_modules)
+  382.4 MB  dist  (üretilen, silinebilir)
+  194.6 MB  sources/lange-anestezi-7/build  (üretilen, silinebilir)
+   53.6 MB  tools/quizforge/node_modules  (node_modules)
+    5.5 MB  out  (üretilen, silinebilir)
+Toplam 1338.9 MB, silinebilir 582.6 MB
+  702.4 MB  node_modules  (node_modules)
+  382.4 MB  dist  (üretilen, silinebilir)
+  194.6 MB  sources/lange-anestezi-7/build  (üretilen, silinebilir)
+   53.6 MB  tools/quizforge/node_modules  (node_modules)
+    5.5 MB  out  (üretilen, silinebilir)
+Toplam 1338.8 MB, silinebilir 582.6 MB
+Silindi 582.6 MB

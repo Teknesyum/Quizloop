@@ -19,31 +19,12 @@
   },
   "signature": {
     "off": false,
-    "text": "by Teknesyum",
     "github": "https://github.com/Teknesyum",
-    "sponsor": "https://github.com/sponsors/Teknesyum",
-    "supportText": "Buy me a coffee"
+    "sponsor": "https://github.com/sponsors/Teknesyum"
   },
   "note": "",
-  "palette": {
-    "primary": "#6fb7ff",
-    "secondary": "#cba7d2",
-    "tertiary": "#c3a3ff",
-    "surface": "#000000",
-    "dark": true
-  },
   "installedAt": "2026-09-08T16:47:04.919Z",
-  "duzen": "b3a56d17ff70849c",
-  "notlar": [
-    "Arka plan tasarımı: duz (token karşılığı yok).",
-    "Kaydırma çubuğu biçimi: solan.",
-    "Arayüz geçiş eğrisi: emphasized (önizlemede --tk-e-out yerine).",
-    "Cam bulanıklığı: 0 px.",
-    "Panel gölgesi gücü: ×0.",
-    "Pencere kenarı: yok.",
-    "Düğme: 28 px yükseklik, 10 px yatay dolgu.",
-    "Üst çubuk yüksekliği: 28 px (titlebar-h-min)."
-  ],
+  "duzen": "52e0c6b7355cba20",
   "ignore": [
     {
       "rule": "guncelleme/panel-yok",
@@ -54,6 +35,16 @@
       "rule": "kabuk/sablon-imzasiz",
       "file": "src/renderer/src/components/UpdateBadge.tsx",
       "reason": "durum şablonunun Electron türü git senkron rozeti; electron-updater iki adımlı güncelleme rozeti şablonda yok. Şablona eklenince bu dosya şablonla değişir."
+    },
+    {
+      "rule": "core/list-without-motion",
+      "file": "src/renderer/src/App.tsx",
+      "reason": "Tek .map çağrısı NAV dizisini TitleBar sekme verisine çeviriyor (const TABS); ekrana liste basılmıyor. Sekmeleri TitleBar çiziyor ve hareketi titlebar.css taşıyor."
     }
-  ]
+  ],
+  "plugin": "0.20.0",
+  "denetim": {
+    "tarih": "2026-09-27T04:34:01.763Z",
+    "duzen": "52e0c6b7355cba20"
+  }
 }

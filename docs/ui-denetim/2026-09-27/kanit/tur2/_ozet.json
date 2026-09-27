@@ -1,0 +1,93 @@
+{
+ "summary": [
+  {
+   "ekran": "onay-kaldir",
+   "hal": "dinlenik",
+   "checked": 29,
+   "kesin": 0,
+   "belirsiz": 0,
+   "targets": 0,
+   "axe": ""
+  },
+  {
+   "ekran": "onay-kaldir",
+   "hal": "uzerinde [role=\"dialog\"] .tk-btn, [role=\"alertdialog\"] .tk-btn",
+   "checked": 29,
+   "kesin": 0,
+   "belirsiz": 0,
+   "targets": 0,
+   "axe": ""
+  },
+  {
+   "ekran": "onay-kaldir",
+   "hal": "basili [role=\"dialog\"] .tk-btn, [role=\"alertdialog\"] .tk-btn",
+   "checked": 29,
+   "kesin": 0,
+   "belirsiz": 0,
+   "targets": 0,
+   "axe": ""
+  },
+  {
+   "ekran": "onay-kaldir",
+   "hal": "odak [role=\"dialog\"] .tk-btn, [role=\"alertdialog\"] .tk-btn",
+   "checked": 29,
+   "kesin": 0,
+   "belirsiz": 0,
+   "targets": 0,
+   "axe": ""
+  },
+  {
+   "ekran": "bos-kutuphane",
+   "hal": "dinlenik",
+   "checked": 15,
+   "kesin": 0,
+   "belirsiz": 0,
+   "targets": 0,
+   "axe": ""
+  },
+  {
+   "ekran": "bos-kutuphane",
+   "hal": "uzerinde .ql-main .tk-btn",
+   "checked": 15,
+   "kesin": 0,
+   "belirsiz": 0,
+   "targets": 0,
+   "axe": ""
+  },
+  {
+   "ekran": "bos-kutuphane",
+   "hal": "basili .ql-main .tk-btn",
+   "checked": 15,
+   "kesin": 0,
+   "belirsiz": 0,
+   "targets": 0,
+   "axe": ""
+  },
+  {
+   "ekran": "bos-kutuphane",
+   "hal": "odak .ql-main .tk-btn",
+   "checked": 15,
+   "kesin": 0,
+   "belirsiz": 0,
+   "targets": 0,
+   "axe": ""
+  },
+  {
+   "ekran": "bos-istatistik",
+   "hal": "dinlenik",
+   "checked": 39,
+   "kesin": 0,
+   "belirsiz": 0,
+   "targets": 0,
+   "axe": ""
+  }
+ ],
+ "logs": [
+  "OLC onay-kaldir .ql-book-open: yok || .ql-card-version: fg=#ffffff bg=#000000 oran=21.00 boyut=46.2x21.0 || .tk-titlebar__chip--support: fg=#ac7fff bg=#000000 oran=7.23 boyut=111.2x28.0 || .tk-titlebar__chip--brand: fg=#6fb7ff bg=#000000 oran=9.89 boyut=96.0x28.0 || .tk-titlebar__chip:not(.tk-titlebar__chip--brand):not(.tk-titlebar__chip--support): fg=#6fb7ff bg=#000000 oran=9.89 boyut=124.0x28.0 || .ql-main .tk-btn-ghost: fg=#ffffff bg=#000000 oran=21.00 boyut=159.1x28.0",
+  "KAYMA onay-kaldir: ",
+  "OLC bos-kutuphane .ql-book-open: yok || .ql-card-version: yok || .tk-titlebar__chip--support: fg=#ac7fff bg=#000000 oran=7.23 boyut=111.2x28.0 || .tk-titlebar__chip--brand: fg=#6fb7ff bg=#000000 oran=9.89 boyut=96.0x28.0 || .tk-titlebar__chip:not(.tk-titlebar__chip--brand):not(.tk-titlebar__chip--support): fg=#6fb7ff bg=#000000 oran=9.89 boyut=124.0x28.0 || .ql-main .tk-btn-ghost: fg=#ffffff bg=#000000 oran=21.00 boyut=159.1x28.0",
+  "KAYMA bos-kutuphane: ",
+  "OLC bos-istatistik .ql-book-open: yok || .ql-card-version: yok || .tk-titlebar__chip--support: fg=#ac7fff bg=#000000 oran=7.23 boyut=111.2x28.0 || .tk-titlebar__chip--brand: fg=#6fb7ff bg=#000000 oran=9.89 boyut=96.0x28.0 || .tk-titlebar__chip:not(.tk-titlebar__chip--brand):not(.tk-titlebar__chip--support): fg=#6fb7ff bg=#000000 oran=9.89 boyut=124.0x28.0 || .ql-main .tk-btn-ghost: yok",
+  "KAYMA bos-istatistik: "
+ ]
+}
