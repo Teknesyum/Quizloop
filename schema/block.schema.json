@@ -30,15 +30,23 @@
               },
               "imageRef": {
                 "type": "string",
-                "pattern": "^assets\\/(img|tbl)\\/[\\w.-]+\\.(webp|png|svg)$"
+                "pattern": "^assets\\/(img|tbl|kaynak)\\/[\\w.-]+\\.(webp|png|svg)$"
               }
             },
             "required": [
               "md"
             ]
           },
+          "kind": {
+            "default": "coktan-secmeli",
+            "type": "string",
+            "enum": [
+              "coktan-secmeli",
+              "acik-uclu"
+            ]
+          },
           "choices": {
-            "minItems": 2,
+            "default": [],
             "maxItems": 5,
             "type": "array",
             "items": {
@@ -60,7 +68,7 @@
                 },
                 "imageRef": {
                   "type": "string",
-                  "pattern": "^assets\\/(img|tbl)\\/[\\w.-]+\\.(webp|png|svg)$"
+                  "pattern": "^assets\\/(img|tbl|kaynak)\\/[\\w.-]+\\.(webp|png|svg)$"
                 }
               },
               "required": [
@@ -79,7 +87,12 @@
               "E"
             ]
           },
+          "beklenenCevap": {
+            "type": "string",
+            "minLength": 1
+          },
           "distractors": {
+            "default": {},
             "type": "object",
             "propertyNames": {
               "type": "string",
@@ -161,7 +174,7 @@
                     },
                     "ref": {
                       "type": "string",
-                      "pattern": "^assets\\/(img|tbl)\\/[\\w.-]+\\.(webp|png|svg)$"
+                      "pattern": "^assets\\/(img|tbl|kaynak)\\/[\\w.-]+\\.(webp|png|svg)$"
                     },
                     "caption": {
                       "type": "string"
@@ -240,6 +253,45 @@
               },
               "chapter": {
                 "type": "string"
+              },
+              "kesit": {
+                "type": "object",
+                "properties": {
+                  "pdfSayfa": {
+                    "type": "integer",
+                    "exclusiveMinimum": 0,
+                    "maximum": 9007199254740991
+                  },
+                  "bbox": {
+                    "type": "array",
+                    "prefixItems": [
+                      {
+                        "type": "number"
+                      },
+                      {
+                        "type": "number"
+                      },
+                      {
+                        "type": "number"
+                      },
+                      {
+                        "type": "number"
+                      }
+                    ],
+                    "items": false,
+                    "minItems": 4,
+                    "maxItems": 4
+                  },
+                  "ref": {
+                    "type": "string",
+                    "pattern": "^assets\\/(img|tbl|kaynak)\\/[\\w.-]+\\.(webp|png|svg)$"
+                  }
+                },
+                "required": [
+                  "pdfSayfa",
+                  "bbox",
+                  "ref"
+                ]
               }
             },
             "required": [
@@ -284,9 +336,6 @@
           "id",
           "conceptId",
           "stem",
-          "choices",
-          "correct",
-          "distractors",
           "solution",
           "source",
           "difficulty",
