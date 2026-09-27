@@ -37,7 +37,10 @@ function Item({ x, i }: { x: Toast; i: number }): React.JSX.Element {
       <span className="tk-toast-icon" aria-hidden="true">
         {ICON[x.kind]}
       </span>
-      <span className="tk-toast-body">{x.text}</span>
+      <div className="tk-toast-body">
+        <div className="tk-toast-title">{t(`toast.title.${x.kind}`)}</div>
+        {x.text}
+      </div>
       <button
         type="button"
         className="tk-toast-close tk-no-drag"

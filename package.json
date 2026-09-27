@@ -28,7 +28,8 @@
     "ui:scan": "node scripts/ui-scan.mjs",
     "postinstall": "electron-builder install-app-deps",
     "abi:node": "node scripts/abi.mjs node",
-    "abi:electron": "node scripts/abi.mjs electron"
+    "abi:electron": "node scripts/abi.mjs electron",
+    "icon:gen": "node scripts/icon.mjs"
   },
   "dependencies": {
     "@electron-toolkit/utils": "^4.0.0",

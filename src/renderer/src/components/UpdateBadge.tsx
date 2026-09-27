@@ -20,15 +20,15 @@ export function UpdateBadge(): React.JSX.Element | null {
     return (
       <span className="ql-update" data-state="available" role="status">
         <span className="ql-update-dot" aria-hidden="true" />
-        <span className="ql-update-text" title={t('update.available', v)}>
-          {t('update.badge')}
+        <span className="ql-update-text" title={t('update.download')}>
+          {t('update.label')}
         </span>
         <button
           type="button"
           className="tk-btn tk-btn-ghost ql-btn-xs"
           onClick={() => u.download(false)}
         >
-          {t('update.download')}
+          {t('update.get')}
         </button>
         <button
           type="button"
@@ -55,15 +55,15 @@ export function UpdateBadge(): React.JSX.Element | null {
     return (
       <span className="ql-update" data-state="ready" role="status">
         <span className="ql-update-dot" aria-hidden="true" />
-        <span className="ql-update-text" title={t('update.ready', v)}>
-          {t('update.badge')}
+        <span className="ql-update-text" title={t('update.install')}>
+          {t('update.label')}
         </span>
         <button
           type="button"
           className="tk-btn tk-btn-primary ql-btn-xs"
           onClick={() => u.install()}
         >
-          {t('update.install')}
+          {t('update.apply')}
         </button>
       </span>
     )
@@ -72,7 +72,7 @@ export function UpdateBadge(): React.JSX.Element | null {
       <span className="ql-update" data-state="available" role="status">
         <span className="ql-update-dot" aria-hidden="true" />
         <span className="ql-update-text" title={t('update.notice', v)}>
-          {t('update.badge')}
+          {t('update.label')}
         </span>
         <button type="button" className="tk-btn tk-btn-ghost ql-btn-xs" onClick={() => u.open()}>
           {t('update.open')}

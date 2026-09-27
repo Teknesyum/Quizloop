@@ -298,6 +298,7 @@ export function Settings(): React.JSX.Element {
 
       {importing && (
         <Confirm
+          title={t('settings.transferConfirmTitle')}
           text={t('settings.transferConfirm')}
           danger
           onNo={() => setImporting(false)}

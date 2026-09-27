@@ -15,6 +15,7 @@ import { useApp, type Route } from './store/app'
 
 const GITHUB = 'https://github.com/Teknesyum'
 const SPONSOR = 'https://github.com/sponsors/Teknesyum'
+const SITE = 'https://teknesyum.com'
 
 const NAV: { route: Route; label: string }[] = [
   { route: { name: 'library' }, label: t('nav.library') },
@@ -79,15 +80,21 @@ export default function App(): React.JSX.Element {
       <TitleBar
         first="Quiz"
         second="loop"
-        links={{ brand: GITHUB, sponsor: SPONSOR }}
+        links={{ brand: GITHUB, sponsor: SPONSOR, site: SITE }}
         labels={{
-          sponsor: t('sig.sponsor'),
-          brand: t('sig.by'),
+          sponsor: t('sig.support'),
+          sponsorTitle: t('sig.supportTitle'),
+          brand: t('sig.brand'),
+          brandTitle: t('sig.brandTitle'),
+          site: t('sig.site'),
+          siteTitle: t('sig.siteTitle'),
           minimize: t('win.minimize'),
-          maximize: max ? t('win.restore') : t('win.maximize'),
+          maximize: t('win.maximize'),
+          restore: t('win.restore'),
           close: t('win.close'),
           tabs: t('app.name')
         }}
+        maximized={max}
         tabs={inSession ? undefined : TABS}
         current={route.name === 'stats' || route.name === 'settings' ? route.name : 'library'}
         onTab={(id) => {
