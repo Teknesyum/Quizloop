@@ -4,11 +4,12 @@ import { t } from '@renderer/i18n'
 interface Props {
   text: string
   danger?: boolean
+  yes?: string
   onYes(): void
   onNo(): void
 }
 
-export function Confirm({ text, danger, onYes, onNo }: Props): React.JSX.Element {
+export function Confirm({ text, danger, yes, onYes, onNo }: Props): React.JSX.Element {
   useEffect(() => {
     const h = (e: KeyboardEvent): void => {
       if (e.code === 'Escape') onNo()
@@ -35,7 +36,7 @@ export function Confirm({ text, danger, onYes, onNo }: Props): React.JSX.Element
             className={`tk-btn ${danger ? 'tk-btn-danger' : 'tk-btn-primary'}`}
             onClick={onYes}
           >
-            {t('common.confirm')}
+            {yes ?? t('common.confirm')}
           </button>
         </div>
       </div>

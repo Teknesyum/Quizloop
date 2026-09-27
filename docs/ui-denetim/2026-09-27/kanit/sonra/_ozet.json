@@ -1,0 +1,521 @@
+{
+ "summary": [
+  {
+   "ekran": "kutuphane",
+   "hal": "dinlenik",
+   "checked": 24,
+   "kesin": 0,
+   "belirsiz": 0,
+   "targets": 0,
+   "axe": ""
+  },
+  {
+   "ekran": "kutuphane",
+   "hal": "uzerinde .tk-titlebar__tab:not([aria-current]), .ql-nav:not(.ql-nav-active)",
+   "checked": 24,
+   "kesin": 0,
+   "belirsiz": 0,
+   "targets": 0,
+   "axe": ""
+  },
+  {
+   "ekran": "kutuphane",
+   "hal": "basili .tk-titlebar__tab:not([aria-current]), .ql-nav:not(.ql-nav-active)",
+   "checked": 24,
+   "kesin": 0,
+   "belirsiz": 0,
+   "targets": 0,
+   "axe": ""
+  },
+  {
+   "ekran": "kutuphane",
+   "hal": "odak .tk-titlebar__tab:not([aria-current]), .ql-nav:not(.ql-nav-active)",
+   "checked": 24,
+   "kesin": 0,
+   "belirsiz": 0,
+   "targets": 0,
+   "axe": ""
+  },
+  {
+   "ekran": "kutuphane",
+   "hal": "uzerinde .ql-main .tk-btn-primary",
+   "checked": 24,
+   "kesin": 0,
+   "belirsiz": 0,
+   "targets": 0,
+   "axe": ""
+  },
+  {
+   "ekran": "kutuphane",
+   "hal": "basili .ql-main .tk-btn-primary",
+   "checked": 24,
+   "kesin": 0,
+   "belirsiz": 0,
+   "targets": 0,
+   "axe": ""
+  },
+  {
+   "ekran": "kutuphane",
+   "hal": "odak .ql-main .tk-btn-primary",
+   "checked": 24,
+   "kesin": 0,
+   "belirsiz": 0,
+   "targets": 0,
+   "axe": ""
+  },
+  {
+   "ekran": "bolumler",
+   "hal": "dinlenik",
+   "checked": 424,
+   "kesin": 0,
+   "belirsiz": 0,
+   "targets": 0,
+   "axe": ""
+  },
+  {
+   "ekran": "bolumler",
+   "hal": "uzerinde .ql-main .tk-btn-primary",
+   "checked": 424,
+   "kesin": 0,
+   "belirsiz": 0,
+   "targets": 0,
+   "axe": ""
+  },
+  {
+   "ekran": "bolumler",
+   "hal": "basili .ql-main .tk-btn-primary",
+   "checked": 424,
+   "kesin": 0,
+   "belirsiz": 0,
+   "targets": 0,
+   "axe": ""
+  },
+  {
+   "ekran": "bolumler",
+   "hal": "odak .ql-main .tk-btn-primary",
+   "checked": 424,
+   "kesin": 0,
+   "belirsiz": 0,
+   "targets": 0,
+   "axe": ""
+  },
+  {
+   "ekran": "oturum-soru",
+   "hal": "dinlenik",
+   "checked": 25,
+   "kesin": 0,
+   "belirsiz": 0,
+   "targets": 0,
+   "axe": ""
+  },
+  {
+   "ekran": "oturum-soru",
+   "hal": "uzerinde .ql-main .tk-btn",
+   "checked": 25,
+   "kesin": 0,
+   "belirsiz": 0,
+   "targets": 0,
+   "axe": ""
+  },
+  {
+   "ekran": "oturum-soru",
+   "hal": "basili .ql-main .tk-btn",
+   "checked": 25,
+   "kesin": 0,
+   "belirsiz": 0,
+   "targets": 0,
+   "axe": ""
+  },
+  {
+   "ekran": "oturum-soru",
+   "hal": "odak .ql-main .tk-btn",
+   "checked": 25,
+   "kesin": 0,
+   "belirsiz": 0,
+   "targets": 0,
+   "axe": ""
+  },
+  {
+   "ekran": "oturum-siklar",
+   "hal": "dinlenik",
+   "checked": 29,
+   "kesin": 0,
+   "belirsiz": 0,
+   "targets": 0,
+   "axe": ""
+  },
+  {
+   "ekran": "oturum-siklar",
+   "hal": "uzerinde .ql-choice > button",
+   "checked": 29,
+   "kesin": 0,
+   "belirsiz": 0,
+   "targets": 0,
+   "axe": ""
+  },
+  {
+   "ekran": "oturum-siklar",
+   "hal": "basili .ql-choice > button",
+   "checked": 29,
+   "kesin": 0,
+   "belirsiz": 0,
+   "targets": 0,
+   "axe": ""
+  },
+  {
+   "ekran": "oturum-siklar",
+   "hal": "odak .ql-choice > button",
+   "checked": 29,
+   "kesin": 0,
+   "belirsiz": 0,
+   "targets": 0,
+   "axe": ""
+  },
+  {
+   "ekran": "oturum-cozum",
+   "hal": "dinlenik",
+   "checked": 38,
+   "kesin": 0,
+   "belirsiz": 0,
+   "targets": 0,
+   "axe": ""
+  },
+  {
+   "ekran": "oturum-cozum",
+   "hal": "uzerinde .ql-grade-1",
+   "checked": 38,
+   "kesin": 0,
+   "belirsiz": 0,
+   "targets": 0,
+   "axe": ""
+  },
+  {
+   "ekran": "oturum-cozum",
+   "hal": "basili .ql-grade-1",
+   "checked": 38,
+   "kesin": 0,
+   "belirsiz": 0,
+   "targets": 0,
+   "axe": ""
+  },
+  {
+   "ekran": "oturum-cozum",
+   "hal": "odak .ql-grade-1",
+   "checked": 38,
+   "kesin": 0,
+   "belirsiz": 0,
+   "targets": 0,
+   "axe": ""
+  },
+  {
+   "ekran": "oturum-cozum",
+   "hal": "uzerinde .ql-book-open",
+   "checked": 38,
+   "kesin": 0,
+   "belirsiz": 0,
+   "targets": 0,
+   "axe": ""
+  },
+  {
+   "ekran": "oturum-cozum",
+   "hal": "basili .ql-book-open",
+   "checked": 38,
+   "kesin": 0,
+   "belirsiz": 0,
+   "targets": 0,
+   "axe": ""
+  },
+  {
+   "ekran": "oturum-cozum",
+   "hal": "odak .ql-book-open",
+   "checked": 38,
+   "kesin": 0,
+   "belirsiz": 0,
+   "targets": 0,
+   "axe": ""
+  },
+  {
+   "ekran": "kitap",
+   "hal": "dinlenik",
+   "checked": 45,
+   "kesin": 0,
+   "belirsiz": 0,
+   "targets": 0,
+   "axe": ""
+  },
+  {
+   "ekran": "kitap",
+   "hal": "uzerinde .ql-book-bar .tk-btn",
+   "checked": 45,
+   "kesin": 0,
+   "belirsiz": 0,
+   "targets": 0,
+   "axe": ""
+  },
+  {
+   "ekran": "kitap",
+   "hal": "basili .ql-book-bar .tk-btn",
+   "checked": 45,
+   "kesin": 0,
+   "belirsiz": 0,
+   "targets": 0,
+   "axe": ""
+  },
+  {
+   "ekran": "kitap",
+   "hal": "odak .ql-book-bar .tk-btn",
+   "checked": 45,
+   "kesin": 0,
+   "belirsiz": 0,
+   "targets": 0,
+   "axe": ""
+  },
+  {
+   "ekran": "onay",
+   "hal": "dinlenik",
+   "checked": 41,
+   "kesin": 0,
+   "belirsiz": 0,
+   "targets": 0,
+   "axe": ""
+  },
+  {
+   "ekran": "onay",
+   "hal": "uzerinde [role=\"dialog\"] .tk-btn, [role=\"alertdialog\"] .tk-btn",
+   "checked": 41,
+   "kesin": 0,
+   "belirsiz": 0,
+   "targets": 0,
+   "axe": ""
+  },
+  {
+   "ekran": "onay",
+   "hal": "basili [role=\"dialog\"] .tk-btn, [role=\"alertdialog\"] .tk-btn",
+   "checked": 41,
+   "kesin": 0,
+   "belirsiz": 0,
+   "targets": 0,
+   "axe": ""
+  },
+  {
+   "ekran": "onay",
+   "hal": "odak [role=\"dialog\"] .tk-btn, [role=\"alertdialog\"] .tk-btn",
+   "checked": 41,
+   "kesin": 0,
+   "belirsiz": 0,
+   "targets": 0,
+   "axe": ""
+  },
+  {
+   "ekran": "ozet",
+   "hal": "dinlenik",
+   "checked": 17,
+   "kesin": 0,
+   "belirsiz": 0,
+   "targets": 0,
+   "axe": ""
+  },
+  {
+   "ekran": "ozet",
+   "hal": "uzerinde .ql-main .tk-btn",
+   "checked": 17,
+   "kesin": 0,
+   "belirsiz": 0,
+   "targets": 0,
+   "axe": ""
+  },
+  {
+   "ekran": "ozet",
+   "hal": "basili .ql-main .tk-btn",
+   "checked": 17,
+   "kesin": 0,
+   "belirsiz": 0,
+   "targets": 0,
+   "axe": ""
+  },
+  {
+   "ekran": "ozet",
+   "hal": "odak .ql-main .tk-btn",
+   "checked": 17,
+   "kesin": 0,
+   "belirsiz": 0,
+   "targets": 0,
+   "axe": ""
+  },
+  {
+   "ekran": "banka",
+   "hal": "dinlenik",
+   "checked": 108,
+   "kesin": 0,
+   "belirsiz": 0,
+   "targets": 0,
+   "axe": ""
+  },
+  {
+   "ekran": "banka",
+   "hal": "uzerinde .ql-bank-row:not(.ql-bank-row-active)",
+   "checked": 108,
+   "kesin": 0,
+   "belirsiz": 0,
+   "targets": 0,
+   "axe": ""
+  },
+  {
+   "ekran": "banka",
+   "hal": "basili .ql-bank-row:not(.ql-bank-row-active)",
+   "checked": 108,
+   "kesin": 0,
+   "belirsiz": 0,
+   "targets": 0,
+   "axe": ""
+  },
+  {
+   "ekran": "banka",
+   "hal": "odak .ql-bank-row:not(.ql-bank-row-active)",
+   "checked": 108,
+   "kesin": 0,
+   "belirsiz": 0,
+   "targets": 0,
+   "axe": ""
+  },
+  {
+   "ekran": "banka",
+   "hal": "yok .ql-book-open"
+  },
+  {
+   "ekran": "bildirim",
+   "hal": "dinlenik",
+   "checked": 113,
+   "kesin": 0,
+   "belirsiz": 0,
+   "targets": 0,
+   "axe": ""
+  },
+  {
+   "ekran": "bildirim",
+   "hal": "uzerinde .tk-toast-close",
+   "checked": 113,
+   "kesin": 0,
+   "belirsiz": 0,
+   "targets": 0,
+   "axe": ""
+  },
+  {
+   "ekran": "bildirim",
+   "hal": "basili .tk-toast-close",
+   "checked": 113,
+   "kesin": 0,
+   "belirsiz": 0,
+   "targets": 0,
+   "axe": ""
+  },
+  {
+   "ekran": "bildirim",
+   "hal": "odak .tk-toast-close",
+   "checked": 113,
+   "kesin": 0,
+   "belirsiz": 0,
+   "targets": 0,
+   "axe": ""
+  },
+  {
+   "ekran": "istatistik",
+   "hal": "dinlenik",
+   "checked": 41,
+   "kesin": 0,
+   "belirsiz": 0,
+   "targets": 0,
+   "axe": ""
+  },
+  {
+   "ekran": "ayarlar",
+   "hal": "dinlenik",
+   "checked": 45,
+   "kesin": 0,
+   "belirsiz": 0,
+   "targets": 0,
+   "axe": ""
+  },
+  {
+   "ekran": "ayarlar",
+   "hal": "uzerinde .ql-main .tk-btn",
+   "checked": 45,
+   "kesin": 0,
+   "belirsiz": 0,
+   "targets": 0,
+   "axe": ""
+  },
+  {
+   "ekran": "ayarlar",
+   "hal": "basili .ql-main .tk-btn",
+   "checked": 45,
+   "kesin": 0,
+   "belirsiz": 0,
+   "targets": 0,
+   "axe": ""
+  },
+  {
+   "ekran": "ayarlar",
+   "hal": "odak .ql-main .tk-btn",
+   "checked": 45,
+   "kesin": 0,
+   "belirsiz": 0,
+   "targets": 0,
+   "axe": ""
+  },
+  {
+   "ekran": "ayarlar",
+   "hal": "uzerinde .ql-main select, .ql-main input",
+   "checked": 45,
+   "kesin": 0,
+   "belirsiz": 0,
+   "targets": 0,
+   "axe": ""
+  },
+  {
+   "ekran": "ayarlar",
+   "hal": "basili .ql-main select, .ql-main input",
+   "checked": 45,
+   "kesin": 0,
+   "belirsiz": 0,
+   "targets": 0,
+   "axe": ""
+  },
+  {
+   "ekran": "ayarlar",
+   "hal": "odak .ql-main select, .ql-main input",
+   "checked": 45,
+   "kesin": 0,
+   "belirsiz": 0,
+   "targets": 0,
+   "axe": ""
+  }
+ ],
+ "logs": [
+  "OLC kutuphane .ql-book-open: yok || .ql-card-version: fg=#ffffff bg=#000000 oran=21.00 boyut=46.2x21.0 || .tk-titlebar__sponsor, .tk-titlebar a: fg=#ac7fff bg=#000000 oran=7.23 boyut=151.6x32.0 || .tk-titlebar__brand, .tk-titlebar a:last-of-type: fg=#ffffff bg=#000000 oran=21.00 boyut=81.9x32.0 || .ql-main .tk-btn-ghost: fg=#ffffff bg=#000000 oran=21.00 boyut=179.1x49.3",
+  "KAYMA kutuphane: ",
+  "OLC bolumler .ql-book-open: yok || .ql-card-version: yok || .tk-titlebar__sponsor, .tk-titlebar a: fg=#ac7fff bg=#000000 oran=7.23 boyut=151.6x32.0 || .tk-titlebar__brand, .tk-titlebar a:last-of-type: fg=#ffffff bg=#000000 oran=21.00 boyut=81.9x32.0 || .ql-main .tk-btn-ghost: fg=#ffffff bg=#000000 oran=21.00 boyut=176.4x49.3",
+  "KAYMA bolumler: ",
+  "OLC oturum-soru .ql-book-open: yok || .ql-card-version: yok || .tk-titlebar__sponsor, .tk-titlebar a: fg=#ac7fff bg=#000000 oran=7.23 boyut=151.6x32.0 || .tk-titlebar__brand, .tk-titlebar a:last-of-type: fg=#ffffff bg=#000000 oran=21.00 boyut=81.9x32.0 || .ql-main .tk-btn-ghost: fg=#ffffff bg=#000000 oran=21.00 boyut=86.0x34.8",
+  "KAYMA oturum-soru: ",
+  "OLC oturum-siklar .ql-book-open: yok || .ql-card-version: yok || .tk-titlebar__sponsor, .tk-titlebar a: fg=#ac7fff bg=#000000 oran=7.23 boyut=151.6x32.0 || .tk-titlebar__brand, .tk-titlebar a:last-of-type: fg=#ffffff bg=#000000 oran=21.00 boyut=81.9x32.0 || .ql-main .tk-btn-ghost: fg=#ffffff bg=#000000 oran=21.00 boyut=86.0x34.8",
+  "KAYMA oturum-siklar: ",
+  "OLC oturum-cozum .ql-book-open: fg=#ffffff bg=#000000 oran=21.00 boyut=1315.2x34.8 || .ql-card-version: yok || .tk-titlebar__sponsor, .tk-titlebar a: fg=#ac7fff bg=#000000 oran=7.23 boyut=151.6x32.0 || .tk-titlebar__brand, .tk-titlebar a:last-of-type: fg=#ffffff bg=#000000 oran=21.00 boyut=81.9x32.0 || .ql-main .tk-btn-ghost: fg=#ffffff bg=#000000 oran=21.00 boyut=86.0x34.8",
+  "KAYMA oturum-cozum: ql-main=464.6666564941406auto",
+  "ALT HEADER.tk-titlebar:0-33 DIV.ql-body:32-934 DIV.tk-toast-stack:886-886 main:934 vh=934 dugme-alt=854,854,854 cubuk-ust=901",
+  "OLC kitap .ql-book-open: fg=#ffffff bg=#000000 oran=21.00 boyut=1315.2x34.8 || .ql-card-version: yok || .tk-titlebar__sponsor, .tk-titlebar a: fg=#ac7fff bg=#000000 oran=7.23 boyut=151.6x32.0 || .tk-titlebar__brand, .tk-titlebar a:last-of-type: fg=#ffffff bg=#000000 oran=21.00 boyut=81.9x32.0 || .ql-main .tk-btn-ghost: fg=#ffffff bg=#000000 oran=21.00 boyut=86.0x34.8",
+  "KAYMA kitap: ql-main=505.3333435058594auto",
+  "OLC onay .ql-book-open: fg=#ffffff bg=#000000 oran=21.00 boyut=1315.2x34.8 || .ql-card-version: yok || .tk-titlebar__sponsor, .tk-titlebar a: fg=#ac7fff bg=#000000 oran=7.23 boyut=151.6x32.0 || .tk-titlebar__brand, .tk-titlebar a:last-of-type: fg=#ffffff bg=#000000 oran=21.00 boyut=81.9x32.0 || .ql-main .tk-btn-ghost: fg=#ffffff bg=#000000 oran=21.00 boyut=86.0x34.8",
+  "KAYMA onay: ql-main=505.3333435058594auto",
+  "OLC ozet .ql-book-open: yok || .ql-card-version: yok || .tk-titlebar__sponsor, .tk-titlebar a: fg=#ac7fff bg=#000000 oran=7.23 boyut=151.6x32.0 || .tk-titlebar__brand, .tk-titlebar a:last-of-type: fg=#ffffff bg=#000000 oran=21.00 boyut=81.9x32.0 || .ql-main .tk-btn-ghost: fg=#ffffff bg=#000000 oran=21.00 boyut=176.4x49.3",
+  "KAYMA ozet: ",
+  "OLC banka .ql-book-open: yok || .ql-card-version: yok || .tk-titlebar__sponsor, .tk-titlebar a: fg=#ac7fff bg=#000000 oran=7.23 boyut=151.6x32.0 || .tk-titlebar__brand, .tk-titlebar a:last-of-type: fg=#ffffff bg=#000000 oran=21.00 boyut=81.9x32.0 || .ql-main .tk-btn-ghost: fg=#ffffff bg=#000000 oran=21.00 boyut=143.6x34.8",
+  "KAYMA banka: ",
+  "OLC bildirim .ql-book-open: yok || .ql-card-version: yok || .tk-titlebar__sponsor, .tk-titlebar a: fg=#ac7fff bg=#000000 oran=7.23 boyut=151.6x32.0 || .tk-titlebar__brand, .tk-titlebar a:last-of-type: fg=#ffffff bg=#000000 oran=21.00 boyut=81.9x32.0 || .ql-main .tk-btn-ghost: fg=#ffffff bg=#000000 oran=21.00 boyut=143.6x34.8",
+  "KAYMA bildirim: ",
+  "OLC istatistik .ql-book-open: yok || .ql-card-version: yok || .tk-titlebar__sponsor, .tk-titlebar a: fg=#ac7fff bg=#000000 oran=7.23 boyut=151.6x32.0 || .tk-titlebar__brand, .tk-titlebar a:last-of-type: fg=#ffffff bg=#000000 oran=21.00 boyut=81.9x32.0 || .ql-main .tk-btn-ghost: yok",
+  "KAYMA istatistik: ",
+  "OLC ayarlar .ql-book-open: yok || .ql-card-version: yok || .tk-titlebar__sponsor, .tk-titlebar a: fg=#ac7fff bg=#000000 oran=7.23 boyut=151.6x32.0 || .tk-titlebar__brand, .tk-titlebar a:last-of-type: fg=#ffffff bg=#000000 oran=21.00 boyut=81.9x32.0 || .ql-main .tk-btn-ghost: fg=#ffffff bg=#000000 oran=21.00 boyut=65.1x34.8",
+  "KAYMA ayarlar: "
+ ]
+}

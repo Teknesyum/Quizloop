@@ -1,0 +1,13 @@
+
+> quizloop@0.1.0 test
+> node scripts/abi.mjs node && vitest run
+
+
+ RUN  v4.1.11 C:/Users/Administrator/Desktop/Projeler/Quizloop
+
+
+ Test Files  6 passed (6)
+      Tests  47 passed (47)
+   Start at  03:10:02
+   Duration  656ms (transform 277ms, setup 0ms, import 593ms, tests 193ms, environment 0ms)
+

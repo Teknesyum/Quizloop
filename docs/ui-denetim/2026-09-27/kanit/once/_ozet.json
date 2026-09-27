@@ -1,0 +1,495 @@
+{
+ "summary": [
+  {
+   "ekran": "kutuphane",
+   "hal": "dinlenik",
+   "checked": 26,
+   "kesin": 0,
+   "belirsiz": 9,
+   "targets": 2,
+   "axe": ""
+  },
+  {
+   "ekran": "kutuphane",
+   "hal": "uzerinde .tk-titlebar__tab:not([aria-current]), .ql-nav:not(.ql-nav-active)",
+   "checked": 26,
+   "kesin": 0,
+   "belirsiz": 11,
+   "targets": 2,
+   "axe": ""
+  },
+  {
+   "ekran": "kutuphane",
+   "hal": "basili .tk-titlebar__tab:not([aria-current]), .ql-nav:not(.ql-nav-active)",
+   "checked": 26,
+   "kesin": 0,
+   "belirsiz": 11,
+   "targets": 2,
+   "axe": ""
+  },
+  {
+   "ekran": "kutuphane",
+   "hal": "odak .tk-titlebar__tab:not([aria-current]), .ql-nav:not(.ql-nav-active)",
+   "checked": 26,
+   "kesin": 0,
+   "belirsiz": 9,
+   "targets": 2,
+   "axe": ""
+  },
+  {
+   "ekran": "kutuphane",
+   "hal": "uzerinde .ql-main .tk-btn-primary",
+   "checked": 26,
+   "kesin": 0,
+   "belirsiz": 9,
+   "targets": 2,
+   "axe": ""
+  },
+  {
+   "ekran": "kutuphane",
+   "hal": "basili .ql-main .tk-btn-primary",
+   "checked": 26,
+   "kesin": 0,
+   "belirsiz": 9,
+   "targets": 2,
+   "axe": ""
+  },
+  {
+   "ekran": "kutuphane",
+   "hal": "odak .ql-main .tk-btn-primary",
+   "checked": 26,
+   "kesin": 0,
+   "belirsiz": 9,
+   "targets": 2,
+   "axe": ""
+  },
+  {
+   "ekran": "bolumler",
+   "hal": "dinlenik",
+   "checked": 426,
+   "kesin": 0,
+   "belirsiz": 5,
+   "targets": 2,
+   "axe": ""
+  },
+  {
+   "ekran": "bolumler",
+   "hal": "uzerinde .ql-main .tk-btn-primary",
+   "checked": 426,
+   "kesin": 0,
+   "belirsiz": 5,
+   "targets": 2,
+   "axe": ""
+  },
+  {
+   "ekran": "bolumler",
+   "hal": "basili .ql-main .tk-btn-primary",
+   "checked": 426,
+   "kesin": 0,
+   "belirsiz": 5,
+   "targets": 2,
+   "axe": ""
+  },
+  {
+   "ekran": "bolumler",
+   "hal": "odak .ql-main .tk-btn-primary",
+   "checked": 426,
+   "kesin": 0,
+   "belirsiz": 5,
+   "targets": 2,
+   "axe": ""
+  },
+  {
+   "ekran": "oturum-soru",
+   "hal": "dinlenik",
+   "checked": 25,
+   "kesin": 0,
+   "belirsiz": 12,
+   "targets": 2,
+   "axe": ""
+  },
+  {
+   "ekran": "oturum-soru",
+   "hal": "uzerinde .ql-main .tk-btn",
+   "checked": 25,
+   "kesin": 0,
+   "belirsiz": 12,
+   "targets": 2,
+   "axe": ""
+  },
+  {
+   "ekran": "oturum-soru",
+   "hal": "basili .ql-main .tk-btn",
+   "checked": 25,
+   "kesin": 0,
+   "belirsiz": 12,
+   "targets": 2,
+   "axe": ""
+  },
+  {
+   "ekran": "oturum-soru",
+   "hal": "odak .ql-main .tk-btn",
+   "checked": 25,
+   "kesin": 0,
+   "belirsiz": 12,
+   "targets": 2,
+   "axe": ""
+  },
+  {
+   "ekran": "oturum-siklar",
+   "hal": "dinlenik",
+   "checked": 29,
+   "kesin": 0,
+   "belirsiz": 10,
+   "targets": 2,
+   "axe": ""
+  },
+  {
+   "ekran": "oturum-siklar",
+   "hal": "uzerinde .ql-choice > button",
+   "checked": 29,
+   "kesin": 0,
+   "belirsiz": 10,
+   "targets": 2,
+   "axe": ""
+  },
+  {
+   "ekran": "oturum-siklar",
+   "hal": "basili .ql-choice > button",
+   "checked": 29,
+   "kesin": 0,
+   "belirsiz": 10,
+   "targets": 2,
+   "axe": ""
+  },
+  {
+   "ekran": "oturum-siklar",
+   "hal": "odak .ql-choice > button",
+   "checked": 29,
+   "kesin": 0,
+   "belirsiz": 10,
+   "targets": 2,
+   "axe": ""
+  },
+  {
+   "ekran": "oturum-cozum",
+   "hal": "dinlenik",
+   "checked": 42,
+   "kesin": 1,
+   "belirsiz": 20,
+   "targets": 2,
+   "axe": "color-contrast-enhanced:1"
+  },
+  {
+   "ekran": "oturum-cozum",
+   "hal": "uzerinde .ql-grade-1",
+   "checked": 42,
+   "kesin": 1,
+   "belirsiz": 20,
+   "targets": 2,
+   "axe": "color-contrast-enhanced:1"
+  },
+  {
+   "ekran": "oturum-cozum",
+   "hal": "basili .ql-grade-1",
+   "checked": 42,
+   "kesin": 1,
+   "belirsiz": 20,
+   "targets": 2,
+   "axe": "color-contrast-enhanced:1"
+  },
+  {
+   "ekran": "oturum-cozum",
+   "hal": "odak .ql-grade-1",
+   "checked": 42,
+   "kesin": 1,
+   "belirsiz": 20,
+   "targets": 2,
+   "axe": "color-contrast-enhanced:1"
+  },
+  {
+   "ekran": "oturum-cozum",
+   "hal": "uzerinde .ql-book-open",
+   "checked": 42,
+   "kesin": 1,
+   "belirsiz": 20,
+   "targets": 2,
+   "axe": "color-contrast-enhanced:1"
+  },
+  {
+   "ekran": "oturum-cozum",
+   "hal": "basili .ql-book-open",
+   "checked": 42,
+   "kesin": 1,
+   "belirsiz": 20,
+   "targets": 2,
+   "axe": "color-contrast-enhanced:1"
+  },
+  {
+   "ekran": "oturum-cozum",
+   "hal": "odak .ql-book-open",
+   "checked": 42,
+   "kesin": 1,
+   "belirsiz": 20,
+   "targets": 2,
+   "axe": "color-contrast-enhanced:1"
+  },
+  {
+   "ekran": "kitap",
+   "hal": "dinlenik",
+   "checked": 51,
+   "kesin": 1,
+   "belirsiz": 23,
+   "targets": 2,
+   "axe": "color-contrast-enhanced:1"
+  },
+  {
+   "ekran": "kitap",
+   "hal": "uzerinde .ql-book-bar .tk-btn",
+   "checked": 51,
+   "kesin": 1,
+   "belirsiz": 23,
+   "targets": 2,
+   "axe": "color-contrast-enhanced:1"
+  },
+  {
+   "ekran": "kitap",
+   "hal": "basili .ql-book-bar .tk-btn",
+   "checked": 51,
+   "kesin": 1,
+   "belirsiz": 23,
+   "targets": 2,
+   "axe": "color-contrast-enhanced:1"
+  },
+  {
+   "ekran": "kitap",
+   "hal": "odak .ql-book-bar .tk-btn",
+   "checked": 51,
+   "kesin": 1,
+   "belirsiz": 23,
+   "targets": 2,
+   "axe": "color-contrast-enhanced:1"
+  },
+  {
+   "ekran": "onay",
+   "hal": "dinlenik",
+   "checked": 45,
+   "kesin": 1,
+   "belirsiz": 21,
+   "targets": 2,
+   "axe": "color-contrast-enhanced:1"
+  },
+  {
+   "ekran": "onay",
+   "hal": "uzerinde [role=\"dialog\"] .tk-btn, [role=\"alertdialog\"] .tk-btn",
+   "checked": 45,
+   "kesin": 1,
+   "belirsiz": 21,
+   "targets": 2,
+   "axe": "color-contrast-enhanced:1"
+  },
+  {
+   "ekran": "onay",
+   "hal": "basili [role=\"dialog\"] .tk-btn, [role=\"alertdialog\"] .tk-btn",
+   "checked": 45,
+   "kesin": 1,
+   "belirsiz": 21,
+   "targets": 2,
+   "axe": "color-contrast-enhanced:1"
+  },
+  {
+   "ekran": "onay",
+   "hal": "odak [role=\"dialog\"] .tk-btn, [role=\"alertdialog\"] .tk-btn",
+   "checked": 45,
+   "kesin": 1,
+   "belirsiz": 21,
+   "targets": 2,
+   "axe": "color-contrast-enhanced:1"
+  },
+  {
+   "ekran": "ozet",
+   "hal": "dinlenik",
+   "checked": 16,
+   "kesin": 0,
+   "belirsiz": 7,
+   "targets": 2,
+   "axe": ""
+  },
+  {
+   "ekran": "ozet",
+   "hal": "uzerinde .ql-main .tk-btn",
+   "checked": 16,
+   "kesin": 0,
+   "belirsiz": 7,
+   "targets": 2,
+   "axe": ""
+  },
+  {
+   "ekran": "ozet",
+   "hal": "basili .ql-main .tk-btn",
+   "checked": 16,
+   "kesin": 0,
+   "belirsiz": 7,
+   "targets": 2,
+   "axe": ""
+  },
+  {
+   "ekran": "ozet",
+   "hal": "odak .ql-main .tk-btn",
+   "checked": 16,
+   "kesin": 0,
+   "belirsiz": 7,
+   "targets": 2,
+   "axe": ""
+  },
+  {
+   "ekran": "banka",
+   "hal": "dinlenik",
+   "checked": 110,
+   "kesin": 0,
+   "belirsiz": 7,
+   "targets": 2,
+   "axe": ""
+  },
+  {
+   "ekran": "banka",
+   "hal": "uzerinde .ql-bank-row:not(.ql-bank-row-active)",
+   "checked": 110,
+   "kesin": 0,
+   "belirsiz": 7,
+   "targets": 2,
+   "axe": ""
+  },
+  {
+   "ekran": "banka",
+   "hal": "basili .ql-bank-row:not(.ql-bank-row-active)",
+   "checked": 110,
+   "kesin": 0,
+   "belirsiz": 7,
+   "targets": 2,
+   "axe": ""
+  },
+  {
+   "ekran": "banka",
+   "hal": "odak .ql-bank-row:not(.ql-bank-row-active)",
+   "checked": 110,
+   "kesin": 0,
+   "belirsiz": 7,
+   "targets": 2,
+   "axe": ""
+  },
+  {
+   "ekran": "banka",
+   "hal": "yok .ql-book-open"
+  },
+  {
+   "ekran": "bildirim",
+   "hal": "dinlenik",
+   "checked": 115,
+   "kesin": 0,
+   "belirsiz": 8,
+   "targets": 2,
+   "axe": ""
+  },
+  {
+   "ekran": "bildirim",
+   "hal": "uzerinde .tk-toast-close",
+   "checked": 115,
+   "kesin": 0,
+   "belirsiz": 8,
+   "targets": 2,
+   "axe": ""
+  },
+  {
+   "ekran": "bildirim",
+   "hal": "basili .tk-toast-close",
+   "checked": 115,
+   "kesin": 0,
+   "belirsiz": 8,
+   "targets": 2,
+   "axe": ""
+  },
+  {
+   "ekran": "bildirim",
+   "hal": "odak .tk-toast-close",
+   "checked": 115,
+   "kesin": 0,
+   "belirsiz": 8,
+   "targets": 2,
+   "axe": ""
+  },
+  {
+   "ekran": "istatistik",
+   "hal": "dinlenik",
+   "checked": 49,
+   "kesin": 0,
+   "belirsiz": 9,
+   "targets": 2,
+   "axe": ""
+  },
+  {
+   "ekran": "ayarlar",
+   "hal": "dinlenik",
+   "checked": 50,
+   "kesin": 0,
+   "belirsiz": 16,
+   "targets": 2,
+   "axe": ""
+  },
+  {
+   "ekran": "ayarlar",
+   "hal": "uzerinde .ql-main .tk-btn",
+   "checked": 50,
+   "kesin": 0,
+   "belirsiz": 16,
+   "targets": 2,
+   "axe": ""
+  },
+  {
+   "ekran": "ayarlar",
+   "hal": "basili .ql-main .tk-btn",
+   "checked": 50,
+   "kesin": 0,
+   "belirsiz": 16,
+   "targets": 2,
+   "axe": ""
+  },
+  {
+   "ekran": "ayarlar",
+   "hal": "odak .ql-main .tk-btn",
+   "checked": 47,
+   "kesin": 0,
+   "belirsiz": 16,
+   "targets": 2,
+   "axe": ""
+  },
+  {
+   "ekran": "ayarlar",
+   "hal": "uzerinde .ql-main select, .ql-main input",
+   "checked": 47,
+   "kesin": 0,
+   "belirsiz": 16,
+   "targets": 2,
+   "axe": ""
+  },
+  {
+   "ekran": "ayarlar",
+   "hal": "basili .ql-main select, .ql-main input",
+   "checked": 47,
+   "kesin": 0,
+   "belirsiz": 16,
+   "targets": 2,
+   "axe": ""
+  },
+  {
+   "ekran": "ayarlar",
+   "hal": "odak .ql-main select, .ql-main input",
+   "checked": 47,
+   "kesin": 0,
+   "belirsiz": 16,
+   "targets": 2,
+   "axe": ""
+  }
+ ],
+ "logs": []
+}

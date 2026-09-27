@@ -1,0 +1,216 @@
+{
+ "ekran": "onay",
+ "hal": "uzerinde [role=\"dialog\"] .tk-btn, [role=\"alertdialog\"] .tk-btn",
+ "olcek": "1.5",
+ "denetim": {
+  "url": "file:///C:/Users/Administrator/Desktop/Projeler/Quizloop/dist/win-unpacked/resources/app.asar/out/renderer/index.html",
+  "esik": 7,
+  "hedef": 24,
+  "checked": 45,
+  "pairs": [
+   {
+    "text": "Kolay",
+    "selector": "section.ql-screen.ql-session > header.ql-session-bar.ql-transition-in > div.ql-session-meta > span.tk-label",
+    "fg": "#00f3ff",
+    "bg": "#ffffff",
+    "ratio": 1.38,
+    "uncertain": true
+   },
+   {
+    "text": "Çoktan seçmeli",
+    "selector": "section.ql-screen.ql-session > header.ql-session-bar.ql-transition-in > div.ql-session-meta > span.tk-label.ql-badge-choices",
+    "fg": "#00f3ff",
+    "bg": "#ffffff",
+    "ratio": 1.38,
+    "uncertain": true
+   },
+   {
+    "text": "Puan",
+    "selector": "section.ql-screen.ql-session > header.ql-session-bar.ql-transition-in > div.ql-session-meta > span.tk-label",
+    "fg": "#00f3ff",
+    "bg": "#ffffff",
+    "ratio": 1.38,
+    "uncertain": true
+   },
+   {
+    "text": "Bölümler",
+    "selector": "section.ql-screen.ql-session > header.ql-session-bar.ql-transition-in > div.ql-session-meta > button.tk-btn.tk-btn-ghost",
+    "fg": "#c67eff",
+    "bg": "#f7e9ff",
+    "ratio": 2.31,
+    "uncertain": true
+   },
+   {
+    "text": "Soruyu işaretle",
+    "selector": "section.ql-screen.ql-session > header.ql-session-bar.ql-transition-in > div.ql-session-meta > button.tk-btn.tk-btn-ghost",
+    "fg": "#c67eff",
+    "bg": "#f7e9ff",
+    "ratio": 2.31,
+    "uncertain": true
+   },
+   {
+    "text": "Oturumu bitir",
+    "selector": "section.ql-screen.ql-session > header.ql-session-bar.ql-transition-in > div.ql-session-meta > button.tk-btn.tk-btn-ghost",
+    "fg": "#c67eff",
+    "bg": "#f7e9ff",
+    "ratio": 2.31,
+    "uncertain": true
+   },
+   {
+    "text": "1 / 16",
+    "selector": "section.ql-screen.ql-session > header.ql-session-bar.ql-transition-in > div.ql-session-meta > span.tk-mono",
+    "fg": "#ff54eb",
+    "bg": "#ffffff",
+    "ratio": 2.72,
+    "uncertain": true
+   },
+   {
+    "text": "0",
+    "selector": "section.ql-screen.ql-session > header.ql-session-bar.ql-transition-in > div.ql-session-meta > span.tk-mono.ql-score",
+    "fg": "#ff54eb",
+    "bg": "#ffffff",
+    "ratio": 2.72,
+    "uncertain": true
+   },
+   {
+    "text": "by Teknesyum",
+    "selector": "header.tk-titlebar.ql-titlebar > div.ql-titlebar-right > div.ql-signature.tk-no-drag > a",
+    "fg": "#c67eff",
+    "bg": "#353536",
+    "ratio": 4.54,
+    "uncertain": true
+   },
+   {
+    "text": "☕",
+    "selector": "header.tk-titlebar.ql-titlebar > div.ql-titlebar-right > div.ql-signature.tk-no-drag > a",
+    "fg": "#c67eff",
+    "bg": "#353536",
+    "ratio": 4.54,
+    "uncertain": true
+   },
+   {
+    "text": "✕",
+    "selector": "article.tk-panel.ql-question > div.ql-solved.ql-transition-in > p.ql-verdict.ql-verdict-wrong > span",
+    "fg": "#ff54eb",
+    "bg": "#31132f",
+    "ratio": 6.1,
+    "uncertain": true
+   },
+   {
+    "text": "Yanlış",
+    "selector": "article.tk-panel.ql-question > div.ql-solved.ql-transition-in > p.ql-verdict.ql-verdict-wrong > span",
+    "fg": "#ff54eb",
+    "bg": "#31132f",
+    "ratio": 6.1,
+    "uncertain": true
+   },
+   {
+    "text": "Vazgeç",
+    "selector": "div.tk-modal-scrim > div.tk-panel.tk-modal > div.tk-modal-actions > button.tk-btn.tk-btn-ghost",
+    "fg": "#c67eff",
+    "bg": "#2d133e",
+    "ratio": 6.14,
+    "uncertain": true
+   },
+   {
+    "text": "Anlamadım",
+    "selector": "div.ql-grade > div.ql-grade-row > button.tk-btn.tk-btn-ghost > span.ql-grade-main",
+    "fg": "#ff54eb",
+    "bg": "#25172d",
+    "ratio": 6.22,
+    "uncertain": true
+   },
+   {
+    "text": "1",
+    "selector": "div.ql-grade-row > button.tk-btn.tk-btn-ghost > span.ql-grade-main > kbd",
+    "fg": "#ff54eb",
+    "bg": "#25172d",
+    "ratio": 6.22,
+    "uncertain": true
+   },
+   {
+    "text": "Kısmen anladım",
+    "selector": "div.ql-grade > div.ql-grade-row > button.tk-btn.tk-btn-ghost > span.ql-grade-main",
+    "fg": "#c67eff",
+    "bg": "#25172d",
+    "ratio": 6.31,
+    "uncertain": true
+   },
+   {
+    "text": "2",
+    "selector": "div.ql-grade-row > button.tk-btn.tk-btn-ghost > span.ql-grade-main > kbd",
+    "fg": "#c67eff",
+    "bg": "#25172d",
+    "ratio": 6.31,
+    "uncertain": true
+   },
+   {
+    "text": "Lange'de gör",
+    "selector": "article.tk-panel.ql-question > div.ql-solved.ql-transition-in > blockquote.ql-source > button.tk-btn.tk-btn-ghost",
+    "fg": "#c67eff",
+    "bg": "#221224",
+    "ratio": 6.62,
+    "uncertain": false
+   },
+   {
+    "text": "✕",
+    "selector": "ol.ql-choices > li.ql-choice.ql-choice-wrong > p.tk-error.ql-distractor > span",
+    "fg": "#ff54eb",
+    "bg": "#151616",
+    "ratio": 6.69,
+    "uncertain": true
+   },
+   {
+    "text": "Metinde remifentanilin karaciğerde yavaş metabolize olduğuna",
+    "selector": "ol.ql-choices > li.ql-choice.ql-choice-wrong > p.tk-error.ql-distractor > span",
+    "fg": "#ff54eb",
+    "bg": "#151616",
+    "ratio": 6.69,
+    "uncertain": true
+   },
+   {
+    "text": "✕",
+    "selector": "ol.ql-choices > li.ql-choice.ql-choice-wrong > p.tk-error.ql-distractor > span",
+    "fg": "#ff54eb",
+    "bg": "#151616",
+    "ratio": 6.69,
+    "uncertain": true
+   },
+   {
+    "text": "Metinde atılım yolu değil, esteraz aracılı yıkım vurgulanmış",
+    "selector": "ol.ql-choices > li.ql-choice.ql-choice-wrong > p.tk-error.ql-distractor > span",
+    "fg": "#ff54eb",
+    "bg": "#151616",
+    "ratio": 6.69,
+    "uncertain": true
+   }
+  ],
+  "targets": [
+   {
+    "selector": "header.tk-titlebar.ql-titlebar > div.ql-titlebar-right > div.ql-signature.tk-no-drag > a",
+    "text": "by Teknesyum",
+    "width": 86.1,
+    "height": 21
+   },
+   {
+    "selector": "header.tk-titlebar.ql-titlebar > div.ql-titlebar-right > div.ql-signature.tk-no-drag > a",
+    "text": "☕",
+    "width": 19.2,
+    "height": 21
+   }
+  ]
+ },
+ "axe": [
+  {
+   "id": "color-contrast-enhanced",
+   "impact": "serious",
+   "nodes": [
+    {
+     "target": ".ql-book-open",
+     "html": "<button type=\"button\" class=\"tk-btn tk-btn-ghost ql-btn-sm ql-book-open\" title=\"Kaynak sayfayı aç\">Lange'de gör</button>",
+     "summary": "Fix any of the following:\n  Element has insufficient color contrast of 6.64 (foreground color: #c67eff, background color: #221223, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 7:1"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,124 @@
+{
+ "ekran": "oturum-soru",
+ "hal": "uzerinde .ql-main .tk-btn",
+ "olcek": "1.5",
+ "denetim": {
+  "url": "file:///C:/Users/Administrator/Desktop/Projeler/Quizloop/dist/win-unpacked/resources/app.asar/out/renderer/index.html",
+  "esik": 7,
+  "hedef": 24,
+  "checked": 25,
+  "pairs": [
+   {
+    "text": "Kolay",
+    "selector": "section.ql-screen.ql-session > header.ql-session-bar.ql-transition-in > div.ql-session-meta > span.tk-label",
+    "fg": "#00f3ff",
+    "bg": "#ffffff",
+    "ratio": 1.38,
+    "uncertain": true
+   },
+   {
+    "text": "Çoktan seçmeli",
+    "selector": "section.ql-screen.ql-session > header.ql-session-bar.ql-transition-in > div.ql-session-meta > span.tk-label.ql-badge-choices",
+    "fg": "#00f3ff",
+    "bg": "#ffffff",
+    "ratio": 1.38,
+    "uncertain": true
+   },
+   {
+    "text": "Puan",
+    "selector": "section.ql-screen.ql-session > header.ql-session-bar.ql-transition-in > div.ql-session-meta > span.tk-label",
+    "fg": "#00f3ff",
+    "bg": "#ffffff",
+    "ratio": 1.38,
+    "uncertain": true
+   },
+   {
+    "text": "Bölümler",
+    "selector": "section.ql-screen.ql-session > header.ql-session-bar.ql-transition-in > div.ql-session-meta > button.tk-btn.tk-btn-ghost",
+    "fg": "#c67eff",
+    "bg": "#efd4ff",
+    "ratio": 1.98,
+    "uncertain": true
+   },
+   {
+    "text": "Soruyu işaretle",
+    "selector": "section.ql-screen.ql-session > header.ql-session-bar.ql-transition-in > div.ql-session-meta > button.tk-btn.tk-btn-ghost",
+    "fg": "#c67eff",
+    "bg": "#f7e9ff",
+    "ratio": 2.31,
+    "uncertain": true
+   },
+   {
+    "text": "Oturumu bitir",
+    "selector": "section.ql-screen.ql-session > header.ql-session-bar.ql-transition-in > div.ql-session-meta > button.tk-btn.tk-btn-ghost",
+    "fg": "#c67eff",
+    "bg": "#f7e9ff",
+    "ratio": 2.31,
+    "uncertain": true
+   },
+   {
+    "text": "1 / 16",
+    "selector": "section.ql-screen.ql-session > header.ql-session-bar.ql-transition-in > div.ql-session-meta > span.tk-mono",
+    "fg": "#ff54eb",
+    "bg": "#ffffff",
+    "ratio": 2.72,
+    "uncertain": true
+   },
+   {
+    "text": "0",
+    "selector": "section.ql-screen.ql-session > header.ql-session-bar.ql-transition-in > div.ql-session-meta > span.tk-mono.ql-score",
+    "fg": "#ff54eb",
+    "bg": "#ffffff",
+    "ratio": 2.72,
+    "uncertain": true
+   },
+   {
+    "text": "by Teknesyum",
+    "selector": "header.tk-titlebar.ql-titlebar > div.ql-titlebar-right > div.ql-signature.tk-no-drag > a",
+    "fg": "#c67eff",
+    "bg": "#353536",
+    "ratio": 4.54,
+    "uncertain": true
+   },
+   {
+    "text": "☕",
+    "selector": "header.tk-titlebar.ql-titlebar > div.ql-titlebar-right > div.ql-signature.tk-no-drag > a",
+    "fg": "#c67eff",
+    "bg": "#353536",
+    "ratio": 4.54,
+    "uncertain": true
+   },
+   {
+    "text": "Cevabı biliyorum",
+    "selector": "section.ql-screen.ql-session > article.tk-panel.ql-question > div.ql-actions > button.tk-btn.tk-btn-ghost",
+    "fg": "#c67eff",
+    "bg": "#25172d",
+    "ratio": 6.31,
+    "uncertain": true
+   },
+   {
+    "text": "B",
+    "selector": "article.tk-panel.ql-question > div.ql-actions > button.tk-btn.tk-btn-ghost > kbd",
+    "fg": "#c67eff",
+    "bg": "#25172d",
+    "ratio": 6.31,
+    "uncertain": true
+   }
+  ],
+  "targets": [
+   {
+    "selector": "header.tk-titlebar.ql-titlebar > div.ql-titlebar-right > div.ql-signature.tk-no-drag > a",
+    "text": "by Teknesyum",
+    "width": 86.1,
+    "height": 21
+   },
+   {
+    "selector": "header.tk-titlebar.ql-titlebar > div.ql-titlebar-right > div.ql-signature.tk-no-drag > a",
+    "text": "☕",
+    "width": 19.2,
+    "height": 21
+   }
+  ]
+ },
+ "axe": []
+}

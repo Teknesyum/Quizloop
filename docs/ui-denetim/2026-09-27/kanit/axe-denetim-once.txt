@@ -1,0 +1,196 @@
+== run-once-1.25.log
+kutuphane | dinlenik | kesin=0 | belirsiz=9 | hedef=2 | 
+kutuphane | uzerinde .tk-titlebar__tab:not([aria-current]), .ql-nav:not(.ql-nav-active) | kesin=0 | belirsiz=11 | hedef=2 | 
+kutuphane | basili .tk-titlebar__tab:not([aria-current]), .ql-nav:not(.ql-nav-active) | kesin=0 | belirsiz=11 | hedef=2 | 
+kutuphane | odak .tk-titlebar__tab:not([aria-current]), .ql-nav:not(.ql-nav-active) | kesin=0 | belirsiz=9 | hedef=2 | 
+kutuphane | uzerinde .ql-main .tk-btn-primary | kesin=0 | belirsiz=9 | hedef=2 | 
+kutuphane | basili .ql-main .tk-btn-primary | kesin=0 | belirsiz=9 | hedef=2 | 
+kutuphane | odak .ql-main .tk-btn-primary | kesin=0 | belirsiz=9 | hedef=2 | 
+bolumler | dinlenik | kesin=0 | belirsiz=5 | hedef=2 | 
+bolumler | uzerinde .ql-main .tk-btn-primary | kesin=0 | belirsiz=5 | hedef=2 | 
+bolumler | basili .ql-main .tk-btn-primary | kesin=0 | belirsiz=5 | hedef=2 | 
+bolumler | odak .ql-main .tk-btn-primary | kesin=0 | belirsiz=5 | hedef=2 | 
+oturum-soru | dinlenik | kesin=0 | belirsiz=12 | hedef=2 | 
+oturum-soru | uzerinde .ql-main .tk-btn | kesin=0 | belirsiz=12 | hedef=2 | 
+oturum-soru | basili .ql-main .tk-btn | kesin=0 | belirsiz=12 | hedef=2 | 
+oturum-soru | odak .ql-main .tk-btn | kesin=0 | belirsiz=12 | hedef=2 | 
+oturum-siklar | dinlenik | kesin=0 | belirsiz=10 | hedef=2 | 
+oturum-siklar | uzerinde .ql-choice > button | kesin=0 | belirsiz=10 | hedef=2 | 
+oturum-siklar | basili .ql-choice > button | kesin=0 | belirsiz=10 | hedef=2 | 
+oturum-siklar | odak .ql-choice > button | kesin=0 | belirsiz=10 | hedef=2 | 
+oturum-cozum | dinlenik | kesin=1 | belirsiz=20 | hedef=2 | color-contrast-enhanced:1
+oturum-cozum | uzerinde .ql-grade-1 | kesin=1 | belirsiz=20 | hedef=2 | color-contrast-enhanced:1
+oturum-cozum | basili .ql-grade-1 | kesin=1 | belirsiz=20 | hedef=2 | color-contrast-enhanced:1
+oturum-cozum | odak .ql-grade-1 | kesin=1 | belirsiz=20 | hedef=2 | color-contrast-enhanced:1
+oturum-cozum | uzerinde .ql-book-open | kesin=1 | belirsiz=20 | hedef=2 | color-contrast-enhanced:1
+oturum-cozum | basili .ql-book-open | kesin=1 | belirsiz=20 | hedef=2 | color-contrast-enhanced:1
+oturum-cozum | odak .ql-book-open | kesin=1 | belirsiz=20 | hedef=2 | color-contrast-enhanced:1
+kitap | dinlenik | kesin=1 | belirsiz=23 | hedef=2 | color-contrast-enhanced:1
+kitap | uzerinde .ql-book-bar .tk-btn | kesin=1 | belirsiz=23 | hedef=2 | color-contrast-enhanced:1
+kitap | basili .ql-book-bar .tk-btn | kesin=1 | belirsiz=23 | hedef=2 | color-contrast-enhanced:1
+kitap | odak .ql-book-bar .tk-btn | kesin=1 | belirsiz=23 | hedef=2 | color-contrast-enhanced:1
+onay | dinlenik | kesin=1 | belirsiz=21 | hedef=2 | color-contrast-enhanced:1
+onay | uzerinde [role="dialog"] .tk-btn, [role="alertdialog"] .tk-btn | kesin=1 | belirsiz=21 | hedef=2 | color-contrast-enhanced:1
+onay | basili [role="dialog"] .tk-btn, [role="alertdialog"] .tk-btn | kesin=1 | belirsiz=21 | hedef=2 | color-contrast-enhanced:1
+onay | odak [role="dialog"] .tk-btn, [role="alertdialog"] .tk-btn | kesin=1 | belirsiz=21 | hedef=2 | color-contrast-enhanced:1
+ozet | dinlenik | kesin=0 | belirsiz=7 | hedef=2 | 
+ozet | uzerinde .ql-main .tk-btn | kesin=0 | belirsiz=7 | hedef=2 | 
+ozet | basili .ql-main .tk-btn | kesin=0 | belirsiz=7 | hedef=2 | 
+ozet | odak .ql-main .tk-btn | kesin=0 | belirsiz=7 | hedef=2 | 
+banka | dinlenik | kesin=0 | belirsiz=7 | hedef=2 | 
+banka | uzerinde .ql-bank-row:not(.ql-bank-row-active) | kesin=0 | belirsiz=7 | hedef=2 | 
+banka | basili .ql-bank-row:not(.ql-bank-row-active) | kesin=0 | belirsiz=7 | hedef=2 | 
+banka | odak .ql-bank-row:not(.ql-bank-row-active) | kesin=0 | belirsiz=7 | hedef=2 | 
+banka | yok .ql-book-open | kesin=undefined | belirsiz=undefined | hedef=undefined | 
+bildirim | dinlenik | kesin=0 | belirsiz=8 | hedef=2 | 
+bildirim | uzerinde .tk-toast-close | kesin=0 | belirsiz=8 | hedef=2 | 
+bildirim | basili .tk-toast-close | kesin=0 | belirsiz=8 | hedef=2 | 
+bildirim | odak .tk-toast-close | kesin=0 | belirsiz=8 | hedef=2 | 
+istatistik | dinlenik | kesin=0 | belirsiz=9 | hedef=2 | 
+ayarlar | dinlenik | kesin=0 | belirsiz=16 | hedef=2 | 
+ayarlar | uzerinde .ql-main .tk-btn | kesin=0 | belirsiz=16 | hedef=2 | 
+ayarlar | basili .ql-main .tk-btn | kesin=0 | belirsiz=16 | hedef=2 | 
+ayarlar | odak .ql-main .tk-btn | kesin=0 | belirsiz=16 | hedef=2 | 
+ayarlar | uzerinde .ql-main select, .ql-main input | kesin=0 | belirsiz=16 | hedef=2 | 
+ayarlar | basili .ql-main select, .ql-main input | kesin=0 | belirsiz=16 | hedef=2 | 
+ayarlar | odak .ql-main select, .ql-main input | kesin=0 | belirsiz=16 | hedef=2 | 
+== run-once-1.5.log
+kutuphane | dinlenik | kesin=0 | belirsiz=9 | hedef=2 | 
+kutuphane | uzerinde .tk-titlebar__tab:not([aria-current]), .ql-nav:not(.ql-nav-active) | kesin=0 | belirsiz=11 | hedef=2 | 
+kutuphane | basili .tk-titlebar__tab:not([aria-current]), .ql-nav:not(.ql-nav-active) | kesin=0 | belirsiz=11 | hedef=2 | 
+kutuphane | odak .tk-titlebar__tab:not([aria-current]), .ql-nav:not(.ql-nav-active) | kesin=0 | belirsiz=9 | hedef=2 | 
+kutuphane | uzerinde .ql-main .tk-btn-primary | kesin=0 | belirsiz=9 | hedef=2 | 
+kutuphane | basili .ql-main .tk-btn-primary | kesin=0 | belirsiz=9 | hedef=2 | 
+kutuphane | odak .ql-main .tk-btn-primary | kesin=0 | belirsiz=9 | hedef=2 | 
+bolumler | dinlenik | kesin=0 | belirsiz=5 | hedef=2 | 
+bolumler | uzerinde .ql-main .tk-btn-primary | kesin=0 | belirsiz=5 | hedef=2 | 
+bolumler | basili .ql-main .tk-btn-primary | kesin=0 | belirsiz=5 | hedef=2 | 
+bolumler | odak .ql-main .tk-btn-primary | kesin=0 | belirsiz=5 | hedef=2 | 
+oturum-soru | dinlenik | kesin=0 | belirsiz=12 | hedef=2 | 
+oturum-soru | uzerinde .ql-main .tk-btn | kesin=0 | belirsiz=12 | hedef=2 | 
+oturum-soru | basili .ql-main .tk-btn | kesin=0 | belirsiz=12 | hedef=2 | 
+oturum-soru | odak .ql-main .tk-btn | kesin=0 | belirsiz=12 | hedef=2 | 
+oturum-siklar | dinlenik | kesin=0 | belirsiz=10 | hedef=2 | 
+oturum-siklar | uzerinde .ql-choice > button | kesin=0 | belirsiz=10 | hedef=2 | 
+oturum-siklar | basili .ql-choice > button | kesin=0 | belirsiz=10 | hedef=2 | 
+oturum-siklar | odak .ql-choice > button | kesin=0 | belirsiz=10 | hedef=2 | 
+oturum-cozum | dinlenik | kesin=1 | belirsiz=20 | hedef=2 | color-contrast-enhanced:1
+oturum-cozum | uzerinde .ql-grade-1 | kesin=1 | belirsiz=20 | hedef=2 | color-contrast-enhanced:1
+oturum-cozum | basili .ql-grade-1 | kesin=1 | belirsiz=20 | hedef=2 | color-contrast-enhanced:1
+oturum-cozum | odak .ql-grade-1 | kesin=1 | belirsiz=20 | hedef=2 | color-contrast-enhanced:1
+oturum-cozum | uzerinde .ql-book-open | kesin=1 | belirsiz=20 | hedef=2 | color-contrast-enhanced:1
+oturum-cozum | basili .ql-book-open | kesin=1 | belirsiz=20 | hedef=2 | color-contrast-enhanced:1
+oturum-cozum | odak .ql-book-open | kesin=1 | belirsiz=20 | hedef=2 | color-contrast-enhanced:1
+kitap | dinlenik | kesin=1 | belirsiz=23 | hedef=2 | color-contrast-enhanced:1
+kitap | uzerinde .ql-book-bar .tk-btn | kesin=1 | belirsiz=23 | hedef=2 | color-contrast-enhanced:1
+kitap | basili .ql-book-bar .tk-btn | kesin=1 | belirsiz=23 | hedef=2 | color-contrast-enhanced:1
+kitap | odak .ql-book-bar .tk-btn | kesin=1 | belirsiz=23 | hedef=2 | color-contrast-enhanced:1
+onay | dinlenik | kesin=1 | belirsiz=21 | hedef=2 | color-contrast-enhanced:1
+onay | uzerinde [role="dialog"] .tk-btn, [role="alertdialog"] .tk-btn | kesin=1 | belirsiz=21 | hedef=2 | color-contrast-enhanced:1
+onay | basili [role="dialog"] .tk-btn, [role="alertdialog"] .tk-btn | kesin=1 | belirsiz=21 | hedef=2 | color-contrast-enhanced:1
+onay | odak [role="dialog"] .tk-btn, [role="alertdialog"] .tk-btn | kesin=1 | belirsiz=21 | hedef=2 | color-contrast-enhanced:1
+ozet | dinlenik | kesin=0 | belirsiz=7 | hedef=2 | 
+ozet | uzerinde .ql-main .tk-btn | kesin=0 | belirsiz=7 | hedef=2 | 
+ozet | basili .ql-main .tk-btn | kesin=0 | belirsiz=7 | hedef=2 | 
+ozet | odak .ql-main .tk-btn | kesin=0 | belirsiz=7 | hedef=2 | 
+banka | dinlenik | kesin=0 | belirsiz=7 | hedef=2 | 
+banka | uzerinde .ql-bank-row:not(.ql-bank-row-active) | kesin=0 | belirsiz=7 | hedef=2 | 
+banka | basili .ql-bank-row:not(.ql-bank-row-active) | kesin=0 | belirsiz=7 | hedef=2 | 
+banka | odak .ql-bank-row:not(.ql-bank-row-active) | kesin=0 | belirsiz=7 | hedef=2 | 
+banka | yok .ql-book-open | kesin=undefined | belirsiz=undefined | hedef=undefined | 
+bildirim | dinlenik | kesin=0 | belirsiz=8 | hedef=2 | 
+bildirim | uzerinde .tk-toast-close | kesin=0 | belirsiz=8 | hedef=2 | 
+bildirim | basili .tk-toast-close | kesin=0 | belirsiz=8 | hedef=2 | 
+bildirim | odak .tk-toast-close | kesin=0 | belirsiz=8 | hedef=2 | 
+istatistik | dinlenik | kesin=0 | belirsiz=9 | hedef=2 | 
+ayarlar | dinlenik | kesin=0 | belirsiz=16 | hedef=2 | 
+ayarlar | uzerinde .ql-main .tk-btn | kesin=0 | belirsiz=16 | hedef=2 | 
+ayarlar | basili .ql-main .tk-btn | kesin=0 | belirsiz=16 | hedef=2 | 
+ayarlar | odak .ql-main .tk-btn | kesin=0 | belirsiz=16 | hedef=2 | 
+ayarlar | uzerinde .ql-main select, .ql-main input | kesin=0 | belirsiz=16 | hedef=2 | 
+ayarlar | basili .ql-main select, .ql-main input | kesin=0 | belirsiz=16 | hedef=2 | 
+ayarlar | odak .ql-main select, .ql-main input | kesin=0 | belirsiz=16 | hedef=2 | 
+== run-once-1.log
+kutuphane | dinlenik | kesin=0 | belirsiz=9 | hedef=1 | 
+kutuphane | uzerinde .tk-titlebar__tab:not([aria-current]), .ql-nav:not(.ql-nav-active) | kesin=0 | belirsiz=11 | hedef=1 | 
+kutuphane | basili .tk-titlebar__tab:not([aria-current]), .ql-nav:not(.ql-nav-active) | kesin=0 | belirsiz=11 | hedef=1 | 
+kutuphane | odak .tk-titlebar__tab:not([aria-current]), .ql-nav:not(.ql-nav-active) | kesin=0 | belirsiz=9 | hedef=1 | 
+kutuphane | uzerinde .ql-main .tk-btn-primary | kesin=0 | belirsiz=9 | hedef=1 | 
+kutuphane | basili .ql-main .tk-btn-primary | kesin=0 | belirsiz=9 | hedef=1 | 
+kutuphane | odak .ql-main .tk-btn-primary | kesin=0 | belirsiz=9 | hedef=1 | 
+bolumler | dinlenik | kesin=0 | belirsiz=5 | hedef=1 | 
+bolumler | uzerinde .ql-main .tk-btn-primary | kesin=0 | belirsiz=5 | hedef=1 | 
+bolumler | basili .ql-main .tk-btn-primary | kesin=0 | belirsiz=5 | hedef=1 | 
+bolumler | odak .ql-main .tk-btn-primary | kesin=0 | belirsiz=5 | hedef=1 | 
+oturum-soru | dinlenik | kesin=0 | belirsiz=12 | hedef=1 | 
+oturum-soru | uzerinde .ql-main .tk-btn | kesin=0 | belirsiz=12 | hedef=1 | 
+oturum-soru | basili .ql-main .tk-btn | kesin=0 | belirsiz=12 | hedef=1 | 
+oturum-soru | odak .ql-main .tk-btn | kesin=0 | belirsiz=12 | hedef=1 | 
+oturum-siklar | dinlenik | kesin=0 | belirsiz=10 | hedef=1 | 
+oturum-siklar | uzerinde .ql-choice > button | kesin=0 | belirsiz=10 | hedef=1 | 
+oturum-siklar | basili .ql-choice > button | kesin=0 | belirsiz=10 | hedef=1 | 
+oturum-siklar | odak .ql-choice > button | kesin=0 | belirsiz=10 | hedef=1 | 
+oturum-cozum | dinlenik | kesin=1 | belirsiz=18 | hedef=1 | color-contrast-enhanced:1
+oturum-cozum | uzerinde .ql-grade-1 | kesin=1 | belirsiz=18 | hedef=1 | color-contrast-enhanced:1
+oturum-cozum | basili .ql-grade-1 | kesin=1 | belirsiz=18 | hedef=1 | color-contrast-enhanced:1
+oturum-cozum | odak .ql-grade-1 | kesin=1 | belirsiz=18 | hedef=1 | color-contrast-enhanced:1
+oturum-cozum | uzerinde .ql-book-open | kesin=1 | belirsiz=18 | hedef=1 | color-contrast-enhanced:1
+oturum-cozum | basili .ql-book-open | kesin=1 | belirsiz=18 | hedef=1 | color-contrast-enhanced:1
+oturum-cozum | odak .ql-book-open | kesin=1 | belirsiz=18 | hedef=1 | color-contrast-enhanced:1
+kitap | dinlenik | kesin=1 | belirsiz=21 | hedef=1 | color-contrast-enhanced:1
+kitap | uzerinde .ql-book-bar .tk-btn | kesin=1 | belirsiz=21 | hedef=1 | color-contrast-enhanced:1
+kitap | basili .ql-book-bar .tk-btn | kesin=1 | belirsiz=21 | hedef=1 | color-contrast-enhanced:1
+kitap | odak .ql-book-bar .tk-btn | kesin=1 | belirsiz=21 | hedef=1 | color-contrast-enhanced:1
+onay | dinlenik | kesin=1 | belirsiz=19 | hedef=1 | color-contrast-enhanced:1
+onay | uzerinde [role="dialog"] .tk-btn, [role="alertdialog"] .tk-btn | kesin=1 | belirsiz=19 | hedef=1 | color-contrast-enhanced:1
+onay | basili [role="dialog"] .tk-btn, [role="alertdialog"] .tk-btn | kesin=1 | belirsiz=19 | hedef=1 | color-contrast-enhanced:1
+onay | odak [role="dialog"] .tk-btn, [role="alertdialog"] .tk-btn | kesin=1 | belirsiz=19 | hedef=1 | color-contrast-enhanced:1
+ozet | dinlenik | kesin=0 | belirsiz=7 | hedef=1 | 
+ozet | uzerinde .ql-main .tk-btn | kesin=0 | belirsiz=7 | hedef=1 | 
+ozet | basili .ql-main .tk-btn | kesin=0 | belirsiz=7 | hedef=1 | 
+ozet | odak .ql-main .tk-btn | kesin=0 | belirsiz=7 | hedef=1 | 
+banka | dinlenik | kesin=0 | belirsiz=7 | hedef=1 | 
+banka | uzerinde .ql-bank-row:not(.ql-bank-row-active) | kesin=0 | belirsiz=7 | hedef=1 | 
+banka | basili .ql-bank-row:not(.ql-bank-row-active) | kesin=0 | belirsiz=7 | hedef=1 | 
+banka | odak .ql-bank-row:not(.ql-bank-row-active) | kesin=0 | belirsiz=7 | hedef=1 | 
+banka | yok .ql-book-open | kesin=undefined | belirsiz=undefined | hedef=undefined | 
+bildirim | dinlenik | kesin=0 | belirsiz=8 | hedef=1 | 
+bildirim | uzerinde .tk-toast-close | kesin=0 | belirsiz=8 | hedef=1 | 
+bildirim | basili .tk-toast-close | kesin=0 | belirsiz=8 | hedef=1 | 
+bildirim | odak .tk-toast-close | kesin=0 | belirsiz=8 | hedef=1 | 
+istatistik | dinlenik | kesin=0 | belirsiz=9 | hedef=1 | 
+ayarlar | dinlenik | kesin=0 | belirsiz=16 | hedef=1 | 
+ayarlar | uzerinde .ql-main .tk-btn | kesin=0 | belirsiz=16 | hedef=1 | 
+ayarlar | basili .ql-main .tk-btn | kesin=0 | belirsiz=16 | hedef=1 | 
+ayarlar | odak .ql-main .tk-btn | kesin=0 | belirsiz=16 | hedef=1 | 
+ayarlar | uzerinde .ql-main select, .ql-main input | kesin=0 | belirsiz=16 | hedef=1 | 
+ayarlar | basili .ql-main select, .ql-main input | kesin=0 | belirsiz=16 | hedef=1 | 
+ayarlar | odak .ql-main select, .ql-main input | kesin=0 | belirsiz=16 | hedef=1 | 
+== run-once-bos.log
+onay-kaldir | dinlenik | kesin=1 | belirsiz=10 | hedef=1 | color-contrast-enhanced:1
+onay-kaldir | uzerinde [role="dialog"] .tk-btn, [role="alertdialog"] .tk-btn | kesin=1 | belirsiz=10 | hedef=1 | color-contrast-enhanced:1
+onay-kaldir | basili [role="dialog"] .tk-btn, [role="alertdialog"] .tk-btn | kesin=1 | belirsiz=10 | hedef=1 | color-contrast-enhanced:1
+onay-kaldir | odak [role="dialog"] .tk-btn, [role="alertdialog"] .tk-btn | kesin=1 | belirsiz=10 | hedef=1 | color-contrast-enhanced:1
+bos-kutuphane | dinlenik | kesin=0 | belirsiz=5 | hedef=1 | 
+bos-kutuphane | uzerinde .ql-main .tk-btn | kesin=0 | belirsiz=5 | hedef=1 | 
+bos-kutuphane | basili .ql-main .tk-btn | kesin=0 | belirsiz=5 | hedef=1 | 
+bos-kutuphane | odak .ql-main .tk-btn | kesin=0 | belirsiz=5 | hedef=1 | 
+bos-istatistik | dinlenik | kesin=0 | belirsiz=9 | hedef=1 | 
+onay-kaldir | dinlenik | kesin=1 | belirsiz=10 | hedef=2 | color-contrast-enhanced:1
+onay-kaldir | uzerinde [role="dialog"] .tk-btn, [role="alertdialog"] .tk-btn | kesin=1 | belirsiz=10 | hedef=2 | color-contrast-enhanced:1
+onay-kaldir | basili [role="dialog"] .tk-btn, [role="alertdialog"] .tk-btn | kesin=1 | belirsiz=10 | hedef=2 | color-contrast-enhanced:1
+onay-kaldir | odak [role="dialog"] .tk-btn, [role="alertdialog"] .tk-btn | kesin=1 | belirsiz=10 | hedef=2 | color-contrast-enhanced:1
+bos-kutuphane | dinlenik | kesin=0 | belirsiz=5 | hedef=2 | 
+bos-kutuphane | uzerinde .ql-main .tk-btn | kesin=0 | belirsiz=5 | hedef=2 | 
+bos-kutuphane | basili .ql-main .tk-btn | kesin=0 | belirsiz=5 | hedef=2 | 
+bos-kutuphane | odak .ql-main .tk-btn | kesin=0 | belirsiz=5 | hedef=2 | 
+bos-istatistik | dinlenik | kesin=0 | belirsiz=9 | hedef=2 | 
+onay-kaldir | dinlenik | kesin=1 | belirsiz=10 | hedef=2 | color-contrast-enhanced:1
+onay-kaldir | uzerinde [role="dialog"] .tk-btn, [role="alertdialog"] .tk-btn | kesin=1 | belirsiz=10 | hedef=2 | color-contrast-enhanced:1
+onay-kaldir | basili [role="dialog"] .tk-btn, [role="alertdialog"] .tk-btn | kesin=1 | belirsiz=10 | hedef=2 | color-contrast-enhanced:1
+onay-kaldir | odak [role="dialog"] .tk-btn, [role="alertdialog"] .tk-btn | kesin=1 | belirsiz=10 | hedef=2 | color-contrast-enhanced:1
+bos-kutuphane | dinlenik | kesin=0 | belirsiz=5 | hedef=2 | 
+bos-kutuphane | uzerinde .ql-main .tk-btn | kesin=0 | belirsiz=5 | hedef=2 | 
+bos-kutuphane | basili .ql-main .tk-btn | kesin=0 | belirsiz=5 | hedef=2 | 
+bos-kutuphane | odak .ql-main .tk-btn | kesin=0 | belirsiz=5 | hedef=2 | 
+bos-istatistik | dinlenik | kesin=0 | belirsiz=9 | hedef=2 | 

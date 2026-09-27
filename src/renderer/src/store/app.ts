@@ -15,6 +15,7 @@ export interface Toast {
   id: number
   kind: ToastKind
   text: string
+  life?: number
   leaving?: boolean
 }
 
@@ -29,7 +30,7 @@ interface AppState {
   loadSettings(): Promise<void>
   saveSettings(patch: Partial<Settings>): Promise<void>
   loadInfo(): Promise<void>
-  toast(kind: ToastKind, text: string): void
+  toast(kind: ToastKind, text: string, life?: number): void
   dismiss(id: number): void
 }
 
@@ -38,21 +39,21 @@ const TOAST_MAX = 3
 const TOAST_LIFE = 6000
 const TOAST_LEAVE = 160
 
-export const useApp = create<AppState>((set, get) => ({
+export const useApp = create<AppState>((set) => ({
   route: { name: 'library' },
   modules: null,
   settings: null,
   info: null,
   toasts: [],
-  go: (route) => set({ route }),
+  go: (route) => set((s) => ({ route, toasts: s.toasts.filter((t) => t.kind === 'danger') })),
   loadModules: async () => set({ modules: await window.quizloop.module.list() }),
   loadSettings: async () => set({ settings: await window.quizloop.settings.get() }),
   saveSettings: async (patch) => set({ settings: await window.quizloop.settings.set(patch) }),
   loadInfo: async () => set({ info: await window.quizloop.app.info() }),
-  toast: (kind, text) => {
+  toast: (kind, text, life) => {
     const id = ++seq
-    set((s) => ({ toasts: [...s.toasts, { id, kind, text }].slice(-TOAST_MAX) }))
-    if (kind !== 'danger') setTimeout(() => get().dismiss(id), TOAST_LIFE)
+    const t: Toast = { id, kind, text, life: kind === 'danger' ? undefined : (life ?? TOAST_LIFE) }
+    set((s) => ({ toasts: [...s.toasts, t].slice(-TOAST_MAX) }))
   },
   dismiss: (id) => {
     set((s) => ({ toasts: s.toasts.map((t) => (t.id === id ? { ...t, leaving: true } : t)) }))

@@ -1,6 +1,6 @@
 {
   "version": "1.1.0",
-  "template": "neon",
+  "template": "benim",
   "off": false,
   "targets": [
     "css",
@@ -10,11 +10,11 @@
     "sans": "'Atkinson Hyperlegible Next', 'Segoe UI', system-ui, sans-serif",
     "mono": "'Cascadia Mono', Consolas, ui-monospace, monospace",
     "scale": [
-      10,
-      13,
       14,
-      18,
-      24
+      16,
+      20,
+      24,
+      32
     ]
   },
   "signature": {
@@ -26,11 +26,34 @@
   },
   "note": "",
   "palette": {
-    "primary": "#00f3ff",
-    "secondary": "#ff00ea",
-    "tertiary": "#b026ff",
-    "surface": "#08090a",
+    "primary": "#6fb7ff",
+    "secondary": "#cba7d2",
+    "tertiary": "#c3a3ff",
+    "surface": "#000000",
     "dark": true
   },
-  "installedAt": "2026-09-08T16:47:04.919Z"
+  "installedAt": "2026-09-08T16:47:04.919Z",
+  "duzen": "b3a56d17ff70849c",
+  "notlar": [
+    "Arka plan tasarımı: duz (token karşılığı yok).",
+    "Kaydırma çubuğu biçimi: solan.",
+    "Arayüz geçiş eğrisi: emphasized (önizlemede --tk-e-out yerine).",
+    "Cam bulanıklığı: 0 px.",
+    "Panel gölgesi gücü: ×0.",
+    "Pencere kenarı: yok.",
+    "Düğme: 28 px yükseklik, 10 px yatay dolgu.",
+    "Üst çubuk yüksekliği: 28 px (titlebar-h-min)."
+  ],
+  "ignore": [
+    {
+      "rule": "guncelleme/panel-yok",
+      "file": "src/main/update.ts",
+      "reason": "Kurulum penceresi electron-builder NSIS; kur şablonu USB+SSH özel-depo kurulumu üretiyor ve kurulum-paneli kitabı (GitHub Releases + sha256, SSH anahtarı taşınmaz) bunu yasaklıyor. Şablona Releases türü eklenince kaldırılır."
+    },
+    {
+      "rule": "kabuk/sablon-imzasiz",
+      "file": "src/renderer/src/components/UpdateBadge.tsx",
+      "reason": "durum şablonunun Electron türü git senkron rozeti; electron-updater iki adımlı güncelleme rozeti şablonda yok. Şablona eklenince bu dosya şablonla değişir."
+    }
+  ]
 }

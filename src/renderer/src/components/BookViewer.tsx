@@ -369,7 +369,7 @@ export function BookViewer({
               type="button"
               className="tk-btn tk-btn-ghost ql-btn-sm"
               onClick={() => turn('prev')}
-              disabled={left <= 1}
+              disabled={showPick || left <= 1}
             >
               {t('book.prev')}
             </button>
@@ -377,7 +377,7 @@ export function BookViewer({
               type="button"
               className="tk-btn tk-btn-ghost ql-btn-sm"
               onClick={() => turn('next')}
-              disabled={left + step > maxLeft}
+              disabled={showPick || left + step > maxLeft}
             >
               {t('book.next')}
             </button>
@@ -432,15 +432,26 @@ export function BookViewer({
               <figcaption className="tk-hint">{t('book.kesitOnly')}</figcaption>
             </figure>
           ) : (
-            <p className="tk-prose ql-book-loading">{t('book.missing')}</p>
+            <div className="ql-book-missing">
+              <p className="tk-prose">{t('book.missing')}</p>
+              <button
+                type="button"
+                className="tk-btn tk-btn-primary"
+                onClick={pick}
+                disabled={busy}
+                title={busy ? t('book.busy') : t('book.pick')}
+              >
+                {t('book.pick')}
+              </button>
+            </div>
           )}
         </div>
 
         <footer className="ql-book-foot">
           <p className="ql-book-quote">{source.quote}</p>
-          {(showPick || showForget) && (
+          {((showPick && kesitRef) || showForget) && (
             <span className="ql-book-source">
-              {showPick && (
+              {showPick && kesitRef && (
                 <button
                   type="button"
                   className="tk-btn tk-btn-ghost ql-btn-sm"

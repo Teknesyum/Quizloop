@@ -1,0 +1,7 @@
+
+> quizloop@0.1.0 ui:scan
+> node scripts/ui-scan.mjs
+
+src/renderer/src/App.tsx:1  core/list-without-motion  list render, no position animation
+src/renderer/src/components/Solution.tsx:1  core/list-without-motion  list render, no position animation
+176 files · 2 open · 0 fixed · 0 error(s) · 2 ignored

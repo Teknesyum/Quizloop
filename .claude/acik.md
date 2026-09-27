@@ -1,4 +1,10 @@
-- [x] J11 zorluk etiketleri — ikisi: istemde ortak ölçüt + sonradan etiketleme (karar 0007)
-- [x] Zorluk etiketlerini tutarlı hale getir (3030 soru yeniden etiketlensin) — 1864 etiket değişti, uyum %76-85 (olcumler/0003)
-- [x] ajan: Etiketle 009-012 — tamam, zcheck geçti (kolay 225, orta 152, zor 23)
-- [x] ajan: Etiketle 021-024 — tamam, zcheck geçti
+- [x] Eski token adlarını benim adlarına taşı (app.css, Stats.tsx) — 2026-09-27 01:51 — jobs.md
+- [x] scan.js 0.11.0 → 0 hata (güncelleme paneli dahil) — 2026-09-27 01:51 — jobs.md
+- [x] Ekran envanteri — 2026-09-27 01:51 — jobs.md
+- [x] Önce görüntüleri 100/125/150 — 2026-09-27 01:51 — jobs.md
+- [x] Canlı kontrast + axe her hâlde — 2026-09-27 01:51 — jobs.md
+- [x] Dış gözden geçirme — 2026-09-27 01:51 — jobs.md
+- [x] Düzelt, yeniden ölç, sonra görüntüleri — 2026-09-27 01:51 — jobs.md
+- [x] Raf kitapları: depo, guncelleme-paneli, kurulum-paneli, lisans, readme-protokolu, ui, ui-duzeni — 2026-09-27 01:51 — jobs.md
+- [x] Rapor docs/ui-denetim/2026-09-27.md — 2026-09-27 01:51 — jobs.md
+- [x] Beş denetim, commit, push — 2026-09-27 01:51 — jobs.md

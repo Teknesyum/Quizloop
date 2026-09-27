@@ -1,0 +1,1 @@
+- [ ] ajan: Dış göz görüntü incelemesi — 2026-09-27 02:12 — sonucu aktarılacak

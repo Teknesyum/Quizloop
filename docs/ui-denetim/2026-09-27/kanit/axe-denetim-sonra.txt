@@ -1,0 +1,291 @@
+=== dolu olcek 1
+kutuphane | dinlenik | kesin=0 | belirsiz=0 | hedef=0 | 
+kutuphane | uzerinde .tk-titlebar__tab:not([aria-current]), .ql-nav:not(.ql-nav-active) | kesin=0 | belirsiz=0 | hedef=0 | 
+kutuphane | basili .tk-titlebar__tab:not([aria-current]), .ql-nav:not(.ql-nav-active) | kesin=0 | belirsiz=0 | hedef=0 | 
+kutuphane | odak .tk-titlebar__tab:not([aria-current]), .ql-nav:not(.ql-nav-active) | kesin=0 | belirsiz=0 | hedef=0 | 
+kutuphane | uzerinde .ql-main .tk-btn-primary | kesin=0 | belirsiz=0 | hedef=0 | 
+kutuphane | basili .ql-main .tk-btn-primary | kesin=0 | belirsiz=0 | hedef=0 | 
+kutuphane | odak .ql-main .tk-btn-primary | kesin=0 | belirsiz=0 | hedef=0 | 
+bolumler | dinlenik | kesin=0 | belirsiz=0 | hedef=0 | 
+bolumler | uzerinde .ql-main .tk-btn-primary | kesin=0 | belirsiz=0 | hedef=0 | 
+bolumler | basili .ql-main .tk-btn-primary | kesin=0 | belirsiz=0 | hedef=0 | 
+bolumler | odak .ql-main .tk-btn-primary | kesin=0 | belirsiz=0 | hedef=0 | 
+oturum-soru | dinlenik | kesin=0 | belirsiz=0 | hedef=0 | 
+oturum-soru | uzerinde .ql-main .tk-btn | kesin=0 | belirsiz=0 | hedef=0 | 
+oturum-soru | basili .ql-main .tk-btn | kesin=0 | belirsiz=0 | hedef=0 | 
+oturum-soru | odak .ql-main .tk-btn | kesin=0 | belirsiz=0 | hedef=0 | 
+oturum-siklar | dinlenik | kesin=0 | belirsiz=0 | hedef=0 | 
+oturum-siklar | uzerinde .ql-choice > button | kesin=0 | belirsiz=0 | hedef=0 | 
+oturum-siklar | basili .ql-choice > button | kesin=0 | belirsiz=0 | hedef=0 | 
+oturum-siklar | odak .ql-choice > button | kesin=0 | belirsiz=0 | hedef=0 | 
+oturum-cozum | dinlenik | kesin=0 | belirsiz=0 | hedef=0 | 
+oturum-cozum | uzerinde .ql-grade-1 | kesin=0 | belirsiz=0 | hedef=0 | 
+oturum-cozum | basili .ql-grade-1 | kesin=0 | belirsiz=0 | hedef=0 | 
+oturum-cozum | odak .ql-grade-1 | kesin=0 | belirsiz=0 | hedef=0 | 
+oturum-cozum | uzerinde .ql-book-open | kesin=0 | belirsiz=0 | hedef=0 | 
+oturum-cozum | basili .ql-book-open | kesin=0 | belirsiz=0 | hedef=0 | 
+oturum-cozum | odak .ql-book-open | kesin=0 | belirsiz=0 | hedef=0 | 
+kitap | dinlenik | kesin=0 | belirsiz=0 | hedef=0 | 
+kitap | uzerinde .ql-book-bar .tk-btn | kesin=0 | belirsiz=0 | hedef=0 | 
+kitap | basili .ql-book-bar .tk-btn | kesin=0 | belirsiz=0 | hedef=0 | 
+kitap | odak .ql-book-bar .tk-btn | kesin=0 | belirsiz=0 | hedef=0 | 
+onay | dinlenik | kesin=0 | belirsiz=0 | hedef=0 | 
+onay | uzerinde [role="dialog"] .tk-btn, [role="alertdialog"] .tk-btn | kesin=0 | belirsiz=0 | hedef=0 | 
+onay | basili [role="dialog"] .tk-btn, [role="alertdialog"] .tk-btn | kesin=0 | belirsiz=0 | hedef=0 | 
+onay | odak [role="dialog"] .tk-btn, [role="alertdialog"] .tk-btn | kesin=0 | belirsiz=0 | hedef=0 | 
+ozet | dinlenik | kesin=0 | belirsiz=0 | hedef=0 | 
+ozet | uzerinde .ql-main .tk-btn | kesin=0 | belirsiz=0 | hedef=0 | 
+ozet | basili .ql-main .tk-btn | kesin=0 | belirsiz=0 | hedef=0 | 
+ozet | odak .ql-main .tk-btn | kesin=0 | belirsiz=0 | hedef=0 | 
+banka | dinlenik | kesin=0 | belirsiz=0 | hedef=0 | 
+banka | uzerinde .ql-bank-row:not(.ql-bank-row-active) | kesin=0 | belirsiz=0 | hedef=0 | 
+banka | basili .ql-bank-row:not(.ql-bank-row-active) | kesin=0 | belirsiz=0 | hedef=0 | 
+banka | odak .ql-bank-row:not(.ql-bank-row-active) | kesin=0 | belirsiz=0 | hedef=0 | 
+banka | yok .ql-book-open | kesin=undefined | belirsiz=undefined | hedef=undefined | 
+bildirim | dinlenik | kesin=0 | belirsiz=0 | hedef=0 | 
+bildirim | uzerinde .tk-toast-close | kesin=0 | belirsiz=0 | hedef=0 | 
+bildirim | basili .tk-toast-close | kesin=0 | belirsiz=0 | hedef=0 | 
+bildirim | odak .tk-toast-close | kesin=0 | belirsiz=0 | hedef=0 | 
+istatistik | dinlenik | kesin=0 | belirsiz=0 | hedef=0 | 
+ayarlar | dinlenik | kesin=0 | belirsiz=0 | hedef=0 | 
+ayarlar | uzerinde .ql-main .tk-btn | kesin=0 | belirsiz=0 | hedef=0 | 
+ayarlar | basili .ql-main .tk-btn | kesin=0 | belirsiz=0 | hedef=0 | 
+ayarlar | odak .ql-main .tk-btn | kesin=0 | belirsiz=0 | hedef=0 | 
+ayarlar | uzerinde .ql-main select, .ql-main input | kesin=0 | belirsiz=0 | hedef=0 | 
+ayarlar | basili .ql-main select, .ql-main input | kesin=0 | belirsiz=0 | hedef=0 | 
+ayarlar | odak .ql-main select, .ql-main input | kesin=0 | belirsiz=0 | hedef=0 | 
+OLC kutuphane .ql-book-open: yok || .ql-card-version: fg=#ffffff bg=#000000 oran=21.00 boyut=52.8x24.0 || .tk-titlebar__sponsor, .tk-titlebar a: fg=#ac7fff bg=#000000 oran=7.23 boyut=166.4x32.0 || .tk-titlebar__brand, .tk-titlebar a:last-of-type: fg=#ffffff bg=#000000 oran=21.00 boyut=98.3x32.0 || .ql-main .tk-btn-ghost: fg=#ffffff bg=#000000 oran=21.00 boyut=214.3x55.0
+KAYMA kutuphane: 
+OLC bolumler .ql-book-open: yok || .ql-card-version: yok || .tk-titlebar__sponsor, .tk-titlebar a: fg=#ac7fff bg=#000000 oran=7.23 boyut=166.4x32.0 || .tk-titlebar__brand, .tk-titlebar a:last-of-type: fg=#ffffff bg=#000000 oran=21.00 boyut=98.3x32.0 || .ql-main .tk-btn-ghost: fg=#ffffff bg=#000000 oran=21.00 boyut=210.9x55.0
+KAYMA bolumler: 
+OLC oturum-soru .ql-book-open: yok || .ql-card-version: yok || .tk-titlebar__sponsor, .tk-titlebar a: fg=#ac7fff bg=#000000 oran=7.23 boyut=166.4x32.0 || .tk-titlebar__brand, .tk-titlebar a:last-of-type: fg=#ffffff bg=#000000 oran=21.00 boyut=98.3x32.0 || .ql-main .tk-btn-ghost: fg=#ffffff bg=#000000 oran=21.00 boyut=95.3x38.0
+KAYMA oturum-soru: 
+OLC oturum-siklar .ql-book-open: yok || .ql-card-version: yok || .tk-titlebar__sponsor, .tk-titlebar a: fg=#ac7fff bg=#000000 oran=7.23 boyut=166.4x32.0 || .tk-titlebar__brand, .tk-titlebar a:last-of-type: fg=#ffffff bg=#000000 oran=21.00 boyut=98.3x32.0 || .ql-main .tk-btn-ghost: fg=#ffffff bg=#000000 oran=21.00 boyut=95.3x38.0
+KAYMA oturum-siklar: 
+OLC oturum-cozum .ql-book-open: fg=#ffffff bg=#000000 oran=21.00 boyut=1836.5x38.0 || .ql-card-version: yok || .tk-titlebar__sponsor, .tk-titlebar a: fg=#ac7fff bg=#000000 oran=7.23 boyut=166.4x32.0 || .tk-titlebar__brand, .tk-titlebar a:last-of-type: fg=#ffffff bg=#000000 oran=21.00 boyut=98.3x32.0 || .ql-main .tk-btn-ghost: fg=#ffffff bg=#000000 oran=21.00 boyut=95.3x38.0
+KAYMA oturum-cozum: ql-main=295auto
+ALT HEADER.tk-titlebar:0-33 DIV.ql-body:32-1400 DIV.tk-toast-stack:1352-1352 main:1400 vh=1400 dugme-alt=1319,1319,1319 cubuk-ust=1367
+OLC kitap .ql-book-open: fg=#ffffff bg=#000000 oran=21.00 boyut=1836.5x38.0 || .ql-card-version: yok || .tk-titlebar__sponsor, .tk-titlebar a: fg=#ac7fff bg=#000000 oran=7.23 boyut=166.4x32.0 || .tk-titlebar__brand, .tk-titlebar a:last-of-type: fg=#ffffff bg=#000000 oran=21.00 boyut=98.3x32.0 || .ql-main .tk-btn-ghost: fg=#ffffff bg=#000000 oran=21.00 boyut=95.3x38.0
+KAYMA kitap: ql-main=336auto
+OLC onay .ql-book-open: fg=#ffffff bg=#000000 oran=21.00 boyut=1836.5x38.0 || .ql-card-version: yok || .tk-titlebar__sponsor, .tk-titlebar a: fg=#ac7fff bg=#000000 oran=7.23 boyut=166.4x32.0 || .tk-titlebar__brand, .tk-titlebar a:last-of-type: fg=#ffffff bg=#000000 oran=21.00 boyut=98.3x32.0 || .ql-main .tk-btn-ghost: fg=#ffffff bg=#000000 oran=21.00 boyut=95.3x38.0
+KAYMA onay: ql-main=336auto
+OLC ozet .ql-book-open: yok || .ql-card-version: yok || .tk-titlebar__sponsor, .tk-titlebar a: fg=#ac7fff bg=#000000 oran=7.23 boyut=166.4x32.0 || .tk-titlebar__brand, .tk-titlebar a:last-of-type: fg=#ffffff bg=#000000 oran=21.00 boyut=98.3x32.0 || .ql-main .tk-btn-ghost: fg=#ffffff bg=#000000 oran=21.00 boyut=210.9x55.0
+KAYMA ozet: 
+OLC banka .ql-book-open: yok || .ql-card-version: yok || .tk-titlebar__sponsor, .tk-titlebar a: fg=#ac7fff bg=#000000 oran=7.23 boyut=166.4x32.0 || .tk-titlebar__brand, .tk-titlebar a:last-of-type: fg=#ffffff bg=#000000 oran=21.00 boyut=98.3x32.0 || .ql-main .tk-btn-ghost: fg=#ffffff bg=#000000 oran=21.00 boyut=161.1x38.0
+KAYMA banka: 
+OLC bildirim .ql-book-open: yok || .ql-card-version: yok || .tk-titlebar__sponsor, .tk-titlebar a: fg=#ac7fff bg=#000000 oran=7.23 boyut=166.4x32.0 || .tk-titlebar__brand, .tk-titlebar a:last-of-type: fg=#ffffff bg=#000000 oran=21.00 boyut=98.3x32.0 || .ql-main .tk-btn-ghost: fg=#ffffff bg=#000000 oran=21.00 boyut=161.1x38.0
+KAYMA bildirim: 
+OLC istatistik .ql-book-open: yok || .ql-card-version: yok || .tk-titlebar__sponsor, .tk-titlebar a: fg=#ac7fff bg=#000000 oran=7.23 boyut=166.4x32.0 || .tk-titlebar__brand, .tk-titlebar a:last-of-type: fg=#ffffff bg=#000000 oran=21.00 boyut=98.3x32.0 || .ql-main .tk-btn-ghost: yok
+KAYMA istatistik: 
+OLC ayarlar .ql-book-open: yok || .ql-card-version: yok || .tk-titlebar__sponsor, .tk-titlebar a: fg=#ac7fff bg=#000000 oran=7.23 boyut=166.4x32.0 || .tk-titlebar__brand, .tk-titlebar a:last-of-type: fg=#ffffff bg=#000000 oran=21.00 boyut=98.3x32.0 || .ql-main .tk-btn-ghost: fg=#ffffff bg=#000000 oran=21.00 boyut=71.4x38.0
+KAYMA ayarlar: 
+=== dolu olcek 1.25
+kutuphane | dinlenik | kesin=0 | belirsiz=0 | hedef=0 | 
+kutuphane | uzerinde .tk-titlebar__tab:not([aria-current]), .ql-nav:not(.ql-nav-active) | kesin=0 | belirsiz=0 | hedef=0 | 
+kutuphane | basili .tk-titlebar__tab:not([aria-current]), .ql-nav:not(.ql-nav-active) | kesin=0 | belirsiz=0 | hedef=0 | 
+kutuphane | odak .tk-titlebar__tab:not([aria-current]), .ql-nav:not(.ql-nav-active) | kesin=0 | belirsiz=0 | hedef=0 | 
+kutuphane | uzerinde .ql-main .tk-btn-primary | kesin=0 | belirsiz=0 | hedef=0 | 
+kutuphane | basili .ql-main .tk-btn-primary | kesin=0 | belirsiz=0 | hedef=0 | 
+kutuphane | odak .ql-main .tk-btn-primary | kesin=0 | belirsiz=0 | hedef=0 | 
+bolumler | dinlenik | kesin=0 | belirsiz=0 | hedef=0 | 
+bolumler | uzerinde .ql-main .tk-btn-primary | kesin=0 | belirsiz=0 | hedef=0 | 
+bolumler | basili .ql-main .tk-btn-primary | kesin=0 | belirsiz=0 | hedef=0 | 
+bolumler | odak .ql-main .tk-btn-primary | kesin=0 | belirsiz=0 | hedef=0 | 
+oturum-soru | dinlenik | kesin=0 | belirsiz=0 | hedef=0 | 
+oturum-soru | uzerinde .ql-main .tk-btn | kesin=0 | belirsiz=0 | hedef=0 | 
+oturum-soru | basili .ql-main .tk-btn | kesin=0 | belirsiz=0 | hedef=0 | 
+oturum-soru | odak .ql-main .tk-btn | kesin=0 | belirsiz=0 | hedef=0 | 
+oturum-siklar | dinlenik | kesin=0 | belirsiz=0 | hedef=0 | 
+oturum-siklar | uzerinde .ql-choice > button | kesin=0 | belirsiz=0 | hedef=0 | 
+oturum-siklar | basili .ql-choice > button | kesin=0 | belirsiz=0 | hedef=0 | 
+oturum-siklar | odak .ql-choice > button | kesin=0 | belirsiz=0 | hedef=0 | 
+oturum-cozum | dinlenik | kesin=0 | belirsiz=0 | hedef=0 | 
+oturum-cozum | uzerinde .ql-grade-1 | kesin=0 | belirsiz=0 | hedef=0 | 
+oturum-cozum | basili .ql-grade-1 | kesin=0 | belirsiz=0 | hedef=0 | 
+oturum-cozum | odak .ql-grade-1 | kesin=0 | belirsiz=0 | hedef=0 | 
+oturum-cozum | uzerinde .ql-book-open | kesin=0 | belirsiz=0 | hedef=0 | 
+oturum-cozum | basili .ql-book-open | kesin=0 | belirsiz=0 | hedef=0 | 
+oturum-cozum | odak .ql-book-open | kesin=0 | belirsiz=0 | hedef=0 | 
+kitap | dinlenik | kesin=0 | belirsiz=0 | hedef=0 | 
+kitap | uzerinde .ql-book-bar .tk-btn | kesin=0 | belirsiz=0 | hedef=0 | 
+kitap | basili .ql-book-bar .tk-btn | kesin=0 | belirsiz=0 | hedef=0 | 
+kitap | odak .ql-book-bar .tk-btn | kesin=0 | belirsiz=0 | hedef=0 | 
+onay | dinlenik | kesin=0 | belirsiz=0 | hedef=0 | 
+onay | uzerinde [role="dialog"] .tk-btn, [role="alertdialog"] .tk-btn | kesin=0 | belirsiz=0 | hedef=0 | 
+onay | basili [role="dialog"] .tk-btn, [role="alertdialog"] .tk-btn | kesin=0 | belirsiz=0 | hedef=0 | 
+onay | odak [role="dialog"] .tk-btn, [role="alertdialog"] .tk-btn | kesin=0 | belirsiz=0 | hedef=0 | 
+ozet | dinlenik | kesin=0 | belirsiz=0 | hedef=0 | 
+ozet | uzerinde .ql-main .tk-btn | kesin=0 | belirsiz=0 | hedef=0 | 
+ozet | basili .ql-main .tk-btn | kesin=0 | belirsiz=0 | hedef=0 | 
+ozet | odak .ql-main .tk-btn | kesin=0 | belirsiz=0 | hedef=0 | 
+banka | dinlenik | kesin=0 | belirsiz=0 | hedef=0 | 
+banka | uzerinde .ql-bank-row:not(.ql-bank-row-active) | kesin=0 | belirsiz=0 | hedef=0 | 
+banka | basili .ql-bank-row:not(.ql-bank-row-active) | kesin=0 | belirsiz=0 | hedef=0 | 
+banka | odak .ql-bank-row:not(.ql-bank-row-active) | kesin=0 | belirsiz=0 | hedef=0 | 
+banka | yok .ql-book-open | kesin=undefined | belirsiz=undefined | hedef=undefined | 
+bildirim | dinlenik | kesin=0 | belirsiz=0 | hedef=0 | 
+bildirim | uzerinde .tk-toast-close | kesin=0 | belirsiz=0 | hedef=0 | 
+bildirim | basili .tk-toast-close | kesin=0 | belirsiz=0 | hedef=0 | 
+bildirim | odak .tk-toast-close | kesin=0 | belirsiz=0 | hedef=0 | 
+istatistik | dinlenik | kesin=0 | belirsiz=0 | hedef=0 | 
+ayarlar | dinlenik | kesin=0 | belirsiz=0 | hedef=0 | 
+ayarlar | uzerinde .ql-main .tk-btn | kesin=0 | belirsiz=0 | hedef=0 | 
+ayarlar | basili .ql-main .tk-btn | kesin=0 | belirsiz=0 | hedef=0 | 
+ayarlar | odak .ql-main .tk-btn | kesin=0 | belirsiz=0 | hedef=0 | 
+ayarlar | uzerinde .ql-main select, .ql-main input | kesin=0 | belirsiz=0 | hedef=0 | 
+ayarlar | basili .ql-main select, .ql-main input | kesin=0 | belirsiz=0 | hedef=0 | 
+ayarlar | odak .ql-main select, .ql-main input | kesin=0 | belirsiz=0 | hedef=0 | 
+OLC kutuphane .ql-book-open: yok || .ql-card-version: fg=#ffffff bg=#000000 oran=21.00 boyut=46.2x21.0 || .tk-titlebar__sponsor, .tk-titlebar a: fg=#ac7fff bg=#000000 oran=7.23 boyut=151.6x32.0 || .tk-titlebar__brand, .tk-titlebar a:last-of-type: fg=#ffffff bg=#000000 oran=21.00 boyut=81.9x32.0 || .ql-main .tk-btn-ghost: fg=#ffffff bg=#000000 oran=21.00 boyut=179.4x49.6
+KAYMA kutuphane: 
+OLC bolumler .ql-book-open: yok || .ql-card-version: yok || .tk-titlebar__sponsor, .tk-titlebar a: fg=#ac7fff bg=#000000 oran=7.23 boyut=151.6x32.0 || .tk-titlebar__brand, .tk-titlebar a:last-of-type: fg=#ffffff bg=#000000 oran=21.00 boyut=81.9x32.0 || .ql-main .tk-btn-ghost: fg=#ffffff bg=#000000 oran=21.00 boyut=176.7x49.6
+KAYMA bolumler: 
+OLC oturum-soru .ql-book-open: yok || .ql-card-version: yok || .tk-titlebar__sponsor, .tk-titlebar a: fg=#ac7fff bg=#000000 oran=7.23 boyut=151.6x32.0 || .tk-titlebar__brand, .tk-titlebar a:last-of-type: fg=#ffffff bg=#000000 oran=21.00 boyut=81.9x32.0 || .ql-main .tk-btn-ghost: fg=#ffffff bg=#000000 oran=21.00 boyut=86.3x35.1
+KAYMA oturum-soru: 
+OLC oturum-siklar .ql-book-open: yok || .ql-card-version: yok || .tk-titlebar__sponsor, .tk-titlebar a: fg=#ac7fff bg=#000000 oran=7.23 boyut=151.6x32.0 || .tk-titlebar__brand, .tk-titlebar a:last-of-type: fg=#ffffff bg=#000000 oran=21.00 boyut=81.9x32.0 || .ql-main .tk-btn-ghost: fg=#ffffff bg=#000000 oran=21.00 boyut=86.3x35.1
+KAYMA oturum-siklar: 
+OLC oturum-cozum .ql-book-open: fg=#ffffff bg=#000000 oran=21.00 boyut=1315.2x35.1 || .ql-card-version: yok || .tk-titlebar__sponsor, .tk-titlebar a: fg=#ac7fff bg=#000000 oran=7.23 boyut=151.6x32.0 || .tk-titlebar__brand, .tk-titlebar a:last-of-type: fg=#ffffff bg=#000000 oran=21.00 boyut=81.9x32.0 || .ql-main .tk-btn-ghost: fg=#ffffff bg=#000000 oran=21.00 boyut=86.3x35.1
+KAYMA oturum-cozum: ql-main=421.6000061035156auto
+ALT HEADER.tk-titlebar:0-33 DIV.ql-body:32-1120 DIV.tk-toast-stack:1072-1072 main:1120 vh=1120 dugme-alt=1040,1040,1040 cubuk-ust=1087
+OLC kitap .ql-book-open: fg=#ffffff bg=#000000 oran=21.00 boyut=1315.2x35.1 || .ql-card-version: yok || .tk-titlebar__sponsor, .tk-titlebar a: fg=#ac7fff bg=#000000 oran=7.23 boyut=151.6x32.0 || .tk-titlebar__brand, .tk-titlebar a:last-of-type: fg=#ffffff bg=#000000 oran=21.00 boyut=81.9x32.0 || .ql-main .tk-btn-ghost: fg=#ffffff bg=#000000 oran=21.00 boyut=86.3x35.1
+KAYMA kitap: ql-main=462.3999938964844auto
+OLC onay .ql-book-open: fg=#ffffff bg=#000000 oran=21.00 boyut=1315.2x35.1 || .ql-card-version: yok || .tk-titlebar__sponsor, .tk-titlebar a: fg=#ac7fff bg=#000000 oran=7.23 boyut=151.6x32.0 || .tk-titlebar__brand, .tk-titlebar a:last-of-type: fg=#ffffff bg=#000000 oran=21.00 boyut=81.9x32.0 || .ql-main .tk-btn-ghost: fg=#ffffff bg=#000000 oran=21.00 boyut=86.3x35.1
+KAYMA onay: ql-main=462.3999938964844auto
+OLC ozet .ql-book-open: yok || .ql-card-version: yok || .tk-titlebar__sponsor, .tk-titlebar a: fg=#ac7fff bg=#000000 oran=7.23 boyut=151.6x32.0 || .tk-titlebar__brand, .tk-titlebar a:last-of-type: fg=#ffffff bg=#000000 oran=21.00 boyut=81.9x32.0 || .ql-main .tk-btn-ghost: fg=#ffffff bg=#000000 oran=21.00 boyut=176.7x49.6
+KAYMA ozet: 
+OLC banka .ql-book-open: yok || .ql-card-version: yok || .tk-titlebar__sponsor, .tk-titlebar a: fg=#ac7fff bg=#000000 oran=7.23 boyut=151.6x32.0 || .tk-titlebar__brand, .tk-titlebar a:last-of-type: fg=#ffffff bg=#000000 oran=21.00 boyut=81.9x32.0 || .ql-main .tk-btn-ghost: fg=#ffffff bg=#000000 oran=21.00 boyut=143.8x35.1
+KAYMA banka: 
+OLC bildirim .ql-book-open: yok || .ql-card-version: yok || .tk-titlebar__sponsor, .tk-titlebar a: fg=#ac7fff bg=#000000 oran=7.23 boyut=151.6x32.0 || .tk-titlebar__brand, .tk-titlebar a:last-of-type: fg=#ffffff bg=#000000 oran=21.00 boyut=81.9x32.0 || .ql-main .tk-btn-ghost: fg=#ffffff bg=#000000 oran=21.00 boyut=143.8x35.1
+KAYMA bildirim: 
+OLC istatistik .ql-book-open: yok || .ql-card-version: yok || .tk-titlebar__sponsor, .tk-titlebar a: fg=#ac7fff bg=#000000 oran=7.23 boyut=151.6x32.0 || .tk-titlebar__brand, .tk-titlebar a:last-of-type: fg=#ffffff bg=#000000 oran=21.00 boyut=81.9x32.0 || .ql-main .tk-btn-ghost: yok
+KAYMA istatistik: 
+OLC ayarlar .ql-book-open: yok || .ql-card-version: yok || .tk-titlebar__sponsor, .tk-titlebar a: fg=#ac7fff bg=#000000 oran=7.23 boyut=151.6x32.0 || .tk-titlebar__brand, .tk-titlebar a:last-of-type: fg=#ffffff bg=#000000 oran=21.00 boyut=81.9x32.0 || .ql-main .tk-btn-ghost: fg=#ffffff bg=#000000 oran=21.00 boyut=65.3x35.1
+KAYMA ayarlar: 
+=== dolu olcek 1.5
+kutuphane | dinlenik | kesin=0 | belirsiz=0 | hedef=0 | 
+kutuphane | uzerinde .tk-titlebar__tab:not([aria-current]), .ql-nav:not(.ql-nav-active) | kesin=0 | belirsiz=0 | hedef=0 | 
+kutuphane | basili .tk-titlebar__tab:not([aria-current]), .ql-nav:not(.ql-nav-active) | kesin=0 | belirsiz=0 | hedef=0 | 
+kutuphane | odak .tk-titlebar__tab:not([aria-current]), .ql-nav:not(.ql-nav-active) | kesin=0 | belirsiz=0 | hedef=0 | 
+kutuphane | uzerinde .ql-main .tk-btn-primary | kesin=0 | belirsiz=0 | hedef=0 | 
+kutuphane | basili .ql-main .tk-btn-primary | kesin=0 | belirsiz=0 | hedef=0 | 
+kutuphane | odak .ql-main .tk-btn-primary | kesin=0 | belirsiz=0 | hedef=0 | 
+bolumler | dinlenik | kesin=0 | belirsiz=0 | hedef=0 | 
+bolumler | uzerinde .ql-main .tk-btn-primary | kesin=0 | belirsiz=0 | hedef=0 | 
+bolumler | basili .ql-main .tk-btn-primary | kesin=0 | belirsiz=0 | hedef=0 | 
+bolumler | odak .ql-main .tk-btn-primary | kesin=0 | belirsiz=0 | hedef=0 | 
+oturum-soru | dinlenik | kesin=0 | belirsiz=0 | hedef=0 | 
+oturum-soru | uzerinde .ql-main .tk-btn | kesin=0 | belirsiz=0 | hedef=0 | 
+oturum-soru | basili .ql-main .tk-btn | kesin=0 | belirsiz=0 | hedef=0 | 
+oturum-soru | odak .ql-main .tk-btn | kesin=0 | belirsiz=0 | hedef=0 | 
+oturum-siklar | dinlenik | kesin=0 | belirsiz=0 | hedef=0 | 
+oturum-siklar | uzerinde .ql-choice > button | kesin=0 | belirsiz=0 | hedef=0 | 
+oturum-siklar | basili .ql-choice > button | kesin=0 | belirsiz=0 | hedef=0 | 
+oturum-siklar | odak .ql-choice > button | kesin=0 | belirsiz=0 | hedef=0 | 
+oturum-cozum | dinlenik | kesin=0 | belirsiz=0 | hedef=0 | 
+oturum-cozum | uzerinde .ql-grade-1 | kesin=0 | belirsiz=0 | hedef=0 | 
+oturum-cozum | basili .ql-grade-1 | kesin=0 | belirsiz=0 | hedef=0 | 
+oturum-cozum | odak .ql-grade-1 | kesin=0 | belirsiz=0 | hedef=0 | 
+oturum-cozum | uzerinde .ql-book-open | kesin=0 | belirsiz=0 | hedef=0 | 
+oturum-cozum | basili .ql-book-open | kesin=0 | belirsiz=0 | hedef=0 | 
+oturum-cozum | odak .ql-book-open | kesin=0 | belirsiz=0 | hedef=0 | 
+kitap | dinlenik | kesin=0 | belirsiz=0 | hedef=0 | 
+kitap | uzerinde .ql-book-bar .tk-btn | kesin=0 | belirsiz=0 | hedef=0 | 
+kitap | basili .ql-book-bar .tk-btn | kesin=0 | belirsiz=0 | hedef=0 | 
+kitap | odak .ql-book-bar .tk-btn | kesin=0 | belirsiz=0 | hedef=0 | 
+onay | dinlenik | kesin=0 | belirsiz=0 | hedef=0 | 
+onay | uzerinde [role="dialog"] .tk-btn, [role="alertdialog"] .tk-btn | kesin=0 | belirsiz=0 | hedef=0 | 
+onay | basili [role="dialog"] .tk-btn, [role="alertdialog"] .tk-btn | kesin=0 | belirsiz=0 | hedef=0 | 
+onay | odak [role="dialog"] .tk-btn, [role="alertdialog"] .tk-btn | kesin=0 | belirsiz=0 | hedef=0 | 
+ozet | dinlenik | kesin=0 | belirsiz=0 | hedef=0 | 
+ozet | uzerinde .ql-main .tk-btn | kesin=0 | belirsiz=0 | hedef=0 | 
+ozet | basili .ql-main .tk-btn | kesin=0 | belirsiz=0 | hedef=0 | 
+ozet | odak .ql-main .tk-btn | kesin=0 | belirsiz=0 | hedef=0 | 
+banka | dinlenik | kesin=0 | belirsiz=0 | hedef=0 | 
+banka | uzerinde .ql-bank-row:not(.ql-bank-row-active) | kesin=0 | belirsiz=0 | hedef=0 | 
+banka | basili .ql-bank-row:not(.ql-bank-row-active) | kesin=0 | belirsiz=0 | hedef=0 | 
+banka | odak .ql-bank-row:not(.ql-bank-row-active) | kesin=0 | belirsiz=0 | hedef=0 | 
+banka | yok .ql-book-open | kesin=undefined | belirsiz=undefined | hedef=undefined | 
+bildirim | dinlenik | kesin=0 | belirsiz=0 | hedef=0 | 
+bildirim | uzerinde .tk-toast-close | kesin=0 | belirsiz=0 | hedef=0 | 
+bildirim | basili .tk-toast-close | kesin=0 | belirsiz=0 | hedef=0 | 
+bildirim | odak .tk-toast-close | kesin=0 | belirsiz=0 | hedef=0 | 
+istatistik | dinlenik | kesin=0 | belirsiz=0 | hedef=0 | 
+ayarlar | dinlenik | kesin=0 | belirsiz=0 | hedef=0 | 
+ayarlar | uzerinde .ql-main .tk-btn | kesin=0 | belirsiz=0 | hedef=0 | 
+ayarlar | basili .ql-main .tk-btn | kesin=0 | belirsiz=0 | hedef=0 | 
+ayarlar | odak .ql-main .tk-btn | kesin=0 | belirsiz=0 | hedef=0 | 
+ayarlar | uzerinde .ql-main select, .ql-main input | kesin=0 | belirsiz=0 | hedef=0 | 
+ayarlar | basili .ql-main select, .ql-main input | kesin=0 | belirsiz=0 | hedef=0 | 
+ayarlar | odak .ql-main select, .ql-main input | kesin=0 | belirsiz=0 | hedef=0 | 
+OLC kutuphane .ql-book-open: yok || .ql-card-version: fg=#ffffff bg=#000000 oran=21.00 boyut=46.2x21.0 || .tk-titlebar__sponsor, .tk-titlebar a: fg=#ac7fff bg=#000000 oran=7.23 boyut=151.6x32.0 || .tk-titlebar__brand, .tk-titlebar a:last-of-type: fg=#ffffff bg=#000000 oran=21.00 boyut=81.9x32.0 || .ql-main .tk-btn-ghost: fg=#ffffff bg=#000000 oran=21.00 boyut=179.1x49.3
+KAYMA kutuphane: 
+OLC bolumler .ql-book-open: yok || .ql-card-version: yok || .tk-titlebar__sponsor, .tk-titlebar a: fg=#ac7fff bg=#000000 oran=7.23 boyut=151.6x32.0 || .tk-titlebar__brand, .tk-titlebar a:last-of-type: fg=#ffffff bg=#000000 oran=21.00 boyut=81.9x32.0 || .ql-main .tk-btn-ghost: fg=#ffffff bg=#000000 oran=21.00 boyut=176.4x49.3
+KAYMA bolumler: 
+OLC oturum-soru .ql-book-open: yok || .ql-card-version: yok || .tk-titlebar__sponsor, .tk-titlebar a: fg=#ac7fff bg=#000000 oran=7.23 boyut=151.6x32.0 || .tk-titlebar__brand, .tk-titlebar a:last-of-type: fg=#ffffff bg=#000000 oran=21.00 boyut=81.9x32.0 || .ql-main .tk-btn-ghost: fg=#ffffff bg=#000000 oran=21.00 boyut=86.0x34.8
+KAYMA oturum-soru: 
+OLC oturum-siklar .ql-book-open: yok || .ql-card-version: yok || .tk-titlebar__sponsor, .tk-titlebar a: fg=#ac7fff bg=#000000 oran=7.23 boyut=151.6x32.0 || .tk-titlebar__brand, .tk-titlebar a:last-of-type: fg=#ffffff bg=#000000 oran=21.00 boyut=81.9x32.0 || .ql-main .tk-btn-ghost: fg=#ffffff bg=#000000 oran=21.00 boyut=86.0x34.8
+KAYMA oturum-siklar: 
+OLC oturum-cozum .ql-book-open: fg=#ffffff bg=#000000 oran=21.00 boyut=1315.2x34.8 || .ql-card-version: yok || .tk-titlebar__sponsor, .tk-titlebar a: fg=#ac7fff bg=#000000 oran=7.23 boyut=151.6x32.0 || .tk-titlebar__brand, .tk-titlebar a:last-of-type: fg=#ffffff bg=#000000 oran=21.00 boyut=81.9x32.0 || .ql-main .tk-btn-ghost: fg=#ffffff bg=#000000 oran=21.00 boyut=86.0x34.8
+KAYMA oturum-cozum: ql-main=464.6666564941406auto
+ALT HEADER.tk-titlebar:0-33 DIV.ql-body:32-934 DIV.tk-toast-stack:886-886 main:934 vh=934 dugme-alt=854,854,854 cubuk-ust=901
+OLC kitap .ql-book-open: fg=#ffffff bg=#000000 oran=21.00 boyut=1315.2x34.8 || .ql-card-version: yok || .tk-titlebar__sponsor, .tk-titlebar a: fg=#ac7fff bg=#000000 oran=7.23 boyut=151.6x32.0 || .tk-titlebar__brand, .tk-titlebar a:last-of-type: fg=#ffffff bg=#000000 oran=21.00 boyut=81.9x32.0 || .ql-main .tk-btn-ghost: fg=#ffffff bg=#000000 oran=21.00 boyut=86.0x34.8
+KAYMA kitap: ql-main=505.3333435058594auto
+OLC onay .ql-book-open: fg=#ffffff bg=#000000 oran=21.00 boyut=1315.2x34.8 || .ql-card-version: yok || .tk-titlebar__sponsor, .tk-titlebar a: fg=#ac7fff bg=#000000 oran=7.23 boyut=151.6x32.0 || .tk-titlebar__brand, .tk-titlebar a:last-of-type: fg=#ffffff bg=#000000 oran=21.00 boyut=81.9x32.0 || .ql-main .tk-btn-ghost: fg=#ffffff bg=#000000 oran=21.00 boyut=86.0x34.8
+KAYMA onay: ql-main=505.3333435058594auto
+OLC ozet .ql-book-open: yok || .ql-card-version: yok || .tk-titlebar__sponsor, .tk-titlebar a: fg=#ac7fff bg=#000000 oran=7.23 boyut=151.6x32.0 || .tk-titlebar__brand, .tk-titlebar a:last-of-type: fg=#ffffff bg=#000000 oran=21.00 boyut=81.9x32.0 || .ql-main .tk-btn-ghost: fg=#ffffff bg=#000000 oran=21.00 boyut=176.4x49.3
+KAYMA ozet: 
+OLC banka .ql-book-open: yok || .ql-card-version: yok || .tk-titlebar__sponsor, .tk-titlebar a: fg=#ac7fff bg=#000000 oran=7.23 boyut=151.6x32.0 || .tk-titlebar__brand, .tk-titlebar a:last-of-type: fg=#ffffff bg=#000000 oran=21.00 boyut=81.9x32.0 || .ql-main .tk-btn-ghost: fg=#ffffff bg=#000000 oran=21.00 boyut=143.6x34.8
+KAYMA banka: 
+OLC bildirim .ql-book-open: yok || .ql-card-version: yok || .tk-titlebar__sponsor, .tk-titlebar a: fg=#ac7fff bg=#000000 oran=7.23 boyut=151.6x32.0 || .tk-titlebar__brand, .tk-titlebar a:last-of-type: fg=#ffffff bg=#000000 oran=21.00 boyut=81.9x32.0 || .ql-main .tk-btn-ghost: fg=#ffffff bg=#000000 oran=21.00 boyut=143.6x34.8
+KAYMA bildirim: 
+OLC istatistik .ql-book-open: yok || .ql-card-version: yok || .tk-titlebar__sponsor, .tk-titlebar a: fg=#ac7fff bg=#000000 oran=7.23 boyut=151.6x32.0 || .tk-titlebar__brand, .tk-titlebar a:last-of-type: fg=#ffffff bg=#000000 oran=21.00 boyut=81.9x32.0 || .ql-main .tk-btn-ghost: yok
+KAYMA istatistik: 
+OLC ayarlar .ql-book-open: yok || .ql-card-version: yok || .tk-titlebar__sponsor, .tk-titlebar a: fg=#ac7fff bg=#000000 oran=7.23 boyut=151.6x32.0 || .tk-titlebar__brand, .tk-titlebar a:last-of-type: fg=#ffffff bg=#000000 oran=21.00 boyut=81.9x32.0 || .ql-main .tk-btn-ghost: fg=#ffffff bg=#000000 oran=21.00 boyut=65.1x34.8
+KAYMA ayarlar: 
+=== bos olcek 1
+onay-kaldir | dinlenik | kesin=0 | belirsiz=0 | hedef=0 | 
+onay-kaldir | uzerinde [role="dialog"] .tk-btn, [role="alertdialog"] .tk-btn | kesin=0 | belirsiz=0 | hedef=0 | 
+onay-kaldir | basili [role="dialog"] .tk-btn, [role="alertdialog"] .tk-btn | kesin=0 | belirsiz=0 | hedef=0 | 
+onay-kaldir | odak [role="dialog"] .tk-btn, [role="alertdialog"] .tk-btn | kesin=0 | belirsiz=0 | hedef=0 | 
+bos-kutuphane | dinlenik | kesin=0 | belirsiz=0 | hedef=0 | 
+bos-kutuphane | uzerinde .ql-main .tk-btn | kesin=0 | belirsiz=0 | hedef=0 | 
+bos-kutuphane | basili .ql-main .tk-btn | kesin=0 | belirsiz=0 | hedef=0 | 
+bos-kutuphane | odak .ql-main .tk-btn | kesin=0 | belirsiz=0 | hedef=0 | 
+bos-istatistik | dinlenik | kesin=0 | belirsiz=0 | hedef=0 | 
+OLC onay-kaldir .ql-book-open: yok || .ql-card-version: fg=#ffffff bg=#000000 oran=21.00 boyut=52.8x24.0 || .tk-titlebar__sponsor, .tk-titlebar a: fg=#ac7fff bg=#000000 oran=7.23 boyut=166.4x32.0 || .tk-titlebar__brand, .tk-titlebar a:last-of-type: fg=#ffffff bg=#000000 oran=21.00 boyut=98.3x32.0 || .ql-main .tk-btn-ghost: fg=#ffffff bg=#000000 oran=21.00 boyut=214.3x55.0
+KAYMA onay-kaldir: 
+OLC bos-kutuphane .ql-book-open: yok || .ql-card-version: yok || .tk-titlebar__sponsor, .tk-titlebar a: fg=#ac7fff bg=#000000 oran=7.23 boyut=166.4x32.0 || .tk-titlebar__brand, .tk-titlebar a:last-of-type: fg=#ffffff bg=#000000 oran=21.00 boyut=98.3x32.0 || .ql-main .tk-btn-ghost: fg=#ffffff bg=#000000 oran=21.00 boyut=214.3x55.0
+KAYMA bos-kutuphane: 
+OLC bos-istatistik .ql-book-open: yok || .ql-card-version: yok || .tk-titlebar__sponsor, .tk-titlebar a: fg=#ac7fff bg=#000000 oran=7.23 boyut=166.4x32.0 || .tk-titlebar__brand, .tk-titlebar a:last-of-type: fg=#ffffff bg=#000000 oran=21.00 boyut=98.3x32.0 || .ql-main .tk-btn-ghost: yok
+KAYMA bos-istatistik: 
+=== bos olcek 1.25
+onay-kaldir | dinlenik | kesin=0 | belirsiz=0 | hedef=0 | 
+onay-kaldir | uzerinde [role="dialog"] .tk-btn, [role="alertdialog"] .tk-btn | kesin=0 | belirsiz=0 | hedef=0 | 
+onay-kaldir | basili [role="dialog"] .tk-btn, [role="alertdialog"] .tk-btn | kesin=0 | belirsiz=0 | hedef=0 | 
+onay-kaldir | odak [role="dialog"] .tk-btn, [role="alertdialog"] .tk-btn | kesin=0 | belirsiz=0 | hedef=0 | 
+bos-kutuphane | dinlenik | kesin=0 | belirsiz=0 | hedef=0 | 
+bos-kutuphane | uzerinde .ql-main .tk-btn | kesin=0 | belirsiz=0 | hedef=0 | 
+bos-kutuphane | basili .ql-main .tk-btn | kesin=0 | belirsiz=0 | hedef=0 | 
+bos-kutuphane | odak .ql-main .tk-btn | kesin=0 | belirsiz=0 | hedef=0 | 
+bos-istatistik | dinlenik | kesin=0 | belirsiz=0 | hedef=0 | 
+OLC onay-kaldir .ql-book-open: yok || .ql-card-version: fg=#ffffff bg=#000000 oran=21.00 boyut=46.2x21.0 || .tk-titlebar__sponsor, .tk-titlebar a: fg=#ac7fff bg=#000000 oran=7.23 boyut=151.6x32.0 || .tk-titlebar__brand, .tk-titlebar a:last-of-type: fg=#ffffff bg=#000000 oran=21.00 boyut=81.9x32.0 || .ql-main .tk-btn-ghost: fg=#ffffff bg=#000000 oran=21.00 boyut=179.4x49.6
+KAYMA onay-kaldir: 
+OLC bos-kutuphane .ql-book-open: yok || .ql-card-version: yok || .tk-titlebar__sponsor, .tk-titlebar a: fg=#ac7fff bg=#000000 oran=7.23 boyut=151.6x32.0 || .tk-titlebar__brand, .tk-titlebar a:last-of-type: fg=#ffffff bg=#000000 oran=21.00 boyut=81.9x32.0 || .ql-main .tk-btn-ghost: fg=#ffffff bg=#000000 oran=21.00 boyut=179.4x49.6
+KAYMA bos-kutuphane: 
+OLC bos-istatistik .ql-book-open: yok || .ql-card-version: yok || .tk-titlebar__sponsor, .tk-titlebar a: fg=#ac7fff bg=#000000 oran=7.23 boyut=151.6x32.0 || .tk-titlebar__brand, .tk-titlebar a:last-of-type: fg=#ffffff bg=#000000 oran=21.00 boyut=81.9x32.0 || .ql-main .tk-btn-ghost: yok
+KAYMA bos-istatistik: 
+=== bos olcek 1.5
+onay-kaldir | dinlenik | kesin=0 | belirsiz=0 | hedef=0 | 
+onay-kaldir | uzerinde [role="dialog"] .tk-btn, [role="alertdialog"] .tk-btn | kesin=0 | belirsiz=0 | hedef=0 | 
+onay-kaldir | basili [role="dialog"] .tk-btn, [role="alertdialog"] .tk-btn | kesin=0 | belirsiz=0 | hedef=0 | 
+onay-kaldir | odak [role="dialog"] .tk-btn, [role="alertdialog"] .tk-btn | kesin=0 | belirsiz=0 | hedef=0 | 
+bos-kutuphane | dinlenik | kesin=0 | belirsiz=0 | hedef=0 | 
+bos-kutuphane | uzerinde .ql-main .tk-btn | kesin=0 | belirsiz=0 | hedef=0 | 
+bos-kutuphane | basili .ql-main .tk-btn | kesin=0 | belirsiz=0 | hedef=0 | 
+bos-kutuphane | odak .ql-main .tk-btn | kesin=0 | belirsiz=0 | hedef=0 | 
+bos-istatistik | dinlenik | kesin=0 | belirsiz=0 | hedef=0 | 
+OLC onay-kaldir .ql-book-open: yok || .ql-card-version: fg=#ffffff bg=#000000 oran=21.00 boyut=46.2x21.0 || .tk-titlebar__sponsor, .tk-titlebar a: fg=#ac7fff bg=#000000 oran=7.23 boyut=151.6x32.0 || .tk-titlebar__brand, .tk-titlebar a:last-of-type: fg=#ffffff bg=#000000 oran=21.00 boyut=81.9x32.0 || .ql-main .tk-btn-ghost: fg=#ffffff bg=#000000 oran=21.00 boyut=179.1x49.3
+KAYMA onay-kaldir: 
+OLC bos-kutuphane .ql-book-open: yok || .ql-card-version: yok || .tk-titlebar__sponsor, .tk-titlebar a: fg=#ac7fff bg=#000000 oran=7.23 boyut=151.6x32.0 || .tk-titlebar__brand, .tk-titlebar a:last-of-type: fg=#ffffff bg=#000000 oran=21.00 boyut=81.9x32.0 || .ql-main .tk-btn-ghost: fg=#ffffff bg=#000000 oran=21.00 boyut=179.1x49.3
+KAYMA bos-kutuphane: 
+OLC bos-istatistik .ql-book-open: yok || .ql-card-version: yok || .tk-titlebar__sponsor, .tk-titlebar a: fg=#ac7fff bg=#000000 oran=7.23 boyut=151.6x32.0 || .tk-titlebar__brand, .tk-titlebar a:last-of-type: fg=#ffffff bg=#000000 oran=21.00 boyut=81.9x32.0 || .ql-main .tk-btn-ghost: yok
+KAYMA bos-istatistik: 

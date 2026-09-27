@@ -117,7 +117,16 @@ export interface FlagExport {
 }
 
 export interface UpdateStatus {
-  state: 'idle' | 'checking' | 'none' | 'available' | 'downloading' | 'ready' | 'notice' | 'error'
+  state:
+    | 'idle'
+    | 'checking'
+    | 'none'
+    | 'available'
+    | 'downloading'
+    | 'ready'
+    | 'notice'
+    | 'updated'
+    | 'error'
   version?: string
   percent?: number
   url?: string
@@ -201,6 +210,8 @@ export interface QuizloopApi {
   update: {
     status(): Promise<UpdateStatus>
     check(): Promise<UpdateStatus>
+    download(install: boolean): void
+    cancel(): void
     install(): void
     open(): void
     onStatus(cb: (s: UpdateStatus) => void): () => void
@@ -254,6 +265,8 @@ export const CH = {
   flagExport: 'flags:export',
   updateStatus: 'update:status',
   updateCheck: 'update:check',
+  updateDownload: 'update:download',
+  updateCancel: 'update:cancel',
   updateInstall: 'update:install',
   updateOpen: 'update:open',
   updateChanged: 'update:changed',

@@ -1,0 +1,19 @@
+project  raf/ister  [readme-protokolu] README.md yanında README.tr.md yok; iki README aynı içerikle birlikte tutulur
+.gitignore:1  raf/ister  [depo] .gitignore içinde tmp/ satırı yok
+src/main/update.ts:0  guncelleme/panel-yok  this project updates itself but carries no installer window: run scaffold.js kur <Name>.
+src/renderer/src/components/Solution.tsx:1  core/list-without-motion  list render, no position animation
+src/renderer/src/components/TitleBar.tsx:1  kabuk/sablon-imzasiz  this title bar is hand-written: it carries no template signature line. Take it from scaffold.js ustcubuk, do not write it by hand.
+src/renderer/src/styles/app.css:1  colour/tabular-numerals  no font-variant-numeric: tabular-nums anywhere
+src/renderer/src/styles/app.css:96  states/hover-without-focus  .ql-signature a:hover — hover signal with no :focus-visible twin
+src/renderer/src/styles/app.css:120  states/hover-without-focus  .ql-win-controls button:hover — hover signal with no :focus-visible twin
+src/renderer/src/styles/app.css:125  states/hover-without-focus  .ql-win-close:hover — hover signal with no :focus-visible twin
+src/renderer/src/styles/app.css:163  okunurluk/pair-contrast  bg var(--ql-tint-purple) (#c3a3ff 12%) on fg var(--tk-renk-3-text) (#ac7fff) — 6.3:1, below 7:1
+src/renderer/src/styles/app.css:163  states/hover-without-focus  .ql-nav:hover — hover signal with no :focus-visible twin
+src/renderer/src/styles/app.css:457  states/five-states  .ql-choice > button — states not defined: focus
+src/renderer/src/styles/app.css:478  states/hover-without-focus  .ql-choice > button:hover — hover signal with no :focus-visible twin
+src/renderer/src/styles/app.css:513  states/hover-without-focus  .ql-choice > button:hover .ql-choice-key — hover signal with no :focus-visible twin
+src/renderer/src/styles/app.css:774  states/hover-without-focus  .ql-grade-1:hover — hover signal with no :focus-visible twin
+src/renderer/src/styles/app.css:786  states/hover-without-focus  .ql-grade-2:hover — hover signal with no :focus-visible twin
+src/renderer/src/styles/app.css:798  states/hover-without-focus  .ql-grade-3:hover — hover signal with no :focus-visible twin
+src/renderer/src/styles/app.css:1432  states/hover-without-focus  .ql-bank-row:hover — hover signal with no :focus-visible twin
+172 files · 18 open · 0 fixed · 15 error(s) · 0 ignored

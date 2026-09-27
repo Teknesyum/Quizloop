@@ -1,0 +1,207 @@
+Dış göz: general-purpose alt ajan (opus), agentId a03aa9071204af220, yalnız "sonra" PNG'leri verildi.
+Tur 1 ham yanıt (düzeltmelerden önceki sonra görüntüleri):
+
+## Ekran Bazında Bulgular
+
+**ayarlar-100**
+- [orta] ayarlar: Başka ekrandan kalan "Soru işaretlendi / İşaret kaldırıldı" bildirimleri Ayarlar'da hâlâ açık ve "Güncellemeler" kartının sağ kenarını kapatıyor.
+- [küçük] ayarlar: 1–2 haneli sayı alanları (4, 40, 5) sayfanın tüm genişliğine yayılmış. Değer solda küçük kalıyor, alanın büyük kısmı boş.
+- [küçük] ayarlar: Yazı boyutu düğmeleri (%90…%160) küçük. Yazıları ince eş-aralıklı fontta ve diğer düğmelerden belirgin biçimde ufak.
+
+**ayarlar-150**
+- [ciddi] ayarlar-150: İki bildirim "Modül klasörü" satırındaki "Klasör seç" düğmesinin üstüne biniyor, düğme görünmüyor.
+
+**banka-100**
+- [orta] banka: Uzun soru satırları üç nokta olmadan ortadan kesiliyor ("…unsurlar a", "…heyecanı az").
+- [küçük] banka: Tümü/İşaretli süzgeçleri arama kutusundan uzakta, sayfanın sağ ucunda duruyor. Arama kutusunda yer tutucu metin yok.
+- [küçük] banka: "Bayrakları dışa aktar" soluk, pasif görünüyor. Neden pasif olduğu belirtilmiyor.
+
+**bildirim-100**
+- [küçük] bildirim: Bildirim kutusu alttaki kısayol çubuğuna değecek kadar aşağıda. Satırdaki sarı "İşaretli" etiketi çok küçük.
+
+**bolumler-100**
+- [ciddi] bolumler: Kart arka planındaki soluk tekrar başlıklar ve büyük numaralar asıl başlıkla üst üste biniyor (2, 4, 7, 8, 9, 13, 14 gibi). Başlık kirli okunuyor.
+- [orta] bolumler: Başlık satır sayısı değiştikçe "Oturuma başla" düğmesi kartlar arasında farklı yüksekliğe kayıyor (ör. 5, 6, 12). Aynı satırda hizalar tutmuyor.
+- [küçük] bolumler: 18 numaralı kartın başlığı dört satırı aşıyor. Kart düzeni bozuluyor, son sözcük alt kenarda kesiliyor.
+
+**bos-istatistik-100**
+- [orta] bos-istatistik: Tüm sayılar 0 olduğu halde "Kartların durumu" çubuğu tamamen dolu mavi görünüyor, yanıltıcı.
+- [küçük] bos-istatistik: Altı sayı kartı sağ kenara kadar uzanmıyor, alttaki panellerle hizası tutmuyor. Isı haritası panelin yalnız sol üçte birini kaplıyor.
+- [küçük] bos-istatistik: "Henüz tekrar kaydı yok" yazısı yalnız bırakılmış. Ne yapılması gerektiğini söyleyen bir yönlendirme veya düğme yok.
+
+**bos-kutuphane-100**
+- [küçük] bos-kutuphane: "Modül klasörünü buraya bırak" küçük düz yazı. Kesik çizgili bir bırakma alanı gibi görsel bir işaret yok.
+
+**istatistik-100**
+- [orta] istatistik: Başka ekrandan kalan bildirimler "Modül ilerlemesi" panelinin sağ alt kenarına biniyor.
+- [küçük] istatistik: "0 görüldü, 0 emekli, 3030 soru" çok küçük eş-aralıklı fontta. Isı haritasının renk açıklaması yok.
+
+**kitap-100**
+- [orta] kitap: "Kaynak diskte bulunamadı" mesajı devasa boş bir alanın sol üstünde tek satır kalıyor. Çözüm düğmesi "Kitabı seç" sağ altta, mesajdan uzak ve küçük.
+- [küçük] kitap: İçerik yokken "Önceki/Sonraki" etkin görünüyor. Başlıktaki "sayfa 4–5" ile arkadaki kaynak etiketi "sayfa4–4" uyuşmuyor.
+
+**kitap-150**
+- [ciddi] kitap-150: Pencerenin alt kısmı kısayol çubuğunun altında kalıyor. Alıntı metni ve "Kitabı seç" düğmesi kesiliyor.
+
+**kutuphane-100**
+- [orta] kutuphane: Kart üzerindeki dört düğme sıkışık, yazıları iki satıra kırılıyor. Yıkıcı "Modülü kaldır", "Sıfırla" ile aynı görünümde ve hemen yanında.
+- [küçük] kutuphane: Tek küçük kart, geniş boş ekranın sol üst köşesinde kalıyor.
+
+**kutuphane-150**
+- kutuphane-150: sorun yok.
+
+**onay-100**
+- onay: sorun yok.
+
+**onay-kaldir-100**
+- [orta] onay-kaldir: Silme onayındaki düğme genel bir "Onayla" yazıyor, "Sil" değil. Metinde "Modülü modülü" tekrarı var.
+- [küçük] onay-kaldir: Arkadaki kartın sol üst köşesinde kırık görsel simgesi görünüyor.
+
+**oturum-cozum-100**
+- [ciddi] oturum-cozum: "Anlamadım / Kısmen / Anladım" düğmelerinin alt yazıları kısayol çubuğunun altında kalıp kesiliyor. Sayfanın asıl sonraki eylemi kısmen gizli.
+- [küçük] oturum-cozum: Çözüm metni dar bir sütunda, şıklar ve kaynak kutusu tam genişlikte. Satır genişlikleri tutarsız.
+- [küçük] oturum-cozum: Yanlış şık açıklamaları küçük pembe yazıyla verilmiş, siyah zeminde yorucu okunuyor.
+
+**oturum-cozum-150**
+- [ciddi] oturum-cozum-150: Aynı kesilme burada da var, puanlama düğmelerinin alt satırı okunmuyor.
+
+**oturum-siklar-100**
+- [küçük] oturum-siklar: Soru kartının üstünde yaklaşık 250 px boşluk var, içerik gereksiz yere aşağı itilmiş.
+- [küçük] oturum-siklar: "Bölümler", "Soruyu işaretle" ve "Oturumu bitir" küçük ve aynı ağırlıkta. Soru metni ve ayraç çizgisi yarım genişlikte, şıklar tam genişlikte.
+
+**oturum-soru-100**
+- [orta] oturum-soru: "Şıkları göster" düğmesinde ve alt çubukta boşluk tuşu boş bir kutu olarak görünüyor. Kısayol tuşu okunmuyor.
+
+**ozet-100**
+- [orta] ozet: Üst menü ve pencere çubuğu görünmüyor, ekran çerçevesiz kalmış.
+- [küçük] ozet: "Toplam puan" ortada, diğer dört sayı sola yaslı; hizalama karışık. Her şey 0 iken bir açıklama yok.
+
+## En Önemli 3 Düzeltme
+
+1. **Alt kısayol çubuğunun içeriği kesmesi.** Puanlama düğmeleri ve 150% ölçekteki kitap penceresinin altı çubuğun arkasında kalıyor. İçeriğe çubuk yüksekliği kadar alt boşluk verilmeli, kitap penceresi de görünür alana sığacak kadar kısaltılmalı (oturum-cozum-100/150, kitap-150).
+2. **Bildirimlerin ekrandan ekrana taşınması.** İşaretleme bildirimleri Ayarlar ve İstatistik'te de açık kalıyor, 150%'de "Klasör seç" düğmesini kapatıyor. Ekran değişince kapanmalı ya da denetimlerin üstüne gelmeyecek bir yerde durmalı (ayarlar-100/150, istatistik-100).
+3. **Bölüm kartlarının okunurluğu.** Arka plandaki soluk tekrar metin başlıklarla çakışıyor ve "Oturuma başla" düğmeleri kartlar arasında farklı yüksekliğe kayıyor. Arka plan metni kaldırılmalı veya kısılmalı, düğmeler kart altına sabitlenmeli (bolumler-100).
+
+---
+Tur 2 ham yanıt (vurgu düzeltmelerinden sonra; aynı ajan, yalnız görüntüler):
+
+Yenilenen 10 görüntüyü yeniden açtım. Durum şöyle:
+
+| Durum | Sayı |
+|---|---|
+| Giderildi | 5 |
+| Kısmen giderildi | 2 |
+| Sürüyor | 5 |
+| Doğrulanamadı | 2 |
+
+En çok kullanıcıyı etkileyen iki sorun hâlâ ortada. Bildirimler 150% ölçekte "Klasör seç" düğmesini kapatmaya devam ediyor. Kitap penceresinin alt kısmı da 150% ölçekte hâlâ kesik.
+
+## Bulgu Bazında Durum
+
+**oturum-cozum-100**
+- **Doğrulanamadı** [ciddi] Puanlama düğmelerinin alt çubukla kesilmesi: Görüntü başka bir kaydırma konumunda çekilmiş. Yalnız "Ne kadar anladın?" başlığı görünüyor, düğmeler görüntünün dışında. Kesilmenin sürüp sürmediğini söyleyemiyorum.
+
+**oturum-cozum-150**
+- **Doğrulanamadı** [ciddi] Aynı kesilme: Burada da düğmeler görüntüde yok. Yalnız başlık alt çubuğun hemen üstünde duruyor.
+
+**kitap-150**
+- **Sürüyor** [ciddi] Pencerenin alt kısmının kesilmesi: Alıntının ikinci satırı ("adlandırıldı") ve "Kitabı seç" düğmesinin alt kenarı hâlâ alt çubuğun altında kalıyor.
+
+**kitap-100**
+- **Sürüyor** [orta] "Kaynak diskte bulunamadı" durumu: Mesaj hâlâ boş alanın sol üstünde tek satır. "Kitabı seç" hâlâ sağ altta, mesajdan uzak.
+- **Giderildi** Sayfa numarası uyuşmazlığı: Başlık "sayfa 1–1", kaynak etiketi de "sayfa1–1". Artık aynılar.
+- **Kısmen giderildi** Önceki/Sonraki: "Önceki" artık soluk, pasif görünüyor. "Sonraki" içerik yokken hâlâ etkin.
+
+**bolumler-100**
+- **Kısmen giderildi** [ciddi] Arka plandaki tekrar metnin başlıkla çakışması: Tekrar metin daha soluk ama hâlâ görünüyor. Başlıkların altında seçiliyor ("Ameliyathane Ortamı", "Farmakolojik Prensipler", "Antikolinerjik İlaçlar").
+- **Giderildi** [orta] Düğme hizası: Her satırdaki "Oturuma başla" düğmeleri artık aynı yükseklikte duruyor.
+- **Sürüyor** [küçük] 18 numaralı kart: Başlık hâlâ dört satırı aşıyor ve alt kenarda kesiliyor.
+
+**onay-kaldir-100**
+- **Giderildi** [orta] Genel "Onayla" düğmesi: Silme düğmesi artık "Modülü kaldır" yazıyor.
+- **Sürüyor** [orta] Metin tekrarı: Soru metninde "Örnek Modülü modülü" tekrarı duruyor.
+
+**oturum-soru-100**
+- **Giderildi** [orta] Boşluk tuşunun boş kutu görünmesi: Düğmede ve alt çubukta artık "Boşluk" yazıyor.
+
+**ozet-100**
+- **Giderildi** [orta] Üst çubuğun görünmemesi: Pencere çubuğu ve logo artık görünüyor. Oturum sırasında gezinme sekmeleri yok.
+
+**ayarlar-150**
+- **Sürüyor** [ciddi] Bildirimlerin denetimleri kapatması: "Soru işaretlendi / İşaret kaldırıldı" hâlâ ekranda. "Klasör seç" düğmesini kapatıyorlar, önceki görüntünün aynısı.
+
+**istatistik-100**
+- **Sürüyor** [orta] Başka ekrandan kalan bildirimler: Aynı iki bildirim "Modül ilerlemesi" panelinin sağ alt kenarına binmeye devam ediyor.
+
+Yeni bir ciddi sorun görmedim.
+
+---
+Tur 3 ham yanıt (bildirim, kitap penceresi ve onay metni düzeltmelerinden sonra; aynı ajan, yalnız görüntüler):
+
+Yedi görüntüyü yeniden açtım. Önceki 9 bulgudan 5'i giderildi, 3'ü sürüyor, 1'i yine doğrulanamadı. Yeni bir ciddi sorun görmedim.
+
+**kitap-150**
+- **Giderildi** [ciddi] Pencerenin altının kesilmesi: Pencere artık alt çubuğun üstünde bitiyor. Alıntının iki satırı ve "← → sayfa çevir" ipucu tam görünüyor.
+- **Giderildi** [orta] Kaynak bulunamadı durumu: "Kitabı seç" artık mesajın hemen altında, ortada, büyük birincil düğme olarak duruyor. Önceki ve Sonraki soluk, pasif görünüyor.
+
+**kitap-100**
+- **Sürüyor** [orta] Kaynak bulunamadı durumu: Mesaj hâlâ boş alanın sol üstünde. "Kitabı seç" hâlâ sağ altta, mesajdan uzak ve küçük. "Sonraki" hâlâ etkin görünüyor. Görüntü bir önceki turdakiyle aynı; 150%'de görünen düzeltme 100%'de görünmüyor.
+
+**ayarlar-150**
+- **Giderildi** [ciddi] Bildirimlerin denetimleri kapatması: Bildirim yok, "Klasör seç" düğmesi açıkça görünüyor.
+
+**istatistik-100**
+- **Giderildi** [orta] Başka ekrandan kalan bildirimler: Ekranda bildirim yok, "Modül ilerlemesi" paneli temiz.
+
+**onay-kaldir-100**
+- **Giderildi** [orta] "Modülü modülü" tekrarı: Metin artık "Quizloop Örnek Modülü ve tüm ilerlemesi kaldırılsın mı?". Düğme de "Modülü kaldır".
+
+**bolumler-100**
+- **Sürüyor** [ciddi] Arka plandaki tekrar metnin başlıkla çakışması: Soluk tekrar başlıklar hâlâ asıl başlıkların altında seçiliyor (2, 7, 8, 13, 16, 19). Görüntü bir öncekiyle aynı.
+- **Sürüyor** [küçük] 18 numaralı kart: Başlık hâlâ dört satırı aşıyor ve alt kenarda kesiliyor.
+
+**oturum-cozum-150**
+- **Doğrulanamadı** [ciddi] Puanlama düğmelerinin kesilmesi: Görüntü yine düğmeler çerçeveye girmeden bitiyor. Yalnız "Ne kadar anladın?" başlığı alt çubuğun hemen üstünde görünüyor. Bunu kapatmak için sayfa en alta kaydırılmış bir görüntü gerekiyor.
+
+---
+Tur 4 ham yanıt (kitap-100, bolumler-100, oturum-cozum-alt-100/150; aynı ajan, yalnız görüntüler):
+
+Dört görüntüyü açtım. Önceki turdan kalan 5 bulgunun 3'ü giderildi, 2'si sürüyor. Sürenlerin ikisi de bölüm kartlarında ve görüntü bir önceki turla aynı.
+
+| Bulgu | Durum | Gerekçe |
+|---|---|---|
+| [orta] kitap-100: kaynak bulunamadı durumu | **Giderildi** | "Kitabı seç" artık mesajın hemen altında, ortada, büyük birincil düğme olarak duruyor; Önceki ve Sonraki soluk, pasif görünüyor. |
+| [ciddi] bolumler-100: arka plandaki tekrar metnin başlıkla çakışması | **Sürüyor** | Görüntü önceki turla aynı; soluk tekrar başlıklar hâlâ asıl başlıkların altında seçiliyor (2, 7, 8, 13, 16, 19). |
+| [küçük] bolumler-100: 18 numaralı kart taşıyor | **Sürüyor** | Başlık hâlâ dört satırı aşıyor ve alt kenarda kesiliyor. |
+| [ciddi] oturum-cozum-100: puanlama düğmeleri kesiliyor | **Giderildi** | En alta kaydırılmış görüntüde üç düğme ve alt yazıları tam görünüyor, kart kısayol çubuğunun üstünde bitiyor. |
+| [ciddi] oturum-cozum-150: puanlama düğmeleri kesiliyor | **Giderildi** | 150% ölçekte de üç düğme ve alt yazıları tam, kartla kısayol çubuğu arasında boşluk var. |
+
+**Yeni [küçük] kitap-100:** Pencere başlığı "sayfa 4–5" diyor, arkadaki kaynak etiketi "sayfa4–4" diyor. Bu uyuşmazlık ikinci turda o soru için giderilmişti, bu soruda yeniden görünüyor.
+
+Yeni bir ciddi sorun görmedim.
+
+---
+Tur 5 ham yanıt (kapak maskesi alta alındıktan sonra; bolumler-100/150, kutuphane-100):
+
+**Arka plan metni başlıkla çakışıyor mu: Giderildi.** bolumler-100 ve bolumler-150'de başlıkların altındaki soluk kopya başlıklar ve büyük soluk numaralar artık görünmüyor. Başlıklar temiz okunuyor.
+
+Başlıkla ilgisi olmayan bir kalıntı var: 150%'de kartların alt kısmında, "N soru" ve "Oturuma başla" satırının arkasında çok soluk, küçük metin satırları hâlâ seçiliyor (örneğin kart 1 ve kart 5). Okunurluğu bozmuyor. [küçük]
+
+**Kart 18: kesilme görüntü sınırından.** Başlık beş satıra kırılıyor ve kart diğerlerinden uzun oluyor. "Dokümantasyon" satırı ekran görüntüsünün alt kenarında kesiliyor.
+
+Aynı sıradaki 16, 17, 19 ve 20 numaralı kartların kenarlıkları da görüntünün dışına devam ediyor. Kartın alt kenarı görünmüyor, metnin kart kenarlığından taştığına dair bir iz de yok. Önceki turdaki "kartın içinde kesiliyor" tespitimi geri alıyorum. Kartın kendi içindeki durumu bu görüntüyle doğrulanamıyor; sayfa aşağı kaydırılmış bir görüntü gerekir.
+
+**Yeni:**
+- **[orta] kutuphane-100:** Soluk arka plan metni bu turda modül kartına geçmiş. "…s Mikhail" "3030 soru" satırının arkasına biniyor; büyük harfli "ANESTEZİYOLOJİ" ise buton satırının arkasında, kartın alt kenarında kesik duruyor.
+- Yeni ciddi sorun yok.
+
+---
+Tur 6 ham yanıt (kapak maskesi yalnız bölüm kartlarına uygulandıktan sonra):
+
+**Kütüphane kartındaki arka plan metni: Giderildi.** kutuphane-100'de "…s Mikhail" ve "ANESTEZİYOLOJİ" artık görünmüyor. Kartın üst kısmında yalnız metin içermeyen soluk bir desen var; "3030 soru" satırı ve butonlar temiz.
+
+**Bölüm başlıklarıyla çakışma: Giderildi.** bolumler-100 ve bolumler-150'de başlıkların altında kopya başlık ya da büyük soluk numara yok, bütün başlıklar temiz okunuyor.
+
+Başlıkla ilgisi olmayan bir kalıntı var: 150%'de kartların alt kısmında, "N soru" ve "Oturuma başla" satırının arkasında çok soluk küçük metin satırları hâlâ seçiliyor (örneğin kart 1, 2, 5, 7 ve 8). 100%'de aynı bölgede yalnız soluk noktalar görünüyor. Okunurluğu bozmuyor. [küçük]
+
+Yeni ciddi sorun yok.

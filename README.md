@@ -1,3 +1,7 @@
+<!-- lang -->
+
+[<img src="assets/badge-lang.svg" alt="English selected, switch to Türkçe" width="124" height="44">](README.tr.md)
+
 # Quizloop
 
 Adaptive spaced-repetition quiz engine. Turn a book into a question module and
@@ -16,7 +20,7 @@ Download the latest build from
 
 | Platform | File | Updates |
 | -------- | ---- | ------- |
-| Windows  | `quizloop-<version>-setup.exe` | Downloads in the background, installs on restart |
+| Windows  | `quizloop-<version>-setup.exe` | Asks before it downloads and again before it installs |
 | macOS    | `quizloop-<version>-unsigned.dmg` | The app tells you when a new version is out |
 | Linux    | `.AppImage` or `.deb` | The app tells you when a new version is out |
 
@@ -83,6 +87,6 @@ See [`docs/PLAN.md`](docs/PLAN.md) for the architecture.
 
 ## License
 
-AGPL-3.0-or-later — see [LICENSE](LICENSE).
+AGPL-3.0-or-later. See [LICENSE](LICENSE).
 
 Copyright (C) 2026 Teknesyum
