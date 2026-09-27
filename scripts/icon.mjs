@@ -4,6 +4,8 @@ import { tmpdir } from 'node:os'
 import { join } from 'node:path'
 
 const root = join(import.meta.dirname, '..')
+const outArg = process.argv.indexOf('--out')
+const out = outArg > 0 ? process.argv[outArg + 1] : null
 const tokens = JSON.parse(readFileSync(join(root, 'teknesyum-ui/theme.tokens.json'), 'utf8'))
 const c = (k) => tokens.brand[k].value
 
@@ -18,6 +20,16 @@ const browsers = [
 const browser = browsers.find((p) => existsSync(p))
 if (!browser) throw new Error('Chrome or Edge not found; set CHROME')
 
+function brain(cx, size) {
+  const k = (size * 0.36) / 100
+  const lobe = 'M -3 -40 A 14 14 0 0 0 -26 -34 A 14 14 0 0 0 -44 -14 A 14 14 0 0 0 -44 12 A 14 14 0 0 0 -30 36 A 14 14 0 0 0 -3 40 Z'
+  const folds = size >= 48
+    ? `<path d="M -32 -22 Q -18 -20 -20 -6 M -40 2 Q -26 0 -20 12 M -28 26 Q -18 22 -14 32" fill="none" stroke="${c('black')}" stroke-width="4" stroke-linecap="round"/>`
+    : ''
+  const half = `<path d="${lobe}" fill="${c('renk-3')}"/>${folds}`
+  return `<g transform="translate(${cx} ${cx}) scale(${k})">${half}<g transform="scale(-1 1)">${half}</g></g>`
+}
+
 function svg(size) {
   const r = (tokens.shape['r-window'].value * size) / 32
   const b = Math.max(1, size / 64)
@@ -30,9 +42,8 @@ function svg(size) {
   const [x1, y1] = p(205)
   const head = size * 0.12
   const e = rad(205)
-  const dir = [-Math.sin(e), Math.cos(e)]
   const nrm = [Math.cos(e), Math.sin(e)]
-  const tip = [x1 + dir[0] * head * 1.4, y1 + dir[1] * head * 1.4]
+  const tip = p(205 + ((head * 1.4) / ring) * (180 / Math.PI))
   const back1 = [x1 + nrm[0] * head * 0.75, y1 + nrm[1] * head * 0.75]
   const back2 = [x1 - nrm[0] * head * 0.75, y1 - nrm[1] * head * 0.75]
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${size}" height="${size}" viewBox="0 0 ${size} ${size}">
@@ -41,7 +52,7 @@ function svg(size) {
 <rect x="${b / 2}" y="${b / 2}" width="${size - b}" height="${size - b}" rx="${r}" fill="none" stroke="${c('renk-1')}" stroke-opacity="0.7" stroke-width="${b}"/>
 <path d="M ${x0} ${y0} A ${ring} ${ring} 0 1 1 ${x1} ${y1}" fill="none" stroke="${c('renk-1')}" stroke-width="${w}" stroke-linecap="butt"/>
 <path d="M ${tip.join(' ')} L ${back1.join(' ')} L ${back2.join(' ')} Z" fill="${c('renk-1')}"/>
-<circle cx="${cx}" cy="${cx}" r="${size * 0.075}" fill="${c('renk-3')}"/>
+${brain(cx, size)}
 </svg>`
 }
 
@@ -99,6 +110,12 @@ function icns(map) {
   return Buffer.concat([h, body])
 }
 
+if (out) {
+  for (const s of Object.keys(png)) writeFileSync(join(out, `icon-${s}.png`), png[s])
+  writeFileSync(join(out, 'icon.ico'), ico([16, 24, 32, 48, 64, 128, 256]))
+  console.log('icon preview:', out)
+  process.exit(0)
+}
 writeFileSync(join(root, 'build/icon.png'), png[512])
 writeFileSync(join(root, 'build/icon.ico'), ico([16, 24, 32, 48, 64, 128, 256]))
 writeFileSync(join(root, 'build/icon.icns'), icns({ ic07: 128, ic08: 256, ic09: 512, ic10: 1024 }))
