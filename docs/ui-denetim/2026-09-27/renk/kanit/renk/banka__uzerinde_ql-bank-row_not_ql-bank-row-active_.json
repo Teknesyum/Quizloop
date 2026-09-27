@@ -1,0 +1,14 @@
+{
+ "ekran": "banka",
+ "hal": "uzerinde .ql-bank-row:not(.ql-bank-row-active)",
+ "olcek": "1",
+ "denetim": {
+  "url": "file:///C:/Users/Administrator/Desktop/Projeler/Quizloop/dist/win-unpacked/resources/app.asar/out/renderer/index.html",
+  "esik": 7,
+  "hedef": 24,
+  "checked": 129,
+  "pairs": [],
+  "targets": []
+ },
+ "axe": []
+}

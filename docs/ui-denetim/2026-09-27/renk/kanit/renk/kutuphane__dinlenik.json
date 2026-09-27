@@ -1,0 +1,14 @@
+{
+ "ekran": "kutuphane",
+ "hal": "dinlenik",
+ "olcek": "1",
+ "denetim": {
+  "url": "file:///C:/Users/Administrator/Desktop/Projeler/Quizloop/dist/win-unpacked/resources/app.asar/out/renderer/index.html",
+  "esik": 7,
+  "hedef": 24,
+  "checked": 25,
+  "pairs": [],
+  "targets": []
+ },
+ "axe": []
+}

@@ -6,6 +6,18 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.2.0] - 2026-09-27
+
+### Changed
+
+- Interface moved to teknesyum-ui 0.26.0: the owner's refreshed palette
+  (primary, accent and support colours) and a 4 px corner radius.
+- Every screen audited at 100, 125 and 150% scale in the packaged app with no
+  contrast or target-size errors; dialog and toast titles, the source line,
+  the bank row ellipsis and the sticky grade row were fixed along the way.
+
+## [0.1.0] - 2026-09-23
+
 ### Added
 
 - Repository skeleton: README, agent guide, ignore rules, documentation layout.
