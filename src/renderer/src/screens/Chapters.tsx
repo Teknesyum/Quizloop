@@ -102,7 +102,7 @@ export function Chapters({ moduleId }: { moduleId: string }): React.JSX.Element 
               style={{ '--ql-i': i } as React.CSSProperties}
             >
               {chapterCover(c) && (
-                <img className="ql-cover" src={chapterCover(c) as string} alt="" />
+                <img className="ql-cover ql-cover-foot" src={chapterCover(c) as string} alt="" />
               )}
               <header className="ql-card-head">
                 <h3 className="tk-h3">{c.chapter || t('chapters.unsorted')}</h3>

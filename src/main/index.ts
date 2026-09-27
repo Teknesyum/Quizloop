@@ -8,7 +8,7 @@ import { openDatabase } from './db'
 import { registerHandlers } from './ipc/handlers'
 import { installFrom, resyncAll, samplePath } from './modules/install'
 import { applyPendingTransfer, registerTransfer } from './transfer'
-import { registerUpdates } from './update'
+import { announceUpdated, registerUpdates } from './update'
 import { createWindow } from './window'
 
 const CSP = [
@@ -38,6 +38,7 @@ async function boot(): Promise<void> {
   registerAssetProtocol(rootOf, pdfOf)
   registerTransfer(opened.db)
   registerUpdates()
+  announceUpdated()
 
   session.defaultSession.webRequest.onHeadersReceived((details, cb) => {
     cb({ responseHeaders: { ...details.responseHeaders, 'Content-Security-Policy': [CSP] } })

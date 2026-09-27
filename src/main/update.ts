@@ -1,6 +1,6 @@
 import { app, BrowserWindow, ipcMain, net, shell } from 'electron'
-import { autoUpdater } from 'electron-updater'
-import { existsSync } from 'node:fs'
+import { autoUpdater, CancellationToken } from 'electron-updater'
+import { existsSync, readFileSync, writeFileSync } from 'node:fs'
 import { join } from 'node:path'
 import { CH, type UpdateStatus } from '@shared/ipc'
 
@@ -9,6 +9,8 @@ const REPO = 'Quizloop'
 const RELEASES = `https://github.com/${OWNER}/${REPO}/releases`
 
 let status: UpdateStatus = { state: 'idle' }
+let cancel: CancellationToken | null = null
+let installAfter = false
 
 function emit(next: UpdateStatus): void {
   status = next
@@ -78,20 +80,42 @@ function check(): Promise<UpdateStatus> {
 
 export function registerUpdates(): void {
   if (nativeUpdates()) {
-    autoUpdater.autoDownload = true
-    autoUpdater.autoInstallOnAppQuit = true
+    autoUpdater.autoDownload = false
+    autoUpdater.autoInstallOnAppQuit = false
     autoUpdater.on('checking-for-update', () => emit({ state: 'checking' }))
     autoUpdater.on('update-not-available', () => emit({ state: 'none' }))
     autoUpdater.on('update-available', (i) => emit({ state: 'available', version: i.version }))
     autoUpdater.on('download-progress', (p) =>
       emit({ state: 'downloading', version: status.version, percent: Math.round(p.percent) })
     )
-    autoUpdater.on('update-downloaded', (i) => emit({ state: 'ready', version: i.version }))
-    autoUpdater.on('error', (e) => emit({ state: 'error', error: e.message }))
+    autoUpdater.on('update-downloaded', (i) => {
+      cancel = null
+      emit({ state: 'ready', version: i.version })
+      if (installAfter) autoUpdater.quitAndInstall()
+    })
+    autoUpdater.on('update-cancelled', (i) => emit({ state: 'available', version: i.version }))
+    autoUpdater.on('error', (e) => {
+      if (status.state === 'downloading' && !cancel) return
+      emit({ state: 'error', error: e.message })
+    })
   }
 
   ipcMain.handle(CH.updateStatus, () => status)
   ipcMain.handle(CH.updateCheck, () => check())
+  ipcMain.on(CH.updateDownload, (_e, install: boolean) => {
+    if (status.state !== 'available') return
+    installAfter = install === true
+    cancel = new CancellationToken()
+    emit({ state: 'downloading', version: status.version, percent: 0 })
+    autoUpdater.downloadUpdate(cancel).catch(() => undefined)
+  })
+  ipcMain.on(CH.updateCancel, () => {
+    if (status.state !== 'downloading' || !cancel) return
+    const token = cancel
+    cancel = null
+    installAfter = false
+    token.cancel()
+  })
   ipcMain.on(CH.updateInstall, () => {
     if (status.state === 'ready') autoUpdater.quitAndInstall()
   })
@@ -101,4 +125,22 @@ export function registerUpdates(): void {
   })
 
   setTimeout(() => void check(), 8000)
+}
+
+export function announceUpdated(): void {
+  if (!app.isPackaged) return
+  const file = join(app.getPath('userData'), 'version.txt')
+  const now = app.getVersion()
+  let before = ''
+  try {
+    before = readFileSync(file, 'utf8').trim()
+  } catch {
+    before = ''
+  }
+  try {
+    writeFileSync(file, now)
+  } catch {
+    return
+  }
+  if (before && newer(now, before)) emit({ state: 'updated', version: now })
 }

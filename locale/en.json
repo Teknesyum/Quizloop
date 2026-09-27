@@ -218,5 +218,12 @@
   "settings.transferFailed": "Transfer failed",
   "settings.transferNotPackage": "The chosen folder is not a Quizloop transfer package",
   "settings.blink": "Book highlight blink (s)",
-  "settings.blinkHelp": "How long the quoted passage blinks when the book opens. 0 turns it off."
+  "settings.blinkHelp": "How long the quoted passage blinks when the book opens. 0 turns it off.",
+  "update.badge": "Update",
+  "update.download": "Download",
+  "update.downloadInstall": "Download and install",
+  "update.cancel": "Cancel",
+  "update.install": "Install",
+  "update.updated": "Updated to {version}",
+  "session.key.space": "Space"
 }

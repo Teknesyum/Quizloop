@@ -1,7 +1,8 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { tinykeys } from 'tinykeys'
 import { FONT_SCALES } from '@shared/ipc'
-import { TitleBar } from './components/TitleBar'
+import { TitleBar } from '../../../teknesyum-ui/ustcubuk/TitleBar'
+import { UpdateBadge } from './components/UpdateBadge'
 import { Toasts } from './components/Toast'
 import { t } from './i18n'
 import { Bank } from './screens/Bank'
@@ -12,11 +13,16 @@ import { Settings } from './screens/Settings'
 import { Stats } from './screens/Stats'
 import { useApp, type Route } from './store/app'
 
-const NAV: { route: Route; label: string; glyph: string }[] = [
-  { route: { name: 'library' }, label: t('nav.library'), glyph: '▤' },
-  { route: { name: 'stats' }, label: t('nav.stats'), glyph: '▥' },
-  { route: { name: 'settings' }, label: t('nav.settings'), glyph: '⚙' }
+const GITHUB = 'https://github.com/Teknesyum'
+const SPONSOR = 'https://github.com/sponsors/Teknesyum'
+
+const NAV: { route: Route; label: string }[] = [
+  { route: { name: 'library' }, label: t('nav.library') },
+  { route: { name: 'stats' }, label: t('nav.stats') },
+  { route: { name: 'settings' }, label: t('nav.settings') }
 ]
+
+const TABS = NAV.map((n) => ({ id: n.route.name, label: n.label }))
 
 export default function App(): React.JSX.Element {
   const route = useApp((s) => s.route)
@@ -26,6 +32,12 @@ export default function App(): React.JSX.Element {
   const settings = useApp((s) => s.settings)
   const saveSettings = useApp((s) => s.saveSettings)
   const scale = settings?.fontScale ?? 1
+  const [max, setMax] = useState(false)
+
+  useEffect(() => {
+    window.quizloop.window.isMaximized().then(setMax)
+    return window.quizloop.window.onMaximized(setMax)
+  }, [])
 
   useEffect(() => {
     loadSettings()
@@ -60,30 +72,34 @@ export default function App(): React.JSX.Element {
   }, [scale, saveSettings])
 
   const inSession = route.name === 'session'
+  const win = window.quizloop.window
 
   return (
     <div className="ql-shell">
-      <TitleBar />
-      <div className={`ql-body ${inSession ? 'ql-body-focus' : ''}`}>
-        {!inSession && (
-          <nav className="ql-sidebar" aria-label={t('app.name')}>
-            {NAV.map((n, i) => (
-              <button
-                key={n.route.name}
-                type="button"
-                className={`ql-nav ql-transition-in ${route.name === n.route.name ? 'ql-nav-active' : ''}`}
-                style={{ '--ql-i': i } as React.CSSProperties}
-                onClick={() => go(n.route)}
-                aria-current={route.name === n.route.name ? 'page' : undefined}
-              >
-                <span aria-hidden="true" className="ql-nav-glyph">
-                  {n.glyph}
-                </span>
-                <span>{n.label}</span>
-              </button>
-            ))}
-          </nav>
-        )}
+      <TitleBar
+        first="Quiz"
+        second="loop"
+        links={{ brand: GITHUB, sponsor: SPONSOR }}
+        labels={{
+          sponsor: t('sig.sponsor'),
+          brand: t('sig.by'),
+          minimize: t('win.minimize'),
+          maximize: max ? t('win.restore') : t('win.maximize'),
+          close: t('win.close'),
+          tabs: t('app.name')
+        }}
+        tabs={inSession ? undefined : TABS}
+        current={route.name === 'stats' || route.name === 'settings' ? route.name : 'library'}
+        onTab={(id) => {
+          const n = NAV.find((x) => x.route.name === id)
+          if (n) go(n.route)
+        }}
+        language={<UpdateBadge />}
+        onMinimize={() => win.minimize()}
+        onMaximize={() => win.toggleMaximize()}
+        onClose={() => win.close()}
+      />
+      <div className="ql-body">
         <main className="ql-main" key={route.name}>
           {route.name === 'library' && <Library />}
           {route.name === 'stats' && <Stats />}

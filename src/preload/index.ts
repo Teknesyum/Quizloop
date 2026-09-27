@@ -49,6 +49,8 @@ const api: QuizloopApi = {
   update: {
     status: () => ipcRenderer.invoke(CH.updateStatus),
     check: () => ipcRenderer.invoke(CH.updateCheck),
+    download: (install: boolean) => ipcRenderer.send(CH.updateDownload, install),
+    cancel: () => ipcRenderer.send(CH.updateCancel),
     install: () => ipcRenderer.send(CH.updateInstall),
     open: () => ipcRenderer.send(CH.updateOpen),
     onStatus: (cb) => {

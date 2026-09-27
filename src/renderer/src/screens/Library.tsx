@@ -250,6 +250,7 @@ export function Library(): React.JSX.Element {
       {resetting && (
         <Confirm
           text={t('library.resetConfirm', { name: resetting.name })}
+          yes={t('library.reset')}
           danger
           onNo={() => setResetting(null)}
           onYes={async () => {
@@ -264,6 +265,7 @@ export function Library(): React.JSX.Element {
       {removing && (
         <Confirm
           text={t('library.removeConfirm', { name: removing.name })}
+          yes={t('library.remove')}
           danger
           onNo={() => setRemoving(null)}
           onYes={async () => {

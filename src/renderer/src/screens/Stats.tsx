@@ -14,8 +14,8 @@ const BAR_DAYS = 30
 const STATES: CardStatus[] = ['yeni', 'ogreniyor', 'tekrar', 'emekli']
 const STATE_FILL: Record<CardStatus, string> = {
   yeni: 'var(--tk-border-strong)',
-  ogreniyor: 'var(--tk-pink)',
-  tekrar: 'var(--tk-blue)',
+  ogreniyor: 'var(--tk-renk-2)',
+  tekrar: 'var(--tk-renk-1)',
   emekli: 'var(--tk-success)'
 }
 
@@ -93,7 +93,7 @@ function Heatmap({ days }: { days: Day[][] }): React.JSX.Element {
                       c.bin.future
                         ? 'transparent'
                         : c.bin.reviews
-                          ? 'var(--tk-purple)'
+                          ? 'var(--tk-renk-3)'
                           : 'var(--tk-border)'
                     }
                     fillOpacity={c.bin.reviews ? opacity(c.bin.reviews) : 1}
@@ -161,7 +161,7 @@ function Bars({ days }: { days: Day[] }): React.JSX.Element {
                     width={bw}
                     height={innerH - y(d.reviews)}
                     rx={2}
-                    fill="var(--tk-blue)"
+                    fill="var(--tk-renk-1)"
                     fillOpacity={0.35}
                   />
                   <Bar
@@ -170,7 +170,7 @@ function Bars({ days }: { days: Day[] }): React.JSX.Element {
                     width={bw}
                     height={innerH - y(d.correct)}
                     rx={2}
-                    fill="var(--tk-blue)"
+                    fill="var(--tk-renk-1)"
                   >
                     <title>
                       {t('stats.chartBar', {

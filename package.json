@@ -25,7 +25,7 @@
     "lint": "eslint --cache .",
     "format": "prettier --write .",
     "schema:gen": "tsx scripts/schema-gen.ts",
-    "ui:scan": "node %USERPROFILE%/.claude/plugins/cache/teknesyum/teknesyum-ui/0.2.0/scripts/scan.js .",
+    "ui:scan": "node scripts/ui-scan.mjs",
     "postinstall": "electron-builder install-app-deps",
     "abi:node": "node scripts/abi.mjs node",
     "abi:electron": "node scripts/abi.mjs electron"

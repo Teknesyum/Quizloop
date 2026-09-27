@@ -263,7 +263,7 @@ export function Session({
   const hints: [string, Key][] =
     state.phase === 'stem'
       ? [
-          ['␣', open ? 'session.hint.answer' : 'session.hint.reveal'],
+          [t('session.key.space'), open ? 'session.hint.answer' : 'session.hint.reveal'],
           ['B', open ? 'session.hint.knownOpen' : 'session.hint.known'],
           ['F', 'session.hint.flag'],
           ['Esc', 'session.hint.end']
@@ -345,7 +345,7 @@ export function Session({
             </button>
             <button type="button" className="tk-btn tk-btn-primary" onClick={s.reveal}>
               {open ? t('session.showAnswer') : t('session.showChoices')}
-              <kbd>␣</kbd>
+              <kbd>{t('session.key.space')}</kbd>
             </button>
           </div>
         )}
