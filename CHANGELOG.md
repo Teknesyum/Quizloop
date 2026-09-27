@@ -6,6 +6,13 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.2.1] - 2026-09-27
+
+### Changed
+
+- New program icon, generated from the theme tokens (`npm run icon:gen`): a
+  review ring around a brain, replacing the default Electron icon.
+
 ## [0.2.0] - 2026-09-27
 
 ### Changed

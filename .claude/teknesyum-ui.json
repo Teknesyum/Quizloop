@@ -44,13 +44,13 @@
   ],
   "plugin": "0.26.0",
   "denetim": {
-    "tarih": "2026-09-27T14:50:31.466Z",
+    "tarih": "2026-09-27T15:36:21.231Z",
     "duzen": "a0eaf97ec84216aa"
   },
   "uc": {
-    "surum": "0.20.0",
-    "duzen": "52e0c6b7355cba20",
-    "commit": "4f2f08b9c6d9b1099f81ddd0f34390b729626a85",
+    "surum": "0.26.0",
+    "duzen": "a0eaf97ec84216aa",
+    "commit": "9955041f8ecd5cbbb1705971898acd071576521b",
     "tarih": "2026-09-27"
   }
 }
