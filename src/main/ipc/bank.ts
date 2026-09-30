@@ -144,10 +144,11 @@ export function registerBank(deps: {
       }
     })
     const w = BrowserWindow.fromWebContents(e.sender)
-    const r = await dialog.showSaveDialog(w ?? new BrowserWindow({ show: false }), {
+    const opts: Electron.SaveDialogOptions = {
       defaultPath: join(app.getPath('documents'), `${id}-flags.json`),
       filters: [{ name: 'JSON', extensions: ['json'] }]
-    })
+    }
+    const r = await (w ? dialog.showSaveDialog(w, opts) : dialog.showSaveDialog(opts))
     if (r.canceled || !r.filePath) return { ok: false }
     const body = {
       modul: meta.id,

@@ -24,7 +24,7 @@
   },
   "note": "",
   "installedAt": "2026-09-08T16:47:04.919Z",
-  "duzen": "a0eaf97ec84216aa",
+  "duzen": "920c61ba2837ca0d",
   "ignore": [
     {
       "rule": "guncelleme/panel-yok",
@@ -40,17 +40,23 @@
       "rule": "core/list-without-motion",
       "file": "src/renderer/src/App.tsx",
       "reason": "Tek .map çağrısı NAV dizisini TitleBar sekme verisine çeviriyor (const TABS); ekrana liste basılmıyor. Sekmeleri TitleBar çiziyor ve hareketi titlebar.css taşıyor."
+    },
+    {
+      "rule": "guncelleme/surum-tetik",
+      "file": "src/renderer/src/screens/Library.tsx",
+      "reason": "Bu v{m.version} programın değil, kütüphanedeki modülün sürümü; güncelleme denetimiyle ilgisi yok."
     }
   ],
-  "plugin": "0.26.0",
+  "plugin": "0.32.0",
   "denetim": {
-    "tarih": "2026-09-27T15:36:21.231Z",
-    "duzen": "a0eaf97ec84216aa"
+    "tarih": "2026-09-30T19:22:28.983Z",
+    "duzen": "920c61ba2837ca0d"
   },
   "uc": {
     "surum": "0.26.0",
     "duzen": "a0eaf97ec84216aa",
     "commit": "9955041f8ecd5cbbb1705971898acd071576521b",
     "tarih": "2026-09-27"
-  }
+  },
+  "pencere": "maximize"
 }

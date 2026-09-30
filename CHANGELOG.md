@@ -6,6 +6,14 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.2.2] - 2026-09-30
+
+### Changed
+
+- Interface moved to teknesyum-ui 0.32.0; the title bar drops the site link.
+- Open and save dialogs no longer create a hidden window when no parent
+  window is found.
+
 ## [0.2.1] - 2026-09-27
 
 ### Changed
