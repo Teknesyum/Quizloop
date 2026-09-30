@@ -10,6 +10,7 @@ import type { Source } from '@shared/schema/question'
 import { findQuoteRuns, pdfPageOf } from '@shared/kaynak'
 import { Skeleton } from '@renderer/components/Skeleton'
 import { t } from '@renderer/i18n'
+import { shortAlt } from './media'
 import { useApp } from '@renderer/store/app'
 
 GlobalWorkerOptions.workerSrc = workerUrl
@@ -428,7 +429,14 @@ export function BookViewer({
             )
           ) : kesitRef ? (
             <figure className="ql-book-kesit">
-              <img src={assetBase + kesitRef} alt={source.quote} />
+              <img
+                src={assetBase + kesitRef}
+                alt={t('book.kesitAlt', {
+                  file: source.file,
+                  page: source.kesit?.pdfSayfa ?? source.pages[0],
+                  quote: shortAlt(source.quote)
+                })}
+              />
               <figcaption className="tk-hint">{t('book.kesitOnly')}</figcaption>
             </figure>
           ) : (

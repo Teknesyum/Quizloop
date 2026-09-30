@@ -1,5 +1,9 @@
 import type { SolutionBlock } from '@shared/schema/question'
+import { t } from '@renderer/i18n'
+import { DataTable } from './DataTable'
+import { Figure } from './Figure'
 import { Markdown } from './Markdown'
+import { altFor } from './media'
 
 function Block({ b, assetBase }: { b: SolutionBlock; assetBase: string }): React.JSX.Element {
   if (b.type === 'text') return <Markdown md={b.md} assetBase={assetBase} />
@@ -8,34 +12,13 @@ function Block({ b, assetBase }: { b: SolutionBlock; assetBase: string }): React
   if (b.type === 'formula') return <Markdown md={`$$${b.tex}$$`} />
   if (b.type === 'image')
     return (
-      <figure className="ql-figure">
-        <img src={assetBase + b.ref} alt={b.caption ?? ''} />
-        {b.caption && <figcaption className="tk-hint">{b.caption}</figcaption>}
-      </figure>
+      <Figure
+        src={assetBase + b.ref}
+        alt={altFor(b.alt, b.caption, t('media.solutionAlt'))}
+        caption={b.caption}
+      />
     )
-  return (
-    <figure className="ql-figure">
-      <table className="ql-table">
-        <thead>
-          <tr>
-            {b.header.map((h, j) => (
-              <th key={j}>{h}</th>
-            ))}
-          </tr>
-        </thead>
-        <tbody>
-          {b.rows.map((r, j) => (
-            <tr key={j}>
-              {r.map((c, k) => (
-                <td key={k}>{c}</td>
-              ))}
-            </tr>
-          ))}
-        </tbody>
-      </table>
-      {b.caption && <figcaption className="tk-hint">{b.caption}</figcaption>}
-    </figure>
-  )
+  return <DataTable table={b} />
 }
 
 export function Solution({

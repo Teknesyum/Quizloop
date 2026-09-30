@@ -10,8 +10,10 @@ import { PRICES, run } from './generate.ts'
 import { loadCheckpoint } from './checkpoint.ts'
 import { verify } from './verify.ts'
 import { pack } from './pack.ts'
-import { writeBriefs, briefDir } from './brief.ts'
+import { hasMaterial, writeBriefs } from './brief.ts'
 import { ingest } from './ingest.ts'
+import { geriAl } from './geri.ts'
+import { cpKey, parseTur, rawDirOf, briefDirOf } from './tur.ts'
 import { FlagFile, applyFlags, formatFlagPlan, planFlags } from './flags.ts'
 import {
   agreement,
@@ -28,8 +30,12 @@ const HELP = `quizforge <komut> --rules <rules.yaml> [seçenekler]
   plan      bölüm haritasından üretim birimlerini çıkar: build/plan.json
   run       birimleri modele gönder   --max-usd <n> zorunlu, --model, --limit, --chapter, --dry-run
   brief     birim istemlerini dosyaya yaz (alt ajanla üretim için)   --chapter, --limit, --force
-            --gorsel  şekil ve tablo turu: istemler build/gorsel/, cevaplar build/rawgorsel/
-  ingest    ajanların yazdığı build/raw/*.json dosyalarını soruya çevir   --gorsel
+            --gorsel  şekil turu: istemler build/gorsel/, cevaplar build/rawgorsel/
+            --tur tablo   tablo turu (build/tablo/index.json): build/briefs-tablo/, build/rawtablo/
+            --tur etiket  etiketli şekil turu (build/etiket/index.json): build/briefs-etiket/, build/rawetiket/
+  ingest    ajanların yazdığı build/raw*/*.json dosyalarını soruya çevir   --gorsel | --tur tablo|etiket
+  geri-al   modules/<id>/ bloklarını build/units/'e, assets/img'i build/figures/'a geri yaz
+            (önce plan)   --force: build/units doluysa üzerine yaz
   verify    deterministik denetim: build/verify-report.json
   pack      modules/<id>/ yaz; verify geçmeden çalışmaz
   flags     uygulamanın flags.json dosyasını oku, soruları birimlerine eşle, o birimleri
@@ -60,6 +66,7 @@ function main(argv: string[]): number {
       'dry-run': { type: 'boolean', default: false },
       force: { type: 'boolean', default: false },
       gorsel: { type: 'boolean', default: false },
+      tur: { type: 'string' },
       flags: { type: 'string' },
       help: { type: 'boolean', short: 'h', default: false }
     }
@@ -139,26 +146,27 @@ function main(argv: string[]): number {
   }
 
   if (cmd === 'brief') {
+    const tur = parseTur(values.tur, values.gorsel)
     const plan = loadPlan(l)
     const cp0 = loadCheckpoint(l, c.sha256)
     let units = values.force
       ? plan.units.slice()
-      : plan.units.filter(
-          (u) => cp0.units[values.gorsel ? u.hash + ':gorsel' : u.hash]?.status !== 'done'
-        )
+      : plan.units.filter((u) => cp0.units[cpKey(u.hash, tur)]?.status !== 'done')
+    units = units.filter((u) => hasMaterial(l, tur, u))
     if (values.chapter !== undefined)
       units = units.filter((u) => u.chapter === Number(values.chapter))
     if (values.limit !== undefined) units = units.slice(0, Number(values.limit))
-    const files = writeBriefs(l, c, plan, units, values.gorsel)
-    const dir = values.gorsel ? path.join(l.buildDir, 'gorsel') : briefDir(l)
-    console.log(`${files.length} brief → ${path.relative(l.root, dir)}`)
+    const files = writeBriefs(l, c, plan, units, tur)
+    console.log(
+      `${files.length} brief → ${path.relative(l.root, briefDirOf(l, tur))}, cevaplar → ${path.relative(l.root, rawDirOf(l, tur))}`
+    )
     for (const f of files) console.log('  ' + path.relative(l.root, f))
     return 0
   }
 
   if (cmd === 'ingest') {
     const plan = loadPlan(l)
-    const rows = ingest(l, c, plan, values.gorsel)
+    const rows = ingest(l, c, plan, parseTur(values.tur, values.gorsel))
     for (const r of rows)
       console.log(
         `  ${r.unitId}: ${r.error ? 'HATA ' + r.error : `${r.questions} soru, ${r.dropped} düşen`}`
@@ -213,6 +221,14 @@ function main(argv: string[]): number {
       return 0
     }
     throw new Error('zorluk export | apply | uyum')
+  }
+
+  if (cmd === 'geri-al') {
+    const r = geriAl(l, c, loadPlan(l), { force: values.force })
+    console.log(
+      `${r.questions} soru → ${r.units} birim${r.unplaced ? ` + _modul (${r.unplaced} soru)` : ''}, ${r.images} görsel → build/figures${r.tables ? `, ${r.tables} tablo görseli → build/tbl` : ''}`
+    )
+    return 0
   }
 
   if (cmd === 'pack') {

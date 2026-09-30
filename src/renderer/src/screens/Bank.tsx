@@ -7,6 +7,8 @@ import { BookViewer } from '@renderer/components/BookViewer'
 import { Markdown } from '@renderer/components/Markdown'
 import { Skeleton } from '@renderer/components/Skeleton'
 import { Solution } from '@renderer/components/Solution'
+import { StemMedia } from '@renderer/components/StemMedia'
+import { markBoxes } from '@renderer/components/media'
 import { t } from '@renderer/i18n'
 import { useApp } from '@renderer/store/app'
 
@@ -22,9 +24,15 @@ function Detail({ q, onBook }: { q: BankQuestion; onBook(): void }): React.JSX.E
   return (
     <div className="ql-bank-detail-body">
       <Markdown md={q.stem.md} assetBase={q.assetBase} />
-      {q.stem.imageRef && (
-        <img className="ql-stem-img" src={q.assetBase + q.stem.imageRef} alt="" />
-      )}
+      <StemMedia
+        stem={q.stem}
+        assetBase={q.assetBase}
+        marks={
+          q.kind === 'isaretleme'
+            ? markBoxes(q.choices, { correct: q.correct, open: true, live: false })
+            : undefined
+        }
+      />
       {q.choices.length > 0 && (
         <ol className="ql-bank-choices">
           {q.choices.map((c) => (

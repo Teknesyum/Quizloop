@@ -5,8 +5,35 @@ import { jaccard, trigrams } from '../../../src/shared/text.ts'
 import { quoteFound } from './text.ts'
 import type { Loaded } from './rules.ts'
 import { rangeText, toPdf, type Corpus } from './corpus.ts'
-import { figuresDir, imageRefs, loadOutputs } from './generate.ts'
+import { assetSource, imageRefs, loadOutputs } from './generate.ts'
+import {
+  cellCoverage,
+  compact,
+  findRow,
+  labelIndex,
+  tableApprovals,
+  tableHash,
+  tableIndex,
+  mentions,
+  sameBox,
+  type LabelRow,
+  type TableRow
+} from './etiket.ts'
 
+function ocrFor(rows: TableRow[], q: QuestionT, a: number, b: number): string {
+  const captions = [
+    q.stem.table?.caption ?? '',
+    ...q.solution.map((s) => (s.type === 'table' ? (s.caption ?? '') : ''))
+  ].join(' ')
+  return rows
+    .filter(
+      (t) =>
+        (t.pdfSayfa >= a - 2 && t.pdfSayfa <= b + 2) ||
+        new RegExp(`\\b${t.no.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\b`).test(captions)
+    )
+    .map((t) => t.metin)
+    .join(' ')
+}
 export interface Report {
   ok: boolean
   createdAt: string
@@ -20,6 +47,67 @@ export interface Report {
 }
 
 const CHI2_P05_DF4 = 9.488
+const TABLE_MIN = 0.85
+
+type Issue = Report['errors'][number]
+
+export function checkVisual(
+  q: QuestionT,
+  pageText: string,
+  labels: LabelRow[],
+  approved: Set<string> = new Set()
+): { errors: Issue[]; warnings: Issue[] } {
+  const errors: Issue[] = []
+  const warnings: Issue[] = []
+  if (q.stem.imageRef && !q.stem.alt)
+    warnings.push({ id: q.id, code: 'alt', message: `kök görselinde alt yok: ${q.stem.imageRef}` })
+  const tables = [
+    ...(q.stem.table ? [q.stem.table] : []),
+    ...q.solution.flatMap((b) => (b.type === 'table' ? [b] : []))
+  ]
+  for (const t of tables) {
+    const cov = cellCoverage(t, pageText)
+    if (cov < TABLE_MIN && approved.has(tableHash(t)))
+      warnings.push({
+        id: q.id,
+        code: 'table-visual',
+        message: `hücrelerin %${Math.round(cov * 100)}'i metinde; sayfa görüntüsüyle onaylı`
+      })
+    else if (cov < TABLE_MIN)
+      errors.push({
+        id: q.id,
+        code: 'table-source',
+        message: `hücrelerin %${Math.round(cov * 100)}'i kaynak sayfada (en az %${TABLE_MIN * 100})`
+      })
+  }
+  if (q.stem.masks?.length) {
+    const row = q.stem.imageRef ? findRow(labels, q.stem.imageRef) : undefined
+    if (!row)
+      warnings.push({
+        id: q.id,
+        code: 'leak-unchecked',
+        message: 'maskeli görsel etiket dizininde yok'
+      })
+    else
+      for (const m of q.stem.masks) {
+        const e = row.etiketler.find((x) => sameBox(x.kutu, m.box))
+        if (e && mentions(q.stem.md, e.metin))
+          errors.push({ id: q.id, code: 'leak', message: `kapatılan etiket kökte: "${e.metin}"` })
+      }
+  }
+  if (q.kind === 'isaretleme' && q.correct) {
+    const right = q.choices.find((ch) => ch.key === q.correct)
+    if (right)
+      for (const ch of q.choices)
+        if (ch.key !== right.key && compact(ch.md) === compact(right.md))
+          errors.push({
+            id: q.id,
+            code: 'dup-choice',
+            message: `doğru şık metni ${ch.key} şıkkında tekrar ediyor: "${right.md}"`
+          })
+  }
+  return { errors, warnings }
+}
 
 export function verify(l: Loaded, c: Corpus): Report {
   const outputs = loadOutputs(l)
@@ -29,6 +117,9 @@ export function verify(l: Loaded, c: Corpus): Report {
   const ids = new Set<string>()
   let dropped = 0
   const [g0, g1] = l.rules.kaynak.govde
+  const labels = labelIndex(l)
+  const tableOcr = tableIndex(l)
+  const approved = tableApprovals(l)
   for (const u of outputs) {
     dropped += u.dropped.length
     for (const raw of u.questions) {
@@ -52,9 +143,17 @@ export function verify(l: Loaded, c: Corpus): Report {
       else if (!quoteFound(q.source.quote, rangeText(c, a, b)))
         errors.push({ id: q.id, code: 'quote', message: 'alıntı kaynak sayfalarında yok' })
       for (const ref of imageRefs(q)) {
-        if (!fs.existsSync(path.join(figuresDir(l), path.basename(ref))))
+        if (!fs.existsSync(assetSource(l, ref)))
           errors.push({ id: q.id, code: 'asset', message: ref })
       }
+      const vis = checkVisual(
+        q,
+        rangeText(c, Math.max(1, a - 1), b + 1) + ' ' + ocrFor(tableOcr, q, a, b),
+        labels,
+        approved
+      )
+      errors.push(...vis.errors)
+      warnings.push(...vis.warnings)
       all.push(q)
     }
   }

@@ -2,7 +2,8 @@
 
 Module production line. Separate package, same repo, never bundled into the app.
 
-- `src/cli.ts` — `init | plan | brief | ingest | run | verify | pack | flags | zorluk | doctor`. Every command takes `--rules <file>`.
+- `src/cli.ts` — `init | plan | brief | ingest | run | verify | pack | geri-al | flags | zorluk | doctor`. Every command takes `--rules <file>`.
+- `brief`/`ingest` lanes: text, `--gorsel`, `--tur tablo|etiket` (`src/tur.ts`); boxes come only from `build/etiket/index.json` (`src/etiket.ts`).
 - `py/extract.py` — PDF text layer to `pages.jsonl` + `chapters.json` (pypdf, no AGPL).
 - Rules live next to the source: `sources/<id>/rules.yaml`; build state in `sources/<id>/build/`.
 - Question schema is imported from `src/shared/schema` — never duplicated here.

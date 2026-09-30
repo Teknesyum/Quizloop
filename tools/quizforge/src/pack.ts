@@ -4,11 +4,12 @@ import { ModuleMeta } from '../../../src/shared/schema/module.ts'
 import { Block, type Question as QuestionT } from '../../../src/shared/schema/question.ts'
 import type { Loaded } from './rules.ts'
 import type { Corpus } from './corpus.ts'
-import { figuresDir, imageRefs, loadOutputs } from './generate.ts'
+import { assetSource, imageRefs, loadOutputs, moduleDir } from './generate.ts'
 import { sha256 } from './hash.ts'
 import type { Report } from './verify.ts'
 
 const BLOCK_SIZE = 50
+const MOVED = ['img', 'tbl'] as const
 
 export function pack(l: Loaded, c: Corpus): string {
   const reportFile = path.join(l.buildDir, 'verify-report.json')
@@ -18,7 +19,13 @@ export function pack(l: Loaded, c: Corpus): string {
   const questions: QuestionT[] = loadOutputs(l)
     .flatMap((u) => u.questions)
     .sort((a, b) => a.source.pages[0] - b.source.pages[0] || a.id.localeCompare(b.id))
-  const outDir = path.join(l.root, 'modules', l.rules.module.id)
+  if (!questions.length) throw new Error('build/units boş: paketlenecek soru yok')
+  const refs = [...new Set(questions.flatMap(imageRefs))].filter((r) =>
+    (MOVED as readonly string[]).includes(r.split('/')[1] ?? '')
+  )
+  const missing = refs.filter((r) => !fs.existsSync(assetSource(l, r)))
+  if (missing.length) throw new Error(`eksik görsel: ${missing.slice(0, 5).join(', ')}`)
+  const outDir = moduleDir(l)
   const blocksDir = path.join(outDir, 'blocks')
   fs.rmSync(blocksDir, { recursive: true, force: true })
   fs.mkdirSync(blocksDir, { recursive: true })
@@ -31,13 +38,13 @@ export function pack(l: Loaded, c: Corpus): string {
     fs.writeFileSync(path.join(outDir, file), data)
     blocks.push({ file, count: block.questions.length, sha256: sha256(data) })
   }
-  const assetDir = path.join(outDir, 'assets', 'img')
-  fs.rmSync(assetDir, { recursive: true, force: true })
-  const refs = new Set(questions.flatMap(imageRefs))
-  if (refs.size) {
+  for (const kind of MOVED) {
+    const assetDir = path.join(outDir, 'assets', kind)
+    fs.rmSync(assetDir, { recursive: true, force: true })
+    const mine = refs.filter((r) => r.split('/')[1] === kind)
+    if (!mine.length) continue
     fs.mkdirSync(assetDir, { recursive: true })
-    for (const ref of refs)
-      fs.copyFileSync(path.join(figuresDir(l), path.basename(ref)), path.join(outDir, ref))
+    for (const ref of mine) fs.copyFileSync(assetSource(l, ref), path.join(outDir, ref))
   }
   const meta = ModuleMeta.parse({
     schemaVersion: 1,

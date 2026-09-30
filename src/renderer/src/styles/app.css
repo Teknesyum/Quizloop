@@ -338,12 +338,6 @@ body {
   cursor: pointer;
 }
 
-.ql-stem-img {
-  max-width: 100%;
-  border-radius: var(--tk-r);
-  border: var(--tk-border-w) solid var(--tk-border);
-}
-
 .ql-actions {
   display: flex;
   gap: var(--tk-sp-3);
@@ -487,35 +481,6 @@ kbd {
   border-left: 2px solid var(--tk-renk-3-text);
   padding-left: var(--tk-sp-3);
   color: var(--tk-renk-3-text);
-}
-
-.ql-figure {
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: var(--tk-sp-2);
-}
-
-.ql-figure img {
-  max-width: 100%;
-  border-radius: var(--tk-r);
-}
-
-.ql-table {
-  border-collapse: collapse;
-  width: 100%;
-  font-size: var(--tk-fs-1);
-}
-
-.ql-table th,
-.ql-table td {
-  border: var(--tk-border-w) solid var(--tk-border);
-  padding: var(--tk-sp-2);
-  text-align: left;
-}
-
-.ql-table th {
-  color: var(--tk-text-label);
 }
 
 .ql-solved {
@@ -910,7 +875,8 @@ kbd {
 }
 
 .ql-book-scrim {
-  padding: calc(var(--ql-titlebar-h) + var(--tk-sp-4)) var(--tk-sp-4) calc(var(--ql-keys-h) + var(--tk-sp-4));
+  padding: calc(var(--ql-titlebar-h) + var(--tk-sp-4)) var(--tk-sp-4)
+    calc(var(--ql-keys-h) + var(--tk-sp-4));
 }
 
 .ql-book {
@@ -1071,6 +1037,329 @@ kbd {
 .ql-book-still .ql-book-mark {
   animation: none;
   opacity: 1;
+}
+
+/* --- media: figure, masks, marks, zoom, table --- */
+
+.ql-stem-media {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--tk-sp-4);
+}
+
+.ql-media {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--tk-sp-2);
+  max-width: 100%;
+}
+
+.ql-media-frame {
+  position: relative;
+  max-width: 100%;
+  line-height: 0;
+}
+
+.ql-media-open {
+  display: block;
+  max-width: 100%;
+  padding: 0;
+  border: var(--tk-border-w) solid var(--tk-border);
+  border-radius: var(--tk-r);
+  background: transparent;
+  cursor: zoom-in;
+  overflow: hidden;
+  transition: transform var(--tk-t-instant) var(--tk-e-out);
+}
+
+.ql-media-open:hover,
+.ql-media-open:focus-visible {
+  border-color: var(--tk-border-strong);
+}
+
+.ql-media-open:active {
+  border-color: var(--tk-renk-1);
+  transform: scale(var(--tk-scale-press));
+}
+
+.ql-media-open:disabled {
+  cursor: not-allowed;
+  border-color: var(--tk-border);
+  transform: none;
+}
+
+.ql-media-open img,
+.ql-zoom-stage img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  user-select: none;
+}
+
+.ql-mask,
+.ql-mark {
+  position: absolute;
+  left: var(--ql-bx);
+  top: var(--ql-by);
+  width: var(--ql-bw);
+  height: var(--ql-bh);
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  font-family: var(--font-mono, monospace);
+  font-size: var(--tk-fs-1);
+  line-height: 1;
+  border-radius: var(--tk-r);
+}
+
+.ql-mask {
+  pointer-events: none;
+  overflow: hidden;
+  color: var(--tk-text);
+  background: var(--tk-surface);
+  border: var(--tk-border-w) dashed var(--tk-border-strong);
+}
+
+.ql-mark {
+  color: var(--tk-text);
+  background: var(--tk-surface);
+  border: var(--tk-focus-w) solid var(--tk-border-strong);
+  transition: transform var(--tk-t-instant) var(--tk-e-out);
+}
+
+button.ql-mark {
+  cursor: pointer;
+}
+
+button.ql-mark:disabled,
+span.ql-mark {
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
+button.ql-mark:not(:disabled):hover,
+button.ql-mark:not(:disabled):focus-visible {
+  border-color: var(--tk-renk-1);
+  background: color-mix(in srgb, var(--tk-renk-1) 10%, var(--tk-surface));
+}
+
+button.ql-mark:not(:disabled):active {
+  border-color: var(--tk-renk-1);
+  background: color-mix(in srgb, var(--tk-renk-1) 20%, var(--tk-surface));
+  transform: scale(var(--tk-scale-press));
+}
+
+.ql-mark-key {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.ql-mark-wrong {
+  color: var(--tk-danger-text);
+  border-color: var(--tk-danger);
+}
+
+.ql-mark-open {
+  background: transparent;
+  border-color: var(--tk-border-strong);
+  overflow: visible;
+}
+
+.ql-mark-open.ql-mark-wrong {
+  border-color: var(--tk-danger);
+}
+
+.ql-mark-open.ql-mark-right {
+  border-color: var(--tk-success);
+}
+
+.ql-mark-tag {
+  position: absolute;
+  left: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--tk-sp-1);
+  max-width: var(--tk-sidebar-w);
+  padding: var(--tk-sp-1) var(--tk-sp-2);
+  font-family: inherit;
+  font-size: var(--tk-fs-1);
+  line-height: var(--tk-lh-body);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: var(--tk-text);
+  background: var(--tk-surface);
+  border: var(--tk-border-w) solid var(--tk-border-strong);
+  border-radius: var(--tk-r);
+  animation: ql-in var(--tk-t-base) var(--tk-e-out) both;
+  animation-delay: calc(min(var(--ql-i), var(--tk-stagger-max)) * var(--tk-stagger));
+  z-index: 1;
+}
+
+.ql-mark-tag-above {
+  bottom: calc(100% + var(--tk-sp-1));
+}
+
+.ql-mark-tag-below {
+  top: calc(100% + var(--tk-sp-1));
+}
+
+.ql-mark-tag-key {
+  color: var(--tk-text-label);
+}
+
+.ql-mark-right .ql-mark-tag {
+  border-color: var(--tk-success);
+}
+
+.ql-mark-right .ql-mark-tag-key {
+  color: var(--tk-success);
+}
+
+.ql-mark-wrong .ql-mark-tag {
+  border-color: var(--tk-danger);
+}
+
+.ql-mark-wrong .ql-mark-tag-key {
+  color: var(--tk-danger-text);
+}
+
+.ql-media-mark .ql-media-frame {
+  margin-top: var(--tk-sp-5);
+}
+
+.ql-mark-notes {
+  display: flex;
+  flex-direction: column;
+  gap: var(--tk-sp-2);
+}
+
+.ql-mark-note {
+  display: flex;
+  align-items: baseline;
+  gap: var(--tk-sp-2);
+  padding: 0;
+}
+
+.ql-zoom-scrim {
+  padding: calc(var(--ql-titlebar-h) + var(--tk-sp-4)) var(--tk-sp-4)
+    calc(var(--ql-keys-h) + var(--tk-sp-4));
+}
+
+.ql-zoom {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: var(--tk-sp-3);
+  width: min(1400px, 96vw);
+  height: calc(100vh - var(--ql-titlebar-h) - var(--ql-keys-h) - 2 * var(--tk-sp-4));
+  overflow: hidden;
+}
+
+.ql-zoom-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--tk-sp-3);
+}
+
+.ql-zoom-hint {
+  margin: 0;
+}
+
+.ql-zoom-tools {
+  display: flex;
+  align-items: center;
+  gap: var(--tk-sp-2);
+}
+
+.ql-zoom-level {
+  min-width: var(--tk-btn-h);
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+}
+
+.ql-zoom-view {
+  flex: 1 1 auto;
+  min-height: 0;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  container-type: size;
+  touch-action: none;
+}
+
+.ql-zoom-pan {
+  cursor: grab;
+}
+
+.ql-zoom-drag {
+  cursor: grabbing;
+}
+
+.ql-zoom-stage {
+  position: relative;
+  line-height: 0;
+  transform: translate(var(--ql-zx), var(--ql-zy)) scale(var(--ql-zs));
+  transform-origin: center;
+  transition: transform var(--tk-t-fast) var(--tk-e-out);
+}
+
+.ql-zoom-drag .ql-zoom-stage {
+  transition: none;
+}
+
+.ql-zoom-stage img {
+  width: min(100cqw, calc(100cqh * var(--ql-ar)));
+  max-width: none;
+  height: auto;
+}
+
+.ql-zoom-stage .ql-mark-tag {
+  animation: none;
+}
+
+.ql-table-wrap {
+  max-width: 100%;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  border-radius: var(--tk-r);
+}
+
+.ql-table {
+  border-collapse: collapse;
+  min-width: 100%;
+  font-size: var(--tk-fs-1);
+  font-variant-numeric: tabular-nums;
+}
+
+.ql-table-caption {
+  caption-side: bottom;
+  padding-top: var(--tk-sp-2);
+  text-align: left;
+}
+
+.ql-table th,
+.ql-table td {
+  border: var(--tk-border-w) solid var(--tk-border);
+  padding: var(--tk-sp-2) var(--tk-sp-3);
+  text-align: center;
+  vertical-align: middle;
+}
+
+.ql-table th {
+  color: var(--tk-text-label);
+  font-weight: var(--tk-fw-semi);
+}
+
+.ql-table tbody th {
+  white-space: nowrap;
 }
 
 /* --- motion --- */

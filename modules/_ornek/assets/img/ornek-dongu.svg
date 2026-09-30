@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300" width="600" height="300" font-family="sans-serif">
+  <rect width="600" height="300" fill="white"/>
+  <text x="300" y="60" text-anchor="middle" font-size="20" fill="black">Quizloop oturum döngüsü</text>
+  <defs>
+    <marker id="uc" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="dimgray"/>
+    </marker>
+  </defs>
+  <g fill="whitesmoke" stroke="dimgray" stroke-width="2">
+    <rect x="20" y="120" width="100" height="60" rx="8"/>
+    <rect x="135" y="120" width="100" height="60" rx="8"/>
+    <rect x="250" y="120" width="100" height="60" rx="8"/>
+    <rect x="365" y="120" width="100" height="60" rx="8"/>
+    <rect x="480" y="120" width="100" height="60" rx="8"/>
+  </g>
+  <g stroke="dimgray" stroke-width="2" marker-end="url(#uc)">
+    <line x1="120" y1="150" x2="134" y2="150"/>
+    <line x1="235" y1="150" x2="249" y2="150"/>
+    <line x1="350" y1="150" x2="364" y2="150"/>
+    <line x1="465" y1="150" x2="479" y2="150"/>
+  </g>
+  <g font-size="15" text-anchor="middle" fill="black">
+    <text x="70" y="155">Kök</text>
+    <text x="185" y="155">Şıklar</text>
+    <text x="300" y="155">Çözüm</text>
+    <text x="415" y="147">Öz</text>
+    <text x="415" y="166">değerlendirme</text>
+    <text x="530" y="155">Sıradaki</text>
+  </g>
+  <path d="M530,180 C530,260 70,260 70,182" fill="none" stroke="dimgray" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#uc)"/>
+</svg>

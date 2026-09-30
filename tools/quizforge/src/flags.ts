@@ -77,6 +77,7 @@ export function questionIndex(l: Loaded, plan: Plan, cp?: Checkpoint): Map<strin
   const byId = new Map(plan.units.map((u) => [u.unitId, u]))
   const index = new Map<string, IdEntry>()
   for (const out of loadOutputs(l)) {
+    if (/-(tablo|etiket)$/.test(out.unitId)) continue
     const gorsel = out.unitId.endsWith('-gorsel')
     const unit = byHash.get(out.hash) ?? byId.get(out.unitId.replace(/-gorsel$/, ''))
     if (!unit) continue
@@ -106,6 +107,7 @@ export function questionIndex(l: Loaded, plan: Plan, cp?: Checkpoint): Map<strin
   if (cp)
     for (const [key, st] of Object.entries(cp.units)) {
       const [hash, lane] = key.split(':')
+      if (lane && lane !== 'gorsel') continue
       const unit = byHash.get(hash!)
       if (!unit) continue
       for (const id of st.questionIds)
