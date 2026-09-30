@@ -38,10 +38,11 @@ export function applyPendingTransfer(dbFile: string): boolean {
 
 async function pickDir(e: IpcMainInvokeEvent, title: string): Promise<string | null> {
   const w = BrowserWindow.fromWebContents(e.sender)
-  const r = await dialog.showOpenDialog(w ?? new BrowserWindow({ show: false }), {
+  const opts: Electron.OpenDialogOptions = {
     title,
     properties: ['openDirectory', 'createDirectory']
-  })
+  }
+  const r = await (w ? dialog.showOpenDialog(w, opts) : dialog.showOpenDialog(opts))
   return r.canceled ? null : (r.filePaths[0] ?? null)
 }
 

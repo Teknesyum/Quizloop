@@ -1,1 +1,1 @@
-- [x] Simge onayı: program simgesi (4f2f08b) sahibin onayı alınmadan değişti. Eski ve yeni simgenin önizlemesini pencere, görev çubuğu ve masaüstü boyutunda yan yana göster, açıkça onay iste. Onay gelene kadar simgeyi exe'ye, yükleyiciye, kısayola koyma ve yayınlama; geri bildirime göre tasarıma devam et. — 2026-09-27 11:38 — 2026-09-27 onaylandı (beyinli), v0.2.1
+- [x] UI güncellemesi: 0.26.0 → 0.32.0 (oturum başında kendiliğinden uygulanır) — 2026-09-30 21:06 — teknesyum-ui
