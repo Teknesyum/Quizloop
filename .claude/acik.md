@@ -1,1 +1,35 @@
-- [x] UI güncellemesi: 0.26.0 → 0.32.0 (oturum başında kendiliğinden uygulanır) — 2026-09-30 21:06 — teknesyum-ui
+- [x] ajan: Görsel/tablo soru durumu — 2026-09-30 22:28 — sonucu aktarılacak
+- [x] ajan: Arayüz: görsel ve tablo — 2026-09-30 22:37 — sonucu aktarılacak
+- [x] ajan: quizforge: tablo ve etiket hattı — 2026-09-30 22:38 — sonucu aktarılacak
+- [x] ajan: py: etiket ve tablo çıkarımı — 2026-09-30 22:38 — sonucu aktarılacak
+- [x] py: etiket.py, tablo.py — 2026-09-30 22:56 — arka plan ajanı çalışıyor
+- [x] Üretim: tablo ve işaretleme turları, pack, kaynak_kes — 2026-09-30 22:56 — quizforge ve py ajanlarının çıktısını bekliyor
+- [x] Doğrulama: paketli uygulama, beş denetim, ui:scan — 2026-09-30 22:56 — üç ajanın bitmesini bekliyor
+- [ ] Sürüm 0.3.0: CHANGELOG, etiket, yayın — 2026-09-30 22:56 — doğrulamayı bekliyor
+- [x] ajan: Üretim partisi 00 — 2026-09-30 23:13 — sonucu aktarılacak
+- [x] ajan: Üretim partisi 01 — 2026-09-30 23:13 — sonucu aktarılacak
+- [x] ajan: Üretim partisi 02 — 2026-09-30 23:13 — sonucu aktarılacak
+- [x] ajan: Üretim partisi 03 — 2026-09-30 23:13 — sonucu aktarılacak
+- [x] ajan: Üretim partisi 04 — 2026-09-30 23:13 — sonucu aktarılacak
+- [x] ajan: Üretim partisi 05 — 2026-09-30 23:13 — sonucu aktarılacak
+- [x] ajan: Üretim partisi 06 — 2026-09-30 23:13 — sonucu aktarılacak
+- [x] ajan: Üretim partisi 07 — 2026-09-30 23:13 — sonucu aktarılacak
+- [x] ajan: Üretim partisi 08 — 2026-09-30 23:13 — sonucu aktarılacak
+- [x] ajan: Üretim partisi 09 — 2026-09-30 23:13 — sonucu aktarılacak
+- [x] ajan: Üretim partisi 10 — 2026-09-30 23:13 — sonucu aktarılacak
+- [x] ajan: Üretim partisi 11 — 2026-09-30 23:13 — sonucu aktarılacak
+- [x] ajan: Üretim partisi 12 — 2026-09-30 23:13 — sonucu aktarılacak
+- [x] ajan: Üretim partisi 13 — 2026-09-30 23:13 — sonucu aktarılacak
+- [x] ajan: Üretim partisi 14 — 2026-09-30 23:13 — sonucu aktarılacak
+- [x] ajan: Üretim partisi 15 — 2026-09-30 23:13 — sonucu aktarılacak
+- [x] ajan: Üretim partisi 16 — 2026-09-30 23:14 — sonucu aktarılacak
+- [x] ajan: Üretim partisi 17 — 2026-09-30 23:14 — sonucu aktarılacak
+- [x] ajan: Üretim partisi 18 — 2026-09-30 23:14 — sonucu aktarılacak
+- [x] ajan: Üretim partisi 19 — 2026-09-30 23:14 — sonucu aktarılacak
+- [x] ajan: Üretim partisi 20 — 2026-09-30 23:14 — sonucu aktarılacak
+- [x] ajan: Üretim partisi 21 — 2026-09-30 23:14 — sonucu aktarılacak
+- [x] ajan: Üretim partisi 22 — 2026-09-30 23:14 — sonucu aktarılacak
+- [x] ajan: Üretim partisi 23 — 2026-09-30 23:14 — sonucu aktarılacak
+- [x] ajan: Üretim partisi 24 — 2026-09-30 23:14 — sonucu aktarılacak
+- [x] ajan: Tablo görsel denetimi 1 — 2026-09-30 23:42 — sonucu aktarılacak
+- [x] ajan: Tablo görsel denetimi 2 — 2026-09-30 23:42 — sonucu aktarılacak

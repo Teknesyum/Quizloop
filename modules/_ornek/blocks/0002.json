@@ -1,0 +1,264 @@
+{
+  "blockId": "0002",
+  "questions": [
+    {
+      "id": "ornek-0006",
+      "conceptId": "oturum-oz-degerlendirme-tablo",
+      "stem": {
+        "md": "Tabloya göre hangi öz değerlendirme puanı soruyu emekliye ayırır?",
+        "table": {
+          "header": [
+            "Puan",
+            "Anlamı",
+            "Karta ne olur"
+          ],
+          "rows": [
+            [
+              "1",
+              "Anlamadım",
+              "Kuyrukta kalır"
+            ],
+            [
+              "2",
+              "Kısmen",
+              "Kuyrukta kalır"
+            ],
+            [
+              "3",
+              "Anladım",
+              "Satıra retired_at yazılır"
+            ]
+          ],
+          "caption": "Öz değerlendirme puanları",
+          "rowHeader": true
+        }
+      },
+      "choices": [
+        {
+          "key": "A",
+          "md": "1 puan"
+        },
+        {
+          "key": "B",
+          "md": "2 puan"
+        },
+        {
+          "key": "C",
+          "md": "3 puan"
+        },
+        {
+          "key": "D",
+          "md": "Hiçbiri, soru hiç emekli olmaz"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Anlamadım yanıtı kartı kuyrukta tutar; tablo bunu ilk satırda gösterir.",
+        "B": "Kısmen yanıtı da kartı kuyrukta bırakır.",
+        "D": "Tablonun son satırı emekliliği açıkça gösterir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "Yalnız **Anladım** yanıtı satıra `retired_at` yazar; satır silinmez."
+        },
+        {
+          "type": "table",
+          "header": [
+            "Puan",
+            "Sonuç"
+          ],
+          "rows": [
+            [
+              "1–2",
+              "Kuyrukta kalır"
+            ],
+            [
+              "3",
+              "Emekli olur"
+            ]
+          ],
+          "rowHeader": true
+        }
+      ],
+      "source": {
+        "file": "ornek-notlar.md",
+        "pages": [
+          3,
+          3
+        ],
+        "quote": "Anladım yanıtı satıra retired_at yazar; satır asla silinmez.",
+        "chapter": "Oturum akışı"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "oturum",
+        "tablo"
+      ],
+      "deleted": false,
+      "contentHash": "5a11367d8b30ccbf03d02e073b73c9d154226a7293b07104b4f4e9fa7d5d4401"
+    },
+    {
+      "id": "ornek-0007",
+      "conceptId": "oturum-dongu-maske",
+      "stem": {
+        "md": "Şemada **?** ile kapatılmış adım aşağıdakilerden hangisidir?",
+        "imageRef": "assets/img/ornek-dongu.svg",
+        "alt": "Beş kutunun soldan sağa oklarla bağlandığı akış şeması; son kutudan ilk kutuya kesikli bir dönüş oku iner.",
+        "masks": [
+          {
+            "box": [
+              0.4167,
+              0.4,
+              0.1667,
+              0.2
+            ]
+          }
+        ]
+      },
+      "choices": [
+        {
+          "key": "A",
+          "md": "Kitap görünümü"
+        },
+        {
+          "key": "B",
+          "md": "Çözüm"
+        },
+        {
+          "key": "C",
+          "md": "Soru bankası"
+        },
+        {
+          "key": "D",
+          "md": "İstatistik"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Kitap görünümü çözümün içinden açılan yardımcı bir penceredir, döngünün adımı değildir.",
+        "C": "Soru bankası oturum dışında gezilen bir ekrandır.",
+        "D": "İstatistik oturum bittikten sonra bakılan bir ekrandır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "Şık seçildikten sonra çözüm açılır; öz değerlendirme ondan sonra gelir."
+        },
+        {
+          "type": "image",
+          "ref": "assets/img/ornek-dongu.svg",
+          "alt": "Beş kutunun soldan sağa oklarla bağlandığı akış şeması; son kutudan ilk kutuya kesikli bir dönüş oku iner.",
+          "caption": "Oturum döngüsü"
+        }
+      ],
+      "source": {
+        "file": "ornek-notlar.md",
+        "pages": [
+          3,
+          3
+        ],
+        "quote": "Anladım yanıtı satıra retired_at yazar; satır asla silinmez.",
+        "chapter": "Oturum akışı"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "oturum",
+        "gorsel"
+      ],
+      "deleted": false,
+      "contentHash": "a60700b387373cce4982daedb671ee7e22466b0411b0093b8a36465d2c5264db"
+    },
+    {
+      "id": "ornek-0008",
+      "conceptId": "oturum-dongu-isaretleme",
+      "kind": "isaretleme",
+      "stem": {
+        "md": "Şemada öğrencinin kendini 1–3 arasında puanladığı adımı işaretle.",
+        "imageRef": "assets/img/ornek-dongu.svg",
+        "alt": "Beş kutunun soldan sağa oklarla bağlandığı akış şeması; son kutudan ilk kutuya kesikli bir dönüş oku iner."
+      },
+      "choices": [
+        {
+          "key": "A",
+          "md": "Kök",
+          "box": [
+            0.0333,
+            0.4,
+            0.1667,
+            0.2
+          ]
+        },
+        {
+          "key": "B",
+          "md": "Şıklar",
+          "box": [
+            0.225,
+            0.4,
+            0.1667,
+            0.2
+          ]
+        },
+        {
+          "key": "C",
+          "md": "Çözüm",
+          "box": [
+            0.4167,
+            0.4,
+            0.1667,
+            0.2
+          ]
+        },
+        {
+          "key": "D",
+          "md": "Öz değerlendirme",
+          "box": [
+            0.6083,
+            0.4,
+            0.1667,
+            0.2
+          ]
+        },
+        {
+          "key": "E",
+          "md": "Sıradaki soru",
+          "box": [
+            0.8,
+            0.4,
+            0.1667,
+            0.2
+          ]
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Kök, sorunun okunduğu ilk adımdır; burada puan verilmez.",
+        "B": "Şıklar adımında cevap seçilir, puan verilmez.",
+        "C": "Çözüm okunur; puan çözümden sonra verilir.",
+        "E": "Sıradaki soruya puan verildikten sonra geçilir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "Çözümden sonra öğrenci 1, 2 ya da 3 ile kendini puanlar; **Anladım** kartı emekli eder."
+        }
+      ],
+      "source": {
+        "file": "ornek-notlar.md",
+        "pages": [
+          3,
+          3
+        ],
+        "quote": "Anladım yanıtı satıra retired_at yazar; satır asla silinmez.",
+        "chapter": "Oturum akışı"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "oturum",
+        "isaretleme"
+      ],
+      "deleted": false,
+      "contentHash": "10208011045bc4ea54cfae12567876b8c62a26d5926d89aa767f209a145d4596"
+    }
+  ]
+}

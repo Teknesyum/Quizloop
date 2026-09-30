@@ -706,3 +706,30 @@ uygulamada CDP ile sürülerek sınanır; birim testi yetmez.
    yeniden başlatır.
 3. `b55-p1324-1328`: boş `p1327-1.png` yeniden kırpılır ya da görsel soru düşürülür.
 4. Zorluk etiketleri: `istem` mi `etiketleme` mi kararı kullanıcıda.
+
+## 10. Görsel Ve Tablo Dalgası — Plan (2026-09-30)
+
+Ölçüm: 3030 sorunun 427'sinde kökte, 394'ünde çözümde görsel var; tablo sorusu, şık
+görseli, alt metin ve işaretleme türü yok. Kitapta 504 şekil, 287 tablo. `build/`
+silinmiş, modüldeki `kesit` alanları kaybolmuş (`pack` yalnız `assets/img` taşıyor).
+Karar: [0008](kararlar/0008-gorsel-tablo-turleri.md).
+
+Sıra:
+
+1. **Şema** — `Stem.alt/table/masks`, `Choice.alt/box`, `image.alt`, ortak `Table`
+   (`rowHeader`), yeni tür `isaretleme` (kök görseli + kutulu şıklar). Geriye uyumlu.
+2. **Arayüz** — büyütme penceresi (tık/Enter açar, Esc kapar, tekerlek yakınlaştırır),
+   alt metinler, erişilebilir tablo (`caption`, `scope`), kökte tablo, maskeli görsel,
+   işaretleme sorusu (görsel üstünde harfli kutular, tık ya da A–E; çözümde etiket açılır),
+   Soru Bankası görünümü, dil anahtarları, testler.
+3. **quizforge** — `geri-al` (modülü `build/units` ve `build/figures`'a geri yükler);
+   sözleşmede `tablo`, `cozumTablosu`, `gorselAlt`, `maskeler`, `isaretler`;
+   `--tur tablo|etiket` brifleri; verify: alt metin, kutu sınırı, sızıntı (doğru etiket
+   kökte geçmez), tablo hücrelerinin sayfa metninde bulunması; `pack` kesitleri ve
+   `assets/kaynak`'ı korur; `rules.yaml` yasak listesi temizlenir.
+4. **Veri** — `py/etiket.py`: şekil bölgesini kırpar, OCR etiketlerini normalize kutuya
+   çevirir (`build/etiket/index.json`); `py/tablo.py`: tablo sayfalarını ve başlıklarını
+   listeler, sayfa görüntüsünü basar.
+5. **Üretim** — oturum ajanlarıyla (API maliyeti yok) tablo ve işaretleme turları,
+   `ingest` → `verify` → `pack` → `kaynak_kes.py`.
+6. **Doğrulama** — paketli uygulamada ekran görüntüsü, beş denetim, `ui:scan`; sürüm 0.3.0.

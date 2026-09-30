@@ -6,7 +6,8 @@ import { z } from 'zod'
 import {
   Question,
   type Question as QuestionT,
-  type SolutionBlock
+  type SolutionBlock,
+  type Box
 } from '../../../src/shared/schema/question.ts'
 import { quoteFound } from './text.ts'
 import { ZORLUK_OLCUTU } from './zorluk.ts'
@@ -22,19 +23,34 @@ import {
 } from './checkpoint.ts'
 import { canonical, sha256 } from './hash.ts'
 import { consumeFlags, flagNote } from './flags.ts'
+import { asTur, type Tur } from './tur.ts'
+import { findRow, labelIndex, matchLabel, resolveMasks, toTable, type LabelRow } from './etiket.ts'
 
 const Key = z.enum(['A', 'B', 'C', 'D', 'E'])
+
+const GenTable = z.object({
+  baslik: z.string().optional(),
+  basliklar: z.array(z.string()).min(1),
+  satirlar: z.array(z.array(z.string())).min(1),
+  satirBasligi: z.boolean().optional()
+})
 
 export const Generated = z.object({
   sorular: z.array(
     z.object({
       alinti: z.string(),
       gorsel: z.string().optional(),
+      gorselAlt: z.string().optional(),
       cozumGorseli: z.string().optional(),
+      cozumGorseliAlt: z.string().optional(),
+      tablo: GenTable.optional(),
+      cozumTablosu: GenTable.optional(),
+      maskeler: z.array(z.string()).optional(),
+      isaretler: z.array(z.object({ anahtar: Key, etiket: z.string() })).optional(),
       sayfa: z.object({ baslangic: z.number().int(), bitis: z.number().int() }),
       kavram: z.string(),
       kok: z.string(),
-      tip: z.enum(['coktan-secmeli', 'acik-uclu']).optional(),
+      tip: z.enum(['coktan-secmeli', 'acik-uclu', 'isaretleme']).optional(),
       vurgu: z.array(z.string()).optional(),
       siklar: z.array(z.object({ anahtar: Key, metin: z.string() })).default([]),
       dogru: z.preprocess((v) => (v === '' ? undefined : v), Key.optional()),
@@ -48,6 +64,7 @@ export const Generated = z.object({
 })
 
 type Generated = z.infer<typeof Generated>
+type GenQ = Generated['sorular'][number]
 
 export const PRICES: Record<string, [number, number]> = {
   'claude-opus-5': [5, 25],
@@ -71,10 +88,41 @@ export interface UnitOutput {
   dropped: { kok: string; reason: string }[]
 }
 
-export function systemPrompt(l: Loaded, gorsel = false): string {
+const TUR_ISTEMI: Record<Tur, string> = {
+  metin: `Bu turda şekil ve tablo görmüyorsun: şekle, tabloya ya da görsele atıf yapan soru yazma.`,
+  gorsel: `Bu turda soru şeklin ya da tablonun kendisinden çıkar: verilen görseli okumayı sına — neyi gösterdiğini, hangi değerin hangi durumu işaret ettiğini, eğrinin nereye gittiğini sor. Kullandığın görselin dosya adını gorsel alanına yaz; görseli anlatarak kökün içinde tekrar etme. gorselAlt alanına görseli görmeyen biri için bir iki cümlelik tarafsız betimleme yaz (cevabı ele vermeden).`,
+  tablo: [
+    `Bu turda soru kitaptaki bir tablodan çıkar. Her tablo için sayfa görüntüsünün yolu ve OCR metni verilir; OCR bozuk olabilir, doğrusu görüntüdedir.`,
+    `Önce görüntüyü aç ve tabloyu satır satır, sütun sütun birebir aktar: tablo.basliklar sütun başlıkları, tablo.satirlar her satırın hücreleri (başlıklarla aynı sayıda), tablo.baslik tablonun adı ("Tablo 3-3 ..."), ilk sütun satır başlığıysa satirBasligi true. Hücreleri kitaptaki gibi yaz; kısaltma, çeviri, düzeltme yapma. Uydurma hücre içeren tablo çöpe gider.`,
+    `Tablo kökte verilir; kök tabloyu yeniden anlatmaz, tabloya dayanan klinik bir durum kurar. Cevap tablodan tek bir hücreyi okumak kadar kolay olmamalı: iki hücreyi karşılaştırmayı, bir değeri hastaya uygulamayı ya da tablodaki örüntüden çıkarım yapmayı gerektirsin.`,
+    `Tablo büyükse soruyla ilgili satır ve sütunları eksiksiz aktar, ilgisizleri bırakabilirsin; aktardığın her hücre kitaptakiyle aynı olmalı.`,
+    `alinti yine sayfa metninden birebir olmalı (tablonun başlığı ya da tabloyu anlatan cümle olabilir).`
+  ].join('\n'),
+  etiket: [
+    `Bu turda soru etiketli şekillerden çıkar. Her şekil için görselin yolu ve üzerindeki etiketlerin listesi verilir. Görseli aç, etiketlerin neyi gösterdiğini gör.`,
+    `İki biçimden birini yaz:`,
+    `1) İşaretleme: tip "isaretleme", gorsel şeklin dosya adı, isaretler alanında 3-5 etiket (anahtar harfi ve etiket metni listedeki gibi, birebir). Kök sorulan yapının adını ya da işlevini söyler ("... hangisidir? Görselde işaretleyin."), öğrenci görsel üstündeki kutulardan birini seçer. siklar boş kalır. dogru doğru etiketin harfi. celdiriciler her yanlış etiket için o yapının ne olduğunu ve işlevini tek cümleyle söyler.`,
+    `2) Maskeli kök: maskeler alanına tek bir etiket metni yaz (listedeki gibi, birebir); o etiket görselde kapatılır. Kök "görselde işaretli yapı" der, kapatılan etiketin adını ya da açık bir eşanlamlısını asla anmaz. Şıklar metindir, siklar alanında.`,
+    `Kutuları sen yazmazsın; etiket metninden bulunur. Listede olmayan ya da birebir yazılmamış etiket soruyu düşürür.`,
+    `gorselAlt alanına şekli görmeyen biri için tarafsız betimleme yaz; kapatılan ya da sorulan etiketin adını betimlemede kullanma.`
+  ].join('\n')
+}
+
+export function systemPrompt(l: Loaded, turArg: Tur | boolean = 'metin'): string {
+  const tur = asTur(turArg)
   const u = l.rules.uretim
   const s = l.rules.stil
   const keys = ['A', 'B', 'C', 'D', 'E'].slice(0, u.sikSayisi).join(', ')
+  const metinBloklari = u.cozumBloklari.filter((b) => b === 'text' || b === 'hint')
+  const ekBloklar = [
+    u.cozumBloklari.includes('image')
+      ? `Çözümde bir şekil gerçekten açıklayıcıysa dosya adını cozumGorseli alanına, betimlemesini cozumGorseliAlt alanına yaz.`
+      : '',
+    u.cozumBloklari.includes('table')
+      ? `Çözümde kitaptaki bir tablo cevabı destekliyorsa cozumTablosu alanına tablo ile aynı biçimde birebir aktar (baslik, basliklar, satirlar).`
+      : ''
+  ]
+  const yasak = u.yasakli.filter((y) => !(tur !== 'metin' && (y === 'image' || y === 'table')))
   return [
     `Sen uzmanlık sınavı sorusu yazan bir editörsün. Kaynak: "${l.rules.module.ad}".`,
     `Ölçüt şu: soruyu bir uzmana sorsan onu gerçekten sınamalı. Metni okuyup okumadığını değil, bilgiyi kullanabildiğini ölç.`,
@@ -86,16 +134,15 @@ export function systemPrompt(l: Loaded, gorsel = false): string {
     `sayfa.baslangic ve sayfa.bitis alıntının geçtiği [[sayfa N]] numaralarıdır.`,
     `Parça başına ${u.parcaBasinaSoru} soru. Her soruda ${u.sikSayisi} şık (${keys}); tek doğru. Doğru şıkkın harfini eşit dağıt: ${keys} harflerinin her biri en az bir kez doğru olsun, hiçbiri üç kereden fazla olmasın.`,
     `celdiriciler: her yanlış şık için ayrı bir açıklama — neden yanlış olduğu, tek cümle. Doğru şık için açıklama yazma.`,
-    `cozum: sıralı bloklar; türler ${u.cozumBloklari.join(', ')}. İlk blok text türünde, doğru cevabı kaynağa dayanarak açıklar.`,
+    `cozum: sıralı bloklar; türler ${metinBloklari.join(', ')}. İlk blok text türünde, doğru cevabı kaynağa dayanarak açıklar.`,
+    ...ekBloklar,
     `zorluk alanı için ölçüt:
 ${ZORLUK_OLCUTU}`,
     `kavram: sorunun sınadığı tek kavram, 2-5 kelime. etiketler: 1-4 kısa konu etiketi.`,
     `Çözümde ve çeldirici açıklamalarında şık harfi anma ("doğru cevap A'dır" yazma); bilgiyi anlat.`,
-    gorsel
-      ? `Bu turda soru şeklin ya da tablonun kendisinden çıkar: verilen görseli okumayı sına — neyi gösterdiğini, hangi değerin hangi durumu işaret ettiğini, eğrinin nereye gittiğini sor. Kullandığın görselin dosya adını gorsel alanına yaz; görseli anlatarak kökün içinde tekrar etme.`
-      : u.yasakli.length
-        ? `Yasak: ${u.yasakli.join(', ')}. Şekil, tablo veya görsele atıf yapan soru yazma.`
-        : '',
+    TUR_ISTEMI[tur],
+    yasak.length ? `Yasak: ${yasak.join(', ')}.` : '',
+    tur !== 'metin' ? `Her görselli soruda gorselAlt zorunlu.` : '',
     `Her soru şıklı olmak zorunda değil. Cevabı tek bir kavram, değer ya da kısa bir gerekçe olan soruyu açık uçlu yaz: tip "acik-uclu", siklar boş, dogru yok, beklenenCevap alanında beklenen cevabı bir iki cümleyle yaz. Şık uydurmak zorunda kaldığını hissettiğin her yerde açık uçlu yaz.`,
     `vurgu: kökteki en ayırt edici 1-3 ifade, her biri en çok üç kelime ve kökte harfiyen geçen. Fiil ya da fiilden türemiş kelime seçme; terim, değer ve sayı seç.`,
     s.ton ? `Ton: ${s.ton}.` : '',
@@ -122,12 +169,28 @@ export function figuresDir(l: Loaded): string {
   return path.join(l.buildDir, 'figures')
 }
 
+export function tablesDir(l: Loaded): string {
+  return path.join(l.buildDir, 'tbl')
+}
+
+export function moduleDir(l: Loaded): string {
+  return path.join(l.root, 'modules', l.rules.module.id)
+}
+
+export function assetSource(l: Loaded, ref: string): string {
+  const [, kind] = ref.split('/')
+  const base = path.basename(ref)
+  if (kind === 'tbl') return path.join(tablesDir(l), base)
+  if (kind === 'kaynak') return path.join(moduleDir(l), 'assets', 'kaynak', base)
+  return path.join(figuresDir(l), base)
+}
+
 export function imageRefs(q: QuestionT): string[] {
   const refs: string[] = []
   if (q.stem.imageRef) refs.push(q.stem.imageRef)
   for (const ch of q.choices) if (ch.imageRef) refs.push(ch.imageRef)
   for (const b of q.solution) if (b.type === 'image') refs.push(b.ref)
-  return refs
+  return [...new Set(refs)]
 }
 
 function slug(s: string): string {
@@ -147,11 +210,43 @@ export function findPages(c: Corpus, unit: Unit, quote: string): [number, number
   return null
 }
 
+type Resolved =
+  | { ok: true; masks?: QuestionT['stem']['masks']; boxes?: Map<string, Box> }
+  | { ok: false; reason: string }
+
+export function resolveBoxes(g: GenQ, labels: LabelRow[]): Resolved {
+  const out: Resolved = { ok: true }
+  if (g.maskeler?.length) {
+    const r = resolveMasks(labels, g.gorsel, g.maskeler, g.kok)
+    if (!r.ok) return r
+    out.masks = r.masks
+  }
+  if (g.tip === 'isaretleme') {
+    if (!g.gorsel) return { ok: false, reason: 'işaretleme sorusunda gorsel yok' }
+    const row = findRow(labels, g.gorsel)
+    if (!row)
+      return { ok: false, reason: `etiket dizininde görsel yok: ${path.basename(g.gorsel)}` }
+    const isaretler = g.isaretler ?? []
+    if (isaretler.length < 2)
+      return { ok: false, reason: 'işaretleme sorusunda en az iki işaret gerek' }
+    out.boxes = new Map()
+    for (const i of isaretler) {
+      const hit = matchLabel(row, i.etiket)
+      if (!hit.ok) return hit
+      out.boxes.set(i.anahtar, hit.kutu)
+    }
+    const seen = new Set([...out.boxes.values()].map((b) => b.join(',')))
+    if (seen.size !== out.boxes.size) return { ok: false, reason: 'iki işaret aynı kutuya düştü' }
+  }
+  return out
+}
+
 export function mapUnit(
   l: Loaded,
   c: Corpus,
   unit: Unit,
-  gen: Generated
+  gen: Generated,
+  labels: LabelRow[] = labelIndex(l)
 ): { questions: QuestionT[]; dropped: { kok: string; reason: string }[]; badQuotes: string[] } {
   const questions: QuestionT[] = []
   const dropped: { kok: string; reason: string }[] = []
@@ -165,7 +260,12 @@ export function mapUnit(
       dropped.push({ kok: g.kok, reason: 'alıntı metinde yok' })
       continue
     }
-    const q = fixAnswerRefs(balance(toQuestion(l, c, unit, g, found), keys[slot % keys.length]!))
+    const r = resolveBoxes(g, labels)
+    if (!r.ok) {
+      dropped.push({ kok: g.kok, reason: r.reason })
+      continue
+    }
+    const q = fixAnswerRefs(balance(toQuestion(l, c, unit, g, found, r), keys[slot % keys.length]!))
     slot++
     const v = Question.safeParse(q)
     if (!v.success) {
@@ -216,8 +316,8 @@ function balance(q: QuestionT, target: string): QuestionT {
   if (!q.correct || q.correct === target || !q.choices.some((ch) => ch.key === target)) return q
   const from = q.correct
   const choices = q.choices.map((ch) => {
-    if (ch.key === from) return { ...ch, md: q.choices.find((x) => x.key === target)!.md }
-    if (ch.key === target) return { ...ch, md: q.choices.find((x) => x.key === from)!.md }
+    if (ch.key === from) return { ...q.choices.find((x) => x.key === target)!, key: ch.key }
+    if (ch.key === target) return { ...q.choices.find((x) => x.key === from)!, key: ch.key }
     return ch
   })
   const distractors: Record<string, string> = {}
@@ -240,21 +340,39 @@ function toQuestion(
   l: Loaded,
   c: Corpus,
   unit: Unit,
-  g: Generated['sorular'][number],
-  found: [number, number]
+  g: GenQ,
+  found: [number, number],
+  r: Resolved = { ok: true }
 ): QuestionT {
-  const stem = g.gorsel ? { md: g.kok.trim(), imageRef: assetRef(g.gorsel) } : { md: g.kok.trim() }
-  const choices = g.siklar.map((s) => ({ key: s.anahtar, md: s.metin.trim() }))
+  const stem: QuestionT['stem'] = { md: g.kok.trim() }
+  if (g.gorsel) {
+    stem.imageRef = assetRef(g.gorsel)
+    if (g.gorselAlt?.trim()) stem.alt = g.gorselAlt.trim()
+  }
+  if (g.tablo) stem.table = toTable(g.tablo)
+  if (r.ok && r.masks?.length) stem.masks = r.masks
+  const marking = g.tip === 'isaretleme' && r.ok && !!r.boxes
+  const choices: QuestionT['choices'] = marking
+    ? (g.isaretler ?? []).map((i) => ({
+        key: i.anahtar,
+        md: i.etiket.trim(),
+        box: (r.ok && r.boxes?.get(i.anahtar)) || undefined
+      }))
+    : g.siklar.map((s) => ({ key: s.anahtar, md: s.metin.trim() }))
   const solution: SolutionBlock[] = g.cozum.map((b) => ({ type: b.tur, md: b.metin.trim() }))
-  if (g.cozumGorseli) solution.push({ type: 'image', ref: assetRef(g.cozumGorseli) })
+  if (g.cozumGorseli) {
+    const alt = g.cozumGorseliAlt?.trim()
+    solution.push({ type: 'image', ref: assetRef(g.cozumGorseli), ...(alt ? { alt } : {}) })
+  }
+  if (g.cozumTablosu) solution.push({ type: 'table', ...toTable(g.cozumTablosu) })
   const chapter = c.chapters.find((x) => x.chapter === unit.chapter)
   const pages: [number, number] = [toShown(l, c, found[0]), toShown(l, c, found[1])]
-  const open = g.tip === 'acik-uclu' || !g.dogru || choices.length < 2
+  const open = !marking && (g.tip === 'acik-uclu' || !g.dogru || choices.length < 2)
   return {
     id: `${l.rules.module.id}-${sha256(unit.hash + '\n' + stem.md).slice(0, 12)}`,
     conceptId: slug(g.kavram) || 'genel',
     stem,
-    kind: open ? 'acik-uclu' : 'coktan-secmeli',
+    kind: open ? 'acik-uclu' : marking ? 'isaretleme' : 'coktan-secmeli',
     choices: open ? [] : choices,
     correct: open ? undefined : g.dogru,
     beklenenCevap: open ? g.beklenenCevap?.trim() : undefined,

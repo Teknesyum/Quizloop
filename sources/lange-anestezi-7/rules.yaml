@@ -22,8 +22,8 @@ uretim:
   parcaBasinaSoru: 8
   sikSayisi: 5
   zorlukDagilimi: { kolay: 0.3, orta: 0.5, zor: 0.2 }
-  cozumBloklari: [text, hint]
-  yasakli: [table, image]
+  cozumBloklari: [text, hint, image, table]
+  yasakli: []
   aliciOnce: true
 stil:
   ton: klinik, sınav dili

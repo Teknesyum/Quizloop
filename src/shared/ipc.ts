@@ -1,4 +1,11 @@
-import type { Choice, ChoiceKey, QuestionKind, SolutionBlock, Source } from './schema/question'
+import type {
+  Choice,
+  ChoiceKey,
+  QuestionKind,
+  SolutionBlock,
+  Source,
+  Stem
+} from './schema/question'
 
 export type SelfAssess = 1 | 2 | 3
 export type FsrsRating = 1 | 2 | 3 | 4
@@ -30,7 +37,7 @@ export interface QuestionView {
   questionId: string
   index: number
   total: number
-  stem: { md: string; imageRef?: string }
+  stem: Stem
   kind: QuestionKind
   choices: Choice[]
   difficulty: string
@@ -100,7 +107,7 @@ export interface BankRow {
 
 export interface BankQuestion {
   questionId: string
-  stem: { md: string; imageRef?: string }
+  stem: Stem
   kind: QuestionKind
   choices: Choice[]
   correct?: ChoiceKey

@@ -7,6 +7,8 @@ import { Generated, mapUnit, unitsDir, type UnitOutput } from './generate.ts'
 import { loadCheckpoint, saveCheckpoint, writeAtomic } from './checkpoint.ts'
 import { rawDir } from './brief.ts'
 import { consumeFlags } from './flags.ts'
+import { asTur, cpKey as keyOf, suffix, type Tur } from './tur.ts'
+import { labelIndex } from './etiket.ts'
 
 export interface IngestResult {
   unitId: string
@@ -15,16 +17,23 @@ export interface IngestResult {
   error?: string
 }
 
-export function ingest(l: Loaded, c: Corpus, plan: Plan, gorsel = false): IngestResult[] {
-  const dir = rawDir(l, gorsel)
+export function ingest(
+  l: Loaded,
+  c: Corpus,
+  plan: Plan,
+  turArg: Tur | boolean = 'metin'
+): IngestResult[] {
+  const tur = asTur(turArg)
+  const dir = rawDir(l, tur)
+  const labels = labelIndex(l)
   const cp = loadCheckpoint(l, c.sha256)
   const out: IngestResult[] = []
   if (!fs.existsSync(dir)) return out
   for (const unit of plan.units) {
     const file = path.join(dir, unit.unitId + '.json')
     if (!fs.existsSync(file)) continue
-    const outId = gorsel ? unit.unitId + '-gorsel' : unit.unitId
-    const cpKey = gorsel ? unit.hash + ':gorsel' : unit.hash
+    const outId = unit.unitId + suffix(tur)
+    const cpKey = keyOf(unit.hash, tur)
     const state = cp.units[cpKey] ?? {
       unitId: outId,
       hash: unit.hash,
@@ -43,11 +52,11 @@ export function ingest(l: Loaded, c: Corpus, plan: Plan, gorsel = false): Ingest
         .slice(0, 3)
         .map((i) => i.path.join('.') + ': ' + i.message)
         .join('; ')
-      cp.units[unit.hash] = state
+      cp.units[cpKey] = state
       out.push({ unitId: unit.unitId, questions: 0, dropped: 0, error: state.error })
       continue
     }
-    const mapped = mapUnit(l, c, unit, parsed.data)
+    const mapped = mapUnit(l, c, unit, parsed.data, labels)
     const unitOut: UnitOutput = {
       unitId: outId,
       hash: unit.hash,

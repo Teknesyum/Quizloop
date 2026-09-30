@@ -61,7 +61,7 @@ describe('SessionMachine', () => {
   it('queues the whole sample module', async () => {
     const m = await machine()
     const s = await m.start('ornek')
-    expect(s.total).toBe(5)
+    expect(s.total).toBe(8)
     expect(s.first).not.toBeNull()
   })
 

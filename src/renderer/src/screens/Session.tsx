@@ -8,6 +8,8 @@ import { Solution } from '@renderer/components/Solution'
 import { Confirm } from '@renderer/components/Confirm'
 import { Markdown } from '@renderer/components/Markdown'
 import { Skeleton } from '@renderer/components/Skeleton'
+import { StemMedia } from '@renderer/components/StemMedia'
+import { altFor, markBoxes } from '@renderer/components/media'
 import { useTyper } from '@renderer/hooks/useTyper'
 import { t, type Key } from '@renderer/i18n'
 import { KEYS } from '@renderer/keys'
@@ -64,9 +66,6 @@ function Stem({
       <Markdown md={bodyShown} assetBase={q.assetBase} className="tk-prose ql-stem-text" />
       {full.ask && askShown && (
         <Markdown md={askShown} assetBase={q.assetBase} className="tk-prose ql-stem-ask" />
-      )}
-      {q.stem.imageRef && (
-        <img className="ql-stem-img" src={q.assetBase + q.stem.imageRef} alt="" />
       )}
     </div>
   )
@@ -260,6 +259,15 @@ export function Session({
   const graded = state.phase === 'graded' ? state.grade : null
   const showChoices = state.phase !== 'stem'
   const open = q.kind === 'acik-uclu'
+  const marking = q.kind === 'isaretleme'
+  const marks = marking
+    ? markBoxes(q.choices, {
+        wrong,
+        correct: solved?.correctKey,
+        open: Boolean(solved) || Boolean(graded),
+        live: state.phase === 'choices'
+      })
+    : undefined
   const hints: [string, Key][] =
     state.phase === 'stem'
       ? [
@@ -296,7 +304,11 @@ export function Session({
           </span>
           <span className="tk-label">{t(`session.difficulty.${q.difficulty}` as Key)}</span>
           <span className={`tk-label ${open ? 'ql-badge-open' : 'ql-badge-choices'}`}>
-            {open ? t('session.kindOpen') : t('session.kindChoices')}
+            {open
+              ? t('session.kindOpen')
+              : marking
+                ? t('session.kindMark')
+                : t('session.kindChoices')}
           </span>
           {q.relearn && (
             <span className="tk-label ql-badge-relearn">{t('session.relearnBadge')}</span>
@@ -336,6 +348,12 @@ export function Session({
 
       <article className="tk-panel ql-question ql-transition-in" key={q.questionId}>
         <Stem key={q.questionId} q={q} speed={speed} />
+        <StemMedia
+          stem={q.stem}
+          assetBase={q.assetBase}
+          marks={marks}
+          onMark={state.phase === 'choices' ? (k) => void s.pick(k) : undefined}
+        />
 
         {!showChoices && (
           <div className="ql-actions">
@@ -344,13 +362,32 @@ export function Session({
               <kbd>B</kbd>
             </button>
             <button type="button" className="tk-btn tk-btn-primary" onClick={s.reveal}>
-              {open ? t('session.showAnswer') : t('session.showChoices')}
+              {open
+                ? t('session.showAnswer')
+                : marking
+                  ? t('session.showMarks')
+                  : t('session.showChoices')}
               <kbd>{t('session.key.space')}</kbd>
             </button>
           </div>
         )}
 
-        {showChoices && q.choices.length > 0 && (
+        {marking && showChoices && (
+          <div className="ql-mark-notes">
+            {state.phase === 'choices' && <p className="tk-hint">{t('session.markPrompt')}</p>}
+            {q.choices
+              .filter((c) => wrong[c.key])
+              .map((c) => (
+                <p key={c.key} className="tk-error ql-distractor ql-mark-note" role="status">
+                  <span aria-hidden="true">✕</span>
+                  <span className="tk-mono">{c.key}</span>
+                  <span>{wrong[c.key]}</span>
+                </p>
+              ))}
+          </div>
+        )}
+
+        {!marking && showChoices && q.choices.length > 0 && (
           <ol className="ql-choices">
             {q.choices.map((c, i) => {
               const isWrong = Boolean(wrong[c.key])
@@ -374,7 +411,11 @@ export function Session({
                     <span className="tk-mono ql-choice-key">{c.key}</span>
                     <Markdown md={c.md} assetBase={q.assetBase} className="ql-choice-text" />
                     {c.imageRef && (
-                      <img src={q.assetBase + c.imageRef} alt="" className="ql-choice-img" />
+                      <img
+                        src={q.assetBase + c.imageRef}
+                        alt={altFor(c.alt, c.md, t('media.choiceAlt', { key: c.key }))}
+                        className="ql-choice-img"
+                      />
                     )}
                   </button>
                   {isWrong && (

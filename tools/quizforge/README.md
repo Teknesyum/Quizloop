@@ -10,18 +10,19 @@ Every command takes `--rules sources/<id>/rules.yaml`. Build state lives in
 npx tsx tools/quizforge/src/cli.ts <command> --rules sources/<id>/rules.yaml [options]
 ```
 
-| Command  | What it does                                                                                            |
-| -------- | ------------------------------------------------------------------------------------------------------- |
-| `init`   | Extract the PDF text layer into `pages.jsonl` and `chapters.json`.                                      |
-| `plan`   | Split chapters into generation units: `build/plan.json`.                                                |
-| `run`    | Send pending units to the API. Needs `ANTHROPIC_API_KEY` and `--max-usd <n>`.                           |
-| `brief`  | Write per-unit prompts for session subagents. `--gorsel` for the figure pass, `--force` for every unit. |
-| `ingest` | Turn `build/raw/*.json` (or `build/rawgorsel/` with `--gorsel`) into questions.                         |
-| `verify` | Deterministic checks: schema, quotes, pages, assets. Writes `build/verify-report.json`.                 |
-| `pack`   | Write `modules/<id>/`. Refuses without a clean `verify`.                                                |
-| `flags`  | Requeue units whose questions users flagged in the app.                                                 |
-| `zorluk` | Relabel difficulty with one rubric: `export`, `apply`, `uyum`.                                          |
-| `doctor` | Check Python, pypdf, the API key and the corpus files.                                                  |
+| Command   | What it does                                                                                                                                                        |
+| --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `init`    | Extract the PDF text layer into `pages.jsonl` and `chapters.json`.                                                                                                  |
+| `plan`    | Split chapters into generation units: `build/plan.json`.                                                                                                            |
+| `run`     | Send pending units to the API. Needs `ANTHROPIC_API_KEY` and `--max-usd <n>`.                                                                                       |
+| `brief`   | Write per-unit prompts for session subagents. `--gorsel` for the figure pass, `--tur tablo\|etiket` for table and labelled-figure passes, `--force` for every unit. |
+| `ingest`  | Turn `build/raw/*.json` (or `build/raw<tur>/` with `--gorsel` / `--tur`) into questions.                                                                            |
+| `verify`  | Deterministic checks: schema, quotes, pages, assets. Writes `build/verify-report.json`.                                                                             |
+| `pack`    | Write `modules/<id>/`. Refuses without a clean `verify`.                                                                                                            |
+| `geri-al` | Restore `modules/<id>/` into `build/units/` (by source page, per plan unit) and `assets/img` into `build/figures/`. `--force` overwrites.                           |
+| `flags`   | Requeue units whose questions users flagged in the app.                                                                                                             |
+| `zorluk`  | Relabel difficulty with one rubric: `export`, `apply`, `uyum`.                                                                                                      |
+| `doctor`  | Check Python, pypdf, the API key and the corpus files.                                                                                                              |
 
 ## flags
 

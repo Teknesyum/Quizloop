@@ -31,6 +31,88 @@
               "imageRef": {
                 "type": "string",
                 "pattern": "^assets\\/(img|tbl|kaynak)\\/[\\w.-]+\\.(webp|png|svg)$"
+              },
+              "alt": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 400
+              },
+              "table": {
+                "type": "object",
+                "properties": {
+                  "header": {
+                    "minItems": 1,
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "rows": {
+                    "minItems": 1,
+                    "type": "array",
+                    "items": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "caption": {
+                    "type": "string"
+                  },
+                  "rowHeader": {
+                    "type": "boolean"
+                  }
+                },
+                "required": [
+                  "header",
+                  "rows"
+                ]
+              },
+              "masks": {
+                "maxItems": 12,
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "box": {
+                      "type": "array",
+                      "prefixItems": [
+                        {
+                          "type": "number",
+                          "minimum": 0,
+                          "maximum": 1
+                        },
+                        {
+                          "type": "number",
+                          "minimum": 0,
+                          "maximum": 1
+                        },
+                        {
+                          "type": "number",
+                          "minimum": 0,
+                          "maximum": 1
+                        },
+                        {
+                          "type": "number",
+                          "minimum": 0,
+                          "maximum": 1
+                        }
+                      ],
+                      "items": false,
+                      "minItems": 4,
+                      "maxItems": 4
+                    },
+                    "label": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 4
+                    }
+                  },
+                  "required": [
+                    "box"
+                  ]
+                }
               }
             },
             "required": [
@@ -42,7 +124,8 @@
             "type": "string",
             "enum": [
               "coktan-secmeli",
-              "acik-uclu"
+              "acik-uclu",
+              "isaretleme"
             ]
           },
           "choices": {
@@ -69,6 +152,39 @@
                 "imageRef": {
                   "type": "string",
                   "pattern": "^assets\\/(img|tbl|kaynak)\\/[\\w.-]+\\.(webp|png|svg)$"
+                },
+                "alt": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 400
+                },
+                "box": {
+                  "type": "array",
+                  "prefixItems": [
+                    {
+                      "type": "number",
+                      "minimum": 0,
+                      "maximum": 1
+                    },
+                    {
+                      "type": "number",
+                      "minimum": 0,
+                      "maximum": 1
+                    },
+                    {
+                      "type": "number",
+                      "minimum": 0,
+                      "maximum": 1
+                    },
+                    {
+                      "type": "number",
+                      "minimum": 0,
+                      "maximum": 1
+                    }
+                  ],
+                  "items": false,
+                  "minItems": 4,
+                  "maxItems": 4
                 }
               },
               "required": [
@@ -178,6 +294,11 @@
                     },
                     "caption": {
                       "type": "string"
+                    },
+                    "alt": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 400
                     }
                   },
                   "required": [
@@ -188,10 +309,6 @@
                 {
                   "type": "object",
                   "properties": {
-                    "type": {
-                      "type": "string",
-                      "const": "table"
-                    },
                     "header": {
                       "minItems": 1,
                       "type": "array",
@@ -211,12 +328,19 @@
                     },
                     "caption": {
                       "type": "string"
+                    },
+                    "rowHeader": {
+                      "type": "boolean"
+                    },
+                    "type": {
+                      "type": "string",
+                      "const": "table"
                     }
                   },
                   "required": [
-                    "type",
                     "header",
-                    "rows"
+                    "rows",
+                    "type"
                   ]
                 }
               ]

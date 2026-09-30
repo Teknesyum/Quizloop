@@ -6,6 +6,25 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.3.0] - 2026-10-01
+
+### Added
+
+- Three visual question types: a stem that carries a structured table, a
+  figure with one label masked, and marking questions whose choices are boxes
+  on the figure (decision 0008).
+- Solutions can carry a figure or a table next to the text.
+- Figure lightbox with zoom, drag and fit; it opens fitted to the view.
+- quizforge: `--tur tablo` and `--tur etiket` lanes, table OCR and label
+  extraction (`py/tablo.py`, `py/etiket.py`), `geri-al` for rolling back a lane.
+- quizforge verify checks table cells against the source page and its OCR,
+  masked labels leaking into the stem, and duplicate marking choices. Tables
+  checked by eye against the page image are recorded in `build/tablo/onay.json`.
+
+### Changed
+
+- Tables without a real header row render without an empty `<thead>`.
+
 ## [0.2.2] - 2026-09-30
 
 ### Changed

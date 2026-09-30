@@ -2,9 +2,35 @@ import { z } from 'zod'
 
 export const ImageRef = z.string().regex(/^assets\/(img|tbl|kaynak)\/[\w.-]+\.(webp|png|svg)$/)
 
+export const Alt = z.string().min(1).max(400)
+
+const Unit = z.number().min(0).max(1)
+
+export const Box = z
+  .tuple([Unit, Unit, Unit, Unit])
+  .refine(
+    ([x, y, w, h]) => w > 0 && h > 0 && x + w <= 1.0001 && y + h <= 1.0001,
+    'box outside image'
+  )
+
+export const Table = z.object({
+  header: z.array(z.string()).min(1),
+  rows: z.array(z.array(z.string())).min(1),
+  caption: z.string().optional(),
+  rowHeader: z.boolean().optional()
+})
+
+export const Mask = z.object({
+  box: Box,
+  label: z.string().min(1).max(4).optional()
+})
+
 export const Stem = z.object({
   md: z.string().min(1),
-  imageRef: ImageRef.optional()
+  imageRef: ImageRef.optional(),
+  alt: Alt.optional(),
+  table: Table.optional(),
+  masks: z.array(Mask).max(12).optional()
 })
 
 export const ChoiceKey = z.enum(['A', 'B', 'C', 'D', 'E'])
@@ -12,20 +38,22 @@ export const ChoiceKey = z.enum(['A', 'B', 'C', 'D', 'E'])
 export const Choice = z.object({
   key: ChoiceKey,
   md: z.string().min(1),
-  imageRef: ImageRef.optional()
+  imageRef: ImageRef.optional(),
+  alt: Alt.optional(),
+  box: Box.optional()
 })
 
 export const SolutionBlock = z.discriminatedUnion('type', [
   z.object({ type: z.literal('text'), md: z.string().min(1) }),
   z.object({ type: z.literal('hint'), md: z.string().min(1) }),
   z.object({ type: z.literal('formula'), tex: z.string().min(1) }),
-  z.object({ type: z.literal('image'), ref: ImageRef, caption: z.string().optional() }),
   z.object({
-    type: z.literal('table'),
-    header: z.array(z.string()).min(1),
-    rows: z.array(z.array(z.string())).min(1),
-    caption: z.string().optional()
-  })
+    type: z.literal('image'),
+    ref: ImageRef,
+    caption: z.string().optional(),
+    alt: Alt.optional()
+  }),
+  Table.extend({ type: z.literal('table') })
 ])
 
 export const Kesit = z.object({
@@ -42,7 +70,7 @@ export const Source = z.object({
   kesit: Kesit.optional()
 })
 
-export const QuestionKind = z.enum(['coktan-secmeli', 'acik-uclu'])
+export const QuestionKind = z.enum(['coktan-secmeli', 'acik-uclu', 'isaretleme'])
 
 export const Difficulty = z.enum(['kolay', 'orta', 'zor'])
 
@@ -85,6 +113,26 @@ export const Question = z
         })
       }
       return
+    }
+    if (q.kind === 'isaretleme') {
+      if (!q.stem.imageRef) {
+        ctx.issues.push({
+          code: 'custom',
+          message: 'marking question needs a stem image',
+          input: q,
+          path: ['stem', 'imageRef']
+        })
+      }
+      q.choices.forEach((c, i) => {
+        if (!c.box) {
+          ctx.issues.push({
+            code: 'custom',
+            message: 'marking choice needs a box',
+            input: q,
+            path: ['choices', i, 'box']
+          })
+        }
+      })
     }
     if (keys.length < 2) {
       ctx.issues.push({
@@ -134,6 +182,10 @@ export const Block = z.object({
 
 export type Question = z.infer<typeof Question>
 export type QuestionKind = z.infer<typeof QuestionKind>
+export type Table = z.infer<typeof Table>
+export type Mask = z.infer<typeof Mask>
+export type Box = z.infer<typeof Box>
+export type Stem = z.infer<typeof Stem>
 export type Kesit = z.infer<typeof Kesit>
 export type Choice = z.infer<typeof Choice>
 export type ChoiceKey = z.infer<typeof ChoiceKey>
