@@ -1,0 +1,76 @@
+{
+  "icon": ".teknesyum/icon.png",
+  "screenshot": ".teknesyum/shot.jpg",
+  "full": ".teknesyum/full.jpg",
+  "catalog": {
+    "category": "productivity",
+    "tags": {
+      "tr": [
+        "eğitim",
+        "aralıklı-tekrar",
+        "sınav",
+        "pdf"
+      ],
+      "en": [
+        "education",
+        "spaced-repetition",
+        "quiz",
+        "pdf"
+      ]
+    },
+    "summary": {
+      "tr": "Bir kitabı ya da PDF'i soru modülüne çevirip konu oturana kadar çalıştıran uyarlanabilir aralıklı tekrar motoru. Soru önce seçeneksiz gelir, önce düşünürsünüz; yanlış seçenek düşer ve o yanlışa özel açıklama gösterilir. Soru kapanınca çözüm kaynağıyla, yani dosya, sayfa ve alıntılanan pasajla birlikte oynatılır. Zamanlama FSRS-6 ile yapılır, anlaşılan sorular emekliye ayrılır. Windows, macOS ve Linux için masaüstü uygulaması; soru bankaları depoya dahil değil, yalnız örnek bir modül gelir.",
+      "en": "An adaptive spaced-repetition engine that turns a book or PDF into a question module and drills it until it sticks. Each question first appears without options so you think before choosing; a wrong pick drops that option and shows an explanation written for that specific mistake. When a question closes, the solution plays back with its source file, pages and quoted passage. Scheduling runs on FSRS-6 and understood questions retire. A desktop app for Windows, macOS and Linux; question banks are separate, only a small sample ships."
+    },
+    "points": {
+      "tr": [
+        "Kitaptan üretilen soru modülüyle aralıklı tekrar",
+        "Soru önce seçeneksiz gösterilir, önce düşünmeye teşvik eder",
+        "Yanlış cevaba o seçeneğe özel açıklama yazılır",
+        "Çözüm kaynağıyla oynatılır: dosya, sayfa, alıntı",
+        "Kitap diskteyse pasaj vurgulu sayfa görüntüleyici açılır",
+        "FSRS-6 ile anlaşıldı/anlaşılmadı zamanlamalı tekrar",
+        "Soru bankası her sorunun durumunu listeler, bozuk soru işaretlenir",
+        "PDF'ten modül üretim hattı (quizforge)",
+        "Taşıma paketiyle ilerleme, modül ve ayarları başka bilgisayara aktarma",
+        "Klavye ile tam kontrol",
+        "Windows, macOS, Linux masaüstü sürümleri",
+        "Otomatik güncelleme kontrolü"
+      ],
+      "en": [
+        "Spaced-repetition quizzes generated from a book",
+        "Question shown without options first, to encourage thinking",
+        "Wrong answers get an explanation for that specific mistake",
+        "Solution replays with its source: file, pages, quote",
+        "Built-in page viewer highlights the passage if the book is local",
+        "FSRS-6 scheduling with understood/not-understood tracking",
+        "Question bank lists every question's state, flags broken ones",
+        "PDF-to-module generation pipeline (quizforge)",
+        "Move-to-another-computer package for progress, modules, settings",
+        "Full keyboard control",
+        "Windows, macOS, Linux desktop builds",
+        "Automatic update checks"
+      ]
+    },
+    "uses": {
+      "tr": [
+        "Kitabını soru modülüne çevir",
+        "Konu oturana kadar aralıklı tekrarla",
+        "Yanlışına özel açıklamayı oku",
+        "Çözümü kitaptaki sayfasında gör",
+        "İlerlemeni başka bilgisayara taşı"
+      ],
+      "en": [
+        "Turn your book into quizzes",
+        "Repeat until the topic sticks",
+        "Read why each wrong answer fails",
+        "See the answer on its page",
+        "Move your progress to another PC"
+      ]
+    },
+    "lead": {
+      "tr": "Aralıklı Tekrar Motoru ve Kitaptan Soru Üretici",
+      "en": "Spaced-Repetition Engine and Book-to-Quiz Generator"
+    }
+  }
+}

@@ -15,6 +15,15 @@ birlikte gelir.
 
 ## Kurulum
 
+**Windows'ta önerilen: Teknesyum Base.**
+
+1. [`Teknesyum-Base.exe`](https://github.com/Teknesyum/Teknesyum-Base/releases/latest/download/Teknesyum-Base.exe) dosyasını ([`.sha256`](https://github.com/Teknesyum/Teknesyum-Base/releases/latest/download/Teknesyum-Base.exe.sha256)) indirip çalıştırın. Yönetici hakkı gerekmez.
+2. Listeden **Quizloop** uygulamasını bulup kurun. Base sonradan güncellemeyi ve kaldırmayı da yapar.
+
+Base henüz imzalı değil; Windows SmartScreen ilk açılışta uyarabilir: *Diğer bilgiler*'i, sonra *Yine de çalıştır*'ı seçin. Ayrıntı: [Teknesyum Base](https://github.com/Teknesyum/Teknesyum-Base).
+
+**Diğer platformlar ya da elle:**
+
 Son sürümü [Releases](https://github.com/Teknesyum/Quizloop/releases)
 sayfasından indir:
 
