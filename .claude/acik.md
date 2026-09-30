@@ -5,7 +5,7 @@
 - [x] py: etiket.py, tablo.py — 2026-09-30 22:56 — arka plan ajanı çalışıyor
 - [x] Üretim: tablo ve işaretleme turları, pack, kaynak_kes — 2026-09-30 22:56 — quizforge ve py ajanlarının çıktısını bekliyor
 - [x] Doğrulama: paketli uygulama, beş denetim, ui:scan — 2026-09-30 22:56 — üç ajanın bitmesini bekliyor
-- [ ] Sürüm 0.3.0: CHANGELOG, etiket, yayın — 2026-09-30 22:56 — doğrulamayı bekliyor
+- [x] Sürüm 0.3.0: CHANGELOG, etiket, yayın — 2026-09-30 22:56 — doğrulamayı bekliyor
 - [x] ajan: Üretim partisi 00 — 2026-09-30 23:13 — sonucu aktarılacak
 - [x] ajan: Üretim partisi 01 — 2026-09-30 23:13 — sonucu aktarılacak
 - [x] ajan: Üretim partisi 02 — 2026-09-30 23:13 — sonucu aktarılacak
