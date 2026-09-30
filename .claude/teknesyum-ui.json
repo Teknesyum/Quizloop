@@ -53,10 +53,10 @@
     "duzen": "920c61ba2837ca0d"
   },
   "uc": {
-    "surum": "0.26.0",
-    "duzen": "a0eaf97ec84216aa",
-    "commit": "9955041f8ecd5cbbb1705971898acd071576521b",
-    "tarih": "2026-09-27"
+    "surum": "0.32.0",
+    "duzen": "920c61ba2837ca0d",
+    "commit": "44de84234b09dab8e26438c1bbac9b1c3630dea6",
+    "tarih": "2026-09-30"
   },
   "pencere": "maximize"
 }
