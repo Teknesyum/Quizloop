@@ -22,6 +22,7 @@ function ModuleCard({
   onReset(): void
 }): React.JSX.Element {
   const go = useApp((s) => s.go)
+  const [cover, setCover] = useState(true)
   return (
     <article
       id={`ql-module-${index}`}
@@ -31,7 +32,14 @@ function ModuleCard({
       className={`tk-panel ql-card ql-cover-card ql-transition-in ${active ? 'ql-card-active' : ''}`}
       style={{ '--ql-i': index } as React.CSSProperties}
     >
-      <img className="ql-cover" src={`${m.assetBase}assets/kapak.webp`} alt="" />
+      {cover && (
+        <img
+          className="ql-cover"
+          src={`${m.assetBase}assets/kapak.webp`}
+          alt=""
+          onError={() => setCover(false)}
+        />
+      )}
       <header className="ql-card-head">
         <h3 className="tk-h3">{m.name}</h3>
         <span className="tk-mono ql-percent">

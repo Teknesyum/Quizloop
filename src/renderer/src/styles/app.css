@@ -233,7 +233,9 @@ body {
 
 .ql-card-actions {
   display: flex;
+  flex-wrap: wrap;
   gap: var(--tk-sp-2);
+  min-width: 0;
 }
 
 .ql-drop-veil {

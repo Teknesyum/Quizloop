@@ -6,6 +6,13 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.3.2] - 2026-10-01
+
+### Fixed
+
+- Library card buttons wrap instead of overflowing the card on narrow windows or large text.
+- A module without a cover no longer shows a broken image on its card.
+
 ## [0.3.1] - 2026-10-01
 
 ### Changed
