@@ -49,23 +49,15 @@ function Stem({
 }): React.JSX.Element {
   const full = useMemo(() => {
     const { body, ask } = splitAsk(q.stem.md)
-    const marked = emphasize(body, q.vurgu)
-    const markedAsk = emphasize(ask, q.vurgu)
-    return {
-      body: marked,
-      ask: markedAsk,
-      text: markedAsk ? marked + '\n' + markedAsk : marked
-    }
+    return { body: emphasize(body, q.vurgu), ask: emphasize(ask, q.vurgu) }
   }, [q.questionId])
-  const { shown, done, skip } = useTyper(full.text, speed)
-  const cut = shown.length
-  const bodyShown = shown.slice(0, Math.min(cut, full.body.length))
-  const askShown = cut > full.body.length ? shown.slice(full.body.length + 1) : ''
+  const box = useRef<HTMLDivElement | null>(null)
+  const { done, skip } = useTyper(box, speed)
   return (
-    <div className={`ql-stem ${done ? '' : 'ql-typing'}`} onClick={skip}>
-      <Markdown md={bodyShown} assetBase={q.assetBase} className="tk-prose ql-stem-text" />
-      {full.ask && askShown && (
-        <Markdown md={askShown} assetBase={q.assetBase} className="tk-prose ql-stem-ask" />
+    <div ref={box} className={`ql-stem ${done ? '' : 'ql-typing'}`} onClick={skip}>
+      <Markdown md={full.body} assetBase={q.assetBase} className="tk-prose ql-stem-text" />
+      {full.ask && (
+        <Markdown md={full.ask} assetBase={q.assetBase} className="tk-prose ql-stem-ask" />
       )}
     </div>
   )
@@ -131,7 +123,7 @@ export function Session({
 
   useEffect(() => {
     if (state.phase !== 'solved') return
-    solvedRef.current?.scrollIntoView({ block: 'nearest', behavior: 'smooth' })
+    solvedRef.current?.scrollIntoView({ block: 'nearest' })
   }, [state.phase])
 
   const autoNext =
@@ -302,7 +294,6 @@ export function Session({
           <span className="tk-mono">
             {t('session.progress', { index: q.index, total: s.total })}
           </span>
-          <span className="tk-label">{t(`session.difficulty.${q.difficulty}` as Key)}</span>
           <span className={`tk-label ${open ? 'ql-badge-open' : 'ql-badge-choices'}`}>
             {open
               ? t('session.kindOpen')
@@ -346,14 +337,14 @@ export function Session({
         </div>
       </header>
 
-      <article className="tk-panel ql-question ql-transition-in" key={q.questionId}>
-        <Stem key={q.questionId} q={q} speed={speed} />
+      <article className="tk-panel ql-question" key={`${q.questionId}:${q.index}`}>
         <StemMedia
           stem={q.stem}
           assetBase={q.assetBase}
           marks={marks}
           onMark={state.phase === 'choices' ? (k) => void s.pick(k) : undefined}
         />
+        <Stem key={`${q.questionId}:${q.index}`} q={q} speed={speed} />
 
         {!showChoices && (
           <div className="ql-actions">
@@ -408,7 +399,7 @@ export function Session({
                     }
                     aria-pressed={isCorrect || isWrong}
                   >
-                    <span className="tk-mono ql-choice-key">{c.key}</span>
+                    <span className="tk-mono ql-choice-key">{c.key})</span>
                     <Markdown md={c.md} assetBase={q.assetBase} className="ql-choice-text" />
                     {c.imageRef && (
                       <img

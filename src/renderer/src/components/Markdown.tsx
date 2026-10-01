@@ -1,3 +1,4 @@
+import { memo } from 'react'
 import ReactMarkdown from 'react-markdown'
 import rehypeKatex from 'rehype-katex'
 import remarkGfm from 'remark-gfm'
@@ -9,7 +10,7 @@ interface Props {
   className?: string
 }
 
-export function Markdown({ md, assetBase = '', className }: Props): React.JSX.Element {
+function MarkdownView({ md, assetBase = '', className }: Props): React.JSX.Element {
   return (
     <div className={className ?? 'tk-prose'}>
       <ReactMarkdown
@@ -29,3 +30,5 @@ export function Markdown({ md, assetBase = '', className }: Props): React.JSX.El
     </div>
   )
 }
+
+export const Markdown = memo(MarkdownView)

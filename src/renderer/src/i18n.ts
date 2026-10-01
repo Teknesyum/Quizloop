@@ -18,8 +18,6 @@ export function upper(s: string): string {
 
 export function installedText(r: InstallResult): string {
   const params = { name: r.name ?? r.moduleId ?? '', count: r.questionCount ?? 0 }
-  if (r.source === 'trashed') return t('library.installedTrashed', params)
-  if (r.source === 'kept') return t('library.installedKept', params)
   return t('library.installed', params)
 }
 

@@ -1,3 +1,34 @@
-- [x] ajan: Find VidShrink file share method — 2026-10-01 19:01 — sonucu aktarılacak
-- [x] Sıra: ui sürümü son diyorsun ancak programda ismin yanında sürüm yok tıklayınca update edicek falan bi sürü şey yok bunları neden eklemedin ui güncelse — 2026-10-01 19:02 — çalışırken geldi
-- [x] Sıra: rar a atabilirsin — 2026-10-01 19:04 — çalışırken geldi
+- [x] ajan: Kitap görüntüleyici: hız, netlik, yakınlaştırma — 2026-10-01 22:58 — sonucu aktarılacak
+- [x] ajan: Şık denetim aracı (secenek) kur — 2026-10-01 22:58 — sonucu aktarılacak
+- [x] ajan: Program geneli hız/animasyon denetimi — 2026-10-01 22:59 — sonucu aktarılacak
+- [x] Soru metni yazılırken kelime alt satıra zıplıyor (daktilo kayması) — 2026-10-01 23:01 — jobs.md
+- [x] Tablolar düzgün basılmıyor, bazıları daha ince olmalı — 2026-10-01 23:01 — jobs.md
+- [x] Tablo sorunun üstünde ve ortada, soru ona göre yer bulsun — 2026-10-01 23:01 — jobs.md
+- [x] Ekran kenarlarındaki boşluk azalsın, soru ölçeklensin — 2026-10-01 23:01 — jobs.md
+- [x] Zorluk göstergesi kaldırılsın — 2026-10-01 23:01 — jobs.md
+- [x] .qlmod silme iptal (kurulumdan sonra paket yerinde kalsın) — 2026-10-01 23:01 — jobs.md
+- [x] Modül sürümü görünsün — 2026-10-01 23:01 — jobs.md
+- [x] Tüm konulardan karışık soru seçeneği — 2026-10-01 23:01 — jobs.md
+- [x] Sonraki soruya geçiş yavaş — 2026-10-01 23:01 — jobs.md
+- [x] Geçiş (smooth) efekti değişsin — 2026-10-01 23:01 — jobs.md
+- [ ] Üst çubuk düzeni tüm programlarda aynı olsun (Teknesyum sağ, Destek sol) — 2026-10-01 23:01 — UI'a rapor — Teknesyum-UI teklifi açık (TEKLIF-ust-cubuk-sag-bolumunde-sabit-sira), UI kararını bekliyor
+- [x] Modül şıkları: en uzun şık doğru yanlılığı (%64,7), saçma ve birbirine benzer şıklar, belirsiz kökler — 2026-10-01 23:01 — jobs.md
+- [x] Program geneli inceleme: gereksiz bekleme, zayıf animasyon, optimizasyon — 2026-10-01 23:01 — jobs.md
+- [x] Kitap hızlı açılsın (arka planda hazır beklesin), net basılsın, fare tekerleğiyle yakınlaştırma — 2026-10-01 23:01 — jobs.md
+- [x] ajan: Şık partileri 002-010 — 2026-10-01 23:14 — sonucu aktarılacak
+- [x] ajan: Şık partileri 011-019 — 2026-10-01 23:14 — sonucu aktarılacak
+- [x] ajan: Şık partileri 020-028 — 2026-10-01 23:14 — sonucu aktarılacak
+- [x] ajan: Şık partileri 029-037 — 2026-10-01 23:14 — sonucu aktarılacak
+- [x] ajan: Şık partileri 038-046 — 2026-10-01 23:14 — sonucu aktarılacak
+- [x] ajan: Şık partileri 047-055 — 2026-10-01 23:14 — sonucu aktarılacak
+- [x] ajan: Şık partileri 056-064 — 2026-10-01 23:14 — sonucu aktarılacak
+- [x] ajan: Şık partileri 065-073 — 2026-10-01 23:14 — sonucu aktarılacak
+- [x] ajan: Şık partileri 074-082 — 2026-10-01 23:14 — sonucu aktarılacak
+- [x] ajan: Şık partileri 083-091 — 2026-10-01 23:14 — sonucu aktarılacak
+- [x] Modül şıkları: en uzun şık doğru yanlılığı, saçma/benzer şıklar, belirsiz kökler — 2026-10-01 23:22 — araç hazır, 001 elle yapıldı (%60→%25); 002-091 on paralel ajanda, sonra apply+paket
+- [x] Kitap hızlı açılsın, net basılsın, tekerlekle yakınlaştırma — 2026-10-01 23:22 — kitap ajanı çalışıyor
+- [x] Bölüm kapak resimleri tam görünsün, üstteki karartma azalsın — 2026-10-01 23:22 — maske düzeltildi, gözle doğrulama 0.6.0 son turunda
+- [x] 0.6.0 sürümü — 2026-10-01 23:22 — yukarıdakiler bitince
+- [x] Modül şıkları: en uzun şık yanlılığı, saçma/benzer şıklar, belirsiz kökler — 2026-10-02 00:07 — 90/91 parti hazır, son ajan (047-055) çalışıyor; sonra ölçüm, gerekirse 2. tur, apply+paket
+- [x] Program geneli inceleme — 2026-10-02 00:07 — bulgular uygulandı; uygulamada ölçüm sürüm öncesi
+- [x] Bölüm kapak resimleri — 2026-10-02 00:07 — maske düzeltildi, gözle doğrulama sürüm öncesi

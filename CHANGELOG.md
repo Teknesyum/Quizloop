@@ -6,6 +6,39 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.6.0] - 2026-10-02
+
+### Added
+
+- A "Mixed" button on each module card and a "Mixed from all topics" button
+  on the chapter screen start a session drawn from every chapter.
+- The module version is shown on the chapter screen.
+- The book viewer zooms with Ctrl + mouse wheel, from 100% to 400%.
+- `quizforge secenek` measures, exports and applies choice rewrites so the
+  correct answer is no longer given away by being the longest choice.
+
+### Changed
+
+- Question text types in place without reflowing: a word no longer jumps to
+  the next line halfway through.
+- Tables and figures sit centred above the question, tables are narrower and
+  cells wrap at a readable width.
+- The session uses more of the screen on wide displays and stays anchored to
+  the top instead of jumping between short and long questions.
+- Choice letters read as "A)" instead of boxed keys.
+- Chapter covers show the whole picture under an even tint.
+- A correct answer moves straight to the next question, with a short cross
+  fade between questions.
+- The book opens about three times faster, reopens almost at once and renders
+  sharp at any zoom.
+- The startup database check is faster.
+
+### Removed
+
+- The difficulty label on questions.
+- Installing a `.qlmod` package no longer moves the package file to the
+  Recycle Bin.
+
 ## [0.5.1] - 2026-10-01
 
 ### Added

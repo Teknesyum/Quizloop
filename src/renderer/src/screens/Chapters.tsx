@@ -58,6 +58,11 @@ export function Chapters({ moduleId }: { moduleId: string }): React.JSX.Element 
       <header className="ql-screen-head ql-transition-in">
         <div>
           <h2 className="tk-h2">{mod?.name ?? moduleId}</h2>
+          {mod && (
+            <p className="tk-mono ql-tag ql-tag-version">
+              {t('library.card.version', { version: mod.version })}
+            </p>
+          )}
           <p className="tk-hint">{t('chapters.subtitle')}</p>
         </div>
         <div className="ql-head-actions">

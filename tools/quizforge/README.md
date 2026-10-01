@@ -22,6 +22,7 @@ npx tsx tools/quizforge/src/cli.ts <command> --rules sources/<id>/rules.yaml [op
 | `geri-al` | Restore `modules/<id>/` into `build/units/` (by source page, per plan unit) and `assets/img` into `build/figures/`. `--force` overwrites.                           |
 | `flags`   | Requeue units whose questions users flagged in the app.                                                                                                             |
 | `zorluk`  | Relabel difficulty with one rubric: `export`, `apply`, `uyum`.                                                                                                      |
+| `secenek` | Audit stems and choices: `olc` measures, `export` batches, `apply` writes back.                                                                                     |
 | `doctor`  | Check Python, pypdf, the API key and the corpus files.                                                                                                              |
 
 ## flags

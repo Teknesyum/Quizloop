@@ -183,7 +183,6 @@ export interface InstallResult {
   reset?: number
   orphaned?: number
   error?: string
-  source?: 'trashed' | 'kept'
 }
 
 export interface SourceBook {

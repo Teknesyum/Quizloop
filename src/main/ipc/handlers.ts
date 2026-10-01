@@ -7,8 +7,7 @@ import { forgetPdf, kaynakBase, rememberPdf, resolvePdf } from '@main/assets/kay
 import { assetBase } from '@main/assets/protocol'
 import { installFrom, removeModule, resetModule, samplePath } from '@main/modules/install'
 import { QuestionIndex, readMeta } from '@main/modules/loader'
-import { isPackage, PACKAGE_EXT } from '@main/modules/paket'
-import { consumePackage } from '@main/modules/source'
+import { PACKAGE_EXT } from '@main/modules/paket'
 import { chapterCounts, countDue } from '@main/scheduler/queue'
 import { SessionMachine } from '@main/session/machine'
 import { registerBank } from './bank'
@@ -164,7 +163,6 @@ export function registerHandlers(ctx: Context): {
     const r = await installFrom(db, path, new Date())
     indexes.clear()
     await refreshRoots()
-    if (r.ok && isPackage(path)) return { ...r, source: await consumePackage(path) }
     return r
   }
   ipcMain.handle(CH.moduleInstall, async (_e, path: unknown) => install(z.string().parse(path)))

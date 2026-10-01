@@ -296,7 +296,7 @@ function swapLetters(text: string, a: string, b: string): string {
 
 const ANSWER_REF = /(\bceva(?:p|b\u0131|b\u0131m\u0131z)?\s+|\byan\u0131t\s+)([A-E])\b/g
 
-function fixAnswerRefs(q: QuestionT): QuestionT {
+export function fixAnswerRefs(q: QuestionT): QuestionT {
   if (!q.correct) return q
   const fix = (t: string): string => t.replace(ANSWER_REF, (_m, pre: string) => pre + q.correct)
   const solution: SolutionBlock[] = q.solution.map((b) => ('md' in b ? { ...b, md: fix(b.md) } : b))

@@ -1,0 +1,43 @@
+.ql-bv-frame {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  min-height: 0;
+}
+
+.ql-bv-frame > .ql-book-spread {
+  flex: 1 1 auto;
+}
+
+.ql-bv-paint {
+  position: absolute;
+  inset: 0;
+}
+
+.ql-bv-canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.ql-bv-zoom {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  overflow: auto;
+  background: var(--ql-paper);
+  border: var(--tk-border-w) solid var(--ql-paper-edge);
+  border-radius: var(--tk-r-box);
+  overscroll-behavior: contain;
+}
+
+.ql-bv-track {
+  display: flex;
+  align-items: flex-start;
+  margin: auto;
+}
+
+.ql-bv-zleaf {
+  flex: 0 0 auto;
+}
