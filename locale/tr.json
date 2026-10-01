@@ -42,6 +42,8 @@
   "library.removeConfirm": "Modülün tüm ilerlemesi de silinir.",
   "library.installed": "{name} kuruldu, {count} soru",
   "library.installFailed": "Kurulum başarısız",
+  "library.installedTrashed": "{name} kuruldu, {count} soru. Paket dosyası çöp kutusuna taşındı",
+  "library.installedKept": "{name} kuruldu, {count} soru. Paket dosyası yerinde bırakıldı",
   "library.dropHint": "Modül klasörünü buraya bırak",
   "session.progress": "{index} / {total}",
   "session.score": "Puan",

@@ -6,6 +6,19 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.4.1] - 2026-10-01
+
+### Changed
+
+- Installing a `.qlmod` package by pick, drop or double-click now moves the
+  package file to the recycle bin once the module is in place. A package on a
+  USB stick, memory card, external or network drive is left where it is. The
+  install message says which happened.
+- Module tags are shown in Title Case on library cards; they stay lowercase in
+  `module.json`.
+- The Teknesyum Base manifest names the Windows setup asset and install method,
+  so Base never picks another file from the release.
+
 ## [0.4.0] - 2026-10-01
 
 ### Added

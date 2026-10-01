@@ -7,7 +7,8 @@ import { forgetPdf, kaynakBase, rememberPdf, resolvePdf } from '@main/assets/kay
 import { assetBase } from '@main/assets/protocol'
 import { installFrom, removeModule, resetModule, samplePath } from '@main/modules/install'
 import { QuestionIndex, readMeta } from '@main/modules/loader'
-import { PACKAGE_EXT } from '@main/modules/paket'
+import { isPackage, PACKAGE_EXT } from '@main/modules/paket'
+import { consumePackage } from '@main/modules/source'
 import { chapterCounts, countDue } from '@main/scheduler/queue'
 import { SessionMachine } from '@main/session/machine'
 import { registerBank } from './bank'
@@ -159,24 +160,20 @@ export function registerHandlers(ctx: Context): {
     return out
   })
 
-  ipcMain.handle(CH.moduleInstall, async (_e, path: unknown) => {
-    const r = await installFrom(db, z.string().parse(path), new Date())
+  const install = async (path: string): Promise<InstallResult> => {
+    const r = await installFrom(db, path, new Date())
     indexes.clear()
     await refreshRoots()
+    if (r.ok && isPackage(path)) return { ...r, source: await consumePackage(path) }
     return r
-  })
+  }
+  ipcMain.handle(CH.moduleInstall, async (_e, path: unknown) => install(z.string().parse(path)))
   ipcMain.handle(CH.moduleInstallSample, async () => {
     const r = await installFrom(db, samplePath(), new Date())
     indexes.clear()
     await refreshRoots()
     return r
   })
-  const install = async (path: string): Promise<InstallResult> => {
-    const r = await installFrom(db, path, new Date())
-    indexes.clear()
-    await refreshRoots()
-    return r
-  }
   ipcMain.handle(CH.modulePick, async (e, kind: unknown) => {
     const w = windowOf(e)
     const file = z.enum(['file', 'folder']).parse(kind) === 'file'
