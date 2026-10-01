@@ -19,6 +19,13 @@ function walk(dir: string, rel = ''): string[] {
   return out
 }
 
+function kitapYolu(l: Loaded): string | null {
+  const k = l.rules.kaynak
+  if (k.tip !== 'pdf') return null
+  const p = path.resolve(l.root, k.yol)
+  return fs.existsSync(p) ? p : null
+}
+
 export function paket(l: Loaded): { out: string; files: number; bytes: number } {
   const dir = moduleDir(l)
   const metaFile = path.join(dir, 'module.json')
@@ -33,10 +40,12 @@ export function paket(l: Loaded): { out: string; files: number; bytes: number } 
     const data = fs.readFileSync(path.join(dir, f))
     entries[f] = [data, { level: SIKISMIS.test(f) ? 0 : 6 }]
   }
+  const kitap = kitapYolu(l)
+  if (kitap) entries[`kaynak/${path.basename(kitap)}`] = [fs.readFileSync(kitap), { level: 0 }]
   const zip = zipSync(entries)
   const outDir = path.join(l.root, 'dist-modules')
   fs.mkdirSync(outDir, { recursive: true })
   const out = path.join(outDir, `${next.id}-${next.version}.qlmod`)
   fs.writeFileSync(out, zip)
-  return { out, files: files.length, bytes: zip.length }
+  return { out, files: files.length + (kitap ? 1 : 0), bytes: zip.length }
 }

@@ -160,6 +160,20 @@ export interface Settings {
 
 export const FONT_SCALES = [0.9, 1, 1.1, 1.25, 1.4, 1.6] as const
 
+export type WorkTask = 'install' | 'remove' | 'export' | 'import'
+export type WorkStep =
+  'read' | 'unpack' | 'write' | 'copy' | 'sync' | 'remove' | 'database' | 'done' | 'failed'
+export type WorkStatus = 'running' | 'done' | 'error'
+
+export interface WorkProgress {
+  task: WorkTask
+  step: WorkStep
+  done: number
+  total: number
+  percent: number
+  status: WorkStatus
+}
+
 export interface InstallResult {
   ok: boolean
   moduleId?: string
@@ -250,6 +264,9 @@ export interface QuizloopApi {
     pickBook(moduleId: string): Promise<SourceBook>
     forgetBook(moduleId: string): Promise<SourceBook>
   }
+  work: {
+    onProgress(cb: (p: WorkProgress) => void): () => void
+  }
   stats: {
     overview(): Promise<StatsOverview>
   }
@@ -270,6 +287,7 @@ export const CH = {
   moduleInstallSample: 'module:installSample',
   modulePick: 'module:pick',
   moduleInstalled: 'module:installed',
+  workProgress: 'work:progress',
   moduleDrainOpened: 'module:drainOpened',
   moduleRemove: 'module:remove',
   moduleReset: 'module:reset',

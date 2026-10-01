@@ -2,6 +2,7 @@ import { contextBridge, ipcRenderer, webFrame, webUtils } from 'electron'
 import {
   CH,
   type InstallResult,
+  type WorkProgress,
   type QuizloopApi,
   type Settings,
   type UpdateStatus
@@ -89,6 +90,13 @@ const api: QuizloopApi = {
     book: (moduleId: string) => ipcRenderer.invoke(CH.sourceBook, moduleId),
     pickBook: (moduleId: string) => ipcRenderer.invoke(CH.sourcePickBook, moduleId),
     forgetBook: (moduleId: string) => ipcRenderer.invoke(CH.sourceForgetBook, moduleId)
+  },
+  work: {
+    onProgress: (cb) => {
+      const h = (_: unknown, p: WorkProgress): void => cb(p)
+      ipcRenderer.on(CH.workProgress, h)
+      return () => ipcRenderer.removeListener(CH.workProgress, h)
+    }
   },
   stats: {
     overview: () => ipcRenderer.invoke(CH.statsOverview)
