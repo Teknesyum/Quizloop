@@ -16,7 +16,7 @@ Ayrışan yerler en altta, gerekçeleriyle.
 | İsim | Quizloop · depo `Quizloop` · paket `quizloop` |
 | Yığın | Electron + React + TypeScript + Vite (`electron-vite`) |
 | Platform | Windows · macOS · Linux, `electron-builder`, GitHub Actions üç-OS matrisi |
-| Zamanlama | FSRS-6, `ts-fsrs` paketi, **ana süreçte** çalışır |
+| Zamanlama | FSRS-6, `ts-fsrs` paketi, **ana süreçte** çalışır; Android ile ortak `src/core`a taşınır (karar 0009) |
 | Modül formatı | JSON dosyaları — SQLite değil |
 | İlerleme | Ayrı SQLite veritabanı, kullanıcı veri klasöründe |
 | Şema | `zod` v4 — `z.infer` + `safeParse` + `z.toJSONSchema` tek tanımdan |
