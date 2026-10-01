@@ -59,8 +59,11 @@ export function checkVisual(
 ): { errors: Issue[]; warnings: Issue[] } {
   const errors: Issue[] = []
   const warnings: Issue[] = []
-  if (q.stem.imageRef && !q.stem.alt)
-    warnings.push({ id: q.id, code: 'alt', message: `kök görselinde alt yok: ${q.stem.imageRef}` })
+  if (q.stem.imageRef && !q.stem.alt?.trim())
+    errors.push({ id: q.id, code: 'alt', message: `kök görselinde alt yok: ${q.stem.imageRef}` })
+  for (const b of q.solution)
+    if (b.type === 'image' && !b.alt?.trim())
+      errors.push({ id: q.id, code: 'alt', message: `çözüm görselinde alt yok: ${b.ref}` })
   const tables = [
     ...(q.stem.table ? [q.stem.table] : []),
     ...q.solution.flatMap((b) => (b.type === 'table' ? [b] : []))

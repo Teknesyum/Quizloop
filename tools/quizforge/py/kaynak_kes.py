@@ -21,6 +21,8 @@ HARF = re.compile(r"[^0-9a-zçğıöşü]+")
 
 MIN_ORAN = 0.7
 PAY = 7.0
+PARCA_ORAN = 0.5
+KUME_ARALIK = 30.0
 ZOOM = 2.6
 
 
@@ -113,10 +115,56 @@ def jeton_ara(page, qtoks):
     bas, son, oran = en_iyi
     if son - bas > 3 * len(qtoks) + 10:
         return None, "cok dagilmis"
-    kutu = pymupdf.Rect(kutular[bas])
-    for k in kutular[bas:son + 1]:
-        kutu |= k
-    return kutu, oran
+    return kumele(page, [(pymupdf.Rect(k), 1) for k in kutular[bas:son + 1]]), oran
+
+
+def kumele(page, parcalar):
+    orta = page.rect.x0 + page.rect.width / 2
+    kumeler = []
+    for k, n_ in sorted(parcalar, key=lambda x: ((x[0].x0 + x[0].x1) / 2 >= orta, x[0].y0)):
+        s = (k.x0 + k.x1) / 2 >= orta
+        son = kumeler[-1] if kumeler else None
+        if son and son[0] == s and k.y0 - son[1].y1 <= KUME_ARALIK:
+            son[1] |= k
+            son[2] += n_
+        else:
+            kumeler.append([s, pymupdf.Rect(k), n_])
+    return max(kumeler, key=lambda c: c[2])[1]
+
+
+def parca_ara(page, qtoks, n=5):
+    ptoks, kutular = sayfa_kelimeleri(page)
+    if not ptoks or len(qtoks) < 3:
+        return None, 0.0
+    parcalar = []
+    tutan = 0
+    j = 0
+    while j < len(qtoks):
+        w = qtoks[j:j + n]
+        if len(w) < 3:
+            w = qtoks[max(0, len(qtoks) - 3):]
+            if j > len(qtoks) - len(w):
+                break
+        en_iyi = None
+        for bas, t in enumerate(ptoks):
+            if t != w[0]:
+                continue
+            r = hizala(ptoks, w, bas)
+            if r is not None and r[2] >= 0.8 and r[1] - r[0] <= 2 * len(w):
+                en_iyi = r
+                break
+        if en_iyi is None:
+            j += 1
+            continue
+        bas, son, _ = en_iyi
+        for r in kutular[bas:son + 1]:
+            parcalar.append((pymupdf.Rect(r), 1))
+        tutan += len(w)
+        j += len(w)
+    if not parcalar:
+        return None, 0.0
+    kutu = kumele(page, parcalar)
+    return kutu, min(1.0, tutan / len(qtoks))
 
 
 def dogrudan_ara(page, metin):
@@ -128,10 +176,7 @@ def dogrudan_ara(page, metin):
         except Exception:
             rects = []
         if rects:
-            kutu = pymupdf.Rect(rects[0])
-            for r in rects:
-                kutu |= r
-            return kutu
+            return kumele(page, [(pymupdf.Rect(r), r.width) for r in rects])
     return None
 
 
@@ -172,6 +217,15 @@ def coz(doc, q, ofset):
             r = None
         if r is not None:
             return (pno, r[0]), adaylar, None
+    son = src["pages"][-1] + ofset
+    genis = list(dict.fromkeys(adaylar + [p for p in range(adaylar[0] - 2, son + 3) if 1 <= p <= doc.page_count]))
+    en_iyi = (None, 0.0, None)
+    for pno in genis:
+        kutu, oran = parca_ara(doc[pno - 1], qtoks)
+        if kutu is not None and oran > en_iyi[1]:
+            en_iyi = (kutu, oran, pno)
+    if en_iyi[0] is not None and en_iyi[1] >= PARCA_ORAN:
+        return (en_iyi[2], en_iyi[0]), adaylar, None
     return None, adaylar, sebep
 
 
@@ -184,9 +238,18 @@ def kes(doc, pno, kutu, hedef):
     alan.y1 += PAY
     alan &= page.rect
     pix = page.get_pixmap(matrix=pymupdf.Matrix(ZOOM, ZOOM), clip=alan)
+    if bos(pix):
+        return None
     hedef.parent.mkdir(parents=True, exist_ok=True)
     pix.pil_save(str(hedef), format="WEBP", quality=82, method=6)
     return alan
+
+
+def bos(pix):
+    gri = pymupdf.Pixmap(pymupdf.csGRAY, pix) if pix.n > 1 else pix
+    s = gri.samples
+    koyu = sum(1 for v in s[::7] if v < 170)
+    return koyu < max(20, len(s[::7]) * 0.004)
 
 
 def yaz_blok(path, data):
@@ -233,10 +296,16 @@ def main():
             bakilan += 1
             src = q["source"]
             sonuc, adaylar, sebep = coz(doc, q, a.ofset)
-            if sonuc is None:
+            alan = None
+            if sonuc is not None:
+                pno, kutu = sonuc
+                alan = kes(doc, pno, kutu, kaynak_dir / ("%s.webp" % q["id"]))
+                if alan is None:
+                    sebep = "bos kesit"
+            dokundu = True
+            if alan is None:
                 cozulemedi += 1
                 src.pop("kesit", None)
-                dokundu = True
                 rapor.append({
                     "id": q["id"],
                     "kitapSayfa": src["pages"][0],
@@ -245,16 +314,12 @@ def main():
                     "sebep": sebep,
                 })
                 continue
-            pno, kutu = sonuc
-            ref = "assets/kaynak/%s.webp" % q["id"]
-            alan = kes(doc, pno, kutu, module_dir / "assets" / "kaynak" / ("%s.webp" % q["id"]))
             src["kesit"] = {
                 "pdfSayfa": pno,
                 "bbox": [round(alan.x0, 2), round(alan.y0, 2), round(alan.x1, 2), round(alan.y1, 2)],
-                "ref": ref,
+                "ref": "assets/kaynak/%s.webp" % q["id"],
             }
             kesildi += 1
-            dokundu = True
         if dokundu:
             yaz_blok(bp, data)
             degisen += 1
