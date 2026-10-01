@@ -13,6 +13,10 @@ export const ModuleMeta = z.object({
   version: z.string().regex(/^\d+\.\d+\.\d+$/),
   language: z.string().default('tr'),
   description: z.string().optional(),
+  tags: z
+    .array(z.string().regex(/^[\p{Ll}\p{N}][\p{Ll}\p{N}-]{0,31}$/u))
+    .max(12)
+    .default([]),
   source: z
     .object({
       title: z.string(),

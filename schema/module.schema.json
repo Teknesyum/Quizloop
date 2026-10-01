@@ -26,6 +26,15 @@
     "description": {
       "type": "string"
     },
+    "tags": {
+      "default": [],
+      "maxItems": 12,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[\\p{Ll}\\p{N}][\\p{Ll}\\p{N}-]{0,31}$"
+      }
+    },
     "source": {
       "type": "object",
       "properties": {

@@ -733,3 +733,14 @@ Sıra:
 5. **Üretim** — oturum ajanlarıyla (API maliyeti yok) tablo ve işaretleme turları,
    `ingest` → `verify` → `pack` → `kaynak_kes.py`.
 6. **Doğrulama** — paketli uygulamada ekran görüntüsü, beş denetim, `ui:scan`; sürüm 0.3.0.
+
+## Tek Dosyalık Modül Paketi (.qlmod)
+
+- Biçim: modül klasörünün zip'i (fflate), kökte `module.json`. Uzantı `.qlmod`.
+- `module.json` yeni alan: `tags` (küçük harf, en çok 12). quizforge `rules.yaml` → `module.etiketler`.
+- Üretim: `quizforge pack --arsiv` → `dist-modules/<id>-<surum>.qlmod` (git-ignored).
+- Kurulum: Kütüphane'de `Modül dosyası seç`, sürükle-bırak, ya da dosyaya çift tık
+  (electron-builder `fileAssociations`; tek örnek kilidi, `second-instance` / `open-file`).
+  Ana süreç geçici klasöre açar (zip-slip denetimi), `installFrom` ile kurar, arayüze`module:installed` olayı yollar.
+- Kartta etiketler küçük rozet olarak görünür.
+

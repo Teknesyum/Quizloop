@@ -26,6 +26,7 @@ export interface ModuleSummary {
   version: string
   path: string
   assetBase: string
+  tags: string[]
   questionCount: number
   dueToday: number
   unseen: number
@@ -162,6 +163,8 @@ export const FONT_SCALES = [0.9, 1, 1.1, 1.25, 1.4, 1.6] as const
 export interface InstallResult {
   ok: boolean
   moduleId?: string
+  name?: string
+  questionCount?: number
   updated?: number
   reset?: number
   orphaned?: number
@@ -203,7 +206,9 @@ export interface QuizloopApi {
     list(): Promise<ModuleSummary[]>
     install(path: string): Promise<InstallResult>
     installSample(): Promise<InstallResult>
-    pick(): Promise<InstallResult | null>
+    pick(kind: 'file' | 'folder'): Promise<InstallResult | null>
+    onInstalled(cb: (r: InstallResult) => void): () => void
+    drainOpened(): Promise<void>
     remove(moduleId: string): Promise<void>
     reset(moduleId: string): Promise<void>
     chapters(moduleId: string): Promise<ChapterSummary[]>
@@ -263,6 +268,8 @@ export const CH = {
   moduleInstall: 'module:install',
   moduleInstallSample: 'module:installSample',
   modulePick: 'module:pick',
+  moduleInstalled: 'module:installed',
+  moduleDrainOpened: 'module:drainOpened',
   moduleRemove: 'module:remove',
   moduleReset: 'module:reset',
   moduleChapters: 'module:chapters',
