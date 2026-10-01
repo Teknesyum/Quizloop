@@ -4,7 +4,7 @@ import { FONT_SCALES } from '@shared/ipc'
 import { TitleBar } from '../../../teknesyum-ui/ustcubuk/TitleBar'
 import { UpdateBadge } from './components/UpdateBadge'
 import { Toasts } from './components/Toast'
-import { t } from './i18n'
+import { installedText, t } from './i18n'
 import { Bank } from './screens/Bank'
 import { Chapters } from './screens/Chapters'
 import { Library } from './screens/Library'
@@ -48,10 +48,7 @@ export default function App(): React.JSX.Element {
     const off = window.quizloop.module.onInstalled((r) => {
       const { toast, loadModules } = useApp.getState()
       if (r.ok) {
-        toast(
-          'success',
-          t('library.installed', { name: r.name ?? r.moduleId ?? '', count: r.questionCount ?? 0 })
-        )
+        toast('success', installedText(r))
         go({ name: 'library' })
       } else toast('danger', `${t('library.installFailed')}: ${r.error ?? ''}`)
       loadModules()

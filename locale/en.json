@@ -42,6 +42,8 @@
   "library.removeConfirm": "All of its progress is removed too.",
   "library.installed": "{name} installed, {count} questions",
   "library.installFailed": "Install failed",
+  "library.installedTrashed": "{name} installed, {count} questions. Package file moved to the recycle bin",
+  "library.installedKept": "{name} installed, {count} questions. Package file left in place",
   "library.dropHint": "Drop a module folder here",
   "session.progress": "{index} / {total}",
   "session.score": "Score",

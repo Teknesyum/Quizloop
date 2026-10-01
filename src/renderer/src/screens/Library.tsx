@@ -3,7 +3,7 @@ import { tinykeys } from 'tinykeys'
 import type { InstallResult, ModuleSummary } from '@shared/ipc'
 import { Confirm } from '@renderer/components/Confirm'
 import { Skeleton } from '@renderer/components/Skeleton'
-import { t } from '@renderer/i18n'
+import { installedText, t, title } from '@renderer/i18n'
 import { useApp } from '@renderer/store/app'
 
 function ModuleCard({
@@ -50,7 +50,7 @@ function ModuleCard({
         <ul className="ql-tags" aria-label={t('library.tags')}>
           {m.tags.map((tag) => (
             <li key={tag} className="tk-mono ql-tag">
-              {tag}
+              {title(tag)}
             </li>
           ))}
         </ul>
@@ -156,10 +156,7 @@ export function Library(): React.JSX.Element {
   const report = async (r: InstallResult | null): Promise<void> => {
     if (!r) return
     if (r.ok) {
-      toast(
-        'success',
-        t('library.installed', { name: r.name ?? r.moduleId ?? '', count: r.questionCount ?? 0 })
-      )
+      toast('success', installedText(r))
     } else {
       toast('danger', `${t('library.installFailed')}: ${r.error ?? ''}`)
     }

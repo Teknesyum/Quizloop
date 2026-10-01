@@ -1,4 +1,7 @@
 {
+  "name": "Quizloop",
+  "asset": "quizloop-*-setup.exe",
+  "method": "exe",
   "icon": ".teknesyum/icon.png",
   "screenshot": ".teknesyum/shot.jpg",
   "full": ".teknesyum/full.jpg",
