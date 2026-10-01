@@ -144,6 +144,11 @@ body {
   gap: var(--tk-sp-3);
 }
 
+.ql-card-head .tk-h3 {
+  font-size: var(--tk-fs-4);
+  line-height: var(--tk-lh-heading);
+}
+
 .ql-card-head {
   display: flex;
   align-items: baseline;
