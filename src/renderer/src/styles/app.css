@@ -57,29 +57,6 @@ body {
   align-items: center;
   gap: var(--tk-sp-2);
   padding-right: var(--tk-sp-2);
-  font-size: var(--tk-fs-1);
-  font-variant-numeric: tabular-nums;
-}
-
-.ql-update-dot {
-  width: var(--tk-sp-2);
-  height: var(--tk-sp-2);
-  border-radius: 50%;
-  border: var(--tk-focus-w) solid var(--tk-warning);
-}
-
-.ql-update[data-state='ready'] .ql-update-dot {
-  border-color: var(--tk-success);
-  background: var(--tk-success);
-}
-
-.ql-update[data-state='downloading'] .ql-update-dot {
-  border-color: var(--tk-renk-1);
-}
-
-.ql-update-text {
-  color: var(--tk-text);
-  white-space: nowrap;
 }
 
 /* --- screens --- */
