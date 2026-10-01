@@ -1,10 +1,13 @@
 import { app, BrowserWindow, dialog, ipcMain, type IpcMainInvokeEvent } from 'electron'
 import type { Kysely } from 'kysely'
+import { readFileSync } from 'node:fs'
+import { join } from 'node:path'
 import type { Database } from '@main/db/types'
 import { forgetPdf, kaynakBase, rememberPdf, resolvePdf } from '@main/assets/kaynak'
 import { assetBase } from '@main/assets/protocol'
 import { installFrom, removeModule, resetModule, samplePath } from '@main/modules/install'
 import { QuestionIndex, readMeta } from '@main/modules/loader'
+import { PACKAGE_EXT } from '@main/modules/paket'
 import { chapterCounts, countDue } from '@main/scheduler/queue'
 import { SessionMachine } from '@main/session/machine'
 import { registerBank } from './bank'
@@ -13,11 +16,13 @@ import {
   CH,
   type IntegrityReport,
   type ChapterSummary,
+  type InstallResult,
   type ModuleSummary,
   type Settings,
   type SourceBook,
   type StatsOverview
 } from '@shared/ipc'
+import { ModuleMeta } from '@shared/schema/module'
 import { ChoiceKey } from '@shared/schema/question'
 import { z } from 'zod'
 
@@ -38,6 +43,16 @@ const SettingsPatch = z
   })
   .partial()
 
+function tagsOf(root: string): string[] {
+  try {
+    const raw = JSON.parse(readFileSync(join(root, 'module.json'), 'utf8')) as { tags?: unknown }
+    const r = ModuleMeta.shape.tags.safeParse(raw.tags)
+    return r.success ? r.data : []
+  } catch {
+    return []
+  }
+}
+
 function windowOf(e: IpcMainInvokeEvent): BrowserWindow | null {
   return BrowserWindow.fromWebContents(e.sender)
 }
@@ -45,6 +60,7 @@ function windowOf(e: IpcMainInvokeEvent): BrowserWindow | null {
 export function registerHandlers(ctx: Context): {
   rootOf(moduleId: string): string | undefined
   pdfOf(moduleId: string): string | null
+  open(path: string): void
 } {
   const { db } = ctx
   const roots = new Map<string, string>()
@@ -135,6 +151,7 @@ export function registerHandlers(ctx: Context): {
         version: r.version,
         path: r.path,
         assetBase: assetBase(r.id),
+        tags: tagsOf(r.path),
         questionCount: r.question_count,
         ...c
       })
@@ -154,16 +171,35 @@ export function registerHandlers(ctx: Context): {
     await refreshRoots()
     return r
   })
-  ipcMain.handle(CH.modulePick, async (e) => {
-    const w = windowOf(e)
-    const r = await dialog.showOpenDialog(w ?? new BrowserWindow({ show: false }), {
-      properties: ['openDirectory']
-    })
-    if (r.canceled || !r.filePaths[0]) return null
-    const res = await installFrom(db, r.filePaths[0], new Date())
+  const install = async (path: string): Promise<InstallResult> => {
+    const r = await installFrom(db, path, new Date())
     indexes.clear()
     await refreshRoots()
-    return res
+    return r
+  }
+  ipcMain.handle(CH.modulePick, async (e, kind: unknown) => {
+    const w = windowOf(e)
+    const file = z.enum(['file', 'folder']).parse(kind) === 'file'
+    const r = await dialog.showOpenDialog(w ?? new BrowserWindow({ show: false }), {
+      properties: [file ? 'openFile' : 'openDirectory'],
+      filters: file ? [{ name: 'Quizloop', extensions: [PACKAGE_EXT, 'zip'] }] : undefined
+    })
+    if (r.canceled || !r.filePaths[0]) return null
+    return install(r.filePaths[0])
+  })
+  const opened: string[] = []
+  let listening = false
+  const announce = async (path: string): Promise<void> => {
+    const r = await install(path)
+    for (const w of BrowserWindow.getAllWindows()) w.webContents.send(CH.moduleInstalled, r)
+  }
+  const open = (path: string): void => {
+    if (listening) void announce(path)
+    else opened.push(path)
+  }
+  ipcMain.handle(CH.moduleDrainOpened, async () => {
+    listening = true
+    for (const p of opened.splice(0)) await announce(p)
   })
   ipcMain.handle(CH.moduleRemove, async (_e, id: unknown) => {
     await removeModule(db, z.string().parse(id))
@@ -327,5 +363,5 @@ export function registerHandlers(ctx: Context): {
 
   registerBank({ db, rootOf: (id) => roots.get(id), refresh: refreshRoots, indexFor })
 
-  return { rootOf: (id) => roots.get(id), pdfOf: (id) => bookOf(id).path }
+  return { rootOf: (id) => roots.get(id), pdfOf: (id) => bookOf(id).path, open }
 }

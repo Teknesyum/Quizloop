@@ -6,6 +6,7 @@ import type { Database } from '@main/db/types'
 import { modulesDir } from '@main/settings'
 import type { InstallResult } from '@shared/ipc'
 import { ModuleError, readMeta, validateModule } from './loader'
+import { isPackage, unpack, type Unpacked } from './paket'
 import { syncModule } from './sync'
 
 export function samplePath(): string {
@@ -18,7 +19,12 @@ export async function installFrom(
   source: string,
   now: Date
 ): Promise<InstallResult> {
+  let paket: Unpacked | null = null
   try {
+    if (isPackage(source)) {
+      paket = await unpack(source)
+      source = paket.root
+    }
     const { meta } = validateModule(source)
     const target = join(modulesDir(), meta.id)
     if (resolve(source) !== resolve(target)) {
@@ -30,6 +36,8 @@ export async function installFrom(
     return {
       ok: true,
       moduleId: meta.id,
+      name: meta.name,
+      questionCount: meta.questionCount,
       updated: r.updated + r.added,
       reset: r.reset,
       orphaned: r.orphaned
@@ -37,6 +45,8 @@ export async function installFrom(
   } catch (e) {
     const msg = e instanceof ModuleError ? [e.message, ...e.issues].join('\n') : String(e)
     return { ok: false, error: msg }
+  } finally {
+    paket?.cleanup()
   }
 }
 

@@ -1,5 +1,11 @@
 import { contextBridge, ipcRenderer, webFrame, webUtils } from 'electron'
-import { CH, type QuizloopApi, type Settings, type UpdateStatus } from '@shared/ipc'
+import {
+  CH,
+  type InstallResult,
+  type QuizloopApi,
+  type Settings,
+  type UpdateStatus
+} from '@shared/ipc'
 import type { ChoiceKey } from '@shared/schema/question'
 
 const api: QuizloopApi = {
@@ -34,7 +40,13 @@ const api: QuizloopApi = {
     list: () => ipcRenderer.invoke(CH.moduleList),
     install: (path: string) => ipcRenderer.invoke(CH.moduleInstall, path),
     installSample: () => ipcRenderer.invoke(CH.moduleInstallSample),
-    pick: () => ipcRenderer.invoke(CH.modulePick),
+    pick: (kind: 'file' | 'folder') => ipcRenderer.invoke(CH.modulePick, kind),
+    onInstalled: (cb) => {
+      const h = (_: unknown, r: InstallResult): void => cb(r)
+      ipcRenderer.on(CH.moduleInstalled, h)
+      return () => ipcRenderer.removeListener(CH.moduleInstalled, h)
+    },
+    drainOpened: () => ipcRenderer.invoke(CH.moduleDrainOpened),
     remove: (id: string) => ipcRenderer.invoke(CH.moduleRemove, id),
     reset: (id: string) => ipcRenderer.invoke(CH.moduleReset, id),
     chapters: (id: string) => ipcRenderer.invoke(CH.moduleChapters, id),

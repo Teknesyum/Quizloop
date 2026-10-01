@@ -46,6 +46,15 @@ function ModuleCard({
           {m.questionCount ? Math.round((m.retired / m.questionCount) * 100) : 0}%
         </span>
       </header>
+      {m.tags.length > 0 && (
+        <ul className="ql-tags" aria-label={t('library.tags')}>
+          {m.tags.map((tag) => (
+            <li key={tag} className="tk-mono ql-tag">
+              {tag}
+            </li>
+          ))}
+        </ul>
+      )}
       <dl className="ql-card-stats">
         <div className={m.dueToday ? 'ql-stat-hot' : ''}>
           <dt className="tk-hint">{t('library.card.due', { count: m.dueToday })}</dt>
@@ -147,11 +156,9 @@ export function Library(): React.JSX.Element {
   const report = async (r: InstallResult | null): Promise<void> => {
     if (!r) return
     if (r.ok) {
-      const list = await window.quizloop.module.list()
-      const m = list.find((x) => x.id === r.moduleId)
       toast(
         'success',
-        t('library.installed', { name: m?.name ?? r.moduleId ?? '', count: m?.questionCount ?? 0 })
+        t('library.installed', { name: r.name ?? r.moduleId ?? '', count: r.questionCount ?? 0 })
       )
     } else {
       toast('danger', `${t('library.installFailed')}: ${r.error ?? ''}`)
@@ -204,12 +211,21 @@ export function Library(): React.JSX.Element {
           </button>
           <button
             type="button"
+            className="tk-btn tk-btn-ghost"
+            disabled={busy}
+            title={busy ? t('common.loading') : undefined}
+            onClick={() => run(() => window.quizloop.module.pick('folder'))}
+          >
+            {t('library.addFolder')}
+          </button>
+          <button
+            type="button"
             className="tk-btn tk-btn-primary"
             disabled={busy}
             title={busy ? t('common.loading') : undefined}
-            onClick={() => run(() => window.quizloop.module.pick())}
+            onClick={() => run(() => window.quizloop.module.pick('file'))}
           >
-            {t('library.addFolder')}
+            {t('library.addFile')}
           </button>
         </div>
       </header>

@@ -45,6 +45,22 @@ export default function App(): React.JSX.Element {
   }, [loadSettings, loadInfo])
 
   useEffect(() => {
+    const off = window.quizloop.module.onInstalled((r) => {
+      const { toast, loadModules } = useApp.getState()
+      if (r.ok) {
+        toast(
+          'success',
+          t('library.installed', { name: r.name ?? r.moduleId ?? '', count: r.questionCount ?? 0 })
+        )
+        go({ name: 'library' })
+      } else toast('danger', `${t('library.installFailed')}: ${r.error ?? ''}`)
+      loadModules()
+    })
+    window.quizloop.module.drainOpened()
+    return off
+  }, [go])
+
+  useEffect(() => {
     window.quizloop.settings.zoom(scale)
   }, [scale])
 

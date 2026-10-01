@@ -6,6 +6,19 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.4.0] - 2026-10-01
+
+### Added
+
+- Single-file module packages (`.qlmod`). Install one with **Pick module file**, by dropping it
+  on the library, or by double-clicking it once Quizloop is installed.
+- Modules carry tags (`tags` in `module.json`), shown as badges on the library card.
+- quizforge `paket` wraps a built module and its tags into `dist-modules/<id>-<version>.qlmod`.
+
+### Changed
+
+- Quizloop runs as a single instance; opening a package while it runs installs it in the open window.
+
 ## [0.3.2] - 2026-10-01
 
 ### Fixed

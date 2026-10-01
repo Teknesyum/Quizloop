@@ -195,6 +195,22 @@ body {
   color: var(--tk-text-label);
 }
 
+.ql-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--tk-sp-1);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ql-tag {
+  padding: 0 var(--tk-sp-2);
+  border: var(--tk-border-w) solid var(--tk-border-strong);
+  border-radius: var(--tk-r);
+  color: var(--tk-renk-3);
+}
+
 .ql-card-stats {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));

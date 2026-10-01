@@ -11,7 +11,8 @@ export const Rules = z.object({
     id: z.string().regex(/^[a-z0-9][a-z0-9-]{1,63}$/),
     ad: z.string().min(1),
     surum: z.string().regex(/^\d+\.\d+\.\d+$/),
-    dil: z.string().default('tr')
+    dil: z.string().default('tr'),
+    etiketler: z.array(z.string()).default([])
   }),
   kaynak: z.object({
     tip: z.enum(['pdf', 'web']),

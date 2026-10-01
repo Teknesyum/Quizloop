@@ -10,6 +10,7 @@ import { PRICES, run } from './generate.ts'
 import { loadCheckpoint } from './checkpoint.ts'
 import { verify } from './verify.ts'
 import { pack } from './pack.ts'
+import { paket } from './paket.ts'
 import { hasMaterial, writeBriefs } from './brief.ts'
 import { ingest } from './ingest.ts'
 import { geriAl } from './geri.ts'
@@ -38,6 +39,7 @@ const HELP = `quizforge <komut> --rules <rules.yaml> [seçenekler]
             (önce plan)   --force: build/units doluysa üzerine yaz
   verify    deterministik denetim: build/verify-report.json
   pack      modules/<id>/ yaz; verify geçmeden çalışmaz
+  paket     modules/<id>/ klasörünü etiketleriyle tek dosyaya sar: dist-modules/<id>-<sürüm>.qlmod
   flags     uygulamanın flags.json dosyasını oku, soruları birimlerine eşle, o birimleri
             yeniden üretim kuyruğuna koy   --flags <dosya> zorunlu, --gorsel, --dry-run
   zorluk    tek ölçütle yeniden etiketleme
@@ -227,6 +229,14 @@ function main(argv: string[]): number {
     const r = geriAl(l, c, loadPlan(l), { force: values.force })
     console.log(
       `${r.questions} soru → ${r.units} birim${r.unplaced ? ` + _modul (${r.unplaced} soru)` : ''}, ${r.images} görsel → build/figures${r.tables ? `, ${r.tables} tablo görseli → build/tbl` : ''}`
+    )
+    return 0
+  }
+
+  if (cmd === 'paket') {
+    const r = paket(l)
+    console.log(
+      `${r.files} dosya, ${(r.bytes / 1048576).toFixed(1)} MB → ${path.relative(l.root, r.out)}`
     )
     return 0
   }

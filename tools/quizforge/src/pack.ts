@@ -52,6 +52,7 @@ export function pack(l: Loaded, c: Corpus): string {
     name: l.rules.module.ad,
     version: l.rules.module.surum,
     language: l.rules.module.dil,
+    tags: l.rules.module.etiketler,
     source: {
       title: l.rules.module.ad,
       file: c.file,
