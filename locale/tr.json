@@ -251,5 +251,18 @@
   "update.cancel": "İptal",
   "update.apply": "Yükle",
   "update.updated": "Yeni sürüme geçildi: {version}",
-  "session.key.space": "Boşluk"
+  "session.key.space": "Boşluk",
+  "work.task.install": "Modül kuruluyor",
+  "work.task.remove": "Modül kaldırılıyor",
+  "work.task.export": "Taşıma paketi hazırlanıyor",
+  "work.task.import": "Taşıma paketi açılıyor",
+  "work.step.read": "Paket dosyası okunuyor",
+  "work.step.unpack": "Paket açılıyor",
+  "work.step.write": "Dosyalar çıkarılıyor, {done} / {total}",
+  "work.step.copy": "Dosyalar kopyalanıyor, {done} / {total}",
+  "work.step.sync": "Sorular eşitleniyor",
+  "work.step.remove": "Dosyalar siliniyor, {done} / {total}",
+  "work.step.database": "İlerleme kaydı hazırlanıyor",
+  "work.step.done": "Tamamlandı",
+  "work.step.failed": "İşlem tamamlanamadı"
 }

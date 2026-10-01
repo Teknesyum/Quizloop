@@ -745,3 +745,14 @@ Sıra:
   Ana süreç geçici klasöre açar (zip-slip denetimi), `installFrom` ile kurar, arayüze`module:installed` olayı yollar.
 - Kartta etiketler küçük rozet olarak görünür.
 
+
+## 11. Uzun İşlerde İlerleme Çubuğu — Plan (2026-10-01)
+
+Kullanıcı boş beklemez: bir saniyeyi aşabilen her iş adım adı ve yüzdeyle ilerleme gösterir.
+
+- Uzun işler: modül kurma (seç, bırak, çift tık, örnek), modül kaldırma, taşıma paketi dışa ve içe aktarma.
+- `main/work.ts`: `Work` nesnesi `CH.workProgress` ile `{ task, step, done, total, percent, status }` yollar; aynı tam yüzde tekrar yollanmaz.
+- `main/fstree.ts`: `copyTree` ve `removeTree` dosya listesini çıkarır, dosya başına async kopyalar ya da siler, her dosyada ilerler. Senkron `cpSync`/`rmSync` olay döngüsünü kilitlediği için ilerleme mesajı ekrana ulaşmaz.
+- Kurulum ağırlıkları: okuma 0–10, açma 10–35 (fflate işçide, ara yüzde yok), yazma 35–60, kopya 60–85, eşitleme 85–100.
+- Arayüz: teknesyum-ui `ilerleme` şablonu (`components/ProgressBar.tsx` + `progressbar.css`), `components/WorkProgress.tsx` modal panelde gösterir; `done` ya da `error` sonrası kapanır.
+- Adım yazıları `locale` anahtarı olarak gelir (`work.*`), `{done}`/`{total}` yer tutucularıyla.

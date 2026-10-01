@@ -175,7 +175,7 @@ body {
   height: 100%;
   object-fit: cover;
   object-position: top center;
-  opacity: 0.08;
+  opacity: 0.16;
   mask-image: linear-gradient(to bottom, #000 0%, transparent 78%);
   pointer-events: none;
 }

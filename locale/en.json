@@ -251,5 +251,18 @@
   "update.cancel": "Cancel",
   "update.apply": "Install",
   "update.updated": "Updated to {version}",
-  "session.key.space": "Space"
+  "session.key.space": "Space",
+  "work.task.install": "Installing module",
+  "work.task.remove": "Removing module",
+  "work.task.export": "Preparing transfer package",
+  "work.task.import": "Opening transfer package",
+  "work.step.read": "Reading package file",
+  "work.step.unpack": "Unpacking",
+  "work.step.write": "Extracting files, {done} / {total}",
+  "work.step.copy": "Copying files, {done} / {total}",
+  "work.step.sync": "Syncing questions",
+  "work.step.remove": "Deleting files, {done} / {total}",
+  "work.step.database": "Preparing progress data",
+  "work.step.done": "Done",
+  "work.step.failed": "Could not finish"
 }

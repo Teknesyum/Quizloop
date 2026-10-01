@@ -6,6 +6,22 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.5.0] - 2026-10-01
+
+### Added
+
+- Long jobs show a progress dialog: installing and removing a module, and
+  exporting or importing a transfer package. It names the current step and
+  counts files as they move.
+- `quizforge paket` embeds the source book PDF in the `.qlmod` under
+  `kaynak/`, so an installed module finds its book without asking for it.
+
+### Changed
+
+- File copies and removals run in parallel and no longer block the app.
+  Removing a large module drops from about 17 s to under a second.
+- Chapter and cover images on library cards are easier to see.
+
 ## [0.4.2] - 2026-10-01
 
 ### Changed

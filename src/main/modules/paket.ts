@@ -1,14 +1,8 @@
 import { unzip, type Unzipped } from 'fflate'
-import {
-  existsSync,
-  mkdirSync,
-  mkdtempSync,
-  readdirSync,
-  readFileSync,
-  rmSync,
-  writeFileSync
-} from 'node:fs'
+import { existsSync, mkdtempSync, readdirSync, rmSync } from 'node:fs'
+import { mkdir, readFile, writeFile } from 'node:fs/promises'
 import { tmpdir } from 'node:os'
+import { pool } from '@main/fstree'
 import { dirname, join, resolve, sep } from 'node:path'
 
 export const PACKAGE_EXT = 'qlmod'
@@ -34,18 +28,33 @@ function findRoot(dir: string): string | null {
   return null
 }
 
-export async function unpack(file: string, base = tmpdir()): Promise<Unpacked> {
+export interface UnpackTicks {
+  read?(): void
+  write?(done: number, total: number): void
+}
+
+export async function unpack(
+  file: string,
+  base = tmpdir(),
+  ticks: UnpackTicks = {}
+): Promise<Unpacked> {
   const dir = resolve(mkdtempSync(join(base, 'quizloop-paket-')))
   const cleanup = (): void => rmSync(dir, { recursive: true, force: true })
   try {
-    const files = await inflate(readFileSync(file))
-    for (const [name, data] of Object.entries(files)) {
-      if (name.endsWith('/')) continue
-      const out = resolve(dir, name)
-      if (!out.startsWith(dir + sep)) throw new Error(`paket dışına yazan yol: ${name}`)
-      mkdirSync(dirname(out), { recursive: true })
-      writeFileSync(out, data)
+    const buf = await readFile(file)
+    ticks.read?.()
+    const entries = Object.entries(await inflate(buf)).filter(([name]) => !name.endsWith('/'))
+    for (const [name] of entries) {
+      if (!resolve(dir, name).startsWith(dir + sep))
+        throw new Error(`paket dışına yazan yol: ${name}`)
     }
+    for (const d of new Set(entries.map(([name]) => dirname(resolve(dir, name)))))
+      await mkdir(d, { recursive: true })
+    await pool(
+      entries,
+      (d, t) => ticks.write?.(d, t),
+      ([name, data]) => writeFile(resolve(dir, name), data)
+    )
     const root = findRoot(dir)
     if (!root) throw new Error('pakette module.json yok')
     return { root, cleanup }

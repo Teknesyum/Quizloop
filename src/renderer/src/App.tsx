@@ -4,6 +4,7 @@ import { FONT_SCALES } from '@shared/ipc'
 import { TitleBar } from '../../../teknesyum-ui/ustcubuk/TitleBar'
 import { UpdateBadge } from './components/UpdateBadge'
 import { Toasts } from './components/Toast'
+import { WorkProgress } from './components/WorkProgress'
 import { installedText, t } from './i18n'
 import { Bank } from './screens/Bank'
 import { Chapters } from './screens/Chapters'
@@ -128,6 +129,7 @@ export default function App(): React.JSX.Element {
           )}
         </main>
       </div>
+      <WorkProgress />
       <Toasts />
     </div>
   )

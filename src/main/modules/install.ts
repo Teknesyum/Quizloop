@@ -1,9 +1,11 @@
 import { app } from 'electron'
-import { cpSync, existsSync, rmSync } from 'node:fs'
+import { existsSync } from 'node:fs'
 import { join, resolve } from 'node:path'
 import type { Kysely } from 'kysely'
 import type { Database } from '@main/db/types'
+import { copyTree, removeTree, skipBuild } from '@main/fstree'
 import { modulesDir } from '@main/settings'
+import { Work } from '@main/work'
 import type { InstallResult } from '@shared/ipc'
 import { ModuleError, readMeta, validateModule } from './loader'
 import { isPackage, unpack, type Unpacked } from './paket'
@@ -17,22 +19,29 @@ export function samplePath(): string {
 export async function installFrom(
   db: Kysely<Database>,
   source: string,
-  now: Date
+  now: Date,
+  work: Work = new Work('install')
 ): Promise<InstallResult> {
   let paket: Unpacked | null = null
   try {
     if (isPackage(source)) {
-      paket = await unpack(source)
+      work.at('read', 0, 10)
+      paket = await unpack(source, undefined, {
+        read: () => work.at('unpack', 10, 35),
+        write: (d, t) => work.at('write', 35, 60, d, t)
+      })
       source = paket.root
     }
     const { meta } = validateModule(source)
     const target = join(modulesDir(), meta.id)
     if (resolve(source) !== resolve(target)) {
-      if (existsSync(target)) rmSync(target, { recursive: true, force: true })
-      cpSync(source, target, { recursive: true, filter: (p) => !/[\\/]build([\\/]|$)/.test(p) })
+      if (existsSync(target)) await removeTree(target, () => undefined)
+      await copyTree(source, target, work.span('copy', 60, 85), skipBuild)
     }
+    work.at('sync', 85, 100)
     const mod = readMeta(target)
     const r = await syncModule(db, mod, now)
+    work.finish(true)
     return {
       ok: true,
       moduleId: meta.id,
@@ -43,6 +52,7 @@ export async function installFrom(
       orphaned: r.orphaned
     }
   } catch (e) {
+    work.finish(false)
     const msg = e instanceof ModuleError ? [e.message, ...e.issues].join('\n') : String(e)
     return { ok: false, error: msg }
   } finally {
@@ -92,12 +102,18 @@ export async function resetModule(db: Kysely<Database>, moduleId: string): Promi
   })
 }
 
-export async function removeModule(db: Kysely<Database>, moduleId: string): Promise<void> {
+export async function removeModule(
+  db: Kysely<Database>,
+  moduleId: string,
+  work: Work = new Work('remove')
+): Promise<void> {
   const row = await db
     .selectFrom('module')
     .select('path')
     .where('id', '=', moduleId)
     .executeTakeFirst()
   await db.deleteFrom('module').where('id', '=', moduleId).execute()
-  if (row && row.path.startsWith(modulesDir())) rmSync(row.path, { recursive: true, force: true })
+  if (row && row.path.startsWith(modulesDir()))
+    await removeTree(row.path, work.span('remove', 0, 100))
+  work.finish(true)
 }

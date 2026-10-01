@@ -1,7 +1,6 @@
 import { app, BrowserWindow, dialog, ipcMain, type IpcMainInvokeEvent } from 'electron'
 import {
   copyFileSync,
-  cpSync,
   existsSync,
   mkdirSync,
   readFileSync,
@@ -12,9 +11,28 @@ import {
 import { join } from 'node:path'
 import { sql, type Kysely } from 'kysely'
 import type { Database } from '@main/db/types'
+import { copyTree, listFiles, removeTree, skipBuild } from '@main/fstree'
 import { validateModule } from '@main/modules/loader'
 import { getSettings, modulesDir, setSettings } from '@main/settings'
+import { Work } from '@main/work'
 import { CH, type Settings, type TransferResult } from '@shared/ipc'
+
+async function copyAll(
+  pairs: [string, string][],
+  work: Work,
+  from: number,
+  to: number,
+  skip?: (p: string) => boolean
+): Promise<void> {
+  const counts = await Promise.all(pairs.map(([src]) => listFiles(src, skip).then((f) => f.length)))
+  const total = counts.reduce((a, b) => a + b, 0)
+  let base = 0
+  for (let i = 0; i < pairs.length; i++) {
+    const [src, dst] = pairs[i]!
+    await copyTree(src, dst, (d) => work.at('copy', from, to, base + d, total), skip)
+    base += counts[i]!
+  }
+}
 
 const MANIFEST = 'tasima.json'
 const PENDING = 'quizloop.db.tasima'
@@ -50,21 +68,23 @@ export function registerTransfer(db: Kysely<Database>): void {
   ipcMain.handle(CH.transferExport, async (e): Promise<TransferResult> => {
     const dir = await pickDir(e, 'Quizloop')
     if (!dir) return { ok: false }
+    const work = new Work('export')
     try {
+      work.at('database', 0, 15)
       const target = join(dir, `Quizloop-tasima-${stamp(new Date())}`)
       mkdirSync(join(target, 'modules'), { recursive: true })
       const dbOut = join(target, 'quizloop.db').replace(/'/g, "''")
       await sql.raw(`VACUUM INTO '${dbOut}'`).execute(db)
       const rows = await db.selectFrom('module').select(['id', 'path']).execute()
-      const ids: string[] = []
-      for (const r of rows) {
-        if (!existsSync(join(r.path, 'module.json'))) continue
-        cpSync(r.path, join(target, 'modules', r.id), {
-          recursive: true,
-          filter: (p) => !/[\\/]build([\\/]|$)/.test(p)
-        })
-        ids.push(r.id)
-      }
+      const live = rows.filter((r) => existsSync(join(r.path, 'module.json')))
+      const ids = live.map((r) => r.id)
+      await copyAll(
+        live.map((r) => [r.path, join(target, 'modules', r.id)]),
+        work,
+        15,
+        100,
+        skipBuild
+      )
       const { modulesDir: _skip, ...settings } = getSettings()
       void _skip
       writeFileSync(
@@ -81,8 +101,10 @@ export function registerTransfer(db: Kysely<Database>): void {
           2
         ) + '\n'
       )
+      work.finish(true)
       return { ok: true, path: target, modules: ids.length }
     } catch (err) {
+      work.finish(false)
       return { ok: false, error: String(err) }
     }
   })
@@ -90,6 +112,7 @@ export function registerTransfer(db: Kysely<Database>): void {
   ipcMain.handle(CH.transferImport, async (e): Promise<TransferResult> => {
     const dir = await pickDir(e, 'Quizloop')
     if (!dir) return { ok: false }
+    const work = new Work('import')
     try {
       const manifestFile = join(dir, MANIFEST)
       const dbIn = join(dir, 'quizloop.db')
@@ -104,11 +127,18 @@ export function registerTransfer(db: Kysely<Database>): void {
       if (manifest.app !== 'quizloop') return { ok: false, error: 'not-a-package' }
       const ids = manifest.moduller ?? []
       for (const id of ids) validateModule(join(dir, 'modules', id))
+      work.at('copy', 0, 90)
       for (const id of ids) {
         const dest = join(modulesDir(), id)
-        if (existsSync(dest)) rmSync(dest, { recursive: true, force: true })
-        cpSync(join(dir, 'modules', id), dest, { recursive: true })
+        if (existsSync(dest)) await removeTree(dest, () => undefined)
       }
+      await copyAll(
+        ids.map((id) => [join(dir, 'modules', id), join(modulesDir(), id)]),
+        work,
+        0,
+        90
+      )
+      work.at('database', 90, 100)
       copyFileSync(dbIn, join(app.getPath('userData'), PENDING))
       if (manifest.ayarlar) {
         const { modulesDir: _skip, ...rest } = manifest.ayarlar
@@ -119,8 +149,10 @@ export function registerTransfer(db: Kysely<Database>): void {
         app.relaunch()
         app.exit(0)
       }, 400)
+      work.finish(true)
       return { ok: true, path: dir, modules: ids.length }
     } catch (err) {
+      work.finish(false)
       return { ok: false, error: String(err) }
     }
   })
