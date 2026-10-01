@@ -353,7 +353,6 @@ export function Bank({
                       <span>{t(`bank.status.${r.status}`)}</span>
                       <span>{r.chapter ?? t('chapters.unsorted')}</span>
                       <span>{t(`bank.kind.${r.kind}`)}</span>
-                      <span>{t(`bank.diff.${r.difficulty as 'kolay'}`)}</span>
                       {r.flagged && <span className="ql-bank-flag">{t('bank.flag')}</span>}
                     </span>
                   </div>

@@ -13,8 +13,8 @@ export interface OpenResult {
 }
 
 export function checkIntegrity(raw: SQLite.Database): { ok: boolean; detail: string } {
-  const rows = raw.pragma('integrity_check') as { integrity_check: string }[]
-  const detail = rows.map((r) => r.integrity_check).join('\n')
+  const rows = raw.pragma('quick_check') as { quick_check: string }[]
+  const detail = rows.map((r) => r.quick_check).join('\n')
   return { ok: detail === 'ok', detail }
 }
 

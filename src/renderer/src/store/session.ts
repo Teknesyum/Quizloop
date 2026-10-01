@@ -1,3 +1,4 @@
+import { flushSync } from 'react-dom'
 import { create } from 'zustand'
 import type {
   AnswerResult,
@@ -48,6 +49,12 @@ interface SessionState extends Record<string, unknown> {
   flag(): Promise<void>
   end(): Promise<void>
   reset(): void
+}
+
+function swap(run: () => void): void {
+  const still = matchMedia('(prefers-reduced-motion: reduce)').matches
+  if (still || !('startViewTransition' in document)) return run()
+  document.startViewTransition(() => flushSync(run))
 }
 
 function show(q: QuestionView | null): Phase {
@@ -131,6 +138,18 @@ export const useSession = create<SessionState>((set, get) => ({
     const { state, sessionId, shownAt } = get()
     if (state.phase !== 'solved' || !sessionId) return
     const g = await window.quizloop.session.grade(sessionId, self, performance.now() - shownAt)
+    if (g.next) {
+      const next = g.next
+      swap(() =>
+        set((s) => ({
+          score: s.score + g.scoreDelta,
+          state: show(next),
+          shownAt: performance.now(),
+          flagged: false
+        }))
+      )
+      return
+    }
     set((s) => ({
       score: s.score + g.scoreDelta,
       state: { phase: 'graded', q: state.q, grade: g },
@@ -140,7 +159,8 @@ export const useSession = create<SessionState>((set, get) => ({
   next: () => {
     const { state } = get()
     if (state.phase !== 'graded') return
-    set({ state: show(state.grade.next), shownAt: performance.now() })
+    const next = state.grade.next
+    swap(() => set({ state: show(next), shownAt: performance.now() }))
   },
   flag: async () => {
     const { sessionId, state } = get()

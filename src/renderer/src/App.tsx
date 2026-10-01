@@ -3,6 +3,7 @@ import { tinykeys } from 'tinykeys'
 import { FONT_SCALES } from '@shared/ipc'
 import { TitleBar } from '../../../teknesyum-ui/ustcubuk/TitleBar'
 import { UpdateTools } from './components/UpdateTools'
+import { useBookWarmup } from './components/bookdoc'
 import { Toasts } from './components/Toast'
 import { WorkProgress } from './components/WorkProgress'
 import { installedText, t } from './i18n'
@@ -34,6 +35,7 @@ export default function App(): React.JSX.Element {
   const saveSettings = useApp((s) => s.saveSettings)
   const scale = settings?.fontScale ?? 1
   const [max, setMax] = useState(false)
+  useBookWarmup(route.name === 'session' || route.name === 'bank' ? route.moduleId : null)
 
   useEffect(() => {
     window.quizloop.window.isMaximized().then(setMax)

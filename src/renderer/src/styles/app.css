@@ -47,7 +47,7 @@ body {
 }
 
 .ql-main:has(> .ql-session) {
-  padding-bottom: calc(var(--ql-keys-h) + var(--tk-sp-5));
+  padding: var(--tk-sp-4) var(--tk-sp-4) calc(var(--ql-keys-h) + var(--tk-sp-4));
 }
 
 /* --- title bar --- */
@@ -133,9 +133,11 @@ body {
   gap: var(--tk-sp-3);
 }
 
-.ql-card-version {
-  font-size: var(--tk-fs-1);
+.ql-tag-version {
   color: var(--tk-text);
+  border-color: var(--tk-border);
+  justify-self: start;
+  width: fit-content;
 }
 
 .ql-cover-card {
@@ -152,14 +154,20 @@ body {
   height: 100%;
   object-fit: cover;
   object-position: top center;
-  opacity: 0.16;
-  mask-image: linear-gradient(to bottom, #000 0%, transparent 78%);
+  pointer-events: none;
+}
+
+.ql-cover-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: var(--tk-scrim);
   pointer-events: none;
 }
 
 .ql-cover.ql-cover-foot {
   object-position: bottom center;
-  mask-image: linear-gradient(to top, #000 0%, transparent 55%);
 }
 
 .ql-cover-card .ql-card-head {
@@ -249,7 +257,7 @@ body {
 /* --- session --- */
 
 .ql-session {
-  max-width: calc(var(--tk-measure) * 1.8);
+  max-width: calc(var(--tk-measure) * 2.4);
 }
 
 .ql-session-bar {
@@ -338,6 +346,10 @@ body {
   cursor: pointer;
 }
 
+::highlight(ql-hidden) {
+  color: transparent;
+}
+
 .ql-actions {
   display: flex;
   gap: var(--tk-sp-3);
@@ -405,35 +417,23 @@ kbd {
 
 .ql-choice-key {
   flex: 0 0 auto;
-  display: inline-flex;
-  transition:
-    color var(--tk-t-fast) var(--tk-e-out),
-    border-color var(--tk-t-fast) var(--tk-e-out);
-  align-items: center;
-  justify-content: center;
-  width: var(--tk-sp-5);
-  height: var(--tk-sp-5);
-  border-radius: var(--tk-r);
-  border: var(--tk-border-w) solid var(--tk-border-strong);
+  transition: color var(--tk-t-fast) var(--tk-e-out);
+  min-width: var(--tk-sp-5);
   color: var(--tk-text-label);
   font-size: var(--tk-fs-2);
-  line-height: 1;
 }
 
 .ql-choice > button:hover .ql-choice-key,
 .ql-choice > button:focus-visible .ql-choice-key {
   color: var(--tk-renk-1);
-  border-color: var(--tk-renk-1);
 }
 
 .ql-choice-wrong .ql-choice-key {
   color: var(--tk-danger-text);
-  border-color: var(--tk-danger);
 }
 
 .ql-choice-right .ql-choice-key {
   color: var(--tk-success);
-  border-color: var(--tk-success);
 }
 
 .ql-choice-text {
@@ -1044,7 +1044,7 @@ kbd {
 .ql-stem-media {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   gap: var(--tk-sp-4);
 }
 
@@ -1327,6 +1327,7 @@ button.ql-mark:not(:disabled):active {
 
 .ql-table-wrap {
   max-width: 100%;
+  width: fit-content;
   overflow-x: auto;
   overscroll-behavior-x: contain;
   border-radius: var(--tk-r);
@@ -1334,7 +1335,6 @@ button.ql-mark:not(:disabled):active {
 
 .ql-table {
   border-collapse: collapse;
-  min-width: 100%;
   font-size: var(--tk-fs-1);
   font-variant-numeric: tabular-nums;
 }
@@ -1348,9 +1348,14 @@ button.ql-mark:not(:disabled):active {
 .ql-table th,
 .ql-table td {
   border: var(--tk-border-w) solid var(--tk-border);
-  padding: var(--tk-sp-2) var(--tk-sp-3);
+  padding: var(--tk-sp-1) var(--tk-sp-3);
   text-align: center;
   vertical-align: middle;
+  max-width: var(--tk-measure);
+}
+
+.ql-table td {
+  text-align: start;
 }
 
 .ql-table th {
@@ -1367,7 +1372,7 @@ button.ql-mark:not(:disabled):active {
 @keyframes ql-in {
   from {
     opacity: 0;
-    transform: translateY(8px);
+    transform: translateY(var(--tk-sp-2));
   }
   to {
     opacity: 1;
@@ -1406,20 +1411,41 @@ button.ql-mark:not(:disabled):active {
   }
 }
 
+@keyframes ql-out {
+  to {
+    opacity: 0;
+    transform: translateY(calc(var(--tk-sp-2) * -1));
+  }
+}
+
+.ql-question {
+  view-transition-name: ql-q;
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+}
+
+::view-transition-group(ql-q) {
+  animation-duration: var(--tk-t-slow);
+  animation-timing-function: var(--tk-e-emphasized);
+}
+
+::view-transition-old(ql-q) {
+  animation: ql-out var(--tk-t-fast) var(--tk-e-in) both;
+}
+
+::view-transition-new(ql-q) {
+  animation: ql-in var(--tk-t-slow) var(--tk-e-emphasized) var(--tk-t-fast) both;
+}
+
 .ql-transition-in {
   animation: ql-in var(--tk-t-base) var(--tk-e-out) both;
   animation-delay: calc(min(var(--ql-i), var(--tk-stagger-max)) * var(--tk-stagger));
 }
 
 /* --- wide screens --- */
-
-@media (min-height: 860px) {
-  .ql-main:has(> .ql-session) {
-    display: grid;
-    align-content: safe center;
-    min-height: 100%;
-  }
-}
 
 @media (min-width: 1700px) {
   .ql-main {
@@ -1431,7 +1457,7 @@ button.ql-mark:not(:disabled):active {
   }
 
   .ql-session {
-    max-width: calc(var(--tk-measure) * 2.1);
+    max-width: calc(var(--tk-measure) * 2.8);
   }
 
   .ql-grid {
@@ -1465,7 +1491,7 @@ button.ql-mark:not(:disabled):active {
   }
 
   .ql-session {
-    max-width: calc(var(--tk-measure) * 2.3);
+    max-width: calc(var(--tk-measure) * 3.2);
   }
 
   .ql-grid {

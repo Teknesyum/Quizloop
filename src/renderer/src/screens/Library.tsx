@@ -46,15 +46,16 @@ function ModuleCard({
           {m.questionCount ? Math.round((m.retired / m.questionCount) * 100) : 0}%
         </span>
       </header>
-      {m.tags.length > 0 && (
-        <ul className="ql-tags" aria-label={t('library.tags')}>
-          {m.tags.map((tag) => (
-            <li key={tag} className="tk-mono ql-tag">
-              {title(tag)}
-            </li>
-          ))}
-        </ul>
-      )}
+      <ul className="ql-tags" aria-label={t('library.tags')}>
+        <li className="tk-mono ql-tag ql-tag-version">
+          {t('library.card.version', { version: m.version })}
+        </li>
+        {m.tags.map((tag) => (
+          <li key={tag} className="tk-mono ql-tag">
+            {title(tag)}
+          </li>
+        ))}
+      </ul>
       <dl className="ql-card-stats">
         <div className={m.dueToday ? 'ql-stat-hot' : ''}>
           <dt className="tk-hint">{t('library.card.due', { count: m.dueToday })}</dt>
@@ -80,7 +81,6 @@ function ModuleCard({
       </div>
       <footer className="ql-card-foot">
         <span className="tk-hint">{t('library.card.questions', { count: m.questionCount })}</span>
-        <span className="tk-mono ql-card-version">v{m.version}</span>
         <div className="ql-card-actions">
           <button type="button" className="tk-btn tk-btn-ghost ql-btn-sm" onClick={onRemove}>
             {t('library.remove')}
@@ -94,6 +94,13 @@ function ModuleCard({
             onClick={() => go({ name: 'bank', moduleId: m.id })}
           >
             {t('library.bank')}
+          </button>
+          <button
+            type="button"
+            className="tk-btn tk-btn-ghost ql-btn-sm"
+            onClick={() => go({ name: 'session', moduleId: m.id, chapter: null })}
+          >
+            {t('library.mixed')}
           </button>
           <button
             type="button"

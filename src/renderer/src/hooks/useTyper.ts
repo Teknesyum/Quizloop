@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState, type RefObject } from 'react'
 import type { Settings } from '@shared/ipc'
 
 const MS_PER_CHAR: Record<Settings['typerSpeed'], number> = {
@@ -8,53 +8,84 @@ const MS_PER_CHAR: Record<Settings['typerSpeed'], number> = {
   off: 0
 }
 
-function repair(partial: string): string {
-  let out = partial
-  const fence = (out.match(/```/g) ?? []).length
-  if (fence % 2) out += '\n```'
-  const dollar2 = (out.match(/\$\$/g) ?? []).length
-  if (dollar2 % 2) out += '$$'
-  const single = out.replace(/\$\$/g, '')
-  if ((single.match(/\$/g) ?? []).length % 2) out += '$'
-  const bold = (out.match(/\*\*/g) ?? []).length
-  if (bold % 2) out += '**'
-  const tick = (out.replace(/```/g, '').match(/`/g) ?? []).length
-  if (tick % 2) out += '`'
+const HIDDEN = 'ql-hidden'
+const MAX_MS = 800
+
+function textNodes(root: HTMLElement): Text[] {
+  const out: Text[] = []
+  const walk = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
+    acceptNode: (n) =>
+      n.parentElement?.closest('.katex-mathml') || !n.textContent
+        ? NodeFilter.FILTER_REJECT
+        : NodeFilter.FILTER_ACCEPT
+  })
+  while (walk.nextNode()) out.push(walk.currentNode as Text)
   return out
 }
 
+function hide(nodes: Text[], from: number): void {
+  let left = from
+  for (const n of nodes) {
+    if (left < n.length) {
+      const last = nodes[nodes.length - 1]!
+      const r = new Range()
+      r.setStart(n, left)
+      r.setEnd(last, last.length)
+      CSS.highlights.set(HIDDEN, new Highlight(r))
+      return
+    }
+    left -= n.length
+  }
+  CSS.highlights.delete(HIDDEN)
+}
+
 export function useTyper(
-  text: string,
+  ref: RefObject<HTMLElement | null>,
   speed: Settings['typerSpeed']
-): { shown: string; done: boolean; skip(): void } {
+): { done: boolean; skip(): void } {
   const reduced =
     typeof matchMedia === 'function' && matchMedia('(prefers-reduced-motion: reduce)').matches
   const perChar = reduced ? 0 : MS_PER_CHAR[speed]
-  const [count, setCount] = useState(perChar === 0 ? text.length : 0)
+  const supported = typeof CSS !== 'undefined' && 'highlights' in CSS
+  const [done, setDone] = useState(perChar === 0 || !supported)
   const raf = useRef(0)
 
   useEffect(() => {
-    if (typeof document !== 'undefined' && document.visibilityState === 'hidden') {
-      const id = window.setTimeout(() => setCount(text.length), 0)
+    const root = ref.current
+    if (done || !root) return
+    if (document.visibilityState === 'hidden') {
+      const id = window.setTimeout(() => setDone(true), 0)
       return () => window.clearTimeout(id)
     }
-    const started = performance.now()
+    const nodes = textNodes(root)
+    const total = nodes.reduce((s, n) => s + n.length, 0)
+    hide(nodes, 0)
+    const step = Math.min(perChar, MAX_MS / Math.max(1, total))
+    let started = -1
     const tick = (now: number): void => {
-      const n = perChar === 0 ? text.length : Math.floor((now - started) / perChar)
-      setCount(Math.min(text.length, n))
-      if (n < text.length) raf.current = requestAnimationFrame(tick)
+      if (started < 0) started = now
+      const n = Math.max(0, Math.floor((now - started) / step))
+      if (n >= total) {
+        CSS.highlights.delete(HIDDEN)
+        setDone(true)
+        return
+      }
+      hide(nodes, n)
+      raf.current = requestAnimationFrame(tick)
     }
     raf.current = requestAnimationFrame(tick)
-    return () => cancelAnimationFrame(raf.current)
-  }, [text, perChar])
+    return () => {
+      cancelAnimationFrame(raf.current)
+      CSS.highlights.delete(HIDDEN)
+    }
+  }, [ref, perChar, done])
 
-  const done = count >= text.length
   return {
-    shown: done ? text : repair(text.slice(0, count)),
     done,
     skip: () => {
       cancelAnimationFrame(raf.current)
-      setCount(text.length)
+      if (supported) CSS.highlights.delete(HIDDEN)
+      setDone(true)
     }
   }
 }

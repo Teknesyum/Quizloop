@@ -24,6 +24,17 @@ import {
   readLabels,
   zorlukDir
 } from './zorluk.ts'
+import {
+  birimOlculenleri,
+  exportSecenek,
+  formatOlcum,
+  formatUygula,
+  olc,
+  olculenler,
+  readCikti,
+  secenekDir,
+  uygula
+} from './secenek.ts'
 
 const HELP = `quizforge <komut> --rules <rules.yaml> [seçenekler]
 
@@ -46,6 +57,11 @@ const HELP = `quizforge <komut> --rules <rules.yaml> [seçenekler]
             export  soruları build/zorluk/in/NNN.json partilerine ve istem.md'ye yaz
             apply   build/zorluk/out/*.json etiketlerini birimlere yaz   --dry-run
             uyum    out/ ile ikinci etiketleme (build/zorluk/kontrol/) arasındaki uyumu ölç
+  secenek   kök ve şık denetimi (en uzun şık doğru yanlılığı, benzer şık, belirsiz kök)
+            olc [yol]  deterministik ölçüm; yol yoksa build/units, varsa dosya ya da klasör
+                       (in/NNN.json, out/NNN.json, modules/<id>/blocks) → build/secenek/olcum.json
+            export  şıklı soruları build/secenek/in/NNN.json partilerine (40) ve istem.md'ye yaz
+            apply   build/secenek/out/*.json çıktılarını doğrula, birimlere yaz   --dry-run
   doctor    ortamı sına: python, pypdf, ANTHROPIC_API_KEY, külliyat dosyaları
 `
 
@@ -223,6 +239,34 @@ function main(argv: string[]): number {
       return 0
     }
     throw new Error('zorluk export | apply | uyum')
+  }
+
+  if (cmd === 'secenek') {
+    const sub = positionals[1]
+    if (sub === 'olc') {
+      const src = positionals[2]
+      const items = src ? olculenler(path.resolve(src)) : birimOlculenleri(l)
+      const o = olc(items)
+      const out = path.join(secenekDir(l), 'olcum.json')
+      fs.mkdirSync(path.dirname(out), { recursive: true })
+      fs.writeFileSync(out, JSON.stringify(o, null, 1))
+      console.log(formatOlcum(o, src ?? 'build/units'))
+      console.log(`→ ${path.relative(l.root, out)}`)
+      return 0
+    }
+    if (sub === 'export') {
+      const files = exportSecenek(l)
+      console.log(
+        `${files.length} parti → ${path.relative(l.root, path.join(secenekDir(l), 'in'))}, istem → ${path.relative(l.root, path.join(secenekDir(l), 'istem.md'))}`
+      )
+      return 0
+    }
+    if (sub === 'apply') {
+      const r = uygula(l, readCikti(path.join(secenekDir(l), 'out')), values['dry-run'])
+      console.log(formatUygula(r, values['dry-run']))
+      return r.hatalar.length || r.bilinmeyen.length ? 1 : 0
+    }
+    throw new Error('secenek olc | export | apply')
   }
 
   if (cmd === 'geri-al') {
