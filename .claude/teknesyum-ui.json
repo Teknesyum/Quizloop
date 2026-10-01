@@ -32,11 +32,6 @@
       "reason": "Kurulum penceresi electron-builder NSIS; kur şablonu USB+SSH özel-depo kurulumu üretiyor ve kurulum-paneli kitabı (GitHub Releases + sha256, SSH anahtarı taşınmaz) bunu yasaklıyor. Şablona Releases türü eklenince kaldırılır."
     },
     {
-      "rule": "kabuk/sablon-imzasiz",
-      "file": "src/renderer/src/components/UpdateBadge.tsx",
-      "reason": "durum şablonunun Electron türü git senkron rozeti; electron-updater iki adımlı güncelleme rozeti şablonda yok. Şablona eklenince bu dosya şablonla değişir."
-    },
-    {
       "rule": "core/list-without-motion",
       "file": "src/renderer/src/App.tsx",
       "reason": "Tek .map çağrısı NAV dizisini TitleBar sekme verisine çeviriyor (const TABS); ekrana liste basılmıyor. Sekmeleri TitleBar çiziyor ve hareketi titlebar.css taşıyor."
@@ -49,7 +44,7 @@
   ],
   "plugin": "0.32.0",
   "denetim": {
-    "tarih": "2026-10-01T15:14:16.630Z",
+    "tarih": "2026-10-01T16:15:10.223Z",
     "duzen": "920c61ba2837ca0d"
   },
   "uc": {

@@ -6,6 +6,15 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.5.1] - 2026-10-01
+
+### Added
+
+- The title bar shows the app version. Clicking it checks for an update and
+  says when you are already on the latest one.
+- A found update opens an update panel with download, install and cancel
+  steps and a progress bar.
+
 ## [0.5.0] - 2026-10-01
 
 ### Added

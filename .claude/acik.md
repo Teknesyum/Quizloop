@@ -1,5 +1,3 @@
-- [x] UI düzenini güncelle (uc) — 2026-10-01 18:05 — jobs.md
-- [x] Uzun bekleyen işlere ilerleme çubuğu — 2026-10-01 18:05 — jobs.md
-- [x] Bu özelliği teknesyum-ui'a raporla — 2026-10-01 18:05 — jobs.md
-- [x] Sıra: modülü yükledim ancak arkaplan resimleri vb gözükmüyor ayrıca kaynak kitapta bulunamadı demesin o da yükleme dosyasına gömülsün — 2026-10-01 18:05 — çalışırken geldi
-- [x] Kaynak kitap pakete gömülsün, "kitap bulunamadı" demesin — 2026-10-01 18:10 — jobs.md
+- [x] ajan: Find VidShrink file share method — 2026-10-01 19:01 — sonucu aktarılacak
+- [x] Sıra: ui sürümü son diyorsun ancak programda ismin yanında sürüm yok tıklayınca update edicek falan bi sürü şey yok bunları neden eklemedin ui güncelse — 2026-10-01 19:02 — çalışırken geldi
+- [x] Sıra: rar a atabilirsin — 2026-10-01 19:04 — çalışırken geldi

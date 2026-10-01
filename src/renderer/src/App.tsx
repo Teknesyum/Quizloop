@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { tinykeys } from 'tinykeys'
 import { FONT_SCALES } from '@shared/ipc'
 import { TitleBar } from '../../../teknesyum-ui/ustcubuk/TitleBar'
-import { UpdateBadge } from './components/UpdateBadge'
+import { UpdateTools } from './components/UpdateTools'
 import { Toasts } from './components/Toast'
 import { WorkProgress } from './components/WorkProgress'
 import { installedText, t } from './i18n'
@@ -112,7 +112,7 @@ export default function App(): React.JSX.Element {
           const n = NAV.find((x) => x.route.name === id)
           if (n) go(n.route)
         }}
-        language={<UpdateBadge />}
+        language={<UpdateTools />}
         onMinimize={() => win.minimize()}
         onMaximize={() => win.toggleMaximize()}
         onClose={() => win.close()}
