@@ -253,13 +253,22 @@ function question(over: Partial<Question>): Question {
 }
 
 describe('verify görsel denetimleri', () => {
-  it('warns on a stem image without alt', () => {
+  it('rejects a stem image without alt', () => {
     const r = checkVisual(
       question({ stem: { md: 'K', imageRef: 'assets/img/a.png' } }),
       TEXT,
       labels
     )
-    expect(r.warnings.map((w) => w.code)).toEqual(['alt'])
+    expect(r.errors.map((w) => w.code)).toEqual(['alt'])
+  })
+
+  it('rejects a solution image without alt', () => {
+    const r = checkVisual(
+      question({ solution: [{ type: 'image', ref: 'assets/img/a.png' }] }),
+      TEXT,
+      labels
+    )
+    expect(r.errors.map((w) => w.code)).toEqual(['alt'])
   })
 
   it('accepts a table from the page and rejects an invented one', () => {

@@ -6,6 +6,19 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.3.1] - 2026-10-01
+
+### Changed
+
+- quizforge `verify` now rejects a stem or solution image without alt text.
+- `kaynak_kes.py` keeps only the densest cluster of matched words, so source excerpts are
+  cropped to the quoted passage instead of whole columns.
+
+### Fixed
+
+- `kaynak_kes.py` falls back to window matching for quotes that are split across columns or
+  pages, and skips blank crops instead of saving them.
+
 ## [0.3.0] - 2026-10-01
 
 ### Added
