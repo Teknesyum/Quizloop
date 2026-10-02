@@ -98,4 +98,6 @@ See [`docs/PLAN.md`](docs/PLAN.md) for the architecture.
 
 AGPL-3.0-or-later. See [LICENSE](LICENSE).
 
+Privacy: see the [Privacy Policy](PRIVACY.md).
+
 Copyright (C) 2026 Teknesyum

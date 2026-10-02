@@ -22,3 +22,6 @@
 - [ ] ajan: A5 bölüm PDF'leri — 2026-10-02 12:41 — sonucu aktarılacak
 - [ ] A5 bölüm PDF'leri (ajan) — 2026-10-02 12:56 — arka planda çalışıyor
 - [ ] Play kapalı test + paket kaydı — 2026-10-02 12:56 — Google onayı ve kullanıcının anahtarı bekleniyor
+- [ ] ajan: Play mağaza malzemeleri — 2026-10-02 13:19 — sonucu aktarılacak
+- [ ] Play mağaza malzemeleri (ajan) — 2026-10-02 13:21 — arka planda çalışıyor
+- [ ] İmzalı AAB/APK — 2026-10-02 13:21 — kullanıcının anahtarı bekleniyor

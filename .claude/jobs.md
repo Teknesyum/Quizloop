@@ -1,2 +1,0 @@
-- [ ] Açılıştaki 2,2 sn eşitlemeyi atla
-- [ ] Kimlik onayı sonrası sıradaki adımı söyle

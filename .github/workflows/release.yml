@@ -44,8 +44,47 @@ jobs:
             dist/latest*.yml
           if-no-files-found: error
 
+  android:
+    runs-on: ubuntu-latest
+    env:
+      QUIZLOOP_KEYSTORE: /tmp/quizloop-upload.jks
+      QUIZLOOP_KEY_ALIAS: upload
+      QUIZLOOP_STORE_PASSWORD: ${{ secrets.QUIZLOOP_STORE_PASSWORD }}
+      QUIZLOOP_KEY_PASSWORD: ${{ secrets.QUIZLOOP_KEY_PASSWORD }}
+      PLAY_JSON: ${{ secrets.PLAY_SERVICE_ACCOUNT_JSON }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - uses: actions/setup-java@v4
+        with:
+          distribution: microsoft
+          java-version: 21
+      - run: npm ci
+      - name: Restore the upload key
+        run: echo "${{ secrets.QUIZLOOP_KEYSTORE_BASE64 }}" | base64 -d > "$QUIZLOOP_KEYSTORE"
+      - run: npm run android:release
+      - name: Fail when the build is unsigned
+        run: ls dist-android/QuizLoop-*-release.apk dist-android/QuizLoop-*-release.aab
+      - uses: actions/upload-artifact@v4
+        with:
+          name: quizloop-android
+          path: dist-android/*-release.apk
+          if-no-files-found: error
+      - name: Upload to the Play closed test
+        if: env.PLAY_JSON != ''
+        uses: r0adkll/upload-google-play@v1
+        with:
+          serviceAccountJsonPlainText: ${{ secrets.PLAY_SERVICE_ACCOUNT_JSON }}
+          packageName: com.teknesyum.quizloop
+          releaseFiles: dist-android/QuizLoop-*-release.aab
+          track: alpha
+          status: completed
+
   publish:
-    needs: build
+    needs: [build, android]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/download-artifact@v4

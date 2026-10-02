@@ -96,4 +96,6 @@ Mimari için [`docs/PLAN.md`](docs/PLAN.md).
 
 AGPL-3.0-or-later. Bkz. [LICENSE](LICENSE).
 
+Gizlilik: bkz. [Gizlilik Politikası](docs/PRIVACY.tr.md).
+
 Copyright (C) 2026 Teknesyum
