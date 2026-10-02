@@ -4,6 +4,10 @@ def quizloopPackage = new groovy.json.JsonSlurper().parse(file('../../package.js
 def quizloopVersion = quizloopPackage.version.toString()
 def quizloopCode = quizloopVersion.tokenize('.-').take(3).collect { it.isInteger() ? it.toInteger() : 0 }
 
+def quizloopEnv = { String name -> System.getenv(name) ?: null }
+def quizloopKeystore = new File(quizloopEnv('QUIZLOOP_KEYSTORE') ?: "${System.getProperty('user.home')}/.teknesyum/keys/quizloop-upload.jks")
+def quizloopSigned = quizloopKeystore.exists() && quizloopEnv('QUIZLOOP_STORE_PASSWORD') && quizloopEnv('QUIZLOOP_KEY_PASSWORD')
+
 android {
     namespace = "com.teknesyum.quizloop"
     compileSdk = rootProject.ext.compileSdkVersion
@@ -20,8 +24,21 @@ android {
             ignoreAssetsPattern = '!.svn:!.git:!.ds_store:!*.scc:.*:!CVS:!thumbs.db:!picasa.ini:!*~'
         }
     }
+    signingConfigs {
+        release {
+            if (quizloopSigned) {
+                storeFile quizloopKeystore
+                storePassword quizloopEnv('QUIZLOOP_STORE_PASSWORD')
+                keyAlias quizloopEnv('QUIZLOOP_KEY_ALIAS') ?: 'upload'
+                keyPassword quizloopEnv('QUIZLOOP_KEY_PASSWORD')
+            }
+        }
+    }
     buildTypes {
         release {
+            if (quizloopSigned) {
+                signingConfig signingConfigs.release
+            }
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }

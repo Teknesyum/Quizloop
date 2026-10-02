@@ -82,6 +82,37 @@ güvenilmez (R8 eklenti sınıflarını kırpabilir).
   doğrudan akıtır.
 - Kabul ve ölçüm: 686 MB paket; süre, tepe bellek, geçici alan.
 - **En büyük bilinmeyen.** A2 biter bitmez yalnız-unzip prototipiyle öne çekilir.
+- **Durum (2026-10-02): tamam.** Kütüphaneler kullanılmadı: `@capawesome/capacitor-file-picker`
+  `content://` adresini verir, ama `@capgo/capacitor-zip` yalnız gerçek dosya yolu açar; paket
+  önce önbelleğe kopyalanırdı (+650 MB, ilerleme yok). Yerine tek Java eklentisi
+  `android/app/.../PaketPlugin.java` (Kotlin `build.gradle` değişikliği isterdi):
+  `ACTION_OPEN_DOCUMENT` → `ContentResolver` akışı → `ZipInputStream` →
+  `files/modules/.tmp-<id>/`; yol kaçışı denetimi, `StatFs` ile boş alan ≥ 2 × paket,
+  `rename` ile atomik taşıma (eski sürüm `.old-*`), açılışta `.tmp-*`/`.old-*` süpürme.
+  JS tarafı `src/android/paket.ts`: `checkFolder` → `commit` → `syncFolder`; ilerleme
+  `work.onProgress`'e (`extract` MB, `verify`, `sync`). Bloklar `convertFileSrc` + `fetch` ile
+  okunur; baytlar köprüden geçmez. Düğme `capabilities.packageImport` ile görünür.
+- **Ölçüm (a8_test, Android 14, WebView 113, debug):** paket 648 MB (272 MB modül + 412 MB
+  kitap PDF'i, 4462 dosya, 3761 soru).
+
+  | | İlk kurulum | Üstüne kurulum |
+  |---|---|---|
+  | Açma (unzip) | 4,3 sn | 5,2 sn |
+  | Doğrulama (`checkFolder`) | 1,5 sn | 1,2 sn |
+  | `syncModule` | 4,3 sn | 2,1 sn |
+  | Toplam | 10,1 sn | 8,6 sn |
+
+  Tepe bellek: uygulama PSS ~109 MB (VmHWM 224 MB), WebView işlemi RSS en çok 217 MB.
+  Geçici alan: yalnız açılmış ağaç (681 MB); paket kopyalanmaz, taşıma sonrası ek alan yok.
+  Not: WebView işlemine `dumpsys meminfo <pid>` bir denemede onu çökertti; RSS `/proc`'tan okundu.
+- `syncModule` ilk ölçümde 19,9 sn idi (kart başına bir köprü çağrısı). Yeni kartlar 40'lık
+  çoklu `INSERT` ile yazılınca 4,3 sn; 10 sn eşiğinin altında, wa-sqlite gerekmez.
+- Uygulama paket açılırken çökerse artık `.tmp-*` bir sonraki açılışta silinir (denendi).
+- Açık: büyük modülde her açılıştaki `resyncFolders` 2,2 sn sürüyor (76 blok okunup
+  özetleniyor); sürüm değişmediyse atlanabilir. Kitap PDF'i açılıyor ama Android'de
+  gösterilmiyor (`books.path` null), A5'te. Veri tanımlayıcılı (bit 3) STORED girişli zip
+  `ZipInputStream`'de açılmaz; `quizforge paket` ve Python `zipfile` bu biçimi üretmez.
+  Gerçek telefonda ve release derlemesinde ölçüm yapılmadı.
 
 ### A5 — Kitap
 
@@ -108,6 +139,14 @@ güvenilmez (R8 eklenti sınıflarını kırpabilir).
   ayrı `sideload` flavor'ında, Play sürümüne `REQUEST_INSTALL_PACKAGES` girmez.
 - Play: `targetSdk 36`, AAB + App Signing, kapalı testte 12 kişi / 14 gün sayacı **A3
   biter bitmez** başlatılır. Ayarlar'da AGPL lisansı ve kaynak bağlantısı görünür.
+- **Durum (2026-10-02): kısmen tamam.** `release` imzası ortam değişkenlerinden okunur
+  (`QUIZLOOP_KEYSTORE`, `_KEY_ALIAS`, `_STORE_PASSWORD`, `_KEY_PASSWORD`); yoksa imzasız
+  derlenir. `npm run android:release` APK + AAB üretir, şifreyi gizli girdiyle sorar. İmzasız
+  `assembleRelease`/`bundleRelease` derlendi (APK 13,8 MB, AAB 10 MB); gerçek anahtarla imza
+  sınanmadı. R8 kapalı, eklenti kuralları `proguard-rules.pro`'da hazır. Android'de GitHub
+  sürüm denetimi (`src/android/update.ts`, `CapacitorHttp` + `@capacitor/browser`), Ayarlar'da
+  lisans ve kaynak bağlantısı, `settingsFile` yeteneği ve göç öncesi `VACUUM INTO` yedeği
+  (`files/backups/`, son 2) eklendi. Cihazda sınanmadı; GitHub Actions ve `sideload` flavor açık.
 
 ## Riskler
 

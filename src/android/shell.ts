@@ -1,29 +1,33 @@
 import { App } from '@capacitor/app'
+import { Browser } from '@capacitor/browser'
 import { createCore, type Core } from '@core/commands'
 import { installFailure, resyncFolders, syncFolder } from '@core/commands/modules'
 import { SettingsPatch } from '@core/settings'
+import { SOURCE_URL } from '@shared/ipc'
 import type {
   Capabilities,
   InstallResult,
   QuizloopApi,
   TransferResult,
-  UpdateStatus
+  WorkProgress
 } from '@shared/ipc'
 import { openDatabase } from './db/open'
-import { loadBundle } from './ports'
+import { openStore } from './paket'
+import { BUNDLE_ROOT, loadBundle } from './ports'
 import { loadSettings } from './settings'
+import { createUpdates } from './update'
 
 export const ANDROID_CAPABILITIES: Capabilities = {
   windowChrome: false,
   shortcuts: false,
   pinchZoom: true,
   backButton: true,
-  updater: false,
-  folders: false
+  updater: true,
+  folders: false,
+  settingsFile: false,
+  packageImport: true
 }
 
-const IDLE: UpdateStatus = { state: 'idle' }
-const NONE: UpdateStatus = { state: 'none' }
 const UNSUPPORTED: TransferResult = { ok: false }
 const off = (): void => undefined
 
@@ -33,11 +37,16 @@ function log(event: string, data: Record<string, unknown>): void {
 
 export async function createShell(): Promise<QuizloopApi> {
   const t0 = performance.now()
-  const opened = await openDatabase()
+  const version = await App.getInfo().then(
+    (i) => i.version,
+    () => '0.0.0'
+  )
+  const opened = await openDatabase(version)
   const tDb = performance.now()
   const { db } = opened
   const bundle = await loadBundle()
-  const { ports } = bundle
+  const store = await openStore(bundle.ports, BUNDLE_ROOT)
+  const { ports } = store
   const settings = await loadSettings()
   let core: Core | null = null
   core = createCore({
@@ -45,7 +54,7 @@ export async function createShell(): Promise<QuizloopApi> {
     ports,
     settings,
     books: { path: () => null, url: () => '' },
-    assetBase: (id) => `${core?.library.rootOf(id) ?? ''}/`
+    assetBase: (id) => `${store.url(core?.library.rootOf(id) ?? '')}/`
   })
   const c = core
 
@@ -68,7 +77,7 @@ export async function createShell(): Promise<QuizloopApi> {
     await resyncFolders(
       db,
       ports,
-      async (r) => (bundle.roots.includes(r.path) ? r.path : null),
+      async (r) => (bundle.roots.includes(r.path) ? r.path : store.locate(r)),
       ports.now()
     )
   await c.library.reload()
@@ -78,6 +87,7 @@ export async function createShell(): Promise<QuizloopApi> {
     integrity: opened.integrity.detail,
     firstRun: opened.firstRun,
     migrated: opened.migrated,
+    backup: opened.backup,
     openMs: Math.round(tDb - t0),
     syncMs: Math.round(tSync - tSync0),
     totalMs: Math.round(tSync - t0),
@@ -85,6 +95,10 @@ export async function createShell(): Promise<QuizloopApi> {
   })
 
   const backs = new Set<() => void>()
+  const watchers = new Set<(p: WorkProgress) => void>()
+  const emit = (p: WorkProgress): void => {
+    for (const cb of watchers) cb(p)
+  }
   await App.addListener('backButton', () => {
     for (const cb of backs) cb()
   })
@@ -96,6 +110,7 @@ export async function createShell(): Promise<QuizloopApi> {
   })
 
   const info = await App.getInfo().catch(() => ({ version: '0.0.0' }))
+  const updates = createUpdates(info.version)
 
   return {
     capabilities: ANDROID_CAPABILITIES,
@@ -109,7 +124,8 @@ export async function createShell(): Promise<QuizloopApi> {
       onBack: (cb) => {
         backs.add(cb)
         return () => backs.delete(cb)
-      }
+      },
+      openSource: () => void Browser.open({ url: SOURCE_URL })
     },
     window: {
       minimize: () => void App.minimizeApp(),
@@ -130,11 +146,16 @@ export async function createShell(): Promise<QuizloopApi> {
       list: () => c.module.list(),
       install: async () => ({ ok: false }),
       installSample: installBundled,
-      pick: async () => null,
+      pick: async (kind) => {
+        if (kind !== 'file') return null
+        const r = await store.install(db, emit)
+        if (r?.ok) await c.library.reload()
+        return r
+      },
       onInstalled: () => off,
       drainOpened: async () => undefined,
       remove: async (id) => {
-        await c.module.forget(id)
+        await store.remove(await c.module.forget(id))
       },
       reset: (id) => c.module.reset(id),
       chapters: (id) => c.module.chapters(id),
@@ -146,13 +167,13 @@ export async function createShell(): Promise<QuizloopApi> {
       export: async () => ({ ok: false })
     },
     update: {
-      status: async () => IDLE,
-      check: async () => NONE,
+      status: updates.status,
+      check: updates.check,
       download: off,
       cancel: off,
       install: off,
-      open: off,
-      onStatus: () => off
+      open: updates.open,
+      onStatus: updates.onStatus
     },
     transfer: {
       exportTo: async () => UNSUPPORTED,
@@ -165,7 +186,10 @@ export async function createShell(): Promise<QuizloopApi> {
       forgetBook: (id) => c.source.book(id)
     },
     work: {
-      onProgress: () => off
+      onProgress: (cb) => {
+        watchers.add(cb)
+        return () => watchers.delete(cb)
+      }
     },
     stats: {
       overview: () => c.stats.overview()

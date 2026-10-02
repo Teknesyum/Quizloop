@@ -19,3 +19,14 @@
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
+
+-keepattributes *Annotation*,Signature,InnerClasses,EnclosingMethod,SourceFile,LineNumberTable
+-keep class com.getcapacitor.** { *; }
+-keep @com.getcapacitor.annotation.CapacitorPlugin public class * { @com.getcapacitor.annotation.PermissionCallback <methods>; @com.getcapacitor.PluginMethod <methods>; }
+-keep public class * extends com.getcapacitor.Plugin { *; }
+-keep class com.getcapacitor.community.database.sqlite.** { *; }
+-keep class com.getcapacitor.plugin.** { *; }
+-keep class net.zetetic.** { *; }
+-keep class net.sqlcipher.** { *; }
+-dontwarn com.getcapacitor.**
+-dontwarn net.sqlcipher.**

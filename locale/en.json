@@ -20,8 +20,10 @@
   "library.subtitle": "Installed modules and today's queue",
   "library.empty.title": "No modules yet",
   "library.empty.body": "Pick a .qlmod module file, drop it here or double-click it. A folder or the sample module works too.",
+  "library.empty.bodyPackage": "Pick a .qlmod module package from your files, or install the sample module.",
   "library.addFolder": "Pick folder",
   "library.addFile": "Pick module file",
+  "library.importPackage": "Import module package",
   "library.tags": "Tags",
   "library.installSample": "Install sample module",
   "library.card.due": "{count} due today",
@@ -274,6 +276,8 @@
   "work.step.read": "Reading package file",
   "work.step.unpack": "Unpacking",
   "work.step.write": "Extracting files, {done} / {total}",
+  "work.step.verify": "Checking questions",
+  "work.step.extract": "Extracting package, {done} / {total} MB",
   "work.step.copy": "Copying files, {done} / {total}",
   "work.step.sync": "Syncing questions",
   "work.step.remove": "Deleting files, {done} / {total}",
@@ -281,5 +285,9 @@
   "work.step.done": "Done",
   "work.step.failed": "Could not finish",
   "library.mixed": "Mixed",
-  "android.bootFailed": "The app could not start. Error detail:"
+  "android.bootFailed": "The app could not start. Error detail:",
+  "settings.subtitleNative": "Settings and progress are kept on this device",
+  "settings.updatesHelpAndroid": "You are told when a new version is out. The download page opens in your browser.",
+  "settings.source": "Source code",
+  "settings.sourceOpen": "Open on GitHub"
 }

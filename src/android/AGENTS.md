@@ -13,5 +13,8 @@ Built by `vite.android.config.ts` into `out/android`; `npm run android:apk` make
   generation counter, `resume()` on return from background.
 - `ports.ts` — reads bundled modules from `/bundled` (APK assets). No `.gz`/`.mjs`.
 - `settings.ts` — settings in `@capacitor/preferences`.
+- `paket.ts` — `.qlmod` import over the `QuizloopPaket` Java plugin (`PaketPlugin.java`):
+  native unzip to `files/modules/.tmp-*`, verify, atomic move, sync. Files via `convertFileSrc`.
+- `work.ts` — `work:progress` events for the renderer's progress modal.
 
 Never import Electron or Node here. Logcat shows a `[quizloop] boot` line with timings.
