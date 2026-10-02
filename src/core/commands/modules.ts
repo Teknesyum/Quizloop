@@ -1,6 +1,6 @@
 import type { Kysely } from 'kysely'
 import type { Database } from '@core/db/types'
-import { ModuleError, readMeta, validateModule } from '@core/modules/loader'
+import { fingerprint, ModuleError, readMeta, validateModule } from '@core/modules/loader'
 import { syncModule } from '@core/modules/sync'
 import { joinPath, type CorePorts } from '@core/ports'
 import { chapterCounts, countDue } from '@core/scheduler/queue'
@@ -100,12 +100,14 @@ export async function resyncFolders(
   locate: (row: { id: string; path: string }) => Promise<string | null>,
   now: Date
 ): Promise<void> {
-  const rows = await db.selectFrom('module').select(['id', 'path']).execute()
+  const rows = await db.selectFrom('module').select(['id', 'path', 'fingerprint']).execute()
   for (const r of rows) {
     const root = await locate(r)
     if (!root) continue
     try {
-      await syncModule(db, ports, await readMeta(ports, root), now)
+      const mod = await readMeta(ports, root)
+      if (r.fingerprint && r.fingerprint === (await fingerprint(ports, mod))) continue
+      await syncModule(db, ports, mod, now)
     } catch {
       continue
     }

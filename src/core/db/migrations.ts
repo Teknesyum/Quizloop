@@ -117,9 +117,22 @@ const m0002: Migration = {
   }
 }
 
+const m0003: Migration = {
+  async up(db: Kysely<unknown>) {
+    await db.schema
+      .alterTable('module')
+      .addColumn('fingerprint', 'text', (c) => c.notNull().defaultTo(''))
+      .execute()
+  },
+  async down(db: Kysely<unknown>) {
+    await db.schema.alterTable('module').dropColumn('fingerprint').execute()
+  }
+}
+
 export const migrations: Record<string, Migration> = {
   '0001_initial': m0001,
-  '0002_card_chapter': m0002
+  '0002_card_chapter': m0002,
+  '0003_module_fingerprint': m0003
 }
 
 export const provider: MigrationProvider = {

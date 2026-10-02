@@ -10,6 +10,7 @@ import { ModuleMeta } from '@shared/schema/module'
 import { hashText, type LoadedModule } from './loader'
 import { syncModule } from './sync'
 import type { CorePorts } from '@core/ports'
+import { resyncFolders } from '@core/commands/modules'
 
 const NOW = new Date('2026-09-08T09:00:00.000Z')
 const SAMPLE = resolve('modules/_ornek')
@@ -79,5 +80,30 @@ describe('syncModule', () => {
     expect(Number(count.n)).toBe(mod.meta.questionCount)
     const again = await syncModule(db, ports, mod, NOW)
     expect(again.added).toBe(0)
+  })
+})
+
+describe('resyncFolders', () => {
+  it('skips a module whose module.json has not changed', async () => {
+    const { ports, mod } = await bigModule(2)
+    let meta = mod.meta
+    let blockReads = 0
+    const counting: CorePorts = {
+      ...ports,
+      exists: async (p) => p === `${ROOT}/module.json` || (await ports.exists(p)),
+      readText: async (p) => {
+        if (p === `${ROOT}/module.json`) return JSON.stringify(meta)
+        blockReads++
+        return ports.readText(p)
+      }
+    }
+    await syncModule(db, counting, mod, NOW)
+    const locate = async (): Promise<string> => ROOT
+    blockReads = 0
+    await resyncFolders(db, counting, locate, NOW)
+    expect(blockReads).toBe(0)
+    meta = { ...meta, version: '9.9.9' }
+    await resyncFolders(db, counting, locate, NOW)
+    expect(blockReads).toBeGreaterThan(0)
   })
 })
