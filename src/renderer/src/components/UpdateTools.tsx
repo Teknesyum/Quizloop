@@ -1,5 +1,9 @@
 import { useEffect, useRef, useState } from 'react'
-import { UpdateBadge, VersionButton, type VersionCheck } from '../../../../teknesyum-ui/durum/UpdateBadge'
+import {
+  UpdateBadge,
+  VersionButton,
+  type VersionCheck
+} from '../../../../teknesyum-ui/durum/UpdateBadge'
 import { UpdatePanel, type UpdateState } from '../../../../teknesyum-ui/durum/UpdatePanel'
 import { useUpdate } from '@renderer/hooks/useUpdate'
 import { useApp } from '@renderer/store/app'
@@ -20,7 +24,12 @@ function settled(first: UpdateStatus): Promise<UpdateStatus> {
 }
 
 function toCheck(s: UpdateStatus): VersionCheck {
-  if (s.state === 'available' || s.state === 'notice' || s.state === 'downloading' || s.state === 'ready')
+  if (
+    s.state === 'available' ||
+    s.state === 'notice' ||
+    s.state === 'downloading' ||
+    s.state === 'ready'
+  )
     return { state: 'available', latest: s.version }
   if (s.state === 'error') return { state: 'error', message: s.error ?? '' }
   return { state: 'current' }
@@ -36,7 +45,7 @@ function toPanel(s: UpdateStatus): UpdateState | null {
   return null
 }
 
-export function UpdateTools(): React.JSX.Element {
+export function useUpdateTools(): { version: React.JSX.Element | null; update: React.JSX.Element } {
   const up = useUpdate()
   const toast = useApp((s) => s.toast)
   const said = useRef(false)
@@ -63,20 +72,21 @@ export function UpdateTools(): React.JSX.Element {
         ? up.state
         : null
 
-  return (
+  const versionNode = version ? (
+    <VersionButton
+      version={`v${version}`}
+      check={async () => toCheck(await settled(await u.check()))}
+      install={() => setOpen(true)}
+      labels={{
+        check: t('update.check'),
+        current: () => t('update.current'),
+        error: (reason) => (reason ? t('update.errorReason', { reason }) : t('update.error'))
+      }}
+    />
+  ) : null
+
+  const updateNode = (
     <span className="ql-update">
-      {version ? (
-        <VersionButton
-          version={`v${version}`}
-          check={async () => toCheck(await settled(await u.check()))}
-          install={() => setOpen(true)}
-          labels={{
-            check: t('update.check'),
-            current: () => t('update.current'),
-            error: (reason) => (reason ? t('update.errorReason', { reason }) : t('update.error'))
-          }}
-        />
-      ) : null}
       <UpdateBadge
         phase={phase}
         percent={up.percent ?? 0}
@@ -131,4 +141,5 @@ export function UpdateTools(): React.JSX.Element {
       />
     </span>
   )
+  return { version: versionNode, update: updateNode }
 }

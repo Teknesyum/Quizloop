@@ -46,7 +46,7 @@ güvenilmez (R8 eklenti sınıflarını kırpabilir).
 
 ### A2 — Boş Kabuk
 
-- Capacitor 8 (`@capacitor/core`, `cli`, `android`), `appId: com.teknesyum.quizloop`,
+- Capacitor 8 (`@capacitor/core`, `cli`, `android`), `appId: com.teknesyum.QuizLoop`,
   `androidScheme: https` (sonradan değişmez).
 - Ayrı Vite girişi: `index.android.html` + `src/android/shell.ts`; `window.quizloop`'un
   `app`, `settings`, `window`, `flags` ad alanları.

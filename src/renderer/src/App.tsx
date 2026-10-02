@@ -1,13 +1,13 @@
 import { useEffect, useState } from 'react'
 import { tinykeys } from 'tinykeys'
 import { FONT_SCALES } from '@shared/ipc'
-import { TitleBar } from '../../../teknesyum-ui/ustcubuk/TitleBar'
+import { LangSwitch, TitleBar } from '../../../teknesyum-ui/ustcubuk/TitleBar'
 import { runBack } from './back'
-import { UpdateTools } from './components/UpdateTools'
+import { useUpdateTools } from './components/UpdateTools'
 import { useBookWarmup } from './components/bookdoc'
 import { Toasts } from './components/Toast'
 import { WorkProgress } from './components/WorkProgress'
-import { installedText, t } from './i18n'
+import { installedText, lang, setLang, t } from './i18n'
 import { Bank } from './screens/Bank'
 import { Chapters } from './screens/Chapters'
 import { Library } from './screens/Library'
@@ -15,6 +15,7 @@ import { Session } from './screens/Session'
 import { Settings } from './screens/Settings'
 import { Stats } from './screens/Stats'
 import { useApp, type Route } from './store/app'
+import logo from '../../../resources/icon.png'
 
 const GITHUB = 'https://github.com/Teknesyum'
 const SPONSOR = 'https://github.com/sponsors/Teknesyum'
@@ -39,6 +40,7 @@ export default function App(): React.JSX.Element {
   useBookWarmup(route.name === 'session' || route.name === 'bank' ? route.moduleId : null)
 
   const caps = window.quizloop.capabilities
+  const tools = useUpdateTools()
 
   useEffect(
     () =>
@@ -55,6 +57,10 @@ export default function App(): React.JSX.Element {
   useEffect(() => {
     window.quizloop.window.isMaximized().then(setMax)
     return window.quizloop.window.onMaximized(setMax)
+  }, [])
+
+  useEffect(() => {
+    document.documentElement.lang = lang
   }, [])
 
   useEffect(() => {
@@ -114,6 +120,7 @@ export default function App(): React.JSX.Element {
       <TitleBar
         first="Quiz"
         second="Loop"
+        logo={logo}
         links={{ brand: GITHUB, sponsor: SPONSOR }}
         labels={{
           sponsor: t('sig.support'),
@@ -133,7 +140,9 @@ export default function App(): React.JSX.Element {
           const n = NAV.find((x) => x.route.name === id)
           if (n) go(n.route)
         }}
-        language={caps.updater ? <UpdateTools /> : undefined}
+        version={caps.updater ? tools.version : undefined}
+        update={caps.updater ? tools.update : undefined}
+        language={<LangSwitch lang={lang} label={t('lang.label')} onChange={setLang} />}
         onMinimize={() => win.minimize()}
         onMaximize={() => win.toggleMaximize()}
         onClose={() => win.close()}

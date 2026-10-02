@@ -12,7 +12,7 @@ android {
     namespace = "com.teknesyum.quizloop"
     compileSdk = rootProject.ext.compileSdkVersion
     defaultConfig {
-        applicationId "com.teknesyum.quizloop"
+        applicationId "com.teknesyum.QuizLoop"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode quizloopCode[0] * 10000 + quizloopCode[1] * 100 + quizloopCode[2]

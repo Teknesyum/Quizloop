@@ -6,6 +6,17 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.7.1] - 2026-10-02
+
+### Changed
+
+- The Android application id is `com.teknesyum.QuizLoop`. An APK installed from
+  0.7.0 does not update in place: export a transfer package, uninstall it and
+  install 0.7.1.
+- The title bar follows teknesyum-ui 0.34.0: logo, two-part name and version on
+  the left; update badge, language switch, support and Teknesyum on the right.
+- The interface can switch between Turkish and English.
+
 ## [0.7.0] - 2026-10-02
 
 ### Added
