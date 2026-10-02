@@ -7,6 +7,9 @@ import {
   type PDFDocumentProxy
 } from 'pdfjs-dist'
 import workerUrl from 'pdfjs-dist/build/pdf.worker.min.mjs?url'
+import type { QuestionView, SourceBook } from '@shared/ipc'
+import type { Source } from '@shared/schema/question'
+import { pdfPageOf } from '@shared/kaynak'
 
 GlobalWorkerOptions.workerSrc = workerUrl
 
@@ -29,6 +32,42 @@ export function bookKey(url: string, path: string | null): string {
 
 function rangeOf(url: string, begin: number, end: number): Promise<Response> {
   return fetch(url, { headers: { Range: `bytes=${begin}-${end - 1}` } })
+}
+
+export interface BookTarget {
+  url: string
+  path: string | null
+  base: number
+  whole: boolean
+}
+
+export function bookTarget(book: SourceBook | null, pdfPage: number): BookTarget | null {
+  if (!book?.available) return null
+  if (book.parts?.length) {
+    const part = book.parts.find((p) => pdfPage >= p.ilkSayfa && pdfPage <= p.sonSayfa)
+    return part ? { url: part.url, path: null, base: part.ilkSayfa - 1, whole: true } : null
+  }
+  return book.url ? { url: book.url, path: book.path, base: 0, whole: false } : null
+}
+
+export function sourcePdfPage(source: Source, offset: number): number {
+  return source.kesit ? source.kesit.pdfSayfa : pdfPageOf(source.pages[0], offset)
+}
+
+export function viewPdfPage(q: QuestionView, offset: number): number | null {
+  if (!q.kaynak) return null
+  return q.kaynak.pdfSayfa ?? pdfPageOf(q.kaynak.sayfa, offset)
+}
+
+async function loadWhole(
+  url: string,
+  own: { task: PDFDocumentLoadingTask | null }
+): Promise<PDFDocumentProxy> {
+  const res = await fetch(url)
+  if (!res.ok) throw new Error(String(res.status))
+  const data = new Uint8Array(await res.arrayBuffer())
+  own.task = getDocument({ data, isImageDecoderSupported: false })
+  return own.task.promise
 }
 
 async function load(
@@ -85,7 +124,7 @@ async function load(
   return own.task.promise
 }
 
-export function openBook(url: string, path: string | null): Opened {
+export function openBook(url: string, path: string | null, whole = false): Opened {
   const key = bookKey(url, path)
   if (opened?.key === key) return opened
   opened?.destroy()
@@ -101,7 +140,7 @@ export function openBook(url: string, path: string | null): Opened {
     doc: null,
     ratio: null
   }
-  entry.promise = load(url, own).then(async (d) => {
+  entry.promise = (whole ? loadWhole(url, own) : load(url, own)).then(async (d) => {
     if (dead) {
       void own.task?.destroy()
       throw new Error('closed')
@@ -144,4 +183,21 @@ export function useBookWarmup(moduleId: string | null): void {
 
 export function warmBook(url: string, path: string | null): Opened | null {
   return opened?.key === bookKey(url, path) ? opened : null
+}
+
+export function useTargetWarmup(book: SourceBook | null, pdfPage: number | null): void {
+  const target = book?.parts?.length && pdfPage !== null ? bookTarget(book, pdfPage) : null
+  const url = target?.url ?? null
+  useEffect(() => {
+    if (!url) return
+    let dead = false
+    idle()
+      .then(() => {
+        if (!dead) openBook(url, null, true).promise.catch(() => undefined)
+      })
+      .catch(() => undefined)
+    return () => {
+      dead = true
+    }
+  }, [url])
 }

@@ -19,3 +19,6 @@
 - [ ] APK bas (A2 + A3 + emülatör) — 2026-10-02 10:37 — arka plan ajanı çalışıyor
 - [ ] ajan: A4 büyük paket Android — 2026-10-02 12:26 — sonucu aktarılacak
 - [ ] ajan: A7 hazırlık ve düzeltmeler — 2026-10-02 12:26 — sonucu aktarılacak
+- [ ] ajan: A5 bölüm PDF'leri — 2026-10-02 12:41 — sonucu aktarılacak
+- [ ] A5 bölüm PDF'leri (ajan) — 2026-10-02 12:56 — arka planda çalışıyor
+- [ ] Play kapalı test + paket kaydı — 2026-10-02 12:56 — Google onayı ve kullanıcının anahtarı bekleniyor

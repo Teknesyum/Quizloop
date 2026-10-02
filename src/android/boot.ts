@@ -1,5 +1,8 @@
 import { t } from '@renderer/i18n'
+import { installPdfWorker } from './pdfworker'
 import { createShell } from './shell'
+
+installPdfWorker()
 
 createShell()
   .then((api) => {

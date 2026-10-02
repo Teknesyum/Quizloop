@@ -46,6 +46,7 @@ export interface QuestionView {
   vurgu: string[]
   assetBase: string
   relearn: boolean
+  kaynak?: { sayfa: number; pdfSayfa?: number }
 }
 
 export interface AnswerResult {
@@ -195,12 +196,20 @@ export interface InstallResult {
   error?: string
 }
 
+export interface BookPartLink {
+  bolum: number
+  ilkSayfa: number
+  sonSayfa: number
+  url: string
+}
+
 export interface SourceBook {
   available: boolean
   url: string | null
   path: string | null
   sayfaOfseti: number
   pages: number | null
+  parts?: BookPartLink[] | null
 }
 
 export interface IntegrityReport {

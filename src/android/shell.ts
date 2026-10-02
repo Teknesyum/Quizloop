@@ -53,7 +53,11 @@ export async function createShell(): Promise<QuizloopApi> {
     db,
     ports,
     settings,
-    books: { path: () => null, url: () => '' },
+    books: {
+      path: () => null,
+      url: () => '',
+      file: (root, rel) => `${store.url(root)}/${rel.split('/').map(encodeURIComponent).join('/')}`
+    },
     assetBase: (id) => `${store.url(core?.library.rootOf(id) ?? '')}/`
   })
   const c = core

@@ -4,6 +4,7 @@ import type { QuestionView, SelfAssess, SourceBook } from '@shared/ipc'
 import type { ChoiceKey } from '@shared/schema/question'
 import { BookButton } from '@renderer/components/BookButton'
 import { BookViewer } from '@renderer/components/BookViewer'
+import { useTargetWarmup, viewPdfPage } from '@renderer/components/bookdoc'
 import { Solution } from '@renderer/components/Solution'
 import { pushBack } from '@renderer/back'
 import { Confirm } from '@renderer/components/Confirm'
@@ -139,6 +140,9 @@ export function Session({
     if (state.phase !== 'solved') return
     solvedRef.current?.scrollIntoView({ block: 'nearest' })
   }, [state.phase])
+
+  const liveQ = 'q' in state ? state.q : null
+  useTargetWarmup(book, liveQ ? viewPdfPage(liveQ, book?.sayfaOfseti ?? 0) : null)
 
   const autoNext =
     state.phase === 'graded' && state.grade.retired && state.grade.next ? state.q.questionId : null
