@@ -289,5 +289,6 @@
   "settings.subtitleNative": "Ayarlar ve ilerleme bu cihazda tutulur",
   "settings.updatesHelpAndroid": "Yeni sürüm çıkınca haber verilir. İndirme sayfası tarayıcında açılır.",
   "settings.source": "Kaynak kodu",
-  "settings.sourceOpen": "GitHub'da aç"
+  "settings.sourceOpen": "GitHub'da aç",
+  "lang.label": "Dil"
 }

@@ -42,16 +42,16 @@
       "reason": "Bu v{m.version} programın değil, kütüphanedeki modülün sürümü; güncelleme denetimiyle ilgisi yok."
     }
   ],
-  "plugin": "0.32.0",
+  "plugin": "0.34.0",
   "denetim": {
-    "tarih": "2026-10-02T10:50:23.239Z",
+    "tarih": "2026-10-02T15:34:22.721Z",
     "duzen": "920c61ba2837ca0d"
   },
   "uc": {
-    "surum": "0.32.0",
+    "surum": "0.34.0",
     "duzen": "920c61ba2837ca0d",
-    "commit": "44de84234b09dab8e26438c1bbac9b1c3630dea6",
-    "tarih": "2026-09-30"
+    "commit": "32fd58f7df78757596eb257d5aa3cb0e5f7d9a7e",
+    "tarih": "2026-10-02"
   },
   "pencere": "maximize"
 }

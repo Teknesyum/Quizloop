@@ -289,5 +289,6 @@
   "settings.subtitleNative": "Settings and progress are kept on this device",
   "settings.updatesHelpAndroid": "You are told when a new version is out. The download page opens in your browser.",
   "settings.source": "Source code",
-  "settings.sourceOpen": "Open on GitHub"
+  "settings.sourceOpen": "Open on GitHub",
+  "lang.label": "Language"
 }
