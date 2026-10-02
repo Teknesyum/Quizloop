@@ -6,6 +6,7 @@
     "src/renderer/src/**/*.tsx",
     "teknesyum-ui/ustcubuk/*.tsx",
     "src/preload/*.d.ts",
+    "src/android/**/*",
     "src/core/**/*",
     "src/shared/**/*",
     "locale/*.json"

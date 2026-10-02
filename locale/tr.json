@@ -163,6 +163,7 @@
   "settings.typerHelp": "Soru metni harf harf akar. Kapatınca anında görünür.",
   "settings.fontScale": "Yazı boyutu",
   "settings.fontScaleHelp": "Tüm uygulamayı ölçekler. Ctrl + ve Ctrl - ile de değişir, Ctrl 0 sıfırlar.",
+  "settings.fontScaleHelpTouch": "Tüm uygulamayı ölçekler.",
   "settings.typer.slow": "Yavaş",
   "settings.typer.normal": "Normal",
   "settings.typer.fast": "Hızlı",
@@ -279,5 +280,6 @@
   "work.step.database": "İlerleme kaydı hazırlanıyor",
   "work.step.done": "Tamamlandı",
   "work.step.failed": "İşlem tamamlanamadı",
-  "library.mixed": "Karışık"
+  "library.mixed": "Karışık",
+  "android.bootFailed": "Uygulama açılamadı. Hata ayrıntısı:"
 }

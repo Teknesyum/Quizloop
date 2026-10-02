@@ -1822,7 +1822,8 @@ button.ql-mark:not(:disabled):active {
 
   .ql-shell .tk-titlebar {
     height: var(--ql-titlebar-h);
-    padding: env(safe-area-inset-top) var(--ql-pad) 0 calc(var(--ql-pad) + env(safe-area-inset-left));
+    padding: env(safe-area-inset-top) var(--ql-pad) 0
+      calc(var(--ql-pad) + env(safe-area-inset-left));
     -webkit-app-region: no-drag;
   }
 
@@ -1867,7 +1868,8 @@ button.ql-mark:not(:disabled):active {
   .ql-main,
   .ql-main:has(> .ql-session) {
     padding: var(--ql-pad) calc(var(--ql-pad) + env(safe-area-inset-right))
-      calc(var(--ql-pad) + env(safe-area-inset-bottom)) calc(var(--ql-pad) + env(safe-area-inset-left));
+      calc(var(--ql-pad) + env(safe-area-inset-bottom))
+      calc(var(--ql-pad) + env(safe-area-inset-left));
   }
 
   .ql-keys,
@@ -1893,9 +1895,13 @@ button.ql-mark:not(:disabled):active {
     justify-content: center;
   }
 
-  .ql-grid,
-  .ql-tiles {
+  .ql-grid {
     grid-template-columns: minmax(0, 1fr);
+  }
+
+  .ql-tiles {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--tk-sp-3);
   }
 
   .ql-card-head .tk-h3 {
@@ -2027,4 +2033,15 @@ button.ql-mark:not(:disabled):active {
   .ql-progress-list .ql-progress-name {
     grid-column: 1 / -1;
   }
+}
+
+.ql-shell[data-chrome='none'] .tk-titlebar__window,
+.ql-shell[data-chrome='none'] .tk-titlebar__chip,
+.ql-shell[data-keys='off'] .ql-keys,
+.ql-shell[data-keys='off'] kbd {
+  display: none;
+}
+
+.ql-shell[data-chrome='none'] .tk-titlebar {
+  -webkit-app-region: no-drag;
 }

@@ -15,6 +15,7 @@ export function Settings(): React.JSX.Element {
   const loadInfo = useApp((s) => s.loadInfo)
   const toast = useApp((s) => s.toast)
   const up = useUpdate()
+  const caps = window.quizloop.capabilities
   const [importing, setImporting] = useState(false)
   const [busy, setBusy] = useState(false)
 
@@ -170,107 +171,121 @@ export function Settings(): React.JSX.Element {
                   </button>
                 ))}
               </div>
-              <span className="tk-hint">{t('settings.fontScaleHelp')}</span>
+              <span className="tk-hint">
+                {t(caps.shortcuts ? 'settings.fontScaleHelp' : 'settings.fontScaleHelpTouch')}
+              </span>
             </div>
 
-            <div className="tk-field">
-              <span className="tk-label">{t('settings.modulesDir')}</span>
-              <div className="ql-dir-row">
-                <code
-                  className="tk-input tk-mono ql-dir-value"
-                  aria-label={t('settings.modulesDir')}
-                >
-                  {settings.modulesDir ?? t('settings.modulesDirDefault')}
-                </code>
-                <button
-                  type="button"
-                  className="tk-btn tk-btn-ghost ql-btn-sm"
-                  onClick={async () => {
-                    const dir = await window.quizloop.settings.pickModulesDir()
-                    if (dir) apply({ modulesDir: dir })
-                  }}
-                >
-                  {t('settings.pick')}
-                </button>
-                {settings.modulesDir && (
+            {caps.folders && (
+              <div className="tk-field">
+                <span className="tk-label">{t('settings.modulesDir')}</span>
+                <div className="ql-dir-row">
+                  <code
+                    className="tk-input tk-mono ql-dir-value"
+                    aria-label={t('settings.modulesDir')}
+                  >
+                    {settings.modulesDir ?? t('settings.modulesDirDefault')}
+                  </code>
                   <button
                     type="button"
                     className="tk-btn tk-btn-ghost ql-btn-sm"
-                    onClick={() => apply({ modulesDir: null })}
+                    onClick={async () => {
+                      const dir = await window.quizloop.settings.pickModulesDir()
+                      if (dir) apply({ modulesDir: dir })
+                    }}
                   >
-                    {t('settings.reset')}
+                    {t('settings.pick')}
                   </button>
-                )}
+                  {settings.modulesDir && (
+                    <button
+                      type="button"
+                      className="tk-btn tk-btn-ghost ql-btn-sm"
+                      onClick={() => apply({ modulesDir: null })}
+                    >
+                      {t('settings.reset')}
+                    </button>
+                  )}
+                </div>
+                <span className="tk-hint">{t('settings.modulesDirHelp')}</span>
               </div>
-              <span className="tk-hint">{t('settings.modulesDirHelp')}</span>
-            </div>
+            )}
           </div>
 
-          <div className="tk-panel ql-transition-in" style={{ '--ql-i': 1 } as React.CSSProperties}>
-            <h3 className="tk-h3 tk-h3-rule">{t('settings.transfer')}</h3>
-            <p className="tk-hint">{t('settings.transferHelp')}</p>
-            <div className="ql-row">
-              <button
-                type="button"
-                className="tk-btn tk-btn-ghost ql-btn-sm"
-                disabled={busy}
-                title={busy ? t('common.loading') : undefined}
-                onClick={exportPkg}
-              >
-                {t('settings.transferExport')}
-              </button>
-              <button
-                type="button"
-                className="tk-btn tk-btn-ghost ql-btn-sm"
-                disabled={busy}
-                title={busy ? t('common.loading') : undefined}
-                onClick={() => setImporting(true)}
-              >
-                {t('settings.transferImport')}
-              </button>
-            </div>
-          </div>
-
-          <div className="tk-panel ql-transition-in" style={{ '--ql-i': 2 } as React.CSSProperties}>
-            <h3 className="tk-h3 tk-h3-rule">{t('settings.updates')}</h3>
-            <p className="tk-hint">{t('settings.updatesHelp')}</p>
-            <div className="ql-row">
-              <button
-                type="button"
-                className="tk-btn tk-btn-ghost ql-btn-sm"
-                disabled={up.state === 'checking' || up.state === 'downloading'}
-                title={
-                  up.state === 'checking' || up.state === 'downloading'
-                    ? t('update.checking')
-                    : undefined
-                }
-                onClick={() => window.quizloop.update.check()}
-              >
-                {t('update.check')}
-              </button>
-              {up.state === 'ready' && (
-                <button
-                  type="button"
-                  className="tk-btn tk-btn-primary ql-btn-sm"
-                  onClick={() => window.quizloop.update.install()}
-                >
-                  {t('update.restart')}
-                </button>
-              )}
-              {up.state === 'notice' && (
+          {caps.folders && (
+            <div
+              className="tk-panel ql-transition-in"
+              style={{ '--ql-i': 1 } as React.CSSProperties}
+            >
+              <h3 className="tk-h3 tk-h3-rule">{t('settings.transfer')}</h3>
+              <p className="tk-hint">{t('settings.transferHelp')}</p>
+              <div className="ql-row">
                 <button
                   type="button"
                   className="tk-btn tk-btn-ghost ql-btn-sm"
-                  onClick={() => window.quizloop.update.open()}
+                  disabled={busy}
+                  title={busy ? t('common.loading') : undefined}
+                  onClick={exportPkg}
                 >
-                  {t('update.open')}
+                  {t('settings.transferExport')}
                 </button>
-              )}
-              <span className="tk-hint" role="status">
-                {upLine()}
-              </span>
+                <button
+                  type="button"
+                  className="tk-btn tk-btn-ghost ql-btn-sm"
+                  disabled={busy}
+                  title={busy ? t('common.loading') : undefined}
+                  onClick={() => setImporting(true)}
+                >
+                  {t('settings.transferImport')}
+                </button>
+              </div>
             </div>
-          </div>
+          )}
+
+          {caps.updater && (
+            <div
+              className="tk-panel ql-transition-in"
+              style={{ '--ql-i': 2 } as React.CSSProperties}
+            >
+              <h3 className="tk-h3 tk-h3-rule">{t('settings.updates')}</h3>
+              <p className="tk-hint">{t('settings.updatesHelp')}</p>
+              <div className="ql-row">
+                <button
+                  type="button"
+                  className="tk-btn tk-btn-ghost ql-btn-sm"
+                  disabled={up.state === 'checking' || up.state === 'downloading'}
+                  title={
+                    up.state === 'checking' || up.state === 'downloading'
+                      ? t('update.checking')
+                      : undefined
+                  }
+                  onClick={() => window.quizloop.update.check()}
+                >
+                  {t('update.check')}
+                </button>
+                {up.state === 'ready' && (
+                  <button
+                    type="button"
+                    className="tk-btn tk-btn-primary ql-btn-sm"
+                    onClick={() => window.quizloop.update.install()}
+                  >
+                    {t('update.restart')}
+                  </button>
+                )}
+                {up.state === 'notice' && (
+                  <button
+                    type="button"
+                    className="tk-btn tk-btn-ghost ql-btn-sm"
+                    onClick={() => window.quizloop.update.open()}
+                  >
+                    {t('update.open')}
+                  </button>
+                )}
+                <span className="tk-hint" role="status">
+                  {upLine()}
+                </span>
+              </div>
+            </div>
+          )}
 
           <div
             className="tk-panel ql-transition-in ql-about"

@@ -1,6 +1,7 @@
 import { contextBridge, ipcRenderer, webFrame, webUtils } from 'electron'
 import {
   CH,
+  DESKTOP_CAPABILITIES,
   type InstallResult,
   type WorkProgress,
   type QuizloopApi,
@@ -10,6 +11,7 @@ import {
 import type { ChoiceKey } from '@shared/schema/question'
 
 const api: QuizloopApi = {
+  capabilities: DESKTOP_CAPABILITIES,
   pathOf: (file) => {
     try {
       return webUtils.getPathForFile(file) || null
@@ -18,7 +20,8 @@ const api: QuizloopApi = {
     }
   },
   app: {
-    info: () => ipcRenderer.invoke(CH.appInfo)
+    info: () => ipcRenderer.invoke(CH.appInfo),
+    onBack: () => () => undefined
   },
   window: {
     minimize: () => ipcRenderer.send(CH.winMin),

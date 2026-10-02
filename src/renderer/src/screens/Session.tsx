@@ -5,6 +5,7 @@ import type { ChoiceKey } from '@shared/schema/question'
 import { BookButton } from '@renderer/components/BookButton'
 import { BookViewer } from '@renderer/components/BookViewer'
 import { Solution } from '@renderer/components/Solution'
+import { pushBack } from '@renderer/back'
 import { Confirm } from '@renderer/components/Confirm'
 import { Markdown } from '@renderer/components/Markdown'
 import { Skeleton } from '@renderer/components/Skeleton'
@@ -120,6 +121,19 @@ export function Session({
     await s.end()
     await loadModules()
   }
+
+  useEffect(
+    () =>
+      pushBack(() => {
+        if (reading !== null) setReading(null)
+        else if (ending) setEnding(false)
+        else if (['summary', 'idle', 'loading', 'empty', 'failed'].includes(state.phase))
+          go({ name: 'chapters', moduleId })
+        else setEnding(true)
+        return true
+      }),
+    [reading, ending, state.phase, go, moduleId]
+  )
 
   useEffect(() => {
     if (state.phase !== 'solved') return

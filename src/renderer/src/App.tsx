@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { tinykeys } from 'tinykeys'
 import { FONT_SCALES } from '@shared/ipc'
 import { TitleBar } from '../../../teknesyum-ui/ustcubuk/TitleBar'
+import { runBack } from './back'
 import { UpdateTools } from './components/UpdateTools'
 import { useBookWarmup } from './components/bookdoc'
 import { Toasts } from './components/Toast'
@@ -36,6 +37,20 @@ export default function App(): React.JSX.Element {
   const scale = settings?.fontScale ?? 1
   const [max, setMax] = useState(false)
   useBookWarmup(route.name === 'session' || route.name === 'bank' ? route.moduleId : null)
+
+  const caps = window.quizloop.capabilities
+
+  useEffect(
+    () =>
+      window.quizloop.app.onBack(() => {
+        if (runBack()) return
+        const at = useApp.getState().route
+        if (at.name === 'library') window.quizloop.window.close()
+        else if (at.name === 'session') go({ name: 'chapters', moduleId: at.moduleId })
+        else go({ name: 'library' })
+      }),
+    [go]
+  )
 
   useEffect(() => {
     window.quizloop.window.isMaximized().then(setMax)
@@ -91,7 +106,11 @@ export default function App(): React.JSX.Element {
   const win = window.quizloop.window
 
   return (
-    <div className="ql-shell">
+    <div
+      className="ql-shell"
+      data-chrome={caps.windowChrome ? 'window' : 'none'}
+      data-keys={caps.shortcuts ? 'on' : 'off'}
+    >
       <TitleBar
         first="Quiz"
         second="Loop"
@@ -114,7 +133,7 @@ export default function App(): React.JSX.Element {
           const n = NAV.find((x) => x.route.name === id)
           if (n) go(n.route)
         }}
-        language={<UpdateTools />}
+        language={caps.updater ? <UpdateTools /> : undefined}
         onMinimize={() => win.minimize()}
         onMaximize={() => win.toggleMaximize()}
         onClose={() => win.close()}
