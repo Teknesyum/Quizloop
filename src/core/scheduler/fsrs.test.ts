@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import { Rating, State } from 'ts-fsrs'
-import type { Card } from '@main/db/types'
+import type { Card } from '@core/db/types'
 import { emptyCardFields, mapRating, schedule, softReset } from './fsrs'
 
 const NOW = new Date('2026-09-08T09:00:00.000Z')

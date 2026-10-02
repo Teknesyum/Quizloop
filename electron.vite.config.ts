@@ -2,7 +2,11 @@ import { resolve } from 'path'
 import { defineConfig } from 'electron-vite'
 import react from '@vitejs/plugin-react'
 
-const shared = { '@shared': resolve('src/shared'), '@locale': resolve('locale') }
+const shared = {
+  '@core': resolve('src/core'),
+  '@shared': resolve('src/shared'),
+  '@locale': resolve('locale')
+}
 
 export default defineConfig({
   main: {

@@ -1,9 +1,8 @@
-import { randomUUID } from 'node:crypto'
 import type { Kysely } from 'kysely'
-import type { Card, Database } from '@main/db/types'
-import type { QuestionIndex } from '@main/modules/loader'
-import { mapRating, schedule } from '@main/scheduler/fsrs'
-import { buildQueue } from '@main/scheduler/queue'
+import type { Card, Database } from '@core/db/types'
+import type { QuestionIndex } from '@core/modules/loader'
+import { mapRating, schedule } from '@core/scheduler/fsrs'
+import { buildQueue } from '@core/scheduler/queue'
 import type {
   AnswerResult,
   GradeResult,
@@ -42,7 +41,7 @@ interface Live {
 
 export interface MachineDeps {
   db: Kysely<Database>
-  indexFor(moduleId: string): QuestionIndex
+  indexFor(moduleId: string): QuestionIndex | Promise<QuestionIndex>
   assetBase(moduleId: string): string
   dayStart(now: Date): Date
   limit(): number
@@ -89,7 +88,7 @@ export class SessionMachine {
     }
   }
 
-  private advance(s: Live): QuestionView | null {
+  private async advance(s: Live): Promise<QuestionView | null> {
     while (true) {
       let card: Card | undefined
       let relearn = false
@@ -103,7 +102,7 @@ export class SessionMachine {
         s.current = null
         return null
       }
-      const question = s.index.get(card.question_id)
+      const question = await s.index.get(card.question_id)
       if (!question || question.deleted) continue
       s.current = {
         card,
@@ -130,11 +129,11 @@ export class SessionMachine {
       seed: this.seed(),
       chapter: chapter ?? null
     })
-    const id = randomUUID()
+    const id = globalThis.crypto.randomUUID()
     const s: Live = {
       id,
       moduleId,
-      index: this.deps.indexFor(moduleId),
+      index: await this.deps.indexFor(moduleId),
       queue,
       relearn: [],
       pos: 0,
@@ -159,7 +158,7 @@ export class SessionMachine {
         score: 0
       })
       .execute()
-    return { sessionId: id, first: this.advance(s), total: queue.length }
+    return { sessionId: id, first: await this.advance(s), total: queue.length }
   }
 
   known(id: string): void {
@@ -278,7 +277,13 @@ export class SessionMachine {
       .where('id', '=', s.id)
       .execute()
 
-    return { rating, dueAt: String(patch.due), retired, scoreDelta: delta, next: this.advance(s) }
+    return {
+      rating,
+      dueAt: String(patch.due),
+      retired,
+      scoreDelta: delta,
+      next: await this.advance(s)
+    }
   }
 
   async flag(id: string, note?: string): Promise<void> {

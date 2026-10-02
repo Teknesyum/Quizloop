@@ -8,7 +8,7 @@ import {
   type Grade
 } from 'ts-fsrs'
 import type { FsrsRating, SelfAssess } from '@shared/ipc'
-import type { Card, CardPatch, NewCard } from '@main/db/types'
+import type { Card, CardPatch, NewCard } from '@core/db/types'
 
 const engine = fsrs(generatorParameters({ enable_fuzz: true, enable_short_term: true }))
 

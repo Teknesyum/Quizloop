@@ -29,8 +29,8 @@ extraResources:
     to: ornek
 fileAssociations:
   - ext: qlmod
-    name: Quizloop Module
-    description: Quizloop module package
+    name: QuizLoop Module
+    description: QuizLoop module package
     role: Viewer
 asarUnpack:
   - resources/**

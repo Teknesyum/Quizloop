@@ -94,7 +94,7 @@ export default function App(): React.JSX.Element {
     <div className="ql-shell">
       <TitleBar
         first="Quiz"
-        second="loop"
+        second="Loop"
         links={{ brand: GITHUB, sponsor: SPONSOR }}
         labels={{
           sponsor: t('sig.support'),

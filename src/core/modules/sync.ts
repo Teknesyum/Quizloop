@@ -1,6 +1,7 @@
 import type { Kysely } from 'kysely'
-import type { Database } from '@main/db/types'
-import { emptyCardFields, softReset } from '@main/scheduler/fsrs'
+import type { Database } from '@core/db/types'
+import type { CorePorts } from '@core/ports'
+import { emptyCardFields, softReset } from '@core/scheduler/fsrs'
 import type { Question } from '@shared/schema/question'
 import { iterateQuestions, type LoadedModule } from './loader'
 
@@ -17,6 +18,7 @@ function coreHash(q: Question): string {
 
 export async function syncModule(
   db: Kysely<Database>,
+  ports: CorePorts,
   mod: LoadedModule,
   now: Date
 ): Promise<SyncReport> {
@@ -55,7 +57,7 @@ export async function syncModule(
       )
       .execute()
 
-    for (const q of iterateQuestions(mod)) {
+    for await (const q of iterateQuestions(ports, mod)) {
       seen.add(q.id)
       const row = byQuestion.get(q.id)
       if (q.deleted) {

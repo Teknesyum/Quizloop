@@ -1,17 +1,15 @@
-# src/main — Node side
+# src/main — Electron shell
 
-- `db/` — kysely + better-sqlite3, WAL. `migrations.ts` is append-only; never
-  edit a shipped migration, add the next one. Rows are never deleted; retirement
-  writes `retired_at` and removed questions get `orphaned = 1`.
-- `modules/` — read-only module packages. `loader.ts` parses and validates,
-  `sync.ts` reconciles a module against the card table by `contentHash` and
-  `core_hash`, `install.ts` copies a package into the user data folder.
-- `scheduler/` — FSRS-6 through `ts-fsrs`. `mapRating` blends self-assessment
-  with `knownWithoutChoices` and `wrongPicks`. Keep it pure and tested.
-- `session/` — the session state machine. Holds the relearn queue in memory
-  only, buries a concept for the rest of the day, and writes one `review_log`
-  row per graded answer.
-- `assets/protocol.ts` — `quizloop://module/<id>/assets/...`, root-scoped.
+Platform logic lives in `src/core`; this folder adapts it to Electron.
+
+- `ports.ts` — `nodePorts`, the Node implementation of `CorePorts`.
+- `ipc/` — `ipcMain.handle` wiring. Parse args with zod, call `createCore()`
+  commands, and keep only shell work here: dialogs, windows, file writes.
+- `db/index.ts` — better-sqlite3 + kysely, WAL, runs `@core/db/migrations`.
+- `modules/` — `install.ts` (copy into the user folder, then core validate and
+  sync), `paket.ts` (`.qlmod` unzip).
+- `assets/` — `quizloop://module/<id>/assets/...` and the source-book protocol.
+- `settings.ts`, `transfer.ts`, `update.ts`, `window.ts`, `fstree.ts`, `work.ts`.
 
 better-sqlite3 is native and ABI-split: `npm test` needs the Node build,
 `npm run dev` the Electron one. `scripts/abi.mjs` swaps them; the npm scripts

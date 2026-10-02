@@ -2,12 +2,12 @@
 
 [<img src="assets/badge-lang.svg" alt="English selected, switch to Türkçe" width="124" height="44">](README.tr.md)
 
-# Quizloop
+# QuizLoop
 
 Adaptive spaced-repetition quiz engine. Turn a book into a question module and
 drill it until it sticks.
 
-Quizloop separates the **engine** from the **content**. The engine is this
+QuizLoop separates the **engine** from the **content**. The engine is this
 repository: a desktop application for Windows, macOS and Linux that schedules
 questions, scores answers and explains mistakes. The content lives in
 *modules*, question banks generated from source material. Modules are not part

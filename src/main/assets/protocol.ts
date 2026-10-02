@@ -101,14 +101,14 @@ const ALLOWED = /\.(webp|png|svg|jpg|jpeg)$/i
 
 export function registerAssetProtocol(
   rootOf: (moduleId: string) => string | undefined,
-  pdfOf: (moduleId: string) => string | null = () => null
+  pdfOf: (moduleId: string) => Promise<string | null> | string | null = () => null
 ): void {
   protocol.handle(SCHEME, async (req) => {
     const url = new URL(req.url)
     if (url.hostname === 'kaynak') {
       const [, moduleId] = url.pathname.split('/')
       if (!moduleId) return new Response(null, { status: 404 })
-      const target = pdfOf(decodeURIComponent(moduleId))
+      const target = await pdfOf(decodeURIComponent(moduleId))
       if (!target) return new Response(null, { status: 404 })
       if (!/\.pdf$/i.test(target)) return new Response(null, { status: 403 })
       if (!existsSync(target)) return new Response(null, { status: 404 })

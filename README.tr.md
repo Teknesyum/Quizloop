@@ -2,12 +2,12 @@
 
 [<img src="assets/badge-lang.tr.svg" alt="Türkçe seçili, switch to English" width="124" height="44">](README.md)
 
-# Quizloop
+# QuizLoop
 
 Uyarlanır aralıklı tekrar sınav motoru. Bir kitabı soru modülüne çevir, yerine
 oturana kadar çalış.
 
-Quizloop **motoru** **içerikten** ayırır. Motor bu depodur: soruları zamanlayan,
+QuizLoop **motoru** **içerikten** ayırır. Motor bu depodur: soruları zamanlayan,
 cevapları puanlayan ve yanlışları açıklayan Windows, macOS ve Linux masaüstü
 uygulaması. İçerik *modüllerde* durur; modül, kaynak metinden üretilmiş soru
 bankasıdır. Modüller bu deponun parçası değildir; yalnız beş soruluk bir örnek
