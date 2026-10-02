@@ -163,6 +163,7 @@
   "settings.typerHelp": "Question text flows in letter by letter. Off shows it at once.",
   "settings.fontScale": "Text size",
   "settings.fontScaleHelp": "Scales the whole app. Ctrl + and Ctrl - work too, Ctrl 0 resets.",
+  "settings.fontScaleHelpTouch": "Scales the whole app.",
   "settings.typer.slow": "Slow",
   "settings.typer.normal": "Normal",
   "settings.typer.fast": "Fast",
@@ -279,5 +280,6 @@
   "work.step.database": "Preparing progress data",
   "work.step.done": "Done",
   "work.step.failed": "Could not finish",
-  "library.mixed": "Mixed"
+  "library.mixed": "Mixed",
+  "android.bootFailed": "The app could not start. Error detail:"
 }

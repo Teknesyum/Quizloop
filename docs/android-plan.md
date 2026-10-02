@@ -52,6 +52,11 @@ güvenilmez (R8 eklenti sınıflarını kırpabilir).
   `app`, `settings`, `window`, `flags` ad alanları.
 - `_ornek` modülü APK assets'inden gelir; `.gz` ve `.mjs` uzantısı yok.
 - Kabul: emülatörde Kütüphane ekranı açılır.
+- **Durum (2026-10-02): tamam.** Giriş `src/android/index.html` + `boot.ts` + `shell.ts`;
+  `npm run android:apk` → `dist-android/QuizLoop-0.6.0-debug.apk` (15,4 MB). a8_test
+  (Android 14, WebView 113) üzerinde açıldı. pdf.js Android derlemesinde `legacy` sürümüne
+  bağlandı (WebView < 122'de `Iterator` yok). `capabilities` ile masaüstü bölümleri gizli;
+  geri tuşu Oturum → Bölümler → Kütüphane, oturumda bitirme onayı sorar.
 
 ### A3 — Veritabanı
 
@@ -62,6 +67,10 @@ güvenilmez (R8 eklenti sınıflarını kırpabilir).
 - Kabul: `_ornek` ile oturum biter, ilerleme yazılır. Zorla durdur → aç → ilerleme yerinde.
 - Ölçüm: `syncModule` 9 MB JSON'u kaç sn'de yazıyor. 10 sn üstü → wa-sqlite yeniden
   değerlendirilir.
+- **Durum (2026-10-02): tamam, ölçüm hariç.** WAL açıldı, `quick_check` ok. İlk açılış
+  412 ms (DB 256, `_ornek` eşitleme 147), sonraki açılışlar ~250 ms. Oturum bitti, zorla
+  durdurup açınca ilerleme yerinde (%13, 1 emekli). Android'de göç öncesi yedek yok.
+  9 MB `syncModule` ölçümü gerçek modülle A4'e kaldı.
 
 ### A4 — Büyük Paket
 

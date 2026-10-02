@@ -160,6 +160,10 @@ export const useSession = create<SessionState>((set, get) => ({
     const { state } = get()
     if (state.phase !== 'graded') return
     const next = state.grade.next
+    if (!next) {
+      void get().end()
+      return
+    }
     swap(() => set({ state: show(next), shownAt: performance.now() }))
   },
   flag: async () => {

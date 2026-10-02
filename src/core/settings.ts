@@ -18,6 +18,7 @@ export const SettingsPatch = z
     typerSpeed: z.enum(['slow', 'normal', 'fast', 'off']),
     sessionLimit: z.number().int().min(5).max(200),
     soundOn: z.boolean(),
+    fontScale: z.number().min(0.5).max(2),
     blinkSeconds: z.number().int().min(0).max(30)
   })
   .partial()

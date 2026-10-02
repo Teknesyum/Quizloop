@@ -213,24 +213,28 @@ export function Library(): React.JSX.Element {
           >
             {t('library.installSample')}
           </button>
-          <button
-            type="button"
-            className="tk-btn tk-btn-ghost"
-            disabled={busy}
-            title={busy ? t('common.loading') : undefined}
-            onClick={() => run(() => window.quizloop.module.pick('folder'))}
-          >
-            {t('library.addFolder')}
-          </button>
-          <button
-            type="button"
-            className="tk-btn tk-btn-primary"
-            disabled={busy}
-            title={busy ? t('common.loading') : undefined}
-            onClick={() => run(() => window.quizloop.module.pick('file'))}
-          >
-            {t('library.addFile')}
-          </button>
+          {window.quizloop.capabilities.folders && (
+            <>
+              <button
+                type="button"
+                className="tk-btn tk-btn-ghost"
+                disabled={busy}
+                title={busy ? t('common.loading') : undefined}
+                onClick={() => run(() => window.quizloop.module.pick('folder'))}
+              >
+                {t('library.addFolder')}
+              </button>
+              <button
+                type="button"
+                className="tk-btn tk-btn-primary"
+                disabled={busy}
+                title={busy ? t('common.loading') : undefined}
+                onClick={() => run(() => window.quizloop.module.pick('file'))}
+              >
+                {t('library.addFile')}
+              </button>
+            </>
+          )}
         </div>
       </header>
 

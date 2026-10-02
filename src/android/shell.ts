@@ -1,0 +1,174 @@
+import { App } from '@capacitor/app'
+import { createCore, type Core } from '@core/commands'
+import { installFailure, resyncFolders, syncFolder } from '@core/commands/modules'
+import { SettingsPatch } from '@core/settings'
+import type {
+  Capabilities,
+  InstallResult,
+  QuizloopApi,
+  TransferResult,
+  UpdateStatus
+} from '@shared/ipc'
+import { openDatabase } from './db/open'
+import { loadBundle } from './ports'
+import { loadSettings } from './settings'
+
+export const ANDROID_CAPABILITIES: Capabilities = {
+  windowChrome: false,
+  shortcuts: false,
+  pinchZoom: true,
+  backButton: true,
+  updater: false,
+  folders: false
+}
+
+const IDLE: UpdateStatus = { state: 'idle' }
+const NONE: UpdateStatus = { state: 'none' }
+const UNSUPPORTED: TransferResult = { ok: false }
+const off = (): void => undefined
+
+function log(event: string, data: Record<string, unknown>): void {
+  console.info(`[quizloop] ${event} ${JSON.stringify(data)}`)
+}
+
+export async function createShell(): Promise<QuizloopApi> {
+  const t0 = performance.now()
+  const opened = await openDatabase()
+  const tDb = performance.now()
+  const { db } = opened
+  const bundle = await loadBundle()
+  const { ports } = bundle
+  const settings = await loadSettings()
+  let core: Core | null = null
+  core = createCore({
+    db,
+    ports,
+    settings,
+    books: { path: () => null, url: () => '' },
+    assetBase: (id) => `${core?.library.rootOf(id) ?? ''}/`
+  })
+  const c = core
+
+  const installBundled = async (): Promise<InstallResult> => {
+    let last: InstallResult = { ok: false }
+    for (const root of bundle.roots) {
+      try {
+        last = await syncFolder(db, ports, root, ports.now())
+      } catch (e) {
+        last = installFailure(e)
+      }
+    }
+    await c.library.reload()
+    return last
+  }
+
+  const tSync0 = performance.now()
+  if (opened.firstRun) await installBundled()
+  else
+    await resyncFolders(
+      db,
+      ports,
+      async (r) => (bundle.roots.includes(r.path) ? r.path : null),
+      ports.now()
+    )
+  await c.library.reload()
+  const tSync = performance.now()
+  log('boot', {
+    journal: opened.journal,
+    integrity: opened.integrity.detail,
+    firstRun: opened.firstRun,
+    migrated: opened.migrated,
+    openMs: Math.round(tDb - t0),
+    syncMs: Math.round(tSync - tSync0),
+    totalMs: Math.round(tSync - t0),
+    webview: navigator.userAgent
+  })
+
+  const backs = new Set<() => void>()
+  await App.addListener('backButton', () => {
+    for (const cb of backs) cb()
+  })
+  await App.addListener('appStateChange', ({ isActive }) => {
+    if (!isActive) return
+    void opened.resume().then((reopened) => {
+      if (reopened) log('reopen', { generation: opened.generation() })
+    })
+  })
+
+  const info = await App.getInfo().catch(() => ({ version: '0.0.0' }))
+
+  return {
+    capabilities: ANDROID_CAPABILITIES,
+    pathOf: () => null,
+    app: {
+      info: async () => ({
+        version: info.version,
+        platform: 'android',
+        integrity: opened.integrity
+      }),
+      onBack: (cb) => {
+        backs.add(cb)
+        return () => backs.delete(cb)
+      }
+    },
+    window: {
+      minimize: () => void App.minimizeApp(),
+      toggleMaximize: off,
+      close: () => void App.exitApp(),
+      isMaximized: async () => true,
+      onMaximized: () => off
+    },
+    settings: {
+      get: async () => c.settings.get(),
+      set: async (patch) => c.settings.set(SettingsPatch.parse(patch)),
+      zoom: (factor) => {
+        document.documentElement.style.setProperty('zoom', String(factor))
+      },
+      pickModulesDir: async () => null
+    },
+    module: {
+      list: () => c.module.list(),
+      install: async () => ({ ok: false }),
+      installSample: installBundled,
+      pick: async () => null,
+      onInstalled: () => off,
+      drainOpened: async () => undefined,
+      remove: async (id) => {
+        await c.module.forget(id)
+      },
+      reset: (id) => c.module.reset(id),
+      chapters: (id) => c.module.chapters(id),
+      questions: (id) => c.module.questions(id),
+      question: (id, qid) => c.module.question(id, qid)
+    },
+    flags: {
+      set: (id, qid, flagged, note) => c.flags.set(id, qid, flagged, note),
+      export: async () => ({ ok: false })
+    },
+    update: {
+      status: async () => IDLE,
+      check: async () => NONE,
+      download: off,
+      cancel: off,
+      install: off,
+      open: off,
+      onStatus: () => off
+    },
+    transfer: {
+      exportTo: async () => UNSUPPORTED,
+      importFrom: async () => UNSUPPORTED
+    },
+    session: c.session,
+    source: {
+      book: (id) => c.source.book(id),
+      pickBook: (id) => c.source.book(id),
+      forgetBook: (id) => c.source.book(id)
+    },
+    work: {
+      onProgress: () => off
+    },
+    stats: {
+      overview: () => c.stats.overview()
+    }
+  }
+}

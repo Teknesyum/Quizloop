@@ -198,10 +198,30 @@ export interface IntegrityReport {
   detail: string
 }
 
+export interface Capabilities {
+  windowChrome: boolean
+  shortcuts: boolean
+  pinchZoom: boolean
+  backButton: boolean
+  updater: boolean
+  folders: boolean
+}
+
+export const DESKTOP_CAPABILITIES: Capabilities = {
+  windowChrome: true,
+  shortcuts: true,
+  pinchZoom: false,
+  backButton: false,
+  updater: true,
+  folders: true
+}
+
 export interface QuizloopApi {
+  capabilities: Capabilities
   pathOf(file: File): string | null
   app: {
     info(): Promise<{ version: string; platform: NodeJS.Platform; integrity: IntegrityReport }>
+    onBack(cb: () => void): () => void
   }
   window: {
     minimize(): void

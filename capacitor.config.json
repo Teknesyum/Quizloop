@@ -1,0 +1,19 @@
+{
+  "appId": "com.teknesyum.quizloop",
+  "appName": "QuizLoop",
+  "webDir": "out/android",
+  "android": {
+    "path": "android"
+  },
+  "server": {
+    "androidScheme": "https"
+  },
+  "plugins": {
+    "CapacitorSQLite": {
+      "androidIsEncryption": false,
+      "androidBiometric": {
+        "biometricAuth": false
+      }
+    }
+  }
+}

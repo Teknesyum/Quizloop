@@ -15,7 +15,9 @@ export default defineConfig(
       'scripts/*.mjs',
       'schema',
       'trash',
-      'tmp'
+      'tmp',
+      'android',
+      'dist-android'
     ]
   },
   tseslint.configs.recommended,

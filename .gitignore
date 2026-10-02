@@ -37,3 +37,6 @@ tmp/
 dist-modules/
 
 *.tsbuildinfo
+
+# Android build output.
+dist-android/
