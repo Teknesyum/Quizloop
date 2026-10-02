@@ -5,7 +5,10 @@ All notable changes to this project are documented here. The format follows
 to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
-### Changed - On first launch the interface follows the device language: Turkish on a Turkish device, English otherwise. A language chosen in the title bar still wins.
+
+### Changed
+- On first launch the interface follows the device language: Turkish on a Turkish
+  device, English otherwise. A language chosen in the title bar still wins.
 
 ## [0.7.1] - 2026-10-02
 
