@@ -1809,3 +1809,222 @@ button.ql-mark:not(:disabled):active {
   padding: var(--tk-sp-1) var(--tk-sp-2);
   font-size: var(--tk-fs-1);
 }
+
+/* --- phone --- */
+
+@media (max-width: 640px) {
+  :root {
+    --ql-titlebar-h: calc(var(--tk-sp-5) * 2 + env(safe-area-inset-top));
+    --ql-nav-h: calc(var(--tk-sp-5) * 2 + var(--tk-sp-2));
+    --ql-keys-h: 0px;
+    --ql-pad: var(--tk-sp-4);
+  }
+
+  .ql-shell .tk-titlebar {
+    height: var(--ql-titlebar-h);
+    padding: env(safe-area-inset-top) var(--ql-pad) 0 calc(var(--ql-pad) + env(safe-area-inset-left));
+    -webkit-app-region: no-drag;
+  }
+
+  .ql-shell .tk-titlebar__name {
+    font-size: var(--tk-fs-4);
+  }
+
+  .ql-shell .tk-titlebar__window,
+  .ql-shell .tk-titlebar__chip {
+    display: none;
+  }
+
+  .ql-shell .tk-titlebar__tools {
+    margin-left: auto;
+  }
+
+  .ql-shell nav.tk-titlebar__tabs {
+    position: fixed;
+    inset-inline: 0;
+    bottom: 0;
+    z-index: 4;
+    height: calc(var(--ql-nav-h) + env(safe-area-inset-bottom));
+    padding-bottom: env(safe-area-inset-bottom);
+    gap: 0;
+    background: var(--tk-surface);
+    border-top: var(--tk-border-w) solid var(--tk-border-strong);
+  }
+
+  .ql-shell nav.tk-titlebar__tabs .tk-titlebar__tab {
+    flex: 1 1 0;
+    font-size: var(--tk-fs-2);
+  }
+
+  .ql-shell:has(nav.tk-titlebar__tabs) .ql-body {
+    padding-bottom: calc(var(--ql-nav-h) + env(safe-area-inset-bottom));
+  }
+
+  .ql-shell:has(nav.tk-titlebar__tabs) .tk-toast-stack {
+    bottom: calc(var(--ql-nav-h) + env(safe-area-inset-bottom) + var(--tk-sp-3));
+  }
+
+  .ql-main,
+  .ql-main:has(> .ql-session) {
+    padding: var(--ql-pad) calc(var(--ql-pad) + env(safe-area-inset-right))
+      calc(var(--ql-pad) + env(safe-area-inset-bottom)) calc(var(--ql-pad) + env(safe-area-inset-left));
+  }
+
+  .ql-keys,
+  kbd {
+    display: none;
+  }
+
+  .ql-screen {
+    gap: var(--tk-sp-5);
+  }
+
+  .ql-screen-head {
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--tk-sp-3);
+  }
+
+  .ql-head-actions > .tk-btn,
+  .ql-card-actions > .tk-btn,
+  .ql-actions > .tk-btn {
+    flex: 1 1 auto;
+    min-height: calc(var(--tk-sp-5) * 2);
+    justify-content: center;
+  }
+
+  .ql-grid,
+  .ql-tiles {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .ql-card-head .tk-h3 {
+    font-size: var(--tk-fs-3);
+    line-height: var(--tk-lh-heading);
+  }
+
+  .ql-session-bar {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    align-items: center;
+    gap: var(--tk-sp-3) var(--tk-sp-2);
+  }
+
+  .ql-session-bar > .ql-session-meta:first-child {
+    grid-column: span 4;
+    gap: var(--tk-sp-2);
+  }
+
+  .ql-session-bar > .ql-session-meta + .ql-session-meta {
+    display: contents;
+  }
+
+  .ql-session-meta > .tk-label {
+    justify-self: end;
+  }
+
+  .ql-session-meta > .tk-btn {
+    grid-column: span 2;
+    min-height: calc(var(--tk-sp-5) + var(--tk-sp-4));
+    padding-inline: var(--tk-sp-1);
+    justify-content: center;
+  }
+
+  .ql-question {
+    gap: var(--tk-sp-4);
+    padding: var(--tk-sp-4);
+  }
+
+  .ql-choices {
+    gap: var(--tk-sp-3);
+  }
+
+  .ql-choice > button {
+    gap: var(--tk-sp-3);
+    padding: var(--tk-sp-3) var(--tk-sp-4);
+    font-size: var(--tk-fs-2);
+    min-height: calc(var(--tk-sp-5) * 2);
+  }
+
+  .ql-grade {
+    bottom: calc(-1 * (var(--ql-pad) + env(safe-area-inset-bottom)));
+    padding-bottom: calc(var(--tk-sp-3) + env(safe-area-inset-bottom));
+  }
+
+  .ql-grade-row {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--tk-sp-2);
+  }
+
+  .ql-grade-row .tk-btn {
+    min-height: calc(var(--tk-sp-5) * 2);
+    padding-inline: var(--tk-sp-1);
+  }
+
+  .ql-grade-hint {
+    display: none;
+  }
+
+  .ql-graded-row > .tk-btn {
+    flex: 1 1 100%;
+    min-height: calc(var(--tk-sp-5) * 2);
+    justify-content: center;
+  }
+
+  body .tk-modal-scrim {
+    padding: calc(var(--tk-sp-3) + env(safe-area-inset-top)) var(--tk-sp-3)
+      calc(var(--tk-sp-3) + env(safe-area-inset-bottom));
+  }
+
+  body .tk-modal {
+    box-sizing: border-box;
+    width: 100%;
+    max-height: 100%;
+  }
+
+  body .tk-modal-actions {
+    flex-wrap: wrap;
+  }
+
+  body .tk-modal-actions > .tk-btn {
+    flex: 1 1 auto;
+    min-height: calc(var(--tk-sp-5) * 2);
+    justify-content: center;
+  }
+
+  body .ql-book-scrim {
+    padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom)
+      env(safe-area-inset-left);
+  }
+
+  body .ql-book {
+    width: 100%;
+    height: 100%;
+    max-height: none;
+    gap: var(--tk-sp-3);
+    padding: var(--tk-sp-3);
+  }
+
+  .ql-book-bar .ql-book-meta:last-child {
+    width: 100%;
+  }
+
+  .ql-book-bar .ql-book-meta:last-child > .tk-btn {
+    flex: 1 1 auto;
+    min-height: calc(var(--tk-sp-5) + var(--tk-sp-4));
+    justify-content: center;
+  }
+
+  .ql-book-foot > .tk-hint:last-child {
+    display: none;
+  }
+
+  .ql-progress-list li {
+    grid-template-columns: minmax(0, 1fr) auto;
+    row-gap: var(--tk-sp-1);
+  }
+
+  .ql-progress-list .ql-progress-name {
+    grid-column: 1 / -1;
+  }
+}

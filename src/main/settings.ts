@@ -1,17 +1,9 @@
 import { app } from 'electron'
 import { existsSync, mkdirSync, readFileSync, renameSync, writeFileSync } from 'node:fs'
 import { join } from 'node:path'
+import type { SettingsStore } from '@core/ports'
+import { DEFAULT_SETTINGS } from '@core/settings'
 import type { Settings } from '@shared/ipc'
-
-const DEFAULTS: Settings = {
-  dayStartHour: 4,
-  modulesDir: null,
-  typerSpeed: 'normal',
-  sessionLimit: 40,
-  soundOn: false,
-  fontScale: 1,
-  blinkSeconds: 5
-}
 
 let cache: Settings | null = null
 
@@ -23,9 +15,9 @@ export function getSettings(): Settings {
   if (cache) return cache
   try {
     const raw = JSON.parse(readFileSync(file(), 'utf8')) as Partial<Settings>
-    cache = { ...DEFAULTS, ...raw }
+    cache = { ...DEFAULT_SETTINGS, ...raw }
   } catch {
-    cache = { ...DEFAULTS }
+    cache = { ...DEFAULT_SETTINGS }
   }
   return cache
 }
@@ -48,9 +40,4 @@ export function modulesDir(): string {
   return dir
 }
 
-export function dayStart(now: Date, hour = getSettings().dayStartHour): Date {
-  const d = new Date(now)
-  d.setHours(hour, 0, 0, 0)
-  if (d > now) d.setDate(d.getDate() - 1)
-  return d
-}
+export const settingsStore: SettingsStore = { get: getSettings, set: setSettings }

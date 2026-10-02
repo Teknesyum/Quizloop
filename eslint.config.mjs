@@ -39,5 +39,15 @@ export default defineConfig(
       ...eslintPluginReactRefresh.configs.vite.rules
     }
   },
+  {
+    files: ['src/core/**/*.ts'],
+    ignores: ['src/core/**/*.test.ts'],
+    rules: {
+      'no-restricted-imports': [
+        'error',
+        { patterns: ['node:*', 'electron', 'better-sqlite3', '@main/*', '@renderer/*'] }
+      ]
+    }
+  },
   eslintConfigPrettier
 )

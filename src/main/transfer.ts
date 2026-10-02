@@ -10,9 +10,10 @@ import {
 } from 'node:fs'
 import { join } from 'node:path'
 import { sql, type Kysely } from 'kysely'
-import type { Database } from '@main/db/types'
+import type { Database } from '@core/db/types'
 import { copyTree, listFiles, removeTree, skipBuild } from '@main/fstree'
-import { validateModule } from '@main/modules/loader'
+import { validateModule } from '@core/modules/loader'
+import { nodePorts } from '@main/ports'
 import { getSettings, modulesDir, setSettings } from '@main/settings'
 import { Work } from '@main/work'
 import { CH, type Settings, type TransferResult } from '@shared/ipc'
@@ -66,12 +67,12 @@ async function pickDir(e: IpcMainInvokeEvent, title: string): Promise<string | n
 
 export function registerTransfer(db: Kysely<Database>): void {
   ipcMain.handle(CH.transferExport, async (e): Promise<TransferResult> => {
-    const dir = await pickDir(e, 'Quizloop')
+    const dir = await pickDir(e, 'QuizLoop')
     if (!dir) return { ok: false }
     const work = new Work('export')
     try {
       work.at('database', 0, 15)
-      const target = join(dir, `Quizloop-tasima-${stamp(new Date())}`)
+      const target = join(dir, `QuizLoop-tasima-${stamp(new Date())}`)
       mkdirSync(join(target, 'modules'), { recursive: true })
       const dbOut = join(target, 'quizloop.db').replace(/'/g, "''")
       await sql.raw(`VACUUM INTO '${dbOut}'`).execute(db)
@@ -110,7 +111,7 @@ export function registerTransfer(db: Kysely<Database>): void {
   })
 
   ipcMain.handle(CH.transferImport, async (e): Promise<TransferResult> => {
-    const dir = await pickDir(e, 'Quizloop')
+    const dir = await pickDir(e, 'QuizLoop')
     if (!dir) return { ok: false }
     const work = new Work('import')
     try {
@@ -126,7 +127,7 @@ export function registerTransfer(db: Kysely<Database>): void {
       }
       if (manifest.app !== 'quizloop') return { ok: false, error: 'not-a-package' }
       const ids = manifest.moduller ?? []
-      for (const id of ids) validateModule(join(dir, 'modules', id))
+      for (const id of ids) await validateModule(nodePorts, join(dir, 'modules', id))
       work.at('copy', 0, 90)
       for (const id of ids) {
         const dest = join(modulesDir(), id)

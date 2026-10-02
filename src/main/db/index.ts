@@ -2,8 +2,8 @@ import SQLite from 'better-sqlite3'
 import { copyFileSync, existsSync } from 'node:fs'
 import { Kysely, SqliteDialect } from 'kysely'
 import { Migrator } from 'kysely/migration'
-import type { Database } from './types'
-import { LATEST, provider } from './migrations'
+import type { Database } from '@core/db/types'
+import { LATEST, provider } from '@core/db/migrations'
 
 export interface OpenResult {
   db: Kysely<Database>

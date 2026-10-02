@@ -4,9 +4,10 @@ import { tmpdir } from 'node:os'
 import { join, resolve } from 'node:path'
 import type { Kysely } from 'kysely'
 import { openDatabase } from '@main/db'
-import type { Database } from '@main/db/types'
-import { QuestionIndex, readMeta } from '@main/modules/loader'
-import { syncModule } from '@main/modules/sync'
+import { nodePorts } from '@main/ports'
+import type { Database } from '@core/db/types'
+import { QuestionIndex, readMeta } from '@core/modules/loader'
+import { syncModule } from '@core/modules/sync'
 import { SessionMachine } from './machine'
 
 const NOW = new Date('2026-09-08T09:00:00.000Z')
@@ -17,9 +18,9 @@ let db: Kysely<Database>
 let close: () => void
 
 async function machine(): Promise<SessionMachine> {
-  const mod = readMeta(SAMPLE)
-  await syncModule(db, mod, NOW)
-  const index = new QuestionIndex(mod)
+  const mod = await readMeta(nodePorts, SAMPLE)
+  await syncModule(db, nodePorts, mod, NOW)
+  const index = new QuestionIndex(nodePorts, mod)
   return new SessionMachine({
     db,
     indexFor: () => index,

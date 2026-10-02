@@ -1,5 +1,5 @@
 import type { Kysely } from 'kysely'
-import type { Card, Database } from '@main/db/types'
+import type { Card, Database } from '@core/db/types'
 import { State } from './fsrs'
 
 export interface QueueOptions {

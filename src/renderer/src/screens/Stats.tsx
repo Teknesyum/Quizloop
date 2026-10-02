@@ -132,7 +132,7 @@ function Heatmap({ days }: { days: Day[][] }): React.JSX.Element {
 function Bars({ days }: { days: Day[] }): React.JSX.Element {
   const [ref, width] = useWidth()
   const height = 180
-  const m = { top: 8, right: 8, bottom: 24, left: 32 }
+  const m = { top: 8, right: 20, bottom: 24, left: 32 }
   const innerW = Math.max(0, width - m.left - m.right)
   const innerH = height - m.top - m.bottom
   const x = useMemo(
