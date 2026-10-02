@@ -6,6 +6,36 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.7.0] - 2026-10-02
+
+### Added
+
+- An Android app, built with Capacitor on the same screens and the same core
+  as the desktop app. It keeps progress in a native SQLite database, imports
+  a `.qlmod` package from the system file picker without copying it through
+  the WebView, and opens the source book one chapter at a time.
+- Phone layout: bottom tab bar, single-column screens, larger touch targets,
+  safe-area insets, pinch zoom in the book and a back button that steps from
+  the session to the chapters to the library.
+- `quizforge paket --android` splits the book into chapter PDFs.
+- Android checks GitHub for a newer release and backs up its database before
+  a migration.
+- Settings links to the source code, and the repository has a privacy policy.
+- The release workflow also builds a signed APK and an Android App Bundle.
+
+### Changed
+
+- The app is shown as QuizLoop.
+- Platform-free logic moved to `src/core`, shared by both shells.
+- New cards are written in batches, and the startup sync skips modules whose
+  `module.json` has not changed.
+
+### Fixed
+
+- The font size setting is saved.
+- Finishing a session on its last question shows the summary instead of the
+  empty screen.
+
 ## [0.6.0] - 2026-10-02
 
 ### Added
