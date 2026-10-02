@@ -73,6 +73,11 @@ jobs:
           name: quizloop-android
           path: dist-android/*-release.apk
           if-no-files-found: error
+      - uses: actions/upload-artifact@v4
+        with:
+          name: play-aab
+          path: dist-android/*-release.aab
+          if-no-files-found: error
       - name: Upload to the Play closed test
         if: env.PLAY_JSON != ''
         uses: r0adkll/upload-google-play@v1
@@ -90,6 +95,7 @@ jobs:
       - uses: actions/download-artifact@v4
         with:
           path: dist
+          pattern: quizloop-*
       - uses: softprops/action-gh-release@v2
         with:
           files: dist/**/*
