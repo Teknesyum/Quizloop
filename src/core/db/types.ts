@@ -8,6 +8,7 @@ export interface ModuleTable {
   question_count: number
   installed_at: string
   updated_at: string
+  fingerprint: Generated<string>
 }
 
 export interface CardTable {

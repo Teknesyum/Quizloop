@@ -3,7 +3,7 @@ import type { Database } from '@core/db/types'
 import type { CorePorts } from '@core/ports'
 import { emptyCardFields, softReset } from '@core/scheduler/fsrs'
 import type { Question } from '@shared/schema/question'
-import { iterateQuestions, type LoadedModule } from './loader'
+import { fingerprint, iterateQuestions, type LoadedModule } from './loader'
 
 export interface SyncReport {
   added: number
@@ -37,6 +37,7 @@ export async function syncModule(
     .execute()
   const byQuestion = new Map(existing.map((c) => [c.question_id, c]))
   const seen = new Set<string>()
+  const print = await fingerprint(ports, mod)
 
   await db.transaction().execute(async (trx) => {
     await trx
@@ -48,7 +49,8 @@ export async function syncModule(
         path: mod.root,
         question_count: mod.meta.questionCount,
         installed_at: iso,
-        updated_at: iso
+        updated_at: iso,
+        fingerprint: print
       })
       .onConflict((oc) =>
         oc.column('id').doUpdateSet({
@@ -56,7 +58,8 @@ export async function syncModule(
           version: mod.meta.version,
           path: mod.root,
           question_count: mod.meta.questionCount,
-          updated_at: iso
+          updated_at: iso,
+          fingerprint: print
         })
       )
       .execute()

@@ -36,6 +36,10 @@ export async function readMeta(ports: CorePorts, root: string): Promise<LoadedMo
   return { meta: parsed.data, root }
 }
 
+export function fingerprint(ports: CorePorts, mod: LoadedModule): Promise<string> {
+  return ports.sha256(JSON.stringify([mod.root, mod.meta]))
+}
+
 export async function readBlock(
   ports: CorePorts,
   root: string,
