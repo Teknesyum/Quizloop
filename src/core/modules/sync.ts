@@ -1,4 +1,4 @@
-import type { Kysely } from 'kysely'
+import type { Insertable, Kysely } from 'kysely'
 import type { Database } from '@core/db/types'
 import type { CorePorts } from '@core/ports'
 import { emptyCardFields, softReset } from '@core/scheduler/fsrs'
@@ -11,6 +11,10 @@ export interface SyncReport {
   reset: number
   orphaned: number
 }
+
+const INSERT_BATCH = 40
+
+type NewCard = Insertable<Database['card']>
 
 function coreHash(q: Question): string {
   return JSON.stringify([q.stem, q.correct, q.choices.map((c) => [c.key, c.md])])
@@ -57,6 +61,12 @@ export async function syncModule(
       )
       .execute()
 
+    const pending: NewCard[] = []
+    const flush = async (): Promise<void> => {
+      if (!pending.length) return
+      await trx.insertInto('card').values(pending.splice(0)).execute()
+    }
+
     for await (const q of iterateQuestions(ports, mod)) {
       seen.add(q.id)
       const row = byQuestion.get(q.id)
@@ -68,21 +78,19 @@ export async function syncModule(
         continue
       }
       if (!row) {
-        await trx
-          .insertInto('card')
-          .values({
-            module_id: moduleId,
-            question_id: q.id,
-            concept_id: q.conceptId,
-            content_hash: q.contentHash,
-            core_hash: coreHash(q),
-            chapter: q.source.chapter ?? null,
-            orphaned: 0,
-            retired_at: null,
-            last_self_assess: null,
-            ...emptyCardFields(now)
-          })
-          .execute()
+        pending.push({
+          module_id: moduleId,
+          question_id: q.id,
+          concept_id: q.conceptId,
+          content_hash: q.contentHash,
+          core_hash: coreHash(q),
+          chapter: q.source.chapter ?? null,
+          orphaned: 0,
+          retired_at: null,
+          last_self_assess: null,
+          ...emptyCardFields(now)
+        })
+        if (pending.length >= INSERT_BATCH) await flush()
         report.added++
         continue
       }
@@ -146,6 +154,8 @@ export async function syncModule(
         report.updated++
       }
     }
+
+    await flush()
 
     for (const row of existing) {
       if (seen.has(row.question_id) || row.orphaned) continue

@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { FONT_SCALES, type Settings as S } from '@shared/ipc'
+import { FONT_SCALES, SOURCE_URL, type Settings as S } from '@shared/ipc'
 import { Confirm } from '@renderer/components/Confirm'
 import { Skeleton } from '@renderer/components/Skeleton'
 import { useUpdate } from '@renderer/hooks/useUpdate'
@@ -73,7 +73,9 @@ export function Settings(): React.JSX.Element {
       <header className="ql-screen-head ql-transition-in">
         <div>
           <h2 className="tk-h2">{t('settings.title')}</h2>
-          <p className="tk-hint">{t('settings.subtitle')}</p>
+          <p className="tk-hint">
+            {t(caps.settingsFile ? 'settings.subtitle' : 'settings.subtitleNative')}
+          </p>
         </div>
       </header>
 
@@ -247,7 +249,9 @@ export function Settings(): React.JSX.Element {
               style={{ '--ql-i': 2 } as React.CSSProperties}
             >
               <h3 className="tk-h3 tk-h3-rule">{t('settings.updates')}</h3>
-              <p className="tk-hint">{t('settings.updatesHelp')}</p>
+              <p className="tk-hint">
+                {t(caps.settingsFile ? 'settings.updatesHelp' : 'settings.updatesHelpAndroid')}
+              </p>
               <div className="ql-row">
                 <button
                   type="button"
@@ -296,6 +300,17 @@ export function Settings(): React.JSX.Element {
               {info ? t('settings.version', { version: info.version }) : t('common.loading')}
             </p>
             <p className="tk-hint">{t('settings.license')}</p>
+            <div className="ql-row">
+              <span className="tk-hint">{t('settings.source')}</span>
+              <button
+                type="button"
+                className="tk-btn tk-btn-ghost ql-btn-sm tk-mono"
+                title={SOURCE_URL}
+                onClick={() => window.quizloop.app.openSource()}
+              >
+                {t('settings.sourceOpen')}
+              </button>
+            </div>
             {info && (
               <p className={info.integrity.ok ? 'tk-hint' : 'tk-danger-text'}>
                 <span

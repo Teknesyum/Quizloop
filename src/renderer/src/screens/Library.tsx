@@ -235,6 +235,17 @@ export function Library(): React.JSX.Element {
               </button>
             </>
           )}
+          {window.quizloop.capabilities.packageImport && (
+            <button
+              type="button"
+              className="tk-btn tk-btn-primary"
+              disabled={busy}
+              title={busy ? t('common.loading') : undefined}
+              onClick={() => run(() => window.quizloop.module.pick('file'))}
+            >
+              {t('library.importPackage')}
+            </button>
+          )}
         </div>
       </header>
 
@@ -252,8 +263,16 @@ export function Library(): React.JSX.Element {
       {modules !== null && modules.length === 0 && (
         <div className="tk-panel ql-empty ql-transition-in">
           <h3 className="tk-h3">{t('library.empty.title')}</h3>
-          <p className="tk-prose">{t('library.empty.body')}</p>
-          <p className="tk-hint">{t('library.dropHint')}</p>
+          <p className="tk-prose">
+            {t(
+              window.quizloop.capabilities.packageImport
+                ? 'library.empty.bodyPackage'
+                : 'library.empty.body'
+            )}
+          </p>
+          {window.quizloop.capabilities.folders && (
+            <p className="tk-hint">{t('library.dropHint')}</p>
+          )}
         </div>
       )}
 

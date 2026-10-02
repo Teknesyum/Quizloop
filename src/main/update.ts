@@ -2,11 +2,14 @@ import { app, BrowserWindow, ipcMain, net, shell } from 'electron'
 import { autoUpdater, CancellationToken } from 'electron-updater'
 import { existsSync, readFileSync, writeFileSync } from 'node:fs'
 import { join } from 'node:path'
+import { newer } from '@core/version'
 import { CH, type UpdateStatus } from '@shared/ipc'
 
 const OWNER = 'Teknesyum'
 const REPO = 'Quizloop'
 const RELEASES = `https://github.com/${OWNER}/${REPO}/releases`
+
+export { newer }
 
 let status: UpdateStatus = { state: 'idle' }
 let cancel: CancellationToken | null = null
@@ -15,21 +18,6 @@ let installAfter = false
 function emit(next: UpdateStatus): void {
   status = next
   for (const w of BrowserWindow.getAllWindows()) w.webContents.send(CH.updateChanged, status)
-}
-
-export function newer(latest: string, current: string): boolean {
-  const parse = (v: string): number[] =>
-    v
-      .replace(/^v/, '')
-      .split(/[.-]/)
-      .slice(0, 3)
-      .map((n) => Number.parseInt(n, 10) || 0)
-  const a = parse(latest)
-  const b = parse(current)
-  for (let i = 0; i < 3; i++) {
-    if ((a[i] ?? 0) !== (b[i] ?? 0)) return (a[i] ?? 0) > (b[i] ?? 0)
-  }
-  return false
 }
 
 function nativeUpdates(): boolean {

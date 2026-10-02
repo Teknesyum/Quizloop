@@ -1,4 +1,4 @@
-import { app, BrowserWindow, dialog, ipcMain, type IpcMainInvokeEvent } from 'electron'
+import { app, BrowserWindow, dialog, ipcMain, shell, type IpcMainInvokeEvent } from 'electron'
 import type { Kysely } from 'kysely'
 import type { Database } from '@core/db/types'
 import { createCore } from '@core/commands'
@@ -12,6 +12,7 @@ import { settingsStore } from '@main/settings'
 import { registerBank } from './bank'
 import {
   CH,
+  SOURCE_URL,
   type IntegrityReport,
   type ChapterSummary,
   type InstallResult,
@@ -54,6 +55,8 @@ export function registerHandlers(ctx: Context): {
     platform: process.platform,
     integrity: ctx.integrity
   }))
+
+  ipcMain.on(CH.appOpenSource, () => void shell.openExternal(SOURCE_URL))
 
   ipcMain.on(CH.winMin, (e) => windowOf(e)?.minimize())
   ipcMain.on(CH.winMax, (e) => {

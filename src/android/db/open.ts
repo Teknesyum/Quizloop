@@ -8,6 +8,7 @@ import { Migrator } from 'kysely/migration'
 import { provider } from '@core/db/migrations'
 import type { Database } from '@core/db/types'
 import type { IntegrityReport } from '@shared/ipc'
+import { backupBeforeMigration } from './backup'
 import { CapacitorDialect, CapacitorDriver, type Handle } from './dialect'
 
 const NAME = 'quizloop'
@@ -16,6 +17,7 @@ export interface AndroidDatabase {
   db: Kysely<Database>
   integrity: IntegrityReport
   journal: string
+  backup: string | null
   firstRun: boolean
   migrated: string[]
   generation(): number
@@ -38,7 +40,7 @@ async function prepare(c: SQLiteDBConnection): Promise<string> {
   return mode
 }
 
-export async function openDatabase(): Promise<AndroidDatabase> {
+export async function openDatabase(version = 'unknown'): Promise<AndroidDatabase> {
   const sqlite = new SQLiteConnection(CapacitorSQLite)
   let conn: SQLiteDBConnection | null = null
   let opening: Promise<SQLiteDBConnection> | null = null
@@ -85,7 +87,16 @@ export async function openDatabase(): Promise<AndroidDatabase> {
   const integrity = { ok: detail === 'ok', detail }
 
   const migrator = new Migrator({ db, provider })
-  const applied = (await migrator.getMigrations()).filter((m) => m.executedAt).length
+  const all = await migrator.getMigrations()
+  const applied = all.filter((m) => m.executedAt).length
+  let backup: string | null = null
+  if (applied > 0 && applied < all.length && integrity.ok) {
+    try {
+      backup = await backupBeforeMigration(first, version)
+    } catch (e) {
+      console.warn(`[quizloop] backup failed ${String(e)}`)
+    }
+  }
   const { error, results } = await migrator.migrateToLatest()
   if (error) throw error
 
@@ -112,6 +123,7 @@ export async function openDatabase(): Promise<AndroidDatabase> {
     db,
     integrity,
     journal,
+    backup,
     firstRun: applied === 0,
     migrated: (results ?? []).filter((r) => r.status === 'Success').map((r) => r.migrationName),
     generation: () => gen,

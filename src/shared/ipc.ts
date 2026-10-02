@@ -162,7 +162,17 @@ export const FONT_SCALES = [0.9, 1, 1.1, 1.25, 1.4, 1.6] as const
 
 export type WorkTask = 'install' | 'remove' | 'export' | 'import'
 export type WorkStep =
-  'read' | 'unpack' | 'write' | 'copy' | 'sync' | 'remove' | 'database' | 'done' | 'failed'
+  | 'read'
+  | 'unpack'
+  | 'write'
+  | 'extract'
+  | 'verify'
+  | 'copy'
+  | 'sync'
+  | 'remove'
+  | 'database'
+  | 'done'
+  | 'failed'
 export type WorkStatus = 'running' | 'done' | 'error'
 
 export interface WorkProgress {
@@ -198,6 +208,8 @@ export interface IntegrityReport {
   detail: string
 }
 
+export const SOURCE_URL = 'https://github.com/Teknesyum/Quizloop'
+
 export interface Capabilities {
   windowChrome: boolean
   shortcuts: boolean
@@ -205,6 +217,8 @@ export interface Capabilities {
   backButton: boolean
   updater: boolean
   folders: boolean
+  settingsFile: boolean
+  packageImport: boolean
 }
 
 export const DESKTOP_CAPABILITIES: Capabilities = {
@@ -213,7 +227,9 @@ export const DESKTOP_CAPABILITIES: Capabilities = {
   pinchZoom: false,
   backButton: false,
   updater: true,
-  folders: true
+  folders: true,
+  settingsFile: true,
+  packageImport: false
 }
 
 export interface QuizloopApi {
@@ -222,6 +238,7 @@ export interface QuizloopApi {
   app: {
     info(): Promise<{ version: string; platform: NodeJS.Platform; integrity: IntegrityReport }>
     onBack(cb: () => void): () => void
+    openSource(): void
   }
   window: {
     minimize(): void
@@ -293,6 +310,7 @@ export interface QuizloopApi {
 
 export const CH = {
   appInfo: 'app:info',
+  appOpenSource: 'app:openSource',
   winMin: 'window:minimize',
   winMax: 'window:toggleMaximize',
   winClose: 'window:close',

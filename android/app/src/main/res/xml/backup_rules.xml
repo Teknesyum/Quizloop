@@ -4,4 +4,5 @@
     <include domain="sharedpref" path="." />
     <include domain="file" path="." />
     <exclude domain="file" path="modules/" />
+    <exclude domain="file" path="backups/" />
 </full-backup-content>
