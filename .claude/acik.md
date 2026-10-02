@@ -25,3 +25,4 @@
 - [ ] ajan: Play mağaza malzemeleri — 2026-10-02 13:19 — sonucu aktarılacak
 - [ ] Play mağaza malzemeleri (ajan) — 2026-10-02 13:21 — arka planda çalışıyor
 - [ ] İmzalı AAB/APK — 2026-10-02 13:21 — kullanıcının anahtarı bekleniyor
+- [ ] İmzalı AAB — 2026-10-02 13:48 — kullanıcının anahtarı ve GitHub şifreleri bekleniyor
