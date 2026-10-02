@@ -12,10 +12,16 @@ const STORE = 'ql-lang'
 
 function readLang(): Lang {
   try {
-    return localStorage.getItem(STORE) === 'en' ? 'en' : 'tr'
+    const saved = localStorage.getItem(STORE)
+    if (saved === 'en' || saved === 'tr') return saved
   } catch {
-    return 'tr'
+    return deviceLang()
   }
+  return deviceLang()
+}
+
+function deviceLang(): Lang {
+  return /^tr\b/i.test(navigator.language ?? '') ? 'tr' : 'en'
 }
 
 export const lang: Lang = readLang()
