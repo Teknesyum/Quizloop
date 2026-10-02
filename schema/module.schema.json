@@ -54,6 +54,39 @@
           "type": "integer",
           "minimum": -9007199254740991,
           "maximum": 9007199254740991
+        },
+        "bolumler": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "bolum": {
+                "type": "integer",
+                "exclusiveMinimum": 0,
+                "maximum": 9007199254740991
+              },
+              "ilkSayfa": {
+                "type": "integer",
+                "exclusiveMinimum": 0,
+                "maximum": 9007199254740991
+              },
+              "sonSayfa": {
+                "type": "integer",
+                "exclusiveMinimum": 0,
+                "maximum": 9007199254740991
+              },
+              "dosya": {
+                "type": "string",
+                "pattern": "^kaynak\\/bolum\\/[A-Za-z0-9._-]+\\.pdf$"
+              }
+            },
+            "required": [
+              "bolum",
+              "ilkSayfa",
+              "sonSayfa",
+              "dosya"
+            ]
+          }
         }
       },
       "required": [

@@ -6,6 +6,13 @@ export const ModuleBlockRef = z.object({
   sha256: z.string().length(64)
 })
 
+export const BookPart = z.object({
+  bolum: z.number().int().positive(),
+  ilkSayfa: z.number().int().positive(),
+  sonSayfa: z.number().int().positive(),
+  dosya: z.string().regex(/^kaynak\/bolum\/[A-Za-z0-9._-]+\.pdf$/)
+})
+
 export const ModuleMeta = z.object({
   schemaVersion: z.literal(1),
   id: z.string().regex(/^[a-z0-9][a-z0-9-]{1,63}$/),
@@ -22,7 +29,8 @@ export const ModuleMeta = z.object({
       title: z.string(),
       file: z.string().optional(),
       pages: z.number().int().positive().optional(),
-      sayfaOfseti: z.number().int().default(0)
+      sayfaOfseti: z.number().int().default(0),
+      bolumler: z.array(BookPart).optional()
     })
     .optional(),
   blocks: z.array(ModuleBlockRef).min(1),
@@ -31,4 +39,5 @@ export const ModuleMeta = z.object({
 })
 
 export type ModuleMeta = z.infer<typeof ModuleMeta>
+export type BookPart = z.infer<typeof BookPart>
 export type ModuleBlockRef = z.infer<typeof ModuleBlockRef>

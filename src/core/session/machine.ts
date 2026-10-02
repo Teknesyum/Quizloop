@@ -84,7 +84,11 @@ export class SessionMachine {
       tags: q.tags,
       vurgu: q.vurgu,
       assetBase: this.deps.assetBase(s.moduleId),
-      relearn: c.relearn
+      relearn: c.relearn,
+      kaynak: {
+        sayfa: q.source.pages[0],
+        ...(q.source.kesit ? { pdfSayfa: q.source.kesit.pdfSayfa } : {})
+      }
     }
   }
 

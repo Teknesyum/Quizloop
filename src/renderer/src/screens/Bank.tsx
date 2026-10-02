@@ -4,6 +4,7 @@ import { tinykeys } from 'tinykeys'
 import type { BankQuestion, BankRow, SourceBook } from '@shared/ipc'
 import { BookButton } from '@renderer/components/BookButton'
 import { BookViewer } from '@renderer/components/BookViewer'
+import { sourcePdfPage, useTargetWarmup } from '@renderer/components/bookdoc'
 import { Markdown } from '@renderer/components/Markdown'
 import { Skeleton } from '@renderer/components/Skeleton'
 import { Solution } from '@renderer/components/Solution'
@@ -100,6 +101,8 @@ export function Bank({
       dead = true
     }
   }, [moduleId])
+
+  useTargetWarmup(book, open ? sourcePdfPage(open.source, book?.sayfaOfseti ?? 0) : null)
 
   useEffect(() => {
     if (!modules) loadModules()

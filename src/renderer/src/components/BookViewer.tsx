@@ -11,11 +11,12 @@ import { Skeleton } from '@renderer/components/Skeleton'
 import { t } from '@renderer/i18n'
 import { shortAlt } from './media'
 import { useApp } from '@renderer/store/app'
-import { idle, openBook, warmBook } from './bookdoc'
+import { bookTarget, idle, openBook, sourcePdfPage, warmBook } from './bookdoc'
 import './bookviewer.css'
 
 const MAX_PX = 1 << 25
 const ZOOM_MAX = 4
+const DPR_MAX = 2
 
 interface Highlight {
   bbox?: [number, number, number, number]
@@ -51,9 +52,44 @@ function slowMs(): number {
   return tokenMs('--tk-t-slow')
 }
 
+function release(host: HTMLElement | null): void {
+  host?.querySelectorAll('canvas').forEach((c) => {
+    c.width = 0
+    c.height = 0
+  })
+}
+
+function pinchSpan(t: TouchList): { d: number; x: number; y: number } | null {
+  const a = t[0]
+  const b = t[1]
+  if (!a || !b) return null
+  return {
+    d: Math.hypot(a.clientX - b.clientX, a.clientY - b.clientY),
+    x: (a.clientX + b.clientX) / 2,
+    y: (a.clientY + b.clientY) / 2
+  }
+}
+
+interface FlipInner {
+  isUserTouch: boolean
+  isUserMove: boolean
+  getUI(): { touchPoint: unknown }
+  getFlipController(): { stopMove(): void }
+}
+
+function dropTouch(pf: PageFlip | null): void {
+  if (!pf) return
+  const app = pf as unknown as FlipInner
+  app.getUI().touchPoint = null
+  if (app.isUserTouch && app.isUserMove) app.getFlipController().stopMove()
+  app.isUserTouch = false
+  app.isUserMove = false
+}
+
 function Leaf({
   doc,
   pdfPage,
+  folio,
   width,
   renderWidth,
   ratio,
@@ -63,6 +99,7 @@ function Leaf({
 }: {
   doc: PDFDocumentProxy | null
   pdfPage: number
+  folio: number
   width: number
   renderWidth: number
   ratio: number
@@ -77,6 +114,11 @@ function Leaf({
   const [rects, setRects] = useState<Rect[]>([])
   const [unit, setUnit] = useState<{ w: number; h: number } | null>(null)
   const blank = !doc || pdfPage < 1 || pdfPage > doc.numPages
+
+  useEffect(() => {
+    const paint = paintRef.current
+    return () => release(paint)
+  }, [])
 
   useEffect(() => {
     if (!follow || !shown || rects.length === 0) return
@@ -139,7 +181,7 @@ function Leaf({
 
   useEffect(() => {
     if (!doc || blank || renderWidth <= 0) return
-    const dpr = window.devicePixelRatio || 1
+    const dpr = Math.min(DPR_MAX, window.devicePixelRatio || 1)
     const key = `${pdfPage}:${renderWidth}:${dpr}`
     if (doneRef.current === key) return
     const live = jobRef.current
@@ -174,6 +216,7 @@ function Leaf({
       })
       await job.task.promise
       if (!job.want || !paintRef.current) return
+      release(paintRef.current)
       paintRef.current.replaceChildren(canvas)
       doneRef.current = key
     }
@@ -210,7 +253,7 @@ function Leaf({
             />
           ))}
       </div>
-      {!blank && <span className="tk-mono ql-book-folio">{pdfPage}</span>}
+      {!blank && <span className="tk-mono ql-book-folio">{folio}</span>}
     </div>
   )
 }
@@ -230,16 +273,20 @@ export function BookViewer({
   onBook(next: SourceBook): void
   onClose(): void
 }): React.JSX.Element {
-  const usePdf = Boolean(book?.available && book.url)
-  const warm = usePdf && book?.url ? warmBook(book.url, book.path) : null
+  const offset = book?.sayfaOfseti ?? 0
+  const target = useMemo(
+    () => bookTarget(book, sourcePdfPage(source, offset)),
+    [book, source, offset]
+  )
+  const usePdf = Boolean(target)
+  const base = target?.base ?? 0
+  const lo = Math.max(1, base + 1 - offset)
+  const shift = lo - (lo % 2)
+  const warm = target ? warmBook(target.url, target.path) : null
   const [doc, setDoc] = useState<PDFDocumentProxy | null>(() => warm?.doc ?? null)
   const [failed, setFailed] = useState(false)
   const [busy, setBusy] = useState(false)
-  const [cur, setCur] = useState(() => {
-    const off = book?.sayfaOfseti ?? 0
-    const start = source.kesit ? source.kesit.pdfSayfa - off : source.pages[0]
-    return Math.max(1, start)
-  })
+  const [cur, setCur] = useState(() => Math.max(lo, sourcePdfPage(source, offset) - offset))
   const [portrait, setPortrait] = useState(false)
   const [pageEls, setPageEls] = useState<HTMLElement[]>([])
   const hostRef = useRef<HTMLDivElement | null>(null)
@@ -258,10 +305,14 @@ export function BookViewer({
   const zoomRef = useRef(1)
   const anchorRef = useRef<{ px: number; py: number; cx: number; cy: number } | null>(null)
 
+  const targetUrl = target?.url ?? null
+  const targetPath = target?.path ?? null
+  const targetWhole = target?.whole ?? false
+
   useEffect(() => {
-    if (!usePdf || !book?.url) return
+    if (!targetUrl) return
     let dead = false
-    const entry = openBook(book.url, book.path)
+    const entry = openBook(targetUrl, targetPath, targetWhole)
     entry.promise.then(
       (d) => {
         if (dead) return
@@ -275,7 +326,7 @@ export function BookViewer({
     return () => {
       dead = true
     }
-  }, [usePdf, book?.url, book?.path])
+  }, [targetUrl, targetPath, targetWhole])
 
   useEffect(() => {
     const el = spreadRef.current
@@ -292,9 +343,8 @@ export function BookViewer({
     return () => ro.disconnect()
   }, [usePdf, failed])
 
-  const last = doc ? doc.numPages : (book?.pages ?? source.pages[1])
-  const offset = book?.sayfaOfseti ?? 0
-  const maxLeft = Math.max(1, last - offset)
+  const last = doc ? doc.numPages + base : (book?.pages ?? source.pages[1])
+  const maxLeft = Math.max(lo, last - offset)
   const leafH = Math.round(leafWidth * ratio)
   const left = portrait ? cur : cur - (cur % 2)
 
@@ -307,7 +357,7 @@ export function BookViewer({
     if (!doc || !host || leafWidth <= 0 || leafH <= 0) return
     const root = document.createElement('div')
     host.appendChild(root)
-    const els = Array.from({ length: maxLeft + 1 }, () => {
+    const els = Array.from({ length: maxLeft - shift + 1 }, () => {
       const el = document.createElement('div')
       el.className = 'ql-book-page'
       return el
@@ -317,7 +367,7 @@ export function BookViewer({
       width: leafWidth,
       height: leafH,
       size: 'fixed',
-      startPage: Math.min(curRef.current, maxLeft),
+      startPage: Math.min(curRef.current, maxLeft) - shift,
       showCover: false,
       usePortrait: true,
       autoSize: true,
@@ -328,11 +378,11 @@ export function BookViewer({
       showPageCorners: true
     })
     pf.loadFromHTML(els)
-    pf.on('flip', (e) => setCur(Number(e.data)))
+    pf.on('flip', (e) => setCur(Number(e.data) + shift))
     pf.on('changeOrientation', (e) => setPortrait(e.data === 'portrait'))
     flipRef.current = pf
     setPageEls(els)
-    setCur(pf.getCurrentPageIndex())
+    setCur(pf.getCurrentPageIndex() + shift)
     setPortrait(pf.getOrientation() === 'portrait')
     return () => {
       flipRef.current = null
@@ -340,7 +390,7 @@ export function BookViewer({
       pf.destroy()
       root.remove()
     }
-  }, [doc, leafWidth, leafH, maxLeft])
+  }, [doc, leafWidth, leafH, maxLeft, shift])
 
   useEffect(() => {
     if (zoom === sharpZoom) return
@@ -383,6 +433,41 @@ export function BookViewer({
     return () => el.removeEventListener('wheel', onWheel)
   }, [zoomTo])
 
+  useEffect(() => {
+    const el = frameRef.current
+    if (!el || !window.quizloop.capabilities.pinchZoom) return
+    let start: { d: number; z: number } | null = null
+    const onStart = (e: TouchEvent): void => {
+      const s = e.touches.length === 2 ? pinchSpan(e.touches) : null
+      if (!s || s.d <= 0) return
+      e.preventDefault()
+      e.stopPropagation()
+      dropTouch(flipRef.current)
+      start = { d: s.d, z: zoomRef.current }
+    }
+    const onMove = (e: TouchEvent): void => {
+      if (!start) return
+      const s = pinchSpan(e.touches)
+      if (!s) return
+      e.preventDefault()
+      e.stopPropagation()
+      zoomTo((start.z * s.d) / start.d, s.x, s.y)
+    }
+    const onEnd = (e: TouchEvent): void => {
+      if (start && e.touches.length < 2) start = null
+    }
+    el.addEventListener('touchstart', onStart, { passive: false, capture: true })
+    el.addEventListener('touchmove', onMove, { passive: false, capture: true })
+    el.addEventListener('touchend', onEnd, { capture: true })
+    el.addEventListener('touchcancel', onEnd, { capture: true })
+    return () => {
+      el.removeEventListener('touchstart', onStart, { capture: true })
+      el.removeEventListener('touchmove', onMove, { capture: true })
+      el.removeEventListener('touchend', onEnd, { capture: true })
+      el.removeEventListener('touchcancel', onEnd, { capture: true })
+    }
+  }, [zoomTo])
+
   useLayoutEffect(() => {
     const a = anchorRef.current
     anchorRef.current = null
@@ -423,14 +508,15 @@ export function BookViewer({
   }, [turn, onClose, zoomTo])
 
   const highlight = useMemo<Highlight | null>(() => {
-    if (source.kesit) return { bbox: source.kesit.bbox, bboxPage: source.kesit.pdfSayfa }
+    if (source.kesit) return { bbox: source.kesit.bbox, bboxPage: source.kesit.pdfSayfa - base }
     return { quote: source.quote }
-  }, [source])
+  }, [source, base])
 
-  const pages = portrait ? [Math.max(1, left)] : [Math.max(1, left), Math.min(left + 1, maxLeft)]
+  const pages = portrait ? [Math.max(lo, left)] : [Math.max(lo, left), Math.min(left + 1, maxLeft)]
   const blinkN = Math.max(1, Math.round((blinkSeconds * 1000) / slowMs()) | 1)
   const kesitRef = source.kesit?.ref
   const showPick = !usePdf || failed
+  const canPick = window.quizloop.capabilities.folders
   const showForget = Boolean(book?.path) && !failed
   const zoomed = zoom > 1 && Boolean(doc) && leafWidth > 0
 
@@ -484,7 +570,7 @@ export function BookViewer({
               type="button"
               className="tk-btn tk-btn-ghost ql-btn-sm"
               onClick={() => turn('prev')}
-              disabled={showPick || left <= 1}
+              disabled={showPick || left <= (portrait ? lo : shift)}
             >
               {t('book.prev')}
             </button>
@@ -521,12 +607,14 @@ export function BookViewer({
                     } as React.CSSProperties
                   }
                 >
-                  {pageEls.map((el, i) =>
-                    i >= 1 && i >= left - 2 && i <= left + 3
+                  {pageEls.map((el, j) => {
+                    const i = j + shift
+                    return i >= lo && i >= left - 2 && i <= left + 3
                       ? createPortal(
                           <Leaf
                             doc={doc}
-                            pdfPage={pdfPageOf(i, offset)}
+                            pdfPage={pdfPageOf(i, offset) - base}
+                            folio={pdfPageOf(i, offset)}
                             width={leafWidth}
                             renderWidth={leafWidth}
                             ratio={ratio}
@@ -538,7 +626,7 @@ export function BookViewer({
                           String(i)
                         )
                       : null
-                  )}
+                  })}
                 </div>
               ) : (
                 <div className="ql-book-loading">
@@ -560,15 +648,17 @@ export function BookViewer({
             ) : (
               <div className="ql-book-missing">
                 <p className="tk-prose">{t('book.missing')}</p>
-                <button
-                  type="button"
-                  className="tk-btn tk-btn-primary"
-                  onClick={pick}
-                  disabled={busy}
-                  title={busy ? t('book.busy') : t('book.pick')}
-                >
-                  {t('book.pick')}
-                </button>
+                {canPick && (
+                  <button
+                    type="button"
+                    className="tk-btn tk-btn-primary"
+                    onClick={pick}
+                    disabled={busy}
+                    title={busy ? t('book.busy') : t('book.pick')}
+                  >
+                    {t('book.pick')}
+                  </button>
+                )}
               </div>
             )}
           </div>
@@ -579,7 +669,8 @@ export function BookViewer({
                   <div key={i} className="ql-bv-zleaf" style={{ width: leafWidth * zoom }}>
                     <Leaf
                       doc={doc}
-                      pdfPage={pdfPageOf(i, offset)}
+                      pdfPage={pdfPageOf(i, offset) - base}
+                      folio={pdfPageOf(i, offset)}
                       width={leafWidth * zoom}
                       renderWidth={leafWidth * sharpZoom}
                       ratio={ratio}
@@ -596,9 +687,9 @@ export function BookViewer({
 
         <footer className="ql-book-foot">
           <p className="ql-book-quote">{source.quote}</p>
-          {((showPick && kesitRef) || showForget) && (
+          {((showPick && kesitRef && canPick) || showForget) && (
             <span className="ql-book-source">
-              {showPick && kesitRef && (
+              {showPick && kesitRef && canPick && (
                 <button
                   type="button"
                   className="tk-btn tk-btn-ghost ql-btn-sm"

@@ -123,6 +123,45 @@ güvenilmez (R8 eklenti sınıflarını kırpabilir).
 - pdf.js ölçeği `devicePixelRatio ≤ 2`; görünmeyen sayfanın canvas'ı bırakılır.
 - Ölçüm: parçaların toplamı 412 MB'ı %20'den fazla aşarsa `--object-streams=generate`.
 
+- **Durum (2026-10-02): tamam, gerçek telefon hariç.** Tasarım: ayrı Android paketi.
+  `quizforge paket --android` → `dist-modules/<id>-<sürüm>-android.qlmod`; içinde tam PDF yok,
+  yalnız `kaynak/bolum/NN.pdf` ve `source.bolumler`. Masaüstü paketi ve diskteki `module.json`
+  değişmedi (`bolumler` yalnız Android paketindeki manifestte). Gerekçe: telefonda 412 MB
+  kazanılır; Capacitor yerel sunucusu Range isteğine tüm dosyayı sahte `Content-Range` ile
+  döndürdüğü için tam PDF parça parça okunamaz, tamamı da belleğe alınamaz. Bu yüzden Android'de
+  tam PDF'e geri dönüş yok; masaüstü paketi telefona kurulursa yalnız kesit görselleri görünür.
+  qpdf 12.4.2 winget ile makineye kuruldu; yol `QPDF`, `PATH` ya da `Program Files\qpdf*`;
+  `quizforge doctor` gösterir. qpdf uyarı kodu 3 kabul edilir.
+- Görüntüleyici: `bookTarget` sorunun PDF sayfasını içeren parçayı seçer; parça tümüyle
+  `fetch` + `getDocument({data})` ile açılır, `openBook` tekil olduğu için aynı anda tek parça
+  açıktır. PageFlip indeksi `shift` (bölüm başının çift hizası) kadar kaydırılır, yerel sayfa
+  `kitap sayfası + ofset − (ilkSayfa − 1)`; folyo genel PDF sayfasını gösterir; Önceki/Sonraki
+  bölüm sınırında kapanır. Isıtma: oturumda soru ekrandayken o sorunun parçası boşta açılır
+  (`QuestionView.kaynak`); bir sonraki sorunun parçası önceden ısıtılmıyor. DPR ≤ 2; görünmeyen
+  sayfanın canvas'ı 0×0 yapılır. İki parmak yakınlaştırma `capabilities.pinchZoom` ile açık;
+  ilk parmak PageFlip'e çevirme olarak gitmesin diye çimdik başlayınca dokunuş sıfırlanır.
+  Android'de "Kitabı seç" düğmesi `capabilities.folders` ile gizli.
+- WebView 113 açıkları: pdf.js legacy derlemesi `Promise.withResolvers`,
+  `ArrayBuffer.transferToFixedLength`, `ReadableStream` async yineleme ve `Response.bytes`
+  için yama getirmiyor. Belirti: sayfa beyaz kalır, işaret çıkmaz. `src/android/polyfill.js`
+  ana iş parçacığında yüklenir; işçi `pdfworker.ts` içinde blob modülünden önce yamayı sonra
+  pdf.js işçisini içe aktarır (CSP `worker-src blob:`; yama `?url&no-inline` ile ayrı dosya).
+- **Ölçüm (a8_test, Android 14, WebView 113, debug, 393×778 @ 2,75):**
+  - Parçalar: 59 bölüm, 1,7–19,1 MB, toplam 406,7 MB = kitabın %98,7'si; eşik aşılmadı.
+    `--object-streams=generate` denemesi 405,3 MB, fark önemsiz.
+  - Android paketi 642,5 MB (masaüstü 647,6 MB). Kurulum: açma 7,2 sn, doğrulama 1,9 sn.
+  - Parça açma (fetch + ayrıştırma + 786 px ilk sayfa): 1,7 MB 0,24 sn; 6,2 MB 0,19 sn;
+    18,3 MB 0,40 sn; 19,1 MB 0,43 sn.
+  - "Lange'de gör" → ilk çizilmiş canvas: 0,71–0,82 sn (parça ısıtılmış); canvas 726×1126.
+  - Tepe bellek: WebView işlemi VmHWM 371 MB (RSS 317 MB, PSS 217 MB), uygulama VmHWM
+    273 MB (PSS 115 MB); bölüm + karışık oturum, iki zoom, 4 parça art arda açıldıktan sonra.
+- Denendi: Kütüphane → 6. bölüm → oturum → "Lange'de gör" doğru sayfa (113, 124, 115) ve
+  alıntı altı çizili; bölüm başında Önceki, sonunda Sonraki kapalı; çimdikle %220 ve geri,
+  sayfa kaymıyor. Karışık oturumda her soru yalnız kendi parçasını istedi (29, 45).
+- Açık: gerçek telefon ve release derlemesi denenmedi. JBIG2 görselleri `wasmUrl` verilmediği
+  için çözülmüyor (masaüstü de `wasmUrl` vermiyor; sayfa yine çiziliyor). Bir sonraki sorunun parçası
+  önceden ısıtılmıyor.
+
 ### A6 — Dokunmatik Ve Telefon Yerleşimi
 
 - Şıklara dokunma, alt eylem çubuğu, pencere düğmeleri yok, güvenli alan boşlukları.

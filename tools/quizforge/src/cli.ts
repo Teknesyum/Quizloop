@@ -10,7 +10,7 @@ import { PRICES, run } from './generate.ts'
 import { loadCheckpoint } from './checkpoint.ts'
 import { verify } from './verify.ts'
 import { pack } from './pack.ts'
-import { paket } from './paket.ts'
+import { paket, qpdfYolu } from './paket.ts'
 import { hasMaterial, writeBriefs } from './brief.ts'
 import { ingest } from './ingest.ts'
 import { geriAl } from './geri.ts'
@@ -51,6 +51,8 @@ const HELP = `quizforge <komut> --rules <rules.yaml> [seçenekler]
   verify    deterministik denetim: build/verify-report.json
   pack      modules/<id>/ yaz; verify geçmeden çalışmaz
   paket     modules/<id>/ klasörünü etiketleriyle tek dosyaya sar: dist-modules/<id>-<sürüm>.qlmod
+            --android  tam PDF yerine chapters.json aralıklarından qpdf ile bölüm PDF'leri
+                       (kaynak/bolum/NN.pdf, module.json source.bolumler): <id>-<sürüm>-android.qlmod
   flags     uygulamanın flags.json dosyasını oku, soruları birimlerine eşle, o birimleri
             yeniden üretim kuyruğuna koy   --flags <dosya> zorunlu, --gorsel, --dry-run
   zorluk    tek ölçütle yeniden etiketleme
@@ -62,7 +64,7 @@ const HELP = `quizforge <komut> --rules <rules.yaml> [seçenekler]
                        (in/NNN.json, out/NNN.json, modules/<id>/blocks) → build/secenek/olcum.json
             export  şıklı soruları build/secenek/in/NNN.json partilerine (40) ve istem.md'ye yaz
             apply   build/secenek/out/*.json çıktılarını doğrula, birimlere yaz   --dry-run
-  doctor    ortamı sına: python, pypdf, ANTHROPIC_API_KEY, külliyat dosyaları
+  doctor    ortamı sına: python, pypdf, qpdf, ANTHROPIC_API_KEY, külliyat dosyaları
 `
 
 const here = path.dirname(fileURLToPath(import.meta.url))
@@ -86,6 +88,7 @@ function main(argv: string[]): number {
       gorsel: { type: 'boolean', default: false },
       tur: { type: 'string' },
       flags: { type: 'string' },
+      android: { type: 'boolean', default: false },
       help: { type: 'boolean', short: 'h', default: false }
     }
   })
@@ -106,6 +109,7 @@ function main(argv: string[]): number {
     console.log(
       `python+pypdf: ${py.status === 0 ? py.stdout.trim() : 'YOK (' + (py.stderr || py.error?.message || '').trim().split('\n').pop() + ')'}`
     )
+    console.log(`qpdf: ${qpdfYolu() ?? 'YOK (winget install --id QPDF.QPDF -e)'}`)
     console.log(`ANTHROPIC_API_KEY: ${process.env['ANTHROPIC_API_KEY'] ? 'var' : 'YOK'}`)
     for (const f of [l.rules.kaynak.yol, l.rules.kaynak.kulliyat, l.rules.kaynak.bolumHaritasi]) {
       console.log(`${f}: ${fs.existsSync(path.resolve(l.root, f)) ? 'var' : 'YOK'}`)
@@ -278,7 +282,14 @@ function main(argv: string[]): number {
   }
 
   if (cmd === 'paket') {
-    const r = paket(l)
+    const r = paket(l, { android: values.android })
+    if (r.bolum) {
+      const b = r.bolum
+      const mb = (n: number): string => (n / 1048576).toFixed(1)
+      console.log(
+        `${b.parcalar.length} bölüm PDF'i: ${mb(b.toplam)} MB / kitap ${mb(b.kitap)} MB (x${(b.toplam / b.kitap).toFixed(2)})${b.nesneAkisi ? ', --object-streams=generate' : ''}`
+      )
+    }
     console.log(
       `${r.files} dosya, ${(r.bytes / 1048576).toFixed(1)} MB → ${path.relative(l.root, r.out)}`
     )

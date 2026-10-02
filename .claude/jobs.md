@@ -1,4 +1,0 @@
-- [ ] A4 büyük paket içeri alma (ajan) — arka planda çalışıyor
-- [x] A7 hazırlık: imza ayarı, sürüm denetimi, AGPL, Android ayar yazısı, göç yedeği (ajan)
-- [ ] A5 bölüm PDF'leri — A4 bitince, aynı Android kabuğuna dokunuyor
-- [ ] Play kapalı test + paket kaydı — Google onayı ve kullanıcının anahtarı bekleniyor
