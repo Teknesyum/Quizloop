@@ -6,6 +6,14 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+### Added
+
+- `quizforge hafizlik` writes the review round (dönüş) of every segment, and
+  whether it sits at the start, middle or end of that round, into the solution
+  and into each wrong-choice note. `--duzen donus` builds the same cards with
+  twenty chapters by round. The package now carries the mushaf pages, so the
+  source button opens the printed page.
+
 ## [0.7.13] - 2026-10-04
 
 ### Changed

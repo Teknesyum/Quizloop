@@ -1,21 +1,40 @@
 import fs from 'node:fs'
 import path from 'node:path'
+import { spawnSync } from 'node:child_process'
 import { parseArgs } from 'node:util'
 import { zipSync, type Zippable } from 'fflate'
-import { ModuleMeta } from '../../../../src/shared/schema/module.ts'
+import { ModuleMeta, type BookPart } from '../../../../src/shared/schema/module.ts'
 import { Block } from '../../../../src/shared/schema/question.ts'
 import { sha256 } from '../hash.ts'
 import {
   MEAL_KIMLIK,
   MUSHAF_SURUM,
   caprazDenetle,
+  kitapYukle,
   mealYukle,
   mushafYukle,
   type Meal
 } from './kaynak.ts'
-import { uret } from './uret.ts'
+import { DONUS_ADEDI, uret } from './uret.ts'
 
 const MODUL = 'kuran-hafizlik'
+const SURUM = '1.3.0'
+const DUZENLER = {
+  cuz: {
+    id: MODUL,
+    ad: "Kur'an-ı Kerim Hafızlık Sağlama",
+    bolum: 30,
+    aciklama: 'Bölümler cüz sırasıyladır.'
+  },
+  donus: {
+    id: `${MODUL}-donus`,
+    ad: "Kur'an-ı Kerim Hafızlık Dönüş Usulü",
+    bolum: DONUS_ADEDI,
+    aciklama: 'Bölümler dönüş sırasıyladır; her dönüşte cüzler birden otuza gider.'
+  }
+} as const
+const DONUS_NOTU =
+  'Dönüş, her cüzün son sayfasından başa doğru sayılır: 1. Dönüş son sayfadır, 20. Dönüş ilk sayfadır. 30. Cüz 24 sayfadır; son beş sayfası (600-604) 1. Dönüş sayılır.'
 const BLOK = 50
 const IMLA_FARKI = new Set(['21:88', '63:10', '72:16'])
 const MEAL_ADLARI: Record<number, string> = { 77: 'Diyanet İşleri', 52: 'Elmalılı Hamdi Yazır' }
@@ -23,7 +42,11 @@ const MEAL_ADLARI: Record<number, string> = { 77: 'Diyanet İşleri', 52: 'Elmal
 export const HAFIZLIK_HELP = `quizforge hafizlik [seçenekler]
 
   Kur'an hafızlık sağlama modülünü üretir: modules/${MODUL}/
-  Metin ve meal bu bilgisayara indirilir, depoya girmez.
+  Metin, meal ve mushaf sayfaları bu bilgisayara indirilir, depoya girmez.
+
+  --duzen <ad>    bölümler: cuz (varsayılan, 30 cüz) ya da donus (20 dönüş;
+                  her cüzün son sayfasından başa doğru, modül ${MODUL}-donus)
+  --kitapsiz      mushaf sayfalarını pakete koyma ("Kuran'da gör" çalışmaz)
 
   --cuz <a|a-b>   yalnız bu cüzler (varsayılan 1-30)
   --meal <no>     quran.com meal kimliği (varsayılan ${MEAL_KIMLIK}, Diyanet İşleri)
@@ -47,6 +70,8 @@ export async function hafizlik(argv: string[], root: string): Promise<number> {
     args: argv,
     options: {
       cuz: { type: 'string' },
+      duzen: { type: 'string' },
+      kitapsiz: { type: 'boolean', default: false },
       meal: { type: 'string' },
       mealsiz: { type: 'boolean', default: false },
       siksiz: { type: 'boolean', default: false },
@@ -58,6 +83,9 @@ export async function hafizlik(argv: string[], root: string): Promise<number> {
     process.stdout.write(HAFIZLIK_HELP)
     return 0
   }
+  const duzenAdi = values.duzen ?? 'cuz'
+  if (duzenAdi !== 'cuz' && duzenAdi !== 'donus') throw new Error('--duzen cuz ya da donus olmalı')
+  const duzen = DUZENLER[duzenAdi]
   const buildDir = path.join(root, 'sources', MODUL, 'build')
   const sureler = await mushafYukle(buildDir)
   console.log('mushaf: 114 sure, 6236 ayet, sağlama toplamı tuttu')
@@ -80,9 +108,10 @@ export async function hafizlik(argv: string[], root: string): Promise<number> {
   const r = uret(sureler, meal, {
     cuzler: cuzAraligi(values.cuz),
     sikli: !values.siksiz,
+    duzen: duzenAdi,
     enAz: values['en-az'] ? Number(values['en-az']) : undefined
   })
-  const outDir = path.join(root, 'modules', MODUL)
+  const outDir = path.join(root, 'modules', duzen.id)
   const blocksDir = path.join(outDir, 'blocks')
   fs.rmSync(blocksDir, { recursive: true, force: true })
   fs.mkdirSync(blocksDir, { recursive: true })
@@ -99,24 +128,50 @@ export async function hafizlik(argv: string[], root: string): Promise<number> {
     bayt += Buffer.byteLength(data)
     blocks.push({ file, count: block.questions.length, sha256: sha256(data) })
   }
+  const bolumler: BookPart[] = []
+  if (!values.kitapsiz) {
+    const kitap = await kitapYukle(buildDir)
+    const bolumDir = path.join(buildDir, 'bolum')
+    const py = spawnSync(
+      process.platform === 'win32' ? 'python' : 'python3',
+      [path.join(root, 'tools', 'quizforge', 'py', 'hafizlik_kitap.py'), kitap, bolumDir],
+      { encoding: 'utf8' }
+    )
+    if (py.status !== 0)
+      throw new Error(`mushaf PDF bölünemedi: ${(py.stderr || py.error?.message || '').trim()}`)
+    const parcalar = JSON.parse(py.stdout) as (Omit<BookPart, 'dosya'> & { ad: string })[]
+    fs.rmSync(path.join(outDir, 'kaynak'), { recursive: true, force: true })
+    for (const x of parcalar) {
+      const dosya = `kaynak/bolum/${x.ad}`
+      const veri = fs.readFileSync(path.join(bolumDir, x.ad))
+      const hedef = path.join(outDir, dosya)
+      fs.mkdirSync(path.dirname(hedef), { recursive: true })
+      fs.writeFileSync(hedef, veri)
+      zip[dosya] = [veri, { level: 0 }]
+      bolumler.push({ bolum: x.bolum, ilkSayfa: x.ilkSayfa, sonSayfa: x.sonSayfa, dosya })
+    }
+  }
   const meta = ModuleMeta.parse({
     schemaVersion: 1,
-    id: MODUL,
-    name: "Kur'an-ı Kerim Hafızlık Sağlama",
-    version: '1.2.1',
+    id: duzen.id,
+    name: duzen.ad,
+    version: SURUM,
     language: 'tr',
-    description:
-      'Bir parça gösterilir, devamı ezberden okunur. Parçalar Diyanet mushafının secavend duraklarına göre bölünmüştür.',
+    description: `Bir parça gösterilir, devamı ezberden okunur. Parçalar Diyanet mushafının secavend duraklarına göre bölünmüştür. ${duzen.aciklama} ${DONUS_NOTU}`,
     tags: ['kuran', 'hafizlik'],
     source: {
-      title: `Diyanet mushafı (kuran.diyanet.gov.tr), alperenugus/Kuran@${MUSHAF_SURUM.slice(0, 7)}, CC BY 4.0`
+      title: `Diyanet mushafı (kuran.diyanet.gov.tr), alperenugus/Kuran@${MUSHAF_SURUM.slice(0, 7)}, CC BY 4.0`,
+      ...(bolumler.length ? { pages: 604, sayfaOfseti: 0, bolumler } : {})
     },
     blocks,
     questionCount: r.sorular.length,
     createdAt: new Date().toISOString()
   })
   const kapakDir = path.join(root, 'tools', 'quizforge', 'src', 'hafizlik', 'kapak')
-  const gorseller = ['kapak.webp', ...Array.from({ length: 30 }, (_x, i) => `bolum/${i + 1}.webp`)]
+  const gorseller = [
+    'kapak.webp',
+    ...Array.from({ length: duzen.bolum }, (_x, i) => `bolum/${i + 1}.webp`)
+  ]
   for (const g of gorseller) {
     const veri = fs.readFileSync(path.join(kapakDir, g))
     const hedef = path.join(outDir, 'assets', g)
@@ -129,7 +184,7 @@ export async function hafizlik(argv: string[], root: string): Promise<number> {
   zip['module.json'] = [Buffer.from(metaJson), { level: 6 }]
   const paketDir = path.join(root, 'dist', 'modules')
   fs.mkdirSync(paketDir, { recursive: true })
-  const paket = path.join(paketDir, `quizloop-${MODUL}-${meta.version}.qlmod`)
+  const paket = path.join(paketDir, `quizloop-${duzen.id}-${meta.version}.qlmod`)
   const sikisik = zipSync(zip)
   fs.writeFileSync(paket, sikisik)
   console.log(

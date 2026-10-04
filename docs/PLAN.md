@@ -774,11 +774,11 @@ parça, cüz başına 280–576.
 - Kural: hiçbir şık uydurma ya da değiştirilmiş Arapça içermez; her şık Kur'an'da aynen geçer.
 
 **Kayıt eşlemesi.** `conceptId` = `sure:ayet/sıra`. `tags`: `cuz:01`, `sure:002`, `sayfa:042`,
-`tip:devam`, `gecis:sure`, `mutesabih`. `solution`: yer satırı → ayetin Arapça tam metni →
+`donus:17`, `kesim:bas`, `tip:devam`, `gecis:sure`, `mutesabih`. `solution`: yer satırı → ayetin Arapça tam metni →
 tam meal → kelime kelime `table`.
 
 **Üretim.** `npx tsx tools/quizforge/src/cli.ts hafizlik` → `modules/kuran-hafizlik/` ve
-`dist/modules/quizloop-kuran-hafizlik-1.2.1.qlmod`. Kod `tools/quizforge/src/hafizlik/`. Metin, meal ve
+`dist/modules/quizloop-kuran-hafizlik-1.3.0.qlmod`; `--duzen donus` → `kuran-hafizlik-donus`. Kod `tools/quizforge/src/hafizlik/`. Metin, meal ve
 çıktı depoya girmez.
 
 **Dalgalar.**

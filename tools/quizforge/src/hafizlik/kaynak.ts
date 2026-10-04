@@ -6,6 +6,8 @@ import { kok } from './metin.ts'
 export const MUSHAF_SURUM = '6411a76f41e986521da4cfb99a42221f767cbc89'
 export const MUSHAF_URL = `https://raw.githubusercontent.com/alperenugus/Kuran/${MUSHAF_SURUM}/kuran.json`
 export const MUSHAF_SHA256 = 'da8b017dbdc5b568b54ed97472622d61ee82fcde6bbb6e25ff54210fa4fc3b83'
+export const KITAP_URL = `https://raw.githubusercontent.com/alperenugus/Kuran/${MUSHAF_SURUM}/Kuran.pdf`
+export const KITAP_SHA256 = 'c783fdb334578300fb93c8287143ec59f6a0275c0a554a036dcbe90377c382b5'
 export const MEAL_KIMLIK = 77
 const API = 'https://api.quran.com/api/v4'
 
@@ -104,6 +106,17 @@ export async function mushafYukle(buildDir: string): Promise<Sure[]> {
     fs.writeFileSync(dosya, await getir(MUSHAF_URL))
   }
   return mushafCoz(fs.readFileSync(dosya))
+}
+
+export async function kitapYukle(buildDir: string): Promise<string> {
+  const dosya = path.join(buildDir, 'Kuran.pdf')
+  if (!fs.existsSync(dosya)) {
+    fs.mkdirSync(buildDir, { recursive: true })
+    fs.writeFileSync(dosya, await getir(KITAP_URL))
+  }
+  const ozet = createHash('sha256').update(fs.readFileSync(dosya)).digest('hex')
+  if (ozet !== KITAP_SHA256) throw new Error(`mushaf PDF sağlama toplamı tutmuyor: ${ozet}`)
+  return dosya
 }
 
 interface ApiKelime {

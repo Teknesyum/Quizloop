@@ -3,6 +3,8 @@ import { canonical, sha256 } from '../hash.ts'
 import type { KelimeMeal, Meal, Sure } from './kaynak.ts'
 import { AYET_SONU, ilkIki, parcala, sade, sonIki } from './metin.ts'
 
+export type Kesim = 'bas' | 'orta' | 'son'
+
 export interface Parca {
   sure: number
   ayet: number
@@ -14,6 +16,7 @@ export interface Parca {
   sade: string
   sayfa: number
   cuz: number
+  kesim: Kesim
 }
 
 export interface Secenekler {
@@ -21,11 +24,25 @@ export interface Secenekler {
   baglam?: number
   cuzler?: Set<number>
   sikli?: boolean
+  duzen?: 'cuz' | 'donus'
 }
 
 const EN_COK_BAGLAM = 3
 const SIK_ADEDI = 4
 const DOLGU_UZAKLIK = 60
+const CUZ_SAYFA = 20
+const SON_CUZ = 30
+const SON_SAYFA = 604
+const ILK_DONUS_SAYFA = 5
+const KESIM_ADI: Record<Kesim, string> = { bas: 'Başı', orta: 'Ortası', son: 'Sonu' }
+
+export const DONUS_ADEDI = CUZ_SAYFA
+
+export function donus(cuz: number, sayfa: number): number {
+  if (cuz < SON_CUZ) return cuz * CUZ_SAYFA - sayfa + 1
+  const geri = SON_SAYFA - sayfa
+  return geri < ILK_DONUS_SAYFA ? 1 : geri - ILK_DONUS_SAYFA + 2
+}
 
 export function parcalar(sureler: Sure[], enAz?: number): Parca[] {
   const cikti: Parca[] = []
@@ -46,11 +63,22 @@ export function parcalar(sureler: Sure[], enAz?: number): Parca[] {
           metin,
           sade: sade(metin),
           sayfa: a.sayfa,
-          cuz: a.cuz
+          cuz: a.cuz,
+          kesim: 'bas'
         })
         bas += k.length
       })
     }
+  }
+  const tur = (x: Parca): string => `${x.cuz}:${donus(x.cuz, x.sayfa)}`
+  const toplam = new Map<string, number>()
+  for (const x of cikti) toplam.set(tur(x), (toplam.get(tur(x)) ?? 0) + x.son - x.bas)
+  const gecen = new Map<string, number>()
+  for (const x of cikti) {
+    const once = gecen.get(tur(x)) ?? 0
+    const oran = (once + (x.son - x.bas) / 2) / toplam.get(tur(x))!
+    x.kesim = oran < 1 / 3 ? 'bas' : oran < 2 / 3 ? 'orta' : 'son'
+    gecen.set(tur(x), once + x.son - x.bas)
   }
   return cikti
 }
@@ -173,6 +201,11 @@ function kacis(metin: string): string {
   return metin.replace(/([\\*_`<>[\]|~])/g, '\\$1')
 }
 
+export function yer(sureler: Sure[], x: Parca): string {
+  const ad = kacis(sureler[x.sure - 1]!.ad)
+  return `${ad} Suresi ${x.sure}:${x.ayet} · Sayfa ${x.sayfa} · ${x.cuz}. Cüz · ${donus(x.cuz, x.sayfa)}. Dönüşün ${KESIM_ADI[x.kesim]}`
+}
+
 function kimlik(x: Parca): string {
   const n = (v: number, w: number): string => String(v).padStart(w, '0')
   return `kh-${n(x.sure, 3)}-${n(x.ayet, 3)}-${n(x.sira, 2)}`
@@ -189,14 +222,11 @@ function cozum(
   const gecis =
     soru.sure !== cevap.sure
       ? s.besmele
-        ? ' · sure geçişi, arada Besmele okunur'
-        : ' · sure geçişi, arada Besmele okunmaz'
+        ? ' · Sure Geçişi, Arada Besmele Okunur'
+        : ' · Sure Geçişi, Arada Besmele Okunmaz'
       : ''
   const blok: QuestionT['solution'] = [
-    {
-      type: 'text',
-      md: `**${kacis(s.ad)} Suresi ${anahtar}** · sayfa ${cevap.sayfa} · ${cevap.cuz}. cüz${gecis}`
-    },
+    { type: 'text', md: `**${yer(sureler, cevap)}**${gecis}` },
     { type: 'text', md: s.ayetler[cevap.ayet - 1]!.metin }
   ]
   if (!meal) return blok
@@ -209,7 +239,7 @@ function cozum(
       type: 'table',
       header: ['Kelime', 'Anlamı'],
       rows: satir.map((x) => [x[0], x[1]]),
-      caption: esit ? 'Kelime kelime meal: cevap parçası' : 'Kelime kelime meal: ayetin tamamı'
+      caption: esit ? 'Kelime Kelime Meal: Cevap Parçası' : 'Kelime Kelime Meal: Ayetin Tamamı'
     })
   }
   return blok
@@ -252,28 +282,31 @@ export function uret(sureler: Sure[], meal: Meal | null, sec: Secenekler = {}): 
     const cevap = p[i + 1]!
     if (sec.cuzler && !sec.cuzler.has(soru.cuz)) continue
     const sure = sureler[soru.sure - 1]!
+    const tur = donus(soru.cuz, soru.sayfa)
     let md = govde(p, i, k[i]!)
     if (k[i]! > 0) baglamli += 1
     const etiket = [
       `cuz:${String(soru.cuz).padStart(2, '0')}`,
       `sure:${String(soru.sure).padStart(3, '0')}`,
       `sayfa:${String(soru.sayfa).padStart(3, '0')}`,
+      `donus:${String(tur).padStart(2, '0')}`,
+      `kesim:${soru.kesim}`,
       'tip:devam'
     ]
     if (soru.sure !== cevap.sure) etiket.push('gecis:sure')
     if (devam.get(sade(md))!.size > 1) {
       belirsiz += 1
-      md += `\n\n${kacis(sure.ad)} Suresi, ${soru.ayet}. ayet`
+      md += `\n\n${kacis(sure.ad)} Suresi, ${soru.ayet}. Ayet`
     }
     const ortak = {
       conceptId: `${soru.sure}:${soru.ayet}/${soru.sira}`,
       stem: { md },
       solution: cozum(sureler, meal, soru, cevap),
       source: {
-        file: 'kuran.json',
+        file: 'Kuran.pdf',
         pages: [cevap.sayfa, cevap.sayfa] as [number, number],
         quote: cevap.metin,
-        chapter: `${soru.cuz}. Cüz`
+        chapter: sec.duzen === 'donus' ? `${tur}. Dönüş` : `${soru.cuz}. Cüz`
       },
       vurgu: [],
       deleted: false
@@ -305,13 +338,13 @@ export function uret(sureler: Sure[], meal: Meal | null, sec: Secenekler = {}): 
     for (const x of siklar) {
       if (x.key === dogru) continue
       const h = p[x.hedef]!
-      const yer = `${kacis(sureler[h.sure - 1]!.ad)} ${h.sure}:${h.ayet}`
+      const konum = `**${yer(sureler, h)}**`
       distractors[x.key] =
         x.kaynak >= 0
-          ? `Bu parça ${yer} ayetindendir; şu benzer parçanın devamıdır: ${p[x.kaynak]!.metin}`
+          ? `${konum} · Şu benzer parçanın devamıdır: ${p[x.kaynak]!.metin}`
           : x.kaynak === -1
-            ? `Bu parça ${yer} ayetindendir; doğru cevapla aynı sözlerle başlar.`
-            : `Bu parça ${yer} ayetindendir; yakın bir yerde geçer, bu parçanın devamı değildir.`
+            ? `${konum} · Doğru cevapla aynı sözlerle başlar.`
+            : `${konum} · Yakın bir yerde geçer, bu parçanın devamı değildir.`
     }
     const sikliSoru = {
       ...ortak,
@@ -326,6 +359,11 @@ export function uret(sureler: Sure[], meal: Meal | null, sec: Secenekler = {}): 
     sorular.push({ ...sikliSoru, contentHash: ozet(sikliSoru) })
     sikli += 1
     if (benzer) mutesabih += 1
+  }
+  if (sec.duzen === 'donus') {
+    const sira = new Map(sorular.map((q, n) => [q.id, n]))
+    const turu = (q: QuestionT): number => Number.parseInt(q.source.chapter ?? '0', 10)
+    sorular.sort((a, b) => turu(a) - turu(b) || sira.get(a.id)! - sira.get(b.id)!)
   }
   return { sorular, acik, sikli, mutesabih, baglamli, belirsiz }
 }
