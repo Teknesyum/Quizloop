@@ -10,6 +10,9 @@ Platform logic lives in `src/core`; this folder adapts it to Electron.
   sync), `paket.ts` (`.qlmod` unzip).
 - `assets/` — `quizloop://module/<id>/assets/...` and the source-book protocol.
 - `settings.ts`, `transfer.ts`, `update.ts`, `window.ts`, `fstree.ts`, `work.ts`.
+- `boot.ts` — the package entry. Loads a downloaded code bundle from
+  `userData/kod/` or the installed `index.js` (decision 0011). `kod.ts`
+  downloads and verifies a bundle, `kodstate.ts` keeps `durum.json`.
 
 better-sqlite3 is native and ABI-split: `npm test` needs the Node build,
 `npm run dev` the Electron one. `scripts/abi.mjs` swaps them; the npm scripts

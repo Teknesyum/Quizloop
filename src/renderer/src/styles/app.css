@@ -59,15 +59,14 @@ body {
   display: inline-flex;
   align-self: center;
   margin-inline-end: var(--tk-sp-2);
-  padding: calc(var(--tk-sp-1) / 2);
   border-radius: var(--tk-r-btn);
   background: var(--tk-renk-1-10);
   -webkit-app-region: no-drag;
 }
 
 .ql-scale__btn {
-  min-width: calc(var(--tk-sp-5) + var(--tk-sp-2));
-  padding: 0 var(--tk-sp-2);
+  min-width: var(--tk-sp-5);
+  padding: 0 var(--tk-sp-1);
   border: 0;
   border-radius: var(--tk-r-btn);
   background: transparent;
@@ -81,7 +80,7 @@ body {
 }
 
 .ql-scale__value {
-  min-width: calc(var(--tk-sp-5) * 2);
+  min-width: calc(var(--tk-sp-5) + var(--tk-sp-3));
   color: var(--tk-text);
   font-variant-numeric: tabular-nums;
 }
@@ -104,6 +103,36 @@ body {
 .ql-scale__btn:disabled {
   color: var(--tk-disabled);
   cursor: not-allowed;
+}
+
+.ql-scale-pop {
+  position: fixed;
+  z-index: 30;
+  display: flex;
+  align-items: center;
+  gap: var(--tk-sp-3);
+  margin-top: var(--tk-sp-1);
+  padding: var(--tk-sp-2) var(--tk-sp-3);
+  background: var(--tk-surface);
+}
+
+.ql-scale-range {
+  width: calc(var(--tk-sp-5) * 6);
+  accent-color: var(--tk-renk-1);
+  cursor: pointer;
+}
+
+.ql-scale-range:focus-visible {
+  outline: var(--tk-focus-w) solid var(--tk-renk-1);
+  outline-offset: var(--tk-focus-offset);
+  box-shadow: 0 0 0 var(--tk-focus-w) var(--tk-bg);
+}
+
+.ql-scale-pct {
+  min-width: calc(var(--tk-sp-5) + var(--tk-sp-4));
+  color: var(--tk-text);
+  text-align: end;
+  font-variant-numeric: tabular-nums;
 }
 
 .ql-update {

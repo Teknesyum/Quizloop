@@ -1,8 +1,8 @@
 {
   "name": "quizloop",
-  "version": "0.7.8",
+  "version": "0.7.9",
   "description": "Cross-platform spaced-repetition quiz engine",
-  "main": "./out/main/index.js",
+  "main": "./out/main/boot.js",
   "author": "Teknesyum",
   "license": "AGPL-3.0-or-later",
   "homepage": "https://github.com/Teknesyum/Quizloop",
@@ -30,6 +30,7 @@
     "abi:node": "node scripts/abi.mjs node",
     "abi:electron": "node scripts/abi.mjs electron",
     "icon:gen": "node scripts/icon.mjs",
+    "kod": "tsx scripts/kod.ts",
     "android:build": "npm run typecheck && vite build -c vite.android.config.ts",
     "android:sync": "npm run android:build && cap sync android",
     "android:apk": "npm run android:sync && node scripts/android-apk.mjs",
