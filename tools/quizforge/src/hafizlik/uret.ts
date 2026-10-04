@@ -35,8 +35,6 @@ const SON_SAYFA = 604
 const ILK_DONUS_SAYFA = 5
 const KESIM_ADI: Record<Kesim, string> = { bas: 'Başı', orta: 'Ortası', son: 'Sonu' }
 
-export const DONUS_ADEDI = CUZ_SAYFA
-
 export function donus(cuz: number, sayfa: number): number {
   if (cuz < SON_CUZ) return cuz * CUZ_SAYFA - sayfa + 1
   const geri = SON_SAYFA - sayfa
@@ -305,7 +303,7 @@ export function uret(sureler: Sure[], meal: Meal | null, sec: Secenekler = {}): 
         file: 'Kuran.pdf',
         pages: [cevap.sayfa, cevap.sayfa] as [number, number],
         quote: cevap.metin,
-        chapter: `${tur}. Dönüş`
+        chapter: `${soru.cuz}. Cüz`
       },
       vurgu: [],
       deleted: false
@@ -359,8 +357,5 @@ export function uret(sureler: Sure[], meal: Meal | null, sec: Secenekler = {}): 
     sikli += 1
     if (benzer) mutesabih += 1
   }
-  const sira = new Map(sorular.map((q, n) => [q.id, n]))
-  const turu = (q: QuestionT): number => Number.parseInt(q.source.chapter ?? '0', 10)
-  sorular.sort((a, b) => turu(a) - turu(b) || sira.get(a.id)! - sira.get(b.id)!)
   return { sorular, acik, sikli, mutesabih, baglamli, belirsiz }
 }

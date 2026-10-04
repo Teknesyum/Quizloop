@@ -26,8 +26,7 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 - `quizforge hafizlik` writes the review round (dönüş) of every segment, and
   whether it sits at the start, middle or end of that round, into the solution
-  and into each wrong-choice note. Chapters are now the twenty rounds
-  instead of the thirty juz. The package now carries the mushaf pages, so the
+  and into each wrong-choice note. Chapters stay the thirty juz. The package now carries the mushaf pages, so the
   source button opens the printed page.
 
 ## [0.7.13] - 2026-10-04

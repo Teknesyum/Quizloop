@@ -15,10 +15,10 @@ import {
   mushafYukle,
   type Meal
 } from './kaynak.ts'
-import { DONUS_ADEDI, uret } from './uret.ts'
+import { uret } from './uret.ts'
 
 const MODUL = 'kuran-hafizlik'
-const SURUM = '1.4.0'
+const SURUM = '1.5.0'
 const DONUS_NOTU =
   'Dönüş, her cüzün son sayfasından başa doğru sayılır: 1. Dönüş son sayfadır, 20. Dönüş ilk sayfadır. 30. Cüz 24 sayfadır; son beş sayfası (600-604) 1. Dönüş sayılır.'
 const BLOK = 50
@@ -29,7 +29,7 @@ export const HAFIZLIK_HELP = `quizforge hafizlik [seçenekler]
 
   Kur'an hafızlık sağlama modülünü üretir: modules/${MODUL}/
   Metin, meal ve mushaf sayfaları bu bilgisayara indirilir, depoya girmez.
-  Bölümler 20 dönüştür: her cüzün son sayfasından başa doğru.
+  Bölümler 30 cüzdür; dönüş yalnız açıklamalarda bilgi olarak yazar.
 
   --kitapsiz      mushaf sayfalarını pakete koyma ("Kuran'da gör" çalışmaz)
 
@@ -137,7 +137,7 @@ export async function hafizlik(argv: string[], root: string): Promise<number> {
     name: "Kur'an-ı Kerim Hafızlık Sağlama",
     version: SURUM,
     language: 'tr',
-    description: `Bir parça gösterilir, devamı ezberden okunur. Parçalar Diyanet mushafının secavend duraklarına göre bölünmüştür. Bölümler dönüş sırasıyladır; her dönüşte cüzler birden otuza gider. ${DONUS_NOTU}`,
+    description: `Bir parça gösterilir, devamı ezberden okunur. Parçalar Diyanet mushafının secavend duraklarına göre bölünmüştür. Bölümler cüz sırasıyladır. ${DONUS_NOTU}`,
     tags: ['kuran', 'hafizlik'],
     source: {
       title: `Diyanet mushafı (kuran.diyanet.gov.tr), alperenugus/Kuran@${MUSHAF_SURUM.slice(0, 7)}, CC BY 4.0`,
@@ -149,10 +149,7 @@ export async function hafizlik(argv: string[], root: string): Promise<number> {
   })
   fs.rmSync(path.join(outDir, 'assets'), { recursive: true, force: true })
   const kapakDir = path.join(root, 'tools', 'quizforge', 'src', 'hafizlik', 'kapak')
-  const gorseller = [
-    'kapak.webp',
-    ...Array.from({ length: DONUS_ADEDI }, (_x, i) => `bolum/${i + 1}.webp`)
-  ]
+  const gorseller = ['kapak.webp', ...Array.from({ length: 30 }, (_x, i) => `bolum/${i + 1}.webp`)]
   for (const g of gorseller) {
     const veri = fs.readFileSync(path.join(kapakDir, g))
     const hedef = path.join(outDir, 'assets', g)
