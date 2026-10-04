@@ -306,6 +306,7 @@
   "work.step.done": "Done",
   "work.step.failed": "Could not finish",
   "library.mixed": "Mixed",
+  "web.oneTab": "QuizLoop is open in another tab. Close that tab and reload this page.",
   "android.bootFailed": "The app could not start. Error detail:",
   "settings.subtitleNative": "Settings and progress are kept on this device",
   "settings.updatesHelpAndroid": "You are told when a new version is out. The download page opens in your browser.",

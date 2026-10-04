@@ -261,7 +261,11 @@ export interface QuizloopApi {
   capabilities: Capabilities
   pathOf(file: File): string | null
   app: {
-    info(): Promise<{ version: string; platform: NodeJS.Platform; integrity: IntegrityReport }>
+    info(): Promise<{
+      version: string
+      platform: NodeJS.Platform | 'web'
+      integrity: IntegrityReport
+    }>
     onBack(cb: () => void): () => void
     openSource(): void
   }

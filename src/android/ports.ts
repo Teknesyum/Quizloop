@@ -7,13 +7,13 @@ export interface Bundle {
   roots: string[]
 }
 
-export async function loadBundle(): Promise<Bundle> {
-  const res = await fetch(`${BUNDLE_ROOT}/index.json`)
+export async function loadBundle(base: string = BUNDLE_ROOT): Promise<Bundle> {
+  const res = await fetch(`${base}/index.json`)
   const manifest = res.ok ? ((await res.json()) as Record<string, string[]>) : {}
   const files = new Set<string>()
   const roots: string[] = []
   for (const [dir, list] of Object.entries(manifest)) {
-    const root = `${BUNDLE_ROOT}/${dir}`
+    const root = `${base}/${dir}`
     roots.push(root)
     for (const f of list) files.add(`${root}/${f}`)
   }

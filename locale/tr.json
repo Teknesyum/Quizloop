@@ -306,6 +306,7 @@
   "work.step.done": "Tamamlandı",
   "work.step.failed": "İşlem tamamlanamadı",
   "library.mixed": "Karışık",
+  "web.oneTab": "QuizLoop başka bir sekmede açık. O sekmeyi kapatıp bu sayfayı yenileyin.",
   "android.bootFailed": "Uygulama açılamadı. Hata ayrıntısı:",
   "settings.subtitleNative": "Ayarlar ve ilerleme bu cihazda tutulur",
   "settings.updatesHelpAndroid": "Yeni sürüm çıkınca haber verilir. İndirme sayfası tarayıcında açılır.",

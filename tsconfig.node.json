@@ -3,6 +3,7 @@
   "include": [
     "electron.vite.config.*",
     "vite.android.config.*",
+    "vite.web.config.*",
     "vitest.config.*",
     "scripts/**/*",
     "src/core/**/*",

@@ -6,6 +6,22 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.7.16] - 2026-10-04
+
+### Added
+
+- A browser version at <https://teknesyum.github.io/Quizloop/>. It runs on an
+  iPhone or iPad without a store: open it in Safari and choose *Add to Home
+  Screen*. It works offline after the first visit, imports `.qlmod` files and
+  keeps progress in that browser. It has no in-app update check; a new version
+  is picked up the next time the page is opened online. One tab at a time.
+
+### Changed
+
+- Text on a cover card now sits on one flat dark plate everywhere: title,
+  percentage, tags, counters and the "Mixed" and "⋯" buttons share the same
+  tone, replacing the soft glow behind some and the box behind others.
+
 ## [0.7.15] - 2026-10-04
 
 ### Added
