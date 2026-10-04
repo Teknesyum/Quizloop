@@ -36,6 +36,8 @@
   "chapters.subtitle": "Pick a chapter, or study a mix of all topics.",
   "chapters.all": "Mixed from all topics",
   "chapters.unsorted": "Unsorted",
+  "library.more": "More actions",
+  "library.update": "Update module",
   "library.remove": "Remove module",
   "library.reset": "Reset",
   "library.resetConfirmTitle": "Erase all progress for {name}?",

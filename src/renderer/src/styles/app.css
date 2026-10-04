@@ -200,7 +200,7 @@ body {
 .ql-grid-list .ql-card-stats,
 .ql-grid-list .ql-progress,
 .ql-grid-list .ql-card-foot > .tk-hint,
-.ql-grid-list .ql-card-actions > .tk-btn-ghost {
+.ql-grid-list .ql-card-actions > .tk-btn-ghost:not(.ql-menu-btn) {
   display: none;
 }
 
@@ -351,6 +351,60 @@ body {
   flex-wrap: wrap;
   gap: var(--tk-sp-2);
   min-width: 0;
+}
+
+.ql-menu-btn {
+  min-width: calc(var(--tk-sp-5) + var(--tk-sp-3));
+  justify-content: center;
+}
+
+.ql-menu {
+  position: fixed;
+  z-index: 30;
+  display: flex;
+  flex-direction: column;
+  min-width: calc(var(--tk-sp-5) * 6);
+  margin: var(--tk-sp-1) 0;
+  padding: var(--tk-sp-1);
+}
+
+.ql-menu-opt {
+  padding: var(--tk-sp-2) var(--tk-sp-3);
+  border: 0;
+  border-radius: var(--tk-r-btn);
+  background: transparent;
+  color: var(--tk-text);
+  font: inherit;
+  font-size: var(--tk-fs-1);
+  line-height: var(--tk-lh-body);
+  text-align: start;
+  cursor: pointer;
+  transition: background var(--tk-t-fast) var(--tk-e-out), color var(--tk-t-fast) var(--tk-e-out);
+}
+
+.ql-menu-opt:hover,
+.ql-menu-opt:focus-visible {
+  background: var(--tk-renk-1-10);
+  color: var(--tk-text-label);
+}
+
+.ql-menu-opt:focus-visible {
+  outline: var(--tk-focus-w) solid var(--tk-renk-1);
+  outline-offset: var(--tk-focus-offset);
+  box-shadow: 0 0 0 var(--tk-focus-w) var(--tk-bg);
+}
+
+.ql-menu-opt:active {
+  color: var(--tk-renk-2-text);
+}
+
+.ql-menu-opt:disabled {
+  color: var(--tk-disabled);
+  cursor: not-allowed;
+}
+
+.ql-menu-danger {
+  color: var(--tk-danger-text);
 }
 
 .ql-drop-veil {

@@ -6,6 +6,19 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.7.8] - 2026-10-04
+
+### Added
+
+- A module card has an "Update module" action: pick the newer `.qlmod`
+  package and it replaces the installed one.
+
+### Changed
+
+- Module cards show two buttons, "Mixed" and "Start session". Question bank,
+  update, reset and remove moved into a "More actions" menu, which the list
+  view has too.
+
 ## [0.7.7] - 2026-10-04
 
 ### Fixed

@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { tinykeys } from 'tinykeys'
 import type { InstallResult, ModuleSummary } from '@shared/ipc'
+import { CardMenu, MenuItem } from '@renderer/components/CardMenu'
 import { Confirm } from '@renderer/components/Confirm'
 import { Skeleton } from '@renderer/components/Skeleton'
 import { ViewToggle } from '@renderer/components/ViewToggle'
@@ -14,7 +15,8 @@ function ModuleCard({
   active,
   onFocus,
   onRemove,
-  onReset
+  onReset,
+  onUpdate
 }: {
   m: ModuleSummary
   index: number
@@ -22,6 +24,7 @@ function ModuleCard({
   onFocus(): void
   onRemove(): void
   onReset(): void
+  onUpdate(): void
 }): React.JSX.Element {
   const go = useApp((s) => s.go)
   const [cover, setCover] = useState(true)
@@ -84,19 +87,14 @@ function ModuleCard({
       <footer className="ql-card-foot">
         <span className="tk-hint">{t('library.card.questions', { count: m.questionCount })}</span>
         <div className="ql-card-actions">
-          <button type="button" className="tk-btn tk-btn-ghost ql-btn-sm" onClick={onRemove}>
-            {t('library.remove')}
-          </button>
-          <button type="button" className="tk-btn tk-btn-ghost ql-btn-sm" onClick={onReset}>
-            {t('library.reset')}
-          </button>
-          <button
-            type="button"
-            className="tk-btn tk-btn-ghost ql-btn-sm"
-            onClick={() => go({ name: 'bank', moduleId: m.id })}
-          >
-            {t('library.bank')}
-          </button>
+          <CardMenu label={t('library.more')}>
+            <MenuItem onPick={() => go({ name: 'bank', moduleId: m.id })}>{t('library.bank')}</MenuItem>
+            <MenuItem onPick={onUpdate}>{t('library.update')}</MenuItem>
+            <MenuItem onPick={onReset}>{t('library.reset')}</MenuItem>
+            <MenuItem danger onPick={onRemove}>
+              {t('library.remove')}
+            </MenuItem>
+          </CardMenu>
           <button
             type="button"
             className="tk-btn tk-btn-ghost ql-btn-sm"
@@ -292,6 +290,7 @@ export function Library(): React.JSX.Element {
               onFocus={() => setActive(i)}
               onRemove={() => setRemoving(m)}
               onReset={() => setResetting(m)}
+              onUpdate={() => run(() => window.quizloop.module.pick('file'))}
             />
           ))}
         </div>
