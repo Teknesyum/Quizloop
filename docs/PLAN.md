@@ -778,7 +778,7 @@ parça, cüz başına 280–576.
 tam meal → kelime kelime `table`.
 
 **Üretim.** `npx tsx tools/quizforge/src/cli.ts hafizlik` → `modules/kuran-hafizlik/` ve
-`dist-modules/kuran-hafizlik-1.2.0.qlmod`. Kod `tools/quizforge/src/hafizlik/`. Metin, meal ve
+`dist-modules/kuran-hafizlik-1.2.1.qlmod`. Kod `tools/quizforge/src/hafizlik/`. Metin, meal ve
 çıktı depoya girmez.
 
 **Dalgalar.**

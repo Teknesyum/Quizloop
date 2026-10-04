@@ -103,7 +103,7 @@ export async function hafizlik(argv: string[], root: string): Promise<number> {
     schemaVersion: 1,
     id: MODUL,
     name: "Kur'an-ı Kerim Hafızlık Sağlama",
-    version: '1.2.0',
+    version: '1.2.1',
     language: 'tr',
     description:
       'Bir parça gösterilir, devamı ezberden okunur. Parçalar Diyanet mushafının secavend duraklarına göre bölünmüştür.',
