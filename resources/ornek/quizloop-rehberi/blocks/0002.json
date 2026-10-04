@@ -1,0 +1,609 @@
+{
+  "blockId": "0002",
+  "questions": [
+    {
+      "id": "quizloop-rehberi-0011",
+      "conceptId": "oturuma-basla-dugmesi",
+      "stem": {
+        "md": "Modül kartındaki **Oturuma başla** düğmesi hangi ekranı açar?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "İstatistik ekranını"
+        },
+        {
+          "key": "B",
+          "md": "Soru bankası ekranını"
+        },
+        {
+          "key": "C",
+          "md": "Oturum özeti ekranını"
+        },
+        {
+          "key": "D",
+          "md": "Bölümler ekranını"
+        },
+        {
+          "key": "E",
+          "md": "Ayarlar ekranını"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "İstatistik ayrı bir ekrandır, oturum başlatmaz.",
+        "B": "Soru bankası **Diğer işlemler** menüsünden açılır.",
+        "C": "Oturum özeti oturum bitince görünür, başında değil.",
+        "E": "Ayarlar ayrı bir ekrandır, modül kartından açılmaz."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "Düğme önce bölümler ekranını açar. Orada bir bölüm ya da bütün konuların karışığını seçersin."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          5,
+          5
+        ],
+        "quote": "Bu düğme bölümler ekranını açar.",
+        "chapter": "Oturum Nasıl İşler"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "rehber",
+        "oturum"
+      ],
+      "vurgu": [],
+      "contentHash": "f0762274fffe0b5aba96c2b729c56a9a3a1e1ccabb0401ec7700ba5296315abd",
+      "deleted": false
+    },
+    {
+      "id": "quizloop-rehberi-0012",
+      "conceptId": "karisik-dugmesi",
+      "stem": {
+        "md": "Modül kartındaki **Karışık** düğmesi ne yapar?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Doğrudan karışık oturum başlatır"
+        },
+        {
+          "key": "B",
+          "md": "Kütüphanedeki kartların sırasını karıştırır"
+        },
+        {
+          "key": "C",
+          "md": "Bölümler ekranını açıp seçim bekler"
+        },
+        {
+          "key": "D",
+          "md": "İki modülün sorularını tek oturumda birleştirir"
+        },
+        {
+          "key": "E",
+          "md": "Yalnızca emekli soruları yeniden sorar"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Düğme kartların yerini değiştirmez; oturum başlatır.",
+        "C": "Bölümler ekranını açan düğme **Oturuma başla** düğmesidir.",
+        "D": "Karışık oturum tek modülün bölümlerinden soru alır.",
+        "E": "Emekli sorular sıradan çıkmıştır, yeniden sorulmaz."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "**Karışık** bölüm seçme adımını atlar ve o modülün bütün bölümlerinden soru alan bir oturum başlatır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          5,
+          5
+        ],
+        "quote": "Karttaki **Karışık** düğmesi bölümler ekranını atlar ve doğrudan karışık oturum başlatır.",
+        "chapter": "Oturum Nasıl İşler"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "rehber",
+        "oturum"
+      ],
+      "vurgu": [],
+      "contentHash": "e42206abd935ab1b323496206504e7f2399bc85d413b3270df2405f8a1a22c4f",
+      "deleted": false
+    },
+    {
+      "id": "quizloop-rehberi-0013",
+      "conceptId": "siksiz-soru",
+      "stem": {
+        "md": "Bir soru ekrana ilk geldiğinde nasıl görünür?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Çözümüyle birlikte"
+        },
+        {
+          "key": "B",
+          "md": "Şıkları olmadan"
+        },
+        {
+          "key": "C",
+          "md": "Doğru şıkkı işaretli"
+        },
+        {
+          "key": "D",
+          "md": "Kaynak alıntısıyla"
+        },
+        {
+          "key": "E",
+          "md": "Yalnızca ipucuyla"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Çözüm ancak soru kapanınca görünür.",
+        "C": "Doğru şık, sen bulana kadar belli edilmez.",
+        "D": "Kaynak alıntısı çözümün altında, soru kapanınca çıkar.",
+        "E": "Soru metni baştan görünür; eksik olan şıklardır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "Soru önce şıksız gelir. Amaç, şıklara bakmadan önce cevabı kendin düşünmendir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          6,
+          6
+        ],
+        "quote": "Soru önce şıkları olmadan gelir, böylece önce kendin düşünürsün.",
+        "chapter": "Oturum Nasıl İşler"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "rehber",
+        "oturum"
+      ],
+      "vurgu": [],
+      "contentHash": "51f6606583ceee9ba32db3c6b76be4e6ecf2af295e40b05eb3eba8e52707cbe3",
+      "deleted": false
+    },
+    {
+      "id": "quizloop-rehberi-0014",
+      "conceptId": "bosluk-tusu",
+      "stem": {
+        "md": "Soru şıksız dururken Boşluk tuşu ne yapar?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Oturumu bitirir"
+        },
+        {
+          "key": "B",
+          "md": "Soruyu işaretler"
+        },
+        {
+          "key": "C",
+          "md": "Çözümü gösterir"
+        },
+        {
+          "key": "D",
+          "md": "Yazıyı büyütür"
+        },
+        {
+          "key": "E",
+          "md": "Şıkları açar"
+        }
+      ],
+      "correct": "E",
+      "distractors": {
+        "A": "Oturumu bitiren tuş Esc tuşudur.",
+        "B": "Soruya bayrak koyan tuş F tuşudur.",
+        "C": "Çözüm ancak doğru şık bulununca görünür.",
+        "D": "Yazıyı büyüten kısayol Ctrl ve artıdır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "Boşluk tuşu **Şıkları göster** düğmesinin klavye karşılığıdır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          6,
+          6
+        ],
+        "quote": "Emin değilsen **Şıkları göster** düğmesi ya da Boşluk tuşu şıkları açar.",
+        "chapter": "Oturum Nasıl İşler"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "rehber",
+        "oturum"
+      ],
+      "vurgu": [],
+      "contentHash": "ba219b048a50c8d8a544a69ffd3a679fd34a6ce0f3db2b935a7e1022921720b1",
+      "deleted": false
+    },
+    {
+      "id": "quizloop-rehberi-0015",
+      "conceptId": "yanlis-secim",
+      "stem": {
+        "md": "Yanlış bir şık seçince ne olur?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Soru kapanır ve çözüm hemen gösterilir"
+        },
+        {
+          "key": "B",
+          "md": "Puan düşer ve o şık elenir"
+        },
+        {
+          "key": "C",
+          "md": "Oturum biter ve özet ekranı açılır"
+        },
+        {
+          "key": "D",
+          "md": "Puan değişmez, doğru şık işaretlenir"
+        },
+        {
+          "key": "E",
+          "md": "Soru emekli olur ve bir daha gelmez"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Soru kapanmaz; doğru şıkkı bulana kadar denersin.",
+        "C": "Tek bir yanlış oturumu bitirmez.",
+        "D": "Yanlış seçim puan götürür ve doğru şık belli edilmez.",
+        "E": "Emeklilik yanlışla değil, **Anladım** demekle olur."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "Yanlış seçim puan götürür, şık elenir ve altında neden yanlış olduğu yazar. Sonra kalan şıklarla devam edersin."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          6,
+          6
+        ],
+        "quote": "Yanlış seçim puan götürür ve o şık elenir.",
+        "chapter": "Oturum Nasıl İşler"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "rehber",
+        "oturum"
+      ],
+      "vurgu": [],
+      "contentHash": "243b3ddd445f36a0be058bcde12c7ec117c29872a297d3ebd8ca906d0d87fb7c",
+      "deleted": false
+    },
+    {
+      "id": "quizloop-rehberi-0016",
+      "conceptId": "neden-yanlis-aciklamasi",
+      "stem": {
+        "md": "Elenen yanlış şıkkın altında ne görünür?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Sorunun kaynak sayfa numarası"
+        },
+        {
+          "key": "B",
+          "md": "Doğru şıkkın tam metni"
+        },
+        {
+          "key": "C",
+          "md": "Sorunun bir sonraki tekrar tarihi"
+        },
+        {
+          "key": "D",
+          "md": "O yanlışa özel açıklama"
+        },
+        {
+          "key": "E",
+          "md": "O ana kadarki toplam puan"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Kaynak bilgisi çözümün altındaki kutuda yer alır.",
+        "B": "Doğru şık sen bulana kadar açıklanmaz.",
+        "C": "Tekrar tarihi puanlamadan sonra gösterilir.",
+        "E": "Puan oturumun üst çubuğunda görünür."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "Her yanlış şıkkın kendi açıklaması vardır. Böylece neden yanıldığını da öğrenirsin."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          6,
+          6
+        ],
+        "quote": "Elenen şıkkın altında, o yanlış cevap için yazılmış açıklama görünür.",
+        "chapter": "Oturum Nasıl İşler"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "rehber",
+        "oturum"
+      ],
+      "vurgu": [],
+      "contentHash": "4bb24912355c9b3a706d58d05b0ed5071759e986211da78b0360eeb622b34ecb",
+      "deleted": false
+    },
+    {
+      "id": "quizloop-rehberi-0017",
+      "conceptId": "puanlama-tuslari",
+      "stem": {
+        "md": "**Ne kadar anladın?** düğmelerinin klavye karşılığı hangi tuşlardır?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "F, B ve Esc"
+        },
+        {
+          "key": "B",
+          "md": "Ok tuşları ve Enter"
+        },
+        {
+          "key": "C",
+          "md": "Boşluk, Enter ve Esc"
+        },
+        {
+          "key": "D",
+          "md": "1, 2 ve 3"
+        },
+        {
+          "key": "E",
+          "md": "Ctrl ile artı ve eksi"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Bu tuşlar bayrak, şıksız bilme ve oturumu bitirme içindir.",
+        "B": "Ok tuşları Kütüphane'de ve bölümler ekranında gezdirir.",
+        "C": "Bu tuşlar şık açma, ilerleme ve oturumu bitirme içindir.",
+        "E": "Bu kısayollar arayüz boyutunu değiştirir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "1 **Anlamadım**, 2 **Kısmen anladım**, 3 **Anladım** demektir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          7,
+          7
+        ],
+        "quote": "Bu üç düğmenin klavye karşılığı 1, 2 ve 3 tuşlarıdır.",
+        "chapter": "Oturum Nasıl İşler"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "rehber",
+        "oturum"
+      ],
+      "vurgu": [],
+      "contentHash": "2c23a9edbb014b8ec7fdf6d3660fba1588dceed2b3c216c189006e623510d306",
+      "deleted": false
+    },
+    {
+      "id": "quizloop-rehberi-0018",
+      "conceptId": "kaynak-kutusu",
+      "stem": {
+        "md": "Çözümün altındaki **Kaynak** kutusu ne gösterir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Sorunun zorluk derecesi ve etiketleri"
+        },
+        {
+          "key": "B",
+          "md": "Alıntı, dosya adı ve sayfa"
+        },
+        {
+          "key": "C",
+          "md": "Soruyu hazırlayan kişinin adı"
+        },
+        {
+          "key": "D",
+          "md": "Sorunun kaç kez çözüldüğü"
+        },
+        {
+          "key": "E",
+          "md": "Modülün sürümü ve kurulum tarihi"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Zorluk ve etiket bilgisi bu kutuda yer almaz.",
+        "C": "Kutu kişiyi değil, bilginin geçtiği yeri gösterir.",
+        "D": "Çözülme sayısı kaynak bilgisi değildir.",
+        "E": "Sürüm modül kartında yazar, kaynak kutusunda değil."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "Kaynak kutusu sorunun dayandığı alıntıyı, dosyayı ve sayfayı verir. Böylece soruyu kendin denetleyebilirsin."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          7,
+          7
+        ],
+        "quote": "Bu kutu, sorunun dayandığı alıntıyı, dosya adını ve sayfa numarasını gösterir.",
+        "chapter": "Oturum Nasıl İşler"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "rehber",
+        "oturum"
+      ],
+      "vurgu": [],
+      "contentHash": "4097f839205ec914f5cb1eec1031f063b71197cd52af87a9c053327fcf46c9ee",
+      "deleted": false
+    },
+    {
+      "id": "quizloop-rehberi-0019",
+      "conceptId": "soruyu-isaretleme",
+      "stem": {
+        "md": "**Soruyu işaretle** düğmesi ya da F tuşu ne işe yarar?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Kusurlu soruya bayrak koyar"
+        },
+        {
+          "key": "B",
+          "md": "Soruyu oturumun sonuna erteler"
+        },
+        {
+          "key": "C",
+          "md": "Soruyu hemen emekli eder"
+        },
+        {
+          "key": "D",
+          "md": "Sorunun çözümünü ekranda açar"
+        },
+        {
+          "key": "E",
+          "md": "Soruyu şıksız bilindi diye sayar"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Bayrak sorunun sırasını değiştirmez.",
+        "C": "Emeklilik **Anladım** demekle olur, bayrakla değil.",
+        "D": "Çözüm doğru şık bulununca kendiliğinden açılır.",
+        "E": "Şıksız bilme **Cevabı biliyorum** düğmesiyle bildirilir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "Bayrak, soruda hata gördüğünü kaydeder. Bayraklar dışa aktarılır ve modülü hazırlayan kişi soruyu düzeltebilir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          8,
+          8
+        ],
+        "quote": "Bu, soruya kusurlu anlamında bir bayrak koyar.",
+        "chapter": "Oturum Nasıl İşler"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "rehber",
+        "oturum"
+      ],
+      "vurgu": [],
+      "contentHash": "64c21f86bdbe7a96405942539a6a451c0d9f175b3d55f294e211ded2e84578c5",
+      "deleted": false
+    },
+    {
+      "id": "quizloop-rehberi-0020",
+      "conceptId": "anlamadim-kismen-farki",
+      "stem": {
+        "md": "**Anlamadım** ile **Kısmen anladım** arasındaki fark nedir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "İlki soruyu emekli eder, ikincisi etmez"
+        },
+        {
+          "key": "B",
+          "md": "İkincisi soruyu bu oturumda geri getirir"
+        },
+        {
+          "key": "C",
+          "md": "İlki puanı sıfırlar, ikincisi puanı ikiye katlar"
+        },
+        {
+          "key": "D",
+          "md": "İkisi de soruyu bir daha hiç sormaz"
+        },
+        {
+          "key": "E",
+          "md": "İlki soruyu bu oturumda geri getirir"
+        }
+      ],
+      "correct": "E",
+      "distractors": {
+        "A": "Soruyu emekli eden düğme **Anladım** düğmesidir.",
+        "B": "Kısmen anlaşılan soru yakında sorulur; aynı oturumda dönen öbürüdür.",
+        "C": "Bu düğmeler puanı sıfırlamaz ya da katlamaz.",
+        "D": "Bir daha sorulmama yalnızca **Anladım** için geçerlidir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "**Anlamadım** dediğin soru aynı oturumda tekrar gelir. **Kısmen anladım** dediğin soru ise yakında tekrar sorulur."
+        },
+        {
+          "type": "hint",
+          "md": "Düğmelerin altındaki küçük yazıları düşün."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          7,
+          7
+        ],
+        "quote": "**Anlamadım** dersen soru bu oturumda tekrar gelir.",
+        "chapter": "Oturum Nasıl İşler"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "rehber",
+        "oturum"
+      ],
+      "vurgu": [],
+      "contentHash": "711291fe12beb765eb0c681cd58496f87c324f5c83b4cd81dd98014f70f12147",
+      "deleted": false
+    }
+  ]
+}

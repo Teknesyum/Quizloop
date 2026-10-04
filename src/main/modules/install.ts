@@ -1,5 +1,4 @@
-import { app } from 'electron'
-import { existsSync } from 'node:fs'
+import { existsSync, readdirSync } from 'node:fs'
 import { join, resolve } from 'node:path'
 import type { Kysely } from 'kysely'
 import type { Database } from '@core/db/types'
@@ -11,9 +10,19 @@ import { Work } from '@main/work'
 import type { InstallResult } from '@shared/ipc'
 import { isPackage, unpack, type Unpacked } from './paket'
 
-export function samplePath(): string {
-  if (app.isPackaged) return join(process.resourcesPath, 'ornek')
-  return resolve(app.getAppPath(), 'modules', '_ornek')
+export function samplePaths(): string[] {
+  const root = join(__dirname, '../../resources/ornek').replace('app.asar', 'app.asar.unpacked')
+  if (!existsSync(root)) return []
+  return readdirSync(root)
+    .sort()
+    .map((id) => join(root, id))
+    .filter((dir) => existsSync(join(dir, 'module.json')))
+}
+
+export async function installSamples(db: Kysely<Database>, now: Date): Promise<InstallResult> {
+  let last: InstallResult = { ok: false }
+  for (const dir of samplePaths()) last = await installFrom(db, dir, now)
+  return last
 }
 
 export async function installFrom(

@@ -1,0 +1,609 @@
+{
+  "blockId": "0004",
+  "questions": [
+    {
+      "id": "quizloop-rehberi-0031",
+      "conceptId": "arayuz-buyutme",
+      "stem": {
+        "md": "Arayüzü klavyeden büyütmek için hangi tuşlara basılır?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Ctrl ve eksi"
+        },
+        {
+          "key": "B",
+          "md": "Ctrl ve artı"
+        },
+        {
+          "key": "C",
+          "md": "Ctrl ve sıfır"
+        },
+        {
+          "key": "D",
+          "md": "Boşluk ve artı"
+        },
+        {
+          "key": "E",
+          "md": "Esc ve Enter"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Bu kısayol arayüzü küçültür.",
+        "C": "Bu kısayol boyutu sıfırlar.",
+        "D": "Boşluk oturumda şıkları açar, boyutu değiştirmez.",
+        "E": "Esc oturumu bitirir, Enter sonraki soruya geçirir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "Ctrl ve artı büyütür, Ctrl ve eksi küçültür, Ctrl ve sıfır boyutu sıfırlar."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          12,
+          12
+        ],
+        "quote": "Klavyeden Ctrl ve artı büyütür, Ctrl ve eksi küçültür, Ctrl ve sıfır boyutu sıfırlar.",
+        "chapter": "Ayarlar, İstatistik ve Taşıma"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "rehber",
+        "ayarlar"
+      ],
+      "vurgu": [],
+      "contentHash": "bbdbc7ac3ba13835fb2e29ddbb7253bc31567e62cc56217ae8044529ad6d49f7",
+      "deleted": false
+    },
+    {
+      "id": "quizloop-rehberi-0032",
+      "conceptId": "yazi-akisi-kapali",
+      "stem": {
+        "md": "**Yazı akışı hızı** ayarında **Kapalı** seçilirse ne olur?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Soru metni hiç gösterilmez"
+        },
+        {
+          "key": "B",
+          "md": "Şıklar kendiliğinden açılır"
+        },
+        {
+          "key": "C",
+          "md": "Metin çok yavaş akmaya başlar"
+        },
+        {
+          "key": "D",
+          "md": "Metin anında görünür"
+        },
+        {
+          "key": "E",
+          "md": "Yalnızca çözüm metni akar"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Kapatılan şey metin değil, harf harf akıştır.",
+        "B": "Bu ayar şıkları değil, soru metninin gelişini etkiler.",
+        "C": "Yavaş akış ayrı bir seçenektir.",
+        "E": "Ayar soru metninin akışıyla ilgilidir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "Soru metni normalde harf harf akar. **Kapalı** seçilince metin beklemeden, bir kerede görünür."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          12,
+          12
+        ],
+        "quote": "**Kapalı** seçilirse metin anında görünür.",
+        "chapter": "Ayarlar, İstatistik ve Taşıma"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "rehber",
+        "ayarlar"
+      ],
+      "vurgu": [],
+      "contentHash": "34778652a20add7211e14c33f16231e9694b69986e3c7f057c65c21dc7783ec5",
+      "deleted": false
+    },
+    {
+      "id": "quizloop-rehberi-0033",
+      "conceptId": "ayar-kaydetme",
+      "stem": {
+        "md": "Ayarlar ekranında yapılan bir değişiklik ne zaman kaydedilir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Kaydet düğmesine basınca"
+        },
+        {
+          "key": "B",
+          "md": "Uygulama yeniden başlayınca"
+        },
+        {
+          "key": "C",
+          "md": "Bir sonraki oturum bitince"
+        },
+        {
+          "key": "D",
+          "md": "Değişikliği yaptığın anda"
+        },
+        {
+          "key": "E",
+          "md": "Taşıma paketi yazıldığında"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Ayarlar ekranında ayrı bir kaydet düğmesi yoktur.",
+        "B": "Yeniden başlatmayı beklemek gerekmez.",
+        "C": "Kaydetme oturuma bağlı değildir.",
+        "E": "Taşıma paketi kaydetmez; var olan veriyi kopyalar."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "Her değişiklik o anda kaydedilir ve **Ayarlar kaydedildi** bildirimi çıkar."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          12,
+          12
+        ],
+        "quote": "Ayarlar ekranında yaptığın her değişiklik o anda kaydedilir ve **Ayarlar kaydedildi** bildirimi çıkar; ayrıca bir kaydet düğmesi yoktur.",
+        "chapter": "Ayarlar, İstatistik ve Taşıma"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "rehber",
+        "ayarlar"
+      ],
+      "vurgu": [],
+      "contentHash": "f54330eb682692d53e4d5522f820c12f04eb50fda9bebefc0c3816bec3d29b93",
+      "deleted": false
+    },
+    {
+      "id": "quizloop-rehberi-0034",
+      "conceptId": "dil-secici",
+      "stem": {
+        "md": "**Dil** seçici arayüzü hangi iki dil arasında değiştirir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Türkçe ve İngilizce"
+        },
+        {
+          "key": "B",
+          "md": "Türkçe ve Almanca"
+        },
+        {
+          "key": "C",
+          "md": "İngilizce ve Fransızca"
+        },
+        {
+          "key": "D",
+          "md": "Türkçe ve Arapça"
+        },
+        {
+          "key": "E",
+          "md": "İngilizce ve İspanyolca"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Almanca arayüz dilleri arasında yoktur.",
+        "C": "Fransızca yoktur ve Türkçe eksik kalmıştır.",
+        "D": "Arapça arayüz dilleri arasında yoktur.",
+        "E": "İspanyolca yoktur ve Türkçe eksik kalmıştır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "Arayüzün iki dili vardır: Türkçe ve İngilizce."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          12,
+          12
+        ],
+        "quote": "**Dil** seçici arayüzü Türkçe ile İngilizce arasında değiştirir.",
+        "chapter": "Ayarlar, İstatistik ve Taşıma"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "rehber",
+        "ayarlar"
+      ],
+      "vurgu": [],
+      "contentHash": "3084e7a3da1e8a8d329c357f474c4dbb237acdeb7788b3c6efec1b913d6141bd",
+      "deleted": false
+    },
+    {
+      "id": "quizloop-rehberi-0035",
+      "conceptId": "isi-haritasi",
+      "stem": {
+        "md": "İstatistik ekranındaki ısı haritası hangi dönemi gösterir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Yalnızca son yedi günü"
+        },
+        {
+          "key": "B",
+          "md": "Yalnızca içinde olunan ayı"
+        },
+        {
+          "key": "C",
+          "md": "Son yirmi altı haftayı"
+        },
+        {
+          "key": "D",
+          "md": "Son on iki ayın tamamını"
+        },
+        {
+          "key": "E",
+          "md": "Kurulumdan bugüne her günü"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Son yedi gün üstteki kutulardan birinde sayı olarak verilir.",
+        "B": "Harita tek bir ayla sınırlı değildir.",
+        "D": "Harita bir yılı değil, yaklaşık yarım yılı kapsar.",
+        "E": "Harita sabit sayıda haftayı gösterir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "Isı haritası son yirmi altı haftayı gün gün gösterir. Çok çalıştığın günler daha belirgin görünür."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          13,
+          13
+        ],
+        "quote": "Altında son yirmi altı haftayı gün gün gösteren bir ısı haritası bulunur; çok çalıştığın günler daha belirgin görünür.",
+        "chapter": "Ayarlar, İstatistik ve Taşıma"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "rehber",
+        "istatistik"
+      ],
+      "vurgu": [],
+      "contentHash": "4cdf254edb0eb464cfffbfcfd6dcd20bc024308b8c0bc954a54813746a41474c",
+      "deleted": false
+    },
+    {
+      "id": "quizloop-rehberi-0036",
+      "conceptId": "kart-durumlari",
+      "stem": {
+        "md": "**Kartların durumu** bölümü soruları hangi dört gruba ayırır?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Doğru, yanlış, boş bırakılan, işaretli"
+        },
+        {
+          "key": "B",
+          "md": "Bugün, yarın, bu hafta, gelecek hafta"
+        },
+        {
+          "key": "C",
+          "md": "Yeni, öğreniliyor, tekrarda, emekli"
+        },
+        {
+          "key": "D",
+          "md": "Kolay, orta, zor, zorluğu belirsiz"
+        },
+        {
+          "key": "E",
+          "md": "Seçmeli, açık uçlu, işaretleme, karışık"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Bunlar cevap sonuçlarıdır, kart durumu değildir.",
+        "B": "Bölüm tarihe göre değil, duruma göre ayırır.",
+        "D": "Zorluk derecesi kartın durumu değildir.",
+        "E": "Bunlar soru türleridir, durum değil."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "Dört durum vardır: yeni, öğreniliyor, tekrarda ve emekli."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          13,
+          13
+        ],
+        "quote": "**Kartların durumu** bölümü soruları dört gruba ayırır: yeni, öğreniliyor, tekrarda ve emekli.",
+        "chapter": "Ayarlar, İstatistik ve Taşıma"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "rehber",
+        "istatistik"
+      ],
+      "vurgu": [],
+      "contentHash": "0db501188429af3a92f99daa623e001bf45a8ace1c34d6bb26412b18807717ff",
+      "deleted": false
+    },
+    {
+      "id": "quizloop-rehberi-0037",
+      "conceptId": "tasima-paketi-amaci",
+      "stem": {
+        "md": "**Taşıma paketi** ne için kullanılır?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Bayraklı soruları hazırlayana göndermek"
+        },
+        {
+          "key": "B",
+          "md": "Uygulamayı yeni sürümüne güncellemek"
+        },
+        {
+          "key": "C",
+          "md": "Modülleri internetten indirmek için"
+        },
+        {
+          "key": "D",
+          "md": "İstatistikleri tablo olarak yazdırmak"
+        },
+        {
+          "key": "E",
+          "md": "İlerlemeyi başka bilgisayara götürmek"
+        }
+      ],
+      "correct": "E",
+      "distractors": {
+        "A": "Bayraklar Soru bankası'ndan dışa aktarılır.",
+        "B": "Güncelleme ayrı bir bölümdür.",
+        "C": "Uygulama modül indirmez.",
+        "D": "Paket yazdırma için değil, taşıma içindir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "Taşıma paketi ilerlemeyi, modülleri ve ayarları tek klasöre yazar. O klasörü öbür bilgisayarda içe aktarırsın."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          14,
+          14
+        ],
+        "quote": "İlerlemeni başka bir bilgisayara götürmek için **Taşıma paketi** kullanılır.",
+        "chapter": "Ayarlar, İstatistik ve Taşıma"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "rehber",
+        "taşıma"
+      ],
+      "vurgu": [],
+      "contentHash": "f378ff1b46dbe5de9c3350a5ca6afca8e8a3c45e89457edd010d97ce7cb22def",
+      "deleted": false
+    },
+    {
+      "id": "quizloop-rehberi-0038",
+      "conceptId": "ice-aktarma-yedek",
+      "stem": {
+        "md": "Paket içe aktarılınca o bilgisayardaki eski veritabanına ne olur?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Kalıcı olarak silinir"
+        },
+        {
+          "key": "B",
+          "md": "Paketle birleştirilir"
+        },
+        {
+          "key": "C",
+          "md": "USB belleğe geri yazılır"
+        },
+        {
+          "key": "D",
+          "md": "Silinmez, yedeklenir"
+        },
+        {
+          "key": "E",
+          "md": "Olduğu gibi kullanılır"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Eski veritabanı atılmaz; yedeği saklanır.",
+        "B": "İlerleme birleştirilmez; paketteki ile değiştirilir.",
+        "C": "İçe aktarma belleğe bir şey yazmaz.",
+        "E": "İlerleme paketteki ile değiştirilir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "İçe aktarma ilerlemeyi paketteki ile değiştirir, ama eski veritabanını yedek olarak saklar. Sonra uygulama yeniden başlar."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          14,
+          14
+        ],
+        "quote": "Eski veritabanı silinmez, yedeklenir; ardından uygulama yeniden başlar.",
+        "chapter": "Ayarlar, İstatistik ve Taşıma"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "rehber",
+        "taşıma"
+      ],
+      "vurgu": [],
+      "contentHash": "89466c97541d8b0e26337a09750e8885311177d2f8d3cfb0a3ffc5cb5bb0767c",
+      "deleted": false
+    },
+    {
+      "id": "quizloop-rehberi-0039",
+      "conceptId": "veri-cihazda",
+      "stem": {
+        "md": "Çalışma verin nerede saklanır?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Uygulamanın bulut hesabında"
+        },
+        {
+          "key": "B",
+          "md": "Yalnızca kendi cihazında"
+        },
+        {
+          "key": "C",
+          "md": "Modülü hazırlayanın sunucusunda"
+        },
+        {
+          "key": "D",
+          "md": "GitHub üzerindeki bir depoda"
+        },
+        {
+          "key": "E",
+          "md": "Reklam ortaklarının sisteminde"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Uygulamada hesap yoktur, dolayısıyla bulut hesabı da yoktur.",
+        "C": "Modülü hazırlayan kişi senin verini görmez.",
+        "D": "GitHub'a yalnızca sürüm denetimi için gidilir; veri gönderilmez.",
+        "E": "Uygulamada reklam yoktur."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "Cevapların, puanların, tekrar planın, bayrakların ve ayarların yalnızca kendi cihazında durur."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          15,
+          15
+        ],
+        "quote": "Çalışma verin cihazında kalır: cevapların, puanların, tekrar planın, işaretlediğin sorular ve ayarların yalnızca kendi cihazında saklanır.",
+        "chapter": "Ayarlar, İstatistik ve Taşıma"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "rehber",
+        "gizlilik"
+      ],
+      "vurgu": [],
+      "contentHash": "64da61badcdccc1df797a17d5c21fc49cc715d8525677c96105d945d289bc568",
+      "deleted": false
+    },
+    {
+      "id": "quizloop-rehberi-0040",
+      "conceptId": "ag-kullanimi",
+      "stem": {
+        "md": "Uygulama ağa hangi durumda çıkar?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Her oturumun başında ve sonunda"
+        },
+        {
+          "key": "B",
+          "md": "Modül kurulurken ve kaldırılırken"
+        },
+        {
+          "key": "C",
+          "md": "İstatistik ekranı her açıldığında"
+        },
+        {
+          "key": "D",
+          "md": "Yalnızca güncelleme denetiminde"
+        },
+        {
+          "key": "E",
+          "md": "Taşıma paketi dışa aktarılırken"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Oturumlar tümüyle cihazda yürür.",
+        "B": "Modül dosyası cihazda okunur, hiçbir yere yüklenmez.",
+        "C": "İstatistikler cihazdaki kayıttan hesaplanır.",
+        "E": "Taşıma paketi bir klasöre yazılır, ağa değil."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "Uygulama internet olmadan eksiksiz çalışır. Ağı yalnızca yeni sürüm var mı diye bakarken kullanır."
+        },
+        {
+          "type": "hint",
+          "md": "Uygulamanın internetsiz yapamadığı tek şey nedir?"
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          15,
+          15
+        ],
+        "quote": "Uygulama internet olmadan da eksiksiz çalışır; ağa yalnızca güncelleme denetimi için çıkar.",
+        "chapter": "Ayarlar, İstatistik ve Taşıma"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "rehber",
+        "gizlilik"
+      ],
+      "vurgu": [],
+      "contentHash": "ccf14ac846d71e264eb2a4bf20f91aab6915b89e4c95347c47d77941d3617c3e",
+      "deleted": false
+    }
+  ]
+}

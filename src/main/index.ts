@@ -6,7 +6,7 @@ import icon from '../../resources/icon.png?asset'
 import { registerAssetProtocol } from './assets/protocol'
 import { openDatabase } from './db'
 import { registerHandlers } from './ipc/handlers'
-import { installFrom, resyncAll, samplePath } from './modules/install'
+import { installSamples, resyncAll } from './modules/install'
 import { markHealthy } from './kodstate'
 import { isPackage } from './modules/paket'
 import { applyPendingTransfer, registerTransfer } from './transfer'
@@ -38,7 +38,7 @@ async function boot(): Promise<void> {
   const opened = await openDatabase(dbFile)
   const now = new Date()
 
-  if (firstRun && existsSync(samplePath())) await installFrom(opened.db, samplePath(), now)
+  if (firstRun) await installSamples(opened.db, now)
   await resyncAll(opened.db, now)
 
   const handlers = registerHandlers({ db: opened.db, integrity: opened.integrity })

@@ -1,0 +1,617 @@
+{
+  "blockId": "0001",
+  "questions": [
+    {
+      "id": "quizloop-rehberi-0001",
+      "conceptId": "modul-tanimi",
+      "stem": {
+        "md": "QuizLoop'ta modül nedir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Uygulamanın ayar dosyası"
+        },
+        {
+          "key": "B",
+          "md": "Bir oturumun puan dökümü"
+        },
+        {
+          "key": "C",
+          "md": "Bir konunun soru paketi"
+        },
+        {
+          "key": "D",
+          "md": "Uygulamanın güncelleme paketi"
+        },
+        {
+          "key": "E",
+          "md": "İlerlemenin yedek kopyası"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Ayarlar modülde değil, uygulamanın kendi ayarlarında tutulur.",
+        "B": "Puan dökümü oturum özetinde görünür; modül soruları taşır.",
+        "D": "Güncelleme uygulamanın yeni sürümüdür, soru içermez.",
+        "E": "İlerlemeyi taşıyan şey taşıma paketidir, modül değil."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "Modül bir soru paketidir: bir konunun sorularını, şıklarını, çözümlerini ve varsa görsellerini bir arada taşır."
+        },
+        {
+          "type": "hint",
+          "md": "Uygulamanın kendi sorusu yoktur; sorular bir yerden gelmelidir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          1,
+          1
+        ],
+        "quote": "Modül, bir konunun sorularını, şıklarını, çözümlerini ve varsa görsellerini bir arada taşıyan soru paketidir.",
+        "chapter": "Modül Nedir, Nasıl Eklenir"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "rehber",
+        "modül"
+      ],
+      "vurgu": [],
+      "contentHash": "d0c7ad9f8924973b9e7088663289223a49135d2a6e2c6e53a13b70006b193d5a",
+      "deleted": false
+    },
+    {
+      "id": "quizloop-rehberi-0002",
+      "conceptId": "modul-kaynagi",
+      "stem": {
+        "md": "Bir modül dosyası sana nereden gelir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Uygulamanın içindeki mağazadan"
+        },
+        {
+          "key": "B",
+          "md": "Uygulamanın kendi indirmesinden"
+        },
+        {
+          "key": "C",
+          "md": "Ayarlar ekranındaki listeden"
+        },
+        {
+          "key": "D",
+          "md": "Güncelleme denetimi sırasında"
+        },
+        {
+          "key": "E",
+          "md": "Modülü hazırlayan kişiden"
+        }
+      ],
+      "correct": "E",
+      "distractors": {
+        "A": "Uygulamanın bir modül mağazası yoktur.",
+        "B": "Uygulama modül indirmez; dosyayı sen getirirsin.",
+        "C": "Ayarlar ekranında modül listesi ya da indirme bulunmaz.",
+        "D": "Güncelleme denetimi yalnızca uygulamanın sürümüne bakar."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "Modüller uygulamadan ayrı dağıtılır. Dosyayı, o modülü hazırlayan kişi sana verir; sen de uygulamaya eklersin."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          1,
+          1
+        ],
+        "quote": "Modül dosyası, o modülü hazırlayan kişiden gelir.",
+        "chapter": "Modül Nedir, Nasıl Eklenir"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "rehber",
+        "modül"
+      ],
+      "vurgu": [],
+      "contentHash": "856434227cdbf46c9d609afceccfba0434c725be5d3daa803c9ef54bb294057f",
+      "deleted": false
+    },
+    {
+      "id": "quizloop-rehberi-0003",
+      "conceptId": "motor-icerik-ayrimi",
+      "stem": {
+        "md": "Uygulama ile modül arasındaki iş bölümü nasıldır?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Uygulama soruları yazar, modül yalnızca puanları saklar"
+        },
+        {
+          "key": "B",
+          "md": "Modül sıralar ve puanlar, uygulama soruları taşır"
+        },
+        {
+          "key": "C",
+          "md": "Uygulama sıralar ve puanlar, modül soruları taşır"
+        },
+        {
+          "key": "D",
+          "md": "İkisi de soruları taşır, sıralamayı kullanıcı yapar"
+        },
+        {
+          "key": "E",
+          "md": "Modül ayarları tutar, uygulama yalnızca görselleri gösterir"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Uygulama soru yazmaz; puanları da modül değil uygulama tutar.",
+        "B": "Roller ters çevrilmiş: sıralama ve puanlama uygulamanın işidir.",
+        "D": "Uygulamanın kendi sorusu yoktur ve sırayı uygulama kurar.",
+        "E": "Ayarlar uygulamaya aittir; uygulama görsel göstermekten fazlasını yapar."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "Uygulama motordur: sıraya koyar, puanlar, yanlışları açıklar. İçerik, yani sorular modülde durur."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          1,
+          1
+        ],
+        "quote": "Uygulama motor gibidir: soruları sıraya koyar, cevapları puanlar ve yanlışları açıklar.",
+        "chapter": "Modül Nedir, Nasıl Eklenir"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "rehber",
+        "modül"
+      ],
+      "vurgu": [],
+      "contentHash": "44dbfaf1cbd5912e1918a44ad5fd8d17409bdb2aa2b2944764722afb0a3c8c4f",
+      "deleted": false
+    },
+    {
+      "id": "quizloop-rehberi-0004",
+      "conceptId": "qlmod-uzantisi",
+      "stem": {
+        "md": "Tek dosyalık modül paketinin uzantısı nedir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "`.qlmod`"
+        },
+        {
+          "key": "B",
+          "md": "`.qzloop`"
+        },
+        {
+          "key": "C",
+          "md": "`.modul`"
+        },
+        {
+          "key": "D",
+          "md": "`.quizmod`"
+        },
+        {
+          "key": "E",
+          "md": "`.qlpaket`"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Böyle bir uzantı yoktur; uygulamanın adından uydurulmuştur.",
+        "C": "Türkçe modül sözcüğü uzantı olarak kullanılmaz.",
+        "D": "Benzer görünür ama doğru uzantı QuizLoop'un kısaltmasıyla başlar.",
+        "E": "Paket sözcüğü uzantıda geçmez."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "Modül paketi `.qlmod` uzantılı tek bir dosyadır. Bu dosya modül klasörünün sıkıştırılmış halidir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          2,
+          2
+        ],
+        "quote": "Tek dosyalık modül paketinin uzantısı `.qlmod` olur.",
+        "chapter": "Modül Nedir, Nasıl Eklenir"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "rehber",
+        "modül"
+      ],
+      "vurgu": [],
+      "contentHash": "8fdd0b6aaebfdb5ac22c312dd9d9f91a2ca7e6a66f3c0fc3a9a9907d2307dfd6",
+      "deleted": false
+    },
+    {
+      "id": "quizloop-rehberi-0005",
+      "conceptId": "dosya-secme-dugmesi",
+      "stem": {
+        "md": "Masaüstünde bir `.qlmod` dosyasını göstererek kurmak için Kütüphane'de hangi düğmeye basılır?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Modül dosyası ekle"
+        },
+        {
+          "key": "B",
+          "md": "Klasörden kur"
+        },
+        {
+          "key": "C",
+          "md": "Paketi içe aktar"
+        },
+        {
+          "key": "D",
+          "md": "Güncellemeleri denetle"
+        },
+        {
+          "key": "E",
+          "md": "Soru bankası"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Bu düğme sıkıştırılmamış modül klasörü içindir.",
+        "C": "Bu düğme Ayarlar'dadır ve taşıma paketini alır.",
+        "D": "Bu düğme uygulamanın yeni sürümünü arar, modül kurmaz.",
+        "E": "Soru bankası kurulu bir modülün sorularını listeler."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "**Modül dosyası ekle** bir dosya penceresi açar; `.qlmod` dosyasını gösterirsin ve modül kurulur."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          2,
+          2
+        ],
+        "quote": "Birincisi, Kütüphane'deki **Modül dosyası ekle** düğmesine basıp dosyayı göstermektir.",
+        "chapter": "Modül Nedir, Nasıl Eklenir"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "rehber",
+        "modül"
+      ],
+      "vurgu": [],
+      "contentHash": "760ad0ee55ce4166497e7f93e5a93b3f15146a0f5b89305470933cfe9305dd46",
+      "deleted": false
+    },
+    {
+      "id": "quizloop-rehberi-0006",
+      "conceptId": "cift-tiklama",
+      "stem": {
+        "md": "Masaüstünde bir `.qlmod` dosyasına çift tıklayınca ne olur?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Dosya bir metin düzenleyicide açılır"
+        },
+        {
+          "key": "B",
+          "md": "Modülün soru bankası listelenir"
+        },
+        {
+          "key": "C",
+          "md": "Uygulama açılır, modül kurulur"
+        },
+        {
+          "key": "D",
+          "md": "Dosya taşıma paketine eklenir"
+        },
+        {
+          "key": "E",
+          "md": "Yalnızca modülün sürümü gösterilir"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "`.qlmod` sıkıştırılmış bir pakettir, metin olarak açılmaz.",
+        "B": "Soru bankası kurulu modülün kartındaki menüden açılır.",
+        "D": "Taşıma paketi Ayarlar'dan yazılır; çift tıklamayla ilgisi yoktur.",
+        "E": "Çift tıklama bilgi göstermekle kalmaz, kurulumu yapar."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "Çift tıklama üç kurulum yolundan biridir: uygulama açılır ve modülü kurar."
+        },
+        {
+          "type": "hint",
+          "md": "Dosya seçmek ve sürükleyip bırakmakla aynı sonucu verir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          2,
+          2
+        ],
+        "quote": "Üçüncüsü, dosyaya çift tıklamaktır; uygulama açılır ve modülü kurar.",
+        "chapter": "Modül Nedir, Nasıl Eklenir"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "rehber",
+        "modül"
+      ],
+      "vurgu": [],
+      "contentHash": "154ff3d24604325bad6af5a42c978a8a55a41bade17d7bf17638ba0e82eb1f51",
+      "deleted": false
+    },
+    {
+      "id": "quizloop-rehberi-0007",
+      "conceptId": "klasorden-kurma",
+      "stem": {
+        "md": "Modül sıkıştırılmamış bir klasör olarak geldiyse hangi düğme kullanılır?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Örnek modülleri kur"
+        },
+        {
+          "key": "B",
+          "md": "Klasörden kur"
+        },
+        {
+          "key": "C",
+          "md": "Paketi dışa aktar"
+        },
+        {
+          "key": "D",
+          "md": "Oturuma başla"
+        },
+        {
+          "key": "E",
+          "md": "Modülü kaldır"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Bu düğme yalnızca uygulamayla gelen örnek modülleri kurar.",
+        "C": "Bu düğme ilerlemeyi bir klasöre yazar, modül kurmaz.",
+        "D": "Bu düğme kurulu bir modülde çalışmayı başlatır.",
+        "E": "Bu düğme kurulu bir modülü siler."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "Klasör halindeki modül **Klasörden kur** düğmesiyle kurulur. Tek dosyalık paket için ise **Modül dosyası ekle** kullanılır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          2,
+          2
+        ],
+        "quote": "Modül sıkıştırılmamış bir klasör olarak geldiyse **Klasörden kur** düğmesi kullanılır.",
+        "chapter": "Modül Nedir, Nasıl Eklenir"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "rehber",
+        "modül"
+      ],
+      "vurgu": [],
+      "contentHash": "70ebc65dc9f3f064c9b87ab565e508cb605bc575a79c0e2154ca6650b4171a53",
+      "deleted": false
+    },
+    {
+      "id": "quizloop-rehberi-0008",
+      "conceptId": "ornek-modul-sayisi",
+      "stem": {
+        "md": "Uygulamayla birlikte kaç örnek modül gelir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "İki"
+        },
+        {
+          "key": "B",
+          "md": "Bir"
+        },
+        {
+          "key": "C",
+          "md": "Üç"
+        },
+        {
+          "key": "D",
+          "md": "Dört"
+        },
+        {
+          "key": "E",
+          "md": "Beş"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Rehberin yanında bir de genel kültür modülü vardır.",
+        "C": "Rehber ve genel kültür dışında örnek modül yoktur.",
+        "D": "Örnek modüller yalnızca rehber ve genel kültürdür.",
+        "E": "Uygulama içerik taşımaz; yalnızca iki örnek gelir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "İki örnek modül gelir: bu rehber ve bir genel kültür modülü. İkisi de ilk açılışta kurulu gelir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          3,
+          3
+        ],
+        "quote": "Uygulamayla birlikte iki örnek modül gelir: şu an çözdüğün bu rehber ve bir genel kültür modülü.",
+        "chapter": "Modül Nedir, Nasıl Eklenir"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "rehber",
+        "modül"
+      ],
+      "vurgu": [],
+      "contentHash": "fca523e08f2e6a6dc192dcffc9afb2a7fd67ee7860c12f6eb3fbebda9ebe6acd",
+      "deleted": false
+    },
+    {
+      "id": "quizloop-rehberi-0009",
+      "conceptId": "sifirla-etkisi",
+      "stem": {
+        "md": "Bir modülde **Sıfırla** onaylanınca ne olur?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Modül bütün sorularıyla birlikte silinir"
+        },
+        {
+          "key": "B",
+          "md": "Yalnızca bayraklı sorular temizlenir"
+        },
+        {
+          "key": "C",
+          "md": "Uygulamanın bütün ayarları varsayılana döner"
+        },
+        {
+          "key": "D",
+          "md": "Sorular kalır, ilerleme sıfırlanır"
+        },
+        {
+          "key": "E",
+          "md": "Modül önceki sürümüne geri döndürülür"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Modülü silen işlem **Modülü kaldır** seçeneğidir.",
+        "B": "Sıfırlama bayraklarla sınırlı değildir; puanları ve tekrar planını siler.",
+        "C": "Sıfırlama tek bir modülün ilerlemesine dokunur, ayarlara değil.",
+        "E": "Sıfırlama sürüm değiştirmez; sorular aynı kalır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "Sıfırlama soruları yerinde bırakır, puanları ve tekrar planını siler. Modüle en baştan başlamış olursun."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          4,
+          4
+        ],
+        "quote": "Onaylarsan sorular kalır, puanlar ve tekrar planı sıfırlanır.",
+        "chapter": "Modül Nedir, Nasıl Eklenir"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "rehber",
+        "modül"
+      ],
+      "vurgu": [],
+      "contentHash": "35869bab9a5a8e9e4f8b3d46e23f04452709a4a174d63500013219ee1fe399fd",
+      "deleted": false
+    },
+    {
+      "id": "quizloop-rehberi-0010",
+      "conceptId": "kaldir-sifirla-farki",
+      "stem": {
+        "md": "**Modülü kaldır** ile **Sıfırla** arasındaki fark nedir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Kaldırma modülü de ilerlemeyi de siler"
+        },
+        {
+          "key": "B",
+          "md": "Kaldırma soruları bırakır, yalnızca puanı siler"
+        },
+        {
+          "key": "C",
+          "md": "Sıfırlama modülü de ilerlemeyi de birlikte siler"
+        },
+        {
+          "key": "D",
+          "md": "İkisi aynı işi yapar, yalnızca adları farklıdır"
+        },
+        {
+          "key": "E",
+          "md": "Kaldırma onay istemez, sıfırlama onay ister"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Soruları bırakıp ilerlemeyi silen işlem sıfırlamadır.",
+        "C": "Sıfırlamada sorular kalır; modül silinmez.",
+        "D": "Biri modülü siler, öbürü yalnızca ilerlemeyi temizler.",
+        "E": "İki işlem de önce onay ister."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "Sıfırlamada sorular kalır, yalnızca ilerleme gider. Kaldırmada modül de onun tüm ilerlemesi de silinir."
+        },
+        {
+          "type": "hint",
+          "md": "Hangisinden sonra modül kartı Kütüphane'de durmaya devam eder?"
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          4,
+          4
+        ],
+        "quote": "**Modülü kaldır** da onay ister ve daha ağır bir işlemdir: modülün tüm ilerlemesi de silinir.",
+        "chapter": "Modül Nedir, Nasıl Eklenir"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "rehber",
+        "modül"
+      ],
+      "vurgu": [],
+      "contentHash": "1514b3d640ae16ee25d19ad800b8d642aece9a47a850a68f58eb651e54bedf62",
+      "deleted": false
+    }
+  ]
+}

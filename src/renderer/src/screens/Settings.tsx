@@ -343,6 +343,16 @@ export function Settings(): React.JSX.Element {
                 {t('settings.sourceOpen')}
               </button>
             </div>
+            <div className="ql-row">
+              <span className="tk-hint">{t('settings.welcome')}</span>
+              <button
+                type="button"
+                className="tk-btn tk-btn-ghost ql-btn-sm"
+                onClick={() => useApp.getState().showHelp(true)}
+              >
+                {t('settings.welcomeOpen')}
+              </button>
+            </div>
             {info && (
               <p className={info.integrity.ok ? 'tk-hint' : 'tk-danger-text'}>
                 <span

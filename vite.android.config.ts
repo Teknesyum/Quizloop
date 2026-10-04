@@ -3,7 +3,8 @@ import { join, relative, resolve, sep } from 'node:path'
 import react from '@vitejs/plugin-react'
 import { defineConfig, type Plugin } from 'vite'
 
-const BUNDLED = ['_ornek']
+const SAMPLES = resolve('resources/ornek')
+const BUNDLED = readdirSync(SAMPLES).sort()
 const BANNED = /\.(gz|mjs)$/i
 const OUT = resolve('out/android')
 
@@ -21,7 +22,7 @@ function bundledModules(): Plugin {
     closeBundle() {
       const index: Record<string, string[]> = {}
       for (const id of BUNDLED) {
-        const src = resolve('modules', id)
+        const src = join(SAMPLES, id)
         const files = listFiles(src).map((f) => relative(src, f).split(sep).join('/'))
         const bad = files.filter((f) => BANNED.test(f))
         if (bad.length) throw new Error(`bundled module uses a banned extension: ${bad.join(', ')}`)

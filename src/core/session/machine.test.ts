@@ -11,7 +11,7 @@ import { syncModule } from '@core/modules/sync'
 import { SessionMachine } from './machine'
 
 const NOW = new Date('2026-09-08T09:00:00.000Z')
-const SAMPLE = resolve('modules/_ornek')
+const SAMPLE = resolve('src/core/testdata/ornek')
 
 let dir: string
 let db: Kysely<Database>

@@ -13,7 +13,7 @@ import type { CorePorts } from '@core/ports'
 import { resyncFolders } from '@core/commands/modules'
 
 const NOW = new Date('2026-09-08T09:00:00.000Z')
-const SAMPLE = resolve('modules/_ornek')
+const SAMPLE = resolve('src/core/testdata/ornek')
 const ROOT = '/mem/big'
 
 let dir: string

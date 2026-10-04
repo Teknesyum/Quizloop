@@ -233,6 +233,25 @@ body {
   display: none;
 }
 
+.ql-welcome-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--tk-sp-4);
+  margin: var(--tk-sp-4) 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ql-welcome-list li {
+  display: flex;
+  flex-direction: column;
+  gap: var(--tk-sp-1);
+}
+
+.ql-welcome-list p {
+  margin: 0;
+}
+
 .ql-empty {
   display: flex;
   flex-direction: column;

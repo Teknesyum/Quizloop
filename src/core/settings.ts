@@ -9,7 +9,8 @@ export const DEFAULT_SETTINGS: Settings = {
   soundOn: false,
   fontScale: 1,
   blinkSeconds: 5,
-  autoUpdate: true
+  autoUpdate: true,
+  welcomeSeen: false
 }
 
 export const SettingsPatch = z
@@ -21,7 +22,8 @@ export const SettingsPatch = z
     soundOn: z.boolean(),
     fontScale: z.number().min(0.5).max(2),
     blinkSeconds: z.number().int().min(0).max(30),
-    autoUpdate: z.boolean()
+    autoUpdate: z.boolean(),
+    welcomeSeen: z.boolean()
   })
   .partial()
 

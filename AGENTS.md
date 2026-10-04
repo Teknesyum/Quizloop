@@ -8,7 +8,8 @@ Vite, packaged with electron-builder for Windows, macOS and Linux. AGPL-3.0-or-l
 - `docs/taramalar/` — prior-art survey (Turkish, internal, historical).
 - `src/AGENTS.md` — process layout and the IPC rule. Each subfolder has its own.
 - `schema/` — generated JSON Schema. Edit the zod source, run `npm run schema:gen`.
-- `modules/` — content packages, git-ignored. Only `modules/_ornek/` ships.
+- `modules/` — content packages, git-ignored. `resources/ornek/` holds the two shipped
+  samples, built from `scripts/ornek/*.json` by `npm run ornek`; a hand edit breaks hashes.
 - `dist/` — every build output: `desktop/`, `android/`, `modules/` (decision 0012).
 
 Commands: `npm run dev`, `npm test`, `npm run typecheck`, `npm run lint`,

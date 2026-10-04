@@ -13,8 +13,6 @@ Thumbs.db
 
 # Content modules never ship with the engine.
 modules/*
-!modules/_ornek/
-!modules/_ornek/**
 
 # Local caches produced while building modules.
 .quizloop-cache/

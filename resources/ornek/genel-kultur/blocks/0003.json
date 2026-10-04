@@ -1,0 +1,890 @@
+{
+  "blockId": "0003",
+  "questions": [
+    {
+      "id": "genel-kultur-0031",
+      "conceptId": "en-derin-gol",
+      "stem": {
+        "md": "Dünya'nın en derin gölü hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Tanganika"
+        },
+        {
+          "key": "B",
+          "md": "Viktorya"
+        },
+        {
+          "key": "C",
+          "md": "Baykal"
+        },
+        {
+          "key": "D",
+          "md": "Hazar"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Tanganika ikinci en derin göldür.",
+        "B": "Viktorya Afrika'nın en büyük gölüdür ama sığdır.",
+        "D": "Hazar yüzölçümü en büyük göldür, en derini değildir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "En derin göl Sibirya'daki Baykal Gölü'dür. Derinliği 1600 metreyi aşar."
+        },
+        {
+          "type": "hint",
+          "md": "Sibirya'da bir tatlı su gölü."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          7,
+          7
+        ],
+        "quote": "Dünya'nın en derin gölü Sibirya'daki Baykal Gölü'dür.",
+        "chapter": "Zor Sorular"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "coğrafya"
+      ],
+      "vurgu": [],
+      "contentHash": "887aed35d058804fbedda7d713b83ea4a88f82a57d265e4a18419837588f4786",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0032",
+      "conceptId": "kades-antlasmasi",
+      "stem": {
+        "md": "Mısırlılar Kadeş Antlaşması'nı hangi uygarlıkla yapmıştır?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Hititler"
+        },
+        {
+          "key": "B",
+          "md": "Sümerler"
+        },
+        {
+          "key": "C",
+          "md": "Frigler"
+        },
+        {
+          "key": "D",
+          "md": "Asurlular"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Sümerler Mezopotamya'da çok daha önce yaşamıştır.",
+        "C": "Frigler Anadolu'da Hititlerden sonra ortaya çıkmıştır.",
+        "D": "Asurlular Mezopotamya'nın gücüdür; bu antlaşmanın tarafı değildir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "Antlaşma Hititler ile Mısırlılar arasında yapılmıştır. Metni günümüze ulaşan en eski barış antlaşmalarından biridir."
+        },
+        {
+          "type": "hint",
+          "md": "Başkenti Hattuşa olan Anadolu uygarlığı."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          7,
+          7
+        ],
+        "quote": "Kadeş Antlaşması Hititler ile Mısırlılar arasında yapılmıştır.",
+        "chapter": "Zor Sorular"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "tarih"
+      ],
+      "vurgu": [],
+      "contentHash": "5078f576818501fe9a06429ee3da34505b53c619f254c1df033c6c8aca4c391c",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0033",
+      "conceptId": "mutlak-sifir",
+      "stem": {
+        "md": "Eksi 273,15 santigrat derece hangi adla bilinir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Donma noktası"
+        },
+        {
+          "key": "B",
+          "md": "Mutlak sıfır"
+        },
+        {
+          "key": "C",
+          "md": "Üçlü nokta"
+        },
+        {
+          "key": "D",
+          "md": "Kritik sıcaklık"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Donma noktası maddeye göre değişir; suyunki sıfır santigrat derecedir.",
+        "C": "Üçlü nokta, bir maddenin üç hâlinin bir arada bulunduğu koşuldur.",
+        "D": "Kritik sıcaklık, bir gazın üstünde sıvılaştırılamadığı sıcaklıktır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "Bu sıcaklık mutlak sıfırdır. Kelvin ölçeğinin başlangıcıdır ve daha düşük bir sıcaklık olamaz."
+        },
+        {
+          "type": "hint",
+          "md": "Kelvin ölçeğinin sıfırı."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          7,
+          7
+        ],
+        "quote": "Mutlak sıfır, eksi 273,15 santigrat derecedir.",
+        "chapter": "Zor Sorular"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "bilim"
+      ],
+      "vurgu": [],
+      "contentHash": "6c4b79c816e49170ea2a6707d4de6a452496753768c57dfecb7ec6171400670e",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0034",
+      "conceptId": "tutunamayanlar-yazari",
+      "stem": {
+        "md": "Tutunamayanlar romanının yazarı kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Yusuf Atılgan"
+        },
+        {
+          "key": "B",
+          "md": "Orhan Pamuk"
+        },
+        {
+          "key": "C",
+          "md": "Oğuz Atay"
+        },
+        {
+          "key": "D",
+          "md": "Ahmet Hamdi Tanpınar"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Yusuf Atılgan, Aylak Adam ve Anayurt Oteli'nin yazarıdır.",
+        "B": "Orhan Pamuk daha sonraki kuşağın romancısıdır.",
+        "D": "Ahmet Hamdi Tanpınar, Saatleri Ayarlama Enstitüsü'nün yazarıdır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "Tutunamayanlar'ı Oğuz Atay yazmıştır. Roman, Selim Işık'ın ölümünün ardından arkadaşı Turgut Özben'in arayışını anlatır."
+        },
+        {
+          "type": "hint",
+          "md": "Tehlikeli Oyunlar da aynı yazarındır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          7,
+          7
+        ],
+        "quote": "Tutunamayanlar romanının yazarı Oğuz Atay'dır.",
+        "chapter": "Zor Sorular"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "edebiyat"
+      ],
+      "vurgu": [],
+      "contentHash": "a3b5bc22fecc290015ee817e31b86bb711968f67b76a61852dca1cf47aa0527e",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0035",
+      "conceptId": "bolero-bestecisi",
+      "stem": {
+        "md": "Bolero adlı orkestra eserinin bestecisi kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Debussy"
+        },
+        {
+          "key": "B",
+          "md": "Ravel"
+        },
+        {
+          "key": "C",
+          "md": "Bizet"
+        },
+        {
+          "key": "D",
+          "md": "Satie"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Debussy aynı dönemin Fransız bestecisidir; Ay Işığı ile tanınır.",
+        "C": "Bizet, İspanya'da geçen Carmen operasının bestecisidir.",
+        "D": "Satie, Gymnopédies adlı piyano parçalarıyla tanınır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "Bolero'yu Maurice Ravel bestelemiştir. Eser, tek bir ezginin giderek güçlenerek yinelenmesi üzerine kuruludur."
+        },
+        {
+          "type": "hint",
+          "md": "Fransız besteci; adı Maurice."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          7,
+          7
+        ],
+        "quote": "Bolero adlı orkestra eserinin bestecisi Maurice Ravel'dir.",
+        "chapter": "Zor Sorular"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "sanat"
+      ],
+      "vurgu": [],
+      "contentHash": "6f204820fbf2c3f9e07fbfe0c8c863a8ea7d7ca1abbbcda91565f681b1db4006",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0036",
+      "conceptId": "ilk-modern-olimpiyat",
+      "stem": {
+        "md": "İlk modern Olimpiyat Oyunları 1896'da hangi şehirde yapılmıştır?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Paris"
+        },
+        {
+          "key": "B",
+          "md": "Londra"
+        },
+        {
+          "key": "C",
+          "md": "Roma"
+        },
+        {
+          "key": "D",
+          "md": "Atina"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Paris, 1900'deki ikinci oyunların şehridir.",
+        "B": "Londra oyunları ilk kez 1908'de düzenlemiştir.",
+        "C": "Roma oyunları ilk kez 1960'ta düzenlemiştir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "İlk modern oyunlar Atina'da yapılmıştır. Şehir, antik oyunların doğduğu ülke olan Yunanistan'ın başkenti olduğu için seçilmiştir."
+        },
+        {
+          "type": "hint",
+          "md": "Antik oyunların doğduğu ülkenin başkenti."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          8,
+          8
+        ],
+        "quote": "İlk modern Olimpiyat Oyunları 1896'da Atina'da yapılmıştır.",
+        "chapter": "Zor Sorular"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "spor"
+      ],
+      "vurgu": [],
+      "contentHash": "fdf501603a248165343eade6db5d952b10a215ce866e6c2bd3ce43029651fb87",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0037",
+      "conceptId": "zamenhof-yapay-dil",
+      "stem": {
+        "md": "Ludwik Zamenhof'un tasarladığı yapay dil hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Volapük"
+        },
+        {
+          "key": "B",
+          "md": "Interlingua"
+        },
+        {
+          "key": "C",
+          "md": "Klingonca"
+        },
+        {
+          "key": "D",
+          "md": "Esperanto"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Volapük daha eski bir yapay dildir; onu Johann Martin Schleyer tasarlamıştır.",
+        "B": "Interlingua yirminci yüzyılda bir dil derneği tarafından geliştirilmiştir.",
+        "C": "Klingonca bir bilimkurgu dizisi için uydurulmuş bir dildir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "Bu dil Esperanto'dur. Zamenhof onu farklı dilleri konuşan insanlar arasında ortak bir ikinci dil olsun diye tasarlamıştır."
+        },
+        {
+          "type": "hint",
+          "md": "Adı, umut eden anlamına gelir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          8,
+          8
+        ],
+        "quote": "Esperanto, Ludwik Zamenhof'un tasarladığı yapay bir dildir.",
+        "chapter": "Zor Sorular"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "dil"
+      ],
+      "vurgu": [],
+      "contentHash": "591fe7f9bdbbe8cc101ef3caa3e5d0efe628083ade6aad180a425418f7b4ec7c",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0038",
+      "conceptId": "titikaka-sinir",
+      "stem": {
+        "md": "Titikaka Gölü, Peru ile hangi ülke arasındaki sınırda yer alır?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Şili"
+        },
+        {
+          "key": "B",
+          "md": "Bolivya"
+        },
+        {
+          "key": "C",
+          "md": "Ekvador"
+        },
+        {
+          "key": "D",
+          "md": "Kolombiya"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Şili Peru'nun güney komşusudur ama gölün kıyısı yoktur.",
+        "C": "Ekvador Peru'nun kuzey komşusudur, göle uzaktır.",
+        "D": "Kolombiya da kuzeydedir ve gölle sınırı yoktur."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "Göl, Peru ile Bolivya arasındadır. And Dağları'nda, yaklaşık 3800 metre yükseklikte yer alır."
+        },
+        {
+          "type": "hint",
+          "md": "Denize kıyısı olmayan bir And ülkesi."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          8,
+          8
+        ],
+        "quote": "Titikaka Gölü, Peru ile Bolivya arasındaki sınırda yer alır.",
+        "chapter": "Zor Sorular"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "coğrafya"
+      ],
+      "vurgu": [],
+      "contentHash": "a9f7362ecbd5f91d8988432c0e5abc05ccf5bdf27dd78fecd2d1b81b9a7eeb0d",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0039",
+      "conceptId": "otuz-yil-savasi-barisi",
+      "stem": {
+        "md": "Otuz Yıl Savaşı'nı 1648'de sona erdiren barış hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Utrecht Antlaşması"
+        },
+        {
+          "key": "B",
+          "md": "Westfalya Barışı"
+        },
+        {
+          "key": "C",
+          "md": "Viyana Kongresi"
+        },
+        {
+          "key": "D",
+          "md": "Versay Antlaşması"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Utrecht Antlaşması on sekizinci yüzyılın başında İspanya Veraset Savaşı'nı bitirmiştir.",
+        "C": "Viyana Kongresi, Napolyon Savaşları'ndan sonra 1815'te toplanmıştır.",
+        "D": "Versay Antlaşması 1919'da Birinci Dünya Savaşı'nın ardından imzalanmıştır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "Savaşı Westfalya Barışı bitirmiştir. Bu barış, egemen devletlere dayanan Avrupa düzeninin başlangıcı sayılır."
+        },
+        {
+          "type": "hint",
+          "md": "Adını Almanya'daki bir bölgeden alır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          8,
+          8
+        ],
+        "quote": "1648'de imzalanan Westfalya Barışı, Otuz Yıl Savaşı'nı sona erdirmiştir.",
+        "chapter": "Zor Sorular"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "tarih"
+      ],
+      "vurgu": [],
+      "contentHash": "bfb9051612eb83aa274a17ba834300896d04431a1b2b3b10329388af31c21a90",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0040",
+      "conceptId": "en-kucuk-kemik",
+      "stem": {
+        "md": "İnsan vücudundaki en küçük kemik hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Çekiç"
+        },
+        {
+          "key": "B",
+          "md": "Örs"
+        },
+        {
+          "key": "C",
+          "md": "Üzengi"
+        },
+        {
+          "key": "D",
+          "md": "Köprücük"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Çekiç de orta kulaktadır ama üzengiden büyüktür.",
+        "B": "Örs de orta kulak kemiğidir; üzengiden büyüktür.",
+        "D": "Köprücük kemiği omuzdadır ve çok daha büyüktür."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "En küçük kemik üzengidir. Orta kulakta yer alır ve ses titreşimlerini iç kulağa iletir."
+        },
+        {
+          "type": "hint",
+          "md": "Orta kulakta, adını bir binicilik gerecinden alır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          8,
+          8
+        ],
+        "quote": "İnsan vücudundaki en küçük kemik, orta kulaktaki üzengi kemiğidir.",
+        "chapter": "Zor Sorular"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "bilim"
+      ],
+      "vurgu": [],
+      "contentHash": "1020605683468b3a2035ef33da3a830ace80578061afaeff1bcfbd1051c24509",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0041",
+      "conceptId": "odysseus-yurdu",
+      "stem": {
+        "md": "Odysseia destanında Odysseus'un yurdu olan ada hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Girit"
+        },
+        {
+          "key": "B",
+          "md": "Rodos"
+        },
+        {
+          "key": "C",
+          "md": "Sicilya"
+        },
+        {
+          "key": "D",
+          "md": "İthaka"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Girit, Minos ve labirent söylencesinin adasıdır.",
+        "B": "Rodos bir Ege adasıdır ama Odysseus'un yurdu değildir.",
+        "C": "Sicilya, yolculuktaki duraklarla ilişkilendirilir; yurdu değildir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "Odysseus'un yurdu İthaka'dır. Destan, Troya Savaşı'ndan sonra bu adaya dönüş yolculuğunu anlatır."
+        },
+        {
+          "type": "hint",
+          "md": "Penelope onu bu adada bekler."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          9,
+          9
+        ],
+        "quote": "Odysseia destanında Odysseus'un yurdu İthaka adasıdır.",
+        "chapter": "Zor Sorular"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "edebiyat"
+      ],
+      "vurgu": [],
+      "contentHash": "4815a3323877a5d7db15ff19ef1289ff0a6ccf5d6a2e2484211adc4c7517b35d",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0042",
+      "conceptId": "kaplumbaga-terbiyecisi",
+      "stem": {
+        "md": "Kaplumbağa Terbiyecisi tablosunu hangi ressam yapmıştır?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Osman Hamdi Bey"
+        },
+        {
+          "key": "B",
+          "md": "Şeker Ahmed Paşa"
+        },
+        {
+          "key": "C",
+          "md": "İbrahim Çallı"
+        },
+        {
+          "key": "D",
+          "md": "Hoca Ali Rıza"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Şeker Ahmed Paşa aynı dönemin ressamıdır; natürmortlarıyla tanınır.",
+        "C": "İbrahim Çallı sonraki kuşağın izlenimci ressamıdır.",
+        "D": "Hoca Ali Rıza, İstanbul manzaralarıyla tanınır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "Tabloyu Osman Hamdi Bey yapmıştır. Kendisi aynı zamanda arkeolog ve müzecidir."
+        },
+        {
+          "type": "hint",
+          "md": "İstanbul Arkeoloji Müzeleri'nin kurucusu."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          9,
+          9
+        ],
+        "quote": "Kaplumbağa Terbiyecisi tablosunu Osman Hamdi Bey yapmıştır.",
+        "chapter": "Zor Sorular"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "sanat"
+      ],
+      "vurgu": [],
+      "contentHash": "164fbf892b8c12ce7d9c575328bb66e3f06e4acbde4b5f9a61b36febae44f360",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0043",
+      "conceptId": "maraton-mesafesi",
+      "stem": {
+        "md": "Maraton koşusunun mesafesi ne kadardır?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "40 kilometre"
+        },
+        {
+          "key": "B",
+          "md": "42,195 kilometre"
+        },
+        {
+          "key": "C",
+          "md": "21,0975 kilometre"
+        },
+        {
+          "key": "D",
+          "md": "50 kilometre"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "40 kilometre yuvarlak bir tahmindir; resmi mesafe biraz daha uzundur.",
+        "C": "21,0975 kilometre yarı maratonun mesafesidir.",
+        "D": "50 kilometre, maratondan uzun olan ultra koşuların mesafesidir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "Maraton 42,195 kilometredir. Bu mesafe 1921'de resmi ölçü olarak kabul edilmiştir."
+        },
+        {
+          "type": "hint",
+          "md": "Yarı maratonun tam iki katı."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          9,
+          9
+        ],
+        "quote": "Maraton koşusunun mesafesi 42,195 kilometredir.",
+        "chapter": "Zor Sorular"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "spor"
+      ],
+      "vurgu": [],
+      "contentHash": "bd60cefdc90c269b42f05ec860b48fc3cd120220b574401288550b5b660c13ae",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0044",
+      "conceptId": "gokturk-alfabesi-aniti",
+      "stem": {
+        "md": "Göktürk alfabesiyle yazılmış olan eser hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Kutadgu Bilig"
+        },
+        {
+          "key": "B",
+          "md": "Rosetta Taşı"
+        },
+        {
+          "key": "C",
+          "md": "Orhun Yazıtları"
+        },
+        {
+          "key": "D",
+          "md": "Hammurabi Kanunları"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Kutadgu Bilig Karahanlı döneminde yazılmış bir kitaptır, yazıt değildir.",
+        "B": "Rosetta Taşı Mısır'da bulunmuştur; hiyeroglif ve Yunanca içerir.",
+        "D": "Hammurabi Kanunları Babil'de çivi yazısıyla yazılmıştır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "Orhun Yazıtları Göktürk alfabesiyle yazılmıştır. Yazıtlar sekizinci yüzyılda bugünkü Moğolistan'da dikilmiştir."
+        },
+        {
+          "type": "hint",
+          "md": "Bugünkü Moğolistan'da dikili taşlar."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          9,
+          9
+        ],
+        "quote": "Orhun Yazıtları Göktürk alfabesiyle yazılmıştır.",
+        "chapter": "Zor Sorular"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "dil"
+      ],
+      "vurgu": [],
+      "contentHash": "a48d4994b34cf6606576dac239c39120e35607d3cf8425a1f29bb97c502c8946",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0045",
+      "conceptId": "piyano-tus-sayisi",
+      "stem": {
+        "md": "Standart bir piyanoda kaç tuş bulunur?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "61"
+        },
+        {
+          "key": "B",
+          "md": "76"
+        },
+        {
+          "key": "C",
+          "md": "88"
+        },
+        {
+          "key": "D",
+          "md": "108"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "61 tuş, küçük elektronik klavyelerde yaygın olan sayıdır.",
+        "B": "76 tuş, orta boy elektronik klavyelerde görülür.",
+        "D": "108 tuş standart değildir; yalnızca birkaç özel yapım piyanoda bulunur."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "Standart piyanoda 88 tuş vardır. Bunların 52'si beyaz, 36'sı siyahtır."
+        },
+        {
+          "type": "hint",
+          "md": "Tuşların 52'si beyaz, 36'sı siyahtır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          9,
+          9
+        ],
+        "quote": "Standart bir piyanoda 88 tuş bulunur.",
+        "chapter": "Zor Sorular"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "gündelik-hayat"
+      ],
+      "vurgu": [],
+      "contentHash": "3f6c9a4445f11da22ec3445974a2a06e5afbecd10ca7c9232e6ee6720e923eb4",
+      "deleted": false
+    }
+  ]
+}

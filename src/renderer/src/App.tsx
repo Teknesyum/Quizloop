@@ -6,6 +6,7 @@ import { ScaleSwitch } from './components/ScaleSwitch'
 import { useUpdateTools } from './components/UpdateTools'
 import { useBookWarmup } from './components/bookdoc'
 import { Toasts } from './components/Toast'
+import { Welcome } from './components/Welcome'
 import { WorkProgress } from './components/WorkProgress'
 import { installedText, lang, setLang, t } from './i18n'
 import { Bank } from './screens/Bank'
@@ -37,6 +38,9 @@ export default function App(): React.JSX.Element {
   const settings = useApp((s) => s.settings)
   const saveSettings = useApp((s) => s.saveSettings)
   const scale = settings?.fontScale ?? 1
+  const help = useApp((s) => s.help)
+  const showHelp = useApp((s) => s.showHelp)
+  const welcome = help || (settings !== null && !settings.welcomeSeen)
   const [max, setMax] = useState(false)
   useBookWarmup(route.name === 'session' || route.name === 'bank' ? route.moduleId : null)
 
@@ -165,6 +169,14 @@ export default function App(): React.JSX.Element {
           )}
         </main>
       </div>
+      {welcome && (
+        <Welcome
+          onClose={() => {
+            showHelp(false)
+            if (!settings?.welcomeSeen) saveSettings({ welcomeSeen: true })
+          }}
+        />
+      )}
       <WorkProgress />
       <Toasts />
     </div>
