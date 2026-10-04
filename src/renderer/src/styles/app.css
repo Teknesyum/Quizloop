@@ -318,6 +318,11 @@ body {
   text-shadow: none;
 }
 
+.ql-cover-card .ql-tag {
+  border-color: transparent;
+  background: var(--tk-scrim);
+}
+
 .ql-cover-card svg {
   filter: drop-shadow(0 0 var(--tk-sp-1) var(--tk-bg-from))
     drop-shadow(0 0 var(--tk-sp-2) var(--tk-bg-from));
@@ -857,9 +862,12 @@ kbd {
   white-space: nowrap;
 }
 
+.tk-toast-stack {
+  z-index: 3;
+}
+
 .ql-shell:has(.ql-keys) .tk-toast-stack {
   bottom: calc(var(--ql-keys-h) + var(--tk-sp-4));
-  z-index: 3;
 }
 
 .ql-shell:has(.ql-session) .tk-toast-stack > .tk-toast:nth-last-child(n + 4) {
