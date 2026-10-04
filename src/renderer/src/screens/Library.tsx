@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { tinykeys } from 'tinykeys'
 import type { InstallResult, ModuleSummary } from '@shared/ipc'
+import { CardCover } from '@renderer/components/CardCover'
 import { CardMenu, MenuItem } from '@renderer/components/CardMenu'
 import { Confirm } from '@renderer/components/Confirm'
 import { Skeleton } from '@renderer/components/Skeleton'
@@ -27,78 +28,70 @@ function ModuleCard({
   onUpdate(): void
 }): React.JSX.Element {
   const go = useApp((s) => s.go)
-  const [cover, setCover] = useState(true)
+  const percent = m.questionCount ? Math.round((m.retired / m.questionCount) * 100) : 0
   return (
     <article
       id={`ql-module-${index}`}
       tabIndex={active ? 0 : -1}
       aria-label={m.name}
       onFocus={onFocus}
-      className={`tk-panel ql-card ql-cover-card ql-transition-in ${active ? 'ql-card-active' : ''}`}
+      className={`tk-panel ql-card ql-transition-in ${active ? 'ql-card-active' : ''}`}
       style={{ '--ql-i': index } as React.CSSProperties}
     >
-      {cover && (
-        <img
-          className="ql-cover"
-          src={`${m.assetBase}assets/kapak.webp`}
-          alt=""
-          onError={() => setCover(false)}
-        />
-      )}
       <header className="ql-card-head">
-        <h3 className="tk-h3">
-          <span>{m.name}</span>
+        <h3 className="tk-h3" title={m.name}>
+          {m.name}
         </h3>
-        <span className="tk-mono ql-percent">
-          {m.questionCount ? Math.round((m.retired / m.questionCount) * 100) : 0}%
-        </span>
+        <span className="tk-mono ql-percent">{percent}%</span>
       </header>
-      <ul className="ql-tags" aria-label={t('library.tags')}>
-        <li className="tk-mono ql-tag ql-tag-version">
-          {t('library.card.version', { version: m.version })}
-        </li>
-        {m.tags.map((tag) => (
-          <li key={tag} className="tk-mono ql-tag">
-            {title(tag)}
-          </li>
-        ))}
-      </ul>
-      <dl className="ql-card-stats">
-        <div className={m.dueToday ? 'ql-stat-hot' : ''}>
-          <dt className="tk-hint">{t('library.card.due', { count: m.dueToday })}</dt>
+      <div className="ql-card-body">
+        <CardCover src={`${m.assetBase}assets/kapak.webp`} name={m.name} />
+        <div className="ql-card-info">
+          <p className="tk-hint ql-card-tags" aria-label={t('library.tags')}>
+            {[
+              t('library.card.version', { version: m.version }),
+              ...m.tags.map((tag) => title(tag))
+            ].join(' · ')}
+          </p>
+          <p className={`ql-card-due ${m.dueToday ? 'ql-stat-hot' : ''}`}>
+            <span className="tk-mono ql-due-count">{m.dueToday}</span>
+            <span className="tk-hint">{t('library.card.dueLabel')}</span>
+          </p>
+          <p className="tk-hint ql-card-rest">
+            {t('library.card.unseen', { count: m.unseen })} ·{' '}
+            {t('library.card.learning', { count: m.learning })}
+          </p>
+          <div className="ql-card-meter">
+            <p className="ql-card-meter-row">
+              <span className="tk-hint">
+                {t('library.card.questions', { count: m.questionCount })}
+              </span>
+              <span className="tk-hint">{t('library.card.percent', { percent })}</span>
+            </p>
+            <div
+              className="ql-progress"
+              role="progressbar"
+              aria-valuemin={0}
+              aria-valuemax={m.questionCount}
+              aria-valuenow={m.retired}
+            >
+              <span style={{ width: `${percent}%` }} />
+            </div>
+          </div>
         </div>
-        <div>
-          <dt className="tk-hint">{t('library.card.unseen', { count: m.unseen })}</dt>
-        </div>
-        <div>
-          <dt className="tk-hint">{t('library.card.learning', { count: m.learning })}</dt>
-        </div>
-        <div>
-          <dt className="tk-hint">{t('library.card.retired', { count: m.retired })}</dt>
-        </div>
-      </dl>
-      <div
-        className="ql-progress"
-        role="progressbar"
-        aria-valuemin={0}
-        aria-valuemax={m.questionCount}
-        aria-valuenow={m.retired}
-      >
-        <span style={{ width: `${m.questionCount ? (m.retired / m.questionCount) * 100 : 0}%` }} />
       </div>
       <footer className="ql-card-foot">
-        <span className="tk-hint">{t('library.card.questions', { count: m.questionCount })}</span>
+        <CardMenu label={t('library.more')}>
+          <MenuItem onPick={() => go({ name: 'bank', moduleId: m.id })}>
+            {t('library.bank')}
+          </MenuItem>
+          <MenuItem onPick={onUpdate}>{t('library.update')}</MenuItem>
+          <MenuItem onPick={onReset}>{t('library.reset')}</MenuItem>
+          <MenuItem danger onPick={onRemove}>
+            {t('library.remove')}
+          </MenuItem>
+        </CardMenu>
         <div className="ql-card-actions">
-          <CardMenu label={t('library.more')}>
-            <MenuItem onPick={() => go({ name: 'bank', moduleId: m.id })}>
-              {t('library.bank')}
-            </MenuItem>
-            <MenuItem onPick={onUpdate}>{t('library.update')}</MenuItem>
-            <MenuItem onPick={onReset}>{t('library.reset')}</MenuItem>
-            <MenuItem danger onPick={onRemove}>
-              {t('library.remove')}
-            </MenuItem>
-          </CardMenu>
           <button
             type="button"
             className="tk-btn tk-btn-ghost ql-btn-sm"

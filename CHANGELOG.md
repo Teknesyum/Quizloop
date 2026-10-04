@@ -6,6 +6,20 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.7.30] - 2026-10-05
+
+### Changed
+
+- Library and chapter cards are redesigned. The cover is no longer a background: it sits
+  in its own column on the left and all text is on plain black, so nothing needs a
+  backing. A card without a cover shows the initials of its name in the same place.
+- The title is one line and is cut with an ellipsis when it does not fit; hover shows
+  the full name.
+- One number leads the card: how many questions are due today. New and learning counts
+  share one small line, tags are plain text, and the retired percent moved down to label
+  the progress bar it belongs to.
+- The menu button sits on the left of the card foot, Mixed and Start session on the right.
+
 ## [0.7.29] - 2026-10-05
 
 ### Changed
