@@ -1,0 +1,105 @@
+import { useEffect, useLayoutEffect, useRef, useState } from 'react'
+import { createPortal } from 'react-dom'
+
+type Spot = { right: number; top?: number; bottom?: number }
+
+export function CardMenu({
+  label,
+  children
+}: {
+  label: string
+  children: React.ReactNode
+}): React.JSX.Element {
+  const [open, setOpen] = useState(false)
+  const [spot, setSpot] = useState<Spot | null>(null)
+  const btn = useRef<HTMLButtonElement>(null)
+  const list = useRef<HTMLDivElement>(null)
+
+  useLayoutEffect(() => {
+    if (!open || !btn.current) return
+    const r = btn.current.getBoundingClientRect()
+    const right = window.innerWidth - r.right
+    const below = window.innerHeight - r.bottom
+    setSpot(below < r.top ? { right, bottom: window.innerHeight - r.top } : { right, top: r.bottom })
+  }, [open])
+
+  useEffect(() => {
+    if (!open) return
+    list.current?.querySelector<HTMLElement>('[role="menuitem"]')?.focus()
+    const close = (): void => setOpen(false)
+    const down = (e: PointerEvent): void => {
+      const at = e.target as Node
+      if (!list.current?.contains(at) && !btn.current?.contains(at)) close()
+    }
+    const key = (e: KeyboardEvent): void => {
+      if (e.key !== 'Escape') return
+      e.stopPropagation()
+      close()
+      btn.current?.focus()
+    }
+    document.addEventListener('pointerdown', down)
+    document.addEventListener('keydown', key, true)
+    window.addEventListener('resize', close)
+    window.addEventListener('scroll', close, true)
+    return () => {
+      document.removeEventListener('pointerdown', down)
+      document.removeEventListener('keydown', key, true)
+      window.removeEventListener('resize', close)
+      window.removeEventListener('scroll', close, true)
+    }
+  }, [open, spot])
+
+  return (
+    <>
+      <button
+        ref={btn}
+        type="button"
+        className="tk-btn tk-btn-ghost ql-btn-sm ql-menu-btn"
+        aria-haspopup="menu"
+        aria-expanded={open}
+        aria-label={label}
+        title={label}
+        onClick={() => setOpen((o) => !o)}
+      >
+        ⋯
+      </button>
+      {open &&
+        spot &&
+        createPortal(
+          <div
+            ref={list}
+            className="tk-panel ql-menu ql-transition-in"
+            role="menu"
+            aria-label={label}
+            style={spot}
+            onClick={() => setOpen(false)}
+            onKeyDown={(e) => e.stopPropagation()}
+          >
+            {children}
+          </div>,
+          document.body
+        )}
+    </>
+  )
+}
+
+export function MenuItem({
+  danger,
+  onPick,
+  children
+}: {
+  danger?: boolean
+  onPick(): void
+  children: React.ReactNode
+}): React.JSX.Element {
+  return (
+    <button
+      type="button"
+      role="menuitem"
+      className={`ql-menu-opt ${danger ? 'ql-menu-danger' : ''}`}
+      onClick={onPick}
+    >
+      {children}
+    </button>
+  )
+}

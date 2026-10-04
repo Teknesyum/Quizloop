@@ -36,6 +36,8 @@
   "chapters.subtitle": "Bölüm seç ya da tüm konulardan karışık çalış.",
   "chapters.all": "Tüm konulardan karışık",
   "chapters.unsorted": "Bölümsüz",
+  "library.more": "Diğer işlemler",
+  "library.update": "Modülü güncelle",
   "library.remove": "Modülü kaldır",
   "library.reset": "Sıfırla",
   "library.resetConfirmTitle": "{name}: tüm ilerleme silinsin mi?",
