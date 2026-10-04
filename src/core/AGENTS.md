@@ -9,6 +9,7 @@ ESLint enforces it. Tests (`*.test.ts`) may use Node.
 - `db/` — `types.ts` and `migrations.ts`. Migrations are append-only. Cards keep
   history: retirement writes `retired_at`, a removed question sets `orphaned = 1`.
 - `modules/` — `loader.ts` (async, port-driven) and `sync.ts`.
+- `testdata/ornek/` — eight-question fixture module for the tests; not shipped.
 - `scheduler/` — FSRS-6 (`fsrs.ts`) and the queue. Keep pure and tested.
 - `session/machine.ts` — the session state machine; ids via `crypto.randomUUID()`.
 - `commands/` — one file per IPC namespace. `createCore()` wires them into the

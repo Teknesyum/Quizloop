@@ -5,7 +5,7 @@ import { createCore } from '@core/commands'
 import { SettingsPatch } from '@core/settings'
 import { forgetPdf, kaynakBase, kaynakFile, rememberPdf, resolvePdf } from '@main/assets/kaynak'
 import { assetBase } from '@main/assets/protocol'
-import { installFrom, removeModuleTree, samplePath } from '@main/modules/install'
+import { installFrom, installSamples, removeModuleTree } from '@main/modules/install'
 import { PACKAGE_EXT } from '@main/modules/paket'
 import { nodePorts } from '@main/ports'
 import { settingsStore } from '@main/settings'
@@ -88,7 +88,11 @@ export function registerHandlers(ctx: Context): {
     return r
   }
   ipcMain.handle(CH.moduleInstall, async (_e, path: unknown) => install(z.string().parse(path)))
-  ipcMain.handle(CH.moduleInstallSample, async () => install(samplePath()))
+  ipcMain.handle(CH.moduleInstallSample, async () => {
+    const r = await installSamples(db, nodePorts.now())
+    await library.reload()
+    return r
+  })
   ipcMain.handle(CH.modulePick, async (e, kind: unknown) => {
     const w = windowOf(e)
     const file = z.enum(['file', 'folder']).parse(kind) === 'file'

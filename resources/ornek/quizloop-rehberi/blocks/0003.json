@@ -1,0 +1,613 @@
+{
+  "blockId": "0003",
+  "questions": [
+    {
+      "id": "quizloop-rehberi-0021",
+      "conceptId": "unutma-egrisi",
+      "stem": {
+        "md": "Unutma eğrisi neyi anlatır?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Zor soruların daha çok puan verdiğini"
+        },
+        {
+          "key": "B",
+          "md": "Tekrarsız bilginin silindiğini"
+        },
+        {
+          "key": "C",
+          "md": "Uzun oturumların daha verimli olduğunu"
+        },
+        {
+          "key": "D",
+          "md": "Yeni soruların her zaman önce geldiğini"
+        },
+        {
+          "key": "E",
+          "md": "Puanın her gün kendiliğinden düştüğünü"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Eğri puanla değil, hafızayla ilgilidir.",
+        "C": "Eğri oturum uzunluğu hakkında bir şey söylemez.",
+        "D": "Soru sırası ayrı bir konudur; eğri unutmayı anlatır.",
+        "E": "Zamanla azalan şey puan değil, hatırlama gücüdür."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "Unutma eğrisi, tekrar edilmeyen bilginin zamanla silindiğini anlatır. Aralıklı tekrar buna karşı kurulmuştur."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          9,
+          9
+        ],
+        "quote": "Buna unutma eğrisi denir: bilgi tekrar edilmezse zamanla silinir.",
+        "chapter": "Aralıklı Tekrar"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "rehber",
+        "aralıklı-tekrar"
+      ],
+      "vurgu": [],
+      "contentHash": "f7b0fc15ddddbf99bd127fd19efb3f0220a634d24f76a52e6794050a023c184b",
+      "deleted": false
+    },
+    {
+      "id": "quizloop-rehberi-0022",
+      "conceptId": "aralikli-tekrar-ilkesi",
+      "stem": {
+        "md": "Aralıklı tekrarda iyi bildiğin soru ne sıklıkla gelir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Her gün gelir"
+        },
+        {
+          "key": "B",
+          "md": "Seyrek gelir"
+        },
+        {
+          "key": "C",
+          "md": "Her oturumda gelir"
+        },
+        {
+          "key": "D",
+          "md": "Haftada bir gelir"
+        },
+        {
+          "key": "E",
+          "md": "Rastgele gelir"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Her gün sormak, zaten bilinen soruda zaman kaybıdır.",
+        "C": "İyi bilinen soru her oturuma girmez; aralığı açılır.",
+        "D": "Aralık sabit değildir; soruya ve cevabına göre değişir.",
+        "E": "Sıra rastgele değil, hesapla belirlenir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "İyi bildiğin soru seyrek, zorlandığın soru sık gelir. Zamanın en çok gereken yere gider."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          9,
+          9
+        ],
+        "quote": "Aralıklı tekrar bu düşünceye dayanır: iyi bildiğin soru seyrek, zorlandığın soru sık gelir.",
+        "chapter": "Aralıklı Tekrar"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "rehber",
+        "aralıklı-tekrar"
+      ],
+      "vurgu": [],
+      "contentHash": "b822ddbe0840190ce00e7149b9faa543f4e673662d7e0a8c158bbab64070997e",
+      "deleted": false
+    },
+    {
+      "id": "quizloop-rehberi-0023",
+      "conceptId": "fsrs-yontemi",
+      "stem": {
+        "md": "QuizLoop tekrar günlerini hangi yöntemle hesaplar?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Sabit haftalık plan"
+        },
+        {
+          "key": "B",
+          "md": "Rastgele seçim"
+        },
+        {
+          "key": "C",
+          "md": "FSRS-6"
+        },
+        {
+          "key": "D",
+          "md": "Alfabetik sıra"
+        },
+        {
+          "key": "E",
+          "md": "Kullanıcının girdiği tarih"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Aralık sabit değildir; her soru için ayrı hesaplanır.",
+        "B": "Sıra rastgele değil, cevaplarına göre kurulur.",
+        "D": "Soruların adı ya da sırası zamanlamayı etkilemez.",
+        "E": "Tarihi sen tutmazsın; kararı uygulama verir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "Zamanlama FSRS-6 adlı yöntemle yapılır. Sen yalnızca soruyu çözer ve ne kadar anladığını söylersin."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          9,
+          9
+        ],
+        "quote": "QuizLoop bu hesabı FSRS-6 adlı zamanlama yöntemiyle yapar.",
+        "chapter": "Aralıklı Tekrar"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "rehber",
+        "aralıklı-tekrar"
+      ],
+      "vurgu": [],
+      "contentHash": "0568a84f057950c5170436312393043f278f9d113f95bc1a150963f8b60197ea",
+      "deleted": false
+    },
+    {
+      "id": "quizloop-rehberi-0024",
+      "conceptId": "oturum-siniri",
+      "stem": {
+        "md": "**Oturum başına en çok soru** sınırına ne dahil değildir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Yeni sorular"
+        },
+        {
+          "key": "B",
+          "md": "Karışık oturumlar"
+        },
+        {
+          "key": "C",
+          "md": "Bölüm oturumları"
+        },
+        {
+          "key": "D",
+          "md": "Bugün sıradaki sorular"
+        },
+        {
+          "key": "E",
+          "md": "Tekrar sırası"
+        }
+      ],
+      "correct": "E",
+      "distractors": {
+        "A": "Yeni sorular oturumun sırasına girer ve sınıra sayılır.",
+        "B": "Sınır karışık oturumlarda da geçerlidir.",
+        "C": "Sınır tek bölümlük oturumlarda da geçerlidir.",
+        "D": "Sırada bekleyen sorular sınırın kestiği sıranın kendisidir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "Sınır oturumun sırasını keser. Anlamadığın için aynı oturumda geri gelen sorular, yani tekrar sırası bu sayıya eklenmez."
+        },
+        {
+          "type": "hint",
+          "md": "Anlamadım dediğin sorular oturumun sonunda yeniden gelir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          11,
+          11
+        ],
+        "quote": "Tekrar sırası bu sınıra dahil değildir.",
+        "chapter": "Aralıklı Tekrar"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "rehber",
+        "aralıklı-tekrar"
+      ],
+      "vurgu": [],
+      "contentHash": "76d9f547a62993e6f85e0f195f78a99a3503494d5713f1aada891da0e3938981",
+      "deleted": false
+    },
+    {
+      "id": "quizloop-rehberi-0025",
+      "conceptId": "iki-bilgi",
+      "stem": {
+        "md": "Uygulama bir sonraki tekrar gününü hangi iki bilgiyle belirler?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Sorunun zorluğu ve bölüm sırası"
+        },
+        {
+          "key": "B",
+          "md": "Oturum süresi ve toplam puan"
+        },
+        {
+          "key": "C",
+          "md": "Modülün sürümü ve soru sayısı"
+        },
+        {
+          "key": "D",
+          "md": "Nesnel sonuç ve senin beyanın"
+        },
+        {
+          "key": "E",
+          "md": "Günün saati ve arayüz boyutu"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Zorluk etiketi ve bölüm sırası zamanlamaya girmez.",
+        "B": "Süre ve toplam puan tekrar gününü belirlemez.",
+        "C": "Sürüm ve soru sayısı modülün bilgisidir, cevabının değil.",
+        "E": "Arayüz boyutu yalnızca görünümü etkiler."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "Biri nesneldir: şıksız mı, ilk denemede mi, yanlış eleyerek mi buldun. Öbürü senin beyanındır: anladım, kısmen ya da anlamadım."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          10,
+          10
+        ],
+        "quote": "Uygulama bir sonraki tekrar gününü iki bilgiye bakarak belirler.",
+        "chapter": "Aralıklı Tekrar"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "rehber",
+        "aralıklı-tekrar"
+      ],
+      "vurgu": [],
+      "contentHash": "a2c4e37c0ba7f7ea58b34d8d2fd48b0aa95b28af21b8d4253dda80f1fb661ad4",
+      "deleted": false
+    },
+    {
+      "id": "quizloop-rehberi-0026",
+      "conceptId": "ilk-deneme-etkisi",
+      "stem": {
+        "md": "İlk denemede doğru bulduğun soru ile yanlış şık eledikten sonra bulduğun soru nasıl farklı zamanlanır?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Yanlış elenen daha uzun süre bekler"
+        },
+        {
+          "key": "B",
+          "md": "İkisi de aynı gün yeniden sorulur"
+        },
+        {
+          "key": "C",
+          "md": "İlk denemedeki ertesi gün silinir"
+        },
+        {
+          "key": "D",
+          "md": "Yanlış elenen hemen emekli olur"
+        },
+        {
+          "key": "E",
+          "md": "İlk denemedeki daha uzun bekler"
+        }
+      ],
+      "correct": "E",
+      "distractors": {
+        "A": "Yanlış eleme zorlandığını gösterir; aralık kısalır, uzamaz.",
+        "B": "Nesnel sonuç hesaba girdiği için iki soru aynı zamanlanmaz.",
+        "C": "Sorular silinmez; yalnızca tekrar günü değişir.",
+        "D": "Emeklilik yanlış elemekle değil, **Anladım** demekle olur."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "İlk denemede bulmak bilgiyi daha sağlam bildiğini gösterir, bu yüzden o soru daha geç gelir. Yanlış eleyerek bulduğun soru daha erken döner."
+        },
+        {
+          "type": "hint",
+          "md": "Zorlandığın soru sık, iyi bildiğin soru seyrek gelir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          10,
+          10
+        ],
+        "quote": "İlk denemede doğru bulduğun soru, yanlış şık eledikten sonra bulduğun sorudan daha uzun süre bekler.",
+        "chapter": "Aralıklı Tekrar"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "rehber",
+        "aralıklı-tekrar"
+      ],
+      "vurgu": [],
+      "contentHash": "8fbfbbe0053986d92379fed1a4969920d5e293dbdfb0505e1f4e72c3a707aa33",
+      "deleted": false
+    },
+    {
+      "id": "quizloop-rehberi-0027",
+      "conceptId": "emekli-silinmez",
+      "stem": {
+        "md": "Emekli olan soruya ne olur?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Modülden kalıcı olarak silinir"
+        },
+        {
+          "key": "B",
+          "md": "Her oturumun başında sorulur"
+        },
+        {
+          "key": "C",
+          "md": "Silinmez, sıradan çıkar"
+        },
+        {
+          "key": "D",
+          "md": "Puanı sıfırlanıp yeni sayılır"
+        },
+        {
+          "key": "E",
+          "md": "Başka bir modüle taşınır"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Emekli soru modülde durmaya devam eder.",
+        "B": "Emekli soru artık sorulmaz.",
+        "D": "Emeklilik soruyu yeni duruma döndürmez.",
+        "E": "Sorular modüller arasında taşınmaz."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "Emekli soru yerinde durur, yalnızca sıraya girmez. Soru bankasında hâlâ görebilirsin."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          10,
+          10
+        ],
+        "quote": "Emekli olan soru silinmez; yalnızca sıradan çıkar.",
+        "chapter": "Aralıklı Tekrar"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "rehber",
+        "aralıklı-tekrar"
+      ],
+      "vurgu": [],
+      "contentHash": "7d6fc28c7d9a22b455d73a6ebe8469039c3b3aa9e20b7a4ec47ba69f10476147",
+      "deleted": false
+    },
+    {
+      "id": "quizloop-rehberi-0028",
+      "conceptId": "yeni-sayisi",
+      "stem": {
+        "md": "Modül kartındaki **Yeni** sayısı neyi sayar?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Bugün eklenen modülleri"
+        },
+        {
+          "key": "B",
+          "md": "Hiç görmediğin soruları"
+        },
+        {
+          "key": "C",
+          "md": "Son oturumda çözülenleri"
+        },
+        {
+          "key": "D",
+          "md": "Yanlış yaptığın soruları"
+        },
+        {
+          "key": "E",
+          "md": "Bayrak koyduğun soruları"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Sayı modülleri değil, o modülün sorularını sayar.",
+        "C": "Çözdüğün soru artık yeni sayılmaz.",
+        "D": "Yanlış yapılan soru görülmüş demektir, yeni değildir.",
+        "E": "Bayraklı sorular Soru bankası'nda ayrıca süzülür."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "**Yeni**, o modülde henüz karşına hiç çıkmamış soruların sayısıdır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          11,
+          11
+        ],
+        "quote": "**Yeni**, henüz hiç görmediğin soruları sayar.",
+        "chapter": "Aralıklı Tekrar"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "rehber",
+        "aralıklı-tekrar"
+      ],
+      "vurgu": [],
+      "contentHash": "7b0db951a489d976b9a0d1fc8457acbdf934c235dd162f4be6da0f47631afd18",
+      "deleted": false
+    },
+    {
+      "id": "quizloop-rehberi-0029",
+      "conceptId": "yuzde-gostergesi",
+      "stem": {
+        "md": "Modül kartının köşesindeki yüzde neyi gösterir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Emekli soruların oranını"
+        },
+        {
+          "key": "B",
+          "md": "İlk denemede doğru oranını"
+        },
+        {
+          "key": "C",
+          "md": "Bugün çözülen soru oranını"
+        },
+        {
+          "key": "D",
+          "md": "Kurulumun tamamlanma oranını"
+        },
+        {
+          "key": "E",
+          "md": "Bir kez görülen soru oranını"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "İlk denemede doğru sayısı oturum özetinde yer alır.",
+        "C": "Yüzde bir güne değil, modülün bütününe bakar.",
+        "D": "Kurulum yüzdesi yalnızca kurulum sürerken görünür.",
+        "E": "Bir soruyu görmek yetmez; emekli olması gerekir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "Yüzde, emekli soruların toplam soruya oranıdır. Bütün sorular emekli olunca yüzde yüz olur."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          11,
+          11
+        ],
+        "quote": "Kartın köşesindeki yüzde, emekli soruların toplam soruya oranıdır; hepsi emekli olunca yüzde yüz olur.",
+        "chapter": "Aralıklı Tekrar"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "rehber",
+        "aralıklı-tekrar"
+      ],
+      "vurgu": [],
+      "contentHash": "7cf5a5ded58d0d20cef03ee06aab42d38bd7d7399372b984baa50c3f6070b2a2",
+      "deleted": false
+    },
+    {
+      "id": "quizloop-rehberi-0030",
+      "conceptId": "gun-baslangici",
+      "stem": {
+        "md": "**Gün başlangıcı saati** ayarından önce çözülen sorular hangi güne sayılır?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "İçinde olunan güne"
+        },
+        {
+          "key": "B",
+          "md": "Bir sonraki güne"
+        },
+        {
+          "key": "C",
+          "md": "Hiçbir güne sayılmaz"
+        },
+        {
+          "key": "D",
+          "md": "Önceki güne"
+        },
+        {
+          "key": "E",
+          "md": "Haftanın ilk gününe"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Takvim gece yarısı değişse de uygulama ayarlı saate bakar.",
+        "B": "Çözülenler ileri bir güne yazılmaz.",
+        "C": "Çözülen her soru bir güne sayılır.",
+        "E": "Ayar haftayı değil, günün sınırını belirler."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "Ayarlı saatten önce çözülenler önceki güne sayılır. Gece geç saatte çalışan biri için gün gece yarısında bölünmez."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          11,
+          11
+        ],
+        "quote": "Bu saatten önce çözülenler önceki güne sayılır; gece geç saatte çalışanlar için yararlıdır.",
+        "chapter": "Aralıklı Tekrar"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "rehber",
+        "aralıklı-tekrar"
+      ],
+      "vurgu": [],
+      "contentHash": "1b782483ed7b39d99b0030f84b7b60c1204614645e7e8e0186587abf61c108d3",
+      "deleted": false
+    }
+  ]
+}

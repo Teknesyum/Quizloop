@@ -85,8 +85,7 @@ CRLF'i LF'e katlayarak hash alır.
 
 ## Git dışında kalanlar
 
-`sources/**/build/`, `sources/**/pages.jsonl`, `modules/*` (yalnız `_ornek`
-girer) ve `database/` gitignore'da — telifli kaynak ve ondan türeyen her şey
+`sources/**/build/`, `sources/**/pages.jsonl`, `modules/*` ve `database/` gitignore'da — telifli kaynak ve ondan türeyen her şey
 depo dışıdır. Tamamının yedeği `D:\!Tmp\Projeler\QuizLoop` altındadır ve bu
 turda tazelendi:
 

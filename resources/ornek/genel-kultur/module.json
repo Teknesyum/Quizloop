@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "id": "genel-kultur",
+  "name": "Genel Kültür: Kolaydan Zora",
+  "version": "1.0.0",
+  "language": "tr",
+  "description": "Bilgi yarışması tadında, kolay, orta ve zor üç bölümlük özgün genel kültür soruları.",
+  "tags": [
+    "genel-kültür",
+    "örnek"
+  ],
+  "source": {
+    "title": "QuizLoop genel kültür notları",
+    "file": "notlar.md",
+    "pages": 9,
+    "sayfaOfseti": 0
+  },
+  "blocks": [
+    {
+      "file": "blocks/0001.json",
+      "count": 15,
+      "sha256": "0a8ae506461c16d080a70deb1991661925495231a61a91ae82a88d279c45fa6d"
+    },
+    {
+      "file": "blocks/0002.json",
+      "count": 15,
+      "sha256": "f831abfa254c6b35be9daa6fbf3b36c9fd90965a1ba4d14c05703e2d93ecee4f"
+    },
+    {
+      "file": "blocks/0003.json",
+      "count": 15,
+      "sha256": "82bc5b8a4e0ee766578b1639a1edbd85edbd2f26c8f3425c3d84096e4d04adcd"
+    }
+  ],
+  "questionCount": 45,
+  "createdAt": "2026-10-04T00:00:00.000Z"
+}

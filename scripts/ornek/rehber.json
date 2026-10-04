@@ -1,0 +1,996 @@
+{
+  "sections": [
+    {
+      "page": 1,
+      "chapter": "Modül Nedir, Nasıl Eklenir",
+      "text": "QuizLoop bir soru çözme uygulamasıdır, ama içinde kendi soruları yoktur. Sorular modül adı verilen paketlerle gelir. Modül, bir konunun sorularını, şıklarını, çözümlerini ve varsa görsellerini bir arada taşıyan soru paketidir. Uygulama motor gibidir: soruları sıraya koyar, cevapları puanlar ve yanlışları açıklar. İçerik ise modülde durur. Bu ayrım sayesinde aynı uygulamayla istediğin konuyu çalışabilirsin. Modüller uygulamadan ayrı dağıtılır. Uygulama modül indirmez ve bir modül mağazası yoktur. Modül dosyası, o modülü hazırlayan kişiden gelir. Kurulu modüller **Kütüphane** ekranında kart olarak görünür. Her kartta modülün adı, sürümü, etiketleri ve soru sayısı yazar."
+    },
+    {
+      "page": 2,
+      "chapter": "Modül Nedir, Nasıl Eklenir",
+      "text": "Tek dosyalık modül paketinin uzantısı `.qlmod` olur. Bu dosya, modül klasörünün sıkıştırılmış halidir. Masaüstünde bir `.qlmod` dosyasını kurmanın üç yolu vardır. Birincisi, Kütüphane'deki **Modül dosyası ekle** düğmesine basıp dosyayı göstermektir. İkincisi, dosyayı Kütüphane penceresine sürükleyip bırakmaktır. Üçüncüsü, dosyaya çift tıklamaktır; uygulama açılır ve modülü kurar. Modül sıkıştırılmamış bir klasör olarak geldiyse **Klasörden kur** düğmesi kullanılır. Kurulum sürerken ekranda adım adı ve yüzde gösteren bir ilerleme çubuğu çıkar. Kurulum bitince modülün adını ve soru sayısını söyleyen bir bildirim görünür. Bir sorun olursa bildirim **Kurulum başarısız** diye başlar."
+    },
+    {
+      "page": 3,
+      "chapter": "Modül Nedir, Nasıl Eklenir",
+      "text": "Uygulamayla birlikte iki örnek modül gelir: şu an çözdüğün bu rehber ve bir genel kültür modülü. İkisi de ilk açılışta kendiliğinden kurulu gelir. Onları kaldırdıysan Kütüphane'deki **Örnek modülleri kur** düğmesi yeniden kurar. Kütüphane hiç modül yokken **Henüz modül yok** başlığını gösterir ve nasıl modül ekleneceğini anlatır. Telefonda da **Modül dosyası ekle** düğmesi vardır. Bu düğme telefonun dosya seçicisini açar ve yalnızca seçtiğin dosya okunur. Telefonda klasörden kurma yoktur; modül her zaman `.qlmod` paketi olarak alınır. Seçtiğin dosyalar cihazda okunur, hiçbir yere yüklenmez."
+    },
+    {
+      "page": 4,
+      "chapter": "Modül Nedir, Nasıl Eklenir",
+      "text": "Her modül kartında **Diğer işlemler** menüsü bulunur. Menüde dört seçenek vardır: **Soru bankası**, **Modülü güncelle**, **Sıfırla** ve **Modülü kaldır**. **Modülü güncelle** bir dosya seçme penceresi açar; modülün yeni `.qlmod` dosyasını gösterirsin. **Sıfırla** önce onay ister. Onaylarsan sorular kalır, puanlar ve tekrar planı sıfırlanır. Yani modüle en baştan başlarsın. **Modülü kaldır** da onay ister ve daha ağır bir işlemdir: modülün tüm ilerlemesi de silinir. **Soru bankası** modülün bütün sorularını durumlarıyla birlikte listeler. Orada arama yapabilir ve yalnızca işaretli soruları süzebilirsin."
+    },
+    {
+      "page": 5,
+      "chapter": "Oturum Nasıl İşler",
+      "text": "Çalışmaya başlamak için modül kartındaki **Oturuma başla** düğmesine basarsın. Bu düğme bölümler ekranını açar. Orada tek bir bölüm seçebilir ya da **Tüm konulardan karışık** düğmesiyle bütün bölümlerden soru alabilirsin. Karttaki **Karışık** düğmesi bölümler ekranını atlar ve doğrudan karışık oturum başlatır. Klavyeyle de gidilir: Kütüphane'de ok tuşlarıyla modül seçilir, Enter bölümler ekranını açar. Bölümler ekranında ok tuşlarıyla bölüm seçilir, Enter o bölümün oturumunu başlatır, Esc Kütüphane'ye döndürür. Oturumun üst çubuğunda kaçıncı soruda olduğun ve o ana kadarki puanın görünür."
+    },
+    {
+      "page": 6,
+      "chapter": "Oturum Nasıl İşler",
+      "text": "Soru önce şıkları olmadan gelir, böylece önce kendin düşünürsün. Cevabı aklından bulduysan şıkları açmadan önce **Cevabı biliyorum** düğmesine ya da B tuşuna basarsın. Şıksız bilmek ekstra puan kazandırır. Emin değilsen **Şıkları göster** düğmesi ya da Boşluk tuşu şıkları açar. Şıklar açıkken A'dan E'ye harf tuşları şık seçer. Doğru seçim puan getirir. Yanlış seçim puan götürür ve o şık elenir. Elenen şıkkın altında, o yanlış cevap için yazılmış açıklama görünür. Böylece yalnızca doğruyu değil, neden yanıldığını da öğrenirsin. Doğru şıkkı bulana kadar denemeye devam edersin."
+    },
+    {
+      "page": 7,
+      "chapter": "Oturum Nasıl İşler",
+      "text": "Soru kapanınca **Çözüm** başlığı altında doğru cevabın açıklaması görünür. Çözümün altında **Kaynak** kutusu vardır. Bu kutu, sorunun dayandığı alıntıyı, dosya adını ve sayfa numarasını gösterir. Böylece her sorunun nereden çıktığını kendin denetleyebilirsin. Ardından **Ne kadar anladın?** sorusu gelir ve üç düğme çıkar. **Anlamadım** dersen soru bu oturumda tekrar gelir. **Kısmen anladım** dersen soru yakında tekrar sorulur. **Anladım** dersen soru emekli olur ve bir daha sorulmaz. Bu üç düğmenin klavye karşılığı 1, 2 ve 3 tuşlarıdır. Puanladıktan sonra Enter ya da Boşluk sıradaki soruya geçirir."
+    },
+    {
+      "page": 8,
+      "chapter": "Oturum Nasıl İşler",
+      "text": "Bir soruda hata görürsen **Soruyu işaretle** düğmesine ya da F tuşuna basarsın. Bu, soruya kusurlu anlamında bir bayrak koyar. Bayraklı sorular Soru bankası ekranında **İşaretli** süzgeciyle bulunur ve **Bayrakları dışa aktar** düğmesiyle dosyaya yazılır. Modülü hazırlayan kişi bu dosyayla hatalı soruları düzeltebilir. Oturumu erken kapatmak için **Oturumu bitir** düğmesi ya da Esc tuşu kullanılır; uygulama önce onay ister. Çözdüğün sorular kaydedilmiş olur, yani emeğin kaybolmaz. Oturum bitince **Oturum özeti** ekranı açılır. Özet beş sayı gösterir: toplam puan, görülen soru, ilk denemede doğru, emekli olan ve oturumda düzeltilen. Hangi tuşun o an ne yaptığı ekranın en altında yazılıdır."
+    },
+    {
+      "page": 9,
+      "chapter": "Aralıklı Tekrar",
+      "text": "İnsan yeni öğrendiği bilgiyi hızla unutur. Buna unutma eğrisi denir: bilgi tekrar edilmezse zamanla silinir. Çare, bilgiyi tam unutmak üzereyken yeniden hatırlamaktır. Her başarılı hatırlama bilgiyi biraz daha kalıcı yapar, bu yüzden bir sonraki tekrar daha geç yapılabilir. Aralıklı tekrar bu düşünceye dayanır: iyi bildiğin soru seyrek, zorlandığın soru sık gelir. QuizLoop bu hesabı FSRS-6 adlı zamanlama yöntemiyle yapar. Sen tarih tutmazsın; hangi sorunun hangi gün geleceğine uygulama karar verir. Senin işin soruyu çözmek ve ne kadar anladığını dürüstçe söylemektir."
+    },
+    {
+      "page": 10,
+      "chapter": "Aralıklı Tekrar",
+      "text": "Uygulama bir sonraki tekrar gününü iki bilgiye bakarak belirler. Birincisi nesnel sonuçtur: soruyu şıksız mı bildin, ilk denemede mi buldun, yoksa yanlış şık mı eledin. İkincisi senin beyanındır: anladım, kısmen anladım ya da anlamadım. İlk denemede doğru bulduğun soru, yanlış şık eledikten sonra bulduğun sorudan daha uzun süre bekler. Bu yüzden bir soru yarın, bir başkası on gün sonra karşına çıkabilir. Puanlamadan sonra ekranda **Sonraki tekrar** yazısı ve tarih görünür. Anlamadım dediğin soru ayrıca aynı oturumun sonuna eklenir ve üstünde **Bu oturumda tekrar** rozetiyle yeniden gelir. Emekli olan soru silinmez; yalnızca sıradan çıkar."
+    },
+    {
+      "page": 11,
+      "chapter": "Aralıklı Tekrar",
+      "text": "Modül kartında dört sayı vardır. **Bugün sırada**, bugün çözmen için sırada bekleyen soruların sayısıdır. **Yeni**, henüz hiç görmediğin soruları sayar. **Öğreniliyor**, üzerinde çalıştığın ama henüz emekli olmamış soruları sayar. **Emekli**, anladım dediğin ve artık sorulmayan soruları sayar. Kartın köşesindeki yüzde, emekli soruların toplam soruya oranıdır; hepsi emekli olunca yüzde yüz olur. Günün ne zaman başladığını **Gün başlangıcı saati** ayarı belirler. Bu saatten önce çözülenler önceki güne sayılır; gece geç saatte çalışanlar için yararlıdır. **Oturum başına en çok soru** ayarı bir oturumun sırasını bu sayıda keser. Tekrar sırası bu sınıra dahil değildir. Bugün için soru kalmadıysa **Bu modülde bugün soru yok** yazısı çıkar."
+    },
+    {
+      "page": 12,
+      "chapter": "Ayarlar, İstatistik ve Taşıma",
+      "text": "Arayüz boyutu bütün uygulamayı ölçekler; yazılar ve düğmeler birlikte büyür ya da küçülür. Klavyeden Ctrl ve artı büyütür, Ctrl ve eksi küçültür, Ctrl ve sıfır boyutu sıfırlar. **Dil** seçici arayüzü Türkçe ile İngilizce arasında değiştirir. **Yazı akışı hızı** ayarı soru metninin ekrana nasıl geldiğini belirler. Soru metni harf harf akar; hız **Yavaş**, **Normal** ya da **Hızlı** olabilir. **Kapalı** seçilirse metin anında görünür. Akan metne tıklamak da yazının tamamını hemen gösterir. Ayarlar ekranında yaptığın her değişiklik o anda kaydedilir ve **Ayarlar kaydedildi** bildirimi çıkar; ayrıca bir kaydet düğmesi yoktur."
+    },
+    {
+      "page": 13,
+      "chapter": "Ayarlar, İstatistik ve Taşıma",
+      "text": "**İstatistik** ekranı bütün modüllerin toplamını gösterir. En üstte altı kutu vardır: modül, kart, bugün sırada, toplam tekrar, son yedi gün ve emekli. Başlığın yanında kaç günlük seri yaptığın yazar. Altında son yirmi altı haftayı gün gün gösteren bir ısı haritası bulunur; çok çalıştığın günler daha belirgin görünür. Sonraki grafik son otuz günün günlük tekrar sayısını çubuklarla verir. Her çubukta o gün ilk denemede doğru yaptığın soruların payı da görünür. **Kartların durumu** bölümü soruları dört gruba ayırır: yeni, öğreniliyor, tekrarda ve emekli. En altta **Modül ilerlemesi** her modül için görülen, emekli ve toplam soru sayısını yazar."
+    },
+    {
+      "page": 14,
+      "chapter": "Ayarlar, İstatistik ve Taşıma",
+      "text": "İlerlemeni başka bir bilgisayara götürmek için **Taşıma paketi** kullanılır. Ayarlar'daki **Paketi dışa aktar** düğmesi ilerlemeyi, modülleri ve ayarları tek klasöre yazar. Bu klasörü USB bellekle öbür bilgisayara taşırsın ve orada **Paketi içe aktar** düğmesine basarsın. İçe aktarma önce onay ister, çünkü o bilgisayardaki ilerleme paketteki ile değiştirilir. Eski veritabanı silinmez, yedeklenir; ardından uygulama yeniden başlar. Güncellemeler için Ayarlar'da **Güncellemeleri denetle** düğmesi vardır. Windows sürümü kendini günceller. Linux ve macOS için yeni sürüm çıkınca haber verilir. Güncelleme denetimi yalnızca sürüm numarasını karşılaştırır; senin hakkında ya da çalışman hakkında bilgi göndermez."
+    },
+    {
+      "page": 15,
+      "chapter": "Ayarlar, İstatistik ve Taşıma",
+      "text": "QuizLoop'ta hesap açmak ya da giriş yapmak gerekmez. Çalışma verin cihazında kalır: cevapların, puanların, tekrar planın, işaretlediğin sorular ve ayarların yalnızca kendi cihazında saklanır. Uygulamada reklam ve kullanım izleme yoktur. Uygulama internet olmadan da eksiksiz çalışır; ağa yalnızca güncelleme denetimi için çıkar. Veri sende olduğu için denetim de sendedir: **Sıfırla** bir modülün ilerlemesini temizler, **Modülü kaldır** modülü siler, uygulamayı kaldırmak ise her şeyi siler. QuizLoop'un telefon sürümü de vardır ve Android'de çalışır. Telefonda yeni sürüm çıkınca haber verilir ve indirme sayfası tarayıcıda açılır. Uygulama açık kaynaklıdır; lisansı AGPL-3.0-or-later'dır."
+    }
+  ],
+  "questions": [
+    {
+      "chapter": "Modül Nedir, Nasıl Eklenir",
+      "page": 1,
+      "difficulty": "kolay",
+      "concept": "modul-tanimi",
+      "stem": "QuizLoop'ta modül nedir?",
+      "choices": [
+        "Bir konunun soru paketi",
+        "Uygulamanın ayar dosyası",
+        "Bir oturumun puan dökümü",
+        "Uygulamanın güncelleme paketi",
+        "İlerlemenin yedek kopyası"
+      ],
+      "why": [
+        "Ayarlar modülde değil, uygulamanın kendi ayarlarında tutulur.",
+        "Puan dökümü oturum özetinde görünür; modül soruları taşır.",
+        "Güncelleme uygulamanın yeni sürümüdür, soru içermez.",
+        "İlerlemeyi taşıyan şey taşıma paketidir, modül değil."
+      ],
+      "solution": "Modül bir soru paketidir: bir konunun sorularını, şıklarını, çözümlerini ve varsa görsellerini bir arada taşır.",
+      "hint": "Uygulamanın kendi sorusu yoktur; sorular bir yerden gelmelidir.",
+      "quote": "Modül, bir konunun sorularını, şıklarını, çözümlerini ve varsa görsellerini bir arada taşıyan soru paketidir.",
+      "tags": ["rehber", "modül"]
+    },
+    {
+      "chapter": "Modül Nedir, Nasıl Eklenir",
+      "page": 1,
+      "difficulty": "kolay",
+      "concept": "modul-kaynagi",
+      "stem": "Bir modül dosyası sana nereden gelir?",
+      "choices": [
+        "Modülü hazırlayan kişiden",
+        "Uygulamanın içindeki mağazadan",
+        "Uygulamanın kendi indirmesinden",
+        "Ayarlar ekranındaki listeden",
+        "Güncelleme denetimi sırasında"
+      ],
+      "why": [
+        "Uygulamanın bir modül mağazası yoktur.",
+        "Uygulama modül indirmez; dosyayı sen getirirsin.",
+        "Ayarlar ekranında modül listesi ya da indirme bulunmaz.",
+        "Güncelleme denetimi yalnızca uygulamanın sürümüne bakar."
+      ],
+      "solution": "Modüller uygulamadan ayrı dağıtılır. Dosyayı, o modülü hazırlayan kişi sana verir; sen de uygulamaya eklersin.",
+      "quote": "Modül dosyası, o modülü hazırlayan kişiden gelir.",
+      "tags": ["rehber", "modül"]
+    },
+    {
+      "chapter": "Modül Nedir, Nasıl Eklenir",
+      "page": 1,
+      "difficulty": "orta",
+      "concept": "motor-icerik-ayrimi",
+      "stem": "Uygulama ile modül arasındaki iş bölümü nasıldır?",
+      "choices": [
+        "Uygulama sıralar ve puanlar, modül soruları taşır",
+        "Uygulama soruları yazar, modül yalnızca puanları saklar",
+        "Modül sıralar ve puanlar, uygulama soruları taşır",
+        "İkisi de soruları taşır, sıralamayı kullanıcı yapar",
+        "Modül ayarları tutar, uygulama yalnızca görselleri gösterir"
+      ],
+      "why": [
+        "Uygulama soru yazmaz; puanları da modül değil uygulama tutar.",
+        "Roller ters çevrilmiş: sıralama ve puanlama uygulamanın işidir.",
+        "Uygulamanın kendi sorusu yoktur ve sırayı uygulama kurar.",
+        "Ayarlar uygulamaya aittir; uygulama görsel göstermekten fazlasını yapar."
+      ],
+      "solution": "Uygulama motordur: sıraya koyar, puanlar, yanlışları açıklar. İçerik, yani sorular modülde durur.",
+      "quote": "Uygulama motor gibidir: soruları sıraya koyar, cevapları puanlar ve yanlışları açıklar.",
+      "tags": ["rehber", "modül"]
+    },
+    {
+      "chapter": "Modül Nedir, Nasıl Eklenir",
+      "page": 2,
+      "difficulty": "kolay",
+      "concept": "qlmod-uzantisi",
+      "stem": "Tek dosyalık modül paketinin uzantısı nedir?",
+      "choices": ["`.qlmod`", "`.qzloop`", "`.modul`", "`.quizmod`", "`.qlpaket`"],
+      "why": [
+        "Böyle bir uzantı yoktur; uygulamanın adından uydurulmuştur.",
+        "Türkçe modül sözcüğü uzantı olarak kullanılmaz.",
+        "Benzer görünür ama doğru uzantı QuizLoop'un kısaltmasıyla başlar.",
+        "Paket sözcüğü uzantıda geçmez."
+      ],
+      "solution": "Modül paketi `.qlmod` uzantılı tek bir dosyadır. Bu dosya modül klasörünün sıkıştırılmış halidir.",
+      "quote": "Tek dosyalık modül paketinin uzantısı `.qlmod` olur.",
+      "tags": ["rehber", "modül"]
+    },
+    {
+      "chapter": "Modül Nedir, Nasıl Eklenir",
+      "page": 2,
+      "difficulty": "kolay",
+      "concept": "dosya-secme-dugmesi",
+      "stem": "Masaüstünde bir `.qlmod` dosyasını göstererek kurmak için Kütüphane'de hangi düğmeye basılır?",
+      "choices": [
+        "Modül dosyası ekle",
+        "Klasörden kur",
+        "Paketi içe aktar",
+        "Güncellemeleri denetle",
+        "Soru bankası"
+      ],
+      "why": [
+        "Bu düğme sıkıştırılmamış modül klasörü içindir.",
+        "Bu düğme Ayarlar'dadır ve taşıma paketini alır.",
+        "Bu düğme uygulamanın yeni sürümünü arar, modül kurmaz.",
+        "Soru bankası kurulu bir modülün sorularını listeler."
+      ],
+      "solution": "**Modül dosyası ekle** bir dosya penceresi açar; `.qlmod` dosyasını gösterirsin ve modül kurulur.",
+      "quote": "Birincisi, Kütüphane'deki **Modül dosyası ekle** düğmesine basıp dosyayı göstermektir.",
+      "tags": ["rehber", "modül"]
+    },
+    {
+      "chapter": "Modül Nedir, Nasıl Eklenir",
+      "page": 2,
+      "difficulty": "orta",
+      "concept": "cift-tiklama",
+      "stem": "Masaüstünde bir `.qlmod` dosyasına çift tıklayınca ne olur?",
+      "choices": [
+        "Uygulama açılır, modül kurulur",
+        "Dosya bir metin düzenleyicide açılır",
+        "Modülün soru bankası listelenir",
+        "Dosya taşıma paketine eklenir",
+        "Yalnızca modülün sürümü gösterilir"
+      ],
+      "why": [
+        "`.qlmod` sıkıştırılmış bir pakettir, metin olarak açılmaz.",
+        "Soru bankası kurulu modülün kartındaki menüden açılır.",
+        "Taşıma paketi Ayarlar'dan yazılır; çift tıklamayla ilgisi yoktur.",
+        "Çift tıklama bilgi göstermekle kalmaz, kurulumu yapar."
+      ],
+      "solution": "Çift tıklama üç kurulum yolundan biridir: uygulama açılır ve modülü kurar.",
+      "hint": "Dosya seçmek ve sürükleyip bırakmakla aynı sonucu verir.",
+      "quote": "Üçüncüsü, dosyaya çift tıklamaktır; uygulama açılır ve modülü kurar.",
+      "tags": ["rehber", "modül"]
+    },
+    {
+      "chapter": "Modül Nedir, Nasıl Eklenir",
+      "page": 2,
+      "difficulty": "orta",
+      "concept": "klasorden-kurma",
+      "stem": "Modül sıkıştırılmamış bir klasör olarak geldiyse hangi düğme kullanılır?",
+      "choices": [
+        "Klasörden kur",
+        "Örnek modülleri kur",
+        "Paketi dışa aktar",
+        "Oturuma başla",
+        "Modülü kaldır"
+      ],
+      "why": [
+        "Bu düğme yalnızca uygulamayla gelen örnek modülleri kurar.",
+        "Bu düğme ilerlemeyi bir klasöre yazar, modül kurmaz.",
+        "Bu düğme kurulu bir modülde çalışmayı başlatır.",
+        "Bu düğme kurulu bir modülü siler."
+      ],
+      "solution": "Klasör halindeki modül **Klasörden kur** düğmesiyle kurulur. Tek dosyalık paket için ise **Modül dosyası ekle** kullanılır.",
+      "quote": "Modül sıkıştırılmamış bir klasör olarak geldiyse **Klasörden kur** düğmesi kullanılır.",
+      "tags": ["rehber", "modül"]
+    },
+    {
+      "chapter": "Modül Nedir, Nasıl Eklenir",
+      "page": 3,
+      "difficulty": "kolay",
+      "concept": "ornek-modul-sayisi",
+      "stem": "Uygulamayla birlikte kaç örnek modül gelir?",
+      "choices": ["İki", "Bir", "Üç", "Dört", "Beş"],
+      "why": [
+        "Rehberin yanında bir de genel kültür modülü vardır.",
+        "Rehber ve genel kültür dışında örnek modül yoktur.",
+        "Örnek modüller yalnızca rehber ve genel kültürdür.",
+        "Uygulama içerik taşımaz; yalnızca iki örnek gelir."
+      ],
+      "solution": "İki örnek modül gelir: bu rehber ve bir genel kültür modülü. İkisi de ilk açılışta kurulu gelir.",
+      "quote": "Uygulamayla birlikte iki örnek modül gelir: şu an çözdüğün bu rehber ve bir genel kültür modülü.",
+      "tags": ["rehber", "modül"]
+    },
+    {
+      "chapter": "Modül Nedir, Nasıl Eklenir",
+      "page": 4,
+      "difficulty": "orta",
+      "concept": "sifirla-etkisi",
+      "stem": "Bir modülde **Sıfırla** onaylanınca ne olur?",
+      "choices": [
+        "Sorular kalır, ilerleme sıfırlanır",
+        "Modül bütün sorularıyla birlikte silinir",
+        "Yalnızca bayraklı sorular temizlenir",
+        "Uygulamanın bütün ayarları varsayılana döner",
+        "Modül önceki sürümüne geri döndürülür"
+      ],
+      "why": [
+        "Modülü silen işlem **Modülü kaldır** seçeneğidir.",
+        "Sıfırlama bayraklarla sınırlı değildir; puanları ve tekrar planını siler.",
+        "Sıfırlama tek bir modülün ilerlemesine dokunur, ayarlara değil.",
+        "Sıfırlama sürüm değiştirmez; sorular aynı kalır."
+      ],
+      "solution": "Sıfırlama soruları yerinde bırakır, puanları ve tekrar planını siler. Modüle en baştan başlamış olursun.",
+      "quote": "Onaylarsan sorular kalır, puanlar ve tekrar planı sıfırlanır.",
+      "tags": ["rehber", "modül"]
+    },
+    {
+      "chapter": "Modül Nedir, Nasıl Eklenir",
+      "page": 4,
+      "difficulty": "zor",
+      "concept": "kaldir-sifirla-farki",
+      "stem": "**Modülü kaldır** ile **Sıfırla** arasındaki fark nedir?",
+      "choices": [
+        "Kaldırma modülü de ilerlemeyi de siler",
+        "Kaldırma soruları bırakır, yalnızca puanı siler",
+        "Sıfırlama modülü de ilerlemeyi de birlikte siler",
+        "İkisi aynı işi yapar, yalnızca adları farklıdır",
+        "Kaldırma onay istemez, sıfırlama onay ister"
+      ],
+      "why": [
+        "Soruları bırakıp ilerlemeyi silen işlem sıfırlamadır.",
+        "Sıfırlamada sorular kalır; modül silinmez.",
+        "Biri modülü siler, öbürü yalnızca ilerlemeyi temizler.",
+        "İki işlem de önce onay ister."
+      ],
+      "solution": "Sıfırlamada sorular kalır, yalnızca ilerleme gider. Kaldırmada modül de onun tüm ilerlemesi de silinir.",
+      "hint": "Hangisinden sonra modül kartı Kütüphane'de durmaya devam eder?",
+      "quote": "**Modülü kaldır** da onay ister ve daha ağır bir işlemdir: modülün tüm ilerlemesi de silinir.",
+      "tags": ["rehber", "modül"]
+    },
+    {
+      "chapter": "Oturum Nasıl İşler",
+      "page": 5,
+      "difficulty": "kolay",
+      "concept": "oturuma-basla-dugmesi",
+      "stem": "Modül kartındaki **Oturuma başla** düğmesi hangi ekranı açar?",
+      "choices": [
+        "Bölümler ekranını",
+        "İstatistik ekranını",
+        "Soru bankası ekranını",
+        "Oturum özeti ekranını",
+        "Ayarlar ekranını"
+      ],
+      "why": [
+        "İstatistik ayrı bir ekrandır, oturum başlatmaz.",
+        "Soru bankası **Diğer işlemler** menüsünden açılır.",
+        "Oturum özeti oturum bitince görünür, başında değil.",
+        "Ayarlar ayrı bir ekrandır, modül kartından açılmaz."
+      ],
+      "solution": "Düğme önce bölümler ekranını açar. Orada bir bölüm ya da bütün konuların karışığını seçersin.",
+      "quote": "Bu düğme bölümler ekranını açar.",
+      "tags": ["rehber", "oturum"]
+    },
+    {
+      "chapter": "Oturum Nasıl İşler",
+      "page": 5,
+      "difficulty": "orta",
+      "concept": "karisik-dugmesi",
+      "stem": "Modül kartındaki **Karışık** düğmesi ne yapar?",
+      "choices": [
+        "Doğrudan karışık oturum başlatır",
+        "Kütüphanedeki kartların sırasını karıştırır",
+        "Bölümler ekranını açıp seçim bekler",
+        "İki modülün sorularını tek oturumda birleştirir",
+        "Yalnızca emekli soruları yeniden sorar"
+      ],
+      "why": [
+        "Düğme kartların yerini değiştirmez; oturum başlatır.",
+        "Bölümler ekranını açan düğme **Oturuma başla** düğmesidir.",
+        "Karışık oturum tek modülün bölümlerinden soru alır.",
+        "Emekli sorular sıradan çıkmıştır, yeniden sorulmaz."
+      ],
+      "solution": "**Karışık** bölüm seçme adımını atlar ve o modülün bütün bölümlerinden soru alan bir oturum başlatır.",
+      "quote": "Karttaki **Karışık** düğmesi bölümler ekranını atlar ve doğrudan karışık oturum başlatır.",
+      "tags": ["rehber", "oturum"]
+    },
+    {
+      "chapter": "Oturum Nasıl İşler",
+      "page": 6,
+      "difficulty": "kolay",
+      "concept": "siksiz-soru",
+      "stem": "Bir soru ekrana ilk geldiğinde nasıl görünür?",
+      "choices": [
+        "Şıkları olmadan",
+        "Çözümüyle birlikte",
+        "Doğru şıkkı işaretli",
+        "Kaynak alıntısıyla",
+        "Yalnızca ipucuyla"
+      ],
+      "why": [
+        "Çözüm ancak soru kapanınca görünür.",
+        "Doğru şık, sen bulana kadar belli edilmez.",
+        "Kaynak alıntısı çözümün altında, soru kapanınca çıkar.",
+        "Soru metni baştan görünür; eksik olan şıklardır."
+      ],
+      "solution": "Soru önce şıksız gelir. Amaç, şıklara bakmadan önce cevabı kendin düşünmendir.",
+      "quote": "Soru önce şıkları olmadan gelir, böylece önce kendin düşünürsün.",
+      "tags": ["rehber", "oturum"]
+    },
+    {
+      "chapter": "Oturum Nasıl İşler",
+      "page": 6,
+      "difficulty": "kolay",
+      "concept": "bosluk-tusu",
+      "stem": "Soru şıksız dururken Boşluk tuşu ne yapar?",
+      "choices": [
+        "Şıkları açar",
+        "Oturumu bitirir",
+        "Soruyu işaretler",
+        "Çözümü gösterir",
+        "Yazıyı büyütür"
+      ],
+      "why": [
+        "Oturumu bitiren tuş Esc tuşudur.",
+        "Soruya bayrak koyan tuş F tuşudur.",
+        "Çözüm ancak doğru şık bulununca görünür.",
+        "Yazıyı büyüten kısayol Ctrl ve artıdır."
+      ],
+      "solution": "Boşluk tuşu **Şıkları göster** düğmesinin klavye karşılığıdır.",
+      "quote": "Emin değilsen **Şıkları göster** düğmesi ya da Boşluk tuşu şıkları açar.",
+      "tags": ["rehber", "oturum"]
+    },
+    {
+      "chapter": "Oturum Nasıl İşler",
+      "page": 6,
+      "difficulty": "orta",
+      "concept": "yanlis-secim",
+      "stem": "Yanlış bir şık seçince ne olur?",
+      "choices": [
+        "Puan düşer ve o şık elenir",
+        "Soru kapanır ve çözüm hemen gösterilir",
+        "Oturum biter ve özet ekranı açılır",
+        "Puan değişmez, doğru şık işaretlenir",
+        "Soru emekli olur ve bir daha gelmez"
+      ],
+      "why": [
+        "Soru kapanmaz; doğru şıkkı bulana kadar denersin.",
+        "Tek bir yanlış oturumu bitirmez.",
+        "Yanlış seçim puan götürür ve doğru şık belli edilmez.",
+        "Emeklilik yanlışla değil, **Anladım** demekle olur."
+      ],
+      "solution": "Yanlış seçim puan götürür, şık elenir ve altında neden yanlış olduğu yazar. Sonra kalan şıklarla devam edersin.",
+      "quote": "Yanlış seçim puan götürür ve o şık elenir.",
+      "tags": ["rehber", "oturum"]
+    },
+    {
+      "chapter": "Oturum Nasıl İşler",
+      "page": 6,
+      "difficulty": "orta",
+      "concept": "neden-yanlis-aciklamasi",
+      "stem": "Elenen yanlış şıkkın altında ne görünür?",
+      "choices": [
+        "O yanlışa özel açıklama",
+        "Sorunun kaynak sayfa numarası",
+        "Doğru şıkkın tam metni",
+        "Sorunun bir sonraki tekrar tarihi",
+        "O ana kadarki toplam puan"
+      ],
+      "why": [
+        "Kaynak bilgisi çözümün altındaki kutuda yer alır.",
+        "Doğru şık sen bulana kadar açıklanmaz.",
+        "Tekrar tarihi puanlamadan sonra gösterilir.",
+        "Puan oturumun üst çubuğunda görünür."
+      ],
+      "solution": "Her yanlış şıkkın kendi açıklaması vardır. Böylece neden yanıldığını da öğrenirsin.",
+      "quote": "Elenen şıkkın altında, o yanlış cevap için yazılmış açıklama görünür.",
+      "tags": ["rehber", "oturum"]
+    },
+    {
+      "chapter": "Oturum Nasıl İşler",
+      "page": 7,
+      "difficulty": "kolay",
+      "concept": "puanlama-tuslari",
+      "stem": "**Ne kadar anladın?** düğmelerinin klavye karşılığı hangi tuşlardır?",
+      "choices": [
+        "1, 2 ve 3",
+        "F, B ve Esc",
+        "Ok tuşları ve Enter",
+        "Boşluk, Enter ve Esc",
+        "Ctrl ile artı ve eksi"
+      ],
+      "why": [
+        "Bu tuşlar bayrak, şıksız bilme ve oturumu bitirme içindir.",
+        "Ok tuşları Kütüphane'de ve bölümler ekranında gezdirir.",
+        "Bu tuşlar şık açma, ilerleme ve oturumu bitirme içindir.",
+        "Bu kısayollar arayüz boyutunu değiştirir."
+      ],
+      "solution": "1 **Anlamadım**, 2 **Kısmen anladım**, 3 **Anladım** demektir.",
+      "quote": "Bu üç düğmenin klavye karşılığı 1, 2 ve 3 tuşlarıdır.",
+      "tags": ["rehber", "oturum"]
+    },
+    {
+      "chapter": "Oturum Nasıl İşler",
+      "page": 7,
+      "difficulty": "kolay",
+      "concept": "kaynak-kutusu",
+      "stem": "Çözümün altındaki **Kaynak** kutusu ne gösterir?",
+      "choices": [
+        "Alıntı, dosya adı ve sayfa",
+        "Sorunun zorluk derecesi ve etiketleri",
+        "Soruyu hazırlayan kişinin adı",
+        "Sorunun kaç kez çözüldüğü",
+        "Modülün sürümü ve kurulum tarihi"
+      ],
+      "why": [
+        "Zorluk ve etiket bilgisi bu kutuda yer almaz.",
+        "Kutu kişiyi değil, bilginin geçtiği yeri gösterir.",
+        "Çözülme sayısı kaynak bilgisi değildir.",
+        "Sürüm modül kartında yazar, kaynak kutusunda değil."
+      ],
+      "solution": "Kaynak kutusu sorunun dayandığı alıntıyı, dosyayı ve sayfayı verir. Böylece soruyu kendin denetleyebilirsin.",
+      "quote": "Bu kutu, sorunun dayandığı alıntıyı, dosya adını ve sayfa numarasını gösterir.",
+      "tags": ["rehber", "oturum"]
+    },
+    {
+      "chapter": "Oturum Nasıl İşler",
+      "page": 8,
+      "difficulty": "orta",
+      "concept": "soruyu-isaretleme",
+      "stem": "**Soruyu işaretle** düğmesi ya da F tuşu ne işe yarar?",
+      "choices": [
+        "Kusurlu soruya bayrak koyar",
+        "Soruyu oturumun sonuna erteler",
+        "Soruyu hemen emekli eder",
+        "Sorunun çözümünü ekranda açar",
+        "Soruyu şıksız bilindi diye sayar"
+      ],
+      "why": [
+        "Bayrak sorunun sırasını değiştirmez.",
+        "Emeklilik **Anladım** demekle olur, bayrakla değil.",
+        "Çözüm doğru şık bulununca kendiliğinden açılır.",
+        "Şıksız bilme **Cevabı biliyorum** düğmesiyle bildirilir."
+      ],
+      "solution": "Bayrak, soruda hata gördüğünü kaydeder. Bayraklar dışa aktarılır ve modülü hazırlayan kişi soruyu düzeltebilir.",
+      "quote": "Bu, soruya kusurlu anlamında bir bayrak koyar.",
+      "tags": ["rehber", "oturum"]
+    },
+    {
+      "chapter": "Oturum Nasıl İşler",
+      "page": 7,
+      "difficulty": "zor",
+      "concept": "anlamadim-kismen-farki",
+      "stem": "**Anlamadım** ile **Kısmen anladım** arasındaki fark nedir?",
+      "choices": [
+        "İlki soruyu bu oturumda geri getirir",
+        "İlki soruyu emekli eder, ikincisi etmez",
+        "İkincisi soruyu bu oturumda geri getirir",
+        "İlki puanı sıfırlar, ikincisi puanı ikiye katlar",
+        "İkisi de soruyu bir daha hiç sormaz"
+      ],
+      "why": [
+        "Soruyu emekli eden düğme **Anladım** düğmesidir.",
+        "Kısmen anlaşılan soru yakında sorulur; aynı oturumda dönen öbürüdür.",
+        "Bu düğmeler puanı sıfırlamaz ya da katlamaz.",
+        "Bir daha sorulmama yalnızca **Anladım** için geçerlidir."
+      ],
+      "solution": "**Anlamadım** dediğin soru aynı oturumda tekrar gelir. **Kısmen anladım** dediğin soru ise yakında tekrar sorulur.",
+      "hint": "Düğmelerin altındaki küçük yazıları düşün.",
+      "quote": "**Anlamadım** dersen soru bu oturumda tekrar gelir.",
+      "tags": ["rehber", "oturum"]
+    },
+    {
+      "chapter": "Aralıklı Tekrar",
+      "page": 9,
+      "difficulty": "kolay",
+      "concept": "unutma-egrisi",
+      "stem": "Unutma eğrisi neyi anlatır?",
+      "choices": [
+        "Tekrarsız bilginin silindiğini",
+        "Zor soruların daha çok puan verdiğini",
+        "Uzun oturumların daha verimli olduğunu",
+        "Yeni soruların her zaman önce geldiğini",
+        "Puanın her gün kendiliğinden düştüğünü"
+      ],
+      "why": [
+        "Eğri puanla değil, hafızayla ilgilidir.",
+        "Eğri oturum uzunluğu hakkında bir şey söylemez.",
+        "Soru sırası ayrı bir konudur; eğri unutmayı anlatır.",
+        "Zamanla azalan şey puan değil, hatırlama gücüdür."
+      ],
+      "solution": "Unutma eğrisi, tekrar edilmeyen bilginin zamanla silindiğini anlatır. Aralıklı tekrar buna karşı kurulmuştur.",
+      "quote": "Buna unutma eğrisi denir: bilgi tekrar edilmezse zamanla silinir.",
+      "tags": ["rehber", "aralıklı-tekrar"]
+    },
+    {
+      "chapter": "Aralıklı Tekrar",
+      "page": 9,
+      "difficulty": "kolay",
+      "concept": "aralikli-tekrar-ilkesi",
+      "stem": "Aralıklı tekrarda iyi bildiğin soru ne sıklıkla gelir?",
+      "choices": [
+        "Seyrek gelir",
+        "Her gün gelir",
+        "Her oturumda gelir",
+        "Haftada bir gelir",
+        "Rastgele gelir"
+      ],
+      "why": [
+        "Her gün sormak, zaten bilinen soruda zaman kaybıdır.",
+        "İyi bilinen soru her oturuma girmez; aralığı açılır.",
+        "Aralık sabit değildir; soruya ve cevabına göre değişir.",
+        "Sıra rastgele değil, hesapla belirlenir."
+      ],
+      "solution": "İyi bildiğin soru seyrek, zorlandığın soru sık gelir. Zamanın en çok gereken yere gider.",
+      "quote": "Aralıklı tekrar bu düşünceye dayanır: iyi bildiğin soru seyrek, zorlandığın soru sık gelir.",
+      "tags": ["rehber", "aralıklı-tekrar"]
+    },
+    {
+      "chapter": "Aralıklı Tekrar",
+      "page": 9,
+      "difficulty": "orta",
+      "concept": "fsrs-yontemi",
+      "stem": "QuizLoop tekrar günlerini hangi yöntemle hesaplar?",
+      "choices": [
+        "FSRS-6",
+        "Sabit haftalık plan",
+        "Rastgele seçim",
+        "Alfabetik sıra",
+        "Kullanıcının girdiği tarih"
+      ],
+      "why": [
+        "Aralık sabit değildir; her soru için ayrı hesaplanır.",
+        "Sıra rastgele değil, cevaplarına göre kurulur.",
+        "Soruların adı ya da sırası zamanlamayı etkilemez.",
+        "Tarihi sen tutmazsın; kararı uygulama verir."
+      ],
+      "solution": "Zamanlama FSRS-6 adlı yöntemle yapılır. Sen yalnızca soruyu çözer ve ne kadar anladığını söylersin.",
+      "quote": "QuizLoop bu hesabı FSRS-6 adlı zamanlama yöntemiyle yapar.",
+      "tags": ["rehber", "aralıklı-tekrar"]
+    },
+    {
+      "chapter": "Aralıklı Tekrar",
+      "page": 11,
+      "difficulty": "orta",
+      "concept": "oturum-siniri",
+      "stem": "**Oturum başına en çok soru** sınırına ne dahil değildir?",
+      "choices": [
+        "Tekrar sırası",
+        "Yeni sorular",
+        "Karışık oturumlar",
+        "Bölüm oturumları",
+        "Bugün sıradaki sorular"
+      ],
+      "why": [
+        "Yeni sorular oturumun sırasına girer ve sınıra sayılır.",
+        "Sınır karışık oturumlarda da geçerlidir.",
+        "Sınır tek bölümlük oturumlarda da geçerlidir.",
+        "Sırada bekleyen sorular sınırın kestiği sıranın kendisidir."
+      ],
+      "solution": "Sınır oturumun sırasını keser. Anlamadığın için aynı oturumda geri gelen sorular, yani tekrar sırası bu sayıya eklenmez.",
+      "hint": "Anlamadım dediğin sorular oturumun sonunda yeniden gelir.",
+      "quote": "Tekrar sırası bu sınıra dahil değildir.",
+      "tags": ["rehber", "aralıklı-tekrar"]
+    },
+    {
+      "chapter": "Aralıklı Tekrar",
+      "page": 10,
+      "difficulty": "orta",
+      "concept": "iki-bilgi",
+      "stem": "Uygulama bir sonraki tekrar gününü hangi iki bilgiyle belirler?",
+      "choices": [
+        "Nesnel sonuç ve senin beyanın",
+        "Sorunun zorluğu ve bölüm sırası",
+        "Oturum süresi ve toplam puan",
+        "Modülün sürümü ve soru sayısı",
+        "Günün saati ve arayüz boyutu"
+      ],
+      "why": [
+        "Zorluk etiketi ve bölüm sırası zamanlamaya girmez.",
+        "Süre ve toplam puan tekrar gününü belirlemez.",
+        "Sürüm ve soru sayısı modülün bilgisidir, cevabının değil.",
+        "Arayüz boyutu yalnızca görünümü etkiler."
+      ],
+      "solution": "Biri nesneldir: şıksız mı, ilk denemede mi, yanlış eleyerek mi buldun. Öbürü senin beyanındır: anladım, kısmen ya da anlamadım.",
+      "quote": "Uygulama bir sonraki tekrar gününü iki bilgiye bakarak belirler.",
+      "tags": ["rehber", "aralıklı-tekrar"]
+    },
+    {
+      "chapter": "Aralıklı Tekrar",
+      "page": 10,
+      "difficulty": "zor",
+      "concept": "ilk-deneme-etkisi",
+      "stem": "İlk denemede doğru bulduğun soru ile yanlış şık eledikten sonra bulduğun soru nasıl farklı zamanlanır?",
+      "choices": [
+        "İlk denemedeki daha uzun bekler",
+        "Yanlış elenen daha uzun süre bekler",
+        "İkisi de aynı gün yeniden sorulur",
+        "İlk denemedeki ertesi gün silinir",
+        "Yanlış elenen hemen emekli olur"
+      ],
+      "why": [
+        "Yanlış eleme zorlandığını gösterir; aralık kısalır, uzamaz.",
+        "Nesnel sonuç hesaba girdiği için iki soru aynı zamanlanmaz.",
+        "Sorular silinmez; yalnızca tekrar günü değişir.",
+        "Emeklilik yanlış elemekle değil, **Anladım** demekle olur."
+      ],
+      "solution": "İlk denemede bulmak bilgiyi daha sağlam bildiğini gösterir, bu yüzden o soru daha geç gelir. Yanlış eleyerek bulduğun soru daha erken döner.",
+      "hint": "Zorlandığın soru sık, iyi bildiğin soru seyrek gelir.",
+      "quote": "İlk denemede doğru bulduğun soru, yanlış şık eledikten sonra bulduğun sorudan daha uzun süre bekler.",
+      "tags": ["rehber", "aralıklı-tekrar"]
+    },
+    {
+      "chapter": "Aralıklı Tekrar",
+      "page": 10,
+      "difficulty": "kolay",
+      "concept": "emekli-silinmez",
+      "stem": "Emekli olan soruya ne olur?",
+      "choices": [
+        "Silinmez, sıradan çıkar",
+        "Modülden kalıcı olarak silinir",
+        "Her oturumun başında sorulur",
+        "Puanı sıfırlanıp yeni sayılır",
+        "Başka bir modüle taşınır"
+      ],
+      "why": [
+        "Emekli soru modülde durmaya devam eder.",
+        "Emekli soru artık sorulmaz.",
+        "Emeklilik soruyu yeni duruma döndürmez.",
+        "Sorular modüller arasında taşınmaz."
+      ],
+      "solution": "Emekli soru yerinde durur, yalnızca sıraya girmez. Soru bankasında hâlâ görebilirsin.",
+      "quote": "Emekli olan soru silinmez; yalnızca sıradan çıkar.",
+      "tags": ["rehber", "aralıklı-tekrar"]
+    },
+    {
+      "chapter": "Aralıklı Tekrar",
+      "page": 11,
+      "difficulty": "kolay",
+      "concept": "yeni-sayisi",
+      "stem": "Modül kartındaki **Yeni** sayısı neyi sayar?",
+      "choices": [
+        "Hiç görmediğin soruları",
+        "Bugün eklenen modülleri",
+        "Son oturumda çözülenleri",
+        "Yanlış yaptığın soruları",
+        "Bayrak koyduğun soruları"
+      ],
+      "why": [
+        "Sayı modülleri değil, o modülün sorularını sayar.",
+        "Çözdüğün soru artık yeni sayılmaz.",
+        "Yanlış yapılan soru görülmüş demektir, yeni değildir.",
+        "Bayraklı sorular Soru bankası'nda ayrıca süzülür."
+      ],
+      "solution": "**Yeni**, o modülde henüz karşına hiç çıkmamış soruların sayısıdır.",
+      "quote": "**Yeni**, henüz hiç görmediğin soruları sayar.",
+      "tags": ["rehber", "aralıklı-tekrar"]
+    },
+    {
+      "chapter": "Aralıklı Tekrar",
+      "page": 11,
+      "difficulty": "kolay",
+      "concept": "yuzde-gostergesi",
+      "stem": "Modül kartının köşesindeki yüzde neyi gösterir?",
+      "choices": [
+        "Emekli soruların oranını",
+        "İlk denemede doğru oranını",
+        "Bugün çözülen soru oranını",
+        "Kurulumun tamamlanma oranını",
+        "Bir kez görülen soru oranını"
+      ],
+      "why": [
+        "İlk denemede doğru sayısı oturum özetinde yer alır.",
+        "Yüzde bir güne değil, modülün bütününe bakar.",
+        "Kurulum yüzdesi yalnızca kurulum sürerken görünür.",
+        "Bir soruyu görmek yetmez; emekli olması gerekir."
+      ],
+      "solution": "Yüzde, emekli soruların toplam soruya oranıdır. Bütün sorular emekli olunca yüzde yüz olur.",
+      "quote": "Kartın köşesindeki yüzde, emekli soruların toplam soruya oranıdır; hepsi emekli olunca yüzde yüz olur.",
+      "tags": ["rehber", "aralıklı-tekrar"]
+    },
+    {
+      "chapter": "Aralıklı Tekrar",
+      "page": 11,
+      "difficulty": "orta",
+      "concept": "gun-baslangici",
+      "stem": "**Gün başlangıcı saati** ayarından önce çözülen sorular hangi güne sayılır?",
+      "choices": [
+        "Önceki güne",
+        "İçinde olunan güne",
+        "Bir sonraki güne",
+        "Hiçbir güne sayılmaz",
+        "Haftanın ilk gününe"
+      ],
+      "why": [
+        "Takvim gece yarısı değişse de uygulama ayarlı saate bakar.",
+        "Çözülenler ileri bir güne yazılmaz.",
+        "Çözülen her soru bir güne sayılır.",
+        "Ayar haftayı değil, günün sınırını belirler."
+      ],
+      "solution": "Ayarlı saatten önce çözülenler önceki güne sayılır. Gece geç saatte çalışan biri için gün gece yarısında bölünmez.",
+      "quote": "Bu saatten önce çözülenler önceki güne sayılır; gece geç saatte çalışanlar için yararlıdır.",
+      "tags": ["rehber", "aralıklı-tekrar"]
+    },
+    {
+      "chapter": "Ayarlar, İstatistik ve Taşıma",
+      "page": 12,
+      "difficulty": "kolay",
+      "concept": "arayuz-buyutme",
+      "stem": "Arayüzü klavyeden büyütmek için hangi tuşlara basılır?",
+      "choices": [
+        "Ctrl ve artı",
+        "Ctrl ve eksi",
+        "Ctrl ve sıfır",
+        "Boşluk ve artı",
+        "Esc ve Enter"
+      ],
+      "why": [
+        "Bu kısayol arayüzü küçültür.",
+        "Bu kısayol boyutu sıfırlar.",
+        "Boşluk oturumda şıkları açar, boyutu değiştirmez.",
+        "Esc oturumu bitirir, Enter sonraki soruya geçirir."
+      ],
+      "solution": "Ctrl ve artı büyütür, Ctrl ve eksi küçültür, Ctrl ve sıfır boyutu sıfırlar.",
+      "quote": "Klavyeden Ctrl ve artı büyütür, Ctrl ve eksi küçültür, Ctrl ve sıfır boyutu sıfırlar.",
+      "tags": ["rehber", "ayarlar"]
+    },
+    {
+      "chapter": "Ayarlar, İstatistik ve Taşıma",
+      "page": 12,
+      "difficulty": "kolay",
+      "concept": "yazi-akisi-kapali",
+      "stem": "**Yazı akışı hızı** ayarında **Kapalı** seçilirse ne olur?",
+      "choices": [
+        "Metin anında görünür",
+        "Soru metni hiç gösterilmez",
+        "Şıklar kendiliğinden açılır",
+        "Metin çok yavaş akmaya başlar",
+        "Yalnızca çözüm metni akar"
+      ],
+      "why": [
+        "Kapatılan şey metin değil, harf harf akıştır.",
+        "Bu ayar şıkları değil, soru metninin gelişini etkiler.",
+        "Yavaş akış ayrı bir seçenektir.",
+        "Ayar soru metninin akışıyla ilgilidir."
+      ],
+      "solution": "Soru metni normalde harf harf akar. **Kapalı** seçilince metin beklemeden, bir kerede görünür.",
+      "quote": "**Kapalı** seçilirse metin anında görünür.",
+      "tags": ["rehber", "ayarlar"]
+    },
+    {
+      "chapter": "Ayarlar, İstatistik ve Taşıma",
+      "page": 12,
+      "difficulty": "orta",
+      "concept": "ayar-kaydetme",
+      "stem": "Ayarlar ekranında yapılan bir değişiklik ne zaman kaydedilir?",
+      "choices": [
+        "Değişikliği yaptığın anda",
+        "Kaydet düğmesine basınca",
+        "Uygulama yeniden başlayınca",
+        "Bir sonraki oturum bitince",
+        "Taşıma paketi yazıldığında"
+      ],
+      "why": [
+        "Ayarlar ekranında ayrı bir kaydet düğmesi yoktur.",
+        "Yeniden başlatmayı beklemek gerekmez.",
+        "Kaydetme oturuma bağlı değildir.",
+        "Taşıma paketi kaydetmez; var olan veriyi kopyalar."
+      ],
+      "solution": "Her değişiklik o anda kaydedilir ve **Ayarlar kaydedildi** bildirimi çıkar.",
+      "quote": "Ayarlar ekranında yaptığın her değişiklik o anda kaydedilir ve **Ayarlar kaydedildi** bildirimi çıkar; ayrıca bir kaydet düğmesi yoktur.",
+      "tags": ["rehber", "ayarlar"]
+    },
+    {
+      "chapter": "Ayarlar, İstatistik ve Taşıma",
+      "page": 12,
+      "difficulty": "kolay",
+      "concept": "dil-secici",
+      "stem": "**Dil** seçici arayüzü hangi iki dil arasında değiştirir?",
+      "choices": [
+        "Türkçe ve İngilizce",
+        "Türkçe ve Almanca",
+        "İngilizce ve Fransızca",
+        "Türkçe ve Arapça",
+        "İngilizce ve İspanyolca"
+      ],
+      "why": [
+        "Almanca arayüz dilleri arasında yoktur.",
+        "Fransızca yoktur ve Türkçe eksik kalmıştır.",
+        "Arapça arayüz dilleri arasında yoktur.",
+        "İspanyolca yoktur ve Türkçe eksik kalmıştır."
+      ],
+      "solution": "Arayüzün iki dili vardır: Türkçe ve İngilizce.",
+      "quote": "**Dil** seçici arayüzü Türkçe ile İngilizce arasında değiştirir.",
+      "tags": ["rehber", "ayarlar"]
+    },
+    {
+      "chapter": "Ayarlar, İstatistik ve Taşıma",
+      "page": 13,
+      "difficulty": "kolay",
+      "concept": "isi-haritasi",
+      "stem": "İstatistik ekranındaki ısı haritası hangi dönemi gösterir?",
+      "choices": [
+        "Son yirmi altı haftayı",
+        "Yalnızca son yedi günü",
+        "Yalnızca içinde olunan ayı",
+        "Son on iki ayın tamamını",
+        "Kurulumdan bugüne her günü"
+      ],
+      "why": [
+        "Son yedi gün üstteki kutulardan birinde sayı olarak verilir.",
+        "Harita tek bir ayla sınırlı değildir.",
+        "Harita bir yılı değil, yaklaşık yarım yılı kapsar.",
+        "Harita sabit sayıda haftayı gösterir."
+      ],
+      "solution": "Isı haritası son yirmi altı haftayı gün gün gösterir. Çok çalıştığın günler daha belirgin görünür.",
+      "quote": "Altında son yirmi altı haftayı gün gün gösteren bir ısı haritası bulunur; çok çalıştığın günler daha belirgin görünür.",
+      "tags": ["rehber", "istatistik"]
+    },
+    {
+      "chapter": "Ayarlar, İstatistik ve Taşıma",
+      "page": 13,
+      "difficulty": "orta",
+      "concept": "kart-durumlari",
+      "stem": "**Kartların durumu** bölümü soruları hangi dört gruba ayırır?",
+      "choices": [
+        "Yeni, öğreniliyor, tekrarda, emekli",
+        "Doğru, yanlış, boş bırakılan, işaretli",
+        "Bugün, yarın, bu hafta, gelecek hafta",
+        "Kolay, orta, zor, zorluğu belirsiz",
+        "Seçmeli, açık uçlu, işaretleme, karışık"
+      ],
+      "why": [
+        "Bunlar cevap sonuçlarıdır, kart durumu değildir.",
+        "Bölüm tarihe göre değil, duruma göre ayırır.",
+        "Zorluk derecesi kartın durumu değildir.",
+        "Bunlar soru türleridir, durum değil."
+      ],
+      "solution": "Dört durum vardır: yeni, öğreniliyor, tekrarda ve emekli.",
+      "quote": "**Kartların durumu** bölümü soruları dört gruba ayırır: yeni, öğreniliyor, tekrarda ve emekli.",
+      "tags": ["rehber", "istatistik"]
+    },
+    {
+      "chapter": "Ayarlar, İstatistik ve Taşıma",
+      "page": 14,
+      "difficulty": "kolay",
+      "concept": "tasima-paketi-amaci",
+      "stem": "**Taşıma paketi** ne için kullanılır?",
+      "choices": [
+        "İlerlemeyi başka bilgisayara götürmek",
+        "Bayraklı soruları hazırlayana göndermek",
+        "Uygulamayı yeni sürümüne güncellemek",
+        "Modülleri internetten indirmek için",
+        "İstatistikleri tablo olarak yazdırmak"
+      ],
+      "why": [
+        "Bayraklar Soru bankası'ndan dışa aktarılır.",
+        "Güncelleme ayrı bir bölümdür.",
+        "Uygulama modül indirmez.",
+        "Paket yazdırma için değil, taşıma içindir."
+      ],
+      "solution": "Taşıma paketi ilerlemeyi, modülleri ve ayarları tek klasöre yazar. O klasörü öbür bilgisayarda içe aktarırsın.",
+      "quote": "İlerlemeni başka bir bilgisayara götürmek için **Taşıma paketi** kullanılır.",
+      "tags": ["rehber", "taşıma"]
+    },
+    {
+      "chapter": "Ayarlar, İstatistik ve Taşıma",
+      "page": 14,
+      "difficulty": "orta",
+      "concept": "ice-aktarma-yedek",
+      "stem": "Paket içe aktarılınca o bilgisayardaki eski veritabanına ne olur?",
+      "choices": [
+        "Silinmez, yedeklenir",
+        "Kalıcı olarak silinir",
+        "Paketle birleştirilir",
+        "USB belleğe geri yazılır",
+        "Olduğu gibi kullanılır"
+      ],
+      "why": [
+        "Eski veritabanı atılmaz; yedeği saklanır.",
+        "İlerleme birleştirilmez; paketteki ile değiştirilir.",
+        "İçe aktarma belleğe bir şey yazmaz.",
+        "İlerleme paketteki ile değiştirilir."
+      ],
+      "solution": "İçe aktarma ilerlemeyi paketteki ile değiştirir, ama eski veritabanını yedek olarak saklar. Sonra uygulama yeniden başlar.",
+      "quote": "Eski veritabanı silinmez, yedeklenir; ardından uygulama yeniden başlar.",
+      "tags": ["rehber", "taşıma"]
+    },
+    {
+      "chapter": "Ayarlar, İstatistik ve Taşıma",
+      "page": 15,
+      "difficulty": "orta",
+      "concept": "veri-cihazda",
+      "stem": "Çalışma verin nerede saklanır?",
+      "choices": [
+        "Yalnızca kendi cihazında",
+        "Uygulamanın bulut hesabında",
+        "Modülü hazırlayanın sunucusunda",
+        "GitHub üzerindeki bir depoda",
+        "Reklam ortaklarının sisteminde"
+      ],
+      "why": [
+        "Uygulamada hesap yoktur, dolayısıyla bulut hesabı da yoktur.",
+        "Modülü hazırlayan kişi senin verini görmez.",
+        "GitHub'a yalnızca sürüm denetimi için gidilir; veri gönderilmez.",
+        "Uygulamada reklam yoktur."
+      ],
+      "solution": "Cevapların, puanların, tekrar planın, bayrakların ve ayarların yalnızca kendi cihazında durur.",
+      "quote": "Çalışma verin cihazında kalır: cevapların, puanların, tekrar planın, işaretlediğin sorular ve ayarların yalnızca kendi cihazında saklanır.",
+      "tags": ["rehber", "gizlilik"]
+    },
+    {
+      "chapter": "Ayarlar, İstatistik ve Taşıma",
+      "page": 15,
+      "difficulty": "zor",
+      "concept": "ag-kullanimi",
+      "stem": "Uygulama ağa hangi durumda çıkar?",
+      "choices": [
+        "Yalnızca güncelleme denetiminde",
+        "Her oturumun başında ve sonunda",
+        "Modül kurulurken ve kaldırılırken",
+        "İstatistik ekranı her açıldığında",
+        "Taşıma paketi dışa aktarılırken"
+      ],
+      "why": [
+        "Oturumlar tümüyle cihazda yürür.",
+        "Modül dosyası cihazda okunur, hiçbir yere yüklenmez.",
+        "İstatistikler cihazdaki kayıttan hesaplanır.",
+        "Taşıma paketi bir klasöre yazılır, ağa değil."
+      ],
+      "solution": "Uygulama internet olmadan eksiksiz çalışır. Ağı yalnızca yeni sürüm var mı diye bakarken kullanır.",
+      "hint": "Uygulamanın internetsiz yapamadığı tek şey nedir?",
+      "quote": "Uygulama internet olmadan da eksiksiz çalışır; ağa yalnızca güncelleme denetimi için çıkar.",
+      "tags": ["rehber", "gizlilik"]
+    }
+  ]
+}

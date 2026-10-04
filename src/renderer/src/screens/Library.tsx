@@ -210,8 +210,15 @@ export function Library(): React.JSX.Element {
           <button
             type="button"
             className="tk-btn tk-btn-ghost"
+            onClick={() => useApp.getState().showHelp(true)}
+          >
+            {t('welcome.open')}
+          </button>
+          <button
+            type="button"
+            className="tk-btn tk-btn-ghost"
             disabled={busy}
-            title={busy ? t('common.loading') : undefined}
+            title={busy ? t('common.loading') : t('library.installSampleHelp')}
             onClick={() => run(() => window.quizloop.module.installSample())}
           >
             {t('library.installSample')}
@@ -222,7 +229,7 @@ export function Library(): React.JSX.Element {
                 type="button"
                 className="tk-btn tk-btn-ghost"
                 disabled={busy}
-                title={busy ? t('common.loading') : undefined}
+                title={busy ? t('common.loading') : t('library.addFolderHelp')}
                 onClick={() => run(() => window.quizloop.module.pick('folder'))}
               >
                 {t('library.addFolder')}
@@ -231,7 +238,7 @@ export function Library(): React.JSX.Element {
                 type="button"
                 className="tk-btn tk-btn-primary"
                 disabled={busy}
-                title={busy ? t('common.loading') : undefined}
+                title={busy ? t('common.loading') : t('library.addFileHelp')}
                 onClick={() => run(() => window.quizloop.module.pick('file'))}
               >
                 {t('library.addFile')}
@@ -243,7 +250,7 @@ export function Library(): React.JSX.Element {
               type="button"
               className="tk-btn tk-btn-primary"
               disabled={busy}
-              title={busy ? t('common.loading') : undefined}
+              title={busy ? t('common.loading') : t('library.addFileHelp')}
               onClick={() => run(() => window.quizloop.module.pick('file'))}
             >
               {t('library.importPackage')}

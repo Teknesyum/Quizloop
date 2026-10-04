@@ -25,6 +25,8 @@ interface AppState {
   settings: Settings | null
   info: { version: string; platform: string; integrity: IntegrityReport } | null
   toasts: Toast[]
+  help: boolean
+  showHelp(open: boolean): void
   go(route: Route): void
   loadModules(): Promise<void>
   loadSettings(): Promise<void>
@@ -45,6 +47,8 @@ export const useApp = create<AppState>((set) => ({
   settings: null,
   info: null,
   toasts: [],
+  help: false,
+  showHelp: (open) => set({ help: open }),
   go: (route) => set((s) => ({ route, toasts: s.toasts.filter((t) => t.kind === 'danger') })),
   loadModules: async () => set({ modules: await window.quizloop.module.list() }),
   loadSettings: async () => set({ settings: await window.quizloop.settings.get() }),

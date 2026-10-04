@@ -1,0 +1,826 @@
+{
+  "sections": [
+    {
+      "page": 1,
+      "chapter": "Kolay Sorular",
+      "text": "Türkiye'nin başkenti Ankara'dır. Dünya'nın tek doğal uydusu Ay'dır. Futbolda her takım sahaya on bir oyuncuyla çıkar. İstiklal Marşı'nın şairi Mehmet Akif Ersoy'dur. Su, deniz seviyesinde 100 santigrat derecede kaynar."
+    },
+    {
+      "page": 2,
+      "chapter": "Kolay Sorular",
+      "text": "Bir saat altmış dakikadır. Fransa'nın başkenti Paris'tir. Bal arıları çiçek özünden bal üretir. Mona Lisa tablosunu Leonardo da Vinci yapmıştır. Türkiye Cumhuriyeti 29 Ekim 1923'te ilan edilmiştir."
+    },
+    {
+      "page": 3,
+      "chapter": "Kolay Sorular",
+      "text": "Türkiye'nin en büyük gölü Van Gölü'dür. Dünya'nın en büyük okyanusu Pasifik Okyanusu'dur. Kalp, kanı bütün vücuda pompalayan organdır. Olimpiyat bayrağında iç içe geçmiş beş halka bulunur. Trafik ışığında kırmızı ışık dur anlamına gelir."
+    },
+    {
+      "page": 4,
+      "chapter": "Orta Sorular",
+      "text": "Avusturya'nın resmi dili Almancadır. İstanbul, 1453'te II. Mehmed tarafından fethedilmiştir. Altının kimyasal simgesi Au'dur. Suç ve Ceza romanının yazarı Fyodor Dostoyevski'dir. Basketbolda her takım sahada beş oyuncuyla oynar."
+    },
+    {
+      "page": 5,
+      "chapter": "Orta Sorular",
+      "text": "Avustralya'nın başkenti Canberra'dır. Türkiye'de doğup yine Türkiye'de denize dökülen en uzun nehir Kızılırmak'tır. Çalıkuşu romanının yazarı Reşat Nuri Güntekin'dir. Güneş'e en yakın gezegen Merkür'dür. Kristof Kolomb 1492'de Atlas Okyanusu'nu aşarak Amerika kıtasına ulaştı."
+    },
+    {
+      "page": 6,
+      "chapter": "Orta Sorular",
+      "text": "Guernica tablosunu Pablo Picasso yapmıştır. Wimbledon, Londra'da çim kortlarda oynanan bir tenis turnuvasıdır. Türk alfabesinde sekiz ünlü harf vardır. Bir düzine on iki adettir. Elmas, karbon elementinden oluşur."
+    },
+    {
+      "page": 7,
+      "chapter": "Zor Sorular",
+      "text": "Dünya'nın en derin gölü Sibirya'daki Baykal Gölü'dür. Kadeş Antlaşması Hititler ile Mısırlılar arasında yapılmıştır. Mutlak sıfır, eksi 273,15 santigrat derecedir. Tutunamayanlar romanının yazarı Oğuz Atay'dır. Bolero adlı orkestra eserinin bestecisi Maurice Ravel'dir."
+    },
+    {
+      "page": 8,
+      "chapter": "Zor Sorular",
+      "text": "İlk modern Olimpiyat Oyunları 1896'da Atina'da yapılmıştır. Esperanto, Ludwik Zamenhof'un tasarladığı yapay bir dildir. Titikaka Gölü, Peru ile Bolivya arasındaki sınırda yer alır. 1648'de imzalanan Westfalya Barışı, Otuz Yıl Savaşı'nı sona erdirmiştir. İnsan vücudundaki en küçük kemik, orta kulaktaki üzengi kemiğidir."
+    },
+    {
+      "page": 9,
+      "chapter": "Zor Sorular",
+      "text": "Odysseia destanında Odysseus'un yurdu İthaka adasıdır. Kaplumbağa Terbiyecisi tablosunu Osman Hamdi Bey yapmıştır. Maraton koşusunun mesafesi 42,195 kilometredir. Orhun Yazıtları Göktürk alfabesiyle yazılmıştır. Standart bir piyanoda 88 tuş bulunur."
+    }
+  ],
+  "questions": [
+    {
+      "chapter": "Kolay Sorular",
+      "page": 1,
+      "difficulty": "kolay",
+      "concept": "turkiye-baskent",
+      "stem": "Türkiye'nin başkenti hangi şehirdir?",
+      "choices": ["Ankara", "İstanbul", "İzmir", "Bursa"],
+      "why": [
+        "İstanbul en bilinen şehirdir ama başkent değildir; Osmanlı döneminde başkentti.",
+        "İzmir bir Ege liman şehridir, başkent olmamıştır.",
+        "Bursa Osmanlı'nın ilk başkentlerindendir, Cumhuriyet'in başkenti değildir."
+      ],
+      "solution": "Türkiye'nin başkenti Ankara'dır. Ankara, 13 Ekim 1923'te başkent ilan edilmiştir.",
+      "hint": "İç Anadolu'da bir şehir.",
+      "quote": "Türkiye'nin başkenti Ankara'dır.",
+      "tags": ["genel-kültür", "coğrafya"]
+    },
+    {
+      "chapter": "Kolay Sorular",
+      "page": 1,
+      "difficulty": "kolay",
+      "concept": "dunya-dogal-uydu",
+      "stem": "Dünya'nın tek doğal uydusu hangisidir?",
+      "choices": ["Ay", "Mars", "Venüs", "Güneş"],
+      "why": [
+        "Mars bir uydu değil, Güneş'in çevresinde dönen bir gezegendir.",
+        "Venüs de bir gezegendir; gökyüzünde parlak göründüğü için karıştırılır.",
+        "Güneş bir yıldızdır; Dünya onun çevresinde döner."
+      ],
+      "solution": "Dünya'nın tek doğal uydusu Ay'dır. Ay, Dünya'nın çevresinde yaklaşık bir ayda bir tur atar.",
+      "hint": "Geceleri gökyüzünde evreleriyle görülür.",
+      "quote": "Dünya'nın tek doğal uydusu Ay'dır.",
+      "tags": ["genel-kültür", "bilim"]
+    },
+    {
+      "chapter": "Kolay Sorular",
+      "page": 1,
+      "difficulty": "kolay",
+      "concept": "on-bir-oyunculu-spor",
+      "stem": "Hangi sporda her takım sahaya on bir oyuncuyla çıkar?",
+      "choices": ["Futbol", "Basketbol", "Voleybol", "Hentbol"],
+      "why": [
+        "Basketbolda sahada beş oyuncu bulunur.",
+        "Voleybolda sahada altı oyuncu bulunur.",
+        "Hentbolda sahada yedi oyuncu bulunur."
+      ],
+      "solution": "Futbolda her takım sahaya on bir oyuncuyla çıkar. Bunlardan biri kalecidir.",
+      "hint": "Kalecisi olan ve ayakla oynanan bir oyun.",
+      "quote": "Futbolda her takım sahaya on bir oyuncuyla çıkar.",
+      "tags": ["genel-kültür", "spor"]
+    },
+    {
+      "chapter": "Kolay Sorular",
+      "page": 1,
+      "difficulty": "kolay",
+      "concept": "istiklal-marsi-sairi",
+      "stem": "İstiklal Marşı'nın şairi kimdir?",
+      "choices": ["Mehmet Akif Ersoy", "Namık Kemal", "Yahya Kemal Beyatlı", "Ziya Gökalp"],
+      "why": [
+        "Namık Kemal vatan şiirleriyle tanınır ama marş yazılmadan çok önce ölmüştür.",
+        "Yahya Kemal Beyatlı aynı dönemin şairidir, marşı o yazmamıştır.",
+        "Ziya Gökalp daha çok düşünce yazılarıyla bilinir, marşın şairi değildir."
+      ],
+      "solution": "İstiklal Marşı'nı Mehmet Akif Ersoy yazmıştır. Marş 12 Mart 1921'de Meclis'te kabul edilmiştir.",
+      "hint": "Safahat adlı kitabın da şairi.",
+      "quote": "İstiklal Marşı'nın şairi Mehmet Akif Ersoy'dur.",
+      "tags": ["genel-kültür", "edebiyat"]
+    },
+    {
+      "chapter": "Kolay Sorular",
+      "page": 1,
+      "difficulty": "kolay",
+      "concept": "suyun-kaynama-noktasi",
+      "stem": "Su, deniz seviyesinde 100 santigrat dereceye ısıtıldığında ne olur?",
+      "choices": ["Kaynar", "Donar", "Yoğunlaşır", "Katılaşır"],
+      "why": [
+        "Donma, suyun sıfır santigrat derecede buza dönmesidir.",
+        "Yoğunlaşma, buharın soğuyarak yeniden sıvıya dönmesidir.",
+        "Katılaşma soğurken olur; ısıtılan su katılaşmaz."
+      ],
+      "solution": "Su, deniz seviyesinde 100 santigrat derecede kaynar. Yükseklere çıkıldıkça hava basıncı düştüğü için bu sıcaklık azalır.",
+      "hint": "Çaydanlıkta her gün gördüğümüz olay.",
+      "quote": "Su, deniz seviyesinde 100 santigrat derecede kaynar.",
+      "tags": ["genel-kültür", "bilim"]
+    },
+    {
+      "chapter": "Kolay Sorular",
+      "page": 2,
+      "difficulty": "kolay",
+      "concept": "saat-kac-dakika",
+      "stem": "Bir saat kaç dakikadır?",
+      "choices": ["Altmış", "Otuz", "Yüz", "Yirmi dört"],
+      "why": [
+        "Otuz dakika yarım saattir.",
+        "Yüz, onluk sayma alışkanlığından gelir; saat altmışlık düzenle bölünür.",
+        "Yirmi dört, bir gündeki saat sayısıdır."
+      ],
+      "solution": "Bir saat altmış dakikadır. Bir dakika da altmış saniyedir.",
+      "hint": "Bir dakikadaki saniye sayısıyla aynıdır.",
+      "quote": "Bir saat altmış dakikadır.",
+      "tags": ["genel-kültür", "gündelik-hayat"]
+    },
+    {
+      "chapter": "Kolay Sorular",
+      "page": 2,
+      "difficulty": "kolay",
+      "concept": "fransa-baskent",
+      "stem": "Fransa'nın başkenti hangi şehirdir?",
+      "choices": ["Paris", "Londra", "Roma", "Madrid"],
+      "why": [
+        "Londra, Birleşik Krallık'ın başkentidir.",
+        "Roma, İtalya'nın başkentidir.",
+        "Madrid, İspanya'nın başkentidir."
+      ],
+      "solution": "Fransa'nın başkenti Paris'tir. Şehir Seine Nehri'nin kıyısında kuruludur.",
+      "hint": "Eyfel Kulesi bu şehirdedir.",
+      "quote": "Fransa'nın başkenti Paris'tir.",
+      "tags": ["genel-kültür", "coğrafya"]
+    },
+    {
+      "chapter": "Kolay Sorular",
+      "page": 2,
+      "difficulty": "kolay",
+      "concept": "bal-ureten-bocek",
+      "stem": "Çiçek özünden bal üreten böcek hangisidir?",
+      "choices": ["Arı", "Karınca", "Kelebek", "Sinek"],
+      "why": [
+        "Karınca da topluluk hâlinde yaşar ama bal üretmez.",
+        "Kelebek çiçek özüyle beslenir, onu bala çevirmez.",
+        "Sinek çiçeklere konabilir ama bal yapmaz."
+      ],
+      "solution": "Bal arıları çiçek özünü kovana taşır ve bala dönüştürür. Bal, peteklerde saklanır.",
+      "hint": "Kovanda yaşar.",
+      "quote": "Bal arıları çiçek özünden bal üretir.",
+      "tags": ["genel-kültür", "bilim"]
+    },
+    {
+      "chapter": "Kolay Sorular",
+      "page": 2,
+      "difficulty": "kolay",
+      "concept": "mona-lisa-ressami",
+      "stem": "Mona Lisa tablosunu hangi sanatçı yapmıştır?",
+      "choices": [
+        "Leonardo da Vinci",
+        "Pablo Picasso",
+        "Vincent van Gogh",
+        "Michelangelo Buonarroti"
+      ],
+      "why": [
+        "Pablo Picasso yirminci yüzyıl ressamıdır; Mona Lisa ondan yüzyıllar önce yapılmıştır.",
+        "Vincent van Gogh on dokuzuncu yüzyılda yaşamıştır ve Yıldızlı Gece ile tanınır.",
+        "Michelangelo aynı çağın sanatçısıdır ama Davut heykeli ve Sistina tavanıyla bilinir."
+      ],
+      "solution": "Mona Lisa'yı Leonardo da Vinci yapmıştır. Tablo Paris'teki Louvre Müzesi'nde sergilenir.",
+      "hint": "Rönesans döneminin İtalyan ustası.",
+      "quote": "Mona Lisa tablosunu Leonardo da Vinci yapmıştır.",
+      "tags": ["genel-kültür", "sanat"]
+    },
+    {
+      "chapter": "Kolay Sorular",
+      "page": 2,
+      "difficulty": "kolay",
+      "concept": "cumhuriyetin-ilani",
+      "stem": "Türkiye Cumhuriyeti hangi tarihte ilan edilmiştir?",
+      "choices": ["29 Ekim 1923", "23 Nisan 1920", "19 Mayıs 1919", "30 Ağustos 1922"],
+      "why": [
+        "23 Nisan 1920, Türkiye Büyük Millet Meclisi'nin açıldığı gündür.",
+        "19 Mayıs 1919, Mustafa Kemal'in Samsun'a çıktığı gündür.",
+        "30 Ağustos 1922, Büyük Taarruz'un zaferle sonuçlandığı gündür."
+      ],
+      "solution": "Cumhuriyet 29 Ekim 1923'te ilan edilmiştir. Bu gün her yıl Cumhuriyet Bayramı olarak kutlanır.",
+      "hint": "Cumhuriyet Bayramı'nın günü.",
+      "quote": "Türkiye Cumhuriyeti 29 Ekim 1923'te ilan edilmiştir.",
+      "tags": ["genel-kültür", "tarih"]
+    },
+    {
+      "chapter": "Kolay Sorular",
+      "page": 3,
+      "difficulty": "kolay",
+      "concept": "turkiye-en-buyuk-gol",
+      "stem": "Türkiye'nin en büyük gölü hangisidir?",
+      "choices": ["Van Gölü", "Tuz Gölü", "Beyşehir Gölü", "Eğirdir Gölü"],
+      "why": [
+        "Tuz Gölü ikinci büyük göldür ve çok sığdır.",
+        "Beyşehir Gölü en büyük tatlı su gölüdür ama Van Gölü'nden küçüktür.",
+        "Eğirdir Gölü Göller Yöresi'ndedir ve çok daha küçüktür."
+      ],
+      "solution": "Türkiye'nin en büyük gölü Van Gölü'dür. Suyu sodalıdır ve Doğu Anadolu'da yer alır.",
+      "hint": "Doğu Anadolu'da, suyu sodalı bir göl.",
+      "quote": "Türkiye'nin en büyük gölü Van Gölü'dür.",
+      "tags": ["genel-kültür", "coğrafya"]
+    },
+    {
+      "chapter": "Kolay Sorular",
+      "page": 3,
+      "difficulty": "kolay",
+      "concept": "en-buyuk-okyanus",
+      "stem": "Dünya'nın en büyük okyanusu hangisidir?",
+      "choices": ["Pasifik", "Atlantik", "Hint", "Arktik"],
+      "why": [
+        "Atlantik ikinci büyük okyanustur.",
+        "Hint Okyanusu üçüncü sıradadır.",
+        "Arktik, okyanusların en küçüğüdür."
+      ],
+      "solution": "En büyük okyanus Pasifik'tir. Türkçede Büyük Okyanus adıyla da anılır.",
+      "hint": "Asya ile Amerika arasında uzanır.",
+      "quote": "Dünya'nın en büyük okyanusu Pasifik Okyanusu'dur.",
+      "tags": ["genel-kültür", "coğrafya"]
+    },
+    {
+      "chapter": "Kolay Sorular",
+      "page": 3,
+      "difficulty": "kolay",
+      "concept": "kan-pompalayan-organ",
+      "stem": "Kanı bütün vücuda pompalayan organ hangisidir?",
+      "choices": ["Kalp", "Akciğer", "Karaciğer", "Böbrek"],
+      "why": [
+        "Akciğer kana oksijen kazandırır ama kanı pompalamaz.",
+        "Karaciğer kandaki maddeleri işler, pompalama yapmaz.",
+        "Böbrek kanı süzer ve idrarı oluşturur."
+      ],
+      "solution": "Kanı vücuda pompalayan organ kalptir. Kalp, kasılıp gevşeyerek kanı damarlara iter.",
+      "hint": "Göğsümüzde atışını hissederiz.",
+      "quote": "Kalp, kanı bütün vücuda pompalayan organdır.",
+      "tags": ["genel-kültür", "bilim"]
+    },
+    {
+      "chapter": "Kolay Sorular",
+      "page": 3,
+      "difficulty": "kolay",
+      "concept": "olimpiyat-halkalari",
+      "stem": "Olimpiyat bayrağında kaç halka bulunur?",
+      "choices": ["Beş", "Üç", "Dört", "Yedi"],
+      "why": [
+        "Üç, madalya kürsüsündeki basamak sayısıyla karıştırılır.",
+        "Dört, oyunların dört yılda bir yapılmasıyla karıştırılır.",
+        "Yedi, kıtaların yedi diye sayıldığı sınıflamayla karıştırılır."
+      ],
+      "solution": "Olimpiyat bayrağında iç içe geçmiş beş halka vardır. Halkalar mavi, sarı, siyah, yeşil ve kırmızıdır.",
+      "hint": "Bir elin parmakları kadar.",
+      "quote": "Olimpiyat bayrağında iç içe geçmiş beş halka bulunur.",
+      "tags": ["genel-kültür", "spor"]
+    },
+    {
+      "chapter": "Kolay Sorular",
+      "page": 3,
+      "difficulty": "kolay",
+      "concept": "trafik-isigi-dur",
+      "stem": "Trafik ışığında hangi renk dur anlamına gelir?",
+      "choices": ["Kırmızı", "Yeşil", "Sarı", "Lacivert"],
+      "why": [
+        "Yeşil ışık geç anlamına gelir.",
+        "Sarı ışık, ışığın değişmek üzere olduğunu bildirir.",
+        "Trafik ışıklarında lacivert renk bulunmaz."
+      ],
+      "solution": "Kırmızı ışık dur anlamına gelir. Trafik ışığında kırmızı en üstte yer alır.",
+      "hint": "Işığın en üstteki rengi.",
+      "quote": "Trafik ışığında kırmızı ışık dur anlamına gelir.",
+      "tags": ["genel-kültür", "gündelik-hayat"]
+    },
+    {
+      "chapter": "Orta Sorular",
+      "page": 4,
+      "difficulty": "orta",
+      "concept": "avusturya-resmi-dil",
+      "stem": "Avusturya'nın resmi dili hangisidir?",
+      "choices": ["Almanca", "Macarca", "İtalyanca", "Fransızca"],
+      "why": [
+        "Macarca komşu Macaristan'ın dilidir; iki ülke eskiden aynı imparatorluktaydı.",
+        "İtalyanca güney komşusu İtalya'nın dilidir.",
+        "Fransızca İsviçre'nin resmi dillerinden biridir, Avusturya'nın değil."
+      ],
+      "solution": "Avusturya'nın resmi dili Almancadır. Ülke, Almanya'nın güneydoğu komşusudur.",
+      "hint": "Kuzeybatıdaki büyük komşusuyla aynı dil.",
+      "quote": "Avusturya'nın resmi dili Almancadır.",
+      "tags": ["genel-kültür", "dil"]
+    },
+    {
+      "chapter": "Orta Sorular",
+      "page": 4,
+      "difficulty": "orta",
+      "concept": "istanbul-fethi-padisah",
+      "stem": "İstanbul'u 1453'te fetheden Osmanlı padişahı kimdir?",
+      "choices": ["II. Mehmed", "II. Murad", "I. Selim", "II. Bayezid"],
+      "why": [
+        "II. Murad fatihin babasıdır; şehri kuşatmış ama alamamıştır.",
+        "I. Selim, 1517'de Mısır'ı alan padişahtır.",
+        "II. Bayezid fatihin oğludur ve fetihten sonra tahta çıkmıştır."
+      ],
+      "solution": "İstanbul'u II. Mehmed fethetmiştir. Bu fetihten sonra Fatih unvanıyla anılmıştır.",
+      "hint": "Fatih unvanıyla bilinir.",
+      "quote": "İstanbul, 1453'te II. Mehmed tarafından fethedilmiştir.",
+      "tags": ["genel-kültür", "tarih"]
+    },
+    {
+      "chapter": "Orta Sorular",
+      "page": 4,
+      "difficulty": "orta",
+      "concept": "au-simgesi",
+      "stem": "Kimyada Au simgesi hangi elementi gösterir?",
+      "choices": ["Altın", "Gümüş", "Alüminyum", "Argon"],
+      "why": [
+        "Gümüşün simgesi Ag'dir; ikisi de değerli metal olduğu için karışır.",
+        "Alüminyumun simgesi Al'dir.",
+        "Argonun simgesi Ar'dir ve bir soy gazdır."
+      ],
+      "solution": "Au, altının simgesidir. Simge, altının Latince adı olan aurum sözcüğünden gelir.",
+      "hint": "Latince adı aurum.",
+      "quote": "Altının kimyasal simgesi Au'dur.",
+      "tags": ["genel-kültür", "bilim"]
+    },
+    {
+      "chapter": "Orta Sorular",
+      "page": 4,
+      "difficulty": "orta",
+      "concept": "dostoyevski-romani",
+      "stem": "Hangi romanın yazarı Fyodor Dostoyevski'dir?",
+      "choices": ["Suç ve Ceza", "Savaş ve Barış", "Anna Karenina", "Ölü Canlar"],
+      "why": [
+        "Savaş ve Barış, Lev Tolstoy'un romanıdır.",
+        "Anna Karenina da Lev Tolstoy'un eseridir.",
+        "Ölü Canlar, Nikolay Gogol'ün romanıdır."
+      ],
+      "solution": "Suç ve Ceza, Dostoyevski'nin romanıdır. Kitap, Raskolnikov adlı gencin işlediği cinayeti ve vicdan azabını anlatır.",
+      "hint": "Kahramanı Raskolnikov.",
+      "quote": "Suç ve Ceza romanının yazarı Fyodor Dostoyevski'dir.",
+      "tags": ["genel-kültür", "edebiyat"]
+    },
+    {
+      "chapter": "Orta Sorular",
+      "page": 4,
+      "difficulty": "orta",
+      "concept": "basketbol-oyuncu-sayisi",
+      "stem": "Basketbolda bir takım sahada kaç oyuncuyla oynar?",
+      "choices": ["Beş", "Altı", "Yedi", "On bir"],
+      "why": [
+        "Altı, voleybolda sahadaki oyuncu sayısıdır.",
+        "Yedi, hentbolda sahadaki oyuncu sayısıdır.",
+        "On bir, futboldaki oyuncu sayısıdır."
+      ],
+      "solution": "Basketbolda sahada beş oyuncu bulunur. Yedek oyuncular maç içinde sınırsız değişebilir.",
+      "hint": "Salon sporları içinde sahadaki en az sayılardan biri.",
+      "quote": "Basketbolda her takım sahada beş oyuncuyla oynar.",
+      "tags": ["genel-kültür", "spor"]
+    },
+    {
+      "chapter": "Orta Sorular",
+      "page": 5,
+      "difficulty": "orta",
+      "concept": "avustralya-baskent",
+      "stem": "Avustralya'nın başkenti hangi şehirdir?",
+      "choices": ["Canberra", "Sidney", "Melbourne", "Perth"],
+      "why": [
+        "Sidney en tanınan şehirdir ama başkent değildir.",
+        "Melbourne, Canberra kurulana kadar hükümetin geçici merkeziydi.",
+        "Perth batı kıyısındaki büyük şehirdir, başkent olmamıştır."
+      ],
+      "solution": "Avustralya'nın başkenti Canberra'dır. Şehir, başkent olması için özel olarak planlanıp kurulmuştur.",
+      "hint": "Ülkenin en büyük iki şehrinden biri değil.",
+      "quote": "Avustralya'nın başkenti Canberra'dır.",
+      "tags": ["genel-kültür", "coğrafya"]
+    },
+    {
+      "chapter": "Orta Sorular",
+      "page": 5,
+      "difficulty": "orta",
+      "concept": "turkiye-en-uzun-nehir",
+      "stem": "Türkiye'de doğup yine Türkiye'de denize dökülen en uzun nehir hangisidir?",
+      "choices": ["Kızılırmak", "Yeşilırmak", "Sakarya", "Büyük Menderes"],
+      "why": [
+        "Yeşilırmak da Karadeniz'e dökülür ama çok daha kısadır.",
+        "Sakarya uzun bir nehirdir ama Kızılırmak'tan kısadır.",
+        "Büyük Menderes Ege'ye dökülür ve daha kısadır."
+      ],
+      "solution": "Bu nehir Kızılırmak'tır. Sivas'ta doğar, geniş bir yay çizer ve Bafra'da Karadeniz'e dökülür.",
+      "hint": "Sivas'ta doğar, Bafra'da denize ulaşır.",
+      "quote": "Türkiye'de doğup yine Türkiye'de denize dökülen en uzun nehir Kızılırmak'tır.",
+      "tags": ["genel-kültür", "coğrafya"]
+    },
+    {
+      "chapter": "Orta Sorular",
+      "page": 5,
+      "difficulty": "orta",
+      "concept": "calikusu-yazari",
+      "stem": "Çalıkuşu romanının yazarı kimdir?",
+      "choices": [
+        "Reşat Nuri Güntekin",
+        "Halide Edib Adıvar",
+        "Yakup Kadri Karaosmanoğlu",
+        "Halit Ziya Uşaklıgil"
+      ],
+      "why": [
+        "Halide Edib Adıvar, Sinekli Bakkal ve Ateşten Gömlek ile tanınır.",
+        "Yakup Kadri Karaosmanoğlu, Yaban romanının yazarıdır.",
+        "Halit Ziya Uşaklıgil, Aşk-ı Memnu romanının yazarıdır."
+      ],
+      "solution": "Çalıkuşu'nu Reşat Nuri Güntekin yazmıştır. Roman, Anadolu'da öğretmenlik yapan Feride'nin öyküsünü anlatır.",
+      "hint": "Yaprak Dökümü de aynı yazarındır.",
+      "quote": "Çalıkuşu romanının yazarı Reşat Nuri Güntekin'dir.",
+      "tags": ["genel-kültür", "edebiyat"]
+    },
+    {
+      "chapter": "Orta Sorular",
+      "page": 5,
+      "difficulty": "orta",
+      "concept": "gunese-en-yakin-gezegen",
+      "stem": "Güneş'e en yakın gezegen hangisidir?",
+      "choices": ["Merkür", "Venüs", "Mars", "Jüpiter"],
+      "why": [
+        "Venüs Güneş'e ikinci sıradaki gezegendir.",
+        "Mars dördüncü sıradadır, Dünya'dan sonra gelir.",
+        "Jüpiter en büyük gezegendir ama beşinci sıradadır."
+      ],
+      "solution": "Güneş'e en yakın gezegen Merkür'dür. Aynı zamanda Güneş sisteminin en küçük gezegenidir.",
+      "hint": "Sistemin en küçük gezegeni.",
+      "quote": "Güneş'e en yakın gezegen Merkür'dür.",
+      "tags": ["genel-kültür", "bilim"]
+    },
+    {
+      "chapter": "Orta Sorular",
+      "page": 5,
+      "difficulty": "orta",
+      "concept": "amerika-1492",
+      "stem": "1492'de Atlas Okyanusu'nu aşarak Amerika kıtasına ulaşan denizci kimdir?",
+      "choices": ["Kristof Kolomb", "Vasco da Gama", "Ferdinand Macellan", "James Cook"],
+      "why": [
+        "Vasco da Gama, Afrika'yı dolaşarak Hindistan'a deniz yoluyla ulaşmıştır.",
+        "Macellan, dünyayı dolaşan ilk seferi başlatan denizcidir.",
+        "James Cook on sekizinci yüzyılda Pasifik'i keşfe çıkmıştır."
+      ],
+      "solution": "Bu denizci Kristof Kolomb'dur. İspanya adına yola çıkmış ve Hindistan'a vardığını sanmıştır.",
+      "hint": "İspanya adına yelken açan Cenovalı.",
+      "quote": "Kristof Kolomb 1492'de Atlas Okyanusu'nu aşarak Amerika kıtasına ulaştı.",
+      "tags": ["genel-kültür", "tarih"]
+    },
+    {
+      "chapter": "Orta Sorular",
+      "page": 6,
+      "difficulty": "orta",
+      "concept": "guernica-ressami",
+      "stem": "Guernica tablosunu hangi ressam yapmıştır?",
+      "choices": ["Pablo Picasso", "Salvador Dalí", "Joan Miró", "Francisco Goya"],
+      "why": [
+        "Salvador Dalí de İspanyoldur ama eriyen saatleriyle tanınan gerçeküstücü ressamdır.",
+        "Joan Miró aynı dönemin İspanyol ressamıdır, Guernica onun değildir.",
+        "Francisco Goya savaşı resmetmiştir ama Guernica'dan yüz yılı aşkın süre önce yaşamıştır."
+      ],
+      "solution": "Guernica, Pablo Picasso'nun eseridir. Tablo, İspanya İç Savaşı'nda bombalanan Guernica kasabasını anlatır.",
+      "hint": "Kübizmin kurucularından.",
+      "quote": "Guernica tablosunu Pablo Picasso yapmıştır.",
+      "tags": ["genel-kültür", "sanat"]
+    },
+    {
+      "chapter": "Orta Sorular",
+      "page": 6,
+      "difficulty": "orta",
+      "concept": "wimbledon-sporu",
+      "stem": "Wimbledon hangi sporun turnuvasıdır?",
+      "choices": ["Tenis", "Golf", "Kriket", "Ragbi"],
+      "why": [
+        "Golf de çimde oynanır ama Wimbledon bir golf turnuvası değildir.",
+        "Kriket İngiltere'de çok sevilir, Wimbledon ile ilgisi yoktur.",
+        "Ragbi de İngiltere kökenlidir ama Wimbledon'da oynanmaz."
+      ],
+      "solution": "Wimbledon bir tenis turnuvasıdır. Londra'da, çim kortlarda oynanır.",
+      "hint": "Raketle ve çim kortta oynanır.",
+      "quote": "Wimbledon, Londra'da çim kortlarda oynanan bir tenis turnuvasıdır.",
+      "tags": ["genel-kültür", "spor"]
+    },
+    {
+      "chapter": "Orta Sorular",
+      "page": 6,
+      "difficulty": "orta",
+      "concept": "unlu-harf-sayisi",
+      "stem": "Türk alfabesinde kaç ünlü harf vardır?",
+      "choices": ["Sekiz", "Beş", "Dokuz", "Yirmi bir"],
+      "why": [
+        "Beş, a e i o u diye sayılan Latin ünlüleriyle karıştırılır.",
+        "Dokuz değildir; şapkalı yazımlar ayrı harf sayılmaz.",
+        "Yirmi bir, alfabedeki ünsüz harflerin sayısıdır."
+      ],
+      "solution": "Türk alfabesinde sekiz ünlü vardır: a, e, ı, i, o, ö, u, ü. Kalan yirmi bir harf ünsüzdür.",
+      "hint": "Dördü kalın, dördü ince.",
+      "quote": "Türk alfabesinde sekiz ünlü harf vardır.",
+      "tags": ["genel-kültür", "dil"]
+    },
+    {
+      "chapter": "Orta Sorular",
+      "page": 6,
+      "difficulty": "orta",
+      "concept": "duzine-kac-adet",
+      "stem": "Bir düzine kaç adettir?",
+      "choices": ["On iki", "On", "Yirmi dört", "Yüz kırk dört"],
+      "why": [
+        "On adet bir deste eder, düzine etmez.",
+        "Yirmi dört adet iki düzinedir.",
+        "Yüz kırk dört adet on iki düzinedir; buna grosa denir."
+      ],
+      "solution": "Bir düzine on iki adettir. Yarım düzine de altı adet eder.",
+      "hint": "Bir yıldaki ay sayısı kadar.",
+      "quote": "Bir düzine on iki adettir.",
+      "tags": ["genel-kültür", "gündelik-hayat"]
+    },
+    {
+      "chapter": "Orta Sorular",
+      "page": 6,
+      "difficulty": "orta",
+      "concept": "elmasin-elementi",
+      "stem": "Elmas hangi elementten oluşur?",
+      "choices": ["Karbon", "Silisyum", "Kalsiyum", "Demir"],
+      "why": [
+        "Silisyum kuvarsın ve camın temel elementidir, elmasın değil.",
+        "Kalsiyum kireç taşında ve kemikte bulunur.",
+        "Demir bir metaldir; elmas metal değildir."
+      ],
+      "solution": "Elmas karbondan oluşur. Kurşun kalemdeki grafit de karbondur; yalnızca atomların dizilişi farklıdır.",
+      "hint": "Grafit ve kömürle aynı element.",
+      "quote": "Elmas, karbon elementinden oluşur.",
+      "tags": ["genel-kültür", "bilim"]
+    },
+    {
+      "chapter": "Zor Sorular",
+      "page": 7,
+      "difficulty": "zor",
+      "concept": "en-derin-gol",
+      "stem": "Dünya'nın en derin gölü hangisidir?",
+      "choices": ["Baykal", "Tanganika", "Viktorya", "Hazar"],
+      "why": [
+        "Tanganika ikinci en derin göldür.",
+        "Viktorya Afrika'nın en büyük gölüdür ama sığdır.",
+        "Hazar yüzölçümü en büyük göldür, en derini değildir."
+      ],
+      "solution": "En derin göl Sibirya'daki Baykal Gölü'dür. Derinliği 1600 metreyi aşar.",
+      "hint": "Sibirya'da bir tatlı su gölü.",
+      "quote": "Dünya'nın en derin gölü Sibirya'daki Baykal Gölü'dür.",
+      "tags": ["genel-kültür", "coğrafya"]
+    },
+    {
+      "chapter": "Zor Sorular",
+      "page": 7,
+      "difficulty": "zor",
+      "concept": "kades-antlasmasi",
+      "stem": "Mısırlılar Kadeş Antlaşması'nı hangi uygarlıkla yapmıştır?",
+      "choices": ["Hititler", "Sümerler", "Frigler", "Asurlular"],
+      "why": [
+        "Sümerler Mezopotamya'da çok daha önce yaşamıştır.",
+        "Frigler Anadolu'da Hititlerden sonra ortaya çıkmıştır.",
+        "Asurlular Mezopotamya'nın gücüdür; bu antlaşmanın tarafı değildir."
+      ],
+      "solution": "Antlaşma Hititler ile Mısırlılar arasında yapılmıştır. Metni günümüze ulaşan en eski barış antlaşmalarından biridir.",
+      "hint": "Başkenti Hattuşa olan Anadolu uygarlığı.",
+      "quote": "Kadeş Antlaşması Hititler ile Mısırlılar arasında yapılmıştır.",
+      "tags": ["genel-kültür", "tarih"]
+    },
+    {
+      "chapter": "Zor Sorular",
+      "page": 7,
+      "difficulty": "zor",
+      "concept": "mutlak-sifir",
+      "stem": "Eksi 273,15 santigrat derece hangi adla bilinir?",
+      "choices": ["Mutlak sıfır", "Donma noktası", "Üçlü nokta", "Kritik sıcaklık"],
+      "why": [
+        "Donma noktası maddeye göre değişir; suyunki sıfır santigrat derecedir.",
+        "Üçlü nokta, bir maddenin üç hâlinin bir arada bulunduğu koşuldur.",
+        "Kritik sıcaklık, bir gazın üstünde sıvılaştırılamadığı sıcaklıktır."
+      ],
+      "solution": "Bu sıcaklık mutlak sıfırdır. Kelvin ölçeğinin başlangıcıdır ve daha düşük bir sıcaklık olamaz.",
+      "hint": "Kelvin ölçeğinin sıfırı.",
+      "quote": "Mutlak sıfır, eksi 273,15 santigrat derecedir.",
+      "tags": ["genel-kültür", "bilim"]
+    },
+    {
+      "chapter": "Zor Sorular",
+      "page": 7,
+      "difficulty": "zor",
+      "concept": "tutunamayanlar-yazari",
+      "stem": "Tutunamayanlar romanının yazarı kimdir?",
+      "choices": ["Oğuz Atay", "Yusuf Atılgan", "Orhan Pamuk", "Ahmet Hamdi Tanpınar"],
+      "why": [
+        "Yusuf Atılgan, Aylak Adam ve Anayurt Oteli'nin yazarıdır.",
+        "Orhan Pamuk daha sonraki kuşağın romancısıdır.",
+        "Ahmet Hamdi Tanpınar, Saatleri Ayarlama Enstitüsü'nün yazarıdır."
+      ],
+      "solution": "Tutunamayanlar'ı Oğuz Atay yazmıştır. Roman, Selim Işık'ın ölümünün ardından arkadaşı Turgut Özben'in arayışını anlatır.",
+      "hint": "Tehlikeli Oyunlar da aynı yazarındır.",
+      "quote": "Tutunamayanlar romanının yazarı Oğuz Atay'dır.",
+      "tags": ["genel-kültür", "edebiyat"]
+    },
+    {
+      "chapter": "Zor Sorular",
+      "page": 7,
+      "difficulty": "zor",
+      "concept": "bolero-bestecisi",
+      "stem": "Bolero adlı orkestra eserinin bestecisi kimdir?",
+      "choices": ["Ravel", "Debussy", "Bizet", "Satie"],
+      "why": [
+        "Debussy aynı dönemin Fransız bestecisidir; Ay Işığı ile tanınır.",
+        "Bizet, İspanya'da geçen Carmen operasının bestecisidir.",
+        "Satie, Gymnopédies adlı piyano parçalarıyla tanınır."
+      ],
+      "solution": "Bolero'yu Maurice Ravel bestelemiştir. Eser, tek bir ezginin giderek güçlenerek yinelenmesi üzerine kuruludur.",
+      "hint": "Fransız besteci; adı Maurice.",
+      "quote": "Bolero adlı orkestra eserinin bestecisi Maurice Ravel'dir.",
+      "tags": ["genel-kültür", "sanat"]
+    },
+    {
+      "chapter": "Zor Sorular",
+      "page": 8,
+      "difficulty": "zor",
+      "concept": "ilk-modern-olimpiyat",
+      "stem": "İlk modern Olimpiyat Oyunları 1896'da hangi şehirde yapılmıştır?",
+      "choices": ["Atina", "Paris", "Londra", "Roma"],
+      "why": [
+        "Paris, 1900'deki ikinci oyunların şehridir.",
+        "Londra oyunları ilk kez 1908'de düzenlemiştir.",
+        "Roma oyunları ilk kez 1960'ta düzenlemiştir."
+      ],
+      "solution": "İlk modern oyunlar Atina'da yapılmıştır. Şehir, antik oyunların doğduğu ülke olan Yunanistan'ın başkenti olduğu için seçilmiştir.",
+      "hint": "Antik oyunların doğduğu ülkenin başkenti.",
+      "quote": "İlk modern Olimpiyat Oyunları 1896'da Atina'da yapılmıştır.",
+      "tags": ["genel-kültür", "spor"]
+    },
+    {
+      "chapter": "Zor Sorular",
+      "page": 8,
+      "difficulty": "zor",
+      "concept": "zamenhof-yapay-dil",
+      "stem": "Ludwik Zamenhof'un tasarladığı yapay dil hangisidir?",
+      "choices": ["Esperanto", "Volapük", "Interlingua", "Klingonca"],
+      "why": [
+        "Volapük daha eski bir yapay dildir; onu Johann Martin Schleyer tasarlamıştır.",
+        "Interlingua yirminci yüzyılda bir dil derneği tarafından geliştirilmiştir.",
+        "Klingonca bir bilimkurgu dizisi için uydurulmuş bir dildir."
+      ],
+      "solution": "Bu dil Esperanto'dur. Zamenhof onu farklı dilleri konuşan insanlar arasında ortak bir ikinci dil olsun diye tasarlamıştır.",
+      "hint": "Adı, umut eden anlamına gelir.",
+      "quote": "Esperanto, Ludwik Zamenhof'un tasarladığı yapay bir dildir.",
+      "tags": ["genel-kültür", "dil"]
+    },
+    {
+      "chapter": "Zor Sorular",
+      "page": 8,
+      "difficulty": "zor",
+      "concept": "titikaka-sinir",
+      "stem": "Titikaka Gölü, Peru ile hangi ülke arasındaki sınırda yer alır?",
+      "choices": ["Bolivya", "Şili", "Ekvador", "Kolombiya"],
+      "why": [
+        "Şili Peru'nun güney komşusudur ama gölün kıyısı yoktur.",
+        "Ekvador Peru'nun kuzey komşusudur, göle uzaktır.",
+        "Kolombiya da kuzeydedir ve gölle sınırı yoktur."
+      ],
+      "solution": "Göl, Peru ile Bolivya arasındadır. And Dağları'nda, yaklaşık 3800 metre yükseklikte yer alır.",
+      "hint": "Denize kıyısı olmayan bir And ülkesi.",
+      "quote": "Titikaka Gölü, Peru ile Bolivya arasındaki sınırda yer alır.",
+      "tags": ["genel-kültür", "coğrafya"]
+    },
+    {
+      "chapter": "Zor Sorular",
+      "page": 8,
+      "difficulty": "zor",
+      "concept": "otuz-yil-savasi-barisi",
+      "stem": "Otuz Yıl Savaşı'nı 1648'de sona erdiren barış hangisidir?",
+      "choices": ["Westfalya Barışı", "Utrecht Antlaşması", "Viyana Kongresi", "Versay Antlaşması"],
+      "why": [
+        "Utrecht Antlaşması on sekizinci yüzyılın başında İspanya Veraset Savaşı'nı bitirmiştir.",
+        "Viyana Kongresi, Napolyon Savaşları'ndan sonra 1815'te toplanmıştır.",
+        "Versay Antlaşması 1919'da Birinci Dünya Savaşı'nın ardından imzalanmıştır."
+      ],
+      "solution": "Savaşı Westfalya Barışı bitirmiştir. Bu barış, egemen devletlere dayanan Avrupa düzeninin başlangıcı sayılır.",
+      "hint": "Adını Almanya'daki bir bölgeden alır.",
+      "quote": "1648'de imzalanan Westfalya Barışı, Otuz Yıl Savaşı'nı sona erdirmiştir.",
+      "tags": ["genel-kültür", "tarih"]
+    },
+    {
+      "chapter": "Zor Sorular",
+      "page": 8,
+      "difficulty": "zor",
+      "concept": "en-kucuk-kemik",
+      "stem": "İnsan vücudundaki en küçük kemik hangisidir?",
+      "choices": ["Üzengi", "Çekiç", "Örs", "Köprücük"],
+      "why": [
+        "Çekiç de orta kulaktadır ama üzengiden büyüktür.",
+        "Örs de orta kulak kemiğidir; üzengiden büyüktür.",
+        "Köprücük kemiği omuzdadır ve çok daha büyüktür."
+      ],
+      "solution": "En küçük kemik üzengidir. Orta kulakta yer alır ve ses titreşimlerini iç kulağa iletir.",
+      "hint": "Orta kulakta, adını bir binicilik gerecinden alır.",
+      "quote": "İnsan vücudundaki en küçük kemik, orta kulaktaki üzengi kemiğidir.",
+      "tags": ["genel-kültür", "bilim"]
+    },
+    {
+      "chapter": "Zor Sorular",
+      "page": 9,
+      "difficulty": "zor",
+      "concept": "odysseus-yurdu",
+      "stem": "Odysseia destanında Odysseus'un yurdu olan ada hangisidir?",
+      "choices": ["İthaka", "Girit", "Rodos", "Sicilya"],
+      "why": [
+        "Girit, Minos ve labirent söylencesinin adasıdır.",
+        "Rodos bir Ege adasıdır ama Odysseus'un yurdu değildir.",
+        "Sicilya, yolculuktaki duraklarla ilişkilendirilir; yurdu değildir."
+      ],
+      "solution": "Odysseus'un yurdu İthaka'dır. Destan, Troya Savaşı'ndan sonra bu adaya dönüş yolculuğunu anlatır.",
+      "hint": "Penelope onu bu adada bekler.",
+      "quote": "Odysseia destanında Odysseus'un yurdu İthaka adasıdır.",
+      "tags": ["genel-kültür", "edebiyat"]
+    },
+    {
+      "chapter": "Zor Sorular",
+      "page": 9,
+      "difficulty": "zor",
+      "concept": "kaplumbaga-terbiyecisi",
+      "stem": "Kaplumbağa Terbiyecisi tablosunu hangi ressam yapmıştır?",
+      "choices": ["Osman Hamdi Bey", "Şeker Ahmed Paşa", "İbrahim Çallı", "Hoca Ali Rıza"],
+      "why": [
+        "Şeker Ahmed Paşa aynı dönemin ressamıdır; natürmortlarıyla tanınır.",
+        "İbrahim Çallı sonraki kuşağın izlenimci ressamıdır.",
+        "Hoca Ali Rıza, İstanbul manzaralarıyla tanınır."
+      ],
+      "solution": "Tabloyu Osman Hamdi Bey yapmıştır. Kendisi aynı zamanda arkeolog ve müzecidir.",
+      "hint": "İstanbul Arkeoloji Müzeleri'nin kurucusu.",
+      "quote": "Kaplumbağa Terbiyecisi tablosunu Osman Hamdi Bey yapmıştır.",
+      "tags": ["genel-kültür", "sanat"]
+    },
+    {
+      "chapter": "Zor Sorular",
+      "page": 9,
+      "difficulty": "zor",
+      "concept": "maraton-mesafesi",
+      "stem": "Maraton koşusunun mesafesi ne kadardır?",
+      "choices": ["42,195 kilometre", "40 kilometre", "21,0975 kilometre", "50 kilometre"],
+      "why": [
+        "40 kilometre yuvarlak bir tahmindir; resmi mesafe biraz daha uzundur.",
+        "21,0975 kilometre yarı maratonun mesafesidir.",
+        "50 kilometre, maratondan uzun olan ultra koşuların mesafesidir."
+      ],
+      "solution": "Maraton 42,195 kilometredir. Bu mesafe 1921'de resmi ölçü olarak kabul edilmiştir.",
+      "hint": "Yarı maratonun tam iki katı.",
+      "quote": "Maraton koşusunun mesafesi 42,195 kilometredir.",
+      "tags": ["genel-kültür", "spor"]
+    },
+    {
+      "chapter": "Zor Sorular",
+      "page": 9,
+      "difficulty": "zor",
+      "concept": "gokturk-alfabesi-aniti",
+      "stem": "Göktürk alfabesiyle yazılmış olan eser hangisidir?",
+      "choices": ["Orhun Yazıtları", "Kutadgu Bilig", "Rosetta Taşı", "Hammurabi Kanunları"],
+      "why": [
+        "Kutadgu Bilig Karahanlı döneminde yazılmış bir kitaptır, yazıt değildir.",
+        "Rosetta Taşı Mısır'da bulunmuştur; hiyeroglif ve Yunanca içerir.",
+        "Hammurabi Kanunları Babil'de çivi yazısıyla yazılmıştır."
+      ],
+      "solution": "Orhun Yazıtları Göktürk alfabesiyle yazılmıştır. Yazıtlar sekizinci yüzyılda bugünkü Moğolistan'da dikilmiştir.",
+      "hint": "Bugünkü Moğolistan'da dikili taşlar.",
+      "quote": "Orhun Yazıtları Göktürk alfabesiyle yazılmıştır.",
+      "tags": ["genel-kültür", "dil"]
+    },
+    {
+      "chapter": "Zor Sorular",
+      "page": 9,
+      "difficulty": "zor",
+      "concept": "piyano-tus-sayisi",
+      "stem": "Standart bir piyanoda kaç tuş bulunur?",
+      "choices": ["88", "61", "76", "108"],
+      "why": [
+        "61 tuş, küçük elektronik klavyelerde yaygın olan sayıdır.",
+        "76 tuş, orta boy elektronik klavyelerde görülür.",
+        "108 tuş standart değildir; yalnızca birkaç özel yapım piyanoda bulunur."
+      ],
+      "solution": "Standart piyanoda 88 tuş vardır. Bunların 52'si beyaz, 36'sı siyahtır.",
+      "hint": "Tuşların 52'si beyaz, 36'sı siyahtır.",
+      "quote": "Standart bir piyanoda 88 tuş bulunur.",
+      "tags": ["genel-kültür", "gündelik-hayat"]
+    }
+  ]
+}

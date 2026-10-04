@@ -1,0 +1,890 @@
+{
+  "blockId": "0002",
+  "questions": [
+    {
+      "id": "genel-kultur-0016",
+      "conceptId": "avusturya-resmi-dil",
+      "stem": {
+        "md": "Avusturya'nın resmi dili hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Almanca"
+        },
+        {
+          "key": "B",
+          "md": "Macarca"
+        },
+        {
+          "key": "C",
+          "md": "İtalyanca"
+        },
+        {
+          "key": "D",
+          "md": "Fransızca"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Macarca komşu Macaristan'ın dilidir; iki ülke eskiden aynı imparatorluktaydı.",
+        "C": "İtalyanca güney komşusu İtalya'nın dilidir.",
+        "D": "Fransızca İsviçre'nin resmi dillerinden biridir, Avusturya'nın değil."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "Avusturya'nın resmi dili Almancadır. Ülke, Almanya'nın güneydoğu komşusudur."
+        },
+        {
+          "type": "hint",
+          "md": "Kuzeybatıdaki büyük komşusuyla aynı dil."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          4,
+          4
+        ],
+        "quote": "Avusturya'nın resmi dili Almancadır.",
+        "chapter": "Orta Sorular"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "dil"
+      ],
+      "vurgu": [],
+      "contentHash": "685f05bb8a9424cb5b8adfa05fd0588eb6322424cb8c4c53858bc36f6c3ca692",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0017",
+      "conceptId": "istanbul-fethi-padisah",
+      "stem": {
+        "md": "İstanbul'u 1453'te fetheden Osmanlı padişahı kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "II. Mehmed"
+        },
+        {
+          "key": "B",
+          "md": "II. Murad"
+        },
+        {
+          "key": "C",
+          "md": "I. Selim"
+        },
+        {
+          "key": "D",
+          "md": "II. Bayezid"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "II. Murad fatihin babasıdır; şehri kuşatmış ama alamamıştır.",
+        "C": "I. Selim, 1517'de Mısır'ı alan padişahtır.",
+        "D": "II. Bayezid fatihin oğludur ve fetihten sonra tahta çıkmıştır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "İstanbul'u II. Mehmed fethetmiştir. Bu fetihten sonra Fatih unvanıyla anılmıştır."
+        },
+        {
+          "type": "hint",
+          "md": "Fatih unvanıyla bilinir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          4,
+          4
+        ],
+        "quote": "İstanbul, 1453'te II. Mehmed tarafından fethedilmiştir.",
+        "chapter": "Orta Sorular"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "tarih"
+      ],
+      "vurgu": [],
+      "contentHash": "4847e2f4ab9754b850f6a9594e47749c888832d9e6145a2047a5ee92537358de",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0018",
+      "conceptId": "au-simgesi",
+      "stem": {
+        "md": "Kimyada Au simgesi hangi elementi gösterir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Altın"
+        },
+        {
+          "key": "B",
+          "md": "Gümüş"
+        },
+        {
+          "key": "C",
+          "md": "Alüminyum"
+        },
+        {
+          "key": "D",
+          "md": "Argon"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Gümüşün simgesi Ag'dir; ikisi de değerli metal olduğu için karışır.",
+        "C": "Alüminyumun simgesi Al'dir.",
+        "D": "Argonun simgesi Ar'dir ve bir soy gazdır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "Au, altının simgesidir. Simge, altının Latince adı olan aurum sözcüğünden gelir."
+        },
+        {
+          "type": "hint",
+          "md": "Latince adı aurum."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          4,
+          4
+        ],
+        "quote": "Altının kimyasal simgesi Au'dur.",
+        "chapter": "Orta Sorular"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "bilim"
+      ],
+      "vurgu": [],
+      "contentHash": "58aa5ec13089231df0c329c0dc8e455b9e09de7bb97db5528f4cddb871d288d9",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0019",
+      "conceptId": "dostoyevski-romani",
+      "stem": {
+        "md": "Hangi romanın yazarı Fyodor Dostoyevski'dir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Savaş ve Barış"
+        },
+        {
+          "key": "B",
+          "md": "Anna Karenina"
+        },
+        {
+          "key": "C",
+          "md": "Suç ve Ceza"
+        },
+        {
+          "key": "D",
+          "md": "Ölü Canlar"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Savaş ve Barış, Lev Tolstoy'un romanıdır.",
+        "B": "Anna Karenina da Lev Tolstoy'un eseridir.",
+        "D": "Ölü Canlar, Nikolay Gogol'ün romanıdır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "Suç ve Ceza, Dostoyevski'nin romanıdır. Kitap, Raskolnikov adlı gencin işlediği cinayeti ve vicdan azabını anlatır."
+        },
+        {
+          "type": "hint",
+          "md": "Kahramanı Raskolnikov."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          4,
+          4
+        ],
+        "quote": "Suç ve Ceza romanının yazarı Fyodor Dostoyevski'dir.",
+        "chapter": "Orta Sorular"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "edebiyat"
+      ],
+      "vurgu": [],
+      "contentHash": "cf252e1a3bb000d6203dfb0e2d1428cdc48b6c4656280a0cbb9d01c8d7e038db",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0020",
+      "conceptId": "basketbol-oyuncu-sayisi",
+      "stem": {
+        "md": "Basketbolda bir takım sahada kaç oyuncuyla oynar?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Beş"
+        },
+        {
+          "key": "B",
+          "md": "Altı"
+        },
+        {
+          "key": "C",
+          "md": "Yedi"
+        },
+        {
+          "key": "D",
+          "md": "On bir"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Altı, voleybolda sahadaki oyuncu sayısıdır.",
+        "C": "Yedi, hentbolda sahadaki oyuncu sayısıdır.",
+        "D": "On bir, futboldaki oyuncu sayısıdır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "Basketbolda sahada beş oyuncu bulunur. Yedek oyuncular maç içinde sınırsız değişebilir."
+        },
+        {
+          "type": "hint",
+          "md": "Salon sporları içinde sahadaki en az sayılardan biri."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          4,
+          4
+        ],
+        "quote": "Basketbolda her takım sahada beş oyuncuyla oynar.",
+        "chapter": "Orta Sorular"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "spor"
+      ],
+      "vurgu": [],
+      "contentHash": "d5a9071aa028f184cc197f5b09c2b575cadd6340f6a723024a6caa5aa4ec8016",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0021",
+      "conceptId": "avustralya-baskent",
+      "stem": {
+        "md": "Avustralya'nın başkenti hangi şehirdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Sidney"
+        },
+        {
+          "key": "B",
+          "md": "Canberra"
+        },
+        {
+          "key": "C",
+          "md": "Melbourne"
+        },
+        {
+          "key": "D",
+          "md": "Perth"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Sidney en tanınan şehirdir ama başkent değildir.",
+        "C": "Melbourne, Canberra kurulana kadar hükümetin geçici merkeziydi.",
+        "D": "Perth batı kıyısındaki büyük şehirdir, başkent olmamıştır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "Avustralya'nın başkenti Canberra'dır. Şehir, başkent olması için özel olarak planlanıp kurulmuştur."
+        },
+        {
+          "type": "hint",
+          "md": "Ülkenin en büyük iki şehrinden biri değil."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          5,
+          5
+        ],
+        "quote": "Avustralya'nın başkenti Canberra'dır.",
+        "chapter": "Orta Sorular"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "coğrafya"
+      ],
+      "vurgu": [],
+      "contentHash": "ecea40d3ec91ad9cba869c71035c7b9d52d6d99151f8a3dd8021283c4bea83f1",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0022",
+      "conceptId": "turkiye-en-uzun-nehir",
+      "stem": {
+        "md": "Türkiye'de doğup yine Türkiye'de denize dökülen en uzun nehir hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Kızılırmak"
+        },
+        {
+          "key": "B",
+          "md": "Yeşilırmak"
+        },
+        {
+          "key": "C",
+          "md": "Sakarya"
+        },
+        {
+          "key": "D",
+          "md": "Büyük Menderes"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Yeşilırmak da Karadeniz'e dökülür ama çok daha kısadır.",
+        "C": "Sakarya uzun bir nehirdir ama Kızılırmak'tan kısadır.",
+        "D": "Büyük Menderes Ege'ye dökülür ve daha kısadır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "Bu nehir Kızılırmak'tır. Sivas'ta doğar, geniş bir yay çizer ve Bafra'da Karadeniz'e dökülür."
+        },
+        {
+          "type": "hint",
+          "md": "Sivas'ta doğar, Bafra'da denize ulaşır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          5,
+          5
+        ],
+        "quote": "Türkiye'de doğup yine Türkiye'de denize dökülen en uzun nehir Kızılırmak'tır.",
+        "chapter": "Orta Sorular"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "coğrafya"
+      ],
+      "vurgu": [],
+      "contentHash": "045be2df0e2cbaeed6a8c5a939d8d130308b1fbb680173c87038cc44578afdf1",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0023",
+      "conceptId": "calikusu-yazari",
+      "stem": {
+        "md": "Çalıkuşu romanının yazarı kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Reşat Nuri Güntekin"
+        },
+        {
+          "key": "B",
+          "md": "Halide Edib Adıvar"
+        },
+        {
+          "key": "C",
+          "md": "Yakup Kadri Karaosmanoğlu"
+        },
+        {
+          "key": "D",
+          "md": "Halit Ziya Uşaklıgil"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Halide Edib Adıvar, Sinekli Bakkal ve Ateşten Gömlek ile tanınır.",
+        "C": "Yakup Kadri Karaosmanoğlu, Yaban romanının yazarıdır.",
+        "D": "Halit Ziya Uşaklıgil, Aşk-ı Memnu romanının yazarıdır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "Çalıkuşu'nu Reşat Nuri Güntekin yazmıştır. Roman, Anadolu'da öğretmenlik yapan Feride'nin öyküsünü anlatır."
+        },
+        {
+          "type": "hint",
+          "md": "Yaprak Dökümü de aynı yazarındır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          5,
+          5
+        ],
+        "quote": "Çalıkuşu romanının yazarı Reşat Nuri Güntekin'dir.",
+        "chapter": "Orta Sorular"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "edebiyat"
+      ],
+      "vurgu": [],
+      "contentHash": "1fbaafb61fec7181002b2fb182e34a14b888fe161dbbc4ec334c2f3a66c61a28",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0024",
+      "conceptId": "gunese-en-yakin-gezegen",
+      "stem": {
+        "md": "Güneş'e en yakın gezegen hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Venüs"
+        },
+        {
+          "key": "B",
+          "md": "Mars"
+        },
+        {
+          "key": "C",
+          "md": "Jüpiter"
+        },
+        {
+          "key": "D",
+          "md": "Merkür"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Venüs Güneş'e ikinci sıradaki gezegendir.",
+        "B": "Mars dördüncü sıradadır, Dünya'dan sonra gelir.",
+        "C": "Jüpiter en büyük gezegendir ama beşinci sıradadır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "Güneş'e en yakın gezegen Merkür'dür. Aynı zamanda Güneş sisteminin en küçük gezegenidir."
+        },
+        {
+          "type": "hint",
+          "md": "Sistemin en küçük gezegeni."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          5,
+          5
+        ],
+        "quote": "Güneş'e en yakın gezegen Merkür'dür.",
+        "chapter": "Orta Sorular"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "bilim"
+      ],
+      "vurgu": [],
+      "contentHash": "1ebf6231c84a48434cca822deff039faae1984a7952fdde90c471343636f81b1",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0025",
+      "conceptId": "amerika-1492",
+      "stem": {
+        "md": "1492'de Atlas Okyanusu'nu aşarak Amerika kıtasına ulaşan denizci kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Vasco da Gama"
+        },
+        {
+          "key": "B",
+          "md": "Kristof Kolomb"
+        },
+        {
+          "key": "C",
+          "md": "Ferdinand Macellan"
+        },
+        {
+          "key": "D",
+          "md": "James Cook"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Vasco da Gama, Afrika'yı dolaşarak Hindistan'a deniz yoluyla ulaşmıştır.",
+        "C": "Macellan, dünyayı dolaşan ilk seferi başlatan denizcidir.",
+        "D": "James Cook on sekizinci yüzyılda Pasifik'i keşfe çıkmıştır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "Bu denizci Kristof Kolomb'dur. İspanya adına yola çıkmış ve Hindistan'a vardığını sanmıştır."
+        },
+        {
+          "type": "hint",
+          "md": "İspanya adına yelken açan Cenovalı."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          5,
+          5
+        ],
+        "quote": "Kristof Kolomb 1492'de Atlas Okyanusu'nu aşarak Amerika kıtasına ulaştı.",
+        "chapter": "Orta Sorular"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "tarih"
+      ],
+      "vurgu": [],
+      "contentHash": "ed47217d33d93ab13ac21a38622778614a3e323938c8eb8c482ff0855bca4acc",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0026",
+      "conceptId": "guernica-ressami",
+      "stem": {
+        "md": "Guernica tablosunu hangi ressam yapmıştır?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Pablo Picasso"
+        },
+        {
+          "key": "B",
+          "md": "Salvador Dalí"
+        },
+        {
+          "key": "C",
+          "md": "Joan Miró"
+        },
+        {
+          "key": "D",
+          "md": "Francisco Goya"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Salvador Dalí de İspanyoldur ama eriyen saatleriyle tanınan gerçeküstücü ressamdır.",
+        "C": "Joan Miró aynı dönemin İspanyol ressamıdır, Guernica onun değildir.",
+        "D": "Francisco Goya savaşı resmetmiştir ama Guernica'dan yüz yılı aşkın süre önce yaşamıştır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "Guernica, Pablo Picasso'nun eseridir. Tablo, İspanya İç Savaşı'nda bombalanan Guernica kasabasını anlatır."
+        },
+        {
+          "type": "hint",
+          "md": "Kübizmin kurucularından."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          6,
+          6
+        ],
+        "quote": "Guernica tablosunu Pablo Picasso yapmıştır.",
+        "chapter": "Orta Sorular"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "sanat"
+      ],
+      "vurgu": [],
+      "contentHash": "c874d542818d8e7ac2d31ae86b97b9c384fb43486756c74c3056e1db12645ce1",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0027",
+      "conceptId": "wimbledon-sporu",
+      "stem": {
+        "md": "Wimbledon hangi sporun turnuvasıdır?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Tenis"
+        },
+        {
+          "key": "B",
+          "md": "Golf"
+        },
+        {
+          "key": "C",
+          "md": "Kriket"
+        },
+        {
+          "key": "D",
+          "md": "Ragbi"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Golf de çimde oynanır ama Wimbledon bir golf turnuvası değildir.",
+        "C": "Kriket İngiltere'de çok sevilir, Wimbledon ile ilgisi yoktur.",
+        "D": "Ragbi de İngiltere kökenlidir ama Wimbledon'da oynanmaz."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "Wimbledon bir tenis turnuvasıdır. Londra'da, çim kortlarda oynanır."
+        },
+        {
+          "type": "hint",
+          "md": "Raketle ve çim kortta oynanır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          6,
+          6
+        ],
+        "quote": "Wimbledon, Londra'da çim kortlarda oynanan bir tenis turnuvasıdır.",
+        "chapter": "Orta Sorular"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "spor"
+      ],
+      "vurgu": [],
+      "contentHash": "903e2fe63b4a8c83f55a167ffca23f95e910c8442b5749d116c53db94ec25157",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0028",
+      "conceptId": "unlu-harf-sayisi",
+      "stem": {
+        "md": "Türk alfabesinde kaç ünlü harf vardır?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Beş"
+        },
+        {
+          "key": "B",
+          "md": "Dokuz"
+        },
+        {
+          "key": "C",
+          "md": "Sekiz"
+        },
+        {
+          "key": "D",
+          "md": "Yirmi bir"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Beş, a e i o u diye sayılan Latin ünlüleriyle karıştırılır.",
+        "B": "Dokuz değildir; şapkalı yazımlar ayrı harf sayılmaz.",
+        "D": "Yirmi bir, alfabedeki ünsüz harflerin sayısıdır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "Türk alfabesinde sekiz ünlü vardır: a, e, ı, i, o, ö, u, ü. Kalan yirmi bir harf ünsüzdür."
+        },
+        {
+          "type": "hint",
+          "md": "Dördü kalın, dördü ince."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          6,
+          6
+        ],
+        "quote": "Türk alfabesinde sekiz ünlü harf vardır.",
+        "chapter": "Orta Sorular"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "dil"
+      ],
+      "vurgu": [],
+      "contentHash": "fd22ec4a67195c62f7ba88cb5dacfdbf7d65a750020206a19a601d00c45b3cca",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0029",
+      "conceptId": "duzine-kac-adet",
+      "stem": {
+        "md": "Bir düzine kaç adettir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "On iki"
+        },
+        {
+          "key": "B",
+          "md": "On"
+        },
+        {
+          "key": "C",
+          "md": "Yirmi dört"
+        },
+        {
+          "key": "D",
+          "md": "Yüz kırk dört"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "On adet bir deste eder, düzine etmez.",
+        "C": "Yirmi dört adet iki düzinedir.",
+        "D": "Yüz kırk dört adet on iki düzinedir; buna grosa denir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "Bir düzine on iki adettir. Yarım düzine de altı adet eder."
+        },
+        {
+          "type": "hint",
+          "md": "Bir yıldaki ay sayısı kadar."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          6,
+          6
+        ],
+        "quote": "Bir düzine on iki adettir.",
+        "chapter": "Orta Sorular"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "gündelik-hayat"
+      ],
+      "vurgu": [],
+      "contentHash": "a22822eadb305ec3210ccf3935818f9ad4f5afaf361fab706fcf0391b8e01859",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0030",
+      "conceptId": "elmasin-elementi",
+      "stem": {
+        "md": "Elmas hangi elementten oluşur?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Silisyum"
+        },
+        {
+          "key": "B",
+          "md": "Karbon"
+        },
+        {
+          "key": "C",
+          "md": "Kalsiyum"
+        },
+        {
+          "key": "D",
+          "md": "Demir"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Silisyum kuvarsın ve camın temel elementidir, elmasın değil.",
+        "C": "Kalsiyum kireç taşında ve kemikte bulunur.",
+        "D": "Demir bir metaldir; elmas metal değildir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "Elmas karbondan oluşur. Kurşun kalemdeki grafit de karbondur; yalnızca atomların dizilişi farklıdır."
+        },
+        {
+          "type": "hint",
+          "md": "Grafit ve kömürle aynı element."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          6,
+          6
+        ],
+        "quote": "Elmas, karbon elementinden oluşur.",
+        "chapter": "Orta Sorular"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "bilim"
+      ],
+      "vurgu": [],
+      "contentHash": "548cb084af43e20ede0b8b70214f5d578c36b884ad66fa2d534cb5fae3f81328",
+      "deleted": false
+    }
+  ]
+}

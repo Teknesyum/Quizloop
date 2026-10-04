@@ -1,0 +1,890 @@
+{
+  "blockId": "0001",
+  "questions": [
+    {
+      "id": "genel-kultur-0001",
+      "conceptId": "turkiye-baskent",
+      "stem": {
+        "md": "Türkiye'nin başkenti hangi şehirdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "İstanbul"
+        },
+        {
+          "key": "B",
+          "md": "İzmir"
+        },
+        {
+          "key": "C",
+          "md": "Bursa"
+        },
+        {
+          "key": "D",
+          "md": "Ankara"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "İstanbul en bilinen şehirdir ama başkent değildir; Osmanlı döneminde başkentti.",
+        "B": "İzmir bir Ege liman şehridir, başkent olmamıştır.",
+        "C": "Bursa Osmanlı'nın ilk başkentlerindendir, Cumhuriyet'in başkenti değildir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "Türkiye'nin başkenti Ankara'dır. Ankara, 13 Ekim 1923'te başkent ilan edilmiştir."
+        },
+        {
+          "type": "hint",
+          "md": "İç Anadolu'da bir şehir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          1,
+          1
+        ],
+        "quote": "Türkiye'nin başkenti Ankara'dır.",
+        "chapter": "Kolay Sorular"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "coğrafya"
+      ],
+      "vurgu": [],
+      "contentHash": "79acfb8a91c65e0b650c0ffc9b90b92e1d91b4d9c5bbaedea560db984edb245d",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0002",
+      "conceptId": "dunya-dogal-uydu",
+      "stem": {
+        "md": "Dünya'nın tek doğal uydusu hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Ay"
+        },
+        {
+          "key": "B",
+          "md": "Mars"
+        },
+        {
+          "key": "C",
+          "md": "Venüs"
+        },
+        {
+          "key": "D",
+          "md": "Güneş"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Mars bir uydu değil, Güneş'in çevresinde dönen bir gezegendir.",
+        "C": "Venüs de bir gezegendir; gökyüzünde parlak göründüğü için karıştırılır.",
+        "D": "Güneş bir yıldızdır; Dünya onun çevresinde döner."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "Dünya'nın tek doğal uydusu Ay'dır. Ay, Dünya'nın çevresinde yaklaşık bir ayda bir tur atar."
+        },
+        {
+          "type": "hint",
+          "md": "Geceleri gökyüzünde evreleriyle görülür."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          1,
+          1
+        ],
+        "quote": "Dünya'nın tek doğal uydusu Ay'dır.",
+        "chapter": "Kolay Sorular"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "bilim"
+      ],
+      "vurgu": [],
+      "contentHash": "931aa8c6ba5d51f9d1ad0a6dc6714b9248dbb08000a45dfd6523fa818efc1511",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0003",
+      "conceptId": "on-bir-oyunculu-spor",
+      "stem": {
+        "md": "Hangi sporda her takım sahaya on bir oyuncuyla çıkar?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Basketbol"
+        },
+        {
+          "key": "B",
+          "md": "Voleybol"
+        },
+        {
+          "key": "C",
+          "md": "Hentbol"
+        },
+        {
+          "key": "D",
+          "md": "Futbol"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Basketbolda sahada beş oyuncu bulunur.",
+        "B": "Voleybolda sahada altı oyuncu bulunur.",
+        "C": "Hentbolda sahada yedi oyuncu bulunur."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "Futbolda her takım sahaya on bir oyuncuyla çıkar. Bunlardan biri kalecidir."
+        },
+        {
+          "type": "hint",
+          "md": "Kalecisi olan ve ayakla oynanan bir oyun."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          1,
+          1
+        ],
+        "quote": "Futbolda her takım sahaya on bir oyuncuyla çıkar.",
+        "chapter": "Kolay Sorular"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "spor"
+      ],
+      "vurgu": [],
+      "contentHash": "58cda24672c9cfa8e1116b5c2cd13ba44859ceaf7b11ce5501f153562f78c246",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0004",
+      "conceptId": "istiklal-marsi-sairi",
+      "stem": {
+        "md": "İstiklal Marşı'nın şairi kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Namık Kemal"
+        },
+        {
+          "key": "B",
+          "md": "Yahya Kemal Beyatlı"
+        },
+        {
+          "key": "C",
+          "md": "Ziya Gökalp"
+        },
+        {
+          "key": "D",
+          "md": "Mehmet Akif Ersoy"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Namık Kemal vatan şiirleriyle tanınır ama marş yazılmadan çok önce ölmüştür.",
+        "B": "Yahya Kemal Beyatlı aynı dönemin şairidir, marşı o yazmamıştır.",
+        "C": "Ziya Gökalp daha çok düşünce yazılarıyla bilinir, marşın şairi değildir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "İstiklal Marşı'nı Mehmet Akif Ersoy yazmıştır. Marş 12 Mart 1921'de Meclis'te kabul edilmiştir."
+        },
+        {
+          "type": "hint",
+          "md": "Safahat adlı kitabın da şairi."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          1,
+          1
+        ],
+        "quote": "İstiklal Marşı'nın şairi Mehmet Akif Ersoy'dur.",
+        "chapter": "Kolay Sorular"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "edebiyat"
+      ],
+      "vurgu": [],
+      "contentHash": "cc11110d39ed343cb997b1921b4de79b1964dafe4476237015d2dc267f3e1614",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0005",
+      "conceptId": "suyun-kaynama-noktasi",
+      "stem": {
+        "md": "Su, deniz seviyesinde 100 santigrat dereceye ısıtıldığında ne olur?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Kaynar"
+        },
+        {
+          "key": "B",
+          "md": "Donar"
+        },
+        {
+          "key": "C",
+          "md": "Yoğunlaşır"
+        },
+        {
+          "key": "D",
+          "md": "Katılaşır"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Donma, suyun sıfır santigrat derecede buza dönmesidir.",
+        "C": "Yoğunlaşma, buharın soğuyarak yeniden sıvıya dönmesidir.",
+        "D": "Katılaşma soğurken olur; ısıtılan su katılaşmaz."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "Su, deniz seviyesinde 100 santigrat derecede kaynar. Yükseklere çıkıldıkça hava basıncı düştüğü için bu sıcaklık azalır."
+        },
+        {
+          "type": "hint",
+          "md": "Çaydanlıkta her gün gördüğümüz olay."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          1,
+          1
+        ],
+        "quote": "Su, deniz seviyesinde 100 santigrat derecede kaynar.",
+        "chapter": "Kolay Sorular"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "bilim"
+      ],
+      "vurgu": [],
+      "contentHash": "1bdd42f2f6e1c20a4b577898bddf7813fc0a056e2da0d6be21e5d91cdcb351e4",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0006",
+      "conceptId": "saat-kac-dakika",
+      "stem": {
+        "md": "Bir saat kaç dakikadır?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Otuz"
+        },
+        {
+          "key": "B",
+          "md": "Yüz"
+        },
+        {
+          "key": "C",
+          "md": "Yirmi dört"
+        },
+        {
+          "key": "D",
+          "md": "Altmış"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Otuz dakika yarım saattir.",
+        "B": "Yüz, onluk sayma alışkanlığından gelir; saat altmışlık düzenle bölünür.",
+        "C": "Yirmi dört, bir gündeki saat sayısıdır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "Bir saat altmış dakikadır. Bir dakika da altmış saniyedir."
+        },
+        {
+          "type": "hint",
+          "md": "Bir dakikadaki saniye sayısıyla aynıdır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          2,
+          2
+        ],
+        "quote": "Bir saat altmış dakikadır.",
+        "chapter": "Kolay Sorular"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "gündelik-hayat"
+      ],
+      "vurgu": [],
+      "contentHash": "a691a54bc47c6b357e16ed30b06f462e2f8a26f5ef44409a28f5ce5ec586d9bd",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0007",
+      "conceptId": "fransa-baskent",
+      "stem": {
+        "md": "Fransa'nın başkenti hangi şehirdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Londra"
+        },
+        {
+          "key": "B",
+          "md": "Roma"
+        },
+        {
+          "key": "C",
+          "md": "Madrid"
+        },
+        {
+          "key": "D",
+          "md": "Paris"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Londra, Birleşik Krallık'ın başkentidir.",
+        "B": "Roma, İtalya'nın başkentidir.",
+        "C": "Madrid, İspanya'nın başkentidir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "Fransa'nın başkenti Paris'tir. Şehir Seine Nehri'nin kıyısında kuruludur."
+        },
+        {
+          "type": "hint",
+          "md": "Eyfel Kulesi bu şehirdedir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          2,
+          2
+        ],
+        "quote": "Fransa'nın başkenti Paris'tir.",
+        "chapter": "Kolay Sorular"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "coğrafya"
+      ],
+      "vurgu": [],
+      "contentHash": "e88d11880dcc41771a35ce1b0f828d0ce5d0e6856c7e4d941c4a028bc4e7fef8",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0008",
+      "conceptId": "bal-ureten-bocek",
+      "stem": {
+        "md": "Çiçek özünden bal üreten böcek hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Karınca"
+        },
+        {
+          "key": "B",
+          "md": "Kelebek"
+        },
+        {
+          "key": "C",
+          "md": "Arı"
+        },
+        {
+          "key": "D",
+          "md": "Sinek"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Karınca da topluluk hâlinde yaşar ama bal üretmez.",
+        "B": "Kelebek çiçek özüyle beslenir, onu bala çevirmez.",
+        "D": "Sinek çiçeklere konabilir ama bal yapmaz."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "Bal arıları çiçek özünü kovana taşır ve bala dönüştürür. Bal, peteklerde saklanır."
+        },
+        {
+          "type": "hint",
+          "md": "Kovanda yaşar."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          2,
+          2
+        ],
+        "quote": "Bal arıları çiçek özünden bal üretir.",
+        "chapter": "Kolay Sorular"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "bilim"
+      ],
+      "vurgu": [],
+      "contentHash": "a9f00ffa83d86b52bdf9f7ceeb132542d89d6641cf1648a3293389931b0c12b3",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0009",
+      "conceptId": "mona-lisa-ressami",
+      "stem": {
+        "md": "Mona Lisa tablosunu hangi sanatçı yapmıştır?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Pablo Picasso"
+        },
+        {
+          "key": "B",
+          "md": "Vincent van Gogh"
+        },
+        {
+          "key": "C",
+          "md": "Michelangelo Buonarroti"
+        },
+        {
+          "key": "D",
+          "md": "Leonardo da Vinci"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Pablo Picasso yirminci yüzyıl ressamıdır; Mona Lisa ondan yüzyıllar önce yapılmıştır.",
+        "B": "Vincent van Gogh on dokuzuncu yüzyılda yaşamıştır ve Yıldızlı Gece ile tanınır.",
+        "C": "Michelangelo aynı çağın sanatçısıdır ama Davut heykeli ve Sistina tavanıyla bilinir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "Mona Lisa'yı Leonardo da Vinci yapmıştır. Tablo Paris'teki Louvre Müzesi'nde sergilenir."
+        },
+        {
+          "type": "hint",
+          "md": "Rönesans döneminin İtalyan ustası."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          2,
+          2
+        ],
+        "quote": "Mona Lisa tablosunu Leonardo da Vinci yapmıştır.",
+        "chapter": "Kolay Sorular"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "sanat"
+      ],
+      "vurgu": [],
+      "contentHash": "7ab9214ab624f07fe6babbdac0aed499fe41eec5e6f6636c74a720bb791bf574",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0010",
+      "conceptId": "cumhuriyetin-ilani",
+      "stem": {
+        "md": "Türkiye Cumhuriyeti hangi tarihte ilan edilmiştir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "23 Nisan 1920"
+        },
+        {
+          "key": "B",
+          "md": "19 Mayıs 1919"
+        },
+        {
+          "key": "C",
+          "md": "30 Ağustos 1922"
+        },
+        {
+          "key": "D",
+          "md": "29 Ekim 1923"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "23 Nisan 1920, Türkiye Büyük Millet Meclisi'nin açıldığı gündür.",
+        "B": "19 Mayıs 1919, Mustafa Kemal'in Samsun'a çıktığı gündür.",
+        "C": "30 Ağustos 1922, Büyük Taarruz'un zaferle sonuçlandığı gündür."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "Cumhuriyet 29 Ekim 1923'te ilan edilmiştir. Bu gün her yıl Cumhuriyet Bayramı olarak kutlanır."
+        },
+        {
+          "type": "hint",
+          "md": "Cumhuriyet Bayramı'nın günü."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          2,
+          2
+        ],
+        "quote": "Türkiye Cumhuriyeti 29 Ekim 1923'te ilan edilmiştir.",
+        "chapter": "Kolay Sorular"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "tarih"
+      ],
+      "vurgu": [],
+      "contentHash": "c9ae6e85e25819ddd9fb7c7ab8d3947cc17f729f04912c0175e34ade7589245e",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0011",
+      "conceptId": "turkiye-en-buyuk-gol",
+      "stem": {
+        "md": "Türkiye'nin en büyük gölü hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Tuz Gölü"
+        },
+        {
+          "key": "B",
+          "md": "Beyşehir Gölü"
+        },
+        {
+          "key": "C",
+          "md": "Van Gölü"
+        },
+        {
+          "key": "D",
+          "md": "Eğirdir Gölü"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Tuz Gölü ikinci büyük göldür ve çok sığdır.",
+        "B": "Beyşehir Gölü en büyük tatlı su gölüdür ama Van Gölü'nden küçüktür.",
+        "D": "Eğirdir Gölü Göller Yöresi'ndedir ve çok daha küçüktür."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "Türkiye'nin en büyük gölü Van Gölü'dür. Suyu sodalıdır ve Doğu Anadolu'da yer alır."
+        },
+        {
+          "type": "hint",
+          "md": "Doğu Anadolu'da, suyu sodalı bir göl."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          3,
+          3
+        ],
+        "quote": "Türkiye'nin en büyük gölü Van Gölü'dür.",
+        "chapter": "Kolay Sorular"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "coğrafya"
+      ],
+      "vurgu": [],
+      "contentHash": "190dd1bccf568e60fc22270325104f3bf78080947ed2068e18e365c8d2e6a668",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0012",
+      "conceptId": "en-buyuk-okyanus",
+      "stem": {
+        "md": "Dünya'nın en büyük okyanusu hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Atlantik"
+        },
+        {
+          "key": "B",
+          "md": "Pasifik"
+        },
+        {
+          "key": "C",
+          "md": "Hint"
+        },
+        {
+          "key": "D",
+          "md": "Arktik"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Atlantik ikinci büyük okyanustur.",
+        "C": "Hint Okyanusu üçüncü sıradadır.",
+        "D": "Arktik, okyanusların en küçüğüdür."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "En büyük okyanus Pasifik'tir. Türkçede Büyük Okyanus adıyla da anılır."
+        },
+        {
+          "type": "hint",
+          "md": "Asya ile Amerika arasında uzanır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          3,
+          3
+        ],
+        "quote": "Dünya'nın en büyük okyanusu Pasifik Okyanusu'dur.",
+        "chapter": "Kolay Sorular"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "coğrafya"
+      ],
+      "vurgu": [],
+      "contentHash": "3c546f07a27e1282bfe45a94927f61a388c4b3bf2aec6a60c34145282088feb6",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0013",
+      "conceptId": "kan-pompalayan-organ",
+      "stem": {
+        "md": "Kanı bütün vücuda pompalayan organ hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Akciğer"
+        },
+        {
+          "key": "B",
+          "md": "Karaciğer"
+        },
+        {
+          "key": "C",
+          "md": "Böbrek"
+        },
+        {
+          "key": "D",
+          "md": "Kalp"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Akciğer kana oksijen kazandırır ama kanı pompalamaz.",
+        "B": "Karaciğer kandaki maddeleri işler, pompalama yapmaz.",
+        "C": "Böbrek kanı süzer ve idrarı oluşturur."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "Kanı vücuda pompalayan organ kalptir. Kalp, kasılıp gevşeyerek kanı damarlara iter."
+        },
+        {
+          "type": "hint",
+          "md": "Göğsümüzde atışını hissederiz."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          3,
+          3
+        ],
+        "quote": "Kalp, kanı bütün vücuda pompalayan organdır.",
+        "chapter": "Kolay Sorular"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "bilim"
+      ],
+      "vurgu": [],
+      "contentHash": "7230451235d1edbc239bf6430a6ad67921368ce2b5a7fdbf2767afaf55606041",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0014",
+      "conceptId": "olimpiyat-halkalari",
+      "stem": {
+        "md": "Olimpiyat bayrağında kaç halka bulunur?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Üç"
+        },
+        {
+          "key": "B",
+          "md": "Dört"
+        },
+        {
+          "key": "C",
+          "md": "Yedi"
+        },
+        {
+          "key": "D",
+          "md": "Beş"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Üç, madalya kürsüsündeki basamak sayısıyla karıştırılır.",
+        "B": "Dört, oyunların dört yılda bir yapılmasıyla karıştırılır.",
+        "C": "Yedi, kıtaların yedi diye sayıldığı sınıflamayla karıştırılır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "Olimpiyat bayrağında iç içe geçmiş beş halka vardır. Halkalar mavi, sarı, siyah, yeşil ve kırmızıdır."
+        },
+        {
+          "type": "hint",
+          "md": "Bir elin parmakları kadar."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          3,
+          3
+        ],
+        "quote": "Olimpiyat bayrağında iç içe geçmiş beş halka bulunur.",
+        "chapter": "Kolay Sorular"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "spor"
+      ],
+      "vurgu": [],
+      "contentHash": "ce464ddbba80d10cc1c7827acea73fbfa32d68493465e40242ae2fbac9daa485",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0015",
+      "conceptId": "trafik-isigi-dur",
+      "stem": {
+        "md": "Trafik ışığında hangi renk dur anlamına gelir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Yeşil"
+        },
+        {
+          "key": "B",
+          "md": "Sarı"
+        },
+        {
+          "key": "C",
+          "md": "Lacivert"
+        },
+        {
+          "key": "D",
+          "md": "Kırmızı"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Yeşil ışık geç anlamına gelir.",
+        "B": "Sarı ışık, ışığın değişmek üzere olduğunu bildirir.",
+        "C": "Trafik ışıklarında lacivert renk bulunmaz."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "Kırmızı ışık dur anlamına gelir. Trafik ışığında kırmızı en üstte yer alır."
+        },
+        {
+          "type": "hint",
+          "md": "Işığın en üstteki rengi."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          3,
+          3
+        ],
+        "quote": "Trafik ışığında kırmızı ışık dur anlamına gelir.",
+        "chapter": "Kolay Sorular"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "gündelik-hayat"
+      ],
+      "vurgu": [],
+      "contentHash": "591e79388f3e753cc1509e0220d1f706484b54c545f37b6260e62af2d3e4c43e",
+      "deleted": false
+    }
+  ]
+}
