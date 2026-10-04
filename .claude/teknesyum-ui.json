@@ -40,11 +40,16 @@
       "rule": "guncelleme/surum-tetik",
       "file": "src/renderer/src/screens/Library.tsx",
       "reason": "Bu v{m.version} programın değil, kütüphanedeki modülün sürümü; güncelleme denetimiyle ilgisi yok."
+    },
+    {
+      "rule": "core/text-glow",
+      "file": "src/renderer/src/styles/app.css",
+      "reason": "Sahibin isteği (2026-10-04): modül kapağının üstündeki yazılar harf bazında koyu bir haleyle basılsın, düz siyah panel olmasın. Renkli parlama değil, zemin rengiyle okunurluk gölgesi; yalnızca .ql-cover-card içinde."
     }
   ],
   "plugin": "0.34.0",
   "denetim": {
-    "tarih": "2026-10-02T15:34:22.721Z",
+    "tarih": "2026-10-04T11:11:15.707Z",
     "duzen": "920c61ba2837ca0d"
   },
   "uc": {

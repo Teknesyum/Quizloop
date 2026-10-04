@@ -6,8 +6,12 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.7.10] - 2026-10-04
+
 ### Changed
 
+- Text on a module card with a cover image now carries a dark halo around each
+  letter, so titles, the version tag and the counts stay readable on a light cover.
 - Every build output now lands under `dist/`: `dist/desktop/`, `dist/android/` and
   `dist/modules/` replace the separate `dist-android/` and `dist-modules/` folders.
 
