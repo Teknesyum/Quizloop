@@ -436,14 +436,14 @@ export function BookViewer({
   useEffect(() => {
     const el = frameRef.current
     if (!el || !window.quizloop.capabilities.pinchZoom) return
-    let start: { d: number; z: number } | null = null
+    let start: { d: number; z: number; x: number; y: number } | null = null
     const onStart = (e: TouchEvent): void => {
       const s = e.touches.length === 2 ? pinchSpan(e.touches) : null
       if (!s || s.d <= 0) return
       e.preventDefault()
       e.stopPropagation()
       dropTouch(flipRef.current)
-      start = { d: s.d, z: zoomRef.current }
+      start = { d: s.d, z: zoomRef.current, x: s.x, y: s.y }
     }
     const onMove = (e: TouchEvent): void => {
       if (!start) return
@@ -451,6 +451,13 @@ export function BookViewer({
       if (!s) return
       e.preventDefault()
       e.stopPropagation()
+      const pane = paneRef.current
+      if (pane && zoomRef.current > 1) {
+        pane.scrollLeft -= s.x - start.x
+        pane.scrollTop -= s.y - start.y
+      }
+      start.x = s.x
+      start.y = s.y
       zoomTo((start.z * s.d) / start.d, s.x, s.y)
     }
     const onEnd = (e: TouchEvent): void => {
@@ -647,7 +654,13 @@ export function BookViewer({
               </figure>
             ) : (
               <div className="ql-book-missing">
-                <p className="tk-prose">{t('book.missing')}</p>
+                <p className="tk-prose">
+                  {t(
+                    window.quizloop.capabilities.packageImport
+                      ? 'book.missingPhone'
+                      : 'book.missing'
+                  )}
+                </p>
                 {canPick && (
                   <button
                     type="button"

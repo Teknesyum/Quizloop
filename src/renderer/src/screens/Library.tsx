@@ -3,8 +3,10 @@ import { tinykeys } from 'tinykeys'
 import type { InstallResult, ModuleSummary } from '@shared/ipc'
 import { Confirm } from '@renderer/components/Confirm'
 import { Skeleton } from '@renderer/components/Skeleton'
+import { ViewToggle } from '@renderer/components/ViewToggle'
 import { installedText, t, title } from '@renderer/i18n'
 import { useApp } from '@renderer/store/app'
+import { useView } from '@renderer/view'
 
 function ModuleCard({
   m,
@@ -124,6 +126,7 @@ export function Library(): React.JSX.Element {
   const [dragging, setDragging] = useState(false)
   const [busy, setBusy] = useState(false)
   const [active, setActive] = useState(0)
+  const [view, setView] = useView()
   const go = useApp((s) => s.go)
 
   useEffect(() => {
@@ -276,8 +279,10 @@ export function Library(): React.JSX.Element {
         </div>
       )}
 
+      {modules !== null && modules.length > 0 && <ViewToggle view={view} onChange={setView} />}
+
       {modules !== null && modules.length > 0 && (
-        <div className="ql-grid">
+        <div className={`ql-grid ${view === 'list' ? 'ql-grid-list' : ''}`}>
           {modules.map((m, i) => (
             <ModuleCard
               key={m.id}
