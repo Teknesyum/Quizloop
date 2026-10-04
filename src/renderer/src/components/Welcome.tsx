@@ -1,4 +1,4 @@
-import { useEffect, useId } from 'react'
+import { useEffect, useId, useRef } from 'react'
 import { t } from '@renderer/i18n'
 
 interface Props {
@@ -10,6 +10,8 @@ const NOTES = ['module', 'add', 'study', 'data'] as const
 export function Welcome({ onClose }: Props): React.JSX.Element {
   const id = useId()
   const phone = window.quizloop.capabilities.packageImport
+  const ok = useRef<HTMLButtonElement>(null)
+  useEffect(() => ok.current?.focus({ preventScroll: true }), [])
   useEffect(() => {
     const h = (e: KeyboardEvent): void => {
       if (e.code === 'Escape') onClose()
@@ -45,7 +47,7 @@ export function Welcome({ onClose }: Props): React.JSX.Element {
         </ol>
         <p className="tk-hint">{t('welcome.again')}</p>
         <div className="tk-modal-actions">
-          <button type="button" className="tk-btn tk-btn-primary" onClick={onClose} autoFocus>
+          <button ref={ok} type="button" className="tk-btn tk-btn-primary" onClick={onClose}>
             {t('welcome.close')}
           </button>
         </div>

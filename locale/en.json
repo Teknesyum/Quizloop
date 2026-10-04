@@ -325,5 +325,7 @@
   "welcome.close": "Got it, let's start",
   "welcome.open": "How does it work?",
   "settings.welcome": "Introduction",
-  "settings.welcomeOpen": "Show the introduction again"
+  "settings.welcomeOpen": "Show the introduction again",
+  "settings.samples": "Sample modules",
+  "settings.samplesInstalled": "Sample modules installed"
 }

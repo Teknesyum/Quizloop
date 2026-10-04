@@ -325,5 +325,7 @@
   "welcome.close": "Anladım, başlayalım",
   "welcome.open": "Nasıl kullanılır?",
   "settings.welcome": "Tanıtım",
-  "settings.welcomeOpen": "Tanıtımı yeniden göster"
+  "settings.welcomeOpen": "Tanıtımı yeniden göster",
+  "settings.samples": "Örnek modüller",
+  "settings.samplesInstalled": "Örnek modüller kuruldu"
 }

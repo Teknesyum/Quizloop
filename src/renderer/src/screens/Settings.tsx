@@ -23,6 +23,18 @@ export function Settings(): React.JSX.Element {
     if (!info) loadInfo()
   }, [info, loadInfo])
 
+  const installSamples = async (): Promise<void> => {
+    setBusy(true)
+    try {
+      const r = await window.quizloop.module.installSample()
+      await useApp.getState().loadModules()
+      if (r?.ok) toast('success', t('settings.samplesInstalled'))
+      else toast('danger', t('library.installFailed'))
+    } finally {
+      setBusy(false)
+    }
+  }
+
   const apply = async (patch: Partial<S>): Promise<void> => {
     await save(patch)
     toast('success', t('settings.saved'))
@@ -341,6 +353,18 @@ export function Settings(): React.JSX.Element {
                 onClick={() => window.quizloop.app.openSource()}
               >
                 {t('settings.sourceOpen')}
+              </button>
+            </div>
+            <div className="ql-row">
+              <span className="tk-hint">{t('settings.samples')}</span>
+              <button
+                type="button"
+                className="tk-btn tk-btn-ghost ql-btn-sm"
+                disabled={busy}
+                title={busy ? t('common.loading') : t('library.installSampleHelp')}
+                onClick={installSamples}
+              >
+                {t('library.installSample')}
               </button>
             </div>
             <div className="ql-row">

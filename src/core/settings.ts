@@ -10,7 +10,8 @@ export const DEFAULT_SETTINGS: Settings = {
   fontScale: 1,
   blinkSeconds: 5,
   autoUpdate: true,
-  welcomeSeen: false
+  welcomeSeen: false,
+  samplesUsed: false
 }
 
 export const SettingsPatch = z
@@ -23,7 +24,8 @@ export const SettingsPatch = z
     fontScale: z.number().min(0.5).max(2),
     blinkSeconds: z.number().int().min(0).max(30),
     autoUpdate: z.boolean(),
-    welcomeSeen: z.boolean()
+    welcomeSeen: z.boolean(),
+    samplesUsed: z.boolean()
   })
   .partial()
 

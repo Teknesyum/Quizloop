@@ -40,7 +40,7 @@ const SPECS: Spec[] = [
     draft: 'rehber',
     id: 'quizloop-rehberi',
     name: 'QuizLoop Rehberi: Uygulama Nasıl Kullanılır',
-    version: '1.0.0',
+    version: '1.0.1',
     description:
       'Modül nedir, nasıl eklenir, oturum nasıl işler, sorular neden geri gelir: uygulamayı soru çözerek öğreten rehber.',
     tags: ['rehber', 'örnek'],

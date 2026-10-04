@@ -159,6 +159,7 @@ export interface Settings {
   blinkSeconds: number
   autoUpdate: boolean
   welcomeSeen: boolean
+  samplesUsed: boolean
 }
 
 export const FONT_SCALES = [0.9, 1, 1.1, 1.25, 1.4, 1.6] as const
