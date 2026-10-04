@@ -313,18 +313,10 @@ body {
   overflow: hidden;
 }
 
-.ql-card-ink {
-  display: contents;
-}
-
-.ql-cover-card:has(.ql-cover):not(.ql-grid-list *) .ql-card-ink {
-  display: flex;
-  flex-direction: column;
-  gap: var(--tk-sp-3);
-  filter: url(#ql-ink-block);
-}
-
-.ql-cover-card:has(.ql-cover):not(.ql-grid-list *) .ql-card-foot .tk-hint {
+.ql-cover-card:has(.ql-cover):not(.ql-grid-list *) .tk-h3,
+.ql-cover-card:has(.ql-cover):not(.ql-grid-list *) .ql-percent,
+.ql-cover-card:has(.ql-cover):not(.ql-grid-list *) .ql-tag,
+.ql-cover-card:has(.ql-cover):not(.ql-grid-list *) .tk-hint {
   filter: url(#ql-ink);
 }
 
