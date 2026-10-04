@@ -115,7 +115,9 @@ export function Chapters({ moduleId }: { moduleId: string }): React.JSX.Element 
                 <img className="ql-cover ql-cover-foot" src={chapterCover(c) as string} alt="" />
               )}
               <header className="ql-card-head">
-                <h3 className="tk-h3">{c.chapter || t('chapters.unsorted')}</h3>
+                <h3 className="tk-h3">
+                  <span>{c.chapter || t('chapters.unsorted')}</span>
+                </h3>
                 <span className="tk-mono ql-percent">
                   {c.total ? Math.round((c.retired / c.total) * 100) : 0}%
                 </span>

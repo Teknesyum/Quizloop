@@ -46,7 +46,9 @@ function ModuleCard({
         />
       )}
       <header className="ql-card-head">
-        <h3 className="tk-h3">{m.name}</h3>
+        <h3 className="tk-h3">
+          <span>{m.name}</span>
+        </h3>
         <span className="tk-mono ql-percent">
           {m.questionCount ? Math.round((m.retired / m.questionCount) * 100) : 0}%
         </span>
@@ -278,7 +280,9 @@ export function Library(): React.JSX.Element {
 
       {modules !== null && modules.length === 0 && (
         <div className="tk-panel ql-empty ql-transition-in">
-          <h3 className="tk-h3">{t('library.empty.title')}</h3>
+          <h3 className="tk-h3">
+            <span>{t('library.empty.title')}</span>
+          </h3>
           <p className="tk-prose">
             {t(
               window.quizloop.capabilities.packageImport

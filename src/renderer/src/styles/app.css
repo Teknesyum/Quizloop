@@ -303,7 +303,7 @@ body {
   overflow: hidden;
 }
 
-.ql-cover-card:has(.ql-cover):not(.ql-grid-list *) .tk-h3,
+.ql-cover-card:has(.ql-cover):not(.ql-grid-list *) .tk-h3 > span,
 .ql-cover-card:has(.ql-cover):not(.ql-grid-list *) .ql-percent,
 .ql-cover-card:has(.ql-cover):not(.ql-grid-list *) .ql-tag,
 .ql-cover-card:has(.ql-cover):not(.ql-grid-list *) .tk-hint,
@@ -313,11 +313,20 @@ body {
   border-radius: var(--tk-r);
 }
 
-.ql-cover-card:has(.ql-cover):not(.ql-grid-list *) .tk-h3,
+.ql-cover-card:has(.ql-cover):not(.ql-grid-list *) .tk-h3 > span,
+.ql-cover-card:has(.ql-cover):not(.ql-grid-list *) .ql-percent,
+.ql-cover-card:has(.ql-cover):not(.ql-grid-list *) .tk-hint {
+  padding: 0 var(--tk-sp-2);
+}
+
 .ql-cover-card:has(.ql-cover):not(.ql-grid-list *) .ql-percent,
 .ql-cover-card:has(.ql-cover):not(.ql-grid-list *) .tk-hint {
   display: inline-block;
-  padding: var(--tk-sp-1) var(--tk-sp-2);
+}
+
+.ql-cover-card:has(.ql-cover):not(.ql-grid-list *) .tk-h3 > span {
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
 }
 
 .ql-cover-card:has(.ql-cover):not(.ql-grid-list *) .ql-card-head {
@@ -326,6 +335,12 @@ body {
 
 .ql-cover-card:has(.ql-cover):not(.ql-grid-list *) .ql-card-head .tk-h3 {
   margin: 0;
+  line-height: var(--tk-lh-mono);
+}
+
+.ql-cover-card:has(.ql-cover):not(.ql-grid-list *) .ql-percent {
+  font-size: var(--tk-fs-4);
+  line-height: var(--tk-lh-mono);
 }
 
 .ql-cover {
