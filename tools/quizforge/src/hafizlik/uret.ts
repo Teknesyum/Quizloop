@@ -24,7 +24,6 @@ export interface Secenekler {
   baglam?: number
   cuzler?: Set<number>
   sikli?: boolean
-  duzen?: 'cuz' | 'donus'
 }
 
 const EN_COK_BAGLAM = 3
@@ -306,7 +305,7 @@ export function uret(sureler: Sure[], meal: Meal | null, sec: Secenekler = {}): 
         file: 'Kuran.pdf',
         pages: [cevap.sayfa, cevap.sayfa] as [number, number],
         quote: cevap.metin,
-        chapter: sec.duzen === 'donus' ? `${tur}. Dönüş` : `${soru.cuz}. Cüz`
+        chapter: `${tur}. Dönüş`
       },
       vurgu: [],
       deleted: false
@@ -360,10 +359,8 @@ export function uret(sureler: Sure[], meal: Meal | null, sec: Secenekler = {}): 
     sikli += 1
     if (benzer) mutesabih += 1
   }
-  if (sec.duzen === 'donus') {
-    const sira = new Map(sorular.map((q, n) => [q.id, n]))
-    const turu = (q: QuestionT): number => Number.parseInt(q.source.chapter ?? '0', 10)
-    sorular.sort((a, b) => turu(a) - turu(b) || sira.get(a.id)! - sira.get(b.id)!)
-  }
+  const sira = new Map(sorular.map((q, n) => [q.id, n]))
+  const turu = (q: QuestionT): number => Number.parseInt(q.source.chapter ?? '0', 10)
+  sorular.sort((a, b) => turu(a) - turu(b) || sira.get(a.id)! - sira.get(b.id)!)
   return { sorular, acik, sikli, mutesabih, baglamli, belirsiz }
 }
