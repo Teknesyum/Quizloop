@@ -6,6 +6,14 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.7.25] - 2026-10-05
+
+### Changed
+
+- Cover cards: every piece of text (title, percent, each tag, each counter) has its own
+  narrow black backing with a blue outline again, and no backing touches its neighbour.
+  The merged shape from 0.7.24 is gone.
+
 ## [0.7.24] - 2026-10-05
 
 ### Changed

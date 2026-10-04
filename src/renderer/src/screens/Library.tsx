@@ -45,38 +45,36 @@ function ModuleCard({
           onError={() => setCover(false)}
         />
       )}
-      <div className="ql-card-ink">
-        <header className="ql-card-head">
-          <h3 className="tk-h3">{m.name}</h3>
-          <span className="tk-mono ql-percent">
-            {m.questionCount ? Math.round((m.retired / m.questionCount) * 100) : 0}%
-          </span>
-        </header>
-        <ul className="ql-tags" aria-label={t('library.tags')}>
-          <li className="tk-mono ql-tag ql-tag-version">
-            {t('library.card.version', { version: m.version })}
+      <header className="ql-card-head">
+        <h3 className="tk-h3">{m.name}</h3>
+        <span className="tk-mono ql-percent">
+          {m.questionCount ? Math.round((m.retired / m.questionCount) * 100) : 0}%
+        </span>
+      </header>
+      <ul className="ql-tags" aria-label={t('library.tags')}>
+        <li className="tk-mono ql-tag ql-tag-version">
+          {t('library.card.version', { version: m.version })}
+        </li>
+        {m.tags.map((tag) => (
+          <li key={tag} className="tk-mono ql-tag">
+            {title(tag)}
           </li>
-          {m.tags.map((tag) => (
-            <li key={tag} className="tk-mono ql-tag">
-              {title(tag)}
-            </li>
-          ))}
-        </ul>
-        <dl className="ql-card-stats">
-          <div className={m.dueToday ? 'ql-stat-hot' : ''}>
-            <dt className="tk-hint">{t('library.card.due', { count: m.dueToday })}</dt>
-          </div>
-          <div>
-            <dt className="tk-hint">{t('library.card.unseen', { count: m.unseen })}</dt>
-          </div>
-          <div>
-            <dt className="tk-hint">{t('library.card.learning', { count: m.learning })}</dt>
-          </div>
-          <div>
-            <dt className="tk-hint">{t('library.card.retired', { count: m.retired })}</dt>
-          </div>
-        </dl>
-      </div>
+        ))}
+      </ul>
+      <dl className="ql-card-stats">
+        <div className={m.dueToday ? 'ql-stat-hot' : ''}>
+          <dt className="tk-hint">{t('library.card.due', { count: m.dueToday })}</dt>
+        </div>
+        <div>
+          <dt className="tk-hint">{t('library.card.unseen', { count: m.unseen })}</dt>
+        </div>
+        <div>
+          <dt className="tk-hint">{t('library.card.learning', { count: m.learning })}</dt>
+        </div>
+        <div>
+          <dt className="tk-hint">{t('library.card.retired', { count: m.retired })}</dt>
+        </div>
+      </dl>
       <div
         className="ql-progress"
         role="progressbar"
