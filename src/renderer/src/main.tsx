@@ -1,7 +1,7 @@
 import '@fontsource/atkinson-hyperlegible-next/400.css'
 import '@fontsource/atkinson-hyperlegible-next/600.css'
 import '@fontsource/cascadia-mono/400.css'
-import '@fontsource/noto-naskh-arabic/arabic-600.css'
+import '@fontsource/scheherazade-new/arabic-400.css'
 import '@fontsource/cascadia-mono/600.css'
 import 'katex/dist/katex.min.css'
 import '../../../teknesyum-ui/css/theme.css'
