@@ -2,7 +2,7 @@ import { describe, expect, it } from 'vitest'
 import { Question } from '../../../../src/shared/schema/question.ts'
 import { AYET_SAYILARI, caprazDenetle, sayimDenetle, type Meal, type Sure } from './kaynak.ts'
 import { kelimeler, kok, parcala, sade } from './metin.ts'
-import { baglamlar, parcalar, uret } from './uret.ts'
+import { baglamlar, donus, parcalar, uret } from './uret.ts'
 
 const T = 'ؕ'
 const C = 'ۚ'
@@ -130,6 +130,55 @@ describe('uret', () => {
 
   it('aynı girdi aynı çıktıyı verir', () => {
     expect(uret(sureler, meal)).toEqual(uret(sureler, meal))
+  })
+})
+
+describe('donus', () => {
+  it('her cüzün son sayfası birinci, ilk sayfası yirminci dönüştür', () => {
+    expect(donus(1, 20)).toBe(1)
+    expect(donus(1, 1)).toBe(20)
+    expect(donus(2, 24)).toBe(17)
+    expect(donus(29, 580)).toBe(1)
+    expect(donus(29, 561)).toBe(20)
+  })
+
+  it('otuzuncu cüzün son beş sayfası tek dönüştür', () => {
+    expect([600, 601, 602, 603, 604].map((s) => donus(30, s))).toEqual([1, 1, 1, 1, 1])
+    expect(donus(30, 599)).toBe(2)
+    expect(donus(30, 581)).toBe(20)
+  })
+
+  it('dönüş çözümde, yanlış şık açıklamasında ve etikette yazar', () => {
+    const s = [
+      sure(1, 'Bir', [`بب تت ثث${T} جج حح خخ`, 'دد ذذ رر', `سس شش صص${T} طط ظظ عع`]),
+      sure(2, 'İki', ['دد ذذ رر', 'فف قق كك', `سس شش صص${T} لل مم نن`])
+    ]
+    const r = uret(s, null)
+    const q = r.sorular[0]!
+    expect(q.solution[0]).toEqual({
+      type: 'text',
+      md: '**Bir Suresi 1:1 · Sayfa 1 · 1. Cüz · 20. Dönüşün Başı**'
+    })
+    expect(q.tags).toContain('donus:20')
+    expect(q.tags).toContain('kesim:bas')
+    expect(parcalar(s).map((x) => x.kesim)).toEqual([
+      'bas',
+      'bas',
+      'orta',
+      'son',
+      'son',
+      'bas',
+      'orta',
+      'orta',
+      'son'
+    ])
+    for (const d of Object.values(q.distractors))
+      expect(d).toMatch(/Sayfa \d+ · 1\. Cüz · \d+\. Dönüşün (Başı|Ortası|Sonu)/)
+    const t = uret(s, null, { duzen: 'donus' }).sorular
+    expect(t.map((x) => x.source.chapter)).toEqual(
+      [...t.map((x) => x.source.chapter)].sort((a, b) => parseInt(a!, 10) - parseInt(b!, 10))
+    )
+    expect(t[0]!.source.chapter).toBe('19. Dönüş')
   })
 })
 
