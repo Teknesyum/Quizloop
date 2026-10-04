@@ -31,11 +31,11 @@ Scheherazade New 400 (OFL, `@fontsource`), paragraflar ortalı, boyutlar teknesy
 belirteçlerinden. Metindeki 66 işaretin hepsini taşıyan iki aday vardı (Noto Naskh, Scheherazade
 New); sahibi ikisini görüp Scheherazade New 400'ü seçti. Amiri ve Amiri Quran secavend işaretlerini taşımıyor.
 
-**Kapak.** `assets/kapak.webp` ve `assets/bolum/N.webp` (cüz numaralı sekiz köşeli yıldız, tema
-renkleri). Görseller depoda: `tools/quizforge/src/hafizlik/kapak/`, üreten `py/hafizlik_kapak.py`.
+**Kapak.** `assets/kapak.webp` ve `assets/bolum/N.webp` (simgesiz düz renk geçişi, tema
+renkleri; simge kart yazılarıyla çakıştığı için kaldırıldı). Görseller depoda: `tools/quizforge/src/hafizlik/kapak/`, üreten `py/hafizlik_kapak.py`.
 
-**Ölçüm (2026-10-04, sürüm 1.2.0).** 10.509 parça, 10.508 soru, hepsi çoktan seçmeli; 8.653'ünde
-en az bir benzer ayet çeldiricisi var. 211 blok, paket 5,0 MB. Bağlam eklenen gövde 1.242, sure adıyla ayrılan 9.
+**Ölçüm (2026-10-04, sürüm 1.2.1).** 10.509 parça, 10.508 soru, hepsi çoktan seçmeli; 8.653'ünde
+en az bir benzer ayet çeldiricisi var. 211 blok, paket 4,4 MB. Bağlam eklenen gövde 1.242, sure adıyla ayrılan 9.
 
 **Açık.** Bir hafızın denemesi yapılmadı. Benzeri olmayan 1.855 parçada çeldiriciler yalnız
 yakın parçalardır, kolay elenebilir. Kelime tablosu Uthmani imlasıyla, geri kalan Diyanet imlasıyla.
