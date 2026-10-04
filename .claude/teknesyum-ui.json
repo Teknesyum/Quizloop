@@ -45,16 +45,11 @@
       "rule": "raf/ister",
       "file": "android/app/build.gradle",
       "reason": "Yanlış alarm: namespace zaten tamamen küçük harf (com.teknesyum.quizloop), mobil-kimlik kitabına uygun. Tarayıcı deseni büyük-küçük harf ayırmadan eşliyor; tarayıcı düzelince kaldırılır."
-    },
-    {
-      "rule": "colour/filled-button-text",
-      "file": "src/renderer/src/styles/app.css",
-      "reason": "Kapaklı kartta birincil düğmenin dolgusu kaldırılıyor (background: transparent), yazı siyah zemin şeklinin üstünde duruyor; dolgu olmadığı için siyah yazı okunmaz. Sahibinin isteği: düğmeler de yazı zemini sistemiyle."
     }
   ],
   "plugin": "0.34.0",
   "denetim": {
-    "tarih": "2026-10-04T23:13:11.043Z",
+    "tarih": "2026-10-04T23:19:58.261Z",
     "duzen": "920c61ba2837ca0d"
   },
   "uc": {

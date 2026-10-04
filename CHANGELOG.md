@@ -6,6 +6,15 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.7.28] - 2026-10-05
+
+### Changed
+
+- Cover cards: the shape that hugged each letter is gone. Title, percent, tags, counters
+  and the question count now sit in plain black boxes with the same border and corners
+  as the menu and Mixed buttons, so text and buttons read as one system. The buttons
+  have their boxes back and Start session is filled again.
+
 ## [0.7.27] - 2026-10-05
 
 ### Changed

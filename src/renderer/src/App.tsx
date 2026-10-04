@@ -141,22 +141,6 @@ export default function App(): React.JSX.Element {
       data-chrome={caps.windowChrome ? 'window' : 'none'}
       data-keys={caps.shortcuts ? 'on' : 'off'}
     >
-      <svg className="ql-ink-def" aria-hidden="true" focusable="false">
-        <filter id="ql-ink" x="-50%" y="-200%" width="200%" height="500%">
-          <feMorphology in="SourceAlpha" operator="dilate" radius="10 16" />
-          <feMorphology operator="erode" radius="4 10" />
-          <feGaussianBlur stdDeviation="2" />
-          <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 8 -4" result="ink" />
-          <feMorphology operator="dilate" radius="1.5" result="edge" />
-          <feFlood className="ql-ink-line" />
-          <feComposite in2="edge" operator="in" result="line" />
-          <feMerge>
-            <feMergeNode in="line" />
-            <feMergeNode in="ink" />
-            <feMergeNode in="SourceGraphic" />
-          </feMerge>
-        </filter>
-      </svg>
       <TitleBar
         first="Quiz"
         second="Loop"
