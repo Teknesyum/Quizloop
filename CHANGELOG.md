@@ -6,6 +6,14 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.7.21] - 2026-10-05
+
+### Changed
+
+- The desktop app looks for a new version whenever its window gets focus (at
+  most once a minute) and every 10 minutes, so a fresh release arrives without
+  clicking the version label.
+
 ## [0.7.20] - 2026-10-05
 
 ### Changed

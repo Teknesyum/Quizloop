@@ -21,7 +21,9 @@ let installAfter = false
 let kod: KodManifest | null = null
 let abort: AbortController | null = null
 
-const RECHECK_MS = 30 * 60 * 1000
+const RECHECK_MS = 10 * 60 * 1000
+const FOCUS_MS = 60 * 1000
+let checkedAt = 0
 
 function emit(next: UpdateStatus): void {
   status = next
@@ -123,6 +125,7 @@ function download(install: boolean): void {
 }
 
 async function check(): Promise<UpdateStatus> {
+  checkedAt = Date.now()
   if (status.state === 'downloading' || status.state === 'ready') return status
   if (!app.isPackaged) {
     emit({ state: 'none' })
@@ -185,6 +188,9 @@ export function registerUpdates(): void {
 
   setTimeout(() => void check(), 8000)
   setInterval(() => void check(), RECHECK_MS)
+  app.on('browser-window-focus', () => {
+    if (Date.now() - checkedAt > FOCUS_MS) void check()
+  })
 }
 
 export function announceUpdated(): void {
