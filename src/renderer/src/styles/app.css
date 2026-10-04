@@ -1559,8 +1559,15 @@ button.ql-mark:not(:disabled):active {
 }
 
 .ql-table-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: safe center;
+  gap: var(--tk-sp-2) var(--tk-sp-4);
   max-width: 100%;
   width: fit-content;
+  margin-inline: auto;
+  align-self: center;
   overflow-x: auto;
   overscroll-behavior-x: contain;
   border-radius: var(--tk-r);
@@ -1569,19 +1576,20 @@ button.ql-mark:not(:disabled):active {
 .ql-table {
   border-collapse: collapse;
   font-size: var(--tk-fs-1);
+  line-height: var(--tk-lh-heading);
   font-variant-numeric: tabular-nums;
 }
 
 .ql-table-caption {
-  caption-side: bottom;
-  padding-top: var(--tk-sp-2);
-  text-align: left;
+  flex-basis: 100%;
+  margin: 0;
+  text-align: center;
 }
 
 .ql-table th,
 .ql-table td {
   border: var(--tk-border-w) solid var(--tk-border);
-  padding: var(--tk-sp-1) var(--tk-sp-3);
+  padding: calc(var(--tk-sp-1) / 2) var(--tk-sp-2);
   text-align: center;
   vertical-align: middle;
   max-width: var(--tk-measure);
@@ -2308,5 +2316,5 @@ button.ql-mark:not(:disabled):active {
 
 .ql-table td:dir(rtl) {
   font-size: var(--tk-fs-3);
-  line-height: normal;
+  line-height: var(--tk-lh-mono);
 }

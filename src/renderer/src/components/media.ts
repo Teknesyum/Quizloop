@@ -131,6 +131,16 @@ export function tableModel(table: Pick<Table, 'header' | 'rows' | 'rowHeader'>):
   }
 }
 
+export const TABLE_SPLIT_ROWS = 8
+
+export function tableParts<T>(rows: T[], width: number): T[][] {
+  const most = width <= 2 ? 3 : width === 3 ? 2 : 1
+  const count = Math.min(most, Math.ceil(rows.length / TABLE_SPLIT_ROWS))
+  if (count <= 1) return [rows]
+  const size = Math.ceil(rows.length / count)
+  return Array.from({ length: count }, (_, i) => rows.slice(i * size, (i + 1) * size))
+}
+
 export function nextZoom(scale: number, dir: 1 | -1): number {
   const raw = dir > 0 ? scale * ZOOM_STEP : scale / ZOOM_STEP
   const clamped = Math.min(ZOOM_MAX, Math.max(ZOOM_MIN, raw))

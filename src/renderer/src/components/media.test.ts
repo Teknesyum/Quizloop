@@ -11,6 +11,7 @@ import {
   nextZoom,
   shortAlt,
   tableModel,
+  tableParts,
   tagSide,
   ZOOM_MAX,
   ZOOM_MIN
@@ -149,5 +150,27 @@ describe('markBoxes', () => {
     const [a, b] = markBoxes(choices, { wrong: { A: 'x' }, correct: 'B', open: true, live: false })
     expect(a).toMatchObject({ state: 'wrong', open: true, disabled: true })
     expect(b).toMatchObject({ state: 'right', open: true, md: 'Ven' })
+  })
+})
+
+describe('tableParts', () => {
+  const rows = (n: number): number[] => Array.from({ length: n }, (_, i) => i)
+
+  it('kisa tabloyu bolmez', () => {
+    expect(tableParts(rows(8), 2)).toEqual([rows(8)])
+  })
+
+  it('uzun iki sutunlu tabloyu yan yana parcalara boler', () => {
+    expect(tableParts(rows(9), 2).map((p) => p.length)).toEqual([5, 4])
+    expect(tableParts(rows(128), 2).map((p) => p.length)).toEqual([43, 43, 42])
+  })
+
+  it('genis tabloyu tek parca birakir', () => {
+    expect(tableParts(rows(30), 3).map((p) => p.length)).toEqual([15, 15])
+    expect(tableParts(rows(30), 4)).toEqual([rows(30)])
+  })
+
+  it('satir sirasini korur', () => {
+    expect(tableParts(rows(20), 2).flat()).toEqual(rows(20))
   })
 })
