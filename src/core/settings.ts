@@ -8,7 +8,8 @@ export const DEFAULT_SETTINGS: Settings = {
   sessionLimit: 40,
   soundOn: false,
   fontScale: 1,
-  blinkSeconds: 5
+  blinkSeconds: 5,
+  autoUpdate: true
 }
 
 export const SettingsPatch = z
@@ -19,7 +20,8 @@ export const SettingsPatch = z
     sessionLimit: z.number().int().min(5).max(200),
     soundOn: z.boolean(),
     fontScale: z.number().min(0.5).max(2),
-    blinkSeconds: z.number().int().min(0).max(30)
+    blinkSeconds: z.number().int().min(0).max(30),
+    autoUpdate: z.boolean()
   })
   .partial()
 

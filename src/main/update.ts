@@ -3,6 +3,7 @@ import { autoUpdater, CancellationToken } from 'electron-updater'
 import { existsSync, readFileSync, writeFileSync } from 'node:fs'
 import { join } from 'node:path'
 import { newer } from '@core/version'
+import { getSettings } from '@main/settings'
 import { CH, type UpdateStatus } from '@shared/ipc'
 
 const OWNER = 'Teknesyum'
@@ -14,6 +15,8 @@ export { newer }
 let status: UpdateStatus = { state: 'idle' }
 let cancel: CancellationToken | null = null
 let installAfter = false
+
+const RECHECK_MS = 4 * 60 * 60 * 1000
 
 function emit(next: UpdateStatus): void {
   status = next
@@ -58,7 +61,16 @@ async function checkNative(): Promise<UpdateStatus> {
   return status
 }
 
+function download(install: boolean): void {
+  if (status.state !== 'available') return
+  installAfter = install
+  cancel = new CancellationToken()
+  emit({ state: 'downloading', version: status.version, percent: 0 })
+  autoUpdater.downloadUpdate(cancel).catch(() => undefined)
+}
+
 function check(): Promise<UpdateStatus> {
+  if (status.state === 'downloading' || status.state === 'ready') return Promise.resolve(status)
   if (!app.isPackaged) {
     emit({ state: 'none' })
     return Promise.resolve(status)
@@ -69,10 +81,13 @@ function check(): Promise<UpdateStatus> {
 export function registerUpdates(): void {
   if (nativeUpdates()) {
     autoUpdater.autoDownload = false
-    autoUpdater.autoInstallOnAppQuit = false
+    autoUpdater.autoInstallOnAppQuit = true
     autoUpdater.on('checking-for-update', () => emit({ state: 'checking' }))
     autoUpdater.on('update-not-available', () => emit({ state: 'none' }))
-    autoUpdater.on('update-available', (i) => emit({ state: 'available', version: i.version }))
+    autoUpdater.on('update-available', (i) => {
+      emit({ state: 'available', version: i.version })
+      if (getSettings().autoUpdate) download(false)
+    })
     autoUpdater.on('download-progress', (p) =>
       emit({ state: 'downloading', version: status.version, percent: Math.round(p.percent) })
     )
@@ -90,13 +105,7 @@ export function registerUpdates(): void {
 
   ipcMain.handle(CH.updateStatus, () => status)
   ipcMain.handle(CH.updateCheck, () => check())
-  ipcMain.on(CH.updateDownload, (_e, install: boolean) => {
-    if (status.state !== 'available') return
-    installAfter = install === true
-    cancel = new CancellationToken()
-    emit({ state: 'downloading', version: status.version, percent: 0 })
-    autoUpdater.downloadUpdate(cancel).catch(() => undefined)
-  })
+  ipcMain.on(CH.updateDownload, (_e, install: boolean) => download(install === true))
   ipcMain.on(CH.updateCancel, () => {
     if (status.state !== 'downloading' || !cancel) return
     const token = cancel
@@ -113,6 +122,7 @@ export function registerUpdates(): void {
   })
 
   setTimeout(() => void check(), 8000)
+  setInterval(() => void check(), RECHECK_MS)
 }
 
 export function announceUpdated(): void {
