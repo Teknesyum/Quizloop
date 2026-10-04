@@ -45,9 +45,11 @@ request headers and handles them under the
 
 When the check happens depends on the platform:
 
-- **Android**: only when you press **Check for updates** in Settings. The app
-  never checks on its own. A version installed from Google Play is updated by
-  Google Play itself, under Google's policy.
+- **Android**: once, a few seconds after the app starts, and whenever you press
+  **Check for updates** in Settings. If a newer version exists the app shows a
+  notice with a link: the Google Play listing when the app was installed from
+  Google Play, the GitHub release page otherwise. The app never downloads or
+  installs an update by itself; Google Play does that under Google's policy.
 - **Windows, macOS and Linux**: a few seconds after the app starts and then
   every four hours while it stays open, and whenever you press **Check for
   updates**.

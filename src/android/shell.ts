@@ -115,6 +115,7 @@ export async function createShell(): Promise<QuizloopApi> {
 
   const info = await App.getInfo().catch(() => ({ version: '0.0.0' }))
   const updates = createUpdates(info.version)
+  updates.start()
 
   return {
     capabilities: ANDROID_CAPABILITIES,
