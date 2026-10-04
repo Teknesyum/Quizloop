@@ -10,7 +10,8 @@ it('tablo basliklari sutun ve satir kapsamini tasir', () => {
       table={{ header: ['Ad', 'Doz'], rows: [['A', '1']], caption: 'Dozlar', rowHeader: true }}
     />
   )
-  expect(html).toContain('<caption')
+  expect(html).toMatch(/aria-labelledby="[^"]+"/)
+  expect(html).toContain('ql-table-caption')
   expect(html).toMatch(/<th scope="col">Ad<\/th><th scope="col">Doz<\/th>/)
   expect(html).toMatch(/<th scope="row">A<\/th><td dir="auto">1<\/td>/)
   expect(html).toContain('tabindex="0"')

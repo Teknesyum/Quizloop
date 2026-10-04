@@ -23,6 +23,10 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
   progress titles. A test keeps new headings to the same rule.
 - The dark halo behind text and icons on cover cards is wider, so text stays
   readable over busier covers.
+- Tables sit centred in both the question and the solution, with tighter rows.
+  A narrow table longer than eight rows continues in a second and third column
+  beside the first instead of running down the page; on a narrow screen the
+  parts wrap below each other.
 - Sample modules follow the heading rule: the guide is 1.0.2, general knowledge
   1.0.1.
 
