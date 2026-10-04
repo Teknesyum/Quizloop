@@ -324,6 +324,10 @@ body {
   border-color: transparent;
 }
 
+.ql-cover-card:has(.ql-cover):not(.ql-grid-list *) .ql-card-stats {
+  row-gap: var(--tk-sp-3);
+}
+
 .ql-cover-card:has(.ql-cover):not(.ql-grid-list *) .tk-btn-ghost {
   background: var(--tk-scrim);
 }

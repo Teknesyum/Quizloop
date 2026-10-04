@@ -6,6 +6,15 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.7.26] - 2026-10-05
+
+### Changed
+
+- Cover cards: the black backing now keeps a fixed distance of at least 4 px from every
+  letter, measured from the glyphs themselves instead of estimated with a blur. Gaps
+  between words and between title lines are filled, so each item is one smooth shape,
+  and counter rows sit slightly further apart so the shapes still never touch.
+
 ## [0.7.25] - 2026-10-05
 
 ### Changed

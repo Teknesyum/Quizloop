@@ -143,17 +143,13 @@ export default function App(): React.JSX.Element {
     >
       <svg className="ql-ink-def" aria-hidden="true" focusable="false">
         <filter id="ql-ink" x="-50%" y="-200%" width="200%" height="500%">
-          <feGaussianBlur in="SourceAlpha" stdDeviation="2.5" />
-          <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 40 -2" />
-          <feGaussianBlur stdDeviation="3" result="soft" />
-          <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 8 -1.9" result="edge" />
+          <feMorphology in="SourceAlpha" operator="dilate" radius="8 14" />
+          <feMorphology operator="erode" radius="4 10" />
+          <feGaussianBlur stdDeviation="2" />
+          <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 8 -4" result="ink" />
+          <feMorphology operator="dilate" radius="1.5" result="edge" />
           <feFlood className="ql-ink-line" />
           <feComposite in2="edge" operator="in" result="line" />
-          <feColorMatrix
-            in="soft"
-            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 8 -3.5"
-            result="ink"
-          />
           <feMerge>
             <feMergeNode in="line" />
             <feMergeNode in="ink" />
