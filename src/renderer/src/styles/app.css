@@ -308,7 +308,8 @@ body {
     0 0 var(--tk-border-w) var(--tk-bg-from), 0 0 var(--tk-sp-1) var(--tk-bg-from),
     0 0 var(--tk-sp-1) var(--tk-bg-from), 0 0 var(--tk-sp-2) var(--tk-bg-from),
     0 0 var(--tk-sp-2) var(--tk-bg-from), 0 0 var(--tk-sp-3) var(--tk-bg-from),
-    0 0 var(--tk-sp-4) var(--tk-bg-from);
+    0 0 var(--tk-sp-4) var(--tk-bg-from), 0 0 var(--tk-sp-4) var(--tk-bg-from),
+    0 0 var(--tk-sp-5) var(--tk-bg-from), 0 0 var(--tk-sp-5) var(--tk-bg-from);
   text-shadow: var(--ql-halo);
 }
 
@@ -318,7 +319,8 @@ body {
 }
 
 .ql-cover-card svg {
-  filter: drop-shadow(0 0 var(--tk-sp-1) var(--tk-bg-from));
+  filter: drop-shadow(0 0 var(--tk-sp-1) var(--tk-bg-from))
+    drop-shadow(0 0 var(--tk-sp-2) var(--tk-bg-from));
 }
 
 .ql-cover {

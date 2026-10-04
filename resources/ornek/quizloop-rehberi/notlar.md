@@ -1,4 +1,4 @@
-# QuizLoop rehber notları
+# QuizLoop Rehber Notları
 
 ## Sayfa 1: Modül Nedir, Nasıl Eklenir
 
@@ -44,18 +44,18 @@ Uygulama bir sonraki tekrar gününü iki bilgiye bakarak belirler. Birincisi ne
 
 Modül kartında dört sayı vardır. **Bugün sırada**, bugün çözmen için sırada bekleyen soruların sayısıdır. **Yeni**, henüz hiç görmediğin soruları sayar. **Öğreniliyor**, üzerinde çalıştığın ama henüz emekli olmamış soruları sayar. **Emekli**, anladım dediğin ve artık sorulmayan soruları sayar. Kartın köşesindeki yüzde, emekli soruların toplam soruya oranıdır; hepsi emekli olunca yüzde yüz olur. Günün ne zaman başladığını **Gün başlangıcı saati** ayarı belirler. Bu saatten önce çözülenler önceki güne sayılır; gece geç saatte çalışanlar için yararlıdır. **Oturum başına en çok soru** ayarı bir oturumun sırasını bu sayıda keser. Tekrar sırası bu sınıra dahil değildir. Bugün için soru kalmadıysa **Bu modülde bugün soru yok** yazısı çıkar.
 
-## Sayfa 12: Ayarlar, İstatistik ve Taşıma
+## Sayfa 12: Ayarlar, İstatistik Ve Taşıma
 
 Arayüz boyutu bütün uygulamayı ölçekler; yazılar ve düğmeler birlikte büyür ya da küçülür. Klavyeden Ctrl ve artı büyütür, Ctrl ve eksi küçültür, Ctrl ve sıfır boyutu sıfırlar. **Dil** seçici arayüzü Türkçe ile İngilizce arasında değiştirir. **Yazı akışı hızı** ayarı soru metninin ekrana nasıl geldiğini belirler. Soru metni harf harf akar; hız **Yavaş**, **Normal** ya da **Hızlı** olabilir. **Kapalı** seçilirse metin anında görünür. Akan metne tıklamak da yazının tamamını hemen gösterir. Ayarlar ekranında yaptığın her değişiklik o anda kaydedilir ve **Ayarlar kaydedildi** bildirimi çıkar; ayrıca bir kaydet düğmesi yoktur.
 
-## Sayfa 13: Ayarlar, İstatistik ve Taşıma
+## Sayfa 13: Ayarlar, İstatistik Ve Taşıma
 
-**İstatistik** ekranı bütün modüllerin toplamını gösterir. En üstte altı kutu vardır: modül, kart, bugün sırada, toplam tekrar, son yedi gün ve emekli. Başlığın yanında kaç günlük seri yaptığın yazar. Altında son yirmi altı haftayı gün gün gösteren bir ısı haritası bulunur; çok çalıştığın günler daha belirgin görünür. Sonraki grafik son otuz günün günlük tekrar sayısını çubuklarla verir. Her çubukta o gün ilk denemede doğru yaptığın soruların payı da görünür. **Kartların durumu** bölümü soruları dört gruba ayırır: yeni, öğreniliyor, tekrarda ve emekli. En altta **Modül ilerlemesi** her modül için görülen, emekli ve toplam soru sayısını yazar.
+**İstatistik** ekranı bütün modüllerin toplamını gösterir. En üstte altı kutu vardır: modül, kart, bugün sırada, toplam tekrar, son yedi gün ve emekli. Başlığın yanında kaç günlük seri yaptığın yazar. Altında son yirmi altı haftayı gün gün gösteren bir ısı haritası bulunur; çok çalıştığın günler daha belirgin görünür. Sonraki grafik son otuz günün günlük tekrar sayısını çubuklarla verir. Her çubukta o gün ilk denemede doğru yaptığın soruların payı da görünür. **Kartların Durumu** bölümü soruları dört gruba ayırır: yeni, öğreniliyor, tekrarda ve emekli. En altta **Modül ilerlemesi** her modül için görülen, emekli ve toplam soru sayısını yazar.
 
-## Sayfa 14: Ayarlar, İstatistik ve Taşıma
+## Sayfa 14: Ayarlar, İstatistik Ve Taşıma
 
-İlerlemeni başka bir bilgisayara götürmek için **Taşıma paketi** kullanılır. Ayarlar'daki **Paketi dışa aktar** düğmesi ilerlemeyi, modülleri ve ayarları tek klasöre yazar. Bu klasörü USB bellekle öbür bilgisayara taşırsın ve orada **Paketi içe aktar** düğmesine basarsın. İçe aktarma önce onay ister, çünkü o bilgisayardaki ilerleme paketteki ile değiştirilir. Eski veritabanı silinmez, yedeklenir; ardından uygulama yeniden başlar. Güncellemeler için Ayarlar'da **Güncellemeleri denetle** düğmesi vardır. Windows sürümü kendini günceller. Linux ve macOS için yeni sürüm çıkınca haber verilir. Güncelleme denetimi yalnızca sürüm numarasını karşılaştırır; senin hakkında ya da çalışman hakkında bilgi göndermez.
+İlerlemeni başka bir bilgisayara götürmek için **Taşıma Paketi** kullanılır. Ayarlar'daki **Paketi dışa aktar** düğmesi ilerlemeyi, modülleri ve ayarları tek klasöre yazar. Bu klasörü USB bellekle öbür bilgisayara taşırsın ve orada **Paketi içe aktar** düğmesine basarsın. İçe aktarma önce onay ister, çünkü o bilgisayardaki ilerleme paketteki ile değiştirilir. Eski veritabanı silinmez, yedeklenir; ardından uygulama yeniden başlar. Güncellemeler için Ayarlar'da **Güncellemeleri denetle** düğmesi vardır. Windows sürümü kendini günceller. Linux ve macOS için yeni sürüm çıkınca haber verilir. Güncelleme denetimi yalnızca sürüm numarasını karşılaştırır; senin hakkında ya da çalışman hakkında bilgi göndermez.
 
-## Sayfa 15: Ayarlar, İstatistik ve Taşıma
+## Sayfa 15: Ayarlar, İstatistik Ve Taşıma
 
 QuizLoop'ta hesap açmak ya da giriş yapmak gerekmez. Çalışma verin cihazında kalır: cevapların, puanların, tekrar planın, işaretlediğin sorular ve ayarların yalnızca kendi cihazında saklanır. Uygulamada reklam ve kullanım izleme yoktur. Uygulama internet olmadan da eksiksiz çalışır; ağa yalnızca güncelleme denetimi için çıkar. Veri sende olduğu için denetim de sendedir: **Sıfırla** bir modülün ilerlemesini temizler, **Modülü kaldır** modülü siler, uygulamayı kaldırmak ise her şeyi siler. QuizLoop'un telefon sürümü de vardır ve Android'de çalışır. Telefonda yeni sürüm çıkınca haber verilir ve indirme sayfası tarayıcıda açılır. Uygulama açık kaynaklıdır; lisansı AGPL-3.0-or-later'dır.

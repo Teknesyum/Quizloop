@@ -50,7 +50,7 @@
           12
         ],
         "quote": "Klavyeden Ctrl ve artı büyütür, Ctrl ve eksi küçültür, Ctrl ve sıfır boyutu sıfırlar.",
-        "chapter": "Ayarlar, İstatistik ve Taşıma"
+        "chapter": "Ayarlar, İstatistik Ve Taşıma"
       },
       "difficulty": "kolay",
       "tags": [
@@ -110,7 +110,7 @@
           12
         ],
         "quote": "**Kapalı** seçilirse metin anında görünür.",
-        "chapter": "Ayarlar, İstatistik ve Taşıma"
+        "chapter": "Ayarlar, İstatistik Ve Taşıma"
       },
       "difficulty": "kolay",
       "tags": [
@@ -170,7 +170,7 @@
           12
         ],
         "quote": "Ayarlar ekranında yaptığın her değişiklik o anda kaydedilir ve **Ayarlar kaydedildi** bildirimi çıkar; ayrıca bir kaydet düğmesi yoktur.",
-        "chapter": "Ayarlar, İstatistik ve Taşıma"
+        "chapter": "Ayarlar, İstatistik Ve Taşıma"
       },
       "difficulty": "orta",
       "tags": [
@@ -230,7 +230,7 @@
           12
         ],
         "quote": "**Dil** seçici arayüzü Türkçe ile İngilizce arasında değiştirir.",
-        "chapter": "Ayarlar, İstatistik ve Taşıma"
+        "chapter": "Ayarlar, İstatistik Ve Taşıma"
       },
       "difficulty": "kolay",
       "tags": [
@@ -290,7 +290,7 @@
           13
         ],
         "quote": "Altında son yirmi altı haftayı gün gün gösteren bir ısı haritası bulunur; çok çalıştığın günler daha belirgin görünür.",
-        "chapter": "Ayarlar, İstatistik ve Taşıma"
+        "chapter": "Ayarlar, İstatistik Ve Taşıma"
       },
       "difficulty": "kolay",
       "tags": [
@@ -305,7 +305,7 @@
       "id": "quizloop-rehberi-0036",
       "conceptId": "kart-durumlari",
       "stem": {
-        "md": "**Kartların durumu** bölümü soruları hangi dört gruba ayırır?"
+        "md": "**Kartların Durumu** bölümü soruları hangi dört gruba ayırır?"
       },
       "kind": "coktan-secmeli",
       "choices": [
@@ -349,8 +349,8 @@
           13,
           13
         ],
-        "quote": "**Kartların durumu** bölümü soruları dört gruba ayırır: yeni, öğreniliyor, tekrarda ve emekli.",
-        "chapter": "Ayarlar, İstatistik ve Taşıma"
+        "quote": "**Kartların Durumu** bölümü soruları dört gruba ayırır: yeni, öğreniliyor, tekrarda ve emekli.",
+        "chapter": "Ayarlar, İstatistik Ve Taşıma"
       },
       "difficulty": "orta",
       "tags": [
@@ -358,14 +358,14 @@
         "istatistik"
       ],
       "vurgu": [],
-      "contentHash": "0db501188429af3a92f99daa623e001bf45a8ace1c34d6bb26412b18807717ff",
+      "contentHash": "3f876f7aec30051cda1898b7cfb369e5c1d69dbcdb7f7ddc5add4541643aab75",
       "deleted": false
     },
     {
       "id": "quizloop-rehberi-0037",
       "conceptId": "tasima-paketi-amaci",
       "stem": {
-        "md": "**Taşıma paketi** ne için kullanılır?"
+        "md": "**Taşıma Paketi** ne için kullanılır?"
       },
       "kind": "coktan-secmeli",
       "choices": [
@@ -409,8 +409,8 @@
           14,
           14
         ],
-        "quote": "İlerlemeni başka bir bilgisayara götürmek için **Taşıma paketi** kullanılır.",
-        "chapter": "Ayarlar, İstatistik ve Taşıma"
+        "quote": "İlerlemeni başka bir bilgisayara götürmek için **Taşıma Paketi** kullanılır.",
+        "chapter": "Ayarlar, İstatistik Ve Taşıma"
       },
       "difficulty": "kolay",
       "tags": [
@@ -418,7 +418,7 @@
         "taşıma"
       ],
       "vurgu": [],
-      "contentHash": "f378ff1b46dbe5de9c3350a5ca6afca8e8a3c45e89457edd010d97ce7cb22def",
+      "contentHash": "aedb7b306e7c25f0deaf41dc7bc99ee90fced155db03fde932c7c211d3516f31",
       "deleted": false
     },
     {
@@ -470,7 +470,7 @@
           14
         ],
         "quote": "Eski veritabanı silinmez, yedeklenir; ardından uygulama yeniden başlar.",
-        "chapter": "Ayarlar, İstatistik ve Taşıma"
+        "chapter": "Ayarlar, İstatistik Ve Taşıma"
       },
       "difficulty": "orta",
       "tags": [
@@ -530,7 +530,7 @@
           15
         ],
         "quote": "Çalışma verin cihazında kalır: cevapların, puanların, tekrar planın, işaretlediğin sorular ve ayarların yalnızca kendi cihazında saklanır.",
-        "chapter": "Ayarlar, İstatistik ve Taşıma"
+        "chapter": "Ayarlar, İstatistik Ve Taşıma"
       },
       "difficulty": "orta",
       "tags": [
@@ -594,7 +594,7 @@
           15
         ],
         "quote": "Uygulama internet olmadan da eksiksiz çalışır; ağa yalnızca güncelleme denetimi için çıkar.",
-        "chapter": "Ayarlar, İstatistik ve Taşıma"
+        "chapter": "Ayarlar, İstatistik Ve Taşıma"
       },
       "difficulty": "zor",
       "tags": [

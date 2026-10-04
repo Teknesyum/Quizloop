@@ -1,4 +1,4 @@
-# QuizLoop genel kültür notları
+# QuizLoop Genel Kültür Notları
 
 ## Sayfa 1: Kolay Sorular
 
