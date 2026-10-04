@@ -2,8 +2,10 @@ import { useEffect, useState } from 'react'
 import { tinykeys } from 'tinykeys'
 import type { ChapterSummary } from '@shared/ipc'
 import { Skeleton } from '@renderer/components/Skeleton'
+import { ViewToggle } from '@renderer/components/ViewToggle'
 import { t } from '@renderer/i18n'
 import { useApp } from '@renderer/store/app'
+import { useView } from '@renderer/view'
 
 function chapterCover(c: ChapterSummary): string | null {
   const m = c.chapter.match(/^\s*(\d+)/)
@@ -21,6 +23,7 @@ export function Chapters({ moduleId }: { moduleId: string }): React.JSX.Element 
   }, [moduleId])
 
   const [active, setActive] = useState(0)
+  const [view, setView] = useView()
 
   useEffect(() => {
     if (!rows?.length) return
@@ -94,8 +97,10 @@ export function Chapters({ moduleId }: { moduleId: string }): React.JSX.Element 
         </div>
       )}
 
+      {rows !== null && rows.length > 0 && <ViewToggle view={view} onChange={setView} />}
+
       {rows !== null && (
-        <div className="ql-grid">
+        <div className={`ql-grid ${view === 'list' ? 'ql-grid-list' : ''}`}>
           {rows.map((c, i) => (
             <article
               key={c.chapter || 'none'}

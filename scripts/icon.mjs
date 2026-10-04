@@ -30,7 +30,7 @@ function brain(cx, size) {
   return `<g transform="translate(${cx} ${cx}) scale(${k})">${half}<g transform="scale(-1 1)">${half}</g></g>`
 }
 
-function svg(size) {
+function svg(size, bare = false) {
   const r = (tokens.shape['r-window'].value * size) / 32
   const b = Math.max(1, size / 64)
   const cx = size / 2
@@ -48,19 +48,19 @@ function svg(size) {
   const back2 = [x1 - nrm[0] * head * 0.75, y1 - nrm[1] * head * 0.75]
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${size}" height="${size}" viewBox="0 0 ${size} ${size}">
 <defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${c('glass-base')}"/><stop offset="1" stop-color="${c('black')}"/></linearGradient></defs>
-<rect width="${size}" height="${size}" rx="${r}" fill="url(#g)"/>
-<rect x="${b / 2}" y="${b / 2}" width="${size - b}" height="${size - b}" rx="${r}" fill="none" stroke="${c('renk-1')}" stroke-opacity="0.7" stroke-width="${b}"/>
+${bare ? `<g transform="translate(${cx} ${cx}) scale(0.62) translate(${-cx} ${-cx})">` : `<rect width="${size}" height="${size}" rx="${r}" fill="url(#g)"/>
+<rect x="${b / 2}" y="${b / 2}" width="${size - b}" height="${size - b}" rx="${r}" fill="none" stroke="${c('renk-1')}" stroke-opacity="0.7" stroke-width="${b}"/>`}
 <path d="M ${x0} ${y0} A ${ring} ${ring} 0 1 1 ${x1} ${y1}" fill="none" stroke="${c('renk-1')}" stroke-width="${w}" stroke-linecap="butt"/>
 <path d="M ${tip.join(' ')} L ${back1.join(' ')} L ${back2.join(' ')} Z" fill="${c('renk-1')}"/>
 ${brain(cx, size)}
-</svg>`
+${bare ? '</g>' : ''}</svg>`
 }
 
 const work = mkdtempSync(join(tmpdir(), 'ql-icon-'))
-function render(size) {
-  const html = join(work, `i${size}.html`)
-  const out = join(work, `i${size}.png`)
-  writeFileSync(html, `<!doctype html><html><body style="margin:0;background:transparent">${svg(size)}</body></html>`)
+function render(size, bare = false) {
+  const html = join(work, `i${size}${bare ? 'b' : ''}.html`)
+  const out = join(work, `i${size}${bare ? 'b' : ''}.png`)
+  writeFileSync(html, `<!doctype html><html><body style="margin:0;background:transparent">${svg(size, bare)}</body></html>`)
   execFileSync(browser, [
     '--headless=new',
     '--disable-gpu',
@@ -120,4 +120,22 @@ writeFileSync(join(root, 'build/icon.png'), png[512])
 writeFileSync(join(root, 'build/icon.ico'), ico([16, 24, 32, 48, 64, 128, 256]))
 writeFileSync(join(root, 'build/icon.icns'), icns({ ic07: 128, ic08: 256, ic09: 512, ic10: 1024 }))
 copyFileSync(join(root, 'build/icon.png'), join(root, 'resources/icon.png'))
+const res = join(root, 'android/app/src/main/res')
+if (existsSync(res)) {
+  const dpi = { mdpi: 1, hdpi: 1.5, xhdpi: 2, xxhdpi: 3, xxxhdpi: 4 }
+  for (const [name, k] of Object.entries(dpi)) {
+    const legacy = render(48 * k)
+    writeFileSync(join(res, `mipmap-${name}/ic_launcher.png`), legacy)
+    writeFileSync(join(res, `mipmap-${name}/ic_launcher_round.png`), legacy)
+    writeFileSync(join(res, `mipmap-${name}/ic_launcher_foreground.png`), render(108 * k, true))
+  }
+  writeFileSync(
+    join(res, 'values/ic_launcher_background.xml'),
+    `<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="ic_launcher_background">${c('black')}</color>
+</resources>
+`
+  )
+}
 console.log('icon: build/icon.{png,ico,icns}, resources/icon.png from', browser)

@@ -95,6 +95,52 @@ body {
   gap: var(--tk-sp-4);
 }
 
+.ql-view-toggle {
+  justify-content: flex-end;
+}
+
+.ql-grid-list {
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--tk-sp-2);
+}
+
+.ql-grid-list > .ql-card {
+  flex-direction: row;
+  align-items: center;
+  padding: var(--tk-sp-2) var(--tk-sp-3);
+}
+
+.ql-grid-list .ql-card-head {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.ql-grid-list .ql-card-head .tk-h3 {
+  font-size: var(--tk-fs-2);
+  line-height: var(--tk-lh-heading);
+  overflow-wrap: anywhere;
+}
+
+.ql-grid-list .ql-percent {
+  font-size: var(--tk-fs-2);
+  line-height: var(--tk-lh-heading);
+}
+
+.ql-grid-list .ql-card > .ql-card-foot {
+  margin-top: 0;
+  flex: 0 0 auto;
+}
+
+.ql-grid-list .ql-cover,
+.ql-grid-list .ql-cover-card::after,
+.ql-grid-list .ql-tags,
+.ql-grid-list .ql-card-stats,
+.ql-grid-list .ql-progress,
+.ql-grid-list .ql-card-foot > .tk-hint,
+.ql-grid-list .ql-card-actions > .tk-btn-ghost {
+  display: none;
+}
+
 .ql-empty {
   display: flex;
   flex-direction: column;
@@ -1814,14 +1860,16 @@ button.ql-mark:not(:disabled):active {
 
 @media (max-width: 640px) {
   :root {
-    --ql-titlebar-h: calc(var(--tk-sp-5) * 2 + env(safe-area-inset-top));
-    --ql-nav-h: calc(var(--tk-sp-5) * 2 + var(--tk-sp-2));
+    --ql-titlebar-h: calc(var(--tk-sp-5) + var(--tk-sp-4) + env(safe-area-inset-top));
+    --ql-nav-h: calc(var(--tk-sp-5) * 2);
     --ql-keys-h: 0px;
     --ql-pad: var(--tk-sp-4);
   }
 
   .ql-shell .tk-titlebar {
+    box-sizing: border-box;
     height: var(--ql-titlebar-h);
+    min-height: 0;
     padding: env(safe-area-inset-top) var(--ql-pad) 0
       calc(var(--ql-pad) + env(safe-area-inset-left));
     -webkit-app-region: no-drag;
@@ -1845,7 +1893,9 @@ button.ql-mark:not(:disabled):active {
     inset-inline: 0;
     bottom: 0;
     z-index: 4;
+    box-sizing: border-box;
     height: calc(var(--ql-nav-h) + env(safe-area-inset-bottom));
+    min-height: 0;
     padding-bottom: env(safe-area-inset-bottom);
     gap: 0;
     background: var(--tk-surface);

@@ -6,9 +6,26 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.7.2] - 2026-10-04
+
+### Added
+
+- Library and chapter screens switch between cards and a compact list. The
+  choice is remembered.
+- In the book on Android, two fingers also drag the zoomed page.
+
 ### Changed
+- On Android the title bar and the bottom tab bar are thinner.
 - On first launch the interface follows the device language: Turkish on a Turkish
   device, English otherwise. A language chosen in the title bar still wins.
+
+### Fixed
+
+- The Android launcher shows the QuizLoop icon instead of the Capacitor one.
+- On Android the screen no longer slides under the title bar: the bars counted
+  the status bar and gesture area twice.
+- A desktop package opened on Android says to install the `-android` package
+  instead of reporting a missing file.
 
 ## [0.7.1] - 2026-10-02
 
