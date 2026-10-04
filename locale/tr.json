@@ -173,6 +173,8 @@
   "scale.down": "Arayüzü küçült (Ctrl -)",
   "scale.up": "Arayüzü büyüt (Ctrl +)",
   "scale.reset": "Arayüz boyutunu sıfırla (Ctrl 0)",
+  "scale.open": "Boyutu ayarla",
+  "scale.resetShort": "Sıfırla",
   "settings.fontScale": "Arayüz boyutu",
   "settings.fontScaleHelp": "Tüm uygulamayı ölçekler. Ctrl + ve Ctrl - ile de değişir, Ctrl 0 sıfırlar.",
   "settings.fontScaleHelpTouch": "Tüm uygulamayı ölçekler.",

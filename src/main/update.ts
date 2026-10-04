@@ -2,7 +2,10 @@ import { app, BrowserWindow, ipcMain, net, shell } from 'electron'
 import { autoUpdater, CancellationToken } from 'electron-updater'
 import { existsSync, readFileSync, writeFileSync } from 'node:fs'
 import { join } from 'node:path'
+import { offers, type KodManifest } from '@core/kod'
 import { newer } from '@core/version'
+import { downloadKod, fetchManifest } from '@main/kod'
+import { readState } from '@main/kodstate'
 import { getSettings } from '@main/settings'
 import { CH, type UpdateStatus } from '@shared/ipc'
 
@@ -15,6 +18,8 @@ export { newer }
 let status: UpdateStatus = { state: 'idle' }
 let cancel: CancellationToken | null = null
 let installAfter = false
+let kod: KodManifest | null = null
+let abort: AbortController | null = null
 
 const RECHECK_MS = 4 * 60 * 60 * 1000
 
@@ -29,6 +34,50 @@ function nativeUpdates(): boolean {
     app.isPackaged &&
     existsSync(join(process.resourcesPath, 'app-update.yml'))
   )
+}
+
+function kodUpdates(): boolean {
+  return process.platform === 'win32' && app.isPackaged
+}
+
+function restart(): void {
+  app.relaunch()
+  app.quit()
+}
+
+async function checkKod(): Promise<boolean> {
+  emit({ state: 'checking' })
+  const manifest = await fetchManifest()
+  if (!manifest || !offers(manifest, app.getVersion(), __KABUK__, readState())) return false
+  kod = manifest
+  emit({ state: 'available', version: manifest.version })
+  if (getSettings().autoUpdate) download(false)
+  return true
+}
+
+async function downloadCode(manifest: KodManifest): Promise<void> {
+  const mine = new AbortController()
+  abort = mine
+  emit({ state: 'downloading', version: manifest.version, percent: 0 })
+  try {
+    await downloadKod(
+      manifest,
+      (percent) => emit({ state: 'downloading', version: manifest.version, percent }),
+      mine.signal
+    )
+    abort = null
+    emit({ state: 'ready', version: manifest.version })
+    if (installAfter) restart()
+  } catch (e) {
+    abort = null
+    if (mine.signal.aborted) {
+      emit({ state: 'available', version: manifest.version })
+      return
+    }
+    kod = null
+    if (nativeUpdates()) await checkNative()
+    else emit({ state: 'error', error: String(e) })
+  }
 }
 
 async function checkNotice(): Promise<UpdateStatus> {
@@ -64,17 +113,23 @@ async function checkNative(): Promise<UpdateStatus> {
 function download(install: boolean): void {
   if (status.state !== 'available') return
   installAfter = install
+  if (kod) {
+    void downloadCode(kod)
+    return
+  }
   cancel = new CancellationToken()
   emit({ state: 'downloading', version: status.version, percent: 0 })
   autoUpdater.downloadUpdate(cancel).catch(() => undefined)
 }
 
-function check(): Promise<UpdateStatus> {
-  if (status.state === 'downloading' || status.state === 'ready') return Promise.resolve(status)
+async function check(): Promise<UpdateStatus> {
+  if (status.state === 'downloading' || status.state === 'ready') return status
   if (!app.isPackaged) {
     emit({ state: 'none' })
-    return Promise.resolve(status)
+    return status
   }
+  kod = null
+  if (kodUpdates() && (await checkKod())) return status
   return nativeUpdates() ? checkNative() : checkNotice()
 }
 
@@ -107,6 +162,11 @@ export function registerUpdates(): void {
   ipcMain.handle(CH.updateCheck, () => check())
   ipcMain.on(CH.updateDownload, (_e, install: boolean) => download(install === true))
   ipcMain.on(CH.updateCancel, () => {
+    if (status.state === 'downloading' && abort) {
+      installAfter = false
+      abort.abort()
+      return
+    }
     if (status.state !== 'downloading' || !cancel) return
     const token = cancel
     cancel = null
@@ -114,7 +174,9 @@ export function registerUpdates(): void {
     token.cancel()
   })
   ipcMain.on(CH.updateInstall, () => {
-    if (status.state === 'ready') autoUpdater.quitAndInstall(true, true)
+    if (status.state !== 'ready') return
+    if (kod) restart()
+    else autoUpdater.quitAndInstall(true, true)
   })
   ipcMain.on(CH.updateOpen, () => {
     const url = status.url && status.url.startsWith(RELEASES) ? status.url : RELEASES

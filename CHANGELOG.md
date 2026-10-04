@@ -6,6 +6,23 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.7.9] - 2026-10-04
+
+### Added
+
+- Clicking the percentage in the title bar opens a slider for the interface
+  size, with a reset button. The control itself is narrower.
+
+### Changed
+
+- Updates on Windows no longer run the installer. The app downloads a small
+  code bundle (about 3 MB instead of the full setup), checks it and switches to
+  it on the next start, or at once from the update badge. The installer is
+  for the first install, and for the rare release that changes Electron or a
+  native dependency. If a bundle fails to start twice, the app goes back to
+  the installed code. This release still arrives through the installer; the
+  ones after it do not.
+
 ## [0.7.8] - 2026-10-04
 
 ### Added

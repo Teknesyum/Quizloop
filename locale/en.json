@@ -173,6 +173,8 @@
   "scale.down": "Make the interface smaller (Ctrl -)",
   "scale.up": "Make the interface larger (Ctrl +)",
   "scale.reset": "Reset the interface size (Ctrl 0)",
+  "scale.open": "Adjust the size",
+  "scale.resetShort": "Reset",
   "settings.fontScale": "Interface size",
   "settings.fontScaleHelp": "Scales the whole app. Ctrl + and Ctrl - work too, Ctrl 0 resets.",
   "settings.fontScaleHelpTouch": "Scales the whole app.",

@@ -7,6 +7,7 @@ import { registerAssetProtocol } from './assets/protocol'
 import { openDatabase } from './db'
 import { registerHandlers } from './ipc/handlers'
 import { installFrom, resyncAll, samplePath } from './modules/install'
+import { markHealthy } from './kodstate'
 import { isPackage } from './modules/paket'
 import { applyPendingTransfer, registerTransfer } from './transfer'
 import { announceUpdated, registerUpdates } from './update'
@@ -53,7 +54,7 @@ async function boot(): Promise<void> {
     cb({ responseHeaders: { ...details.responseHeaders, 'Content-Security-Policy': [CSP] } })
   })
 
-  createWindow(icon)
+  createWindow(icon).webContents.once('did-finish-load', markHealthy)
   app.on('activate', () => {
     if (BrowserWindow.getAllWindows().length === 0) createWindow(icon)
   })

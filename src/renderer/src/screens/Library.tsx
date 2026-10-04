@@ -88,7 +88,9 @@ function ModuleCard({
         <span className="tk-hint">{t('library.card.questions', { count: m.questionCount })}</span>
         <div className="ql-card-actions">
           <CardMenu label={t('library.more')}>
-            <MenuItem onPick={() => go({ name: 'bank', moduleId: m.id })}>{t('library.bank')}</MenuItem>
+            <MenuItem onPick={() => go({ name: 'bank', moduleId: m.id })}>
+              {t('library.bank')}
+            </MenuItem>
             <MenuItem onPick={onUpdate}>{t('library.update')}</MenuItem>
             <MenuItem onPick={onReset}>{t('library.reset')}</MenuItem>
             <MenuItem danger onPick={onRemove}>
