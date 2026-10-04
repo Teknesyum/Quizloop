@@ -118,7 +118,7 @@ export interface PaketSonucu {
   bolum?: Bolumleme
 }
 
-export function paket(l: Loaded, opts: { android?: boolean } = {}): PaketSonucu {
+export function paket(l: Loaded): PaketSonucu {
   const dir = moduleDir(l)
   const metaFile = path.join(dir, 'module.json')
   if (!fs.existsSync(metaFile)) throw new Error(`modül yok: ${dir} (önce pack)`)
@@ -137,24 +137,21 @@ export function paket(l: Loaded, opts: { android?: boolean } = {}): PaketSonucu 
   }
   const outDir = path.join(l.root, 'dist-modules')
   fs.mkdirSync(outDir, { recursive: true })
-  if (opts.android) {
-    const b = bolumle(l)
-    for (const [dosya, yol] of b.dosyalar) entries[dosya] = [fs.readFileSync(yol), { level: 0 }]
-    const src = {
-      ...(kaynak ?? { title: next.name, sayfaOfseti: l.rules.kaynak.sayfaOfseti }),
-      bolumler: b.parcalar
-    }
-    const meta2 = ModuleMeta.parse({ ...disk, source: src })
-    entries['module.json'] = [Buffer.from(JSON.stringify(meta2, null, 1)), { level: 6 }]
-    const zip = zipSync(entries)
-    const out = path.join(outDir, `${next.id}-${next.version}-android.qlmod`)
-    fs.writeFileSync(out, zip)
-    return { out, files: files.length + b.dosyalar.size, bytes: zip.length, bolum: b }
-  }
-  const kitap = kitapYolu(l)
-  if (kitap) entries[`kaynak/${path.basename(kitap)}`] = [fs.readFileSync(kitap), { level: 0 }]
-  const zip = zipSync(entries)
   const out = path.join(outDir, `${next.id}-${next.version}.qlmod`)
+  if (!kitapYolu(l)) {
+    const zip = zipSync(entries)
+    fs.writeFileSync(out, zip)
+    return { out, files: files.length, bytes: zip.length }
+  }
+  const b = bolumle(l)
+  for (const [dosya, yol] of b.dosyalar) entries[dosya] = [fs.readFileSync(yol), { level: 0 }]
+  const src = {
+    ...(kaynak ?? { title: next.name, sayfaOfseti: l.rules.kaynak.sayfaOfseti }),
+    bolumler: b.parcalar
+  }
+  const meta2 = ModuleMeta.parse({ ...disk, source: src })
+  entries['module.json'] = [Buffer.from(JSON.stringify(meta2, null, 1)), { level: 6 }]
+  const zip = zipSync(entries)
   fs.writeFileSync(out, zip)
-  return { out, files: files.length + (kitap ? 1 : 0), bytes: zip.length }
+  return { out, files: files.length + b.dosyalar.size, bytes: zip.length, bolum: b }
 }

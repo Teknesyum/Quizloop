@@ -51,8 +51,8 @@ const HELP = `quizforge <komut> --rules <rules.yaml> [seçenekler]
   verify    deterministik denetim: build/verify-report.json
   pack      modules/<id>/ yaz; verify geçmeden çalışmaz
   paket     modules/<id>/ klasörünü etiketleriyle tek dosyaya sar: dist-modules/<id>-<sürüm>.qlmod
-            --android  tam PDF yerine chapters.json aralıklarından qpdf ile bölüm PDF'leri
-                       (kaynak/bolum/NN.pdf, module.json source.bolumler): <id>-<sürüm>-android.qlmod
+            kitap, chapters.json aralıklarından qpdf ile bölüm PDF'lerine ayrılır
+            (kaynak/bolum/NN.pdf, module.json source.bolumler); masaüstü ve Android aynı paketi açar
   flags     uygulamanın flags.json dosyasını oku, soruları birimlerine eşle, o birimleri
             yeniden üretim kuyruğuna koy   --flags <dosya> zorunlu, --gorsel, --dry-run
   zorluk    tek ölçütle yeniden etiketleme
@@ -88,7 +88,6 @@ function main(argv: string[]): number {
       gorsel: { type: 'boolean', default: false },
       tur: { type: 'string' },
       flags: { type: 'string' },
-      android: { type: 'boolean', default: false },
       help: { type: 'boolean', short: 'h', default: false }
     }
   })
@@ -282,7 +281,7 @@ function main(argv: string[]): number {
   }
 
   if (cmd === 'paket') {
-    const r = paket(l, { android: values.android })
+    const r = paket(l)
     if (r.bolum) {
       const b = r.bolum
       const mb = (n: number): string => (n / 1048576).toFixed(1)

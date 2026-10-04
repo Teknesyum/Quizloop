@@ -6,7 +6,7 @@ import type { Library } from './library'
 export interface BookResolver {
   path(moduleId: string, root: string, file?: string): string | null
   url(moduleId: string): string
-  file?(root: string, rel: string): string
+  file?(root: string, rel: string, moduleId: string): string
 }
 
 interface Src {
@@ -37,7 +37,7 @@ export async function sourceBook(
           bolum: b.bolum,
           ilkSayfa: b.ilkSayfa,
           sonSayfa: b.sonSayfa,
-          url: fileUrl(root, b.dosya)
+          url: fileUrl(root, b.dosya, moduleId)
         }))
       : null
   return {

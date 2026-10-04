@@ -97,6 +97,7 @@ async function servePdf(path: string, range: string | null): Promise<Response> {
   })
 }
 
+const PART = /^[\w-]+\.pdf$/i
 const ALLOWED = /\.(webp|png|svg|jpg|jpeg)$/i
 
 export function registerAssetProtocol(
@@ -106,8 +107,17 @@ export function registerAssetProtocol(
   protocol.handle(SCHEME, async (req) => {
     const url = new URL(req.url)
     if (url.hostname === 'kaynak') {
-      const [, moduleId] = url.pathname.split('/')
+      const [, moduleId, dir, name] = url.pathname.split('/')
       if (!moduleId) return new Response(null, { status: 404 })
+      if (dir === 'bolum') {
+        const root = rootOf(decodeURIComponent(moduleId))
+        const part = decodeURIComponent(name ?? '')
+        if (!root) return new Response(null, { status: 404 })
+        if (!PART.test(part)) return new Response(null, { status: 403 })
+        const file = join(root, 'kaynak', 'bolum', part)
+        if (!existsSync(file)) return new Response(null, { status: 404 })
+        return servePdf(file, req.headers.get('range'))
+      }
       const target = await pdfOf(decodeURIComponent(moduleId))
       if (!target) return new Response(null, { status: 404 })
       if (!/\.pdf$/i.test(target)) return new Response(null, { status: 403 })

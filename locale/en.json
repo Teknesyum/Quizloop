@@ -105,7 +105,7 @@
   "view.label": "Module and chapter view",
   "view.card": "Cards",
   "view.list": "List",
-  "book.missingPhone": "This package has no chapter files for the phone. Install the package whose name ends in -android.",
+  "book.missingPhone": "This package is in the old format and its book cannot open on the phone. Install the current package of the module.",
   "book.missing": "The source for this question was not found on disk.",
   "book.kesitAlt": "Source excerpt, {file} page {page}: {quote}",
   "media.zoom": "Click to enlarge the image",
