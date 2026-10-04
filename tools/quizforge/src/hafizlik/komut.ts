@@ -127,7 +127,7 @@ export async function hafizlik(argv: string[], root: string): Promise<number> {
   const metaJson = JSON.stringify(meta, null, 1)
   fs.writeFileSync(path.join(outDir, 'module.json'), metaJson)
   zip['module.json'] = [Buffer.from(metaJson), { level: 6 }]
-  const paketDir = path.join(root, 'dist-modules')
+  const paketDir = path.join(root, 'dist', 'modules')
   fs.mkdirSync(paketDir, { recursive: true })
   const paket = path.join(paketDir, `${MODUL}-${meta.version}.qlmod`)
   const sikisik = zipSync(zip)

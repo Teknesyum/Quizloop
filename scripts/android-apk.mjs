@@ -96,7 +96,7 @@ const r = spawnSync(
 )
 if (r.status !== 0) process.exit(r.status ?? 1)
 
-const outDir = join(root, 'dist-android')
+const outDir = join(root, 'dist', 'android')
 mkdirSync(outDir, { recursive: true })
 const apkDir = join(android, 'app', 'build', 'outputs', 'apk', kind)
 const signed = release && existsSync(join(apkDir, 'app-release.apk'))
