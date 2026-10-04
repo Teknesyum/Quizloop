@@ -1,6 +1,6 @@
 # QuizLoop Privacy Policy
 
-Effective date: 2026-10-02
+Effective date: 2026-10-04
 
 QuizLoop is a free, open-source (AGPL-3.0-or-later) spaced-repetition quiz app
 for Android, Windows, macOS and Linux, published by Teknesyum. This policy
@@ -34,20 +34,32 @@ select are read by the app on the device and are not uploaded anywhere.
 
 ## Network use
 
-The app works fully offline. It contacts the network in exactly one case: when
-you press **Check for updates** in Settings. The app then requests
-`https://api.github.com/repos/Teknesyum/Quizloop/releases/latest` to compare the
-latest release tag with the installed version. It sends no information about
-you or your study data. As with any web request, GitHub receives your IP
-address and standard request headers and handles them under the
+The app works fully offline. It contacts the network only to look for a new
+version of itself. A check requests
+`https://api.github.com/repos/Teknesyum/Quizloop/releases/latest`, or on Windows
+the small `kod.json` file attached to the latest release, and compares that
+version with the installed one. It sends no information about you or your study
+data. As with any web request, GitHub receives your IP address and standard
+request headers and handles them under the
 [GitHub Privacy Statement](https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement).
-The app never checks for updates on its own.
+
+When the check happens depends on the platform:
+
+- **Android**: only when you press **Check for updates** in Settings. The app
+  never checks on its own. A version installed from Google Play is updated by
+  Google Play itself, under Google's policy.
+- **Windows, macOS and Linux**: a few seconds after the app starts and then
+  every four hours while it stays open, and whenever you press **Check for
+  updates**.
+
+On Windows the app can also download the update from the same GitHub release.
+With **Silent update** on, which is the default, the download starts by itself
+and is applied when the app closes. With it off, the app only shows a badge and
+downloads when you ask. On macOS and Linux the app only tells you a new version
+exists.
 
 If you open the update notice or the source-code link, your browser opens a
 GitHub page. That visit is governed by GitHub's policy, not this one.
-
-The desktop versions behave the same way: the only network request is the
-update check you start yourself.
 
 ## Android permissions
 
@@ -74,8 +86,7 @@ that backup is done in your Google account settings.
 
 ## Children
 
-QuizLoop is a general-purpose study tool and is not directed at children under
-13. It collects no personal information from anyone.
+QuizLoop is a general-purpose study tool and is not directed at children under 13. It collects no personal information from anyone.
 
 ## Changes
 
