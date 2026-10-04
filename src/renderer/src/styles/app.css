@@ -297,6 +297,12 @@ body {
   width: fit-content;
 }
 
+.ql-ink-def {
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+
 .ql-cover-card {
   position: relative;
   isolation: isolate;
@@ -307,29 +313,7 @@ body {
 .ql-cover-card:has(.ql-cover):not(.ql-grid-list *) .ql-percent,
 .ql-cover-card:has(.ql-cover):not(.ql-grid-list *) .ql-tag,
 .ql-cover-card:has(.ql-cover):not(.ql-grid-list *) .tk-hint {
-  text-shadow:
-    0 0 var(--tk-sp-1) var(--tk-bg-from),
-    0 0 var(--tk-sp-1) var(--tk-bg-from),
-    0 0 var(--tk-sp-1) var(--tk-bg-from),
-    0 0 var(--tk-sp-1) var(--tk-bg-from),
-    0 0 var(--tk-sp-1) var(--tk-bg-from),
-    0 0 var(--tk-sp-1) var(--tk-bg-from),
-    0 0 var(--tk-sp-1) var(--tk-bg-from),
-    0 0 var(--tk-sp-1) var(--tk-bg-from),
-    0 0 var(--tk-sp-2) var(--tk-bg-from),
-    0 0 var(--tk-sp-2) var(--tk-bg-from),
-    0 0 var(--tk-sp-2) var(--tk-bg-from),
-    0 0 var(--tk-sp-2) var(--tk-bg-from),
-    0 0 var(--tk-sp-2) var(--tk-bg-from),
-    0 0 var(--tk-sp-2) var(--tk-bg-from),
-    0 0 var(--tk-sp-2) var(--tk-bg-from),
-    0 0 var(--tk-sp-2) var(--tk-bg-from),
-    0 0 var(--tk-sp-3) var(--tk-bg-from),
-    0 0 var(--tk-sp-3) var(--tk-bg-from),
-    0 0 var(--tk-sp-3) var(--tk-bg-from),
-    0 0 var(--tk-sp-3) var(--tk-bg-from),
-    0 0 var(--tk-sp-3) var(--tk-bg-from),
-    0 0 var(--tk-sp-3) var(--tk-bg-from);
+  filter: url(#ql-ink);
 }
 
 .ql-cover-card:has(.ql-cover):not(.ql-grid-list *) .ql-tag {
