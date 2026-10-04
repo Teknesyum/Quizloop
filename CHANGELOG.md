@@ -6,6 +6,15 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.7.22] - 2026-10-05
+
+### Changed
+
+- The desktop app looks for a new version every minute, quietly: no "checking"
+  flicker, one small request, and the full updater is only asked when the small
+  manifest says there is something it cannot apply itself. A release reaches a
+  running app within about a minute and restarts it, outside a session.
+
 ## [0.7.21] - 2026-10-05
 
 ### Changed
