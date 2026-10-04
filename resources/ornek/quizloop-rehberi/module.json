@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "id": "quizloop-rehberi",
   "name": "QuizLoop Rehberi: Uygulama Nasıl Kullanılır",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "language": "tr",
   "description": "Modül nedir, nasıl eklenir, oturum nasıl işler, sorular neden geri gelir: uygulamayı soru çözerek öğreten rehber.",
   "tags": [
@@ -10,7 +10,7 @@
     "örnek"
   ],
   "source": {
-    "title": "QuizLoop rehber notları",
+    "title": "QuizLoop Rehber Notları",
     "file": "notlar.md",
     "pages": 15,
     "sayfaOfseti": 0
@@ -34,7 +34,7 @@
     {
       "file": "blocks/0004.json",
       "count": 10,
-      "sha256": "dca686858e74172d8adb013502912fadabbe1200ac4ed9423296ad231bd8edce"
+      "sha256": "a618ed869af15a02a28587afe8ba8850cacb7adfb95e55b6b19697ecf658e1ca"
     }
   ],
   "questionCount": 40,

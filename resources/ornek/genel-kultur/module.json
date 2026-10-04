@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "id": "genel-kultur",
   "name": "Genel Kültür: Kolaydan Zora",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "language": "tr",
   "description": "Bilgi yarışması tadında, kolay, orta ve zor üç bölümlük özgün genel kültür soruları.",
   "tags": [
@@ -10,7 +10,7 @@
     "örnek"
   ],
   "source": {
-    "title": "QuizLoop genel kültür notları",
+    "title": "QuizLoop Genel Kültür Notları",
     "file": "notlar.md",
     "pages": 9,
     "sayfaOfseti": 0

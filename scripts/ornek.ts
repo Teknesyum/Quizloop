@@ -40,21 +40,21 @@ const SPECS: Spec[] = [
     draft: 'rehber',
     id: 'quizloop-rehberi',
     name: 'QuizLoop Rehberi: Uygulama Nasıl Kullanılır',
-    version: '1.0.1',
+    version: '1.0.2',
     description:
       'Modül nedir, nasıl eklenir, oturum nasıl işler, sorular neden geri gelir: uygulamayı soru çözerek öğreten rehber.',
     tags: ['rehber', 'örnek'],
-    title: 'QuizLoop rehber notları'
+    title: 'QuizLoop Rehber Notları'
   },
   {
     draft: 'genel-kultur',
     id: 'genel-kultur',
     name: 'Genel Kültür: Kolaydan Zora',
-    version: '1.0.0',
+    version: '1.0.1',
     description:
       'Bilgi yarışması tadında, kolay, orta ve zor üç bölümlük özgün genel kültür soruları.',
     tags: ['genel-kültür', 'örnek'],
-    title: 'QuizLoop genel kültür notları'
+    title: 'QuizLoop Genel Kültür Notları'
   }
 ]
 

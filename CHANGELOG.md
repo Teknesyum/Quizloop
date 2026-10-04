@@ -6,6 +6,18 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.7.13] - 2026-10-04
+
+### Changed
+
+- Headings are written in Title Case, every word capitalised, in Turkish and
+  English: screen and section headings, dialog titles, the introduction and
+  progress titles. A test keeps new headings to the same rule.
+- The dark halo behind text and icons on cover cards is wider, so text stays
+  readable over busier covers.
+- Sample modules follow the heading rule: the guide is 1.0.2, general knowledge
+  1.0.1.
+
 ## [0.7.12] - 2026-10-04
 
 ### Changed

@@ -9,6 +9,8 @@ typed by `shared/ipc.ts`.
 - `store/app.ts` — zustand. Toasts cap at `TOAST_MAX`.
 - `keys.ts` — tinykeys. Bindings match `event.code` (`Space`, `KeyB`, `Digit1`).
 - `i18n.ts` — every user-facing string of three words or more comes from here.
+  Headings are Title Case, Every Word Capitalised, in both languages: `*.title`,
+  `*Title`, `work.task.*` and the list in `shared/locale.test.ts`, which fails otherwise.
 - `styles/app.css` — project styles only. The teknesyum-ui sheets under
   `teknesyum-ui/css/` are vendored; edit them never.
 
