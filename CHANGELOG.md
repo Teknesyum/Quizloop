@@ -6,6 +6,14 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.7.24] - 2026-10-05
+
+### Changed
+
+- The title, tags and counters of a cover card now share one black shape with
+  one blue outline. Before, each piece drew its own and the outlines crossed
+  where pieces sat close together. The shape is also rounder.
+
 ## [0.7.23] - 2026-10-05
 
 ### Changed
