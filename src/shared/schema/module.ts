@@ -30,6 +30,7 @@ export const ModuleMeta = z.object({
       file: z.string().optional(),
       pages: z.number().int().positive().optional(),
       sayfaOfseti: z.number().int().default(0),
+      sagdanSola: z.boolean().optional(),
       bolumler: z.array(BookPart).optional()
     })
     .optional(),

@@ -6,6 +6,25 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.7.17] - 2026-10-04
+
+### Added
+
+- A module can declare its book right-to-left (`source.sagdanSola`). The book
+  view then opens like a mushaf: the lower page on the right, pages turn from
+  the left, and the arrow keys swap (left arrow goes forward).
+- A question can carry the boxes of its answer on the page
+  (`source.isaretler`). The book view frames them and scrolls to the first one.
+  The memorisation builder computes them from the verse markers in the mushaf
+  PDF, so "See in the Qur'an" now shows which line the answer is on. The box is
+  narrowed by word position and can be off by a word or two.
+
+### Changed
+
+- Text on a cover card is now backed by a solid dark shape that follows the
+  letters, instead of the rectangular plates of 0.7.16. Cards without a cover
+  and the list view keep their plain look.
+
 ## [0.7.16] - 2026-10-04
 
 ### Added

@@ -22,6 +22,7 @@ interface Highlight {
   bbox?: [number, number, number, number]
   bboxPage?: number
   quote?: string
+  marks?: { page: number; bbox: [number, number, number, number] }[]
 }
 
 interface Job {
@@ -73,7 +74,11 @@ function pinchSpan(t: TouchList): { d: number; x: number; y: number } | null {
 interface FlipInner {
   isUserTouch: boolean
   isUserMove: boolean
-  getUI(): { touchPoint: unknown }
+  getUI(): {
+    touchPoint: unknown
+    getDistElement(): HTMLElement
+    getMousePos(x: number, y: number): { x: number; y: number }
+  }
   getFlipController(): { stopMove(): void }
 }
 
@@ -84,6 +89,14 @@ function dropTouch(pf: PageFlip | null): void {
   if (app.isUserTouch && app.isUserMove) app.getFlipController().stopMove()
   app.isUserTouch = false
   app.isUserMove = false
+}
+
+function mirrorPointer(pf: PageFlip): void {
+  const ui = (pf as unknown as FlipInner).getUI()
+  ui.getMousePos = (x, y) => {
+    const r = ui.getDistElement().getBoundingClientRect()
+    return { x: r.right - x, y: y - r.top }
+  }
 }
 
 function Leaf({
@@ -141,6 +154,20 @@ function Leaf({
       if (bboxHere) {
         const [x0, y0, x1, y1] = bboxHere
         setRects([{ left: x0, top: y0, width: x1 - x0, height: y1 - y0, outline: true }])
+        return
+      }
+      if (highlight.marks) {
+        setRects(
+          highlight.marks
+            .filter((m) => m.page === pdfPage)
+            .map(({ bbox: [x0, y0, x1, y1] }) => ({
+              left: x0,
+              top: y0,
+              width: x1 - x0,
+              height: y1 - y0,
+              outline: true
+            }))
+        )
         return
       }
       if (!highlight.quote) return
@@ -274,6 +301,7 @@ export function BookViewer({
   onClose(): void
 }): React.JSX.Element {
   const offset = book?.sayfaOfseti ?? 0
+  const rtl = book?.sagdanSola === true
   const target = useMemo(
     () => bookTarget(book, sourcePdfPage(source, offset)),
     [book, source, offset]
@@ -378,6 +406,7 @@ export function BookViewer({
       showPageCorners: true
     })
     pf.loadFromHTML(els)
+    if (rtl) mirrorPointer(pf)
     pf.on('flip', (e) => setCur(Number(e.data) + shift))
     pf.on('changeOrientation', (e) => setPortrait(e.data === 'portrait'))
     flipRef.current = pf
@@ -390,7 +419,7 @@ export function BookViewer({
       pf.destroy()
       root.remove()
     }
-  }, [doc, leafWidth, leafH, maxLeft, shift])
+  }, [doc, leafWidth, leafH, maxLeft, shift, rtl])
 
   useEffect(() => {
     if (zoom === sharpZoom) return
@@ -505,17 +534,19 @@ export function BookViewer({
         if (zoomRef.current > 1) zoomTo(1)
         else onClose()
       },
-      ArrowRight: () => turn('next'),
-      ArrowLeft: () => turn('prev'),
+      ArrowRight: () => turn(rtl ? 'prev' : 'next'),
+      ArrowLeft: () => turn(rtl ? 'next' : 'prev'),
       Space: (e) => {
         e.preventDefault()
         turn('next')
       }
     })
-  }, [turn, onClose, zoomTo])
+  }, [turn, onClose, zoomTo, rtl])
 
   const highlight = useMemo<Highlight | null>(() => {
     if (source.kesit) return { bbox: source.kesit.bbox, bboxPage: source.kesit.pdfSayfa - base }
+    if (source.isaretler?.length)
+      return { marks: source.isaretler.map((m) => ({ page: m.pdfSayfa - base, bbox: m.bbox })) }
     return { quote: source.quote }
   }, [source, base])
 
@@ -606,7 +637,7 @@ export function BookViewer({
               doc ? (
                 <div
                   ref={hostRef}
-                  className="ql-book-stage"
+                  className={`ql-book-stage ${rtl ? 'ql-book-rtl' : ''}`}
                   style={
                     {
                       '--ql-leaf-w': `${leafWidth}px`,
@@ -677,7 +708,7 @@ export function BookViewer({
           </div>
           {zoomed && (
             <div ref={paneRef} className="ql-bv-zoom">
-              <div ref={trackRef} className="ql-bv-track">
+              <div ref={trackRef} className={`ql-bv-track ${rtl ? 'ql-bv-rtl' : ''}`}>
                 {pages.map((i) => (
                   <div key={i} className="ql-bv-zleaf" style={{ width: leafWidth * zoom }}>
                     <Leaf

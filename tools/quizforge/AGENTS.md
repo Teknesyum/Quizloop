@@ -16,5 +16,5 @@ Module production line. Separate package, same repo, never bundled into the app.
 - `zorluk` relabels difficulty with the single rubric in `src/zorluk.ts` (also used by the generation prompt): `export` batches, subagents write `build/zorluk/out/`, `apply` writes back.
 - `secenek` (`src/secenek.ts`): `olc` measures choice bias, `export` batches 40 to `build/secenek/in/`,
   subagents write `out/`, `apply` validates and writes back; marking choices stay frozen.
-- `hafizlik` (`src/hafizlik/`, no `--rules`): Qur'an memorisation module from pinned text, meal and mushaf PDF (`py/hafizlik_kitap.py`); 30 chapters by juz, review round (dönüş) as a note; writes `modules/kuran-hafizlik/` and its `.qlmod`.
+- `hafizlik` (`src/hafizlik/`, no `--rules`): Qur'an memorisation module from pinned text, meal and mushaf PDF (`py/hafizlik_kitap.py` splits it, `py/hafizlik_satir.py` finds each verse's lines, decision 0016); 30 chapters by juz, review round (dönüş) as a note; writes `modules/kuran-hafizlik/` and its `.qlmod`.
 - Tests: `npx vitest run --config tools/quizforge/vitest.config.ts`. No code comments; model prompts Turkish.

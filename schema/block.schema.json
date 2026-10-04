@@ -416,6 +416,43 @@
                   "bbox",
                   "ref"
                 ]
+              },
+              "isaretler": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "pdfSayfa": {
+                      "type": "integer",
+                      "exclusiveMinimum": 0,
+                      "maximum": 9007199254740991
+                    },
+                    "bbox": {
+                      "type": "array",
+                      "prefixItems": [
+                        {
+                          "type": "number"
+                        },
+                        {
+                          "type": "number"
+                        },
+                        {
+                          "type": "number"
+                        },
+                        {
+                          "type": "number"
+                        }
+                      ],
+                      "items": false,
+                      "minItems": 4,
+                      "maxItems": 4
+                    }
+                  },
+                  "required": [
+                    "pdfSayfa",
+                    "bbox"
+                  ]
+                }
               }
             },
             "required": [

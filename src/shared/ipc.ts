@@ -226,6 +226,7 @@ export interface SourceBook {
   sayfaOfseti: number
   pages: number | null
   parts?: BookPartLink[] | null
+  sagdanSola?: boolean
 }
 
 export interface IntegrityReport {

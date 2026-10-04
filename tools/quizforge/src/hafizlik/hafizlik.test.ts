@@ -2,7 +2,7 @@ import { describe, expect, it } from 'vitest'
 import { Question } from '../../../../src/shared/schema/question.ts'
 import { AYET_SAYILARI, caprazDenetle, sayimDenetle, type Meal, type Sure } from './kaynak.ts'
 import { kelimeler, kok, parcala, sade } from './metin.ts'
-import { baglamlar, donus, parcalar, uret } from './uret.ts'
+import { baglamlar, donus, isaretle, parcalar, uret } from './uret.ts'
 
 const T = 'ؕ'
 const C = 'ۚ'
@@ -95,6 +95,27 @@ describe('uret', () => {
     )!
     expect(q.solution[0]).toMatchObject({ type: 'text' })
     expect(JSON.stringify(q.solution[0])).toContain('Besmele')
+  })
+
+  it('cevap parçasının kutusu satırda sağdan sola, kelime oranıyla düşer', () => {
+    const cevap = parcalar(sureler)[1]!
+    expect([cevap.bas, cevap.son, cevap.ayetKelime]).toEqual([3, 6, 6])
+    expect(
+      isaretle(
+        [
+          [7, 100, 10, 300, 40],
+          [7, 50, 46, 150, 76]
+        ],
+        cevap
+      )
+    ).toEqual([
+      { pdfSayfa: 7, bbox: [100, 10, 150, 40] },
+      { pdfSayfa: 7, bbox: [50, 46, 150, 76] }
+    ])
+    const q = uret(sureler, meal, { sikli: false, satirlar: { '1:1': [[7, 100, 10, 300, 40]] } })
+      .sorular[0]!
+    expect(q.source.pages).toEqual([7, 7])
+    expect(q.source.isaretler).toEqual([{ pdfSayfa: 7, bbox: [100, 10, 200, 40] }])
   })
 
   it('kelime meali cevap parçasına kırpılır', () => {

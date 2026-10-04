@@ -62,12 +62,18 @@ export const Kesit = z.object({
   ref: ImageRef
 })
 
+export const Isaret = z.object({
+  pdfSayfa: z.number().int().positive(),
+  bbox: z.tuple([z.number(), z.number(), z.number(), z.number()])
+})
+
 export const Source = z.object({
   file: z.string().min(1),
   pages: z.tuple([z.number().int().positive(), z.number().int().positive()]),
   quote: z.string().min(1),
   chapter: z.string().optional(),
-  kesit: Kesit.optional()
+  kesit: Kesit.optional(),
+  isaretler: z.array(Isaret).optional()
 })
 
 export const QuestionKind = z.enum(['coktan-secmeli', 'acik-uclu', 'isaretleme'])
@@ -187,6 +193,7 @@ export type Mask = z.infer<typeof Mask>
 export type Box = z.infer<typeof Box>
 export type Stem = z.infer<typeof Stem>
 export type Kesit = z.infer<typeof Kesit>
+export type Isaret = z.infer<typeof Isaret>
 export type Choice = z.infer<typeof Choice>
 export type ChoiceKey = z.infer<typeof ChoiceKey>
 export type SolutionBlock = z.infer<typeof SolutionBlock>
