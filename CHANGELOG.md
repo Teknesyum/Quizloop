@@ -6,6 +6,20 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.7.5] - 2026-10-04
+
+### Added
+
+- The desktop title bar has an interface size control: smaller, larger, and the
+  percentage, which resets to 100% when clicked. On Android the same setting
+  stays in Settings, now named "Interface size".
+
+### Changed
+
+- A release tag no longer uploads the Android build to Google Play. The new
+  `Play` workflow uploads a chosen tag to the closed test when it is started
+  by hand.
+
 ## [0.7.4] - 2026-10-04
 
 ### Changed

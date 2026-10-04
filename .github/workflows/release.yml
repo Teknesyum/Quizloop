@@ -51,7 +51,6 @@ jobs:
       QUIZLOOP_KEY_ALIAS: upload
       QUIZLOOP_STORE_PASSWORD: ${{ secrets.QUIZLOOP_STORE_PASSWORD }}
       QUIZLOOP_KEY_PASSWORD: ${{ secrets.QUIZLOOP_KEY_PASSWORD }}
-      PLAY_JSON: ${{ secrets.PLAY_SERVICE_ACCOUNT_JSON }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -78,15 +77,6 @@ jobs:
           name: play-aab
           path: dist-android/*-release.aab
           if-no-files-found: error
-      - name: Upload to the Play closed test
-        if: env.PLAY_JSON != ''
-        uses: r0adkll/upload-google-play@v1
-        with:
-          serviceAccountJsonPlainText: ${{ secrets.PLAY_SERVICE_ACCOUNT_JSON }}
-          packageName: com.teknesyum.QuizLoop
-          releaseFiles: dist-android/QuizLoop-*-release.aab
-          track: alpha
-          status: completed
 
   publish:
     needs: [build, android]

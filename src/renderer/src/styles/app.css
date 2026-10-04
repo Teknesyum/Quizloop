@@ -55,6 +55,51 @@ body {
 .ql-update {
   display: flex;
   align-items: center;
+.ql-scale {
+  display: inline-flex;
+  align-self: center;
+  margin-inline-end: var(--tk-sp-2);
+  padding: calc(var(--tk-sp-1) / 2);
+  border-radius: var(--tk-r-btn);
+  background: var(--tk-renk-1-10);
+  -webkit-app-region: no-drag;
+}
+
+.ql-scale__btn {
+  min-width: calc(var(--tk-sp-5) + var(--tk-sp-2));
+  padding: 0 var(--tk-sp-2);
+  border: 0;
+  border-radius: var(--tk-r-btn);
+  background: transparent;
+  color: var(--tk-text-label);
+  font: inherit;
+  font-size: var(--tk-fs-1);
+  font-weight: var(--tk-fw-semi);
+  line-height: calc(var(--tk-titlebar-h-min) - var(--tk-sp-2));
+  cursor: pointer;
+  transition: color var(--tk-t-base) var(--tk-e-out);
+}
+
+.ql-scale__btn:hover,
+.ql-scale__btn:focus-visible {
+  color: var(--tk-renk-2-text);
+}
+
+.ql-scale__btn:focus-visible {
+  outline: var(--tk-focus-w) solid var(--tk-renk-1);
+  outline-offset: var(--tk-focus-offset);
+  box-shadow: 0 0 0 var(--tk-focus-w) var(--tk-bg);
+}
+
+.ql-scale__btn:active {
+  color: var(--tk-text);
+}
+
+.ql-scale__btn:disabled {
+  color: var(--tk-disabled);
+  cursor: not-allowed;
+}
+
   gap: var(--tk-sp-2);
   padding-right: var(--tk-sp-2);
 }

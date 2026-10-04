@@ -157,26 +157,28 @@ export function Settings(): React.JSX.Element {
               <span className="tk-hint">{t('settings.typerHelp')}</span>
             </div>
 
-            <div className="tk-field">
-              <span className="tk-label">{t('settings.fontScale')}</span>
-              <div className="ql-segment" role="radiogroup" aria-label={t('settings.fontScale')}>
-                {FONT_SCALES.map((f) => (
-                  <button
-                    key={f}
-                    type="button"
-                    role="radio"
-                    aria-checked={settings.fontScale === f}
-                    className={`tk-btn ${settings.fontScale === f ? 'tk-btn-primary' : 'tk-btn-ghost'} ql-btn-sm tk-mono`}
-                    onClick={() => apply({ fontScale: f })}
-                  >
-                    {Math.round(f * 100)}%
-                  </button>
-                ))}
+            {!caps.windowChrome && (
+              <div className="tk-field">
+                <span className="tk-label">{t('settings.fontScale')}</span>
+                <div className="ql-segment" role="radiogroup" aria-label={t('settings.fontScale')}>
+                  {FONT_SCALES.map((f) => (
+                    <button
+                      key={f}
+                      type="button"
+                      role="radio"
+                      aria-checked={settings.fontScale === f}
+                      className={`tk-btn ${settings.fontScale === f ? 'tk-btn-primary' : 'tk-btn-ghost'} ql-btn-sm tk-mono`}
+                      onClick={() => apply({ fontScale: f })}
+                    >
+                      {Math.round(f * 100)}%
+                    </button>
+                  ))}
+                </div>
+                <span className="tk-hint">
+                  {t(caps.shortcuts ? 'settings.fontScaleHelp' : 'settings.fontScaleHelpTouch')}
+                </span>
               </div>
-              <span className="tk-hint">
-                {t(caps.shortcuts ? 'settings.fontScaleHelp' : 'settings.fontScaleHelpTouch')}
-              </span>
-            </div>
+            )}
 
             {caps.folders && (
               <div className="tk-field">
