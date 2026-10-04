@@ -38,6 +38,10 @@
   margin: auto;
 }
 
+.ql-bv-rtl {
+  flex-direction: row-reverse;
+}
+
 .ql-bv-zleaf {
   flex: 0 0 auto;
 }

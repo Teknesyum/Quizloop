@@ -13,6 +13,7 @@ interface Src {
   file?: string
   pages?: number
   sayfaOfseti: number
+  sagdanSola?: boolean
   bolumler?: { bolum: number; ilkSayfa: number; sonSayfa: number; dosya: string }[]
 }
 
@@ -46,6 +47,7 @@ export async function sourceBook(
     path,
     sayfaOfseti: src?.sayfaOfseti ?? 0,
     pages: src?.pages ?? null,
-    parts
+    parts,
+    sagdanSola: src?.sagdanSola === true
   }
 }

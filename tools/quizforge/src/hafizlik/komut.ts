@@ -15,10 +15,10 @@ import {
   mushafYukle,
   type Meal
 } from './kaynak.ts'
-import { uret } from './uret.ts'
+import { uret, type Satir } from './uret.ts'
 
 const MODUL = 'kuran-hafizlik'
-const SURUM = '1.5.0'
+const SURUM = '1.6.0'
 const DONUS_NOTU =
   'Dönüş, her cüzün son sayfasından başa doğru sayılır: 1. Dönüş son sayfadır, 20. Dönüş ilk sayfadır. 30. Cüz 24 sayfadır; son beş sayfası (600-604) 1. Dönüş sayılır.'
 const BLOK = 50
@@ -86,7 +86,24 @@ export async function hafizlik(argv: string[], root: string): Promise<number> {
       `çapraz denetim: ${c.ayet - c.kokFarki.length}/${c.ayet} ayet harfi harfine aynı, ${c.kokFarki.length} bilinen imla farkı; kelime sayısı ${c.kelimeEsit} ayette eşit`
     )
   }
+  const python = process.platform === 'win32' ? 'python' : 'python3'
+  const pyDir = path.join(root, 'tools', 'quizforge', 'py')
+  const kitap = values.kitapsiz ? null : await kitapYukle(buildDir)
+  let satirlar: Record<string, Satir[]> | undefined
+  if (kitap) {
+    const py = spawnSync(python, [path.join(pyDir, 'hafizlik_satir.py'), kitap], {
+      encoding: 'utf8',
+      maxBuffer: 1 << 26
+    })
+    if (py.status !== 0)
+      throw new Error(
+        `mushaf satırları okunamadı: ${(py.stderr || py.error?.message || '').trim()}`
+      )
+    satirlar = JSON.parse(py.stdout) as Record<string, Satir[]>
+    console.log(`mushaf satırları: ${Object.keys(satirlar).length} ayetin yeri bulundu`)
+  }
   const r = uret(sureler, meal, {
+    satirlar,
     cuzler: cuzAraligi(values.cuz),
     sikli: !values.siksiz,
     enAz: values['en-az'] ? Number(values['en-az']) : undefined
@@ -109,14 +126,11 @@ export async function hafizlik(argv: string[], root: string): Promise<number> {
     blocks.push({ file, count: block.questions.length, sha256: sha256(data) })
   }
   const bolumler: BookPart[] = []
-  if (!values.kitapsiz) {
-    const kitap = await kitapYukle(buildDir)
+  if (kitap) {
     const bolumDir = path.join(buildDir, 'bolum')
-    const py = spawnSync(
-      process.platform === 'win32' ? 'python' : 'python3',
-      [path.join(root, 'tools', 'quizforge', 'py', 'hafizlik_kitap.py'), kitap, bolumDir],
-      { encoding: 'utf8' }
-    )
+    const py = spawnSync(python, [path.join(pyDir, 'hafizlik_kitap.py'), kitap, bolumDir], {
+      encoding: 'utf8'
+    })
     if (py.status !== 0)
       throw new Error(`mushaf PDF bölünemedi: ${(py.stderr || py.error?.message || '').trim()}`)
     const parcalar = JSON.parse(py.stdout) as (Omit<BookPart, 'dosya'> & { ad: string })[]
@@ -141,7 +155,7 @@ export async function hafizlik(argv: string[], root: string): Promise<number> {
     tags: ['kuran', 'hafizlik'],
     source: {
       title: `Diyanet mushafı (kuran.diyanet.gov.tr), alperenugus/Kuran@${MUSHAF_SURUM.slice(0, 7)}, CC BY 4.0`,
-      ...(bolumler.length ? { pages: 604, sayfaOfseti: 0, bolumler } : {})
+      ...(bolumler.length ? { pages: 604, sayfaOfseti: 0, sagdanSola: true, bolumler } : {})
     },
     blocks,
     questionCount: r.sorular.length,

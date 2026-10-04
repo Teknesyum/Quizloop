@@ -1,4 +1,8 @@
-import { ChoiceKey, type Question as QuestionT } from '../../../../src/shared/schema/question.ts'
+import {
+  ChoiceKey,
+  type Isaret,
+  type Question as QuestionT
+} from '../../../../src/shared/schema/question.ts'
 import { canonical, sha256 } from '../hash.ts'
 import type { KelimeMeal, Meal, Sure } from './kaynak.ts'
 import { AYET_SONU, ilkIki, parcala, sade, sonIki } from './metin.ts'
@@ -19,7 +23,10 @@ export interface Parca {
   kesim: Kesim
 }
 
+export type Satir = [number, number, number, number, number]
+
 export interface Secenekler {
+  satirlar?: Record<string, Satir[]>
   enAz?: number
   baglam?: number
   cuzler?: Set<number>
@@ -242,6 +249,28 @@ function cozum(
   return blok
 }
 
+const yuvarla = (n: number): number => Math.round(n * 10) / 10
+
+export function isaretle(satirlar: Satir[] | undefined, cevap: Parca): Isaret[] {
+  if (!satirlar?.length || cevap.ayetKelime <= 0) return []
+  const toplam = satirlar.reduce((n, s) => n + (s[3] - s[1]), 0)
+  const bas = (cevap.bas / cevap.ayetKelime) * toplam
+  const son = (cevap.son / cevap.ayetKelime) * toplam
+  const cikti: Isaret[] = []
+  let yol = 0
+  for (const [sayfa, x0, y0, x1, y1] of satirlar) {
+    const a = Math.max(bas, yol)
+    const b = Math.min(son, yol + (x1 - x0))
+    if (b - a > 1)
+      cikti.push({
+        pdfSayfa: sayfa,
+        bbox: [yuvarla(x1 - (b - yol)), y0, yuvarla(x1 - (a - yol)), y1]
+      })
+    yol += x1 - x0
+  }
+  return cikti
+}
+
 function ozet(q: Omit<QuestionT, 'contentHash'>): string {
   return sha256(
     canonical({ stem: q.stem, choices: q.choices, correct: q.correct, solution: q.solution })
@@ -295,15 +324,19 @@ export function uret(sureler: Sure[], meal: Meal | null, sec: Secenekler = {}): 
       belirsiz += 1
       md += `\n\n${kacis(sure.ad)} Suresi, ${soru.ayet}. Ayet`
     }
+    const isaretler = isaretle(sec.satirlar?.[`${cevap.sure}:${cevap.ayet}`], cevap)
+    const ilk = isaretler[0]?.pdfSayfa ?? cevap.sayfa
+    const sonSayfa = isaretler[isaretler.length - 1]?.pdfSayfa ?? cevap.sayfa
     const ortak = {
       conceptId: `${soru.sure}:${soru.ayet}/${soru.sira}`,
       stem: { md },
       solution: cozum(sureler, meal, soru, cevap),
       source: {
         file: 'Kuran.pdf',
-        pages: [cevap.sayfa, cevap.sayfa] as [number, number],
+        pages: [ilk, sonSayfa] as [number, number],
         quote: cevap.metin,
-        chapter: `${soru.cuz}. Cüz`
+        chapter: `${soru.cuz}. Cüz`,
+        ...(isaretler.length ? { isaretler } : {})
       },
       vurgu: [],
       deleted: false

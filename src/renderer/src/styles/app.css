@@ -303,37 +303,49 @@ body {
   overflow: hidden;
 }
 
-.ql-cover-card .tk-h3,
-.ql-cover-card .ql-percent,
-.ql-cover-card .ql-tag,
-.ql-cover-card .tk-hint,
-.ql-cover-card .tk-btn-ghost {
-  background: var(--tk-scrim);
+.ql-cover-card {
+  --ql-ink-r: var(--tk-sp-2);
+  --ql-ink-d: calc(var(--ql-ink-r) * 0.7071);
+  --ql-ink-c: calc(var(--ql-ink-r) * 0.9239);
+  --ql-ink-s: calc(var(--ql-ink-r) * 0.3827);
+  --ql-ink-h: calc(var(--ql-ink-r) * 0.5);
+  --ql-ink-e: calc(var(--ql-ink-h) * 0.7071);
+  --ql-ink:
+    var(--ql-ink-r) 0 0 var(--tk-bg-from), calc(-1 * var(--ql-ink-r)) 0 0 var(--tk-bg-from),
+    0 var(--ql-ink-r) 0 var(--tk-bg-from), 0 calc(-1 * var(--ql-ink-r)) 0 var(--tk-bg-from),
+    var(--ql-ink-d) var(--ql-ink-d) 0 var(--tk-bg-from),
+    calc(-1 * var(--ql-ink-d)) var(--ql-ink-d) 0 var(--tk-bg-from),
+    var(--ql-ink-d) calc(-1 * var(--ql-ink-d)) 0 var(--tk-bg-from),
+    calc(-1 * var(--ql-ink-d)) calc(-1 * var(--ql-ink-d)) 0 var(--tk-bg-from),
+    var(--ql-ink-c) var(--ql-ink-s) 0 var(--tk-bg-from),
+    var(--ql-ink-c) calc(-1 * var(--ql-ink-s)) 0 var(--tk-bg-from),
+    calc(-1 * var(--ql-ink-c)) var(--ql-ink-s) 0 var(--tk-bg-from),
+    calc(-1 * var(--ql-ink-c)) calc(-1 * var(--ql-ink-s)) 0 var(--tk-bg-from),
+    var(--ql-ink-s) var(--ql-ink-c) 0 var(--tk-bg-from),
+    var(--ql-ink-s) calc(-1 * var(--ql-ink-c)) 0 var(--tk-bg-from),
+    calc(-1 * var(--ql-ink-s)) var(--ql-ink-c) 0 var(--tk-bg-from),
+    calc(-1 * var(--ql-ink-s)) calc(-1 * var(--ql-ink-c)) 0 var(--tk-bg-from),
+    var(--ql-ink-h) 0 0 var(--tk-bg-from), calc(-1 * var(--ql-ink-h)) 0 0 var(--tk-bg-from),
+    0 var(--ql-ink-h) 0 var(--tk-bg-from), 0 calc(-1 * var(--ql-ink-h)) 0 var(--tk-bg-from),
+    var(--ql-ink-e) var(--ql-ink-e) 0 var(--tk-bg-from),
+    calc(-1 * var(--ql-ink-e)) var(--ql-ink-e) 0 var(--tk-bg-from),
+    var(--ql-ink-e) calc(-1 * var(--ql-ink-e)) 0 var(--tk-bg-from),
+    calc(-1 * var(--ql-ink-e)) calc(-1 * var(--ql-ink-e)) 0 var(--tk-bg-from);
 }
 
-.ql-cover-card .tk-h3,
-.ql-cover-card .ql-percent,
-.ql-cover-card .tk-hint {
-  width: fit-content;
-  padding: 0 var(--tk-sp-1);
-  border-radius: var(--tk-r);
+.ql-cover-card:has(.ql-cover):not(.ql-grid-list *) .tk-h3,
+.ql-cover-card:has(.ql-cover):not(.ql-grid-list *) .ql-percent,
+.ql-cover-card:has(.ql-cover):not(.ql-grid-list *) .ql-tag,
+.ql-cover-card:has(.ql-cover):not(.ql-grid-list *) .tk-hint {
+  text-shadow: var(--ql-ink);
 }
 
-.ql-cover-card .ql-tag {
+.ql-cover-card:has(.ql-cover):not(.ql-grid-list *) .ql-tag {
   border-color: transparent;
 }
 
-.ql-grid-list .ql-cover-card .tk-h3,
-.ql-grid-list .ql-cover-card .ql-percent,
-.ql-grid-list .ql-cover-card .ql-tag,
-.ql-grid-list .ql-cover-card .tk-hint,
-.ql-grid-list .ql-cover-card .tk-btn-ghost {
-  background: none;
-}
-
-.ql-grid-list .ql-cover-card .tk-h3,
-.ql-grid-list .ql-cover-card .ql-percent {
-  padding: 0;
+.ql-cover-card:has(.ql-cover):not(.ql-grid-list *) .tk-btn-ghost {
+  background: var(--tk-scrim);
 }
 
 .ql-cover {
@@ -1179,6 +1191,11 @@ kbd {
 
 .ql-book-single .ql-book-stage {
   width: var(--ql-leaf-w);
+}
+
+.ql-book-rtl,
+.ql-book-rtl .ql-book-leaf {
+  transform: scaleX(-1);
 }
 
 .ql-book-page {
