@@ -94,7 +94,7 @@ export function registerUpdates(): void {
     autoUpdater.on('update-downloaded', (i) => {
       cancel = null
       emit({ state: 'ready', version: i.version })
-      if (installAfter) autoUpdater.quitAndInstall()
+      if (installAfter) autoUpdater.quitAndInstall(true, true)
     })
     autoUpdater.on('update-cancelled', (i) => emit({ state: 'available', version: i.version }))
     autoUpdater.on('error', (e) => {
@@ -114,7 +114,7 @@ export function registerUpdates(): void {
     token.cancel()
   })
   ipcMain.on(CH.updateInstall, () => {
-    if (status.state === 'ready') autoUpdater.quitAndInstall()
+    if (status.state === 'ready') autoUpdater.quitAndInstall(true, true)
   })
   ipcMain.on(CH.updateOpen, () => {
     const url = status.url && status.url.startsWith(RELEASES) ? status.url : RELEASES

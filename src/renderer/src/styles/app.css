@@ -107,6 +107,15 @@ body {
   padding-right: var(--tk-sp-2);
 }
 
+.update-panel {
+  box-sizing: border-box;
+  padding: var(--tk-panel-padding);
+  border: var(--tk-border-w) solid var(--tk-border);
+  border-radius: var(--tk-r);
+  background: var(--tk-surface);
+  box-shadow: var(--tk-shadow-panel);
+}
+
 /* --- screens --- */
 
 .ql-screen {
