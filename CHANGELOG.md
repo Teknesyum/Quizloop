@@ -6,6 +6,16 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.7.15] - 2026-10-04
+
+### Added
+
+- Installing a module that is already in the library at a different version
+  now asks first: "Version 1.0.1 → 2.0.0". The installed module is untouched
+  until you agree, and cancelling leaves it as it was. An older file asks
+  whether to roll back instead. The same question appears for a picked file,
+  a dropped file, a double-clicked file and on Android.
+
 ## [0.7.14] - 2026-10-04
 
 ### Changed

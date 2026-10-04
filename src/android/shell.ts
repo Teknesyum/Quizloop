@@ -6,9 +6,11 @@ import { SettingsPatch } from '@core/settings'
 import { SOURCE_URL } from '@shared/ipc'
 import type {
   Capabilities,
+  InstallConfirm,
   InstallResult,
   QuizloopApi,
   TransferResult,
+  VersionChange,
   WorkProgress
 } from '@shared/ipc'
 import { openDatabase } from './db/open'
@@ -115,6 +117,16 @@ export async function createShell(): Promise<QuizloopApi> {
 
   const info = await App.getInfo().catch(() => ({ version: '0.0.0' }))
   const updates = createUpdates(info.version)
+  const confirmers = new Set<(c: InstallConfirm) => void>()
+  const asks = new Map<number, (yes: boolean) => void>()
+  let askSeq = 0
+  const ask = (change: VersionChange): Promise<boolean> =>
+    new Promise((answer) => {
+      if (confirmers.size === 0) return answer(true)
+      const id = ++askSeq
+      asks.set(id, answer)
+      for (const cb of confirmers) cb({ ...change, ask: id })
+    })
   updates.start()
 
   return {
@@ -153,12 +165,21 @@ export async function createShell(): Promise<QuizloopApi> {
       installSample: installBundled,
       pick: async (kind) => {
         if (kind !== 'file') return null
-        const r = await store.install(db, emit)
+        const r = await store.install(db, emit, ask)
         if (r?.ok) await c.library.reload()
         return r
       },
       onInstalled: () => off,
       drainOpened: async () => undefined,
+      onConfirm: (cb) => {
+        confirmers.add(cb)
+        return () => confirmers.delete(cb)
+      },
+      answer: (id, yes) => {
+        const answer = asks.get(id)
+        asks.delete(id)
+        answer?.(yes)
+      },
       remove: async (id) => {
         await store.remove(await c.module.forget(id))
       },

@@ -165,7 +165,7 @@ export function Library(): React.JSX.Element {
   }, [modules, active, removing, resetting, go])
 
   const report = async (r: InstallResult | null): Promise<void> => {
-    if (!r) return
+    if (!r || r.cancelled) return
     if (r.ok) {
       toast('success', installedText(r))
     } else {

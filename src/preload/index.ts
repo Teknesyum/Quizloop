@@ -2,6 +2,7 @@ import { contextBridge, ipcRenderer, webFrame, webUtils } from 'electron'
 import {
   CH,
   DESKTOP_CAPABILITIES,
+  type InstallConfirm,
   type InstallResult,
   type WorkProgress,
   type QuizloopApi,
@@ -52,6 +53,12 @@ const api: QuizloopApi = {
       return () => ipcRenderer.removeListener(CH.moduleInstalled, h)
     },
     drainOpened: () => ipcRenderer.invoke(CH.moduleDrainOpened),
+    onConfirm: (cb) => {
+      const h = (_: unknown, c: InstallConfirm): void => cb(c)
+      ipcRenderer.on(CH.moduleConfirm, h)
+      return () => ipcRenderer.removeListener(CH.moduleConfirm, h)
+    },
+    answer: (ask: number, yes: boolean) => ipcRenderer.send(CH.moduleAnswer, ask, yes),
     remove: (id: string) => ipcRenderer.invoke(CH.moduleRemove, id),
     reset: (id: string) => ipcRenderer.invoke(CH.moduleReset, id),
     chapters: (id: string) => ipcRenderer.invoke(CH.moduleChapters, id),

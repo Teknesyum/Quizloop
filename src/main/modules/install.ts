@@ -2,7 +2,14 @@ import { existsSync, readdirSync } from 'node:fs'
 import { join, resolve } from 'node:path'
 import type { Kysely } from 'kysely'
 import type { Database } from '@core/db/types'
-import { checkFolder, installFailure, resyncFolders, syncFolder } from '@core/commands/modules'
+import {
+  checkFolder,
+  installFailure,
+  resyncFolders,
+  syncFolder,
+  versionChange,
+  type AskChange
+} from '@core/commands/modules'
 import { copyTree, removeTree, skipBuild } from '@main/fstree'
 import { nodePorts } from '@main/ports'
 import { modulesDir } from '@main/settings'
@@ -29,7 +36,8 @@ export async function installFrom(
   db: Kysely<Database>,
   source: string,
   now: Date,
-  work: Work = new Work('install')
+  work: Work = new Work('install'),
+  ask?: AskChange
 ): Promise<InstallResult> {
   let paket: Unpacked | null = null
   try {
@@ -42,6 +50,11 @@ export async function installFrom(
       source = paket.root
     }
     const { meta } = await checkFolder(nodePorts, source)
+    const change = ask ? await versionChange(db, meta) : null
+    if (change && ask && !(await ask(change))) {
+      work.finish(true)
+      return { ok: false, cancelled: true }
+    }
     const target = resolve(join(modulesDir(), meta.id))
     if (resolve(source) !== target) {
       if (existsSync(target)) await removeTree(target, () => undefined)

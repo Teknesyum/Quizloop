@@ -8,6 +8,7 @@ import { assetBase } from '@main/assets/protocol'
 import { installFrom, installSamples, removeModuleTree } from '@main/modules/install'
 import { PACKAGE_EXT } from '@main/modules/paket'
 import { nodePorts } from '@main/ports'
+import { Work } from '@main/work'
 import { settingsStore } from '@main/settings'
 import { registerBank } from './bank'
 import {
@@ -15,11 +16,13 @@ import {
   SOURCE_URL,
   type IntegrityReport,
   type ChapterSummary,
+  type InstallConfirm,
   type InstallResult,
   type ModuleSummary,
   type Settings,
   type SourceBook,
-  type StatsOverview
+  type StatsOverview,
+  type VersionChange
 } from '@shared/ipc'
 import { ChoiceKey } from '@shared/schema/question'
 import { z } from 'zod'
@@ -82,8 +85,26 @@ export function registerHandlers(ctx: Context): {
 
   ipcMain.handle(CH.moduleList, (): Promise<ModuleSummary[]> => core.module.list())
 
+  const asks = new Map<number, (yes: boolean) => void>()
+  let askSeq = 0
+  const ask = (change: VersionChange): Promise<boolean> =>
+    new Promise((answer) => {
+      const windows = BrowserWindow.getAllWindows()
+      if (windows.length === 0) return answer(true)
+      const id = ++askSeq
+      asks.set(id, answer)
+      const confirm: InstallConfirm = { ...change, ask: id }
+      for (const w of windows) w.webContents.send(CH.moduleConfirm, confirm)
+    })
+  ipcMain.on(CH.moduleAnswer, (_e, id: unknown, yes: unknown) => {
+    const key = z.number().parse(id)
+    const answer = asks.get(key)
+    asks.delete(key)
+    answer?.(z.boolean().parse(yes))
+  })
+
   const install = async (path: string): Promise<InstallResult> => {
-    const r = await installFrom(db, path, nodePorts.now())
+    const r = await installFrom(db, path, nodePorts.now(), new Work('install'), ask)
     await library.reload()
     return r
   }
