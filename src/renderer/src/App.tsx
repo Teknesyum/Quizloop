@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react'
 import { tinykeys } from 'tinykeys'
-import { FONT_SCALES } from '@shared/ipc'
 import { LangSwitch, TitleBar } from '../../../teknesyum-ui/ustcubuk/TitleBar'
 import { runBack } from './back'
+import { ScaleSwitch } from './components/ScaleSwitch'
 import { useUpdateTools } from './components/UpdateTools'
 import { useBookWarmup } from './components/bookdoc'
 import { Toasts } from './components/Toast'
@@ -14,6 +14,7 @@ import { Library } from './screens/Library'
 import { Session } from './screens/Session'
 import { Settings } from './screens/Settings'
 import { Stats } from './screens/Stats'
+import { nextScale } from './scale'
 import { useApp, type Route } from './store/app'
 import logo from '../../../resources/icon.png'
 
@@ -87,9 +88,7 @@ export default function App(): React.JSX.Element {
 
   useEffect(() => {
     const step = (dir: number): void => {
-      const i = FONT_SCALES.indexOf(scale as (typeof FONT_SCALES)[number])
-      const at = i === -1 ? FONT_SCALES.indexOf(1) : i
-      const next = FONT_SCALES[Math.min(FONT_SCALES.length - 1, Math.max(0, at + dir))]
+      const next = nextScale(scale, dir)
       if (next !== scale) saveSettings({ fontScale: next })
     }
     return tinykeys(window, {
@@ -142,7 +141,14 @@ export default function App(): React.JSX.Element {
         }}
         version={caps.updater ? tools.version : undefined}
         update={caps.updater ? tools.update : undefined}
-        language={<LangSwitch lang={lang} label={t('lang.label')} onChange={setLang} />}
+        language={
+          <>
+            {caps.windowChrome && (
+              <ScaleSwitch scale={scale} onChange={(next) => saveSettings({ fontScale: next })} />
+            )}
+            <LangSwitch lang={lang} label={t('lang.label')} onChange={setLang} />
+          </>
+        }
         onMinimize={() => win.minimize()}
         onMaximize={() => win.toggleMaximize()}
         onClose={() => win.close()}

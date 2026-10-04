@@ -1,0 +1,43 @@
+name: Play
+
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: Release tag to upload to the Play closed test, for example v0.7.5
+        required: true
+
+jobs:
+  upload:
+    runs-on: ubuntu-latest
+    env:
+      QUIZLOOP_KEYSTORE: /tmp/quizloop-upload.jks
+      QUIZLOOP_KEY_ALIAS: upload
+      QUIZLOOP_STORE_PASSWORD: ${{ secrets.QUIZLOOP_STORE_PASSWORD }}
+      QUIZLOOP_KEY_PASSWORD: ${{ secrets.QUIZLOOP_KEY_PASSWORD }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.tag }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - uses: actions/setup-java@v4
+        with:
+          distribution: microsoft
+          java-version: 21
+      - run: npm ci
+      - name: Restore the upload key
+        run: echo "${{ secrets.QUIZLOOP_KEYSTORE_BASE64 }}" | base64 -d > "$QUIZLOOP_KEYSTORE"
+      - run: npm run android:release
+      - name: Fail when the build is unsigned
+        run: ls dist-android/QuizLoop-*-release.aab
+      - name: Upload to the Play closed test
+        uses: r0adkll/upload-google-play@v1
+        with:
+          serviceAccountJsonPlainText: ${{ secrets.PLAY_SERVICE_ACCOUNT_JSON }}
+          packageName: com.teknesyum.QuizLoop
+          releaseFiles: dist-android/QuizLoop-*-release.aab
+          track: alpha
+          status: completed
