@@ -6,6 +6,13 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.7.23] - 2026-10-05
+
+### Changed
+
+- The black shape behind text on a cover card has a thin blue outline along
+  its outer edge.
+
 ## [0.7.22] - 2026-10-05
 
 ### Changed
