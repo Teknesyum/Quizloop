@@ -114,23 +114,25 @@ export function Chapters({ moduleId }: { moduleId: string }): React.JSX.Element 
               {chapterCover(c) && (
                 <img className="ql-cover ql-cover-foot" src={chapterCover(c) as string} alt="" />
               )}
-              <header className="ql-card-head">
-                <h3 className="tk-h3">{c.chapter || t('chapters.unsorted')}</h3>
-                <span className="tk-mono ql-percent">
-                  {c.total ? Math.round((c.retired / c.total) * 100) : 0}%
-                </span>
-              </header>
-              <dl className="ql-card-stats">
-                <div className={c.dueToday ? 'ql-stat-hot' : ''}>
-                  <dt className="tk-hint">{t('library.card.due', { count: c.dueToday })}</dt>
-                </div>
-                <div>
-                  <dt className="tk-hint">{t('library.card.unseen', { count: c.unseen })}</dt>
-                </div>
-                <div>
-                  <dt className="tk-hint">{t('library.card.retired', { count: c.retired })}</dt>
-                </div>
-              </dl>
+              <div className="ql-card-ink">
+                <header className="ql-card-head">
+                  <h3 className="tk-h3">{c.chapter || t('chapters.unsorted')}</h3>
+                  <span className="tk-mono ql-percent">
+                    {c.total ? Math.round((c.retired / c.total) * 100) : 0}%
+                  </span>
+                </header>
+                <dl className="ql-card-stats">
+                  <div className={c.dueToday ? 'ql-stat-hot' : ''}>
+                    <dt className="tk-hint">{t('library.card.due', { count: c.dueToday })}</dt>
+                  </div>
+                  <div>
+                    <dt className="tk-hint">{t('library.card.unseen', { count: c.unseen })}</dt>
+                  </div>
+                  <div>
+                    <dt className="tk-hint">{t('library.card.retired', { count: c.retired })}</dt>
+                  </div>
+                </dl>
+              </div>
               <div
                 className="ql-progress"
                 role="progressbar"
