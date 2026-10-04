@@ -13,8 +13,8 @@ Module production line. Separate package, same repo, never bundled into the app.
   turns their `build/raw/*.json` into questions; `run` calls the API directly and needs
   `ANTHROPIC_API_KEY` plus a `--max-usd` cap. `pack` refuses without a clean `verify`.
 - `source.pages` are book pages (corpus is PDF-indexed, `sayfaOfseti`). `flags` maps app-exported flagged ids to units and requeues them; notes in `build/bayraklar/`.
-- `zorluk` relabels difficulty with the single rubric in `src/zorluk.ts` (also used by the
-  generation prompt): `export` batches, subagents write `build/zorluk/out/`, `apply` writes back.
+- `zorluk` relabels difficulty with the single rubric in `src/zorluk.ts` (also used by the generation prompt): `export` batches, subagents write `build/zorluk/out/`, `apply` writes back.
 - `secenek` (`src/secenek.ts`): `olc` measures choice bias, `export` batches 40 to `build/secenek/in/`,
   subagents write `out/`, `apply` validates and writes back; marking choices stay frozen.
+- `hafizlik` (`src/hafizlik/`, no `--rules`): Qur'an memorisation module from pinned text + meal; writes `modules/kuran-hafizlik/` and its `.qlmod`.
 - Tests: `npx vitest run --config tools/quizforge/vitest.config.ts`. No code comments; model prompts Turkish.

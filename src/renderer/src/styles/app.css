@@ -1,4 +1,7 @@
 :root {
+  --font-sans:
+    'Atkinson Hyperlegible Next', 'Noto Naskh Arabic', 'Segoe UI', system-ui, -apple-system,
+    sans-serif;
   --ql-i: 0;
   --ql-h: 0%;
   --ql-titlebar-h: var(--tk-titlebar-h-min);
@@ -52,9 +55,6 @@ body {
 
 /* --- title bar --- */
 
-.ql-update {
-  display: flex;
-  align-items: center;
 .ql-scale {
   display: inline-flex;
   align-self: center;
@@ -100,6 +100,9 @@ body {
   cursor: not-allowed;
 }
 
+.ql-update {
+  display: flex;
+  align-items: center;
   gap: var(--tk-sp-2);
   padding-right: var(--tk-sp-2);
 }
@@ -2139,4 +2142,31 @@ button.ql-mark:not(:disabled):active {
 
 .ql-shell[data-chrome='none'] .tk-titlebar {
   -webkit-app-region: no-drag;
+}
+
+/* --- right-to-left text --- */
+
+:dir(rtl) {
+  font-family: var(--font-sans);
+}
+
+.tk-prose p:dir(rtl),
+.ql-choice-text p:dir(rtl) {
+  font-size: var(--tk-fs-4);
+  line-height: normal;
+}
+
+.ql-stem-text p:dir(rtl) {
+  font-size: var(--tk-fs-5);
+  line-height: normal;
+}
+
+.tk-prose p:dir(rtl),
+.ql-stem-text p:dir(rtl) {
+  text-align: center;
+}
+
+.ql-table td:dir(rtl) {
+  font-size: var(--tk-fs-3);
+  line-height: normal;
 }

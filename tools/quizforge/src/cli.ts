@@ -10,6 +10,7 @@ import { PRICES, run } from './generate.ts'
 import { loadCheckpoint } from './checkpoint.ts'
 import { verify } from './verify.ts'
 import { pack } from './pack.ts'
+import { hafizlik } from './hafizlik/komut.ts'
 import { paket, qpdfYolu } from './paket.ts'
 import { hasMaterial, writeBriefs } from './brief.ts'
 import { ingest } from './ingest.ts'
@@ -38,6 +39,7 @@ import {
 
 const HELP = `quizforge <komut> --rules <rules.yaml> [seçenekler]
 
+  hafizlik  Kur'an hafızlık modülünü üret (--rules istemez, ayrıntı: hafizlik --help)
   init      PDF metin katmanını çıkar: sources/<id>/pages.jsonl + chapters.json
   plan      bölüm haritasından üretim birimlerini çıkar: build/plan.json
   run       birimleri modele gönder   --max-usd <n> zorunlu, --model, --limit, --chapter, --dry-run
@@ -303,9 +305,21 @@ function main(argv: string[]): number {
   throw new Error('bilinmeyen komut: ' + cmd + '\n' + HELP)
 }
 
-try {
-  process.exitCode = main(process.argv.slice(2))
-} catch (e) {
+const argv = process.argv.slice(2)
+const fail = (e: unknown): void => {
   console.error(e instanceof Error ? e.message : e)
   process.exitCode = 1
+}
+if (argv[0] === 'hafizlik') {
+  hafizlik(argv.slice(1), path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../../..'))
+    .then((code) => {
+      process.exitCode = code
+    })
+    .catch(fail)
+} else {
+  try {
+    process.exitCode = main(argv)
+  } catch (e) {
+    fail(e)
+  }
 }
