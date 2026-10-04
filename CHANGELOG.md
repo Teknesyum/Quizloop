@@ -6,6 +6,15 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.7.4] - 2026-10-04
+
+### Changed
+
+- The installed Windows app updates itself: it downloads a new version in the
+  background, installs it when the app closes, and looks again every four
+  hours while it stays open. The update badge still installs at once.
+  Settings has a switch to turn the silent update off.
+
 ## [0.7.3] - 2026-10-04
 
 ### Changed

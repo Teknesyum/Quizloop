@@ -252,6 +252,36 @@ export function Settings(): React.JSX.Element {
               <p className="tk-hint">
                 {t(caps.settingsFile ? 'settings.updatesHelp' : 'settings.updatesHelpAndroid')}
               </p>
+              {caps.settingsFile && (
+                <div className="tk-field">
+                  <span className="tk-label">{t('settings.autoUpdate')}</span>
+                  <div
+                    className="ql-segment"
+                    role="radiogroup"
+                    aria-label={t('settings.autoUpdate')}
+                  >
+                    <button
+                      type="button"
+                      role="radio"
+                      aria-checked={settings.autoUpdate}
+                      className={`tk-btn ${settings.autoUpdate ? 'tk-btn-primary' : 'tk-btn-ghost'} ql-btn-sm`}
+                      onClick={() => apply({ autoUpdate: true })}
+                    >
+                      {t('settings.autoUpdate.on')}
+                    </button>
+                    <button
+                      type="button"
+                      role="radio"
+                      aria-checked={!settings.autoUpdate}
+                      className={`tk-btn ${settings.autoUpdate ? 'tk-btn-ghost' : 'tk-btn-primary'} ql-btn-sm`}
+                      onClick={() => apply({ autoUpdate: false })}
+                    >
+                      {t('settings.autoUpdate.off')}
+                    </button>
+                  </div>
+                  <span className="tk-hint">{t('settings.autoUpdateHelp')}</span>
+                </div>
+              )}
               <div className="ql-row">
                 <button
                   type="button"
