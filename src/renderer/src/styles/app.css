@@ -284,6 +284,24 @@ body {
   overflow: hidden;
 }
 
+.ql-cover-card {
+  --ql-halo:
+    0 0 var(--tk-border-w) var(--tk-bg-from), 0 0 var(--tk-sp-1) var(--tk-bg-from),
+    0 0 var(--tk-sp-1) var(--tk-bg-from), 0 0 var(--tk-sp-2) var(--tk-bg-from),
+    0 0 var(--tk-sp-2) var(--tk-bg-from), 0 0 var(--tk-sp-3) var(--tk-bg-from),
+    0 0 var(--tk-sp-4) var(--tk-bg-from);
+  text-shadow: var(--ql-halo);
+}
+
+.ql-cover-card .tk-btn:not(.tk-btn-ghost),
+.ql-grid-list .ql-cover-card {
+  text-shadow: none;
+}
+
+.ql-cover-card svg {
+  filter: drop-shadow(0 0 var(--tk-sp-1) var(--tk-bg-from));
+}
+
 .ql-cover {
   position: absolute;
   inset: 0;
@@ -408,7 +426,9 @@ body {
   line-height: var(--tk-lh-body);
   text-align: start;
   cursor: pointer;
-  transition: background var(--tk-t-fast) var(--tk-e-out), color var(--tk-t-fast) var(--tk-e-out);
+  transition:
+    background var(--tk-t-fast) var(--tk-e-out),
+    color var(--tk-t-fast) var(--tk-e-out);
 }
 
 .ql-menu-opt:hover,
