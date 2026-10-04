@@ -303,6 +303,10 @@ body {
   height: 0;
 }
 
+.ql-ink-line {
+  flood-color: var(--tk-border-strong);
+}
+
 .ql-cover-card {
   position: relative;
   isolation: isolate;
