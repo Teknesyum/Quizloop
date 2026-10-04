@@ -6,6 +6,14 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.7.19] - 2026-10-05
+
+### Changed
+
+- The backing behind text on a cover card is one flat, deep black shape with a
+  smooth rounded edge that follows the letters. The 0.7.18 version was made of
+  stacked soft shadows and showed overlapping layers.
+
 ## [0.7.18] - 2026-10-04
 
 ### Changed
