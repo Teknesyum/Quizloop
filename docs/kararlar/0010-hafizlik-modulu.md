@@ -37,8 +37,7 @@ renkleri; simge kart yazılarıyla çakıştığı için kaldırıldı). Görsel
 **Dönüş (sahibin kararı, 2026-10-04).** Her cüz 20 sayfadır; dönüş cüzün son sayfasından başa
 doğru sayılır (1. Dönüş son sayfa, 20. Dönüş ilk sayfa). 30. Cüz 24 sayfadır: son beş sayfası
 (600-604) 1. Dönüş, 599-581 sırayla 2-20. Dönüş. Parçanın dönüş içindeki yeri kelime sayısıyla
-üçe bölünür: Başı, Ortası, Sonu. Yer satırı ("Bakara Suresi 2:164 · Sayfa 24 · 2. Cüz ·
-17. Dönüşün Başı") çözümün başında ve her yanlış şıkkın açıklamasında yazar; başlıklarda her
+üçe bölünür: Başı, Ortası, Sonu. Yer satırı ("Bakara Suresi 2:164 · Sayfa 24 · 2. Cüz · 17. Dönüşün Başı") çözümün başında ve her yanlış şıkkın açıklamasında yazar; başlıklarda her
 kelime büyük harfle başlar. Etiketler: `donus:17`, `kesim:bas|orta|son`. `--duzen donus` aynı
 kartları 20 dönüş bölümüyle ayrı modül (`kuran-hafizlik-donus`) olarak üretir.
 
