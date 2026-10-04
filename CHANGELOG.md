@@ -3,6 +3,7 @@
 All notable changes to this project are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and this project adheres
 to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
 ## [Unreleased]
 
 ### Changed
@@ -111,6 +112,7 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 - In the book on Android, two fingers also drag the zoomed page.
 
 ### Changed
+
 - On Android the title bar and the bottom tab bar are thinner.
 - On first launch the interface follows the device language: Turkish on a Turkish
   device, English otherwise. A language chosen in the title bar still wins.
