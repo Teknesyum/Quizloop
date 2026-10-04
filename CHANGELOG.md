@@ -6,6 +6,14 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.7.29] - 2026-10-05
+
+### Changed
+
+- Cover cards: the black boxes are much smaller. A title that wraps gets one tight box
+  per line instead of one large rectangle, counters and the question count use the same
+  slim padding as the tags, and the percent is set at the title's size.
+
 ## [0.7.28] - 2026-10-05
 
 ### Changed
