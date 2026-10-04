@@ -135,7 +135,7 @@ export function paket(l: Loaded): PaketSonucu {
     const data = fs.readFileSync(path.join(dir, f))
     entries[f] = [data, { level: SIKISMIS.test(f) ? 0 : 6 }]
   }
-  const outDir = path.join(l.root, 'dist-modules')
+  const outDir = path.join(l.root, 'dist', 'modules')
   fs.mkdirSync(outDir, { recursive: true })
   const out = path.join(outDir, `${next.id}-${next.version}.qlmod`)
   if (!kitapYolu(l)) {

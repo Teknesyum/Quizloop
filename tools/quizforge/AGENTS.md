@@ -5,7 +5,7 @@ Module production line. Separate package, same repo, never bundled into the app.
 - `src/cli.ts` — `init | plan | brief | ingest | run | verify | pack | geri-al | flags | zorluk | secenek | doctor`. Every command takes `--rules <file>`.
 - `brief`/`ingest` lanes: text, `--gorsel`, `--tur tablo|etiket` (`src/tur.ts`); boxes come only from `build/etiket/index.json` (`src/etiket.ts`).
 - `paket` zips `modules/<id>/` with `rules.yaml` `module.etiketler` as tags into
-  `dist-modules/<id>-<surum>.qlmod` (git-ignored); the app installs it by pick, drop or double-click.
+  `dist/modules/<id>-<surum>.qlmod` (git-ignored); the app installs it by pick, drop or double-click.
   The book goes in as qpdf chapter PDFs (`kaynak/bolum/NN.pdf`, `source.bolumler`); one package for desktop and Android.
 - `py/extract.py` — PDF text layer to `pages.jsonl` + `chapters.json` (pypdf, no AGPL).
 - Rules: `sources/<id>/rules.yaml`, build state `sources/<id>/build/`; schema from `src/shared/schema`, never duplicated.

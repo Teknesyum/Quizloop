@@ -20,7 +20,7 @@ Bir parça gösterilir, sonraki parça sorulur. Uzun ayet tek soru olmaz.
 **Kaynak.** Metin: `alperenugus/Kuran` deposundaki Diyanet metni, işlem (commit) ve SHA-256
 ile sabitlenir (`tools/quizforge/src/hafizlik/kaynak.ts`). Meal ve kelime kelime meal:
 quran.com API v4 (varsayılan meal 77, Diyanet İşleri). Hepsi kullanıcının makinesine iner;
-`sources/`, `modules/` ve `dist-modules/` depoya girmez.
+`sources/`, `modules/` ve `dist/modules/` depoya girmez.
 
 **Bütünlük.** Sağlama toplamı, 114 sure / 6236 ayet sayım tablosu, quran.com Uthmani metniyle
 harf iskeleti çaprazı (6233/6236 aynı; 21:88, 63:10, 72:16 bilinen imla farkı, izin listesinde).

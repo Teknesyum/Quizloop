@@ -16,8 +16,7 @@ export default defineConfig(
       'schema',
       'trash',
       'tmp',
-      'android',
-      'dist-android'
+      'android'
     ]
   },
   tseslint.configs.recommended,

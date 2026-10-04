@@ -34,9 +34,5 @@ trash/
 __pycache__/
 
 tmp/
-dist-modules/
 
 *.tsbuildinfo
-
-# Android build output.
-dist-android/

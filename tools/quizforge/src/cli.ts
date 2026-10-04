@@ -52,7 +52,7 @@ const HELP = `quizforge <komut> --rules <rules.yaml> [seçenekler]
             (önce plan)   --force: build/units doluysa üzerine yaz
   verify    deterministik denetim: build/verify-report.json
   pack      modules/<id>/ yaz; verify geçmeden çalışmaz
-  paket     modules/<id>/ klasörünü etiketleriyle tek dosyaya sar: dist-modules/<id>-<sürüm>.qlmod
+  paket     modules/<id>/ klasörünü etiketleriyle tek dosyaya sar: dist/modules/<id>-<sürüm>.qlmod
             kitap, chapters.json aralıklarından qpdf ile bölüm PDF'lerine ayrılır
             (kaynak/bolum/NN.pdf, module.json source.bolumler); masaüstü ve Android aynı paketi açar
   flags     uygulamanın flags.json dosyasını oku, soruları birimlerine eşle, o birimleri

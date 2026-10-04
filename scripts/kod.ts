@@ -31,7 +31,8 @@ const manifest = {
   sha512: createHash('sha512').update(zip).digest('hex'),
   size: zip.length
 }
-mkdirSync(join(root, 'dist'), { recursive: true })
-writeFileSync(join(root, 'dist', file), zip)
-writeFileSync(join(root, 'dist', 'kod.json'), JSON.stringify(manifest, null, 2))
+const out = join(root, 'dist', 'desktop')
+mkdirSync(out, { recursive: true })
+writeFileSync(join(out, file), zip)
+writeFileSync(join(out, 'kod.json'), JSON.stringify(manifest, null, 2))
 console.log(`${file} ${(zip.length / 1024 / 1024).toFixed(2)} MB kabuk ${manifest.kabuk}`)

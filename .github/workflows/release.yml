@@ -38,14 +38,14 @@ jobs:
         with:
           name: quizloop-${{ matrix.os }}
           path: |
-            dist/*.exe
-            dist/*.dmg
-            dist/*.zip
-            dist/*.AppImage
-            dist/*.deb
-            dist/*.blockmap
-            dist/latest*.yml
-            dist/kod.json
+            dist/desktop/*.exe
+            dist/desktop/*.dmg
+            dist/desktop/*.zip
+            dist/desktop/*.AppImage
+            dist/desktop/*.deb
+            dist/desktop/*.blockmap
+            dist/desktop/latest*.yml
+            dist/desktop/kod.json
           if-no-files-found: error
 
   android:
@@ -70,16 +70,16 @@ jobs:
         run: echo "${{ secrets.QUIZLOOP_KEYSTORE_BASE64 }}" | base64 -d > "$QUIZLOOP_KEYSTORE"
       - run: npm run android:release
       - name: Fail when the build is unsigned
-        run: ls dist-android/QuizLoop-*-release.apk dist-android/QuizLoop-*-release.aab
+        run: ls dist/android/QuizLoop-*-release.apk dist/android/QuizLoop-*-release.aab
       - uses: actions/upload-artifact@v4
         with:
           name: quizloop-android
-          path: dist-android/*-release.apk
+          path: dist/android/*-release.apk
           if-no-files-found: error
       - uses: actions/upload-artifact@v4
         with:
           name: play-aab
-          path: dist-android/*-release.aab
+          path: dist/android/*-release.aab
           if-no-files-found: error
 
   publish:
