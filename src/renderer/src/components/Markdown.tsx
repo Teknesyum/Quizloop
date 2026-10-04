@@ -22,7 +22,9 @@ function MarkdownView({ md, assetBase = '', className }: Props): React.JSX.Eleme
             <a href={href} target="_blank" rel="noreferrer">
               {children}
             </a>
-          )
+          ),
+          p: ({ children }) => <p dir="auto">{children}</p>,
+          li: ({ children }) => <li dir="auto">{children}</li>
         }}
       >
         {md}

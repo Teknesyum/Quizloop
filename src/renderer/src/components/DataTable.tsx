@@ -42,7 +42,9 @@ export function DataTable({
             <tr key={j} className="ql-transition-in" style={{ '--ql-i': j } as React.CSSProperties}>
               {r.head !== null && <th scope="row">{r.head}</th>}
               {r.cells.map((c, k) => (
-                <td key={k}>{c}</td>
+                <td key={k} dir="auto">
+                  {c}
+                </td>
               ))}
             </tr>
           ))}

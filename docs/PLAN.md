@@ -11,17 +11,17 @@ Ayrışan yerler en altta, gerekçeleriyle.
 
 ## 0. Sabit kararlar
 
-| Konu | Karar |
-|---|---|
-| İsim | Quizloop · depo `Quizloop` · paket `quizloop` |
-| Yığın | Electron + React + TypeScript + Vite (`electron-vite`) |
-| Platform | Windows · macOS · Linux, `electron-builder`, GitHub Actions üç-OS matrisi |
-| Zamanlama | FSRS-6, `ts-fsrs` paketi, **ana süreçte** çalışır; Android ile ortak `src/core`a taşınır (karar 0009) |
-| Modül formatı | JSON dosyaları — SQLite değil |
-| İlerleme | Ayrı SQLite veritabanı, kullanıcı veri klasöründe |
-| Şema | `zod` v4 — `z.infer` + `safeParse` + `z.toJSONSchema` tek tanımdan |
-| Üretim hattı | Ayrı CLI (`quizforge`), uygulamanın içinde değil |
-| Lisans | AGPL-3.0-or-later — bkz. `docs/kararlar/0003-lisans-agpl.md` |
+| Konu          | Karar                                                                                                 |
+| ------------- | ----------------------------------------------------------------------------------------------------- |
+| İsim          | Quizloop · depo `Quizloop` · paket `quizloop`                                                         |
+| Yığın         | Electron + React + TypeScript + Vite (`electron-vite`)                                                |
+| Platform      | Windows · macOS · Linux, `electron-builder`, GitHub Actions üç-OS matrisi                             |
+| Zamanlama     | FSRS-6, `ts-fsrs` paketi, **ana süreçte** çalışır; Android ile ortak `src/core`a taşınır (karar 0009) |
+| Modül formatı | JSON dosyaları — SQLite değil                                                                         |
+| İlerleme      | Ayrı SQLite veritabanı, kullanıcı veri klasöründe                                                     |
+| Şema          | `zod` v4 — `z.infer` + `safeParse` + `z.toJSONSchema` tek tanımdan                                    |
+| Üretim hattı  | Ayrı CLI (`quizforge`), uygulamanın içinde değil                                                      |
+| Lisans        | AGPL-3.0-or-later — bkz. `docs/kararlar/0003-lisans-agpl.md`                                          |
 
 ---
 
@@ -41,14 +41,14 @@ Kullanıcının öznel beyanı doğrudan FSRS'e verilmez. İki bağımsız sinya
 **nesnel** (şıklar açılmadan bilindi mi, ilk denemede doğru mu, kaç yanlış eleme oldu)
 ve **öznel** (anladım / kısmen / anlamadım).
 
-| Öz-değerlendirme | Nesnel sonuç | FSRS notu |
-|---|---|---|
-| anlamadım | her koşulda | Again (1) |
-| kısmen | yanlış eleme oldu | Again (1) |
-| kısmen | ilk denemede doğru | Hard (2) |
-| anladım | yanlış eleme oldu | Hard (2) |
-| anladım | ilk denemede doğru | Good (3) |
-| anladım | şıklar açılmadan bilindi | Easy (4) |
+| Öz-değerlendirme | Nesnel sonuç             | FSRS notu |
+| ---------------- | ------------------------ | --------- |
+| anlamadım        | her koşulda              | Again (1) |
+| kısmen           | yanlış eleme oldu        | Again (1) |
+| kısmen           | ilk denemede doğru       | Hard (2)  |
+| anladım          | yanlış eleme oldu        | Hard (2)  |
+| anladım          | ilk denemede doğru       | Good (3)  |
+| anladım          | şıklar açılmadan bilindi | Easy (4)  |
 
 Bu eşleme şıksız bilme bonusuna gerçek bir işlev verir: Easy'yi hak etmenin tek yolu
 odur. Mekanik kapalıysa Easy hiç üretilmez, FSRS bundan zarar görmez. Yanlış eleyip
@@ -60,7 +60,7 @@ Kullanıcı "anladım" dediği soruyu bir daha görmek istemiyor. Davranış bun
 uygular: `retired_at` damgalanır, kart kuyruktan çıkar, **silinmez** ve istenirse geri
 getirilir. FSRS durumu yine kaydedilir.
 
-*Yumuşak emeklilik* kipi (kart ancak kararlılığı bir yılı geçince emekli olsun)
+_Yumuşak emeklilik_ kipi (kart ancak kararlılığı bir yılı geçince emekli olsun)
 **v1'de yok.** Alan duruyor, ikinci davranış yolu yok — ayar yüzeyi olmayan bir bayrak
 için iki kod yolu taşımaya değmez. Aralıklı tekrarın asıl davranışı budur ve gerekirse
 sonra açılır; kayıt `docs/kararlar/0002-derece-eslemesi.md` dosyasında.
@@ -189,7 +189,7 @@ verilebilir. Drizzle'ın çalışma anındaki göç aracı ise göç klasörün�
 (`meta/_journal.json`), yani `asar` paketinde `extraResources` ayarlanmazsa üretimde
 patlıyor ve `drizzle-kit` paketlenmiş uygulamada hiç koşmuyor. `kysely`'nin
 `SqliteDatabase` tipi de yapısal bir arayüz — sürücüyü değiştirmek tek dosya.
-*Uyarı*: `kysely` 0.29'dan beri `node >= 22` istiyor; Electron'un Node sürümüne göre
+_Uyarı_: `kysely` 0.29'dan beri `node >= 22` istiyor; Electron'un Node sürümüne göre
 0.28.x'e sabitlemek gerekebilir.
 
 Göç konusunda üç bağımsız tarama aynı yere çıktı: **göç dosyalarını çalışma zamanında
@@ -346,8 +346,8 @@ Seçilen zincir:
 
 - **`pypdfium2`** — sayfa render ve gömülü nesne çıkarma, Apache/BSD.
 - **`pdfplumber`** — metin ve konum bilgisi, MIT.
-- **`camelot-dev/camelot`** — tablo çıkarma, MIT, v2.0.0. *Not: görevde verilen
-  `atlanhq/camelot` arşivlenmiş, bakımlı çatal budur.*
+- **`camelot-dev/camelot`** — tablo çıkarma, MIT, v2.0.0. _Not: görevde verilen
+  `atlanhq/camelot` arşivlenmiş, bakımlı çatal budur._
 - **`docling`** (docling-project, MIT) — yapı katmanı: okuma sırası, tablo ve formül
   sınırları, etiketli blok JSON'u. GPU gerektirmiyor. Bu katman **OCR için değil**;
   metin katmanı zaten temiz, gereken şey yapı.
@@ -446,8 +446,8 @@ kalmaz ve web kipi denetlenemez hale gelir.
 
 **Dalga 0 — iskelet ve dağıtım hattı.** `electron-vite`, TS strict, veritabanı katmanı,
 şema, `ts-fsrs`. Üç-OS Actions matrisi **şimdi** kurulur, sonra değil.
-*Kabul*: `npm run dev` pencere açar **ve paketlenmiş derlemede** veritabanı açma
-denemesi geçer. *Ölçü*: Windows ve Linux'ta artefakt inip çalışıyor; macOS'ta
+_Kabul_: `npm run dev` pencere açar **ve paketlenmiş derlemede** veritabanı açma
+denemesi geçer. _Ölçü_: Windows ve Linux'ta artefakt inip çalışıyor; macOS'ta
 **`xattr -cr` sonrası** açılıyor — imzasız paket Gatekeeper'a takılır, ölçü bunu
 hesaba katmazsa Dalga 0 hiç kapanmaz.
 
@@ -459,19 +459,19 @@ Bu dalgaya ayrıca **ilk açılış deneyimi** girer: modül yokken boş durum e
 `module:install` dosya diyaloğu ve sürükle-bırak, gömülü `_ornek`'in kurulması. İlk elle
 test bile bunu isteyecek, Dalga 5'e ertelenemez. Yedekleme ve `integrity_check` de burada.
 
-*Kabul*: uygulamayı kapat-aç, vadeler korunmuş. *Ölçü*: üç soruyu "anlamadım" işaretle,
+_Kabul_: uygulamayı kapat-aç, vadeler korunmuş. _Ölçü_: üç soruyu "anlamadım" işaretle,
 üçü de **aynı oturumda** geri gelsin (oturum içi yeniden-öğrenme kuyruğu);
 "anladım"lar gelmesin.
 
 **Dalga 2 — `quizforge`.** LANGE kitabının tek bölümünde (~40 sayfa) uçtan uca çalışır.
 Python ortamı ve `quizforge doctor` bu dalganın ilk işi. Maliyet tavanı (`--max-usd`)
 ilk `run`'dan önce yerinde olmalı.
-*Ölçü*: Ctrl+C ile kes ve yeniden başlat, aynı birim ikinci kez modele gitmesin;
+_Ölçü_: Ctrl+C ile kes ve yeniden başlat, aynı birim ikinci kez modele gitmesin;
 alıntı doğrulamasında en az %95 geçiş; üretilen ilk 40 sorunun elle okunmasında en az
 %85 kabul. **Bu eşik tutmadan Dalga 3'e geçilmez.**
 
 **Dalga 3 — ölçek ve sürümleme.** Tüm kitap, 1500-3000 soru. Blok tembel yükleme,
-kuyruk politikası, `moduleSync`. *Kabul*: 3000 kartlı modülde oturum başlatma 300 ms
+kuyruk politikası, `moduleSync`. _Kabul_: 3000 kartlı modülde oturum başlatma 300 ms
 altında, bellek 400 MB altında.
 
 **Dalga 4 — deneyim.** Puan sistemi ve şıksız bilme bonusu, "çözümü tekrar anlat",
@@ -487,18 +487,18 @@ Uzun listeler (soru bankası, istatistik) `@tanstack/virtual` ile sanallaştır�
 ekranında değil, orada tek soru var. **Klavye gezinmesi indeks tabanlı yazılmalı**:
 görünmeyen satır DOM'da olmadığı için seçim düğüme bağlanırsa Tab ve ekran okuyucu
 bozulur.
-*Kabul*: fare kullanmadan tam bir oturum tamamlanabiliyor.
+_Kabul_: fare kullanmadan tam bir oturum tamamlanabiliyor.
 
 **Dalga 5 — dağıtım.** `electron-builder` üç hedef, İngilizce README, sürüm etiketiyle
 tetiklenen çıkış akışı.
 
 Güncelleme politikası platform başına ayrı, çünkü tek bir çözüm yok:
 
-| Platform | Davranış |
-|---|---|
-| Windows | Gerçek otomatik güncelleme |
-| Linux | Yeni sürüm bildirimi + indirme bağlantısı |
-| macOS | **Yalnız pasif bildirim** |
+| Platform | Davranış                                  |
+| -------- | ----------------------------------------- |
+| Windows  | Gerçek otomatik güncelleme                |
+| Linux    | Yeni sürüm bildirimi + indirme bağlantısı |
+| macOS    | **Yalnız pasif bildirim**                 |
 
 macOS'ta otomatik güncelleme hiçbir modülle çözülmüyor — Squirrel.Mac imza şartı
 koyuyor ve bu Apple Developer ID istiyor. Modül seçimiyle aşılacak bir şey değil.
@@ -506,7 +506,7 @@ koyuyor ve bu Apple Developer ID istiyor. Modül seçimiyle aşılacak bir şey 
 GIFT dışa aktarma **v1.1'e ertelendi**: tüketen bir sistem yok, tek kullanıcı var.
 Şemadaki karşılığı (şık başına açıklama) zaten donduğu için sonra eklemek ucuz.
 
-*Ölçü*: temiz bir Windows makinesinde kurulumdan ilk soruya 60 saniyeden az.
+_Ölçü_: temiz bir Windows makinesinde kurulumdan ilk soruya 60 saniyeden az.
 
 ---
 
@@ -535,21 +535,21 @@ dönülür.
 
 **1. Üretim kalitesi — en kırılganı.** 3000 soru üretilir, bir kısmı bozuktur
 (belirsiz kök, iki savunulabilir şık, zayıf çeldirici) ve bunu 200 soru çözdükten sonra
-fark edersin. `verify` bunu yakalayamaz, sorun semantiktir. *Nasıl anlarız*: Dalga 2'de
-ilk 40 sorunun elle okunması. *Ne yaparız*: "bozuk" bayrağı geri besleme halkasını
+fark edersin. `verify` bunu yakalayamaz, sorun semantiktir. _Nasıl anlarız_: Dalga 2'de
+ilk 40 sorunun elle okunması. _Ne yaparız_: "bozuk" bayrağı geri besleme halkasını
 Dalga 4'e bırakmadan Dalga 1'de ucuza koy.
 
 **2. Yerel veritabanı derlemesi.** Üç platform × Electron ABI × macOS arm64 klasik
 acıdır; geliştirmede çalışır, **paketlide** kayıt hatası verir. Bu yüzden Dalga 0'ın
-kabul kriteri paketlenmiş derlemedir. *Ne yaparız*: veritabanı erişimi bir arayüz
+kabul kriteri paketlenmiş derlemedir. _Ne yaparız_: veritabanı erişimi bir arayüz
 arkasına alınır, geçiş tek dosyayı değiştirmek olmalı. Yerleşik `node:sqlite`
 seçeneğinin uygulanabilirliği `docs/taramalar/yerel-modul-paketleme.md` ile karara
 bağlanacak.
 
 **3. PDF varlık çıkarımı.** 1468 sayfalık çeviri kitapta şekiller çoğu zaman tek bir
 gömülü nesne değil — parçalı vektör çizimi ya da sayfaya gömülü tarama. Çıkarım 5×5
-piksellik çöp döker. *Nasıl anlarız*: `assets/img/` içinde 2 KB altındaki dosya oranı
-%30'u geçiyorsa kırılmıştır. *Ne yaparız*: sayfayı 200 DPI render et, modelden şekil
+piksellik çöp döker. _Nasıl anlarız_: `assets/img/` içinde 2 KB altındaki dosya oranı
+%30'u geçiyorsa kırılmıştır. _Ne yaparız_: sayfayı 200 DPI render et, modelden şekil
 sınır kutusunu iste, kırp. Pahalı ama her PDF'te çalışır. **Dalga 2 bu yedek denenmeden
 kapatılmaz.**
 
@@ -614,7 +614,7 @@ Her sorunun beş şıkkı olmak zorunda değil. Şemaya `kind` girer:
     kind: 'coktan-secmeli' | 'acik-uclu'   (öntanımlı: coktan-secmeli)
 
 `acik-uclu` olduğunda `choices` boş, `correct` ve `distractors` yok; yerine
-`beklenenCevap: string` gelir. Oturum akışı: kök → *cevabı gör* → çözüm →
+`beklenenCevap: string` gelir. Oturum akışı: kök → _cevabı gör_ → çözüm →
 kendini puanla. `session:answer` çağrılmaz, `session:reveal` zaten var.
 
 `contentHash` alanları `{stem, choices, correct, solution}`; `kind` ve
@@ -683,7 +683,7 @@ uygulamada CDP ile sürülerek sınanır; birim testi yetmez.
    (`modul`, `surum`, soru kimliği, not, kaynak). `quizforge flags` bu dosyayı okur,
    soruları birimlerine eşler, o birimleri yeniden üretim kuyruğuna koyar.
 5. Klavye: Kütüphane ve Bölümler ↑ ↓ Enter; Özet ekranında Enter yeni oturum, Esc
-   kütüphane. *Kabul*: fare olmadan açılıştan özete tam oturum.
+   kütüphane. _Kabul_: fare olmadan açılıştan özete tam oturum.
 
 ### J10 — Dalga 5
 
@@ -745,7 +745,6 @@ Sıra:
   Ana süreç geçici klasöre açar (zip-slip denetimi), `installFrom` ile kurar, arayüze`module:installed` olayı yollar.
 - Kartta etiketler küçük rozet olarak görünür.
 
-
 ## 11. Uzun İşlerde İlerleme Çubuğu — Plan (2026-10-01)
 
 Kullanıcı boş beklemez: bir saniyeyi aşabilen her iş adım adı ve yüzdeyle ilerleme gösterir.
@@ -756,3 +755,39 @@ Kullanıcı boş beklemez: bir saniyeyi aşabilen her iş adım adı ve yüzdeyl
 - Kurulum ağırlıkları: okuma 0–10, açma 10–35 (fflate işçide, ara yüzde yok), yazma 35–60, kopya 60–85, eşitleme 85–100.
 - Arayüz: teknesyum-ui `ilerleme` şablonu (`components/ProgressBar.tsx` + `progressbar.css`), `components/WorkProgress.tsx` modal panelde gösterir; `done` ya da `error` sonrası kapanır.
 - Adım yazıları `locale` anahtarı olarak gelir (`work.*`), `{done}`/`{total}` yer tutucularıyla.
+
+## 12. Kur'an Hafızlık Modülü (2026-10-04, Onaylandı; H0–H2 Bitti)
+
+Görüş: `docs/danisma/003-fable-hafizlik-modulu.md`. Karar: `docs/kararlar/0010-hafizlik-modulu.md`.
+
+**Amaç.** Hafızın ezberini sağlamlaştıran modül: Arapça bir parça gösterilir, devamı sorulur;
+cevapta ayetin tam meali ve kelime kelime meali açılır. Bölümler cüz cüz (30 bölüm).
+
+**Soru birimi.** Diyanet mushafının secavend durağıyla ayrılan parça (karar 0010). 10.509
+parça, cüz başına 280–576.
+
+**Soru tipleri.**
+
+- Parça başına tek kart, `coktan-secmeli` (A–D): parça gösterilir, hafız içinden okur, şıkları
+  açar, seçer. Çeldiriciler önce benzer (müteşâbih) parçalardan, yoksa yakın parçalardan.
+- `--siksiz`: kartlar `acik-uclu` üretilir, hafız kendini derecelendirir.
+- Kural: hiçbir şık uydurma ya da değiştirilmiş Arapça içermez; her şık Kur'an'da aynen geçer.
+
+**Kayıt eşlemesi.** `conceptId` = `sure:ayet/sıra`. `tags`: `cuz:01`, `sure:002`, `sayfa:042`,
+`tip:devam`, `gecis:sure`, `mutesabih`. `solution`: yer satırı → ayetin Arapça tam metni →
+tam meal → kelime kelime `table`.
+
+**Üretim.** `npx tsx tools/quizforge/src/cli.ts hafizlik` → `modules/kuran-hafizlik/` ve
+`dist-modules/kuran-hafizlik-1.2.0.qlmod`. Kod `tools/quizforge/src/hafizlik/`. Metin, meal ve
+çıktı depoya girmez.
+
+**Dalgalar.**
+
+- H0 — Doğrulama: bitti (kaynak, kelime kelime Türkçe meal, yazı tipi).
+- H1 — Çekirdek: bitti (üretici, bütünlük, devam soruları, RTL + yazı tipi).
+- H2 — Meal: bitti (tam meal + kelime tablosu, `--meal <no>`).
+- H3 — Sayfa katmanı: sayfa başı/sonu, konum, sure başı soruları.
+- H4 — İleri: geri okuma, fasıla tamamlama, müteşâbih sayımı.
+- H5 — Ses: kari kaydıyla dinletme; lisans ve boyut o zaman.
+
+**Risk.** Yapan hafız değil: bir hafıza 20 dakika kullandırmak şart, henüz yapılmadı.
