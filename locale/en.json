@@ -251,7 +251,7 @@
   "settings.autoUpdate": "Silent update",
   "settings.autoUpdate.on": "On",
   "settings.autoUpdate.off": "Off",
-  "settings.autoUpdateHelp": "When on, a new version downloads in the background and installs when the app closes. When off, only the badge appears and you start the download.",
+  "settings.autoUpdateHelp": "When on, a new version downloads in the background and the app restarts itself to install it; a running session is left to finish first. When off, only the badge appears and you start the download.",
   "settings.updatesHelp": "The Windows build updates itself. On Linux and macOS you are told when a new version is out.",
   "settings.transfer": "Transfer Package",
   "settings.transferHelp": "Progress, modules and settings are written to one folder. Carry it on a USB stick and import it on the other computer.",

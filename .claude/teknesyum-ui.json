@@ -45,11 +45,16 @@
       "rule": "core/text-glow",
       "file": "src/renderer/src/styles/app.css",
       "reason": "Sahibin isteği (2026-10-04): modül kapağının üstündeki yazılar harf bazında koyu bir haleyle basılsın, düz siyah panel olmasın. Renkli parlama değil, zemin rengiyle okunurluk gölgesi; yalnızca .ql-cover-card içinde."
+    },
+    {
+      "rule": "raf/ister",
+      "file": "android/app/build.gradle",
+      "reason": "Yanlış alarm: namespace zaten tamamen küçük harf (com.teknesyum.quizloop), mobil-kimlik kitabına uygun. Tarayıcı deseni büyük-küçük harf ayırmadan eşliyor; tarayıcı düzelince kaldırılır."
     }
   ],
   "plugin": "0.34.0",
   "denetim": {
-    "tarih": "2026-10-04T17:03:12.624Z",
+    "tarih": "2026-10-04T18:13:32.534Z",
     "duzen": "920c61ba2837ca0d"
   },
   "uc": {

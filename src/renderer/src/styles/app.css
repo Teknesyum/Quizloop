@@ -303,41 +303,33 @@ body {
   overflow: hidden;
 }
 
-.ql-cover-card {
-  --ql-ink-r: var(--tk-sp-2);
-  --ql-ink-d: calc(var(--ql-ink-r) * 0.7071);
-  --ql-ink-c: calc(var(--ql-ink-r) * 0.9239);
-  --ql-ink-s: calc(var(--ql-ink-r) * 0.3827);
-  --ql-ink-h: calc(var(--ql-ink-r) * 0.5);
-  --ql-ink-e: calc(var(--ql-ink-h) * 0.7071);
-  --ql-ink:
-    var(--ql-ink-r) 0 0 var(--tk-bg-from), calc(-1 * var(--ql-ink-r)) 0 0 var(--tk-bg-from),
-    0 var(--ql-ink-r) 0 var(--tk-bg-from), 0 calc(-1 * var(--ql-ink-r)) 0 var(--tk-bg-from),
-    var(--ql-ink-d) var(--ql-ink-d) 0 var(--tk-bg-from),
-    calc(-1 * var(--ql-ink-d)) var(--ql-ink-d) 0 var(--tk-bg-from),
-    var(--ql-ink-d) calc(-1 * var(--ql-ink-d)) 0 var(--tk-bg-from),
-    calc(-1 * var(--ql-ink-d)) calc(-1 * var(--ql-ink-d)) 0 var(--tk-bg-from),
-    var(--ql-ink-c) var(--ql-ink-s) 0 var(--tk-bg-from),
-    var(--ql-ink-c) calc(-1 * var(--ql-ink-s)) 0 var(--tk-bg-from),
-    calc(-1 * var(--ql-ink-c)) var(--ql-ink-s) 0 var(--tk-bg-from),
-    calc(-1 * var(--ql-ink-c)) calc(-1 * var(--ql-ink-s)) 0 var(--tk-bg-from),
-    var(--ql-ink-s) var(--ql-ink-c) 0 var(--tk-bg-from),
-    var(--ql-ink-s) calc(-1 * var(--ql-ink-c)) 0 var(--tk-bg-from),
-    calc(-1 * var(--ql-ink-s)) var(--ql-ink-c) 0 var(--tk-bg-from),
-    calc(-1 * var(--ql-ink-s)) calc(-1 * var(--ql-ink-c)) 0 var(--tk-bg-from),
-    var(--ql-ink-h) 0 0 var(--tk-bg-from), calc(-1 * var(--ql-ink-h)) 0 0 var(--tk-bg-from),
-    0 var(--ql-ink-h) 0 var(--tk-bg-from), 0 calc(-1 * var(--ql-ink-h)) 0 var(--tk-bg-from),
-    var(--ql-ink-e) var(--ql-ink-e) 0 var(--tk-bg-from),
-    calc(-1 * var(--ql-ink-e)) var(--ql-ink-e) 0 var(--tk-bg-from),
-    var(--ql-ink-e) calc(-1 * var(--ql-ink-e)) 0 var(--tk-bg-from),
-    calc(-1 * var(--ql-ink-e)) calc(-1 * var(--ql-ink-e)) 0 var(--tk-bg-from);
-}
-
 .ql-cover-card:has(.ql-cover):not(.ql-grid-list *) .tk-h3,
 .ql-cover-card:has(.ql-cover):not(.ql-grid-list *) .ql-percent,
 .ql-cover-card:has(.ql-cover):not(.ql-grid-list *) .ql-tag,
 .ql-cover-card:has(.ql-cover):not(.ql-grid-list *) .tk-hint {
-  text-shadow: var(--ql-ink);
+  text-shadow:
+    0 0 var(--tk-sp-1) var(--tk-bg-from),
+    0 0 var(--tk-sp-1) var(--tk-bg-from),
+    0 0 var(--tk-sp-1) var(--tk-bg-from),
+    0 0 var(--tk-sp-1) var(--tk-bg-from),
+    0 0 var(--tk-sp-1) var(--tk-bg-from),
+    0 0 var(--tk-sp-1) var(--tk-bg-from),
+    0 0 var(--tk-sp-1) var(--tk-bg-from),
+    0 0 var(--tk-sp-1) var(--tk-bg-from),
+    0 0 var(--tk-sp-2) var(--tk-bg-from),
+    0 0 var(--tk-sp-2) var(--tk-bg-from),
+    0 0 var(--tk-sp-2) var(--tk-bg-from),
+    0 0 var(--tk-sp-2) var(--tk-bg-from),
+    0 0 var(--tk-sp-2) var(--tk-bg-from),
+    0 0 var(--tk-sp-2) var(--tk-bg-from),
+    0 0 var(--tk-sp-2) var(--tk-bg-from),
+    0 0 var(--tk-sp-2) var(--tk-bg-from),
+    0 0 var(--tk-sp-3) var(--tk-bg-from),
+    0 0 var(--tk-sp-3) var(--tk-bg-from),
+    0 0 var(--tk-sp-3) var(--tk-bg-from),
+    0 0 var(--tk-sp-3) var(--tk-bg-from),
+    0 0 var(--tk-sp-3) var(--tk-bg-from),
+    0 0 var(--tk-sp-3) var(--tk-bg-from);
 }
 
 .ql-cover-card:has(.ql-cover):not(.ql-grid-list *) .ql-tag {
@@ -645,7 +637,7 @@ kbd {
   text-align: left;
   color: var(--tk-text);
   background: transparent;
-  border: var(--tk-border-w) solid var(--tk-border);
+  border: var(--tk-border-w) solid transparent;
   border-radius: var(--tk-r);
   cursor: pointer;
   transition:
@@ -670,7 +662,7 @@ kbd {
   cursor: not-allowed;
   color: var(--tk-text);
   background-color: transparent;
-  border-color: var(--tk-border);
+  border-color: transparent;
 }
 
 .ql-choice-key {
