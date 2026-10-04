@@ -9,7 +9,7 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 ### Added
 
 - Right-to-left text. Arabic paragraphs, list items and table cells are laid out
-  right to left, set in Noto Naskh Arabic and centred in the question and the
+  right to left, set in Scheherazade New and centred in the question and the
   solution.
 - `quizforge hafizlik` builds a Qur'an memorisation module on your own machine:
   one question per pause-mark segment, thirty chapters by juz, with the verse

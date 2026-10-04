@@ -27,9 +27,9 @@ harf iskeleti çaprazı (6233/6236 aynı; 21:88, 63:10, 72:16 bilinen imla fark�
 Gösterilen metne dönüştürme uygulanmaz.
 
 **Arayüz.** Şema değişmedi. `p`, `li`, `td` öğelerine `dir="auto"`; Arapça için
-Noto Naskh Arabic 600 (OFL, `@fontsource`), paragraflar ortalı, boyutlar teknesyum-ui
+Scheherazade New 400 (OFL, `@fontsource`), paragraflar ortalı, boyutlar teknesyum-ui
 belirteçlerinden. Metindeki 66 işaretin hepsini taşıyan iki aday vardı (Noto Naskh, Scheherazade
-New); sahibi dizgi görünümünü istedi. Amiri ve Amiri Quran secavend işaretlerini taşımıyor.
+New); sahibi ikisini görüp Scheherazade New 400'ü seçti. Amiri ve Amiri Quran secavend işaretlerini taşımıyor.
 
 **Kapak.** `assets/kapak.webp` ve `assets/bolum/N.webp` (cüz numaralı sekiz köşeli yıldız, tema
 renkleri). Görseller depoda: `tools/quizforge/src/hafizlik/kapak/`, üreten `py/hafizlik_kapak.py`.
