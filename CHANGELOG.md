@@ -6,6 +6,13 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.7.20] - 2026-10-05
+
+### Changed
+
+- The black shape behind text on a cover card is wider and rounder, and its
+  edge fades over a few pixels instead of ending in a hard line.
+
 ## [0.7.19] - 2026-10-05
 
 ### Changed

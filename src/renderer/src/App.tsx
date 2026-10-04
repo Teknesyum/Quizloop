@@ -142,9 +142,11 @@ export default function App(): React.JSX.Element {
       data-keys={caps.shortcuts ? 'on' : 'off'}
     >
       <svg className="ql-ink-def" aria-hidden="true" focusable="false">
-        <filter id="ql-ink" x="-50%" y="-100%" width="200%" height="300%">
+        <filter id="ql-ink" x="-50%" y="-200%" width="200%" height="500%">
           <feGaussianBlur in="SourceAlpha" stdDeviation="4" />
-          <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 40 -2" result="ink" />
+          <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 40 -2" />
+          <feGaussianBlur stdDeviation="6" />
+          <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 6 -0.3" result="ink" />
           <feMerge>
             <feMergeNode in="ink" />
             <feMergeNode in="SourceGraphic" />
