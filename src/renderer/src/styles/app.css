@@ -303,29 +303,37 @@ body {
   overflow: hidden;
 }
 
-.ql-cover-card {
-  --ql-halo:
-    0 0 var(--tk-border-w) var(--tk-bg-from), 0 0 var(--tk-sp-1) var(--tk-bg-from),
-    0 0 var(--tk-sp-1) var(--tk-bg-from), 0 0 var(--tk-sp-2) var(--tk-bg-from),
-    0 0 var(--tk-sp-2) var(--tk-bg-from), 0 0 var(--tk-sp-3) var(--tk-bg-from),
-    0 0 var(--tk-sp-4) var(--tk-bg-from), 0 0 var(--tk-sp-4) var(--tk-bg-from),
-    0 0 var(--tk-sp-5) var(--tk-bg-from), 0 0 var(--tk-sp-5) var(--tk-bg-from);
-  text-shadow: var(--ql-halo);
+.ql-cover-card .tk-h3,
+.ql-cover-card .ql-percent,
+.ql-cover-card .ql-tag,
+.ql-cover-card .tk-hint,
+.ql-cover-card .tk-btn-ghost {
+  background: var(--tk-scrim);
 }
 
-.ql-cover-card .tk-btn:not(.tk-btn-ghost),
-.ql-grid-list .ql-cover-card {
-  text-shadow: none;
+.ql-cover-card .tk-h3,
+.ql-cover-card .ql-percent,
+.ql-cover-card .tk-hint {
+  width: fit-content;
+  padding: 0 var(--tk-sp-1);
+  border-radius: var(--tk-r);
 }
 
 .ql-cover-card .ql-tag {
   border-color: transparent;
-  background: var(--tk-scrim);
 }
 
-.ql-cover-card svg {
-  filter: drop-shadow(0 0 var(--tk-sp-1) var(--tk-bg-from))
-    drop-shadow(0 0 var(--tk-sp-2) var(--tk-bg-from));
+.ql-grid-list .ql-cover-card .tk-h3,
+.ql-grid-list .ql-cover-card .ql-percent,
+.ql-grid-list .ql-cover-card .ql-tag,
+.ql-grid-list .ql-cover-card .tk-hint,
+.ql-grid-list .ql-cover-card .tk-btn-ghost {
+  background: none;
+}
+
+.ql-grid-list .ql-cover-card .tk-h3,
+.ql-grid-list .ql-cover-card .ql-percent {
+  padding: 0;
 }
 
 .ql-cover {

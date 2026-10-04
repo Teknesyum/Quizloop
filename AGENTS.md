@@ -10,7 +10,7 @@ Vite, packaged with electron-builder for Windows, macOS and Linux. AGPL-3.0-or-l
 - `schema/` — generated JSON Schema. Edit the zod source, run `npm run schema:gen`.
 - `modules/` — content packages, git-ignored. `resources/ornek/` holds the two shipped
   samples, built from `scripts/ornek/*.json` by `npm run ornek`; a hand edit breaks hashes.
-- `dist/` — every build output: `desktop/`, `android/`, `modules/` (decision 0012).
+- `dist/` — build output: `desktop/`, `android/`, `modules/` (0012). `out/web` — PWA (0015).
 
 Commands: `npm run dev`, `npm test`, `npm run typecheck`, `npm run lint`,
 `npm run ui:scan`. All five must pass before a commit.

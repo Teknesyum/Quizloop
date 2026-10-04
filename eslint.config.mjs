@@ -13,6 +13,7 @@ export default defineConfig(
       '**/out',
       'teknesyum-ui',
       'scripts/*.mjs',
+      'src/web/sw.js',
       'schema',
       'trash',
       'tmp',

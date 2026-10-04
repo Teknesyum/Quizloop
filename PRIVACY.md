@@ -23,6 +23,11 @@ All of the following is stored locally on your device and is never sent to us:
 QuizLoop does not ship content. You choose which module to import. Files you
 select are read by the app on the device and are not uploaded anywhere.
 
+The browser version at `https://teknesyum.github.io/Quizloop/` keeps the same
+data in that browser's own storage on your device (its private file system,
+cache storage and local storage). Nothing is sent to the site; it only serves
+the app's files.
+
 ## What the app does not do
 
 - No account, sign-in or registration.
@@ -83,7 +88,9 @@ Android's system settings. We do not receive or have access to it.
 
 Because the data lives only on your device, you control it. Use **Reset** on a
 module to clear its progress, **Remove module** to delete a module, or uninstall
-the app to delete everything the app stored. If you used Android backup, deleting
+the app to delete everything the app stored. In the browser version, clearing
+the site's data in the browser settings, or removing the home screen icon on
+an iPhone, deletes it. If you used Android backup, deleting
 that backup is done in your Google account settings.
 
 ## Children

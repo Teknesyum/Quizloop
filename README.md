@@ -33,6 +33,13 @@ Download the latest build from
 | macOS    | `quizloop-<version>-unsigned.dmg` | The app tells you when a new version is out |
 | Linux    | `.AppImage` or `.deb` | The app tells you when a new version is out |
 
+**iPhone, iPad, or any browser:** open
+<https://teknesyum.github.io/Quizloop/>. Nothing is downloaded from a store.
+On an iPhone or iPad, open it in Safari, tap *Share*, then *Add to Home Screen*;
+it then starts like an app and works offline. Your progress and the modules you
+import stay in that browser on that device, so keep using the same one, and use
+one tab at a time.
+
 The macOS build is unsigned, so Gatekeeper blocks the first launch. Clear the
 quarantine attribute once:
 
