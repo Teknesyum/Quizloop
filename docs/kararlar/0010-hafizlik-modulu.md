@@ -8,7 +8,7 @@ Bir parça gösterilir, sonraki parça sorulur. Uzun ayet tek soru olmaz.
 
 - Bölen işaretler: ط ج ز ص ق قف م. Bölmeyenler: لا, rukû (ع), muanaka.
 - Üç kelimeden kısa parça öncekine, baştaysa sonrakine katılır (`--en-az`).
-- Bölüm = dönüş (`source.chapter` = "N. Dönüş", 20 bölüm; sahibin kararı, 2026-10-04: tek modül); uygulamanın Bölümler ekranı aynen kullanılır.
+- Bölüm = cüz (`source.chapter` = "N. Cüz", 30 bölüm; tek modül); uygulamanın Bölümler ekranı aynen kullanılır.
 - Parça başına tek kart, `coktan-secmeli` (sahibin kararı, 2026-10-04): uygulama şıkları
   "Şıkları göster"e basılana dek gizlediği için ezberden okuma şıklardan önce yapılır. Her şık
   Kur'an'da aynen geçen bir parçadır, uydurma ya da değiştirilmiş Arapça yoktur.
@@ -38,15 +38,15 @@ renkleri; simge kart yazılarıyla çakıştığı için kaldırıldı). Görsel
 doğru sayılır (1. Dönüş son sayfa, 20. Dönüş ilk sayfa). 30. Cüz 24 sayfadır: son beş sayfası
 (600-604) 1. Dönüş, 599-581 sırayla 2-20. Dönüş. Parçanın dönüş içindeki yeri kelime sayısıyla
 üçe bölünür: Başı, Ortası, Sonu. Yer satırı ("Bakara Suresi 2:164 · Sayfa 24 · 2. Cüz · 17. Dönüşün Başı") çözümün başında ve her yanlış şıkkın açıklamasında yazar; başlıklarda her
-kelime büyük harfle başlar. Etiketler: `donus:17`, `kesim:bas|orta|son`. Bölümler 20 dönüştür;
-her dönüşte kartlar mushaf sırasıyla, cüz 1'den 30'a gider. Cüz bölümlü ikinci modül üretilmez.
+kelime büyük harfle başlar. Etiketler: `donus:17`, `kesim:bas|orta|son`. Dönüş yalnız bilgidir;
+bölümler cüz olarak kalır, dönüş bölümlü ayrı modül üretilmez (sahibin kararı, 2026-10-04).
 
 **Mushaf Sayfası.** "Kuran'da gör" için aynı depodaki `Kuran.pdf` (605 sayfa, SHA-256 ile sabit)
 `py/hafizlik_kitap.py` ile 30 cüz dosyasına bölünür (`kaynak/bolum/NN.pdf`, `source.bolumler`,
 ofset 0). Kaynakta basılı 1. sayfa iki PDF sayfasıdır (Fatiha, Bakara 1-5); ikisi yan yana tek
 sayfaya konur, böylece PDF sayfası = basılı sayfa (1-604).
 
-**Ölçüm (2026-10-04, sürüm 1.4.0).** 10.509 parça, 10.508 soru, hepsi çoktan seçmeli; 8.653'ünde
+**Ölçüm (2026-10-04, sürüm 1.5.0).** 10.509 parça, 10.508 soru, hepsi çoktan seçmeli; 8.653'ünde
 en az bir benzer ayet çeldiricisi var. 211 blok, paket 10,5 MB (mushaf sayfaları 5,6 MB). Bağlam eklenen gövde 1.242, sure adıyla ayrılan 9.
 
 **Açık.** Bir hafızın denemesi yapılmadı. Benzeri olmayan 1.855 parçada çeldiriciler yalnız

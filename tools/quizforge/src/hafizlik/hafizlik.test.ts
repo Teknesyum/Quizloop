@@ -174,11 +174,7 @@ describe('donus', () => {
     ])
     for (const d of Object.values(q.distractors))
       expect(d).toMatch(/Sayfa \d+ · 1\. Cüz · \d+\. Dönüşün (Başı|Ortası|Sonu)/)
-    const t = r.sorular
-    expect(t.map((x) => x.source.chapter)).toEqual(
-      [...t.map((x) => x.source.chapter)].sort((a, b) => parseInt(a!, 10) - parseInt(b!, 10))
-    )
-    expect(t[0]!.source.chapter).toBe('1. Dönüş')
+    expect(new Set(r.sorular.map((x) => x.source.chapter))).toEqual(new Set(['1. Cüz']))
   })
 })
 

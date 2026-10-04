@@ -29,10 +29,10 @@ def kaydet(im, yol):
 
 def main():
     kaydet(gecis(RENK3, karis(RENK1, ZEMIN, KOYULUK)), OUT / "kapak.webp")
-    for n in range(1, 21):
-        renk = karis(RENK1, RENK3, (n - 1) / 19)
+    for n in range(1, 31):
+        renk = karis(RENK1, RENK3, (n - 1) / 29)
         kaydet(gecis(renk, karis(renk, ZEMIN, KOYULUK)), OUT / "bolum" / f"{n}.webp")
-    print(f"written: {OUT.relative_to(ROOT)} (21)")
+    print(f"written: {OUT.relative_to(ROOT)} (31)")
     return 0
 
 
