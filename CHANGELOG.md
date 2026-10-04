@@ -6,6 +6,21 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.7.18] - 2026-10-04
+
+### Changed
+
+- Answer choices have no outline at rest. The outline appears under the mouse,
+  while a choice is pressed, and on keyboard focus; right and wrong answers
+  keep their coloured outline.
+- The dark backing behind text on a cover card is now a smooth, soft-edged
+  shape. The 0.7.17 version was built from hard copies of the letters and
+  looked dotted around curves.
+- With automatic updates on, the desktop app restarts itself once an update has
+  downloaded, instead of waiting for a click. It never does so in the middle of
+  a session; it waits until you leave it. It also looks for a new version every
+  30 minutes instead of every 4 hours.
+
 ## [0.7.17] - 2026-10-04
 
 ### Added

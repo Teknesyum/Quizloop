@@ -6,6 +6,7 @@ import { Confirm } from './components/Confirm'
 import { ScaleSwitch } from './components/ScaleSwitch'
 import { useUpdateTools } from './components/UpdateTools'
 import { useBookWarmup } from './components/bookdoc'
+import { useUpdate } from './hooks/useUpdate'
 import { Toasts } from './components/Toast'
 import { Welcome } from './components/Welcome'
 import { WorkProgress } from './components/WorkProgress'
@@ -50,6 +51,13 @@ export default function App(): React.JSX.Element {
 
   const caps = window.quizloop.capabilities
   const tools = useUpdateTools()
+  const up = useUpdate()
+  const autoUpdate = settings?.autoUpdate === true
+
+  useEffect(() => {
+    if (autoUpdate && up.state === 'ready' && route.name !== 'session')
+      window.quizloop.update.install()
+  }, [autoUpdate, up.state, route.name])
 
   useEffect(
     () =>

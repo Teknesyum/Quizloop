@@ -21,7 +21,7 @@ let installAfter = false
 let kod: KodManifest | null = null
 let abort: AbortController | null = null
 
-const RECHECK_MS = 4 * 60 * 60 * 1000
+const RECHECK_MS = 30 * 60 * 1000
 
 function emit(next: UpdateStatus): void {
   status = next

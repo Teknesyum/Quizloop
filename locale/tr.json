@@ -251,7 +251,7 @@
   "settings.autoUpdate": "Sessiz güncelleme",
   "settings.autoUpdate.on": "Açık",
   "settings.autoUpdate.off": "Kapalı",
-  "settings.autoUpdateHelp": "Açıkken yeni sürüm arka planda iner ve uygulama kapanınca kurulur. Kapalıyken yalnızca rozet çıkar, indirmeyi sen başlatırsın.",
+  "settings.autoUpdateHelp": "Açıkken yeni sürüm arka planda iner ve uygulama kendini yeniden başlatıp kurar; oturum sürüyorsa bitmesini bekler. Kapalıyken yalnızca rozet çıkar, indirmeyi sen başlatırsın.",
   "settings.updatesHelp": "Windows sürümü kendini günceller. Linux ve macOS için yeni sürüm çıkınca haber verilir.",
   "settings.transfer": "Taşıma Paketi",
   "settings.transferHelp": "İlerleme, modüller ve ayarlar tek klasöre yazılır. USB ile öbür bilgisayara taşıyıp orada içe aktar.",
