@@ -1,0 +1,2 @@
+- [x] Reddedilen 0.7.24–0.7.28 taslaklarını sil — başka oturumun işi, o oturumda sürüyor
+- [x] Kütüphane ve bölüm kartlarını baştan tasarla (Fable'a danışarak) — başka oturumun işi, o oturumda sürüyor (docs/danisma/007)

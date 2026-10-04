@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { CardCover } from '@renderer/components/CardCover'
 import { tinykeys } from 'tinykeys'
 import type { ChapterSummary } from '@shared/ipc'
 import { Skeleton } from '@renderer/components/Skeleton'
@@ -108,42 +109,51 @@ export function Chapters({ moduleId }: { moduleId: string }): React.JSX.Element 
               tabIndex={i === active ? 0 : -1}
               aria-label={c.chapter || t('chapters.unsorted')}
               onFocus={() => setActive(i)}
-              className={`tk-panel ql-card ql-cover-card ql-transition-in ${i === active ? 'ql-card-active' : ''}`}
+              className={`tk-panel ql-card ql-transition-in ${i === active ? 'ql-card-active' : ''}`}
               style={{ '--ql-i': i } as React.CSSProperties}
             >
-              {chapterCover(c) && (
-                <img className="ql-cover ql-cover-foot" src={chapterCover(c) as string} alt="" />
-              )}
               <header className="ql-card-head">
-                <h3 className="tk-h3">
-                  <span>{c.chapter || t('chapters.unsorted')}</span>
+                <h3 className="tk-h3" title={c.chapter || t('chapters.unsorted')}>
+                  {c.chapter || t('chapters.unsorted')}
                 </h3>
                 <span className="tk-mono ql-percent">
                   {c.total ? Math.round((c.retired / c.total) * 100) : 0}%
                 </span>
               </header>
-              <dl className="ql-card-stats">
-                <div className={c.dueToday ? 'ql-stat-hot' : ''}>
-                  <dt className="tk-hint">{t('library.card.due', { count: c.dueToday })}</dt>
+              <div className="ql-card-body">
+                <CardCover src={chapterCover(c)} name={c.chapter || t('chapters.unsorted')} foot />
+                <div className="ql-card-info">
+                  <p className={`ql-card-due ${c.dueToday ? 'ql-stat-hot' : ''}`}>
+                    <span className="tk-mono ql-due-count">{c.dueToday}</span>
+                    <span className="tk-hint">{t('library.card.dueLabel')}</span>
+                  </p>
+                  <p className="tk-hint ql-card-rest">
+                    {t('library.card.unseen', { count: c.unseen })}
+                  </p>
+                  <div className="ql-card-meter">
+                    <p className="ql-card-meter-row">
+                      <span className="tk-hint">
+                        {t('library.card.questions', { count: c.total })}
+                      </span>
+                      <span className="tk-hint">
+                        {t('library.card.percent', {
+                          percent: c.total ? Math.round((c.retired / c.total) * 100) : 0
+                        })}
+                      </span>
+                    </p>
+                    <div
+                      className="ql-progress"
+                      role="progressbar"
+                      aria-valuemin={0}
+                      aria-valuemax={c.total}
+                      aria-valuenow={c.retired}
+                    >
+                      <span style={{ width: `${c.total ? (c.retired / c.total) * 100 : 0}%` }} />
+                    </div>
+                  </div>
                 </div>
-                <div>
-                  <dt className="tk-hint">{t('library.card.unseen', { count: c.unseen })}</dt>
-                </div>
-                <div>
-                  <dt className="tk-hint">{t('library.card.retired', { count: c.retired })}</dt>
-                </div>
-              </dl>
-              <div
-                className="ql-progress"
-                role="progressbar"
-                aria-valuemin={0}
-                aria-valuemax={c.total}
-                aria-valuenow={c.retired}
-              >
-                <span style={{ width: `${c.total ? (c.retired / c.total) * 100 : 0}%` }} />
               </div>
               <footer className="ql-card-foot">
-                <span className="tk-hint">{t('library.card.questions', { count: c.total })}</span>
                 <button
                   type="button"
                   className="tk-btn tk-btn-primary ql-btn-sm"

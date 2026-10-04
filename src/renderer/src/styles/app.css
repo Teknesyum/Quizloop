@@ -210,6 +210,7 @@ body {
 .ql-grid-list .ql-card-head .tk-h3 {
   font-size: var(--tk-fs-2);
   line-height: var(--tk-lh-heading);
+  white-space: normal;
   overflow-wrap: anywhere;
 }
 
@@ -223,13 +224,9 @@ body {
   flex: 0 0 auto;
 }
 
-.ql-grid-list .ql-cover,
-.ql-grid-list .ql-cover-card::after,
-.ql-grid-list .ql-tags,
-.ql-grid-list .ql-card-stats,
-.ql-grid-list .ql-progress,
-.ql-grid-list .ql-card-foot > .tk-hint,
-.ql-grid-list .ql-card-actions > .tk-btn-ghost:not(.ql-menu-btn) {
+.ql-grid-list .ql-card-body,
+.ql-grid:not(.ql-grid-list) .ql-percent,
+.ql-grid-list .ql-card-actions > .tk-btn-ghost {
   display: none;
 }
 
@@ -279,8 +276,13 @@ body {
 }
 
 .ql-card-head .tk-h3 {
-  font-size: var(--tk-fs-4);
+  min-width: 0;
+  margin: 0;
+  overflow: hidden;
+  font-size: var(--tk-fs-3);
   line-height: var(--tk-lh-heading);
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .ql-card-head {
@@ -297,78 +299,81 @@ body {
   width: fit-content;
 }
 
-.ql-cover-card {
-  position: relative;
-  isolation: isolate;
-  overflow: hidden;
-}
-
-.ql-cover-card:has(.ql-cover):not(.ql-grid-list *) .tk-h3 > span,
-.ql-cover-card:has(.ql-cover):not(.ql-grid-list *) .ql-percent,
-.ql-cover-card:has(.ql-cover):not(.ql-grid-list *) .ql-tag,
-.ql-cover-card:has(.ql-cover):not(.ql-grid-list *) .tk-hint,
-.ql-cover-card:has(.ql-cover):not(.ql-grid-list *) .tk-btn-ghost {
-  background: var(--tk-surface);
-  border: var(--tk-border-w) solid var(--tk-border-strong);
-  border-radius: var(--tk-r);
-}
-
-.ql-cover-card:has(.ql-cover):not(.ql-grid-list *) .tk-h3 > span,
-.ql-cover-card:has(.ql-cover):not(.ql-grid-list *) .ql-percent,
-.ql-cover-card:has(.ql-cover):not(.ql-grid-list *) .tk-hint {
-  padding: 0 var(--tk-sp-2);
-}
-
-.ql-cover-card:has(.ql-cover):not(.ql-grid-list *) .ql-percent,
-.ql-cover-card:has(.ql-cover):not(.ql-grid-list *) .tk-hint {
-  display: inline-block;
-}
-
-.ql-cover-card:has(.ql-cover):not(.ql-grid-list *) .tk-h3 > span {
-  -webkit-box-decoration-break: clone;
-  box-decoration-break: clone;
-}
-
-.ql-cover-card:has(.ql-cover):not(.ql-grid-list *) .ql-card-head {
-  align-items: flex-start;
-}
-
-.ql-cover-card:has(.ql-cover):not(.ql-grid-list *) .ql-card-head .tk-h3 {
-  margin: 0;
-  line-height: var(--tk-lh-mono);
-}
-
-.ql-cover-card:has(.ql-cover):not(.ql-grid-list *) .ql-percent {
-  font-size: var(--tk-fs-4);
-  line-height: var(--tk-lh-mono);
+.ql-card-body {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: var(--tk-sp-4);
 }
 
 .ql-cover {
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  width: 100%;
-  height: 100%;
+  width: calc(var(--tk-sp-5) * 4);
+  aspect-ratio: 2 / 3;
+  border: var(--tk-border-w) solid var(--tk-border);
+  border-radius: var(--tk-r);
   object-fit: cover;
   object-position: top center;
-  pointer-events: none;
-}
-
-.ql-cover-card::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  background: var(--tk-scrim);
-  pointer-events: none;
 }
 
 .ql-cover.ql-cover-foot {
   object-position: bottom center;
 }
 
-.ql-cover-card .ql-card-head {
+.ql-cover-none {
+  display: flex;
   align-items: center;
+  justify-content: center;
+  font-size: var(--tk-fs-5);
+  color: var(--tk-text-label);
+}
+
+.ql-card-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: var(--tk-sp-2);
+  min-width: 0;
+}
+
+.ql-card-info p {
+  margin: 0;
+}
+
+.ql-card-tags,
+.ql-card-rest {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ql-card-tags {
+  color: var(--tk-renk-3);
+}
+
+.ql-card-due {
+  display: flex;
+  flex-direction: column;
+}
+
+.ql-due-count {
+  font-size: var(--tk-fs-5);
+  line-height: var(--tk-lh-heading);
+  color: var(--tk-text);
+}
+
+.ql-stat-hot .ql-due-count {
+  color: var(--tk-renk-1);
+}
+
+.ql-card-meter {
+  display: flex;
+  flex-direction: column;
+  gap: var(--tk-sp-1);
+}
+
+.ql-card-meter-row {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--tk-sp-2);
 }
 
 .ql-card > .ql-card-foot {
@@ -382,35 +387,11 @@ body {
   color: var(--tk-text-label);
 }
 
-.ql-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--tk-sp-1);
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
 .ql-tag {
   padding: 0 var(--tk-sp-2);
   border: var(--tk-border-w) solid var(--tk-border-strong);
   border-radius: var(--tk-r);
   color: var(--tk-renk-3);
-}
-
-.ql-card-stats {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: var(--tk-sp-2);
-  margin: 0;
-}
-
-.ql-card-stats dt {
-  margin: 0;
-}
-
-.ql-stat-hot dt {
-  color: var(--tk-renk-1);
 }
 
 .ql-progress {
@@ -439,6 +420,11 @@ body {
   flex-wrap: wrap;
   gap: var(--tk-sp-2);
   min-width: 0;
+  margin-left: auto;
+}
+
+.ql-card-foot > .tk-btn-primary {
+  margin-left: auto;
 }
 
 .ql-menu-btn {
