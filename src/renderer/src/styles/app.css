@@ -2213,6 +2213,7 @@ button.ql-mark:not(:disabled):active {
   }
 
   body .tk-modal-scrim {
+    z-index: 5;
     padding: calc(var(--tk-sp-3) + env(safe-area-inset-top)) var(--tk-sp-3)
       calc(var(--tk-sp-3) + env(safe-area-inset-bottom));
   }

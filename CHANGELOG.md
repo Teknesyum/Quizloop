@@ -6,6 +6,21 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.7.12] - 2026-10-04
+
+### Changed
+
+- "Install the sample modules" leaves the Library after its first use and stays
+  in the About section of Settings. It returns to the Library whenever the
+  library is empty.
+
+### Fixed
+
+- On a phone the card menu no longer opens off the left edge of the screen.
+- On a phone the introduction and other dialogs sit above the bottom tab bar, so
+  their buttons are no longer covered, and the introduction opens at its title
+  instead of scrolled to the end.
+
 ## [0.7.11] - 2026-10-04
 
 ### Added

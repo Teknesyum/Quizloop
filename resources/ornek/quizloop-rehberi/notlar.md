@@ -10,7 +10,7 @@ Tek dosyalık modül paketinin uzantısı `.qlmod` olur. Bu dosya, modül klasö
 
 ## Sayfa 3: Modül Nedir, Nasıl Eklenir
 
-Uygulamayla birlikte iki örnek modül gelir: şu an çözdüğün bu rehber ve bir genel kültür modülü. İkisi de ilk açılışta kendiliğinden kurulu gelir. Onları kaldırdıysan Kütüphane'deki **Örnek modülleri kur** düğmesi yeniden kurar. Kütüphane hiç modül yokken **Henüz modül yok** başlığını gösterir ve nasıl modül ekleneceğini anlatır. Telefonda da **Modül dosyası ekle** düğmesi vardır. Bu düğme telefonun dosya seçicisini açar ve yalnızca seçtiğin dosya okunur. Telefonda klasörden kurma yoktur; modül her zaman `.qlmod` paketi olarak alınır. Seçtiğin dosyalar cihazda okunur, hiçbir yere yüklenmez.
+Uygulamayla birlikte iki örnek modül gelir: şu an çözdüğün bu rehber ve bir genel kültür modülü. İkisi de ilk açılışta kendiliğinden kurulu gelir. Onları kaldırdıysan **Örnek modülleri kur** düğmesi yeniden kurar. Bu düğme bir kez kullanıldıktan sonra Kütüphane'den kalkar ve Ayarlar'da durur. Kütüphane hiç modül yokken **Henüz modül yok** başlığını gösterir ve nasıl modül ekleneceğini anlatır. Telefonda da **Modül dosyası ekle** düğmesi vardır. Bu düğme telefonun dosya seçicisini açar ve yalnızca seçtiğin dosya okunur. Telefonda klasörden kurma yoktur; modül her zaman `.qlmod` paketi olarak alınır. Seçtiğin dosyalar cihazda okunur, hiçbir yere yüklenmez.
 
 ## Sayfa 4: Modül Nedir, Nasıl Eklenir
 

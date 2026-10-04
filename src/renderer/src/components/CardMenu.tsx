@@ -1,7 +1,7 @@
 import { useEffect, useLayoutEffect, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
 
-type Spot = { right: number; top?: number; bottom?: number }
+type Spot = { right?: number; left?: number; top?: number; bottom?: number }
 
 export function CardMenu({
   label,
@@ -20,12 +20,20 @@ export function CardMenu({
     const r = btn.current.getBoundingClientRect()
     const right = window.innerWidth - r.right
     const below = window.innerHeight - r.bottom
-    setSpot(below < r.top ? { right, bottom: window.innerHeight - r.top } : { right, top: r.bottom })
+    setSpot(
+      below < r.top ? { right, bottom: window.innerHeight - r.top } : { right, top: r.bottom }
+    )
   }, [open])
+
+  useLayoutEffect(() => {
+    if (!spot || spot.left !== undefined || !list.current || !btn.current) return
+    if (list.current.getBoundingClientRect().left >= 0) return
+    setSpot({ top: spot.top, bottom: spot.bottom, left: btn.current.getBoundingClientRect().left })
+  }, [spot])
 
   useEffect(() => {
     if (!open) return
-    list.current?.querySelector<HTMLElement>('[role="menuitem"]')?.focus()
+    list.current?.querySelector<HTMLElement>('[role="menuitem"]')?.focus({ preventScroll: true })
     const close = (): void => setOpen(false)
     const down = (e: PointerEvent): void => {
       const at = e.target as Node

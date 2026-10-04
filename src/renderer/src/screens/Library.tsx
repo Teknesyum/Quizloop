@@ -120,6 +120,7 @@ function ModuleCard({
 export function Library(): React.JSX.Element {
   const modules = useApp((s) => s.modules)
   const loadModules = useApp((s) => s.loadModules)
+  const samplesUsed = useApp((s) => s.settings?.samplesUsed ?? false)
   const toast = useApp((s) => s.toast)
   const [removing, setRemoving] = useState<ModuleSummary | null>(null)
   const [resetting, setResetting] = useState<ModuleSummary | null>(null)
@@ -214,15 +215,20 @@ export function Library(): React.JSX.Element {
           >
             {t('welcome.open')}
           </button>
-          <button
-            type="button"
-            className="tk-btn tk-btn-ghost"
-            disabled={busy}
-            title={busy ? t('common.loading') : t('library.installSampleHelp')}
-            onClick={() => run(() => window.quizloop.module.installSample())}
-          >
-            {t('library.installSample')}
-          </button>
+          {(!samplesUsed || modules?.length === 0) && (
+            <button
+              type="button"
+              className="tk-btn tk-btn-ghost"
+              disabled={busy}
+              title={busy ? t('common.loading') : t('library.installSampleHelp')}
+              onClick={async () => {
+                await run(() => window.quizloop.module.installSample())
+                await useApp.getState().saveSettings({ samplesUsed: true })
+              }}
+            >
+              {t('library.installSample')}
+            </button>
+          )}
           {window.quizloop.capabilities.folders && (
             <>
               <button
