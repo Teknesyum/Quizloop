@@ -6,6 +6,14 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.7.7] - 2026-10-04
+
+### Fixed
+
+- The interface size control in the title bar is drawn in the theme: 0.7.5
+  shipped it with a broken style rule and it showed as plain system buttons.
+  The buttons now read "−" and "+".
+
 ## [0.7.6] - 2026-10-04
 
 ### Changed

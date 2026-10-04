@@ -20,11 +20,11 @@ export function ScaleSwitch({
         disabled={down === scale}
         onClick={() => onChange(down)}
       >
-        A−
+        −
       </button>
       <button
         type="button"
-        className="ql-scale__btn tk-mono"
+        className="ql-scale__btn ql-scale__value"
         aria-label={t('scale.reset')}
         title={t('scale.reset')}
         onClick={() => onChange(1)}
@@ -39,7 +39,7 @@ export function ScaleSwitch({
         disabled={up === scale}
         onClick={() => onChange(up)}
       >
-        A+
+        +
       </button>
     </div>
   )
