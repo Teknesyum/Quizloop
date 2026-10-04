@@ -739,7 +739,7 @@ Sıra:
 - Biçim: modül klasörünün zip'i (fflate), kökte `module.json`. Uzantı `.qlmod`.
 - `module.json` yeni alan: `tags` (küçük harf, en çok 12). quizforge `rules.yaml` → `module.etiketler`.
 - Kaynak paket: kurulum başarılıysa sabit diskteki `.qlmod` çöp kutusuna taşınır; USB, kart, harici ya da ağ sürücüsündeyse ya da algılama başarısızsa yerinde kalır (`src/main/modules/source.ts`).
-- Üretim: `quizforge pack --arsiv` → `dist/modules/<id>-<surum>.qlmod` (git-ignored).
+- Üretim: `quizforge pack --arsiv` → `dist/modules/quizloop-<id>-<surum>.qlmod` (git-ignored).
 - Kurulum: Kütüphane'de `Modül dosyası seç`, sürükle-bırak, ya da dosyaya çift tık
   (electron-builder `fileAssociations`; tek örnek kilidi, `second-instance` / `open-file`).
   Ana süreç geçici klasöre açar (zip-slip denetimi), `installFrom` ile kurar, arayüze`module:installed` olayı yollar.
@@ -778,7 +778,7 @@ parça, cüz başına 280–576.
 tam meal → kelime kelime `table`.
 
 **Üretim.** `npx tsx tools/quizforge/src/cli.ts hafizlik` → `modules/kuran-hafizlik/` ve
-`dist/modules/kuran-hafizlik-1.2.1.qlmod`. Kod `tools/quizforge/src/hafizlik/`. Metin, meal ve
+`dist/modules/quizloop-kuran-hafizlik-1.2.1.qlmod`. Kod `tools/quizforge/src/hafizlik/`. Metin, meal ve
 çıktı depoya girmez.
 
 **Dalgalar.**
