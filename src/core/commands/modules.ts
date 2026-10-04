@@ -4,7 +4,8 @@ import { fingerprint, ModuleError, readMeta, validateModule } from '@core/module
 import { syncModule } from '@core/modules/sync'
 import { joinPath, type CorePorts } from '@core/ports'
 import { chapterCounts, countDue } from '@core/scheduler/queue'
-import type { ChapterSummary, InstallResult, ModuleSummary } from '@shared/ipc'
+import { newer } from '@core/version'
+import type { ChapterSummary, InstallResult, ModuleSummary, VersionChange } from '@shared/ipc'
 import { ModuleMeta } from '@shared/schema/module'
 import type { Library } from './library'
 
@@ -88,6 +89,27 @@ export async function syncFolder(
     orphaned: r.orphaned
   }
 }
+
+export async function versionChange(
+  db: Kysely<Database>,
+  meta: Pick<ModuleMeta, 'id' | 'name' | 'version'>
+): Promise<VersionChange | null> {
+  const row = await db
+    .selectFrom('module')
+    .select(['version'])
+    .where('id', '=', meta.id)
+    .executeTakeFirst()
+  if (!row || row.version === meta.version) return null
+  return {
+    moduleId: meta.id,
+    name: meta.name,
+    from: row.version,
+    to: meta.version,
+    newer: newer(meta.version, row.version)
+  }
+}
+
+export type AskChange = (change: VersionChange) => Promise<boolean>
 
 export function installFailure(e: unknown): InstallResult {
   const msg = e instanceof ModuleError ? [e.message, ...e.issues].join('\n') : String(e)

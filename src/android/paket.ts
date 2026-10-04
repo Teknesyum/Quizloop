@@ -1,6 +1,12 @@
 import { Capacitor, registerPlugin, type PluginListenerHandle } from '@capacitor/core'
 import type { Kysely } from 'kysely'
-import { checkFolder, installFailure, syncFolder } from '@core/commands/modules'
+import {
+  checkFolder,
+  installFailure,
+  syncFolder,
+  versionChange,
+  type AskChange
+} from '@core/commands/modules'
 import type { Database } from '@core/db/types'
 import type { CorePorts } from '@core/ports'
 import type { InstallResult } from '@shared/ipc'
@@ -46,7 +52,7 @@ export interface ModuleStore {
   url(root: string): string
   locate(row: { id: string; path: string }): Promise<string | null>
   remove(path: string | null): Promise<void>
-  install(db: Kysely<Database>, sink: ProgressSink): Promise<InstallResult | null>
+  install(db: Kysely<Database>, sink: ProgressSink, ask: AskChange): Promise<InstallResult | null>
 }
 
 function log(event: string, data: Record<string, unknown>): void {
@@ -77,7 +83,8 @@ export async function openStore(bundled: CorePorts, bundleRoot: string): Promise
 
   const install = async (
     db: Kysely<Database>,
-    sink: ProgressSink
+    sink: ProgressSink,
+    ask: AskChange
   ): Promise<InstallResult | null> => {
     const picked = await Paket.pick()
     if (picked.cancelled || !picked.uri) return null
@@ -101,6 +108,11 @@ export async function openStore(bundled: CorePorts, bundleRoot: string): Promise
       const tVerify = performance.now()
       const { meta } = await checkFolder(ports, u.root)
       const verifyMs = performance.now() - tVerify
+      const change = await versionChange(db, meta)
+      if (change && !(await ask(change))) {
+        work.finish(true)
+        return { ok: false, cancelled: true }
+      }
       const moved = await Paket.commit({ tmp: u.tmp, root: u.root, id: meta.id })
       tmp = null
       work.at('sync', 88, 100)

@@ -188,8 +188,21 @@ export interface WorkProgress {
   status: WorkStatus
 }
 
+export interface VersionChange {
+  moduleId: string
+  name: string
+  from: string
+  to: string
+  newer: boolean
+}
+
+export interface InstallConfirm extends VersionChange {
+  ask: number
+}
+
 export interface InstallResult {
   ok: boolean
+  cancelled?: boolean
   moduleId?: string
   name?: string
   questionCount?: number
@@ -272,6 +285,8 @@ export interface QuizloopApi {
     pick(kind: 'file' | 'folder'): Promise<InstallResult | null>
     onInstalled(cb: (r: InstallResult) => void): () => void
     drainOpened(): Promise<void>
+    onConfirm(cb: (c: InstallConfirm) => void): () => void
+    answer(ask: number, yes: boolean): void
     remove(moduleId: string): Promise<void>
     reset(moduleId: string): Promise<void>
     chapters(moduleId: string): Promise<ChapterSummary[]>
@@ -336,6 +351,8 @@ export const CH = {
   moduleInstallSample: 'module:installSample',
   modulePick: 'module:pick',
   moduleInstalled: 'module:installed',
+  moduleConfirm: 'module:confirm',
+  moduleAnswer: 'module:answer',
   workProgress: 'work:progress',
   moduleDrainOpened: 'module:drainOpened',
   moduleRemove: 'module:remove',

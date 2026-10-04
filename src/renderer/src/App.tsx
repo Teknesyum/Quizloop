@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { tinykeys } from 'tinykeys'
 import { LangSwitch, TitleBar } from '../../../teknesyum-ui/ustcubuk/TitleBar'
 import { runBack } from './back'
+import { Confirm } from './components/Confirm'
 import { ScaleSwitch } from './components/ScaleSwitch'
 import { useUpdateTools } from './components/UpdateTools'
 import { useBookWarmup } from './components/bookdoc'
@@ -18,6 +19,7 @@ import { Stats } from './screens/Stats'
 import { nextScale } from './scale'
 import { useApp, type Route } from './store/app'
 import logo from '../../../resources/icon.png'
+import type { InstallConfirm } from '@shared/ipc'
 
 const GITHUB = 'https://github.com/Teknesyum'
 const SPONSOR = 'https://github.com/sponsors/Teknesyum'
@@ -42,6 +44,8 @@ export default function App(): React.JSX.Element {
   const showHelp = useApp((s) => s.showHelp)
   const welcome = help || (settings !== null && !settings.welcomeSeen)
   const [max, setMax] = useState(false)
+  const [changes, setChanges] = useState<InstallConfirm[]>([])
+  const change = changes[0]
   useBookWarmup(route.name === 'session' || route.name === 'bank' ? route.moduleId : null)
 
   const caps = window.quizloop.capabilities
@@ -76,6 +80,7 @@ export default function App(): React.JSX.Element {
   useEffect(() => {
     const off = window.quizloop.module.onInstalled((r) => {
       const { toast, loadModules } = useApp.getState()
+      if (r.cancelled) return
       if (r.ok) {
         toast('success', installedText(r))
         go({ name: 'library' })
@@ -85,6 +90,14 @@ export default function App(): React.JSX.Element {
     window.quizloop.module.drainOpened()
     return off
   }, [go])
+
+  useEffect(() => window.quizloop.module.onConfirm((c) => setChanges((list) => [...list, c])), [])
+
+  const answer = (yes: boolean): void => {
+    if (!change) return
+    window.quizloop.module.answer(change.ask, yes)
+    setChanges((list) => list.slice(1))
+  }
 
   useEffect(() => {
     window.quizloop.settings.zoom(scale)
@@ -178,6 +191,17 @@ export default function App(): React.JSX.Element {
         />
       )}
       <WorkProgress />
+      {change && (
+        <Confirm
+          title={t(change.newer ? 'library.updateConfirmTitle' : 'library.downgradeConfirmTitle', {
+            name: change.name
+          })}
+          text={t('library.updateConfirmText', { from: change.from, to: change.to })}
+          yes={t(change.newer ? 'library.updateConfirmYes' : 'library.downgradeConfirmYes')}
+          onYes={() => answer(true)}
+          onNo={() => answer(false)}
+        />
+      )}
       <Toasts />
     </div>
   )
