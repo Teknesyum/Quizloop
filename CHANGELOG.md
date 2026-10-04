@@ -6,6 +6,15 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.7.27] - 2026-10-05
+
+### Changed
+
+- Cover cards: the black backing keeps 6 px from every letter (was 4 px).
+- Cover cards: the menu, Mixed and Start session buttons use the same backing as the text:
+  no box of their own, a black shape with a blue outline around the label.
+- Card counters are capitalised: "0 Due Today", "44 New", "45 Questions".
+
 ## [0.7.26] - 2026-10-05
 
 ### Changed

@@ -143,7 +143,7 @@ export default function App(): React.JSX.Element {
     >
       <svg className="ql-ink-def" aria-hidden="true" focusable="false">
         <filter id="ql-ink" x="-50%" y="-200%" width="200%" height="500%">
-          <feMorphology in="SourceAlpha" operator="dilate" radius="8 14" />
+          <feMorphology in="SourceAlpha" operator="dilate" radius="10 16" />
           <feMorphology operator="erode" radius="4 10" />
           <feGaussianBlur stdDeviation="2" />
           <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 8 -4" result="ink" />
