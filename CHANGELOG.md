@@ -6,6 +6,18 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.7.6] - 2026-10-04
+
+### Changed
+
+- Installing an update on Windows no longer shows the setup window: the app
+  closes, updates and reopens on its own.
+
+### Fixed
+
+- The update panel has its background, border and padding again, so the
+  screen behind it no longer shows through.
+
 ### Added
 
 - Right-to-left text. Arabic paragraphs, list items and table cells are laid out
