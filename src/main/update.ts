@@ -21,9 +21,12 @@ let installAfter = false
 let kod: KodManifest | null = null
 let abort: AbortController | null = null
 
-const RECHECK_MS = 10 * 60 * 1000
-const FOCUS_MS = 60 * 1000
+const RECHECK_MS = 60 * 1000
+const FOCUS_MS = 20 * 1000
+const NOTICE_MS = 30 * 60 * 1000
 let checkedAt = 0
+let noticedAt = 0
+let silent = false
 
 function emit(next: UpdateStatus): void {
   status = next
@@ -47,14 +50,16 @@ function restart(): void {
   app.quit()
 }
 
-async function checkKod(): Promise<boolean> {
-  emit({ state: 'checking' })
+async function checkKod(): Promise<'offer' | 'current' | 'other'> {
+  if (!silent) emit({ state: 'checking' })
   const manifest = await fetchManifest()
-  if (!manifest || !offers(manifest, app.getVersion(), __KABUK__, readState())) return false
+  if (!manifest) return 'other'
+  if (!offers(manifest, app.getVersion(), __KABUK__, readState()))
+    return newer(manifest.version, app.getVersion()) ? 'other' : 'current'
   kod = manifest
   emit({ state: 'available', version: manifest.version })
   if (getSettings().autoUpdate) download(false)
-  return true
+  return 'offer'
 }
 
 async function downloadCode(manifest: KodManifest): Promise<void> {
@@ -83,7 +88,9 @@ async function downloadCode(manifest: KodManifest): Promise<void> {
 }
 
 async function checkNotice(): Promise<UpdateStatus> {
-  emit({ state: 'checking' })
+  if (silent && Date.now() - noticedAt < NOTICE_MS) return status
+  noticedAt = Date.now()
+  if (!silent) emit({ state: 'checking' })
   try {
     const res = await net.fetch(`https://api.github.com/repos/${OWNER}/${REPO}/releases/latest`, {
       headers: { accept: 'application/vnd.github+json', 'user-agent': 'Quizloop' }
@@ -124,15 +131,19 @@ function download(install: boolean): void {
   autoUpdater.downloadUpdate(cancel).catch(() => undefined)
 }
 
-async function check(): Promise<UpdateStatus> {
+async function check(quiet = false): Promise<UpdateStatus> {
   checkedAt = Date.now()
+  silent = quiet
   if (status.state === 'downloading' || status.state === 'ready') return status
   if (!app.isPackaged) {
     emit({ state: 'none' })
     return status
   }
   kod = null
-  if (kodUpdates() && (await checkKod())) return status
+  if (kodUpdates()) {
+    const found = await checkKod()
+    if (found === 'offer' || (found === 'current' && quiet)) return status
+  }
   return nativeUpdates() ? checkNative() : checkNotice()
 }
 
@@ -140,7 +151,9 @@ export function registerUpdates(): void {
   if (nativeUpdates()) {
     autoUpdater.autoDownload = false
     autoUpdater.autoInstallOnAppQuit = true
-    autoUpdater.on('checking-for-update', () => emit({ state: 'checking' }))
+    autoUpdater.on('checking-for-update', () => {
+      if (!silent) emit({ state: 'checking' })
+    })
     autoUpdater.on('update-not-available', () => emit({ state: 'none' }))
     autoUpdater.on('update-available', (i) => {
       emit({ state: 'available', version: i.version })
@@ -186,10 +199,10 @@ export function registerUpdates(): void {
     void shell.openExternal(url)
   })
 
-  setTimeout(() => void check(), 8000)
-  setInterval(() => void check(), RECHECK_MS)
+  setTimeout(() => void check(true), 8000)
+  setInterval(() => void check(true), RECHECK_MS)
   app.on('browser-window-focus', () => {
-    if (Date.now() - checkedAt > FOCUS_MS) void check()
+    if (Date.now() - checkedAt > FOCUS_MS) void check(true)
   })
 }
 
