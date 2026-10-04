@@ -1,6 +1,6 @@
 {
-  "name": "QuizLoop",
-  "short_name": "QuizLoop",
+  "name": "QuizLoop Web",
+  "short_name": "QuizLoop Web",
   "description": "Spaced-repetition quiz engine that works offline",
   "lang": "tr",
   "start_url": "./",
