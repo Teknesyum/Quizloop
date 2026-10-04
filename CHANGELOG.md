@@ -6,12 +6,28 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.7.14] - 2026-10-04
+
+### Changed
+
+- Android looks for a new version once, a few seconds after it starts. When
+  one exists the update badge appears, and its link opens the Google Play
+  listing for a Play install or the GitHub release page for an APK install.
+  The privacy policy describes the new check.
+- Tags on cover cards lose their blue outline and sit on a darker backing.
+
+### Fixed
+
+- "You are up to date" and update errors from the version button were hidden
+  behind the page on every screen except the Library. They now show on top
+  everywhere.
+
 ### Added
 
 - `quizforge hafizlik` writes the review round (dönüş) of every segment, and
   whether it sits at the start, middle or end of that round, into the solution
-  and into each wrong-choice note. `--duzen donus` builds the same cards with
-  twenty chapters by round. The package now carries the mushaf pages, so the
+  and into each wrong-choice note. Chapters are now the twenty rounds
+  instead of the thirty juz. The package now carries the mushaf pages, so the
   source button opens the printed page.
 
 ## [0.7.13] - 2026-10-04

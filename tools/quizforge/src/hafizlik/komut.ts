@@ -18,21 +18,7 @@ import {
 import { DONUS_ADEDI, uret } from './uret.ts'
 
 const MODUL = 'kuran-hafizlik'
-const SURUM = '1.3.0'
-const DUZENLER = {
-  cuz: {
-    id: MODUL,
-    ad: "Kur'an-ı Kerim Hafızlık Sağlama",
-    bolum: 30,
-    aciklama: 'Bölümler cüz sırasıyladır.'
-  },
-  donus: {
-    id: `${MODUL}-donus`,
-    ad: "Kur'an-ı Kerim Hafızlık Dönüş Usulü",
-    bolum: DONUS_ADEDI,
-    aciklama: 'Bölümler dönüş sırasıyladır; her dönüşte cüzler birden otuza gider.'
-  }
-} as const
+const SURUM = '1.4.0'
 const DONUS_NOTU =
   'Dönüş, her cüzün son sayfasından başa doğru sayılır: 1. Dönüş son sayfadır, 20. Dönüş ilk sayfadır. 30. Cüz 24 sayfadır; son beş sayfası (600-604) 1. Dönüş sayılır.'
 const BLOK = 50
@@ -43,9 +29,8 @@ export const HAFIZLIK_HELP = `quizforge hafizlik [seçenekler]
 
   Kur'an hafızlık sağlama modülünü üretir: modules/${MODUL}/
   Metin, meal ve mushaf sayfaları bu bilgisayara indirilir, depoya girmez.
+  Bölümler 20 dönüştür: her cüzün son sayfasından başa doğru.
 
-  --duzen <ad>    bölümler: cuz (varsayılan, 30 cüz) ya da donus (20 dönüş;
-                  her cüzün son sayfasından başa doğru, modül ${MODUL}-donus)
   --kitapsiz      mushaf sayfalarını pakete koyma ("Kuran'da gör" çalışmaz)
 
   --cuz <a|a-b>   yalnız bu cüzler (varsayılan 1-30)
@@ -70,7 +55,6 @@ export async function hafizlik(argv: string[], root: string): Promise<number> {
     args: argv,
     options: {
       cuz: { type: 'string' },
-      duzen: { type: 'string' },
       kitapsiz: { type: 'boolean', default: false },
       meal: { type: 'string' },
       mealsiz: { type: 'boolean', default: false },
@@ -83,9 +67,6 @@ export async function hafizlik(argv: string[], root: string): Promise<number> {
     process.stdout.write(HAFIZLIK_HELP)
     return 0
   }
-  const duzenAdi = values.duzen ?? 'cuz'
-  if (duzenAdi !== 'cuz' && duzenAdi !== 'donus') throw new Error('--duzen cuz ya da donus olmalı')
-  const duzen = DUZENLER[duzenAdi]
   const buildDir = path.join(root, 'sources', MODUL, 'build')
   const sureler = await mushafYukle(buildDir)
   console.log('mushaf: 114 sure, 6236 ayet, sağlama toplamı tuttu')
@@ -108,10 +89,9 @@ export async function hafizlik(argv: string[], root: string): Promise<number> {
   const r = uret(sureler, meal, {
     cuzler: cuzAraligi(values.cuz),
     sikli: !values.siksiz,
-    duzen: duzenAdi,
     enAz: values['en-az'] ? Number(values['en-az']) : undefined
   })
-  const outDir = path.join(root, 'modules', duzen.id)
+  const outDir = path.join(root, 'modules', MODUL)
   const blocksDir = path.join(outDir, 'blocks')
   fs.rmSync(blocksDir, { recursive: true, force: true })
   fs.mkdirSync(blocksDir, { recursive: true })
@@ -153,11 +133,11 @@ export async function hafizlik(argv: string[], root: string): Promise<number> {
   }
   const meta = ModuleMeta.parse({
     schemaVersion: 1,
-    id: duzen.id,
-    name: duzen.ad,
+    id: MODUL,
+    name: "Kur'an-ı Kerim Hafızlık Sağlama",
     version: SURUM,
     language: 'tr',
-    description: `Bir parça gösterilir, devamı ezberden okunur. Parçalar Diyanet mushafının secavend duraklarına göre bölünmüştür. ${duzen.aciklama} ${DONUS_NOTU}`,
+    description: `Bir parça gösterilir, devamı ezberden okunur. Parçalar Diyanet mushafının secavend duraklarına göre bölünmüştür. Bölümler dönüş sırasıyladır; her dönüşte cüzler birden otuza gider. ${DONUS_NOTU}`,
     tags: ['kuran', 'hafizlik'],
     source: {
       title: `Diyanet mushafı (kuran.diyanet.gov.tr), alperenugus/Kuran@${MUSHAF_SURUM.slice(0, 7)}, CC BY 4.0`,
@@ -167,10 +147,11 @@ export async function hafizlik(argv: string[], root: string): Promise<number> {
     questionCount: r.sorular.length,
     createdAt: new Date().toISOString()
   })
+  fs.rmSync(path.join(outDir, 'assets'), { recursive: true, force: true })
   const kapakDir = path.join(root, 'tools', 'quizforge', 'src', 'hafizlik', 'kapak')
   const gorseller = [
     'kapak.webp',
-    ...Array.from({ length: duzen.bolum }, (_x, i) => `bolum/${i + 1}.webp`)
+    ...Array.from({ length: DONUS_ADEDI }, (_x, i) => `bolum/${i + 1}.webp`)
   ]
   for (const g of gorseller) {
     const veri = fs.readFileSync(path.join(kapakDir, g))
@@ -184,7 +165,7 @@ export async function hafizlik(argv: string[], root: string): Promise<number> {
   zip['module.json'] = [Buffer.from(metaJson), { level: 6 }]
   const paketDir = path.join(root, 'dist', 'modules')
   fs.mkdirSync(paketDir, { recursive: true })
-  const paket = path.join(paketDir, `quizloop-${duzen.id}-${meta.version}.qlmod`)
+  const paket = path.join(paketDir, `quizloop-${MODUL}-${meta.version}.qlmod`)
   const sikisik = zipSync(zip)
   fs.writeFileSync(paket, sikisik)
   console.log(

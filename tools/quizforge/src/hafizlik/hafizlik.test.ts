@@ -13,7 +13,7 @@ function sure(no: number, ad: string, ayetler: string[]): Sure {
     no,
     ad,
     besmele: true,
-    ayetler: ayetler.map((metin, i) => ({ sure: no, ayet: i + 1, sayfa: no, cuz: 1, metin }))
+    ayetler: ayetler.map((metin, i) => ({ sure: no, ayet: i + 1, sayfa: 21 - no, cuz: 1, metin }))
   }
 }
 
@@ -154,12 +154,12 @@ describe('donus', () => {
       sure(2, 'İki', ['دد ذذ رر', 'فف قق كك', `سس شش صص${T} لل مم نن`])
     ]
     const r = uret(s, null)
-    const q = r.sorular[0]!
+    const q = r.sorular.find((x) => x.id === 'kh-001-001-00')!
     expect(q.solution[0]).toEqual({
       type: 'text',
-      md: '**Bir Suresi 1:1 · Sayfa 1 · 1. Cüz · 20. Dönüşün Başı**'
+      md: '**Bir Suresi 1:1 · Sayfa 20 · 1. Cüz · 1. Dönüşün Başı**'
     })
-    expect(q.tags).toContain('donus:20')
+    expect(q.tags).toContain('donus:01')
     expect(q.tags).toContain('kesim:bas')
     expect(parcalar(s).map((x) => x.kesim)).toEqual([
       'bas',
@@ -174,11 +174,11 @@ describe('donus', () => {
     ])
     for (const d of Object.values(q.distractors))
       expect(d).toMatch(/Sayfa \d+ · 1\. Cüz · \d+\. Dönüşün (Başı|Ortası|Sonu)/)
-    const t = uret(s, null, { duzen: 'donus' }).sorular
+    const t = r.sorular
     expect(t.map((x) => x.source.chapter)).toEqual(
       [...t.map((x) => x.source.chapter)].sort((a, b) => parseInt(a!, 10) - parseInt(b!, 10))
     )
-    expect(t[0]!.source.chapter).toBe('19. Dönüş')
+    expect(t[0]!.source.chapter).toBe('1. Dönüş')
   })
 })
 
