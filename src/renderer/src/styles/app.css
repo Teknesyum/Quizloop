@@ -80,6 +80,12 @@ body {
   transition: color var(--tk-t-base) var(--tk-e-out);
 }
 
+.ql-scale__value {
+  min-width: calc(var(--tk-sp-5) * 2);
+  color: var(--tk-text);
+  font-variant-numeric: tabular-nums;
+}
+
 .ql-scale__btn:hover,
 .ql-scale__btn:focus-visible {
   color: var(--tk-renk-2-text);
