@@ -105,7 +105,7 @@
   "view.label": "Modül ve bölüm görünümü",
   "view.card": "Kart",
   "view.list": "Liste",
-  "book.missingPhone": "Bu pakette telefon için bölüm dosyaları yok. Adı -android ile biten paketi kur.",
+  "book.missingPhone": "Bu paket eski biçimde, kitabı telefonda açılamıyor. Modülün güncel paketini kur.",
   "book.missing": "Bu sorunun kaynağı diskte bulunamadı.",
   "book.kesitAlt": "Kaynak kesiti, {file} sayfa {page}: {quote}",
   "media.zoom": "Görseli büyütmek için tıkla",

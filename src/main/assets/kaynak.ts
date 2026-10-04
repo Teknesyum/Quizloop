@@ -59,3 +59,12 @@ export function resolvePdf(moduleId: string, root: string, sourceFile?: string):
 export function kaynakBase(moduleId: string): string {
   return `${SCHEME}://kaynak/${moduleId}/kitap.pdf`
 }
+
+export function kaynakFile(_root: string, rel: string, moduleId: string): string {
+  const tail = rel
+    .replace(/^kaynak\//, '')
+    .split('/')
+    .map(encodeURIComponent)
+    .join('/')
+  return `${SCHEME}://kaynak/${encodeURIComponent(moduleId)}/${tail}`
+}

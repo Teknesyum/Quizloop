@@ -6,6 +6,15 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.7.3] - 2026-10-04
+
+### Changed
+
+- One module package for every platform. `quizforge paket` always splits the
+  book into chapter PDFs and the desktop app opens the book from them; the
+  `--android` flag and the `-android.qlmod` file are gone. Packages that carry
+  the whole book still open on the desktop.
+
 ## [0.7.2] - 2026-10-04
 
 ### Added

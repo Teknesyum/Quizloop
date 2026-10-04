@@ -3,7 +3,7 @@ import type { Kysely } from 'kysely'
 import type { Database } from '@core/db/types'
 import { createCore } from '@core/commands'
 import { SettingsPatch } from '@core/settings'
-import { forgetPdf, kaynakBase, rememberPdf, resolvePdf } from '@main/assets/kaynak'
+import { forgetPdf, kaynakBase, kaynakFile, rememberPdf, resolvePdf } from '@main/assets/kaynak'
 import { assetBase } from '@main/assets/protocol'
 import { installFrom, removeModuleTree, samplePath } from '@main/modules/install'
 import { PACKAGE_EXT } from '@main/modules/paket'
@@ -46,7 +46,7 @@ export function registerHandlers(ctx: Context): {
     ports: nodePorts,
     settings: settingsStore,
     assetBase,
-    books: { path: resolvePdf, url: kaynakBase }
+    books: { path: resolvePdf, url: kaynakBase, file: kaynakFile }
   })
   const { library } = core
 
