@@ -137,7 +137,7 @@ export function paket(l: Loaded): PaketSonucu {
   }
   const outDir = path.join(l.root, 'dist', 'modules')
   fs.mkdirSync(outDir, { recursive: true })
-  const out = path.join(outDir, `${next.id}-${next.version}.qlmod`)
+  const out = path.join(outDir, `quizloop-${next.id}-${next.version}.qlmod`)
   if (!kitapYolu(l)) {
     const zip = zipSync(entries)
     fs.writeFileSync(out, zip)
