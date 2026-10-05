@@ -565,6 +565,22 @@ img.ql-cover {
   cursor: not-allowed;
 }
 
+.ql-menu-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--tk-sp-4);
+  padding: var(--tk-sp-2) var(--tk-sp-3);
+}
+
+.ql-menu-row .ql-scale {
+  margin-inline-end: 0;
+}
+
+a.ql-menu-opt {
+  text-decoration: none;
+}
+
 .ql-menu-danger {
   color: var(--tk-danger-text);
 }

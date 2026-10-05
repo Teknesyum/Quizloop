@@ -6,6 +6,13 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.7.36] - 2026-10-05
+
+### Added
+
+- On the phone and in the browser the top bar has a three-dot menu with interface size,
+  language, Support and the Teknesyum link, which the desktop title bar already showed.
+
 ## [0.7.35] - 2026-10-05
 
 ### Changed
