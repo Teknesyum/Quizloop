@@ -46,6 +46,10 @@ bölümler cüz olarak kalır, dönüş bölümlü ayrı modül üretilmez (sahi
 ofset 0). Kaynakta basılı 1. sayfa iki PDF sayfasıdır (Fatiha, Bakara 1-5); ikisi yan yana tek
 sayfaya konur, böylece PDF sayfası = basılı sayfa (1-604).
 
+**Bölüm Kapağı (2026-10-05, sürüm 1.7.1).** Kapak artık metnin arkasında değil yanında durduğu için
+her bölüm kapağına cüz numarası basılır: Atkinson Hyperlegible Next 600, `--tk-text` beyazı, ortada.
+Ana kapak düz renk kalır.
+
 **Soru Cümlesi (2026-10-05, sürüm 1.7.0).** Kökün sonuna boş satırla "Bu durağın devamı nedir?"
 eklenir; uygulama (0.7.33+) soru işaretiyle biten son paragrafı Arapça metnin altına ayrı basar.
 Kimlikler, şıklar, çözüm ve kaynak değişmez.

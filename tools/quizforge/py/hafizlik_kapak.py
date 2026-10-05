@@ -1,7 +1,7 @@
 import sys
 from pathlib import Path
 
-from PIL import Image
+from PIL import Image, ImageDraw, ImageFont
 
 ROOT = Path(__file__).resolve().parents[3]
 OUT = ROOT / "tools/quizforge/src/hafizlik/kapak"
@@ -10,6 +10,9 @@ ZEMIN = (0, 0, 0)
 RENK1 = (0x4D, 0xA6, 0xFF)
 RENK3 = (0xB6, 0x8F, 0xFF)
 KOYULUK = 0.55
+METIN = (0xFF, 0xFF, 0xFF)
+YAZI = ROOT / "node_modules/@fontsource/atkinson-hyperlegible-next/files/atkinson-hyperlegible-next-latin-600-normal.woff2"
+YAZI_ORANI = 0.5
 
 
 def karis(a, b, t):
@@ -22,6 +25,12 @@ def gecis(ust, alt):
     return serit.resize((W, H))
 
 
+def numarali(im, n):
+    yazi = ImageFont.truetype(str(YAZI), round(H * YAZI_ORANI))
+    ImageDraw.Draw(im).text((W / 2, H / 2), str(n), font=yazi, fill=METIN, anchor="mm")
+    return im
+
+
 def kaydet(im, yol):
     yol.parent.mkdir(parents=True, exist_ok=True)
     im.save(yol, "WEBP", quality=90, method=6)
@@ -31,7 +40,7 @@ def main():
     kaydet(gecis(RENK3, karis(RENK1, ZEMIN, KOYULUK)), OUT / "kapak.webp")
     for n in range(1, 31):
         renk = karis(RENK1, RENK3, (n - 1) / 29)
-        kaydet(gecis(renk, karis(renk, ZEMIN, KOYULUK)), OUT / "bolum" / f"{n}.webp")
+        kaydet(numarali(gecis(renk, karis(renk, ZEMIN, KOYULUK)), n), OUT / "bolum" / f"{n}.webp")
     print(f"written: {OUT.relative_to(ROOT)} (31)")
     return 0
 
