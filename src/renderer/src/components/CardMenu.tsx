@@ -1,6 +1,7 @@
 import { useEffect, useLayoutEffect, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
 import { GOAL_DAYS, type ModuleSummary } from '@shared/ipc'
+import { goalLabel } from '@renderer/goal'
 import { t } from '@renderer/i18n'
 import { useApp } from '@renderer/store/app'
 
@@ -135,16 +136,7 @@ async function setGoal(m: ModuleSummary, days: number | null): Promise<void> {
 export function GoalMenu({ m }: { m: ModuleSummary }): React.JSX.Element {
   const open = m.unseen + m.dueToday + m.learning + m.retiredToday
   return (
-    <CardMenu
-      label={t('library.goalHelp')}
-      text={
-        m.goal
-          ? t('library.goalSet', {
-              span: t(`library.goal.${m.goal.days as (typeof GOAL_DAYS)[number]}`)
-            })
-          : t('library.goal')
-      }
-    >
+    <CardMenu label={t('goals.pick')} text={goalLabel(m)}>
       {GOAL_DAYS.map((d) => (
         <MenuItem key={d} onPick={() => setGoal(m, d)}>
           {t('library.goalRow', { span: t(`library.goal.${d}`), daily: Math.ceil(open / d) })}

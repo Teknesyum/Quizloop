@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { tinykeys } from 'tinykeys'
 import { LangSwitch, TitleBar } from '../../../teknesyum-ui/ustcubuk/TitleBar'
 import { runBack } from './back'
+import { remind } from './remind'
 import { Confirm } from './components/Confirm'
 import { ScaleSwitch } from './components/ScaleSwitch'
 import { useUpdateTools } from './components/UpdateTools'
@@ -81,6 +82,15 @@ export default function App(): React.JSX.Element {
   useEffect(() => {
     document.documentElement.lang = lang
   }, [])
+
+  const goalNotify = settings?.goalNotify
+  const modules = useApp((s) => s.modules)
+  useEffect(() => {
+    if (!goalNotify || !modules) return
+    remind(modules)
+    const id = window.setInterval(() => remind(useApp.getState().modules ?? []), 600_000)
+    return () => window.clearInterval(id)
+  }, [goalNotify, modules])
 
   useEffect(() => {
     loadSettings()

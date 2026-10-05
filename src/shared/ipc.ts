@@ -178,6 +178,7 @@ export interface Settings {
   welcomeSeen: boolean
   samplesUsed: boolean
   goals: Record<string, GoalSetting>
+  goalNotify: boolean
 }
 
 export const FONT_SCALES = [0.9, 1, 1.1, 1.25, 1.4, 1.6] as const
