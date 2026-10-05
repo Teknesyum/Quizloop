@@ -23,7 +23,7 @@ export interface Parca {
   kesim: Kesim
 }
 
-export type Satir = [number, number, number, number, number]
+export type Satir = [number, number, number, number, number] | null
 
 export interface Secenekler {
   satirlar?: Record<string, Satir[]>
@@ -253,21 +253,16 @@ function cozum(
 const yuvarla = (n: number): number => Math.round(n * 10) / 10
 
 export function isaretle(satirlar: Satir[] | undefined, cevap: Parca): Isaret[] {
-  if (!satirlar?.length || cevap.ayetKelime <= 0) return []
-  const toplam = satirlar.reduce((n, s) => n + (s[3] - s[1]), 0)
-  const bas = (cevap.bas / cevap.ayetKelime) * toplam
-  const son = (cevap.son / cevap.ayetKelime) * toplam
+  if (satirlar?.length !== cevap.ayetKelime) return []
   const cikti: Isaret[] = []
-  let yol = 0
-  for (const [sayfa, x0, y0, x1, y1] of satirlar) {
-    const a = Math.max(bas, yol)
-    const b = Math.min(son, yol + (x1 - x0))
-    if (b - a > 1)
-      cikti.push({
-        pdfSayfa: sayfa,
-        bbox: [yuvarla(x1 - (b - yol)), y0, yuvarla(x1 - (a - yol)), y1]
-      })
-    yol += x1 - x0
+  for (const kutu of satirlar.slice(cevap.bas, cevap.son)) {
+    if (!kutu) continue
+    const [sayfa, x0, y0, x1, y1] = kutu
+    const son = cikti[cikti.length - 1]
+    if (son?.pdfSayfa === sayfa && son.bbox[1] === y0) {
+      son.bbox[0] = yuvarla(Math.min(son.bbox[0], x0))
+      son.bbox[2] = yuvarla(Math.max(son.bbox[2], x1))
+    } else cikti.push({ pdfSayfa: sayfa, bbox: [yuvarla(x0), y0, yuvarla(x1), y1] })
   }
   return cikti
 }

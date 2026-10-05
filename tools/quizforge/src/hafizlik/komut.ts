@@ -18,7 +18,7 @@ import {
 import { uret, type Satir } from './uret.ts'
 
 const MODUL = 'kuran-hafizlik'
-const SURUM = '1.7.2'
+const SURUM = '1.7.3'
 const DONUS_NOTU =
   'Dönüş, her cüzün son sayfasından başa doğru sayılır: 1. Dönüş son sayfadır, 20. Dönüş ilk sayfadır. 30. Cüz 24 sayfadır; son beş sayfası (600-604) 1. Dönüş sayılır.'
 const BLOK = 50
@@ -91,16 +91,17 @@ export async function hafizlik(argv: string[], root: string): Promise<number> {
   const kitap = values.kitapsiz ? null : await kitapYukle(buildDir)
   let satirlar: Record<string, Satir[]> | undefined
   if (kitap) {
-    const py = spawnSync(python, [path.join(pyDir, 'hafizlik_satir.py'), kitap], {
+    const py = spawnSync(python, [path.join(pyDir, 'hafizlik_satir.py'), kitap, path.join(buildDir, 'kuran.json')], {
       encoding: 'utf8',
-      maxBuffer: 1 << 26
+      maxBuffer: 1 << 26,
+      env: { ...process.env, PYTHONIOENCODING: 'utf-8' }
     })
     if (py.status !== 0)
       throw new Error(
         `mushaf satırları okunamadı: ${(py.stderr || py.error?.message || '').trim()}`
       )
     satirlar = JSON.parse(py.stdout) as Record<string, Satir[]>
-    console.log(`mushaf satırları: ${Object.keys(satirlar).length} ayetin yeri bulundu`)
+    console.log(`mushaf kelimeleri: ${Object.keys(satirlar).length} ayet, ${py.stderr.trim()}`)
   }
   const r = uret(sureler, meal, {
     satirlar,
