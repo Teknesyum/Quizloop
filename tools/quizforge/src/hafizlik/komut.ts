@@ -18,7 +18,7 @@ import {
 import { uret, type Satir } from './uret.ts'
 
 const MODUL = 'kuran-hafizlik'
-const SURUM = '1.7.1'
+const SURUM = '1.7.2'
 const DONUS_NOTU =
   'Dönüş, her cüzün son sayfasından başa doğru sayılır: 1. Dönüş son sayfadır, 20. Dönüş ilk sayfadır. 30. Cüz 24 sayfadır; son beş sayfası (600-604) 1. Dönüş sayılır.'
 const BLOK = 50

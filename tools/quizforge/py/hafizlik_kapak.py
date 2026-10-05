@@ -13,6 +13,8 @@ KOYULUK = 0.55
 METIN = (0xFF, 0xFF, 0xFF)
 YAZI = ROOT / "node_modules/@fontsource/atkinson-hyperlegible-next/files/atkinson-hyperlegible-next-latin-600-normal.woff2"
 YAZI_ORANI = 0.5
+YAZI_ENI = 0.8
+BASLIK = "Kur'an"
 
 
 def karis(a, b, t):
@@ -25,9 +27,13 @@ def gecis(ust, alt):
     return serit.resize((W, H))
 
 
-def numarali(im, n):
-    yazi = ImageFont.truetype(str(YAZI), round(H * YAZI_ORANI))
-    ImageDraw.Draw(im).text((W / 2, H / 2), str(n), font=yazi, fill=METIN, anchor="mm")
+def yazili(im, metin):
+    boy = round(H * YAZI_ORANI)
+    yazi = ImageFont.truetype(str(YAZI), boy)
+    en = yazi.getlength(metin)
+    if en > W * YAZI_ENI:
+        yazi = ImageFont.truetype(str(YAZI), round(boy * W * YAZI_ENI / en))
+    ImageDraw.Draw(im).text((W / 2, H / 2), metin, font=yazi, fill=METIN, anchor="mm")
     return im
 
 
@@ -37,10 +43,10 @@ def kaydet(im, yol):
 
 
 def main():
-    kaydet(gecis(RENK3, karis(RENK1, ZEMIN, KOYULUK)), OUT / "kapak.webp")
+    kaydet(yazili(gecis(RENK3, karis(RENK1, ZEMIN, KOYULUK)), BASLIK), OUT / "kapak.webp")
     for n in range(1, 31):
         renk = karis(RENK1, RENK3, (n - 1) / 29)
-        kaydet(numarali(gecis(renk, karis(renk, ZEMIN, KOYULUK)), n), OUT / "bolum" / f"{n}.webp")
+        kaydet(yazili(gecis(renk, karis(renk, ZEMIN, KOYULUK)), str(n)), OUT / "bolum" / f"{n}.webp")
     print(f"written: {OUT.relative_to(ROOT)} (31)")
     return 0
 
