@@ -135,6 +135,14 @@ body {
   font-variant-numeric: tabular-nums;
 }
 
+.ql-version {
+  padding: 0 var(--tk-sp-2);
+  color: var(--tk-label-version-color, var(--tk-text-label));
+  font-size: var(--tk-label-version-fs, var(--tk-fs-1));
+  font-weight: var(--tk-label-version-fw, var(--tk-fw-body));
+  font-variant-numeric: tabular-nums;
+}
+
 .ql-update {
   display: flex;
   align-items: center;
