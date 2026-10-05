@@ -33,12 +33,51 @@ sayfasından indir:
 | macOS    | `quizloop-<version>-unsigned.dmg` | Yeni sürüm çıkınca uygulama haber verir |
 | Linux    | `.AppImage` ya da `.deb` | Yeni sürüm çıkınca uygulama haber verir |
 
+**iPhone, iPad, Android ya da herhangi bir tarayıcı:** QuizLoop Web'i kullan;
+anlatımı [Web sürümü](#web-sürümü) başlığında.
+
 macOS derlemesi imzasız, bu yüzden Gatekeeper ilk açılışı engeller. Karantina
 özniteliğini bir kez temizle:
 
 ```
 xattr -cr /Applications/Quizloop.app
 ```
+
+## Web sürümü
+
+**QuizLoop Web**, aynı motorun tarayıcıda çalışan hâlidir:
+<https://teknesyum.github.io/Quizloop/>. Mağazadan bir şey inmez, hesap
+açılmaz, ilk açılıştan sonra internetsiz de çalışır. İlerlemen ve modüllerin
+cihazında kalır.
+
+**Kurulum**
+
+- **iPhone, iPad:** adresi Safari'de aç, *Paylaş*'a, sonra
+  *Ana Ekrana Ekle*'ye, sonra *Ekle*'ye dokun.
+- **Android:** Chrome'da aç, üç noktaya, sonra *Uygulamayı yükle*'ye (ya da
+  *Ana ekrana ekle*) ve *Yükle*'ye dokun.
+- **Bilgisayar:** Chrome ya da Edge'de aç. Sekme olarak çalışır; adres
+  çubuğundaki yükleme simgesi onu ayrı bir pencereye çevirir.
+
+**İlk kullanım.** *Örnek Modülleri Kur* denemek için iki örnek ekler.
+*Modül Dosyası Ekle* bir `.qlmod` dosyasını içeri alır. Sağ üstteki üç nokta menüsünde yazı boyutu, dil
+ve destek bağlantısı durur. İlk açılış internet ister.
+
+**Güncelleme** kendiliğinden gelir: yeni sürüm arka planda iner, sayfa
+yenilenince ya da yeniden açılınca devreye girer. Çalışan sürüm başlığın
+yanında yazar. İlerleme korunur.
+
+**Bilinmesi gereken eksikler**
+
+- Yedekleme ve dışa aktarma henüz yok. Tarayıcının site verisini silmek ya da
+  ana ekrandaki uygulamayı kaldırmak ilerlemeyi siler.
+- Cihazlar ve tarayıcılar arasında eşitleme yok.
+- iPhone'da Safari sekmesi ile ana ekran simgesi ayrı veri tutar. Birini seç,
+  onunla devam et.
+- Aynı anda tek sekme; ikinci sekme uygulamanın zaten açık olduğunu söyler.
+- Hatırlatma bildirimi yok.
+- Bir `.qlmod` dosyasına dokunmak uygulamayı açmaz; dosyayı içeriden ekle.
+- Eski telefonlarda çalışmayabilir. iOS 17 ve sonrası güvenli alt sınırdır.
 
 ## Bir tur nasıl geçer
 
