@@ -15,7 +15,7 @@ serves it locally. `.github/workflows/pages.yml` publishes it to GitHub Pages on
   (`ql-mod-<stamp>`), module root `<scope>m/<stamp>`. Replacing a module deletes its old
   cache after the sync; `sweep()` drops caches no module row points at.
 - `sw.js` — template; the build fills in the file list. Serves `<scope>m/…` from the module
-  caches and the app from `ql-shell-<version>`. A new worker waits (no `skipWaiting`), so a
-  running page keeps its own hashed files and the new version starts on the next launch.
+  caches and the app from `ql-shell-<version>`. A new worker waits while a page runs, so that
+  page keeps its own hashed files; the next load asks it to take over (`boot.ts`, 0021).
 - `settings.ts` — `localStorage`. `public/` — manifest and icon. Shared with Android:
   `../android/work.ts`, `ports.ts` (`loadBundle`), `pdfworker.ts`.

@@ -4,15 +4,29 @@ import { createShell } from './shell'
 
 const CONTROL_WAIT_MS = 3000
 
-async function serve(): Promise<void> {
-  if (!('serviceWorker' in navigator)) return
-  await navigator.serviceWorker.register('./sw.js')
-  await navigator.serviceWorker.ready
-  if (navigator.serviceWorker.controller) return
-  await new Promise<void>((done) => {
+function controlled(): Promise<void> {
+  return new Promise<void>((done) => {
     navigator.serviceWorker.addEventListener('controllerchange', () => done(), { once: true })
     setTimeout(done, CONTROL_WAIT_MS)
   })
+}
+
+async function serve(): Promise<void> {
+  if (!('serviceWorker' in navigator)) return
+  const reg = await navigator.serviceWorker.register('./sw.js')
+  await navigator.serviceWorker.ready
+  const had = Boolean(navigator.serviceWorker.controller)
+  if (reg.waiting) {
+    const taken = controlled()
+    reg.waiting.postMessage('skip')
+    await taken
+    if (had) {
+      location.reload()
+      await new Promise<never>(() => {})
+    }
+    return
+  }
+  if (!had) await controlled()
 }
 
 installPdfWorker()
