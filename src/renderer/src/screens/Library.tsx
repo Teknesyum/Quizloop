@@ -145,6 +145,7 @@ export function Library(): React.JSX.Element {
   const report = async (r: InstallResult | null): Promise<void> => {
     if (!r || r.cancelled) return
     if (r.ok) {
+      useApp.setState((s) => ({ fresh: s.fresh + 1 }))
       toast('success', installedText(r))
     } else {
       toast('danger', `${t('library.installFailed')}: ${r.error ?? ''}`)
