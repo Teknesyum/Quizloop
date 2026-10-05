@@ -164,7 +164,7 @@ export default function App(): React.JSX.Element {
           const n = NAV.find((x) => x.route.name === id)
           if (n) go(n.route)
         }}
-        version={caps.updater ? tools.version : undefined}
+        version={caps.updater ? tools.version : tools.label}
         update={caps.updater ? tools.update : undefined}
         language={
           <>

@@ -45,7 +45,11 @@ function toPanel(s: UpdateStatus): UpdateState | null {
   return null
 }
 
-export function useUpdateTools(): { version: React.JSX.Element | null; update: React.JSX.Element } {
+export function useUpdateTools(): {
+  version: React.JSX.Element | null
+  label: React.JSX.Element | null
+  update: React.JSX.Element
+} {
   const up = useUpdate()
   const toast = useApp((s) => s.toast)
   const said = useRef(false)
@@ -84,6 +88,8 @@ export function useUpdateTools(): { version: React.JSX.Element | null; update: R
       }}
     />
   ) : null
+
+  const labelNode = version ? <span className="ql-version">{`v${version}`}</span> : null
 
   const updateNode = (
     <span className="ql-update">
@@ -141,5 +147,5 @@ export function useUpdateTools(): { version: React.JSX.Element | null; update: R
       />
     </span>
   )
-  return { version: versionNode, update: updateNode }
+  return { version: versionNode, label: labelNode, update: updateNode }
 }
