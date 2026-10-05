@@ -1,6 +1,7 @@
 {
   "app.name": "QuizLoop",
   "nav.library": "Kütüphane",
+  "nav.goals": "Hedef",
   "nav.stats": "İstatistik",
   "nav.settings": "Ayarlar",
   "win.minimize": "Küçült",
@@ -349,5 +350,14 @@
   "settings.welcome": "Tanıtım",
   "settings.welcomeOpen": "Tanıtımı yeniden göster",
   "settings.samples": "Örnek modüller",
-  "settings.samplesInstalled": "Örnek modüller kuruldu"
+  "settings.samplesInstalled": "Örnek modüller kuruldu",
+  "goals.title": "Hedefler",
+  "goals.subtitle": "Modül başına günlük hedefini buradan koy ve takip et.",
+  "goals.total": "Bugün toplam {done}/{daily} soru emekli edildi.",
+  "goals.today": "bugün emekli edilen / günlük hedef",
+  "goals.met": "bugünkü hedef tamam",
+  "goals.left": "Bitişe {days} gün kaldı ({date}) · kalan {count} soru",
+  "goals.none": "Bu modülde hedef yok. Hedef düğmesinden bir süre seç.",
+  "goals.empty": "Kurulu modül yok. Önce Kütüphane sekmesinden bir modül ekle.",
+  "goals.how": "Günlük hedef, kalan soruların kalan güne bölümüdür. Bir gün atlarsan sonraki günlerin hedefi yükselir."
 }

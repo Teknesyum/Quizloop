@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react'
 import { tinykeys } from 'tinykeys'
-import { GOAL_DAYS, type InstallResult, type ModuleSummary } from '@shared/ipc'
+import type { InstallResult, ModuleSummary } from '@shared/ipc'
 import { CardCover } from '@renderer/components/CardCover'
 import { CardInfo, CardMeter } from '@renderer/components/CardFacts'
-import { CardMenu, MenuItem } from '@renderer/components/CardMenu'
+import { CardMenu, GoalMenu, MenuItem } from '@renderer/components/CardMenu'
 import { Confirm } from '@renderer/components/Confirm'
 import { Skeleton } from '@renderer/components/Skeleton'
 import { ViewToggle } from '@renderer/components/ViewToggle'
@@ -11,18 +11,13 @@ import { installedText, t, title } from '@renderer/i18n'
 import { useApp } from '@renderer/store/app'
 import { useView } from '@renderer/view'
 
-function untilOf(days: number): string {
-  return new Date(Date.now() + days * 86_400_000).toISOString()
-}
-
 function ModuleCard({
   m,
   index,
   active,
   onFocus,
   onRemove,
-  onReset,
-  onGoal
+  onReset
 }: {
   m: ModuleSummary
   index: number
@@ -30,11 +25,9 @@ function ModuleCard({
   onFocus(): void
   onRemove(): void
   onReset(): void
-  onGoal(days: number | null): void
 }): React.JSX.Element {
   const go = useApp((s) => s.go)
   const percent = m.questionCount ? Math.round((m.retired / m.questionCount) * 100) : 0
-  const open = m.unseen + m.dueToday + m.learning + m.retiredToday
   return (
     <article
       id={`ql-module-${index}`}
@@ -72,27 +65,7 @@ function ModuleCard({
             {t('library.remove')}
           </MenuItem>
         </CardMenu>
-        <CardMenu
-          label={t('library.goalHelp')}
-          text={
-            m.goal
-              ? t('library.goalSet', {
-                  span: t(`library.goal.${m.goal.days as (typeof GOAL_DAYS)[number]}`)
-                })
-              : t('library.goal')
-          }
-        >
-          {GOAL_DAYS.map((d) => (
-            <MenuItem key={d} onPick={() => onGoal(d)}>
-              {t('library.goalRow', { span: t(`library.goal.${d}`), daily: Math.ceil(open / d) })}
-            </MenuItem>
-          ))}
-          {m.goal && (
-            <MenuItem danger onPick={() => onGoal(null)}>
-              {t('library.goalClear')}
-            </MenuItem>
-          )}
-        </CardMenu>
+        <GoalMenu m={m} />
         <div className="ql-card-actions">
           <button
             type="button"
@@ -160,16 +133,6 @@ export function Library(): React.JSX.Element {
       }
     })
   }, [modules, active, removing, resetting, go])
-
-  const setGoal = async (m: ModuleSummary, days: number | null): Promise<void> => {
-    const goals = { ...(useApp.getState().settings?.goals ?? {}) }
-    if (days === null) delete goals[m.id]
-    else goals[m.id] = { days, until: untilOf(days) }
-    await useApp.getState().saveSettings({ goals })
-    await loadModules()
-    const daily = useApp.getState().modules?.find((x) => x.id === m.id)?.goal?.daily
-    toast('success', daily ? t('library.goalDone', { daily }) : t('library.goalCleared'))
-  }
 
   const report = async (r: InstallResult | null): Promise<void> => {
     if (!r || r.cancelled) return
@@ -314,7 +277,6 @@ export function Library(): React.JSX.Element {
               onFocus={() => setActive(i)}
               onRemove={() => setRemoving(m)}
               onReset={() => setResetting(m)}
-              onGoal={(days) => setGoal(m, days)}
             />
           ))}
         </div>

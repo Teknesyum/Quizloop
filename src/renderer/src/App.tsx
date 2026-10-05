@@ -16,6 +16,7 @@ import { Chapters } from './screens/Chapters'
 import { Library } from './screens/Library'
 import { Session } from './screens/Session'
 import { Settings } from './screens/Settings'
+import { Goals } from './screens/Goals'
 import { Stats } from './screens/Stats'
 import { nextScale } from './scale'
 import { useApp, type Route } from './store/app'
@@ -27,6 +28,7 @@ const SPONSOR = 'https://github.com/sponsors/Teknesyum'
 
 const NAV: { route: Route; label: string }[] = [
   { route: { name: 'library' }, label: t('nav.library') },
+  { route: { name: 'goals' }, label: t('nav.goals') },
   { route: { name: 'stats' }, label: t('nav.stats') },
   { route: { name: 'settings' }, label: t('nav.settings') }
 ]
@@ -159,7 +161,11 @@ export default function App(): React.JSX.Element {
         }}
         maximized={max}
         tabs={inSession ? undefined : TABS}
-        current={route.name === 'stats' || route.name === 'settings' ? route.name : 'library'}
+        current={
+          route.name === 'goals' || route.name === 'stats' || route.name === 'settings'
+            ? route.name
+            : 'library'
+        }
         onTab={(id) => {
           const n = NAV.find((x) => x.route.name === id)
           if (n) go(n.route)
@@ -181,6 +187,7 @@ export default function App(): React.JSX.Element {
       <div className="ql-body">
         <main className="ql-main" key={route.name}>
           {route.name === 'library' && <Library />}
+          {route.name === 'goals' && <Goals />}
           {route.name === 'stats' && <Stats />}
           {route.name === 'settings' && <Settings />}
           {route.name === 'chapters' && <Chapters moduleId={route.moduleId} />}

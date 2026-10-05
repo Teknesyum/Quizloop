@@ -1945,6 +1945,76 @@ button.ql-mark:not(:disabled):active {
   background: var(--tk-renk-3);
 }
 
+/* --- goals --- */
+
+.ql-goals {
+  display: flex;
+  flex-direction: column;
+  gap: var(--tk-sp-3);
+  max-width: calc(var(--tk-measure) * 2);
+}
+
+.ql-goal {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: var(--tk-sp-4);
+  align-items: start;
+}
+
+.ql-goal-body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--tk-sp-2);
+  min-width: 0;
+}
+
+.ql-goal-body p {
+  margin: 0;
+}
+
+.ql-goal-body .tk-h3 {
+  margin: 0;
+  overflow: hidden;
+  font-size: var(--tk-fs-3);
+  line-height: var(--tk-lh-heading);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ql-goal-today {
+  display: flex;
+  align-items: baseline;
+  gap: var(--tk-sp-2);
+  flex-wrap: wrap;
+}
+
+.ql-goal-count {
+  font-size: var(--tk-fs-5);
+  line-height: var(--tk-lh-heading);
+  color: var(--tk-renk-1);
+}
+
+.ql-goal-met .ql-goal-count {
+  color: var(--tk-success);
+}
+
+.ql-goal-bar {
+  height: var(--tk-sp-2);
+}
+
+.ql-goal-bar span {
+  background: var(--tk-renk-1);
+}
+
+.ql-goal-met + .ql-goal-bar span {
+  background: var(--tk-success);
+}
+
+.ql-goal-line {
+  font-size: var(--tk-fs-1);
+  line-height: var(--tk-lh-heading);
+}
+
 /* --- question bank --- */
 
 .ql-bank-tools,
@@ -2124,6 +2194,14 @@ button.ql-mark:not(:disabled):active {
 /* --- phone --- */
 
 @media (max-width: 640px) {
+  .ql-goal {
+    gap: var(--tk-sp-3);
+  }
+
+  .ql-goal > .ql-cover {
+    width: calc(var(--tk-sp-5) * 2);
+  }
+
   .ql-grid-list > .ql-card {
     grid-template-areas:
       'cover head foot'

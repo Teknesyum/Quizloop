@@ -41,10 +41,15 @@ export function dailyGoal(
   open: number,
   retiredToday: number,
   start: Date
-): { days: number; daily: number; daysLeft: number } {
-  const left = Math.round((new Date(goal.until).getTime() - start.getTime()) / DAY_MS)
+): { days: number; daily: number; daysLeft: number; until: string } {
+  const left = Math.floor((new Date(goal.until).getTime() - start.getTime()) / DAY_MS)
   const daysLeft = Number.isFinite(left) ? Math.max(1, left) : 1
-  return { days: goal.days, daily: Math.ceil((open + retiredToday) / daysLeft), daysLeft }
+  return {
+    days: goal.days,
+    daily: Math.ceil((open + retiredToday) / daysLeft),
+    daysLeft,
+    until: goal.until
+  }
 }
 
 export function dayStart(now: Date, hour: number): Date {

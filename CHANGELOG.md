@@ -6,6 +6,18 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.7.32] - 2026-10-05
+
+### Added
+
+- A Goals tab next to Library. It lists every module with today's count against the daily
+  goal, the days left, the end date and the questions remaining, and lets you set, change
+  or remove the goal there.
+
+### Fixed
+
+- A goal no longer counts one day too many: a one-month goal starts at 30 days left, not 31.
+
 ## [0.7.31] - 2026-10-05
 
 ### Added

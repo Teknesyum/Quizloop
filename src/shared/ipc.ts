@@ -25,6 +25,7 @@ export interface ModuleGoal {
   days: number
   daily: number
   daysLeft: number
+  until: string
 }
 
 export interface GoalSetting {

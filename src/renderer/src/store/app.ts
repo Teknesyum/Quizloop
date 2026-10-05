@@ -3,6 +3,7 @@ import type { IntegrityReport, ModuleSummary, Settings } from '@shared/ipc'
 
 export type Route =
   | { name: 'library' }
+  | { name: 'goals' }
   | { name: 'stats' }
   | { name: 'settings' }
   | { name: 'chapters'; moduleId: string }
