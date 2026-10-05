@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useApp } from '@renderer/store/app'
 
 function initials(name: string): string {
   const no = name.match(/^\s*(\d+)/)
@@ -16,14 +17,16 @@ export function CardCover({
   name: string
   foot?: boolean
 }): React.JSX.Element {
-  const [failed, setFailed] = useState(false)
-  if (src && !failed)
+  const fresh = useApp((s) => s.fresh)
+  const [failed, setFailed] = useState<string | null>(null)
+  const url = src && fresh ? `${src}?v=${fresh}` : src
+  if (url && failed !== url)
     return (
       <img
         className={`ql-cover ${foot ? 'ql-cover-foot' : ''}`}
-        src={src}
+        src={url}
         alt=""
-        onError={() => setFailed(true)}
+        onError={() => setFailed(url)}
       />
     )
   return (

@@ -6,6 +6,13 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.7.40] - 2026-10-05
+
+### Fixed
+
+- Installing a newer copy of a module refreshes its cover and chapter pictures at once; the
+  old pictures no longer stay until a restart.
+
 ## [0.7.39] - 2026-10-05
 
 ### Fixed
