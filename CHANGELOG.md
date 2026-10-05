@@ -6,6 +6,15 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.7.39] - 2026-10-05
+
+### Fixed
+
+- Desktop: installing a module over an older copy no longer fails with `EPERM` when Windows
+  holds one of the old folders for a moment; removal retries and leftover empty folders are
+  reused.
+- A long path inside a message wraps instead of running out of its box.
+
 ## [0.7.38] - 2026-10-05
 
 ### Changed

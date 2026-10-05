@@ -991,6 +991,11 @@ kbd {
   white-space: nowrap;
 }
 
+.tk-toast-body {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
 .tk-toast-stack {
   z-index: 3;
 }

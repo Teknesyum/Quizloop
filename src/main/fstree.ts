@@ -55,8 +55,8 @@ export async function copyTree(
 
 export async function removeTree(dir: string, tick: Tick): Promise<void> {
   const files = await listFiles(dir).catch(() => [] as string[])
-  await pool(files, tick, (f) => rm(f, { force: true }))
-  await rm(dir, { recursive: true, force: true })
+  await pool(files, tick, (f) => rm(f, { force: true, maxRetries: 8, retryDelay: 150 }))
+  await rm(dir, { recursive: true, force: true, maxRetries: 8, retryDelay: 150 })
 }
 
 export const skipBuild = (p: string): boolean => /[\\/]build([\\/]|$)/.test(p)
