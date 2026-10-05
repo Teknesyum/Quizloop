@@ -6,6 +6,26 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.7.33] - 2026-10-05
+
+### Added
+
+- The Goals tab opens with a plain explanation of how goals work.
+- A reminder for daily goals: once a goal is set, Turn On Notifications asks for permission
+  and a notification arrives after 19:00 on days the goal is not done, while the app is
+  open or running in the background. Desktop and browser only for now.
+- A question may end with its own closing question paragraph; it is shown under the text.
+
+### Changed
+
+- The Goal button on a module card opens the Goals tab.
+- Card and goal labels are capitalised.
+- Covers keep their own shape, so a full portrait book cover is shown whole.
+
+### Fixed
+
+- Right-to-left question text is centred in the whole card, not in a narrow column.
+
 ## [0.7.32] - 2026-10-05
 
 ### Added

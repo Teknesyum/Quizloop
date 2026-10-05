@@ -36,10 +36,12 @@ function emphasize(md: string, vurgu: string[]): string {
 
 function splitAsk(md: string): { body: string; ask: string } {
   const m = md.match(/(?:^|(?<=[.!?]\s))([^.!?]*\?)\s*$/)
-  if (!m || m.index === undefined) return { body: md, ask: '' }
-  const body = md.slice(0, m.index).trim()
-  if (!body) return { body: md, ask: '' }
-  return { body, ask: (m[1] ?? '').trim() }
+  const body = m && m.index !== undefined ? md.slice(0, m.index).trim() : ''
+  if (body) return { body, ask: (m?.[1] ?? '').trim() }
+  const cut = md.lastIndexOf('\n\n')
+  if (cut > 0 && /\?\s*$/.test(md.slice(cut)))
+    return { body: md.slice(0, cut).trim(), ask: md.slice(cut).trim() }
+  return { body: md, ask: '' }
 }
 
 function Stem({

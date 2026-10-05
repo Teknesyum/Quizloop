@@ -791,3 +791,67 @@ tam meal → kelime kelime `table`.
 - H5 — Ses: kari kaydıyla dinletme; lisans ve boyut o zaman.
 
 **Risk.** Yapan hafız değil: bir hafıza 20 dakika kullandırmak şart, henüz yapılmadı.
+
+## 13. İngilizce Modülü — Plan (2026-10-05, Taslak)
+
+Görüş: `docs/danisma/009-fable-ingilizce-modulu.md`. Lisans taraması:
+`docs/taramalar/ingilizce-kaynak-lisans.md`. Kaynaklar: 0 depo incelendi — taslak.
+
+**Vaat.** Modül alıcı becerileri taşır: kelime, dil bilgisi tanıma, okuduğunu anlama. Konuşma,
+dinleme ve yazma ölçülmez. "Bitiren C2 olur" denmez; söylenen "C2 düzeyinde kelime ve dil
+bilgisi, C1–C2 okuma"dır. Dinleme ancak motor ses taşıyınca eklenir (İ5).
+
+**Yapı.** Seviye başına bir modül, altı paket: `ingilizce-a1` … `ingilizce-c2`. Bölüm sırası:
+Kelime → Dil Bilgisi → Kalıp Ve Eşdizim (B1'den) → Okuma (A2'den) → Seviye Sonu Sınavı.
+Türkçe konuşana özgü hatalar ayrı bölüm değil, `tr-girisim` etiketidir.
+
+**Hacim (hedef).** A1 900, A2 1.200, B1 1.800, B2 2.300, C1 3.000, C2 2.500; toplam ~11.700 soru.
+Günde 20 yeni kartla yaklaşık iki yıl.
+
+**Kaynak.**
+
+| İş | Kaynak | Lisans | Durum |
+|---|---|---|---|
+| Kelime seviyesi A1–B2 | CEFR-J Wordlist | ücretsiz, atıf şartı | LICENSE'tan teyit |
+| Kelime seviyesi C1–C2 | Octanove C1/C2 | CC BY-SA 4.0 | teyit |
+| İngilizce tanım, eş anlam | Open English WordNet | CC BY 4.0 | tamam |
+| Türkçe karşılık | Wiktionary (Kaikki dökümü) | CC BY-SA 4.0 | kapsam ölçülecek |
+| Örnek cümle | Tatoeba EN–TR | CC BY 2.0 FR | çift sayısı ölçülecek |
+| Dil bilgisi seviye haritası | CEFR-J Grammar Profile | CEFR-J ile aynı | teyit |
+| Sıklık | wordfreq verisi | CC BY-SA 4.0 | tamam |
+| Okuma A2–B2 | VOA Learning English özgün metni | kamu malı, AP hariç | parça parça |
+| Okuma C1–C2 | Standard Ebooks | CC0 | tamam |
+
+Pakete girmeyenler: Oxford 3000/5000, EVP/EGP, COCA, EFLLex, UD GUM (telif ya da ticari olmayan
+şart). Modül içeriği CC BY-SA 4.0 ile, atıf listesiyle dağıtılır; kod AGPL kalır.
+
+**Kaynak Kuralı.** `source.file` = veri kümesi adı + commit + SHA-256, `pages` = kayıt numarası,
+`quote` = kaydın kendisi. Modelin yazdığı cümlede `file` = depodaki kural dosyası
+(`kaynak/dilbilgisi/<seviye>-<konu>.md`), etiket `uretilmis`.
+
+**Soru Kalıpları.**
+
+- Kelime: bağlam cümlesinde kelime → Türkçe karşılık (A1–B1); İngilizce tanım → kelime (B2+).
+  Çeldirici aynı seviye, aynı sözcük türü, yakın sıklık; eş anlamlılar dışlanır.
+- Dil bilgisi: boşluklu cümle, dört biçim; çeldirici kuralın bilinen karışma kümesinden.
+  İkinci kalıp "hangi cümle doğru", üçüncü açık uçlu dönüştürme.
+- Okuma: 80–200 kelimelik parça, parça başına 3–5 soru; `verify` alıntıyı parçada arar.
+
+**Açıklama Dili.** A1–B1 Türkçe; B2 Türkçe + İngilizce tanım; C1–C2 İngilizce.
+
+**Üretim Hattı.** Kurallı seçim → alt ajan cümle ve açıklama yazar → ikinci ajan şıkları kör
+çözer, tek doğruya varamazsa soru düşer → `verify`. Şema değişmez.
+
+**Dalgalar.**
+
+- İ0 — Lisans teyidi (LICENSE dosyaları) ve veri ölçümü: Wiktionary Türkçe kapsamı, Tatoeba çift
+  sayısı, CEFR-J ile Octanove'nin seviye başına kelime sayısı. Karar kaydı `0018`.
+- İ1 — A1 pilotu, 300 soru: üç kalıp, kör çözüm düşme oranı, bir öğrenciyle deneme.
+- İ2 — A1 ve A2 tam.
+- İ3 — B1 ve B2; eşdizim ve okuma bölümleri.
+- İ4 — C1 ve C2.
+- İ5 — Motor: yazarak cevap (`acceptedAnswers`), ses (`audioRef`), seviye belirleme sınavı.
+
+**Risk.** Seviye etiketi tek omurgadan gelir (CEFR-J + Octanove); CEFR-J Japon müfredatından
+türemiştir, Türk öğrenciye göre sapabilir. Algoritmik çeldirici iki doğrulu soru üretir; kör
+çözüm bunun için var. Tatoeba çevirilerinin kalitesi dengesiz.

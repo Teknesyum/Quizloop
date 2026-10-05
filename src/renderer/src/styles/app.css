@@ -359,6 +359,13 @@ body {
   object-position: top center;
 }
 
+img.ql-cover {
+  aspect-ratio: auto;
+  height: auto;
+  max-height: calc(var(--tk-sp-5) * 6);
+  align-self: start;
+}
+
 .ql-cover.ql-cover-foot {
   object-position: bottom center;
 }
@@ -2015,6 +2022,40 @@ button.ql-mark:not(:disabled):active {
   line-height: var(--tk-lh-heading);
 }
 
+.ql-goal-notify {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--tk-sp-3);
+  flex-wrap: wrap;
+  max-width: calc(var(--tk-measure) * 2);
+}
+
+.ql-goal-notify p {
+  margin: 0;
+  flex: 1 1 var(--tk-measure);
+}
+
+.ql-goal-info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--tk-sp-3);
+  max-width: calc(var(--tk-measure) * 2);
+}
+
+.ql-goal-info .tk-h3,
+.ql-goal-info ul {
+  margin: 0;
+}
+
+.ql-goal-info ul {
+  display: flex;
+  flex-direction: column;
+  gap: var(--tk-sp-2);
+  max-width: none;
+  padding-inline-start: var(--tk-sp-4);
+}
+
 /* --- question bank --- */
 
 .ql-bank-tools,
@@ -2467,6 +2508,12 @@ button.ql-mark:not(:disabled):active {
 
 .tk-prose p:dir(rtl),
 .ql-stem-text p:dir(rtl) {
+  text-align: center;
+}
+
+.ql-stem:has(.ql-stem-text p:dir(rtl)) .ql-stem-text,
+.ql-stem:has(.ql-stem-text p:dir(rtl)) .ql-stem-ask {
+  max-width: none;
   text-align: center;
 }
 

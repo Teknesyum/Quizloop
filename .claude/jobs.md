@@ -1,1 +1,6 @@
-- [x] Hedef sekmesi: her modülün hedefini oradan takip et
+- [x] Kart ve hedef yazılarında baş harfler büyük (Bugün Sorulacak, Hiç Görülmemiş, Soru, Emekli, 1 Hafta, 1 Ay)
+- [ ] Kapak resmi sorununu çöz, önizleme gönder, onay al — önizleme gönderildi, modül dosyası sahibin onayını bekliyor
+- [x] Hedef düğmesi Hedef sekmesine götürsün, ayrıntılı bilgilendirme, hedef seçilince Bildirimi Aç düğmesi ve izin isteği
+- [x] Soru metni ortalansın (Arapça kök)
+- [ ] Hafızlık modülü: Türkçe soru cümlesi, önizleme + onay, modül ajanı için kopyalanabilir istem — önizleme ve istem verildi, cümle sahibin onayını bekliyor
+- [ ] Android bildirimi — yerel eklenti ve yeni Play derlemesi ister, sahibin kararı

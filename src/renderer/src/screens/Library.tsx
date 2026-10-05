@@ -3,10 +3,11 @@ import { tinykeys } from 'tinykeys'
 import type { InstallResult, ModuleSummary } from '@shared/ipc'
 import { CardCover } from '@renderer/components/CardCover'
 import { CardInfo, CardMeter } from '@renderer/components/CardFacts'
-import { CardMenu, GoalMenu, MenuItem } from '@renderer/components/CardMenu'
+import { CardMenu, MenuItem } from '@renderer/components/CardMenu'
 import { Confirm } from '@renderer/components/Confirm'
 import { Skeleton } from '@renderer/components/Skeleton'
 import { ViewToggle } from '@renderer/components/ViewToggle'
+import { goalLabel } from '@renderer/goal'
 import { installedText, t, title } from '@renderer/i18n'
 import { useApp } from '@renderer/store/app'
 import { useView } from '@renderer/view'
@@ -65,7 +66,14 @@ function ModuleCard({
             {t('library.remove')}
           </MenuItem>
         </CardMenu>
-        <GoalMenu m={m} />
+        <button
+          type="button"
+          className="tk-btn tk-btn-ghost ql-btn-sm"
+          title={t('library.goalHelp')}
+          onClick={() => useApp.getState().go({ name: 'goals' })}
+        >
+          {goalLabel(m)}
+        </button>
         <div className="ql-card-actions">
           <button
             type="button"

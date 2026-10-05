@@ -12,7 +12,8 @@ export const DEFAULT_SETTINGS: Settings = {
   autoUpdate: true,
   welcomeSeen: false,
   samplesUsed: false,
-  goals: {}
+  goals: {},
+  goalNotify: false
 }
 
 export const SettingsPatch = z
@@ -30,7 +31,8 @@ export const SettingsPatch = z
     goals: z.record(
       z.string(),
       z.object({ days: z.number().int().min(1).max(3650), until: z.string() })
-    )
+    ),
+    goalNotify: z.boolean()
   })
   .partial()
 

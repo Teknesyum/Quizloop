@@ -4,7 +4,16 @@ import { CardCover } from '@renderer/components/CardCover'
 import { GoalMenu } from '@renderer/components/CardMenu'
 import { Skeleton } from '@renderer/components/Skeleton'
 import { t } from '@renderer/i18n'
+import { askNotify, canNotify, remind } from '@renderer/remind'
 import { useApp } from '@renderer/store/app'
+
+const INFO = [
+  'goals.info.1',
+  'goals.info.2',
+  'goals.info.3',
+  'goals.info.4',
+  'goals.info.5'
+] as const
 
 function share(done: number, of: number): string {
   return `${of ? Math.min(100, (done / of) * 100) : 0}%`
@@ -96,6 +105,18 @@ function GoalRow({ m, index }: { m: ModuleSummary; index: number }): React.JSX.E
 export function Goals(): React.JSX.Element {
   const modules = useApp((s) => s.modules)
   const loadModules = useApp((s) => s.loadModules)
+  const notify = useApp((s) => s.settings?.goalNotify ?? false)
+
+  const turnOn = async (): Promise<void> => {
+    const app = useApp.getState()
+    if (!(await askNotify())) {
+      app.toast('warning', t('goals.notifyDenied'))
+      return
+    }
+    await app.saveSettings({ goalNotify: true })
+    app.toast('success', t('goals.notifyDone'))
+    remind(app.modules ?? [], true)
+  }
 
   useEffect(() => {
     loadModules()
@@ -130,14 +151,45 @@ export function Goals(): React.JSX.Element {
       )}
 
       {sorted !== null && sorted.length > 0 && (
+        <div className="tk-panel ql-goal-info ql-transition-in">
+          <h3 className="tk-h3">{t('goals.infoTitle')}</h3>
+          <ul className="tk-prose">
+            {INFO.map((k) => (
+              <li key={k}>{t(k)}</li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      {withGoal.length > 0 && (
+        <div className="tk-panel ql-goal-notify ql-transition-in">
+          <p className="tk-hint">
+            {t(!canNotify() ? 'goals.notifyNone' : notify ? 'goals.notifyOn' : 'goals.notifyAsk')}
+          </p>
+          {canNotify() && !notify && (
+            <button type="button" className="tk-btn tk-btn-primary ql-btn-sm" onClick={turnOn}>
+              {t('goals.notifyButton')}
+            </button>
+          )}
+          {canNotify() && notify && (
+            <button
+              type="button"
+              className="tk-btn tk-btn-ghost ql-btn-sm"
+              onClick={() => useApp.getState().saveSettings({ goalNotify: false })}
+            >
+              {t('goals.notifyOff')}
+            </button>
+          )}
+        </div>
+      )}
+
+      {sorted !== null && sorted.length > 0 && (
         <div className="ql-goals">
           {sorted.map((m, i) => (
             <GoalRow key={m.id} m={m} index={i} />
           ))}
         </div>
       )}
-
-      {sorted !== null && sorted.length > 0 && <p className="tk-hint">{t('goals.how')}</p>}
     </section>
   )
 }
