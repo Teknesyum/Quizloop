@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react'
 import { tinykeys } from 'tinykeys'
-import type { InstallResult, ModuleSummary } from '@shared/ipc'
+import { GOAL_DAYS, type InstallResult, type ModuleSummary } from '@shared/ipc'
 import { CardCover } from '@renderer/components/CardCover'
+import { CardInfo, CardMeter } from '@renderer/components/CardFacts'
 import { CardMenu, MenuItem } from '@renderer/components/CardMenu'
 import { Confirm } from '@renderer/components/Confirm'
 import { Skeleton } from '@renderer/components/Skeleton'
@@ -10,6 +11,10 @@ import { installedText, t, title } from '@renderer/i18n'
 import { useApp } from '@renderer/store/app'
 import { useView } from '@renderer/view'
 
+function untilOf(days: number): string {
+  return new Date(Date.now() + days * 86_400_000).toISOString()
+}
+
 function ModuleCard({
   m,
   index,
@@ -17,7 +22,7 @@ function ModuleCard({
   onFocus,
   onRemove,
   onReset,
-  onUpdate
+  onGoal
 }: {
   m: ModuleSummary
   index: number
@@ -25,10 +30,11 @@ function ModuleCard({
   onFocus(): void
   onRemove(): void
   onReset(): void
-  onUpdate(): void
+  onGoal(days: number | null): void
 }): React.JSX.Element {
   const go = useApp((s) => s.go)
   const percent = m.questionCount ? Math.round((m.retired / m.questionCount) * 100) : 0
+  const open = m.unseen + m.dueToday + m.learning + m.retiredToday
   return (
     <article
       id={`ql-module-${index}`}
@@ -46,50 +52,46 @@ function ModuleCard({
       </header>
       <div className="ql-card-body">
         <CardCover src={`${m.assetBase}assets/kapak.webp`} name={m.name} />
-        <div className="ql-card-info">
-          <p className="tk-hint ql-card-tags" aria-label={t('library.tags')}>
-            {[
-              t('library.card.version', { version: m.version }),
-              ...m.tags.map((tag) => title(tag))
-            ].join(' · ')}
-          </p>
-          <p className={`ql-card-due ${m.dueToday ? 'ql-stat-hot' : ''}`}>
-            <span className="tk-mono ql-due-count">{m.dueToday}</span>
-            <span className="tk-hint">{t('library.card.dueLabel')}</span>
-          </p>
-          <p className="tk-hint ql-card-rest">
-            {t('library.card.unseen', { count: m.unseen })} ·{' '}
-            {t('library.card.learning', { count: m.learning })}
-          </p>
-          <div className="ql-card-meter">
-            <p className="ql-card-meter-row">
-              <span className="tk-hint">
-                {t('library.card.questions', { count: m.questionCount })}
-              </span>
-              <span className="tk-hint">{t('library.card.percent', { percent })}</span>
-            </p>
-            <div
-              className="ql-progress"
-              role="progressbar"
-              aria-valuemin={0}
-              aria-valuemax={m.questionCount}
-              aria-valuenow={m.retired}
-            >
-              <span style={{ width: `${percent}%` }} />
-            </div>
-          </div>
-        </div>
+        <CardInfo
+          tags={[
+            t('library.card.version', { version: m.version }),
+            ...m.tags.map((tag) => title(tag))
+          ].join(' · ')}
+          c={m}
+          goal={m.goal}
+        />
       </div>
+      <CardMeter total={m.questionCount} retired={m.retired} />
       <footer className="ql-card-foot">
         <CardMenu label={t('library.more')}>
           <MenuItem onPick={() => go({ name: 'bank', moduleId: m.id })}>
             {t('library.bank')}
           </MenuItem>
-          <MenuItem onPick={onUpdate}>{t('library.update')}</MenuItem>
           <MenuItem onPick={onReset}>{t('library.reset')}</MenuItem>
           <MenuItem danger onPick={onRemove}>
             {t('library.remove')}
           </MenuItem>
+        </CardMenu>
+        <CardMenu
+          label={t('library.goalHelp')}
+          text={
+            m.goal
+              ? t('library.goalSet', {
+                  span: t(`library.goal.${m.goal.days as (typeof GOAL_DAYS)[number]}`)
+                })
+              : t('library.goal')
+          }
+        >
+          {GOAL_DAYS.map((d) => (
+            <MenuItem key={d} onPick={() => onGoal(d)}>
+              {t('library.goalRow', { span: t(`library.goal.${d}`), daily: Math.ceil(open / d) })}
+            </MenuItem>
+          ))}
+          {m.goal && (
+            <MenuItem danger onPick={() => onGoal(null)}>
+              {t('library.goalClear')}
+            </MenuItem>
+          )}
         </CardMenu>
         <div className="ql-card-actions">
           <button
@@ -104,7 +106,7 @@ function ModuleCard({
             className="tk-btn tk-btn-primary ql-btn-sm"
             onClick={() => go({ name: 'chapters', moduleId: m.id })}
           >
-            {t('library.start')}
+            {t('library.begin')}
           </button>
         </div>
       </footer>
@@ -158,6 +160,16 @@ export function Library(): React.JSX.Element {
       }
     })
   }, [modules, active, removing, resetting, go])
+
+  const setGoal = async (m: ModuleSummary, days: number | null): Promise<void> => {
+    const goals = { ...(useApp.getState().settings?.goals ?? {}) }
+    if (days === null) delete goals[m.id]
+    else goals[m.id] = { days, until: untilOf(days) }
+    await useApp.getState().saveSettings({ goals })
+    await loadModules()
+    const daily = useApp.getState().modules?.find((x) => x.id === m.id)?.goal?.daily
+    toast('success', daily ? t('library.goalDone', { daily }) : t('library.goalCleared'))
+  }
 
   const report = async (r: InstallResult | null): Promise<void> => {
     if (!r || r.cancelled) return
@@ -302,7 +314,7 @@ export function Library(): React.JSX.Element {
               onFocus={() => setActive(i)}
               onRemove={() => setRemoving(m)}
               onReset={() => setResetting(m)}
-              onUpdate={() => run(() => window.quizloop.module.pick('file'))}
+              onGoal={(days) => setGoal(m, days)}
             />
           ))}
         </div>
@@ -339,6 +351,9 @@ export function Library(): React.JSX.Element {
           onNo={() => setRemoving(null)}
           onYes={async () => {
             await window.quizloop.module.remove(removing.id)
+            const goals = { ...(useApp.getState().settings?.goals ?? {}) }
+            delete goals[removing.id]
+            await useApp.getState().saveSettings({ goals })
             setRemoving(null)
             await loadModules()
           }}

@@ -4,7 +4,7 @@ import {
   checkFolder,
   installFailure,
   syncFolder,
-  versionChange,
+  mayInstall,
   type AskChange
 } from '@core/commands/modules'
 import type { Database } from '@core/db/types'
@@ -108,8 +108,7 @@ export async function openStore(bundled: CorePorts, bundleRoot: string): Promise
       const tVerify = performance.now()
       const { meta } = await checkFolder(ports, u.root)
       const verifyMs = performance.now() - tVerify
-      const change = await versionChange(db, meta)
-      if (change && !(await ask(change))) {
+      if (!(await mayInstall(db, meta, ask))) {
         work.finish(true)
         return { ok: false, cancelled: true }
       }

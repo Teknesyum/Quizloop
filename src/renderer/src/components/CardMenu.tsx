@@ -5,9 +5,11 @@ type Spot = { right?: number; left?: number; top?: number; bottom?: number }
 
 export function CardMenu({
   label,
+  text,
   children
 }: {
   label: string
+  text?: string
   children: React.ReactNode
 }): React.JSX.Element {
   const [open, setOpen] = useState(false)
@@ -62,14 +64,14 @@ export function CardMenu({
       <button
         ref={btn}
         type="button"
-        className="tk-btn tk-btn-ghost ql-btn-sm ql-menu-btn"
+        className={`tk-btn tk-btn-ghost ql-btn-sm ${text ? '' : 'ql-menu-btn'}`}
         aria-haspopup="menu"
         aria-expanded={open}
-        aria-label={label}
+        aria-label={text ? undefined : label}
         title={label}
         onClick={() => setOpen((o) => !o)}
       >
-        ⋯
+        {text ?? '⋯'}
       </button>
       {open &&
         spot &&
