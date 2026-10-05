@@ -517,6 +517,10 @@ img.ql-cover {
   justify-content: center;
 }
 
+.tk-titlebar__language .ql-menu-btn {
+  border-color: transparent;
+}
+
 .ql-menu {
   position: fixed;
   z-index: 30;
@@ -2395,6 +2399,16 @@ button.ql-mark:not(:disabled):active {
     bottom: calc(var(--ql-nav-h) + env(safe-area-inset-bottom) + var(--tk-sp-3));
   }
 
+  .tk-toast-stack {
+    left: calc(var(--ql-pad) + env(safe-area-inset-left));
+    right: calc(var(--ql-pad) + env(safe-area-inset-right));
+  }
+
+  .tk-toast-stack > .tk-toast {
+    box-sizing: border-box;
+    width: auto;
+  }
+
   .ql-main,
   .ql-main:has(> .ql-session) {
     padding: var(--ql-pad) calc(var(--ql-pad) + env(safe-area-inset-right))
@@ -2423,6 +2437,10 @@ button.ql-mark:not(:disabled):active {
     flex: 1 1 auto;
     min-height: calc(var(--tk-sp-5) * 2);
     justify-content: center;
+  }
+
+  .ql-card-foot .tk-btn {
+    min-height: calc(var(--tk-sp-5) * 2);
   }
 
   .ql-grid {
