@@ -4,7 +4,7 @@ import { CardCover } from '@renderer/components/CardCover'
 import { GoalMenu } from '@renderer/components/CardMenu'
 import { Skeleton } from '@renderer/components/Skeleton'
 import { t } from '@renderer/i18n'
-import { askNotify, canNotify, remind } from '@renderer/remind'
+import { askNotify, canNotify, forget, remind } from '@renderer/remind'
 import { useApp } from '@renderer/store/app'
 
 const INFO = [
@@ -175,7 +175,10 @@ export function Goals(): React.JSX.Element {
             <button
               type="button"
               className="tk-btn tk-btn-ghost ql-btn-sm"
-              onClick={() => useApp.getState().saveSettings({ goalNotify: false })}
+              onClick={() => {
+                forget()
+                void useApp.getState().saveSettings({ goalNotify: false })
+              }}
             >
               {t('goals.notifyOff')}
             </button>

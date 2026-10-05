@@ -779,6 +779,29 @@ kbd {
   gap: var(--tk-sp-4);
 }
 
+.ql-solution .ql-table-wrap {
+  margin-inline: 0;
+  justify-content: flex-start;
+}
+
+.ql-solution .ql-table-caption {
+  text-align: start;
+}
+
+.ql-solution:has(p:dir(rtl)) > div {
+  align-self: center;
+  width: min(100%, var(--tk-measure));
+}
+
+.ql-solution:has(p:dir(rtl)) .ql-table-wrap {
+  margin-inline: auto;
+  justify-content: safe center;
+}
+
+.ql-solution:has(p:dir(rtl)) .ql-table-caption {
+  text-align: center;
+}
+
 .ql-hint-block {
   border-left: 2px solid var(--tk-renk-3-text);
   padding-left: var(--tk-sp-3);

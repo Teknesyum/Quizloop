@@ -1,5 +1,6 @@
 import { App } from '@capacitor/app'
 import { Browser } from '@capacitor/browser'
+import { LocalNotifications } from '@capacitor/local-notifications'
 import { createCore, type Core } from '@core/commands'
 import { installFailure, resyncFolders, syncFolder } from '@core/commands/modules'
 import { SettingsPatch } from '@core/settings'
@@ -131,6 +132,31 @@ export async function createShell(): Promise<QuizloopApi> {
 
   return {
     capabilities: ANDROID_CAPABILITIES,
+    notify: {
+      ask: async () => {
+        const has = await LocalNotifications.checkPermissions()
+        if (has.display === 'granted') return true
+        return (await LocalNotifications.requestPermissions()).display === 'granted'
+      },
+      plan: async (items) => {
+        const has = await LocalNotifications.checkPermissions()
+        if (has.display !== 'granted') return
+        const pending = await LocalNotifications.getPending()
+        if (pending.notifications.length)
+          await LocalNotifications.cancel({
+            notifications: pending.notifications.map((n) => ({ id: n.id }))
+          })
+        if (!items.length) return
+        await LocalNotifications.schedule({
+          notifications: items.map((n) => ({
+            id: n.id,
+            title: n.title,
+            body: n.body,
+            schedule: { at: new Date(n.at), allowWhileIdle: true }
+          }))
+        })
+      }
+    },
     pathOf: () => null,
     app: {
       info: async () => ({

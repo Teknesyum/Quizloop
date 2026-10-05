@@ -1,7 +1,7 @@
 module:
   id: lange-anestezi-7
   ad: Morgan & Mikhail Klinik Anesteziyoloji, 7. Baskı
-  surum: 0.3.0
+  surum: 0.3.1
   dil: tr
   etiketler: [tıp, anestezi, anesteziyoloji]
 kaynak:

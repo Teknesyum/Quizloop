@@ -100,8 +100,6 @@
   "session.end": "End session",
   "session.next": "Next question",
   "session.autoNext": "Next question…",
-  "session.endConfirmTitle": "End The Session?",
-  "session.endConfirm": "Answered questions are saved.",
   "session.wrong": "Wrong, try again",
   "session.correct": "Correct answer",
   "session.verdictRight": "Correct",
@@ -366,13 +364,14 @@
   "goals.info.3": "What counts is a retired question: one you marked as understood and will not be asked again. Answering alone does not move the goal.",
   "goals.info.4": "Skip a day and the goal stays; the shortfall is spread over the following days and the daily number rises a little.",
   "goals.info.5": "A goal does not change how many questions a session holds and it stays on this device. You can change the period or remove the goal at any time.",
-  "goals.notifyAsk": "Shall we remind you once after 19:00 when the goal is not done? It arrives while the app is open or running in the background.",
-  "goals.notifyOn": "Reminder is on: a notification arrives after 19:00 when the goal is not done.",
+  "goals.notifyAsk": "Shall we remind you once at 19:00 when the goal is not done? Permission is asked only when you press this button.",
+  "goals.notifyOn": "Reminder is on: a notification arrives at 19:00 when the goal is not done.",
   "goals.notifyNone": "Notifications are not supported on this device yet.",
   "goals.notifyButton": "Turn On Notifications",
   "goals.notifyOff": "Turn Off Notifications",
   "goals.notifyDone": "Notifications are on.",
   "goals.notifyDenied": "Permission was not given. Allow notifications for QuizLoop in the system or browser settings.",
   "goals.notifyTitle": "QuizLoop Daily Goal",
-  "goals.notifyBody": "{done}/{daily} questions retired today."
+  "goals.notifyBody": "{done}/{daily} questions retired today.",
+  "goals.notifyNext": "Today's goal is {daily} questions. If it is not done yet, now is a good time."
 }
