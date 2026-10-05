@@ -74,3 +74,26 @@ export function CardMeter({
     </div>
   )
 }
+
+export function GoalMeter({ done, goal }: { done: number; goal: ModuleGoal }): React.JSX.Element {
+  const met = done >= goal.daily
+  const part = goal.daily ? Math.min(1, done / goal.daily) : 0
+  return (
+    <div className="ql-card-meter" title={t('library.card.goalHelp', { days: goal.daysLeft })}>
+      <p className={`ql-card-meter-row ${met ? 'ql-goal-met' : ''}`}>
+        <span className="tk-hint">{t('library.card.goal', { done, daily: goal.daily })}</span>
+        <span className="tk-hint">{t('goals.percent', { percent: Math.round(part * 100) })}</span>
+      </p>
+      <div
+        className="ql-progress ql-goal-bar"
+        role="progressbar"
+        aria-label={t('goals.today')}
+        aria-valuemin={0}
+        aria-valuemax={goal.daily}
+        aria-valuenow={Math.min(done, goal.daily)}
+      >
+        <span style={{ width: `${part * 100}%` }} />
+      </div>
+    </div>
+  )
+}
