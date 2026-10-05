@@ -328,9 +328,11 @@ export function Settings(): React.JSX.Element {
                     {t('update.open')}
                   </button>
                 )}
-                <span className="tk-hint" role="status">
-                  {upLine()}
-                </span>
+                {upLine() && (
+                  <span className={`ql-up-note ql-up-${up.state}`} role="status">
+                    {upLine()}
+                  </span>
+                )}
               </div>
             </div>
           )}

@@ -6,6 +6,14 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.7.35] - 2026-10-05
+
+### Changed
+
+- Every button, label and short status line is written in title case, in both languages.
+- The update status in Settings is a framed note; "up to date" and "ready" are green,
+  an error is red.
+
 ## [0.7.34] - 2026-10-05
 
 ### Added
