@@ -13,7 +13,11 @@ KAPA = "﴿"
 UST = 50
 DAR = 0.8
 YAKIN = 12
-PAY = 3
+PAY = 1
+BOSLUK = 2
+SON_HARF = 8
+TASMA = 2.5
+CERCEVE = 20
 
 
 ES = str.maketrans("آأإٱیىةک", "ااااييهك")
@@ -125,10 +129,13 @@ def main() -> int:
         farklar = [b - a for a, b in zip(tabanlar, tabanlar[1:]) if b - a > 1]
         aralik = statistics.median(farklar) if farklar else 36.0
         basili = 1 if no < 2 else no
+        govde = [s for s in govde if s["isaretler"] or s["x1"] - s["x0"] >= genis * DAR]
+        csol = min(s["x0"] for s in govde)
+        csag = max(s["x1"] for s in govde)
         for s in govde:
-            if not s["isaretler"] and s["x1"] - s["x0"] < genis * DAR:
-                continue
             sag = s["x1"]
+            sag_uc = (csag if csag - sag < CERCEVE else sag) + TASMA
+            sol_uc = (csol if s["x0"] - csol < CERCEVE else s["x0"]) - TASMA
             for m in s["isaretler"]:
                 ham = m["ham"]
                 sayi = rakam(ham)
@@ -140,12 +147,13 @@ def main() -> int:
                     print(f"sayfa {no}: {onceki} sonrasi {sayi}", file=sys.stderr)
                     return 1
                 onceki = sayi
-                acik.append([no, basili, m["x0"], sag, s["taban"], aralik, arasi(s, m["x1"], sag)])
+                acik.append([no, basili, m["x0"], sag, s["taban"], aralik, arasi(s, m["x1"], sag), m["x0"], sag_uc])
                 ayetler[f"{sure}:{sayi}"] = acik
                 acik = []
                 sag = m["x0"]
+                sag_uc = sag
             if sag - s["x0"] > 1:
-                acik.append([no, basili, s["x0"], sag, s["taban"], aralik, arasi(s, s["x0"], sag)])
+                acik.append([no, basili, s["x0"], sag, s["taban"], aralik, arasi(s, s["x0"], sag), sol_uc, sag_uc])
     if sure != SURE or len(ayetler) != AYET:
         print(f"{sure} sure, {len(ayetler)} ayet bulundu", file=sys.stderr)
         return 1
@@ -159,9 +167,9 @@ def main() -> int:
         eslesen += e
         toplam += t
         bos += sum(1 for k in kutu if k is None)
-        son = len(parcalar) - 1
         liste = []
         onceki = None
+        yan = None
         for sira, k in enumerate(kutu):
             if k is not None and onceki is not None:
                 if k[0] < onceki[0] or (k[0] == onceki[0] and k[2] > onceki[2] + 1):
@@ -169,15 +177,24 @@ def main() -> int:
                     sirasiz += 1
             if k is not None:
                 onceki = k
+            komsu = yan
+            yan = k
             if k is None:
                 liste.append(None)
                 continue
-            n, sol, sag = k
-            no, basili, x0, _x1, taban, aralik, _harfler = parcalar[n]
+            n, sol, uc = k
+            no, basili, _x0, _x1, taban, aralik, _harfler, sol_uc, sag_uc = parcalar[n]
+            if sira == 0 or (komsu is not None and komsu[0] != n):
+                sag = sag_uc
+            elif komsu is not None:
+                sag = komsu[1] - BOSLUK
+            else:
+                sag = uc + SON_HARF
+            sag = max(sag, uc + PAY)
             sol -= PAY
-            sag += PAY
-            if sira == len(kutu) - 1 and n == son:
-                sol = x0
+            sonraki = kutu[sira + 1] if sira + 1 < len(kutu) else None
+            if sira == len(kutu) - 1 or (sonraki is not None and sonraki[0] != n):
+                sol = min(sol, sol_uc)
             ust = taban - aralik * 0.62
             alt = taban + aralik * 0.38
             kay = 0

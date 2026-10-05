@@ -50,3 +50,9 @@ alır. Kutuya iki yandan 3 punto pay verilir.
 sıra dışı çıktığı için atıldı (komşu kelimeler boşluğu kapatır). 10.508 sorunun 10.507'si
 işaretli. On iki rastgele soruda işaret cevabın ilk ve son kelimesine oturdu:
 `tmp/isaret-once-1.png`, `tmp/isaret-sonra-1.png`, `tmp/isaret-sonra-2.png`.
+
+## Düzeltme: Kutu Kenarları (2026-10-05, Modül 1.7.4)
+
+1.7.3 kutusunun sağ kenarı kelimenin ilk harflerini kesiyordu (2:69'da "قال"ın "قا"sı dışarıda kalıyordu). Sebep: PDF'teki harf konumu çizilen şeklin sol kenarıdır, kelimenin sağ ucu ilk harfin konumundan bir şekil genişliği kadar sağdadır.
+
+Yeni kural: kelimenin sağ kenarı, aynı satır parçasında kendinden önce gelen kelimenin sol kenarından 2 punto içeridedir. Satırın ilk kelimesi sayfanın yazı çerçevesinin sağına, satırın son kelimesi çerçevenin soluna kadar uzar (çerçeveden 20 puntodan uzak, ortalanmış satırlarda satırın kendi ucu alınır). Kanıt: `tmp/isaret-kenar.png`, `tmp/isaret-ornek-174.png`.
