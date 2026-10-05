@@ -201,11 +201,9 @@ export default function App(): React.JSX.Element {
       <WorkProgress />
       {change && (
         <Confirm
-          title={t(change.newer ? 'library.updateConfirmTitle' : 'library.downgradeConfirmTitle', {
-            name: change.name
-          })}
+          title={t('library.downgradeConfirmTitle', { name: change.name })}
           text={t('library.updateConfirmText', { from: change.from, to: change.to })}
-          yes={t(change.newer ? 'library.updateConfirmYes' : 'library.downgradeConfirmYes')}
+          yes={t('library.downgradeConfirmYes')}
           onYes={() => answer(true)}
           onNo={() => answer(false)}
         />

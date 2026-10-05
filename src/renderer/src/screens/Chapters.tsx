@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { CardCover } from '@renderer/components/CardCover'
+import { CardInfo, CardMeter } from '@renderer/components/CardFacts'
 import { tinykeys } from 'tinykeys'
 import type { ChapterSummary } from '@shared/ipc'
 import { Skeleton } from '@renderer/components/Skeleton'
@@ -122,37 +123,9 @@ export function Chapters({ moduleId }: { moduleId: string }): React.JSX.Element 
               </header>
               <div className="ql-card-body">
                 <CardCover src={chapterCover(c)} name={c.chapter || t('chapters.unsorted')} foot />
-                <div className="ql-card-info">
-                  <p className={`ql-card-due ${c.dueToday ? 'ql-stat-hot' : ''}`}>
-                    <span className="tk-mono ql-due-count">{c.dueToday}</span>
-                    <span className="tk-hint">{t('library.card.dueLabel')}</span>
-                  </p>
-                  <p className="tk-hint ql-card-rest">
-                    {t('library.card.unseen', { count: c.unseen })}
-                  </p>
-                  <div className="ql-card-meter">
-                    <p className="ql-card-meter-row">
-                      <span className="tk-hint">
-                        {t('library.card.questions', { count: c.total })}
-                      </span>
-                      <span className="tk-hint">
-                        {t('library.card.percent', {
-                          percent: c.total ? Math.round((c.retired / c.total) * 100) : 0
-                        })}
-                      </span>
-                    </p>
-                    <div
-                      className="ql-progress"
-                      role="progressbar"
-                      aria-valuemin={0}
-                      aria-valuemax={c.total}
-                      aria-valuenow={c.retired}
-                    >
-                      <span style={{ width: `${c.total ? (c.retired / c.total) * 100 : 0}%` }} />
-                    </div>
-                  </div>
-                </div>
+                <CardInfo c={c} />
               </div>
+              <CardMeter total={c.total} retired={c.retired} />
               <footer className="ql-card-foot">
                 <button
                   type="button"

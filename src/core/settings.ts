@@ -11,7 +11,8 @@ export const DEFAULT_SETTINGS: Settings = {
   blinkSeconds: 5,
   autoUpdate: true,
   welcomeSeen: false,
-  samplesUsed: false
+  samplesUsed: false,
+  goals: {}
 }
 
 export const SettingsPatch = z
@@ -25,9 +26,26 @@ export const SettingsPatch = z
     blinkSeconds: z.number().int().min(0).max(30),
     autoUpdate: z.boolean(),
     welcomeSeen: z.boolean(),
-    samplesUsed: z.boolean()
+    samplesUsed: z.boolean(),
+    goals: z.record(
+      z.string(),
+      z.object({ days: z.number().int().min(1).max(3650), until: z.string() })
+    )
   })
   .partial()
+
+const DAY_MS = 86_400_000
+
+export function dailyGoal(
+  goal: { days: number; until: string },
+  open: number,
+  retiredToday: number,
+  start: Date
+): { days: number; daily: number; daysLeft: number } {
+  const left = Math.round((new Date(goal.until).getTime() - start.getTime()) / DAY_MS)
+  const daysLeft = Number.isFinite(left) ? Math.max(1, left) : 1
+  return { days: goal.days, daily: Math.ceil((open + retiredToday) / daysLeft), daysLeft }
+}
 
 export function dayStart(now: Date, hour: number): Date {
   const d = new Date(now)

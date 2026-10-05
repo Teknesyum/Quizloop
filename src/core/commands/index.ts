@@ -69,7 +69,15 @@ export function createCore(deps: CoreDeps): Core {
     limit: () => settings.get().sessionLimit,
     now: () => ports.now()
   })
-  const ctx = { db, ports, library, assetBase, books }
+  const ctx = {
+    db,
+    ports,
+    library,
+    assetBase,
+    books,
+    dayStart: dayOf,
+    goals: () => settings.get().goals ?? {}
+  }
 
   return {
     library,

@@ -18,7 +18,21 @@ export interface ChapterSummary {
   unseen: number
   retired: number
   learning: number
+  retiredToday: number
 }
+
+export interface ModuleGoal {
+  days: number
+  daily: number
+  daysLeft: number
+}
+
+export interface GoalSetting {
+  days: number
+  until: string
+}
+
+export const GOAL_DAYS = [7, 21, 30, 90, 365, 1095] as const
 
 export interface ModuleSummary {
   id: string
@@ -32,6 +46,8 @@ export interface ModuleSummary {
   unseen: number
   retired: number
   learning: number
+  retiredToday: number
+  goal: ModuleGoal | null
 }
 
 export interface QuestionView {
@@ -160,6 +176,7 @@ export interface Settings {
   autoUpdate: boolean
   welcomeSeen: boolean
   samplesUsed: boolean
+  goals: Record<string, GoalSetting>
 }
 
 export const FONT_SCALES = [0.9, 1, 1.1, 1.25, 1.4, 1.6] as const

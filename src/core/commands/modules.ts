@@ -3,9 +3,16 @@ import type { Database } from '@core/db/types'
 import { fingerprint, ModuleError, readMeta, validateModule } from '@core/modules/loader'
 import { syncModule } from '@core/modules/sync'
 import { joinPath, type CorePorts } from '@core/ports'
+import { dailyGoal } from '@core/settings'
 import { chapterCounts, countDue } from '@core/scheduler/queue'
 import { newer } from '@core/version'
-import type { ChapterSummary, InstallResult, ModuleSummary, VersionChange } from '@shared/ipc'
+import type {
+  ChapterSummary,
+  GoalSetting,
+  InstallResult,
+  ModuleSummary,
+  VersionChange
+} from '@shared/ipc'
 import { ModuleMeta } from '@shared/schema/module'
 import type { Library } from './library'
 
@@ -14,6 +21,8 @@ export interface ModuleDeps {
   ports: CorePorts
   library: Library
   assetBase(moduleId: string): string
+  dayStart(now: Date): Date
+  goals(): Record<string, GoalSetting>
 }
 
 async function tagsOf(ports: CorePorts, root: string): Promise<string[]> {
@@ -33,9 +42,12 @@ export async function listModules(deps: ModuleDeps): Promise<ModuleSummary[]> {
   await deps.library.refresh()
   const rows = await db.selectFrom('module').selectAll().orderBy('name').execute()
   const now = ports.now()
+  const start = deps.dayStart(now)
+  const goals = deps.goals()
   const out: ModuleSummary[] = []
   for (const r of rows) {
-    const c = await countDue(db, r.id, now)
+    const c = await countDue(db, r.id, now, start)
+    const goal = goals[r.id]
     out.push({
       id: r.id,
       name: r.name,
@@ -44,7 +56,11 @@ export async function listModules(deps: ModuleDeps): Promise<ModuleSummary[]> {
       assetBase: deps.assetBase(r.id),
       tags: await tagsOf(ports, r.path),
       questionCount: r.question_count,
-      ...c
+      ...c,
+      goal:
+        goal && new Date(goal.until) > start && c.unseen + c.dueToday + c.learning + c.retiredToday
+          ? dailyGoal(goal, c.unseen + c.dueToday + c.learning, c.retiredToday, start)
+          : null
     })
   }
   return out
@@ -55,7 +71,8 @@ export async function moduleChapters(
   moduleId: string
 ): Promise<ChapterSummary[]> {
   await deps.library.refresh()
-  const rows = await chapterCounts(deps.db, moduleId, deps.ports.now())
+  const now = deps.ports.now()
+  const rows = await chapterCounts(deps.db, moduleId, now, deps.dayStart(now))
   return rows.map((r) => ({
     chapter: r.chapter,
     assetBase: deps.assetBase(moduleId),
@@ -110,6 +127,15 @@ export async function versionChange(
 }
 
 export type AskChange = (change: VersionChange) => Promise<boolean>
+
+export async function mayInstall(
+  db: Kysely<Database>,
+  meta: Pick<ModuleMeta, 'id' | 'name' | 'version'>,
+  ask: AskChange
+): Promise<boolean> {
+  const change = await versionChange(db, meta)
+  return !change || change.newer || ask(change)
+}
 
 export function installFailure(e: unknown): InstallResult {
   const msg = e instanceof ModuleError ? [e.message, ...e.issues].join('\n') : String(e)

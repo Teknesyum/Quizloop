@@ -72,12 +72,14 @@ export interface DueCount {
   unseen: number
   retired: number
   learning: number
+  retiredToday: number
 }
 
 export async function chapterCounts(
   db: Kysely<Database>,
   moduleId: string,
-  now: Date
+  now: Date,
+  start: Date
 ): Promise<{ chapter: string; total: number; count: DueCount }[]> {
   const rows = await db
     .selectFrom('card')
@@ -85,18 +87,21 @@ export async function chapterCounts(
     .where('module_id', '=', moduleId)
     .execute()
   const iso = now.toISOString()
+  const day = start.toISOString()
   const map = new Map<string, { total: number; count: DueCount }>()
   for (const r of rows) {
     if (r.orphaned) continue
     const key = r.chapter ?? ''
     let e = map.get(key)
     if (!e) {
-      e = { total: 0, count: { dueToday: 0, unseen: 0, retired: 0, learning: 0 } }
+      e = { total: 0, count: { dueToday: 0, unseen: 0, retired: 0, learning: 0, retiredToday: 0 } }
       map.set(key, e)
     }
     e.total++
-    if (r.retired_at) e.count.retired++
-    else if (r.state === State.New) e.count.unseen++
+    if (r.retired_at) {
+      e.count.retired++
+      if (r.retired_at >= day) e.count.retiredToday++
+    } else if (r.state === State.New) e.count.unseen++
     else if (r.due <= iso) e.count.dueToday++
     else e.count.learning++
   }
@@ -108,7 +113,8 @@ export async function chapterCounts(
 export async function countDue(
   db: Kysely<Database>,
   moduleId: string,
-  now: Date
+  now: Date,
+  start: Date
 ): Promise<DueCount> {
   const rows = await db
     .selectFrom('card')
@@ -119,16 +125,19 @@ export async function countDue(
   let unseen = 0
   let retired = 0
   let learning = 0
+  let retiredToday = 0
   const iso = now.toISOString()
+  const day = start.toISOString()
   for (const r of rows) {
     if (r.orphaned) continue
     if (r.retired_at) {
       retired++
+      if (r.retired_at >= day) retiredToday++
       continue
     }
     if (r.state === State.New) unseen++
     else if (r.due <= iso) dueToday++
     else learning++
   }
-  return { dueToday, unseen, retired, learning }
+  return { dueToday, unseen, retired, learning, retiredToday }
 }

@@ -1,2 +1,9 @@
-- [x] Reddedilen 0.7.24–0.7.28 taslaklarını sil — başka oturumun işi, o oturumda sürüyor
-- [x] Kütüphane ve bölüm kartlarını baştan tasarla (Fable'a danışarak) — başka oturumun işi, o oturumda sürüyor (docs/danisma/007)
+- [x] "Emekli" ne demek, arayüzde açıkla
+- [x] Mini kapak resimleri kötü çıkıyor, nedenini bul ve çöz
+- [x] Liste görünümünü baştan tasarla, Fable'a danış
+- [x] "Bugün Sırada" satırını tek satır ve anlaşılır yap
+- [x] İlerleme çubuğu resmin solundan başlasın
+- [x] Modül kendiliğinden güncellensin, "Modülü güncelle" seçeneği kalksın
+- [x] Hedef düğmesi: süre seç, günlük hedef hesapla, 40/150 göster
+- [x] Karta tıklayınca detay animasyonu için fikir belirt
+- [x] "N Yeni", "N Öğreniliyor" ifadelerini düzelt

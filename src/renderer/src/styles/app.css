@@ -183,7 +183,7 @@ body {
 
 .ql-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 360px), 1fr));
   gap: var(--tk-sp-4);
 }
 
@@ -197,36 +197,73 @@ body {
 }
 
 .ql-grid-list > .ql-card {
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  grid-template-areas:
+    'cover head foot'
+    'cover info foot'
+    'cover meter foot';
   align-items: center;
+  gap: var(--tk-sp-1) var(--tk-sp-3);
   padding: var(--tk-sp-2) var(--tk-sp-3);
 }
 
+.ql-grid-list .ql-card-body {
+  display: contents;
+}
+
+.ql-grid-list .ql-cover {
+  grid-area: cover;
+  width: calc(var(--tk-sp-5) * 2);
+}
+
+.ql-grid-list .ql-cover-none {
+  font-size: var(--tk-fs-2);
+  line-height: var(--tk-lh-heading);
+}
+
 .ql-grid-list .ql-card-head {
-  flex: 1 1 auto;
+  grid-area: head;
   min-width: 0;
 }
 
 .ql-grid-list .ql-card-head .tk-h3 {
   font-size: var(--tk-fs-2);
   line-height: var(--tk-lh-heading);
-  white-space: normal;
-  overflow-wrap: anywhere;
 }
 
 .ql-grid-list .ql-percent {
-  font-size: var(--tk-fs-2);
+  font-size: var(--tk-fs-1);
   line-height: var(--tk-lh-heading);
 }
 
-.ql-grid-list .ql-card > .ql-card-foot {
-  margin-top: 0;
-  flex: 0 0 auto;
+.ql-grid-list .ql-card-info {
+  grid-area: info;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  gap: 0 var(--tk-sp-3);
 }
 
-.ql-grid-list .ql-card-body,
+.ql-grid-list .ql-card-info > .ql-card-line {
+  font-size: var(--tk-fs-1);
+  line-height: var(--tk-lh-heading);
+}
+
+.ql-grid-list .ql-card-meter {
+  grid-area: meter;
+}
+
+.ql-grid-list .ql-card > .ql-card-foot {
+  grid-area: foot;
+  margin-top: 0;
+  flex-wrap: nowrap;
+}
+
+.ql-grid-list .ql-card-tags,
+.ql-grid-list .ql-card-rest,
+.ql-grid-list .ql-card-meter-row,
 .ql-grid:not(.ql-grid-list) .ql-percent,
-.ql-grid-list .ql-card-actions > .tk-btn-ghost {
+.ql-grid-list .ql-card-foot .tk-btn-ghost {
   display: none;
 }
 
@@ -307,7 +344,7 @@ body {
 
 .ql-cover {
   width: calc(var(--tk-sp-5) * 4);
-  aspect-ratio: 2 / 3;
+  aspect-ratio: 1;
   border: var(--tk-border-w) solid var(--tk-border);
   border-radius: var(--tk-r);
   object-fit: cover;
@@ -329,17 +366,18 @@ body {
 .ql-card-info {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  gap: var(--tk-sp-2);
+  justify-content: center;
+  gap: var(--tk-sp-1);
   min-width: 0;
 }
 
-.ql-card-info p {
+.ql-card-info p,
+.ql-card-meter p {
   margin: 0;
 }
 
 .ql-card-tags,
-.ql-card-rest {
+.ql-card-line {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -349,19 +387,27 @@ body {
   color: var(--tk-renk-3);
 }
 
-.ql-card-due {
-  display: flex;
-  flex-direction: column;
+.ql-card-line {
+  font-size: var(--tk-fs-1);
+  line-height: var(--tk-lh-heading);
 }
 
-.ql-due-count {
-  font-size: var(--tk-fs-5);
+.ql-card-line.ql-stat-hot,
+.ql-card-info > .ql-card-line:not(.ql-card-rest):not(.ql-card-goal) {
+  font-size: var(--tk-fs-2);
   line-height: var(--tk-lh-heading);
+}
+
+.ql-card-line.ql-stat-hot {
+  color: var(--tk-renk-1);
+}
+
+.ql-card-goal {
   color: var(--tk-text);
 }
 
-.ql-stat-hot .ql-due-count {
-  color: var(--tk-renk-1);
+.ql-card-goal.ql-goal-met {
+  color: var(--tk-success);
 }
 
 .ql-card-meter {
@@ -410,13 +456,15 @@ body {
 .ql-card-foot {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: var(--tk-sp-3);
+  justify-content: flex-start;
+  gap: var(--tk-sp-2);
   flex-wrap: wrap;
 }
 
 .ql-card-actions {
   display: flex;
+  flex: 1 1 auto;
+  justify-content: flex-end;
   flex-wrap: wrap;
   gap: var(--tk-sp-2);
   min-width: 0;
@@ -2068,6 +2116,14 @@ button.ql-mark:not(:disabled):active {
 /* --- phone --- */
 
 @media (max-width: 640px) {
+  .ql-grid-list > .ql-card {
+    grid-template-areas:
+      'cover head foot'
+      'cover info info'
+      'cover meter meter';
+    row-gap: var(--tk-sp-1);
+  }
+
   :root {
     --ql-titlebar-h: calc(var(--tk-sp-5) + var(--tk-sp-4) + env(safe-area-inset-top));
     --ql-nav-h: calc(var(--tk-sp-5) * 2);

@@ -6,6 +6,27 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.7.31] - 2026-10-05
+
+### Added
+
+- A Goal button on each module card. Pick how long you give yourself (1 week to 3 years);
+  the menu shows what each choice means per day, and the card then shows today's count
+  against the daily goal, for example 40/150. The goal counts retired questions.
+- "Retired" is explained: hovering the progress line says what it means, and the
+  introduction text says it too.
+
+### Changed
+
+- Installing a newer version of a module no longer asks; it just updates. Going back to
+  an older version still asks. The "Update module" menu entry is gone.
+- Cover thumbnails are square, so the whole picture shows instead of a narrow strip.
+- Card wording is plainer and each fact has its own short line: "Due today", "Unseen",
+  "In review". The large number is gone.
+- The progress bar spans the full card, starting under the cover.
+- List view is redesigned: small cover, title, today's line and goal, a thin progress
+  bar, the percent and Start.
+
 ## [0.7.30] - 2026-10-05
 
 ### Changed

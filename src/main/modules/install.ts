@@ -7,7 +7,7 @@ import {
   installFailure,
   resyncFolders,
   syncFolder,
-  versionChange,
+  mayInstall,
   type AskChange
 } from '@core/commands/modules'
 import { copyTree, removeTree, skipBuild } from '@main/fstree'
@@ -50,8 +50,7 @@ export async function installFrom(
       source = paket.root
     }
     const { meta } = await checkFolder(nodePorts, source)
-    const change = ask ? await versionChange(db, meta) : null
-    if (change && ask && !(await ask(change))) {
+    if (ask && !(await mayInstall(db, meta, ask))) {
       work.finish(true)
       return { ok: false, cancelled: true }
     }
