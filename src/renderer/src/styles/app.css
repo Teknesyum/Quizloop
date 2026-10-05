@@ -150,6 +150,29 @@ body {
   padding-right: var(--tk-sp-2);
 }
 
+.ql-up-note {
+  padding: var(--tk-sp-1) var(--tk-sp-3);
+  border: var(--tk-border-w) solid var(--tk-border);
+  border-radius: var(--tk-r);
+  color: var(--tk-text);
+  font-size: var(--tk-fs-1);
+  line-height: var(--tk-lh-body);
+  font-weight: var(--tk-fw-strong);
+}
+
+.ql-up-none,
+.ql-up-ready {
+  border-color: var(--tk-success);
+  background: var(--ql-tint-success);
+  color: var(--tk-success);
+}
+
+.ql-up-error {
+  border-color: var(--tk-danger);
+  background: var(--ql-tint-danger);
+  color: var(--tk-danger);
+}
+
 .update-panel {
   box-sizing: border-box;
   padding: var(--tk-panel-padding);
