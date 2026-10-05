@@ -1,3 +1,4 @@
+import difflib
 import json
 import statistics
 import sys
@@ -12,6 +13,39 @@ KAPA = "﴿"
 UST = 50
 DAR = 0.8
 YAKIN = 12
+PAY = 3
+
+
+ES = str.maketrans("آأإٱیىةک", "ااااييهك")
+
+
+def harf_mi(c: str) -> bool:
+    return "ء" <= c <= "غ" or "ف" <= c <= "ي" or "ٱ" <= c <= "ۓ"
+
+
+def kelime_kutulari(parcalar, metin):
+    pdf = [(h, n) for n, p in enumerate(parcalar) for h in p[6]]
+    kelimeler = metin.split()
+    harfler = [(c, k) for k, w in enumerate(kelimeler) for c in w if harf_mi(c)]
+    a = "".join(h[0] for h, _ in pdf).translate(ES)
+    b = "".join(c for c, _ in harfler).translate(ES)
+    es = [None] * len(b)
+    for blok in difflib.SequenceMatcher(None, a, b, autojunk=False).get_matching_blocks():
+        for i in range(blok.size):
+            es[blok.b + i] = blok.a + i
+    kutu = [None] * len(kelimeler)
+    for t, i in enumerate(es):
+        if i is None:
+            continue
+        (_, x0, x1), n = pdf[i]
+        k = harfler[t][1]
+        if kutu[k] is None:
+            kutu[k] = [n, x0, x1]
+        elif kutu[k][0] == n:
+            kutu[k][1] = min(kutu[k][1], x0)
+            kutu[k][2] = max(kutu[k][2], x1)
+    eslesen = sum(1 for i in es if i is not None)
+    return kutu, eslesen, len(b)
 
 
 def rakam(metin: str) -> int:
@@ -55,13 +89,24 @@ def satirlar(sayfa):
                 "x1": max(h["bbox"][2] for h in grup),
                 "taban": statistics.median(h["origin"][1] for h in grup),
                 "isaretler": sorted(isaretler, key=lambda m: -m["x0"]),
+                "harfler": [(h["c"], h["bbox"][0], h["bbox"][2]) for h in reversed(grup) if harf_mi(h["c"])],
             }
         )
     return cikti
 
 
+def arasi(satir, sol, sag):
+    return [h for h in satir["harfler"] if sol <= (h[1] + h[2]) / 2 < sag]
+
+
 def main() -> int:
     belge = pymupdf.open(sys.argv[1])
+    with open(sys.argv[2], encoding="utf8") as f:
+        metinler = {
+            f"{s['number']}:{a['ayah']}": a["text_unicode"].strip()
+            for s in json.load(f)["surahs"]
+            for a in s["ayahs"]
+        }
     if belge.page_count != BEKLENEN:
         print(f"sayfa sayisi {belge.page_count}, {BEKLENEN} olmali", file=sys.stderr)
         return 1
@@ -95,27 +140,57 @@ def main() -> int:
                     print(f"sayfa {no}: {onceki} sonrasi {sayi}", file=sys.stderr)
                     return 1
                 onceki = sayi
-                acik.append([no, basili, m["x0"], sag, s["taban"], aralik])
+                acik.append([no, basili, m["x0"], sag, s["taban"], aralik, arasi(s, m["x1"], sag)])
                 ayetler[f"{sure}:{sayi}"] = acik
                 acik = []
                 sag = m["x0"]
             if sag - s["x0"] > 1:
-                acik.append([no, basili, s["x0"], sag, s["taban"], aralik])
+                acik.append([no, basili, s["x0"], sag, s["taban"], aralik, arasi(s, s["x0"], sag)])
     if sure != SURE or len(ayetler) != AYET:
         print(f"{sure} sure, {len(ayetler)} ayet bulundu", file=sys.stderr)
         return 1
     cikti = {}
+    eslesen = 0
+    toplam = 0
+    bos = 0
+    sirasiz = 0
     for anahtar, parcalar in ayetler.items():
+        kutu, e, t = kelime_kutulari(parcalar, metinler[anahtar])
+        eslesen += e
+        toplam += t
+        bos += sum(1 for k in kutu if k is None)
+        son = len(parcalar) - 1
         liste = []
-        for no, basili, x0, x1, taban, aralik in parcalar:
+        onceki = None
+        for sira, k in enumerate(kutu):
+            if k is not None and onceki is not None:
+                if k[0] < onceki[0] or (k[0] == onceki[0] and k[2] > onceki[2] + 1):
+                    k = None
+                    sirasiz += 1
+            if k is not None:
+                onceki = k
+            if k is None:
+                liste.append(None)
+                continue
+            n, sol, sag = k
+            no, basili, x0, _x1, taban, aralik, _harfler = parcalar[n]
+            sol -= PAY
+            sag += PAY
+            if sira == len(kutu) - 1 and n == son:
+                sol = x0
             ust = taban - aralik * 0.62
             alt = taban + aralik * 0.38
+            kay = 0
+            oran = 1
             if no < 2:
                 kay = en / 2 if no == 0 else 0
-                x0, x1 = x0 / 2 + kay, x1 / 2 + kay
+                oran = 0.5
                 ust, alt = ust / 2 + boy / 4, alt / 2 + boy / 4
-            liste.append([basili, round(x0, 1), round(ust, 1), round(x1, 1), round(alt, 1)])
+            liste.append(
+                [basili, round(sol * oran + kay, 1), round(ust, 1), round(sag * oran + kay, 1), round(alt, 1)]
+            )
         cikti[anahtar] = liste
+    print(f"harf {eslesen}/{toplam}, yeri bulunamayan kelime {bos}, sıra dışı {sirasiz}", file=sys.stderr)
     json.dump(cikti, sys.stdout, separators=(",", ":"))
     return 0
 

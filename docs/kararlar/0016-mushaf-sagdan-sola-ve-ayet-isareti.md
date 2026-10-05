@@ -32,3 +32,21 @@ tutmuyor; alıntı araması hiçbir zaman isabet etmiyor.
 
 Eski uygulama yeni modülü açar (fazla alanlar şemada atılır), yalnızca yeni davranışı
 göstermez. Hafızlık modülü 1.6.0 olur; soru kimlikleri değişmez, ilerleme korunur.
+
+## Düzeltme: Kelime Kutusu (2026-10-05, Modül 1.7.3)
+
+Sahibinin sözü: "kuranda gör dediğimde işaretleyen alan çok alakasız olabiliyor".
+
+Sebep: 4. maddedeki orantı. Kutu, ayetin satır genişliği kelime sayısına bölünerek
+daraltılıyordu; kelimeler eşit genişlikte olmadığı için işaret satır içinde birkaç kelime
+kayıyordu (örnek: 63:4, cevap dört kelime, işaret yedi kelimeyi kaplıyordu).
+
+Yeni yol: PDF'in yazı katmanındaki harfler sırası ve yeriyle okunur, ayet metninin harfleriyle
+hizalanır (difflib), her kelimenin kutusu kendi harflerinden çıkar. Cevabın işareti, kendi
+kelimelerinin kutularının satır satır birleşimidir; ayetin son kelimesi ayet sonu işaretini de
+alır. Kutuya iki yandan 3 punto pay verilir.
+
+Ölçüm: 329.665 harfin 312.532'si eşleşti; 77.647 kelimenin 126'sının yeri bulunamadı, 17'si
+sıra dışı çıktığı için atıldı (komşu kelimeler boşluğu kapatır). 10.508 sorunun 10.507'si
+işaretli. On iki rastgele soruda işaret cevabın ilk ve son kelimesine oturdu:
+`tmp/isaret-once-1.png`, `tmp/isaret-sonra-1.png`, `tmp/isaret-sonra-2.png`.

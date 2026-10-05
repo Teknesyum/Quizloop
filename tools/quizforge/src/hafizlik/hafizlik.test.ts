@@ -98,25 +98,26 @@ describe('uret', () => {
     expect(JSON.stringify(q.solution[0])).toContain('Besmele')
   })
 
-  it('cevap parçasının kutusu satırda sağdan sola, kelime oranıyla düşer', () => {
+  it('cevap parçasının kutusu kendi kelimelerinin kutularından birleşir', () => {
     const cevap = parcalar(sureler)[1]!
     expect([cevap.bas, cevap.son, cevap.ayetKelime]).toEqual([3, 6, 6])
     expect(
       isaretle(
         [
-          [7, 100, 10, 300, 40],
-          [7, 50, 46, 150, 76]
+          [7, 250, 10, 300, 40],
+          [7, 200, 10, 240, 40],
+          [7, 150, 10, 190, 40],
+          [7, 100, 10, 140, 40],
+          null,
+          [7, 110, 46, 150, 76]
         ],
         cevap
       )
     ).toEqual([
-      { pdfSayfa: 7, bbox: [100, 10, 150, 40] },
-      { pdfSayfa: 7, bbox: [50, 46, 150, 76] }
+      { pdfSayfa: 7, bbox: [100, 10, 140, 40] },
+      { pdfSayfa: 7, bbox: [110, 46, 150, 76] }
     ])
-    const q = uret(sureler, meal, { sikli: false, satirlar: { '1:1': [[7, 100, 10, 300, 40]] } })
-      .sorular[0]!
-    expect(q.source.pages).toEqual([7, 7])
-    expect(q.source.isaretler).toEqual([{ pdfSayfa: 7, bbox: [100, 10, 200, 40] }])
+    expect(isaretle([[7, 100, 10, 300, 40]], cevap)).toEqual([])
   })
 
   it('kelime meali cevap parçasına kırpılır', () => {
