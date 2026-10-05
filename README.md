@@ -33,12 +33,8 @@ Download the latest build from
 | macOS    | `quizloop-<version>-unsigned.dmg` | The app tells you when a new version is out |
 | Linux    | `.AppImage` or `.deb` | The app tells you when a new version is out |
 
-**iPhone, iPad, or any browser:** open
-<https://teknesyum.github.io/Quizloop/>. Nothing is downloaded from a store.
-On an iPhone or iPad, open it in Safari, tap *Share*, then *Add to Home Screen*;
-it then starts like an app and works offline. Your progress and the modules you
-import stay in that browser on that device, so keep using the same one, and use
-one tab at a time.
+**iPhone, iPad, Android, or any browser:** use QuizLoop Web, described under
+[Web version](#web-version).
 
 The macOS build is unsigned, so Gatekeeper blocks the first launch. Clear the
 quarantine attribute once:
@@ -46,6 +42,42 @@ quarantine attribute once:
 ```
 xattr -cr /Applications/Quizloop.app
 ```
+
+## Web version
+
+**QuizLoop Web** is the same engine running in a browser:
+<https://teknesyum.github.io/Quizloop/>. Nothing comes from a store, there is
+no account, and it works offline after the first visit. Your progress and your
+modules stay on the device.
+
+**Install**
+
+- **iPhone, iPad:** open the address in Safari, tap *Share*, then
+  *Add to Home Screen*, then *Add*.
+- **Android:** open it in Chrome, tap the three dots, then *Install app* (or
+  *Add to Home screen*), then *Install*.
+- **Computer:** open it in Chrome or Edge. It runs as a tab; the install icon
+  in the address bar turns it into its own window.
+
+**First use.** *Install The Sample Modules* adds two samples to try.
+*Add A Module File* imports a `.qlmod` file. The three-dot menu at the top right holds text size, language
+and the support link. The first visit needs a connection.
+
+**Updates** arrive on their own: a new version downloads in the background and
+takes over the next time the page is reloaded or reopened. The running version
+is shown next to the title. Progress is kept.
+
+**Limits to know about**
+
+- No backup or export yet. Clearing the browser's site data, or removing the
+  home-screen app, erases your progress.
+- Nothing syncs between devices or browsers.
+- On an iPhone the Safari tab and the home-screen icon keep separate data.
+  Pick one and stay with it.
+- One tab at a time; a second tab is told the app is already open.
+- No reminder notifications.
+- Tapping a `.qlmod` file does not open the app; import it from inside.
+- Older phones may not run it. iOS 17 or later is a safe floor.
 
 ## How a round works
 
