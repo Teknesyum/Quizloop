@@ -5,6 +5,7 @@ import { runBack } from './back'
 import { remind } from './remind'
 import { Confirm } from './components/Confirm'
 import { ScaleSwitch } from './components/ScaleSwitch'
+import { TopMenu } from './components/TopMenu'
 import { useUpdateTools } from './components/UpdateTools'
 import { useBookWarmup } from './components/bookdoc'
 import { useUpdate } from './hooks/useUpdate'
@@ -183,12 +184,20 @@ export default function App(): React.JSX.Element {
         version={caps.updater ? tools.version : tools.label}
         update={caps.updater ? tools.update : undefined}
         language={
-          <>
-            {caps.windowChrome && (
+          caps.windowChrome ? (
+            <>
               <ScaleSwitch scale={scale} onChange={(next) => saveSettings({ fontScale: next })} />
-            )}
-            <LangSwitch lang={lang} label={t('lang.label')} onChange={setLang} />
-          </>
+              <LangSwitch lang={lang} label={t('lang.label')} onChange={setLang} />
+            </>
+          ) : (
+            <TopMenu
+              scale={scale}
+              lang={lang}
+              links={{ brand: GITHUB, sponsor: SPONSOR }}
+              onScale={(next) => saveSettings({ fontScale: next })}
+              onLang={setLang}
+            />
+          )
         }
         onMinimize={() => win.minimize()}
         onMaximize={() => win.toggleMaximize()}
