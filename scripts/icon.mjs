@@ -30,7 +30,21 @@ function brain(cx, size) {
   return `<g transform="translate(${cx} ${cx}) scale(${k})">${half}<g transform="scale(-1 1)">${half}</g></g>`
 }
 
-function svg(size, bare = false) {
+function badge(size) {
+  const u = size / 512
+  const at = 356 * u
+  const g = 38 * u
+  const w = 7 * u
+  return `<circle cx="${at}" cy="${at}" r="${74 * u}" fill="${c('black')}"/>
+<circle cx="${at}" cy="${at}" r="${62 * u}" fill="${c('renk-1')}"/>
+<g fill="none" stroke="${c('black')}" stroke-width="${w}">
+<circle cx="${at}" cy="${at}" r="${g - w / 2}"/>
+<ellipse cx="${at}" cy="${at}" rx="${g * 0.45 - w / 2}" ry="${g - w / 2}"/>
+<path d="M ${at - g} ${at} H ${at + g}"/>
+</g>`
+}
+
+function svg(size, bare = false, web = false) {
   const r = (tokens.shape['r-window'].value * size) / 32
   const b = Math.max(1, size / 64)
   const cx = size / 2
@@ -53,14 +67,15 @@ ${bare ? `<g transform="translate(${cx} ${cx}) scale(0.62) translate(${-cx} ${-c
 <path d="M ${x0} ${y0} A ${ring} ${ring} 0 1 1 ${x1} ${y1}" fill="none" stroke="${c('renk-1')}" stroke-width="${w}" stroke-linecap="butt"/>
 <path d="M ${tip.join(' ')} L ${back1.join(' ')} L ${back2.join(' ')} Z" fill="${c('renk-1')}"/>
 ${brain(cx, size)}
-${bare ? '</g>' : ''}</svg>`
+${bare ? '</g>' : ''}${web ? badge(size) : ''}</svg>`
 }
 
 const work = mkdtempSync(join(tmpdir(), 'ql-icon-'))
-function render(size, bare = false) {
-  const html = join(work, `i${size}${bare ? 'b' : ''}.html`)
-  const out = join(work, `i${size}${bare ? 'b' : ''}.png`)
-  writeFileSync(html, `<!doctype html><html><body style="margin:0;background:transparent">${svg(size, bare)}</body></html>`)
+function render(size, bare = false, web = false) {
+  const tag = `${size}${bare ? 'b' : ''}${web ? 'w' : ''}`
+  const html = join(work, `i${tag}.html`)
+  const out = join(work, `i${tag}.png`)
+  writeFileSync(html, `<!doctype html><html><body style="margin:0;background:transparent">${svg(size, bare, web)}</body></html>`)
   execFileSync(browser, [
     '--headless=new',
     '--disable-gpu',
@@ -76,6 +91,7 @@ function render(size, bare = false) {
 
 const png = {}
 for (const s of [16, 24, 32, 48, 64, 128, 256, 512, 1024]) png[s] = render(s)
+const webPng = render(512, false, true)
 
 function ico(sizes) {
   const head = Buffer.alloc(6 + 16 * sizes.length)
@@ -113,6 +129,7 @@ function icns(map) {
 if (out) {
   for (const s of Object.keys(png)) writeFileSync(join(out, `icon-${s}.png`), png[s])
   writeFileSync(join(out, 'icon.ico'), ico([16, 24, 32, 48, 64, 128, 256]))
+  writeFileSync(join(out, 'icon-web.png'), webPng)
   console.log('icon preview:', out)
   process.exit(0)
 }
@@ -120,6 +137,7 @@ writeFileSync(join(root, 'build/icon.png'), png[512])
 writeFileSync(join(root, 'build/icon.ico'), ico([16, 24, 32, 48, 64, 128, 256]))
 writeFileSync(join(root, 'build/icon.icns'), icns({ ic07: 128, ic08: 256, ic09: 512, ic10: 1024 }))
 copyFileSync(join(root, 'build/icon.png'), join(root, 'resources/icon.png'))
+writeFileSync(join(root, 'src/web/public/icon.png'), webPng)
 const res = join(root, 'android/app/src/main/res')
 if (existsSync(res)) {
   const dpi = { mdpi: 1, hdpi: 1.5, xhdpi: 2, xxhdpi: 3, xxxhdpi: 4 }
