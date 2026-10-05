@@ -56,7 +56,7 @@ export async function installFrom(
     }
     const target = resolve(join(modulesDir(), meta.id))
     if (resolve(source) !== target) {
-      if (existsSync(target)) await removeTree(target, () => undefined)
+      if (existsSync(target)) await removeTree(target, () => undefined).catch(() => undefined)
       await copyTree(source, target, work.span('copy', 60, 85), skipBuild)
     }
     work.at('sync', 85, 100)
