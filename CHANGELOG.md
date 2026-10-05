@@ -6,6 +6,23 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.7.34] - 2026-10-05
+
+### Added
+
+- Goal reminders on Android. Permission is asked only when you press Turn On Notifications,
+  never at startup. The 19:00 reminder is scheduled ahead, so it arrives with the app closed.
+
+### Changed
+
+- Ending a session no longer asks for confirmation; the summary opens at once. If no
+  question was graded, the app returns straight to the library.
+
+### Fixed
+
+- In the solution view the text and its table share one left edge; right-to-left solutions
+  are centred as one column.
+
 ## [0.7.33] - 2026-10-05
 
 ### Added

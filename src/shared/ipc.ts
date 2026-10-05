@@ -277,8 +277,19 @@ export const DESKTOP_CAPABILITIES: Capabilities = {
   packageImport: false
 }
 
+export interface Reminder {
+  id: number
+  at: number
+  title: string
+  body: string
+}
+
 export interface QuizloopApi {
   capabilities: Capabilities
+  notify?: {
+    ask(): Promise<boolean>
+    plan(items: Reminder[]): Promise<void>
+  }
   pathOf(file: File): string | null
   app: {
     info(): Promise<{

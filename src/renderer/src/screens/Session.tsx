@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState } from 'react'
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { tinykeys } from 'tinykeys'
 import type { QuestionView, SelfAssess, SourceBook } from '@shared/ipc'
 import type { ChoiceKey } from '@shared/schema/question'
@@ -7,7 +7,6 @@ import { BookViewer } from '@renderer/components/BookViewer'
 import { useTargetWarmup, viewPdfPage } from '@renderer/components/bookdoc'
 import { Solution } from '@renderer/components/Solution'
 import { pushBack } from '@renderer/back'
-import { Confirm } from '@renderer/components/Confirm'
 import { Markdown } from '@renderer/components/Markdown'
 import { Skeleton } from '@renderer/components/Skeleton'
 import { StemMedia } from '@renderer/components/StemMedia'
@@ -86,7 +85,6 @@ export function Session({
   const go = useApp((x) => x.go)
   const toast = useApp((x) => x.toast)
   const loadModules = useApp((x) => x.loadModules)
-  const [ending, setEnding] = useState(false)
   const [book, setBook] = useState<SourceBook | null>(null)
   const [reading, setReading] = useState<string | null>(null)
   const solvedRef = useRef<HTMLDivElement | null>(null)
@@ -119,23 +117,23 @@ export function Session({
     toast('success', t('session.flagged'))
   }
 
-  const finish = async (): Promise<void> => {
-    setEnding(false)
-    await s.end()
+  const finish = useCallback(async (): Promise<void> => {
+    await useSession.getState().end()
     await loadModules()
-  }
+    const after = useSession.getState().state
+    if (after.phase === 'summary' && after.summary.seen === 0) go({ name: 'library' })
+  }, [loadModules, go])
 
   useEffect(
     () =>
       pushBack(() => {
         if (reading !== null) setReading(null)
-        else if (ending) setEnding(false)
         else if (['summary', 'idle', 'loading', 'empty', 'failed'].includes(state.phase))
           go({ name: 'chapters', moduleId })
-        else setEnding(true)
+        else void finish()
         return true
       }),
-    [reading, ending, state.phase, go, moduleId]
+    [reading, state.phase, go, moduleId, finish]
   )
 
   useEffect(() => {
@@ -196,11 +194,9 @@ export function Session({
         if (state.phase === 'solved') s.grade(3)
       },
       [KEYS.flag]: () => flag(),
-      [KEYS.end]: () => {
-        if (!ending) setEnding(true)
-      }
+      [KEYS.end]: () => void finish()
     })
-  }, [state, ending, reading])
+  }, [state, reading])
 
   if (state.phase === 'summary') {
     return (
@@ -347,11 +343,7 @@ export function Session({
           >
             {t('session.flag')}
           </button>
-          <button
-            type="button"
-            className="tk-btn tk-btn-ghost ql-btn-sm"
-            onClick={() => setEnding(true)}
-          >
+          <button type="button" className="tk-btn tk-btn-ghost ql-btn-sm" onClick={finish}>
             {t('session.end')}
           </button>
         </div>
@@ -535,15 +527,6 @@ export function Session({
           </span>
         ))}
       </p>
-
-      {ending && (
-        <Confirm
-          title={t('session.endConfirmTitle')}
-          text={t('session.endConfirm')}
-          onNo={() => setEnding(false)}
-          onYes={finish}
-        />
-      )}
 
       {reading === q.questionId && solved?.source && (
         <BookViewer

@@ -100,8 +100,6 @@
   "session.end": "Oturumu bitir",
   "session.next": "Sıradaki soru",
   "session.autoNext": "Sonraki soru…",
-  "session.endConfirmTitle": "Oturum Bitirilsin Mi?",
-  "session.endConfirm": "Çözülen sorular kaydedildi.",
   "session.wrong": "Yanlış, tekrar dene",
   "session.correct": "Doğru cevap",
   "session.verdictRight": "Doğru",
@@ -366,13 +364,14 @@
   "goals.info.3": "Sayılan şey emekli ettiğin sorudur: \"anladım\" dediğin ve bir daha sorulmayacak sorular. Yalnızca cevaplamak hedefi ilerletmez.",
   "goals.info.4": "Bir gün çalışmazsan hedef silinmez; açık, sonraki günlere paylaştırılır ve günlük sayı biraz yükselir.",
   "goals.info.5": "Hedef oturumdaki soru sayısını değiştirmez ve yalnızca bu cihazda durur. İstediğin an süreyi değiştirebilir ya da hedefi kaldırabilirsin.",
-  "goals.notifyAsk": "Hedefin bitmediyse akşam 19.00’dan sonra bir kez hatırlatalım mı? Uygulama açık ya da arka planda çalışırken gelir.",
-  "goals.notifyOn": "Hatırlatma açık: hedefin bitmediyse akşam 19.00’dan sonra bir bildirim gelir.",
+  "goals.notifyAsk": "Hedefin bitmediyse akşam 19.00’da bir kez hatırlatalım mı? İzin yalnızca bu düğmeye bastığında istenir.",
+  "goals.notifyOn": "Hatırlatma açık: hedefin bitmediyse akşam 19.00’da bir bildirim gelir.",
   "goals.notifyNone": "Bu cihazda bildirim henüz desteklenmiyor.",
   "goals.notifyButton": "Bildirimi Aç",
   "goals.notifyOff": "Bildirimi Kapat",
   "goals.notifyDone": "Bildirim açıldı.",
   "goals.notifyDenied": "Bildirim izni verilmedi. Sistem ya da tarayıcı ayarlarından QuizLoop için bildirime izin ver.",
   "goals.notifyTitle": "QuizLoop Günlük Hedef",
-  "goals.notifyBody": "Bugün {done}/{daily} soru emekli edildi."
+  "goals.notifyBody": "Bugün {done}/{daily} soru emekli edildi.",
+  "goals.notifyNext": "Bugünkü hedefin {daily} soru. Hâlâ bitmediyse şimdi tam zamanı."
 }
