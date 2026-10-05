@@ -8,6 +8,10 @@ self.addEventListener('install', (event) => {
   event.waitUntil(caches.open(SHELL).then((cache) => cache.addAll(FILES)))
 })
 
+self.addEventListener('message', (event) => {
+  if (event.data === 'skip') self.skipWaiting()
+})
+
 self.addEventListener('activate', (event) => {
   event.waitUntil(
     caches

@@ -6,6 +6,14 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.7.37] - 2026-10-05
+
+### Fixed
+
+- In the browser version a reload could bring back the previous release, so switching the
+  language made the new top bar menu vanish. A waiting update now takes over on the next
+  page load instead of waiting for every tab to close.
+
 ## [0.7.36] - 2026-10-05
 
 ### Added
