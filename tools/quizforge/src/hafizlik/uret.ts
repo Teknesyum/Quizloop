@@ -36,6 +36,7 @@ export interface Secenekler {
 const EN_COK_BAGLAM = 3
 const SIK_ADEDI = 4
 const DOLGU_UZAKLIK = 60
+const SORU_CUMLESI = 'Bu durağın devamı nedir?'
 const CUZ_SAYFA = 20
 const SON_CUZ = 30
 const SON_SAYFA = 604
@@ -324,6 +325,7 @@ export function uret(sureler: Sure[], meal: Meal | null, sec: Secenekler = {}): 
       belirsiz += 1
       md += `\n\n${kacis(sure.ad)} Suresi, ${soru.ayet}. Ayet`
     }
+    md += `\n\n${SORU_CUMLESI}`
     const isaretler = isaretle(sec.satirlar?.[`${cevap.sure}:${cevap.ayet}`], cevap)
     const ilk = isaretler[0]?.pdfSayfa ?? cevap.sayfa
     const sonSayfa = isaretler[isaretler.length - 1]?.pdfSayfa ?? cevap.sayfa

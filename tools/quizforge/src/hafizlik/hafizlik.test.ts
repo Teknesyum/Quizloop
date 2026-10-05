@@ -87,6 +87,7 @@ describe('uret', () => {
     expect(k[i]).toBeGreaterThan(0)
     const q = uret(sureler, meal, { sikli: false }).sorular[i]!
     expect(q.stem.md).toContain('۝')
+    expect(q.stem.md.endsWith('\n\nBu durağın devamı nedir?')).toBe(true)
   })
 
   it('sure geçişini etiketler ve Besmele notu düşer', () => {

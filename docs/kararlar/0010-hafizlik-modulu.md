@@ -46,6 +46,10 @@ bölümler cüz olarak kalır, dönüş bölümlü ayrı modül üretilmez (sahi
 ofset 0). Kaynakta basılı 1. sayfa iki PDF sayfasıdır (Fatiha, Bakara 1-5); ikisi yan yana tek
 sayfaya konur, böylece PDF sayfası = basılı sayfa (1-604).
 
+**Soru Cümlesi (2026-10-05, sürüm 1.7.0).** Kökün sonuna boş satırla "Bu durağın devamı nedir?"
+eklenir; uygulama (0.7.33+) soru işaretiyle biten son paragrafı Arapça metnin altına ayrı basar.
+Kimlikler, şıklar, çözüm ve kaynak değişmez.
+
 **Ölçüm (2026-10-04, sürüm 1.5.0).** 10.509 parça, 10.508 soru, hepsi çoktan seçmeli; 8.653'ünde
 en az bir benzer ayet çeldiricisi var. 211 blok, paket 10,5 MB (mushaf sayfaları 5,6 MB). Bağlam eklenen gövde 1.242, sure adıyla ayrılan 9.
 
