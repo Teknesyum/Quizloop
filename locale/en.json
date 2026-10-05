@@ -1,6 +1,7 @@
 {
   "app.name": "QuizLoop",
   "nav.library": "Library",
+  "nav.goals": "Goals",
   "nav.stats": "Statistics",
   "nav.settings": "Settings",
   "win.minimize": "Minimise",
@@ -349,5 +350,14 @@
   "settings.welcome": "Introduction",
   "settings.welcomeOpen": "Show the introduction again",
   "settings.samples": "Sample modules",
-  "settings.samplesInstalled": "Sample modules installed"
+  "settings.samplesInstalled": "Sample modules installed",
+  "goals.title": "Goals",
+  "goals.subtitle": "Set and follow a daily goal for each module here.",
+  "goals.total": "{done}/{daily} questions retired today in total.",
+  "goals.today": "retired today / daily goal",
+  "goals.met": "today's goal is done",
+  "goals.left": "{days} days left ({date}) · {count} questions remaining",
+  "goals.none": "This module has no goal. Pick a period from the Goal button.",
+  "goals.empty": "No module is installed. Add one from the Library tab first.",
+  "goals.how": "The daily goal is the remaining questions divided by the remaining days. Skip a day and the following days ask for more."
 }
