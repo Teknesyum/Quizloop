@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import type { ModuleSummary } from '@shared/ipc'
 import { CardCover } from '@renderer/components/CardCover'
-import { GoalMenu } from '@renderer/components/CardMenu'
+import { GoalPick } from '@renderer/components/GoalPick'
 import { Skeleton } from '@renderer/components/Skeleton'
 import { t } from '@renderer/i18n'
 import { askNotify, canNotify, forget, remind } from '@renderer/remind'
@@ -85,8 +85,8 @@ function GoalRow({ m, index }: { m: ModuleSummary; index: number }): React.JSX.E
             <span style={{ width: share(m.retired, m.questionCount) }} />
           </div>
         </div>
-        <footer className="ql-card-foot">
-          <GoalMenu m={m} />
+        <GoalPick m={m} />
+        <footer className="ql-card-foot ql-goal-foot">
           <div className="ql-card-actions">
             <button
               type="button"

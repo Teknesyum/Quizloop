@@ -1,9 +1,5 @@
 import { useEffect, useLayoutEffect, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
-import { GOAL_DAYS, type ModuleSummary } from '@shared/ipc'
-import { goalLabel } from '@renderer/goal'
-import { t } from '@renderer/i18n'
-import { useApp } from '@renderer/store/app'
 
 type Spot = { right?: number; left?: number; top?: number; bottom?: number }
 
@@ -115,38 +111,5 @@ export function MenuItem({
     >
       {children}
     </button>
-  )
-}
-
-function untilOf(days: number): string {
-  return new Date(Date.now() + days * 86_400_000).toISOString()
-}
-
-async function setGoal(m: ModuleSummary, days: number | null): Promise<void> {
-  const app = useApp.getState()
-  const goals = { ...(app.settings?.goals ?? {}) }
-  if (days === null) delete goals[m.id]
-  else goals[m.id] = { days, until: untilOf(days) }
-  await app.saveSettings({ goals })
-  await app.loadModules()
-  const daily = useApp.getState().modules?.find((x) => x.id === m.id)?.goal?.daily
-  app.toast('success', daily ? t('library.goalDone', { daily }) : t('library.goalCleared'))
-}
-
-export function GoalMenu({ m }: { m: ModuleSummary }): React.JSX.Element {
-  const open = m.unseen + m.dueToday + m.learning + m.retiredToday
-  return (
-    <CardMenu label={t('goals.pick')} text={goalLabel(m)}>
-      {GOAL_DAYS.map((d) => (
-        <MenuItem key={d} onPick={() => setGoal(m, d)}>
-          {t('library.goalRow', { span: t(`library.goal.${d}`), daily: Math.ceil(open / d) })}
-        </MenuItem>
-      ))}
-      {m.goal && (
-        <MenuItem danger onPick={() => setGoal(m, null)}>
-          {t('library.goalClear')}
-        </MenuItem>
-      )}
-    </CardMenu>
   )
 }

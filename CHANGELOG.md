@@ -6,6 +6,18 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.7.38] - 2026-10-05
+
+### Changed
+
+- Goals: each module shows its six periods as buttons, each with the questions a day it
+  means. Press one to choose it, press the chosen one again to remove the goal.
+- Goals: the explanation, reminder and module panels share one width.
+
+### Fixed
+
+- A tall module cover is shown whole; its bottom edge is no longer trimmed.
+
 ## [0.7.37] - 2026-10-05
 
 ### Fixed

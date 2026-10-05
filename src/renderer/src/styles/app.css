@@ -385,7 +385,6 @@ body {
 img.ql-cover {
   aspect-ratio: auto;
   height: auto;
-  max-height: calc(var(--tk-sp-5) * 6);
   align-self: start;
 }
 
@@ -2020,7 +2019,6 @@ button.ql-mark:not(:disabled):active {
   display: flex;
   flex-direction: column;
   gap: var(--tk-sp-3);
-  max-width: calc(var(--tk-measure) * 2);
 }
 
 .ql-goal {
@@ -2090,7 +2088,6 @@ button.ql-mark:not(:disabled):active {
   justify-content: space-between;
   gap: var(--tk-sp-3);
   flex-wrap: wrap;
-  max-width: calc(var(--tk-measure) * 2);
 }
 
 .ql-goal-notify p {
@@ -2102,7 +2099,6 @@ button.ql-mark:not(:disabled):active {
   display: flex;
   flex-direction: column;
   gap: var(--tk-sp-3);
-  max-width: calc(var(--tk-measure) * 2);
 }
 
 .ql-goal-info .tk-h3,
@@ -2116,6 +2112,32 @@ button.ql-mark:not(:disabled):active {
   gap: var(--tk-sp-2);
   max-width: none;
   padding-inline-start: var(--tk-sp-4);
+}
+
+.ql-goal-pick {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: var(--tk-sp-2);
+}
+
+.ql-goal-opt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--tk-sp-1);
+  height: auto;
+  padding-block: var(--tk-sp-2);
+  white-space: normal;
+}
+
+.ql-goal-opt-daily {
+  color: inherit;
+  font-size: var(--tk-fs-1);
+  line-height: var(--tk-lh-heading);
+}
+
+.ql-goal-foot {
+  justify-content: flex-end;
 }
 
 /* --- question bank --- */
@@ -2303,6 +2325,10 @@ button.ql-mark:not(:disabled):active {
 
   .ql-goal > .ql-cover {
     width: calc(var(--tk-sp-5) * 2);
+  }
+
+  .ql-goal-pick {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .ql-grid-list > .ql-card {
