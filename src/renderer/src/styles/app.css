@@ -2123,6 +2123,16 @@ button.ql-mark:not(:disabled):active {
   padding-inline-start: var(--tk-sp-4);
 }
 
+.ql-chapter-goal {
+  display: flex;
+  flex-direction: column;
+  gap: var(--tk-sp-2);
+}
+
+.ql-chapter-goal p {
+  margin: 0;
+}
+
 .ql-goal-pick {
   display: grid;
   grid-template-columns: repeat(6, minmax(0, 1fr));

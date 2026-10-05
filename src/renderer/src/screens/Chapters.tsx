@@ -1,8 +1,10 @@
 import { useEffect, useState } from 'react'
 import { CardCover } from '@renderer/components/CardCover'
-import { CardInfo, CardMeter } from '@renderer/components/CardFacts'
+import { CardInfo, CardMeter, GoalMeter } from '@renderer/components/CardFacts'
+import { GoalMenu } from '@renderer/components/CardMenu'
+import { goalToast, saveGoal } from '@renderer/goal'
 import { tinykeys } from 'tinykeys'
-import type { ChapterSummary } from '@shared/ipc'
+import { goalKey, type ChapterSummary } from '@shared/ipc'
 import { Skeleton } from '@renderer/components/Skeleton'
 import { ViewToggle } from '@renderer/components/ViewToggle'
 import { t } from '@renderer/i18n'
@@ -23,6 +25,13 @@ export function Chapters({ moduleId }: { moduleId: string }): React.JSX.Element 
   useEffect(() => {
     window.quizloop.module.chapters(moduleId).then(setRows)
   }, [moduleId])
+
+  const pick = async (chapter: string, days: number | null): Promise<void> => {
+    await saveGoal(goalKey(moduleId, chapter), days)
+    const next = await window.quizloop.module.chapters(moduleId)
+    setRows(next)
+    goalToast(next.find((x) => x.chapter === chapter)?.goal?.daily)
+  }
 
   const [active, setActive] = useState(0)
   const [view, setView] = useView()
@@ -88,6 +97,19 @@ export function Chapters({ moduleId }: { moduleId: string }): React.JSX.Element 
         </div>
       </header>
 
+      {mod?.goal && (
+        <div className="tk-panel ql-chapter-goal ql-transition-in">
+          <GoalMeter done={mod.retiredToday} goal={mod.goal} />
+          <p className="tk-hint ql-goal-line">
+            {t('goals.left', {
+              days: mod.goal.daysLeft,
+              date: new Date(mod.goal.until).toLocaleDateString(),
+              count: mod.unseen + mod.dueToday + mod.learning
+            })}
+          </p>
+        </div>
+      )}
+
       {rows === null && (
         <div className="ql-grid">
           <div className="tk-panel">
@@ -126,7 +148,13 @@ export function Chapters({ moduleId }: { moduleId: string }): React.JSX.Element 
                 <CardInfo c={c} />
               </div>
               <CardMeter total={c.total} retired={c.retired} />
+              {c.goal && <GoalMeter done={c.retiredToday} goal={c.goal} />}
               <footer className="ql-card-foot">
+                <GoalMenu
+                  goal={c.goal}
+                  open={c.unseen + c.dueToday + c.learning + c.retiredToday}
+                  onPick={(d) => void pick(c.chapter, d)}
+                />
                 <button
                   type="button"
                   className="tk-btn tk-btn-primary ql-btn-sm"

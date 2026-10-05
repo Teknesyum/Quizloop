@@ -1,5 +1,8 @@
 import { useEffect, useLayoutEffect, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
+import { GOAL_DAYS, type ModuleGoal } from '@shared/ipc'
+import { goalLabel } from '@renderer/goal'
+import { t } from '@renderer/i18n'
 
 type Spot = { right?: number; left?: number; top?: number; bottom?: number }
 
@@ -111,5 +114,30 @@ export function MenuItem({
     >
       {children}
     </button>
+  )
+}
+
+export function GoalMenu({
+  goal,
+  open,
+  onPick
+}: {
+  goal: ModuleGoal | null
+  open: number
+  onPick(days: number | null): void
+}): React.JSX.Element {
+  return (
+    <CardMenu label={t('goals.pick')} text={goalLabel({ goal })}>
+      {GOAL_DAYS.map((d) => (
+        <MenuItem key={d} onPick={() => onPick(d)}>
+          {t('library.goalRow', { span: t(`library.goal.${d}`), daily: Math.ceil(open / d) })}
+        </MenuItem>
+      ))}
+      {goal && (
+        <MenuItem danger onPick={() => onPick(null)}>
+          {t('library.goalClear')}
+        </MenuItem>
+      )}
+    </CardMenu>
   )
 }

@@ -6,6 +6,14 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.7.41] - 2026-10-05
+
+### Added
+
+- A goal can be set for a single chapter from its card on the chapter screen.
+- The chapter screen shows the module goal at the top and each chapter goal on its card:
+  today's count, a percentage and a progress bar.
+
 ## [0.7.40] - 2026-10-05
 
 ### Fixed

@@ -19,6 +19,7 @@ export interface ChapterSummary {
   retired: number
   learning: number
   retiredToday: number
+  goal: ModuleGoal | null
 }
 
 export interface ModuleGoal {
@@ -34,6 +35,10 @@ export interface GoalSetting {
 }
 
 export const GOAL_DAYS = [7, 21, 30, 90, 365, 1095] as const
+
+export function goalKey(moduleId: string, chapter: string | null): string {
+  return chapter === null ? moduleId : `${moduleId}/${chapter}`
+}
 
 export interface ModuleSummary {
   id: string

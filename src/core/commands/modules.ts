@@ -6,9 +6,11 @@ import { joinPath, type CorePorts } from '@core/ports'
 import { dailyGoal } from '@core/settings'
 import { chapterCounts, countDue } from '@core/scheduler/queue'
 import { newer } from '@core/version'
+import { goalKey } from '@shared/ipc'
 import type {
   ChapterSummary,
   GoalSetting,
+  ModuleGoal,
   InstallResult,
   ModuleSummary,
   VersionChange
@@ -37,6 +39,17 @@ async function tagsOf(ports: CorePorts, root: string): Promise<string[]> {
   }
 }
 
+function goalOf(
+  goal: GoalSetting | undefined,
+  c: { unseen: number; dueToday: number; learning: number; retiredToday: number },
+  start: Date
+): ModuleGoal | null {
+  const open = c.unseen + c.dueToday + c.learning
+  return goal && new Date(goal.until) > start && open + c.retiredToday
+    ? dailyGoal(goal, open, c.retiredToday, start)
+    : null
+}
+
 export async function listModules(deps: ModuleDeps): Promise<ModuleSummary[]> {
   const { db, ports } = deps
   await deps.library.refresh()
@@ -57,10 +70,7 @@ export async function listModules(deps: ModuleDeps): Promise<ModuleSummary[]> {
       tags: await tagsOf(ports, r.path),
       questionCount: r.question_count,
       ...c,
-      goal:
-        goal && new Date(goal.until) > start && c.unseen + c.dueToday + c.learning + c.retiredToday
-          ? dailyGoal(goal, c.unseen + c.dueToday + c.learning, c.retiredToday, start)
-          : null
+      goal: goalOf(goal, c, start)
     })
   }
   return out
@@ -72,12 +82,15 @@ export async function moduleChapters(
 ): Promise<ChapterSummary[]> {
   await deps.library.refresh()
   const now = deps.ports.now()
-  const rows = await chapterCounts(deps.db, moduleId, now, deps.dayStart(now))
+  const start = deps.dayStart(now)
+  const goals = deps.goals()
+  const rows = await chapterCounts(deps.db, moduleId, now, start)
   return rows.map((r) => ({
     chapter: r.chapter,
     assetBase: deps.assetBase(moduleId),
     total: r.total,
-    ...r.count
+    ...r.count,
+    goal: goalOf(goals[goalKey(moduleId, r.chapter)], r.count, start)
   }))
 }
 

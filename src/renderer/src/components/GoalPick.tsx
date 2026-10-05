@@ -1,20 +1,12 @@
 import { GOAL_DAYS, type ModuleSummary } from '@shared/ipc'
+import { goalToast, saveGoal } from '@renderer/goal'
 import { t } from '@renderer/i18n'
 import { useApp } from '@renderer/store/app'
 
-function untilOf(days: number): string {
-  return new Date(Date.now() + days * 86_400_000).toISOString()
-}
-
 async function setGoal(m: ModuleSummary, days: number | null): Promise<void> {
-  const app = useApp.getState()
-  const goals = { ...(app.settings?.goals ?? {}) }
-  if (days === null) delete goals[m.id]
-  else goals[m.id] = { days, until: untilOf(days) }
-  await app.saveSettings({ goals })
-  await app.loadModules()
-  const daily = useApp.getState().modules?.find((x) => x.id === m.id)?.goal?.daily
-  app.toast('success', daily ? t('library.goalDone', { daily }) : t('library.goalCleared'))
+  await saveGoal(m.id, days)
+  await useApp.getState().loadModules()
+  goalToast(useApp.getState().modules?.find((x) => x.id === m.id)?.goal?.daily)
 }
 
 export function GoalPick({ m }: { m: ModuleSummary }): React.JSX.Element {
