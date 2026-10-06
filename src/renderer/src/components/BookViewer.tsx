@@ -11,7 +11,7 @@ import { Skeleton } from '@renderer/components/Skeleton'
 import { t } from '@renderer/i18n'
 import { shortAlt } from './media'
 import { useApp } from '@renderer/store/app'
-import { bookTarget, idle, openBook, sourcePdfPage, warmBook } from './bookdoc'
+import { bookTarget, idle, knownUnit, openBook, sourcePdfPage, warmBook } from './bookdoc'
 import './bookviewer.css'
 
 const MAX_PX = 1 << 25
@@ -37,6 +37,10 @@ interface Rect {
   width: number
   height: number
   outline: boolean
+}
+
+function boxRect([x0, y0, x1, y1]: [number, number, number, number]): Rect {
+  return { left: x0, top: y0, width: x1 - x0, height: y1 - y0, outline: true }
 }
 
 function reduced(): boolean {
@@ -124,9 +128,22 @@ function Leaf({
   const sheetRef = useRef<HTMLDivElement | null>(null)
   const doneRef = useRef('')
   const jobRef = useRef<Job | null>(null)
-  const [rects, setRects] = useState<Rect[]>([])
-  const [unit, setUnit] = useState<{ w: number; h: number } | null>(null)
+  const [found, setRects] = useState<Rect[]>([])
+  const [unit, setUnit] = useState<{ w: number; h: number } | null>(() => knownUnit(doc))
   const blank = !doc || pdfPage < 1 || pdfPage > doc.numPages
+  const fixed = useMemo<Rect[] | null>(() => {
+    if (!highlight) return null
+    if (highlight.bbox)
+      return highlight.bboxPage === pdfPage
+        ? [boxRect(highlight.bbox)]
+        : highlight.marks
+          ? null
+          : []
+    if (highlight.marks)
+      return highlight.marks.filter((m) => m.page === pdfPage).map((m) => boxRect(m.bbox))
+    return null
+  }, [highlight, pdfPage])
+  const rects = useMemo(() => (blank ? [] : (fixed ?? found)), [blank, fixed, found])
 
   useEffect(() => {
     const paint = paintRef.current
@@ -137,7 +154,7 @@ function Leaf({
     if (!follow || !shown || rects.length === 0) return
     sheetRef.current
       ?.querySelector('.ql-book-mark')
-      ?.scrollIntoView({ block: 'center', behavior: reduced() ? 'auto' : 'smooth' })
+      ?.scrollIntoView({ block: 'center', behavior: 'auto' })
   }, [rects, shown, follow])
 
   useEffect(() => {
@@ -149,28 +166,7 @@ function Leaf({
       const viewport = page.getViewport({ scale: 1 })
       setUnit({ w: viewport.width, h: viewport.height })
       setRects([])
-      if (!highlight) return
-      const bboxHere = highlight.bbox && highlight.bboxPage === pdfPage ? highlight.bbox : null
-      if (bboxHere) {
-        const [x0, y0, x1, y1] = bboxHere
-        setRects([{ left: x0, top: y0, width: x1 - x0, height: y1 - y0, outline: true }])
-        return
-      }
-      if (highlight.marks) {
-        setRects(
-          highlight.marks
-            .filter((m) => m.page === pdfPage)
-            .map(({ bbox: [x0, y0, x1, y1] }) => ({
-              left: x0,
-              top: y0,
-              width: x1 - x0,
-              height: y1 - y0,
-              outline: true
-            }))
-        )
-        return
-      }
-      if (!highlight.quote) return
+      if (!highlight || fixed || !highlight.quote) return
       const text = await page.getTextContent()
       if (dead) return
       const items = text.items.flatMap((i) =>
@@ -204,7 +200,7 @@ function Leaf({
     return () => {
       dead = true
     }
-  }, [doc, blank, pdfPage, highlight])
+  }, [doc, blank, pdfPage, highlight, fixed])
 
   useEffect(() => {
     if (!doc || blank || renderWidth <= 0) return
@@ -551,7 +547,7 @@ export function BookViewer({
   }, [source, base])
 
   const pages = portrait ? [Math.max(lo, left)] : [Math.max(lo, left), Math.min(left + 1, maxLeft)]
-  const blinkN = Math.max(1, Math.round((blinkSeconds * 1000) / slowMs()) | 1)
+  const blinkN = Math.max(2, Math.round((blinkSeconds * 1000) / slowMs() / 2) * 2)
   const kesitRef = source.kesit?.ref
   const showPick = !usePdf || failed
   const canPick = window.quizloop.capabilities.folders

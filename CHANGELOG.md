@@ -6,6 +6,14 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.7.43] - 2026-10-07
+
+### Changed
+
+- Book view: the mark on the page appears at once, without waiting for the page to load,
+  and the view jumps straight to it instead of scrolling.
+- The mark is purple, filled and ringed, and its blink starts fully visible.
+
 ## [0.7.42] - 2026-10-06
 
 ### Fixed
