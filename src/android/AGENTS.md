@@ -13,7 +13,7 @@ Built by `vite.android.config.ts` into `out/android`; `npm run android:apk` make
   generation counter, `resume()` on return from background.
 - `ports.ts` — reads bundled modules from `/bundled` (APK assets). No `.gz`/`.mjs`.
 - `settings.ts` — preferences; `work.ts` — modal progress; `update.ts` — quiet check at
-  start, then a link to Play or GitHub, told apart by `MagazaPlugin.java`.
+  start; `MagazaPlugin.java` tells Play from GitHub, and a Play install announces only what Play offers.
 - `paket.ts` — `.qlmod` import over the `QuizloopPaket` Java plugin (`PaketPlugin.java`):
   native unzip to `files/modules/.tmp-*`, verify, atomic move, sync. Files via `convertFileSrc`.
 - `pdfworker.ts` + `polyfill.js` — pdf.js worker from a blob module that loads the WebView 113

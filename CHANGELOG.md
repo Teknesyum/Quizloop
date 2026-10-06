@@ -6,6 +6,15 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.7.45] - 2026-10-07
+
+### Fixed
+
+- On a phone the whole screen no longer slides off the right edge once the update
+  badge appears in the title bar; the badge now takes the place of the version label.
+- An app installed from Google Play announces an update only when Play itself offers
+  it, so the notice no longer points at a version the store does not have yet.
+
 ## [0.7.44] - 2026-10-07
 
 ### Changed
