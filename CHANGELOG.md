@@ -6,6 +6,13 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.7.46] - 2026-10-07
+
+### Fixed
+
+- The web app starts the new version on the first load after a release instead of
+  showing the old one once more from the browser cache.
+
 ## [0.7.45] - 2026-10-07
 
 ### Fixed
