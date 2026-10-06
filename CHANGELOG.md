@@ -6,6 +6,13 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.7.47] - 2026-10-07
+
+### Changed
+
+- Installing a module counts the questions while it checks and syncs them, so a large
+  package no longer looks stuck at one percentage.
+
 ## [0.7.46] - 2026-10-07
 
 ### Fixed

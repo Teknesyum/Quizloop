@@ -67,17 +67,22 @@ export async function* iterateQuestions(
   }
 }
 
+export type Tick = (done: number, total: number) => void
+
 export async function validateModule(
   ports: CorePorts,
-  root: string
+  root: string,
+  tick?: Tick
 ): Promise<{ meta: ModuleMeta; count: number }> {
   const mod = await readMeta(ports, root)
   let count = 0
   const ids = new Set<string>()
+  tick?.(0, mod.meta.questionCount)
   for await (const q of iterateQuestions(ports, mod)) {
     if (ids.has(q.id)) throw new ModuleError(`duplicate question id: ${q.id}`)
     ids.add(q.id)
     count++
+    tick?.(count, mod.meta.questionCount)
   }
   if (count !== mod.meta.questionCount) {
     throw new ModuleError(`questionCount ${mod.meta.questionCount} but found ${count}`)

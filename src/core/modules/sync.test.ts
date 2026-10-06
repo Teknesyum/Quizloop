@@ -81,6 +81,19 @@ describe('syncModule', () => {
     const again = await syncModule(db, ports, mod, NOW)
     expect(again.added).toBe(0)
   })
+
+  it('reports each question on the way to the total', async () => {
+    const { ports, mod } = await bigModule(20)
+    const ticks: number[] = []
+    await syncModule(db, ports, mod, NOW, (done, total) => {
+      expect(total).toBe(mod.meta.questionCount)
+      ticks.push(done)
+    })
+    expect(ticks[0]).toBe(0)
+    expect(ticks.at(-1)).toBe(mod.meta.questionCount)
+    expect(ticks.length).toBeGreaterThan(mod.meta.questionCount)
+    expect([...ticks].sort((a, b) => a - b)).toEqual(ticks)
+  })
 })
 
 describe('resyncFolders', () => {

@@ -167,8 +167,7 @@ export function openStore(bundled: CorePorts, bundleRoot: string): WebStore {
       const inner = rootOf(names)
       if (inner === null) throw new Error('pakette module.json yok')
       const root = inner ? `${base}/${stamp}/${inner}` : `${base}/${stamp}`
-      work.at('verify', 75, 88)
-      const { meta } = await checkFolder(ports, root)
+      const { meta } = await checkFolder(ports, root, work.span('verify', 75, 88))
       if (!(await mayInstall(db, meta, ask))) {
         work.finish(true)
         return { ok: false, cancelled: true }
@@ -178,8 +177,7 @@ export function openStore(bundled: CorePorts, bundleRoot: string): WebStore {
         .select(['path'])
         .where('id', '=', meta.id)
         .executeTakeFirst()
-      work.at('sync', 88, 100)
-      const r = await syncFolder(db, ports, root, ports.now())
+      const r = await syncFolder(db, ports, root, ports.now(), work.span('sync', 88, 100))
       keep = true
       if (old && owns(old.path)) await caches.delete(cacheOf(old.path))
       work.finish(true)

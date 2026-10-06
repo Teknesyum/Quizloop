@@ -1,6 +1,6 @@
 import type { Kysely } from 'kysely'
 import type { Database } from '@core/db/types'
-import { fingerprint, ModuleError, readMeta, validateModule } from '@core/modules/loader'
+import { fingerprint, ModuleError, readMeta, validateModule, type Tick } from '@core/modules/loader'
 import { syncModule } from '@core/modules/sync'
 import { joinPath, type CorePorts } from '@core/ports'
 import { dailyGoal } from '@core/settings'
@@ -96,19 +96,21 @@ export async function moduleChapters(
 
 export function checkFolder(
   ports: CorePorts,
-  root: string
+  root: string,
+  tick?: Tick
 ): Promise<{ meta: ModuleMeta; count: number }> {
-  return validateModule(ports, root)
+  return validateModule(ports, root, tick)
 }
 
 export async function syncFolder(
   db: Kysely<Database>,
   ports: CorePorts,
   root: string,
-  now: Date
+  now: Date,
+  tick?: Tick
 ): Promise<InstallResult> {
   const mod = await readMeta(ports, root)
-  const r = await syncModule(db, ports, mod, now)
+  const r = await syncModule(db, ports, mod, now, tick)
   return {
     ok: true,
     moduleId: mod.meta.id,
