@@ -93,5 +93,29 @@ jobs:
       - uses: softprops/action-gh-release@v2
         with:
           files: dist/**/*
-          draft: true
           generate_release_notes: true
+
+  web:
+    needs: [build, android]
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    uses: ./.github/workflows/pages.yml
+
+  play:
+    needs: [build, android]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: play-aab
+          path: dist/android
+      - name: Upload to the Play closed test
+        uses: r0adkll/upload-google-play@v1
+        with:
+          serviceAccountJsonPlainText: ${{ secrets.PLAY_SERVICE_ACCOUNT_JSON }}
+          packageName: com.teknesyum.QuizLoop
+          releaseFiles: dist/android/QuizLoop-*-release.aab
+          track: alpha
+          status: completed

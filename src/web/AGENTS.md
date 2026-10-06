@@ -3,7 +3,7 @@
 Builds `window.quizloop` in a plain browser from `src/core`, then loads the renderer.
 No Electron, Node or Capacitor imports. Decision 0015 explains the choices.
 Built by `vite.web.config.ts` into `out/web` (`npm run web:build`); `npm run web:serve`
-serves it locally. `.github/workflows/pages.yml` publishes it to GitHub Pages on a tag.
+serves it locally. `.github/workflows/release.yml` calls `pages.yml` to publish it to GitHub Pages on a tag (0025).
 
 - `boot.ts` — registers `sw.js`, waits until it controls the page, then shell and renderer.
 - `shell.ts` — `createShell()`. Desktop-only calls are no-ops; capabilities follow the
