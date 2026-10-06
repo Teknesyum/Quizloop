@@ -21,7 +21,15 @@ function fold(s: string): string {
   return s.toLocaleLowerCase('tr').normalize('NFD').replace(/\p{M}/gu, '')
 }
 
-function Detail({ q, onBook }: { q: BankQuestion; onBook(): void }): React.JSX.Element {
+function Detail({
+  q,
+  kitap,
+  onBook
+}: {
+  q: BankQuestion
+  kitap: boolean
+  onBook(): void
+}): React.JSX.Element {
   return (
     <div className="ql-bank-detail-body">
       <Markdown md={q.stem.md} assetBase={q.assetBase} />
@@ -55,12 +63,18 @@ function Detail({ q, onBook }: { q: BankQuestion; onBook(): void }): React.JSX.E
         <span className="tk-label ql-source-label">{t('session.source')}</span>
         <p className="ql-source-quote">{q.source.quote}</p>
         <span className="tk-hint ql-source-line">
-          {t('session.sourceFile', { file: q.source.file })}
-          <span>
-            {t('session.sourcePages', { from: q.source.pages[0], to: q.source.pages[1] })}
-          </span>
+          {kitap ? (
+            <>
+              {t('session.sourceFile', { file: q.source.file })}
+              <span>
+                {t('session.sourcePages', { from: q.source.pages[0], to: q.source.pages[1] })}
+              </span>
+            </>
+          ) : (
+            q.source.file
+          )}
         </span>
-        <BookButton file={q.source.file} onOpen={onBook} />
+        {kitap && <BookButton file={q.source.file} onOpen={onBook} />}
       </blockquote>
     </div>
   )
@@ -375,7 +389,7 @@ export function Bank({
                   {t('book.close')}
                 </button>
               </header>
-              <Detail q={open} onBook={() => setReading(true)} />
+              <Detail q={open} kitap={book?.available === true} onBook={() => setReading(true)} />
             </aside>
           )}
         </div>
