@@ -6,6 +6,17 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.7.44] - 2026-10-07
+
+### Changed
+
+- A package that ships no book no longer shows the open-book button or a page number
+  under the source quote; only the source name is shown.
+
+### Fixed
+
+- A long source name wraps inside the source box instead of running off the screen.
+
 ## [0.7.43] - 2026-10-07
 
 ### Changed

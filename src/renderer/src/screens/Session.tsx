@@ -471,15 +471,23 @@ export function Session({
                 <span className="tk-label ql-source-label">{t('session.source')}</span>
                 <p className="ql-source-quote">{solved.source.quote}</p>
                 <span className="tk-hint ql-source-line">
-                  {t('session.sourceFile', { file: solved.source.file })}
-                  <span>
-                    {t('session.sourcePages', {
-                      from: solved.source.pages[0],
-                      to: solved.source.pages[1]
-                    })}
-                  </span>
+                  {book?.available ? (
+                    <>
+                      {t('session.sourceFile', { file: solved.source.file })}
+                      <span>
+                        {t('session.sourcePages', {
+                          from: solved.source.pages[0],
+                          to: solved.source.pages[1]
+                        })}
+                      </span>
+                    </>
+                  ) : (
+                    solved.source.file
+                  )}
                 </span>
-                <BookButton file={solved.source.file} onOpen={() => setReading(q.questionId)} />
+                {book?.available && (
+                  <BookButton file={solved.source.file} onOpen={() => setReading(q.questionId)} />
+                )}
               </blockquote>
             )}
             <div className="ql-grade">
