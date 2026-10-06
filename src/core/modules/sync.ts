@@ -3,7 +3,7 @@ import type { Database } from '@core/db/types'
 import type { CorePorts } from '@core/ports'
 import { emptyCardFields, softReset } from '@core/scheduler/fsrs'
 import type { Question } from '@shared/schema/question'
-import { fingerprint, iterateQuestions, type LoadedModule } from './loader'
+import { fingerprint, iterateQuestions, type LoadedModule, type Tick } from './loader'
 
 export interface SyncReport {
   added: number
@@ -24,7 +24,8 @@ export async function syncModule(
   db: Kysely<Database>,
   ports: CorePorts,
   mod: LoadedModule,
-  now: Date
+  now: Date,
+  tick?: Tick
 ): Promise<SyncReport> {
   const report: SyncReport = { added: 0, updated: 0, reset: 0, orphaned: 0 }
   const iso = now.toISOString()
@@ -37,6 +38,8 @@ export async function syncModule(
     .execute()
   const byQuestion = new Map(existing.map((c) => [c.question_id, c]))
   const seen = new Set<string>()
+  const total = mod.meta.questionCount
+  tick?.(0, total)
   const print = await fingerprint(ports, mod)
 
   await db.transaction().execute(async (trx) => {
@@ -72,6 +75,7 @@ export async function syncModule(
 
     for await (const q of iterateQuestions(ports, mod)) {
       seen.add(q.id)
+      tick?.(seen.size - 1, total)
       const row = byQuestion.get(q.id)
       if (q.deleted) {
         if (row && !row.orphaned) {
@@ -166,6 +170,7 @@ export async function syncModule(
       report.orphaned++
     }
   })
+  tick?.(total, total)
 
   return report
 }

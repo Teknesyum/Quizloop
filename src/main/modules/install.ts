@@ -59,8 +59,7 @@ export async function installFrom(
       if (existsSync(target)) await removeTree(target, () => undefined).catch(() => undefined)
       await copyTree(source, target, work.span('copy', 60, 85), skipBuild)
     }
-    work.at('sync', 85, 100)
-    const r = await syncFolder(db, nodePorts, target, now)
+    const r = await syncFolder(db, nodePorts, target, now, work.span('sync', 85, 100))
     work.finish(true)
     return r
   } catch (e) {

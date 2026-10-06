@@ -104,9 +104,8 @@ export async function openStore(bundled: CorePorts, bundleRoot: string): Promise
       }
       tmp = u.tmp
       if (!u.root) throw new Error('module.json missing in package')
-      work.at('verify', 75, 88)
       const tVerify = performance.now()
-      const { meta } = await checkFolder(ports, u.root)
+      const { meta } = await checkFolder(ports, u.root, work.span('verify', 75, 88))
       const verifyMs = performance.now() - tVerify
       if (!(await mayInstall(db, meta, ask))) {
         work.finish(true)
@@ -114,9 +113,8 @@ export async function openStore(bundled: CorePorts, bundleRoot: string): Promise
       }
       const moved = await Paket.commit({ tmp: u.tmp, root: u.root, id: meta.id })
       tmp = null
-      work.at('sync', 88, 100)
       const tSync = performance.now()
-      const r = await syncFolder(db, ports, moved.path, ports.now())
+      const r = await syncFolder(db, ports, moved.path, ports.now(), work.span('sync', 88, 100))
       const syncMs = performance.now() - tSync
       log('paket', {
         id: meta.id,
