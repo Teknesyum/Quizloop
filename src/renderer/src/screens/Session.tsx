@@ -10,7 +10,7 @@ import { pushBack } from '@renderer/back'
 import { Markdown } from '@renderer/components/Markdown'
 import { Skeleton } from '@renderer/components/Skeleton'
 import { StemMedia } from '@renderer/components/StemMedia'
-import { altFor, markBoxes } from '@renderer/components/media'
+import { altFor, markBoxes, plainText } from '@renderer/components/media'
 import { useTyper } from '@renderer/hooks/useTyper'
 import { t, type Key } from '@renderer/i18n'
 import { KEYS } from '@renderer/keys'
@@ -387,6 +387,16 @@ export function Session({
                   <span>{wrong[c.key]}</span>
                 </p>
               ))}
+            {marks?.some((m) => m.open) && (
+              <ul className="ql-mark-legend">
+                {marks.map((m) => (
+                  <li key={m.key} className={`ql-mark-legend-row ql-mark-legend-${m.state}`}>
+                    <span className="tk-mono ql-mark-legend-key">{m.key}</span>
+                    <span>{plainText(m.md)}</span>
+                  </li>
+                ))}
+              </ul>
+            )}
           </div>
         )}
 

@@ -6,6 +6,13 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.7.42] - 2026-10-06
+
+### Fixed
+
+- Marking questions: after the answer, the picture carries only the letters and the label
+  texts are listed under it, so long labels no longer cover each other on a narrow screen.
+
 ## [0.7.41] - 2026-10-05
 
 ### Added
