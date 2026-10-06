@@ -10,6 +10,8 @@ import com.getcapacitor.Plugin;
 import com.getcapacitor.PluginCall;
 import com.getcapacitor.PluginMethod;
 import com.getcapacitor.annotation.CapacitorPlugin;
+import com.google.android.play.core.appupdate.AppUpdateManagerFactory;
+import com.google.android.play.core.install.model.UpdateAvailability;
 
 @CapacitorPlugin(name = "QuizloopMagaza")
 public class MagazaPlugin extends Plugin {
@@ -33,6 +35,23 @@ public class MagazaPlugin extends Plugin {
         JSObject out = new JSObject();
         out.put("play", PLAY.equals(installer()));
         call.resolve(out);
+    }
+
+    @PluginMethod
+    public void guncel(PluginCall call) {
+        try {
+            AppUpdateManagerFactory.create(getContext())
+                .getAppUpdateInfo()
+                .addOnSuccessListener(info -> {
+                    JSObject out = new JSObject();
+                    out.put("var", info.updateAvailability() == UpdateAvailability.UPDATE_AVAILABLE);
+                    out.put("kod", info.availableVersionCode());
+                    call.resolve(out);
+                })
+                .addOnFailureListener(e -> call.reject("play-unknown"));
+        } catch (Exception e) {
+            call.reject("play-unknown");
+        }
     }
 
     @PluginMethod

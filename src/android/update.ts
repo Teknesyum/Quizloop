@@ -12,6 +12,7 @@ const FIRST_CHECK_MS = 8000
 
 interface MagazaPlugin {
   kaynak(): Promise<{ play: boolean }>
+  guncel(): Promise<{ var: boolean }>
   ac(): Promise<void>
 }
 
@@ -39,22 +40,32 @@ export function createUpdates(current: string): AndroidUpdates {
     .then((k) => k.play)
     .catch(() => false)
 
+  const latest = async (): Promise<{ version: string; url: string } | null> => {
+    const res = await CapacitorHttp.get({
+      url: LATEST,
+      headers: { accept: 'application/vnd.github+json' },
+      connectTimeout: 10000,
+      readTimeout: 10000
+    })
+    if (res.status !== 200) return null
+    const body = res.data as { tag_name?: string; html_url?: string }
+    const tag = body.tag_name ?? ''
+    if (!tag || !newer(tag, current)) return null
+    const url = body.html_url?.startsWith(RELEASES) ? body.html_url : RELEASES
+    return { version: tag.replace(/^v/, ''), url }
+  }
+
   const check = async (quiet = false): Promise<UpdateStatus> => {
     if (!quiet) emit({ state: 'checking' })
     try {
-      const res = await CapacitorHttp.get({
-        url: LATEST,
-        headers: { accept: 'application/vnd.github+json' },
-        connectTimeout: 10000,
-        readTimeout: 10000
-      })
-      if (res.status !== 200) return quiet ? status : emit({ state: 'none' })
-      const body = res.data as { tag_name?: string; html_url?: string }
-      const tag = body.tag_name ?? ''
-      if (tag && newer(tag, current)) {
-        const url = body.html_url?.startsWith(RELEASES) ? body.html_url : RELEASES
-        return emit({ state: 'notice', version: tag.replace(/^v/, ''), url })
+      if (await play) {
+        const store = await Magaza.guncel().catch(() => ({ var: false }))
+        if (!store.var) return quiet ? status : emit({ state: 'none' })
+        const found = await latest().catch(() => null)
+        return emit({ state: 'notice', version: found?.version, url: found?.url })
       }
+      const found = await latest()
+      if (found) return emit({ state: 'notice', ...found })
       return quiet ? status : emit({ state: 'none' })
     } catch (e) {
       return quiet ? status : emit({ state: 'error', error: String(e) })

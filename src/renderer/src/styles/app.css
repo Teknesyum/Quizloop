@@ -29,6 +29,7 @@ body {
 
 .ql-shell {
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
   grid-template-rows: var(--ql-titlebar-h) minmax(0, 1fr);
   height: 100%;
   overflow: clip;
@@ -2411,6 +2412,30 @@ button.ql-mark:not(:disabled):active {
 
   .ql-shell .tk-titlebar__name {
     font-size: var(--tk-fs-4);
+  }
+
+  .ql-shell .ql-update:has(.tk-update) ~ .ql-version {
+    display: none;
+  }
+
+  .ql-shell .tk-titlebar__brand {
+    flex: 0 1 auto;
+    overflow: hidden;
+  }
+
+  .ql-shell .tk-titlebar__version {
+    min-width: 0;
+  }
+
+  .ql-shell .tk-update {
+    min-width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .ql-shell .ql-update {
+    min-width: 0;
+    padding-right: 0;
   }
 
   .ql-shell .tk-titlebar__window,
