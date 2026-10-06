@@ -22,6 +22,7 @@ export interface Opened {
   destroy(): void
   doc: PDFDocumentProxy | null
   ratio: number | null
+  unit: { w: number; h: number } | null
 }
 
 let opened: Opened | null = null
@@ -138,7 +139,8 @@ export function openBook(url: string, path: string | null, whole = false): Opene
       void own.task?.destroy()
     },
     doc: null,
-    ratio: null
+    ratio: null,
+    unit: null
   }
   entry.promise = (whole ? loadWhole(url, own) : load(url, own)).then(async (d) => {
     if (dead) {
@@ -148,7 +150,10 @@ export function openBook(url: string, path: string | null, whole = false): Opene
     entry.doc = d
     const pg = await d.getPage(1)
     const vp = pg.getViewport({ scale: 1 })
-    if (vp.width > 0) entry.ratio = vp.height / vp.width
+    if (vp.width > 0) {
+      entry.ratio = vp.height / vp.width
+      entry.unit = { w: vp.width, h: vp.height }
+    }
     return d
   })
   entry.promise.catch(() => {
@@ -156,6 +161,10 @@ export function openBook(url: string, path: string | null, whole = false): Opene
   })
   opened = entry
   return entry
+}
+
+export function knownUnit(doc: PDFDocumentProxy | null): { w: number; h: number } | null {
+  return doc && opened?.doc === doc ? opened.unit : null
 }
 
 export function idle(): Promise<void> {
