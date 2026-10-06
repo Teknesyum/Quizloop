@@ -51,7 +51,6 @@ function Overlay({ masks, marks, onMark, live }: Layer & { live: boolean }): Rea
             {m.open && (
               <span className={`ql-mark-tag ql-mark-tag-${tagSide(m.box)}`} aria-hidden="true">
                 <span className="tk-mono ql-mark-tag-key">{m.key}</span>
-                <span>{text}</span>
               </span>
             )}
           </>

@@ -1564,14 +1564,11 @@ button.ql-mark:not(:disabled):active {
   display: inline-flex;
   align-items: center;
   gap: var(--tk-sp-1);
-  max-width: var(--tk-sidebar-w);
-  padding: var(--tk-sp-1) var(--tk-sp-2);
+  padding: 0 var(--tk-sp-2);
   font-family: inherit;
   font-size: var(--tk-fs-1);
   line-height: var(--tk-lh-body);
   white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
   color: var(--tk-text);
   background: var(--tk-surface);
   border: var(--tk-border-w) solid var(--tk-border-strong);
@@ -1617,6 +1614,38 @@ button.ql-mark:not(:disabled):active {
   display: flex;
   flex-direction: column;
   gap: var(--tk-sp-2);
+}
+
+.ql-mark-legend {
+  display: flex;
+  flex-direction: column;
+  gap: var(--tk-sp-2);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ql-mark-legend-row {
+  display: flex;
+  align-items: baseline;
+  gap: var(--tk-sp-2);
+  overflow-wrap: anywhere;
+}
+
+.ql-mark-legend-key {
+  color: var(--tk-text-label);
+}
+
+.ql-mark-legend-right {
+  color: var(--tk-success);
+}
+
+.ql-mark-legend-right .ql-mark-legend-key {
+  color: var(--tk-success);
+}
+
+.ql-mark-legend-wrong .ql-mark-legend-key {
+  color: var(--tk-danger-text);
 }
 
 .ql-mark-note {
