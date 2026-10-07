@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react'
 import { CardCover } from '@renderer/components/CardCover'
 import { CardInfo, CardMeter, GoalMeter } from '@renderer/components/CardFacts'
-import { GoalMenu } from '@renderer/components/CardMenu'
+import { CardMenu, GoalMenu, MenuItem } from '@renderer/components/CardMenu'
+import { Confirm } from '@renderer/components/Confirm'
 import { goalToast, saveGoal } from '@renderer/goal'
 import { tinykeys } from 'tinykeys'
 import { goalKey, type ChapterSummary } from '@shared/ipc'
@@ -20,6 +21,9 @@ export function Chapters({ moduleId }: { moduleId: string }): React.JSX.Element 
   const go = useApp((s) => s.go)
   const modules = useApp((s) => s.modules)
   const [rows, setRows] = useState<ChapterSummary[] | null>(null)
+  const [resetting, setResetting] = useState<ChapterSummary | null>(null)
+  const toast = useApp((s) => s.toast)
+  const loadModules = useApp((s) => s.loadModules)
   const mod = modules?.find((m) => m.id === moduleId)
 
   useEffect(() => {
@@ -37,7 +41,7 @@ export function Chapters({ moduleId }: { moduleId: string }): React.JSX.Element 
   const [view, setView] = useView()
 
   useEffect(() => {
-    if (!rows?.length) return
+    if (!rows?.length || resetting) return
     const count = rows.length
     const focus = (i: number): void => {
       const next = (i + count) % count
@@ -65,7 +69,7 @@ export function Chapters({ moduleId }: { moduleId: string }): React.JSX.Element 
         go({ name: 'library' })
       }
     })
-  }, [rows, active, go, moduleId])
+  }, [rows, active, go, moduleId, resetting])
 
   return (
     <section className="ql-screen">
@@ -150,6 +154,9 @@ export function Chapters({ moduleId }: { moduleId: string }): React.JSX.Element 
               <CardMeter total={c.total} retired={c.retired} />
               {c.goal && <GoalMeter done={c.retiredToday} goal={c.goal} />}
               <footer className="ql-card-foot">
+                <CardMenu label={t('library.more')}>
+                  <MenuItem onPick={() => setResetting(c)}>{t('library.reset')}</MenuItem>
+                </CardMenu>
                 <GoalMenu
                   goal={c.goal}
                   open={c.unseen + c.dueToday + c.learning + c.retiredToday}
@@ -166,6 +173,25 @@ export function Chapters({ moduleId }: { moduleId: string }): React.JSX.Element 
             </article>
           ))}
         </div>
+      )}
+
+      {resetting && (
+        <Confirm
+          title={t('library.resetConfirmTitle', {
+            name: resetting.chapter || t('chapters.unsorted')
+          })}
+          text={t('chapters.resetConfirm')}
+          yes={t('library.reset')}
+          danger
+          onNo={() => setResetting(null)}
+          onYes={async () => {
+            await window.quizloop.module.reset(moduleId, resetting.chapter)
+            setResetting(null)
+            setRows(await window.quizloop.module.chapters(moduleId))
+            await loadModules()
+            toast('success', t('chapters.resetDone'))
+          }}
+        />
       )}
     </section>
   )

@@ -56,6 +56,8 @@
   "chapters.subtitle": "Bölüm seç ya da tüm konulardan karışık çalış.",
   "chapters.all": "Tüm Konulardan Karışık",
   "chapters.unsorted": "Bölümsüz",
+  "chapters.resetConfirm": "Yalnız bu bölümün puanları ve tekrar planı sıfırlanır; öbür bölümler aynı kalır.",
+  "chapters.resetDone": "Bölüm Sıfırlandı",
   "library.more": "Diğer İşlemler",
   "library.remove": "Modülü Kaldır",
   "library.reset": "Sıfırla",

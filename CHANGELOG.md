@@ -6,6 +6,18 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.7.49] - 2026-10-07
+
+### Added
+
+- A chapter can be reset on its own from its card menu; the other chapters of the
+  module keep their scores and review plan.
+
+### Fixed
+
+- The "you are up to date" message shown after tapping the version now has an outline
+  and a solid background instead of floating as bare text.
+
 ## [0.7.48] - 2026-10-07
 
 ### Fixed

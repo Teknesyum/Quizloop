@@ -329,7 +329,7 @@ export interface QuizloopApi {
     onConfirm(cb: (c: InstallConfirm) => void): () => void
     answer(ask: number, yes: boolean): void
     remove(moduleId: string): Promise<void>
-    reset(moduleId: string): Promise<void>
+    reset(moduleId: string, chapter?: string): Promise<void>
     chapters(moduleId: string): Promise<ChapterSummary[]>
     questions(moduleId: string): Promise<BankRow[]>
     question(moduleId: string, questionId: string): Promise<BankQuestion | null>
