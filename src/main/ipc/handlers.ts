@@ -142,8 +142,8 @@ export function registerHandlers(ctx: Context): {
     await removeModuleTree(await core.module.forget(z.string().parse(id)))
   })
 
-  ipcMain.handle(CH.moduleReset, async (_e, id: unknown) => {
-    await core.module.reset(z.string().parse(id))
+  ipcMain.handle(CH.moduleReset, async (_e, id: unknown, chapter: unknown) => {
+    await core.module.reset(z.string().parse(id), z.string().optional().parse(chapter))
   })
 
   ipcMain.handle(CH.moduleChapters, (_e, moduleId: unknown): Promise<ChapterSummary[]> =>

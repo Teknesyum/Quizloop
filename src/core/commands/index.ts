@@ -41,7 +41,7 @@ export interface Core {
     questions(moduleId: string): Promise<BankRow[]>
     question(moduleId: string, questionId: string): Promise<BankQuestion | null>
     forget(moduleId: string): Promise<string | null>
-    reset(moduleId: string): Promise<void>
+    reset(moduleId: string, chapter?: string): Promise<void>
   }
   flags: {
     set(moduleId: string, questionId: string, flagged: boolean, note?: string): Promise<void>
@@ -97,7 +97,7 @@ export function createCore(deps: CoreDeps): Core {
         await library.reload()
         return path
       },
-      reset: (moduleId: string) => resetModule(db, moduleId)
+      reset: (moduleId: string, chapter?: string) => resetModule(db, moduleId, chapter)
     },
     flags: {
       set: (moduleId: string, questionId: string, flagged: boolean, note?: string) =>

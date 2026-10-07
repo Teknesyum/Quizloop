@@ -10,7 +10,7 @@ import { ModuleMeta } from '@shared/schema/module'
 import { hashText, type LoadedModule } from './loader'
 import { syncModule } from './sync'
 import type { CorePorts } from '@core/ports'
-import { resyncFolders } from '@core/commands/modules'
+import { resetModule, resyncFolders } from '@core/commands/modules'
 
 const NOW = new Date('2026-09-08T09:00:00.000Z')
 const SAMPLE = resolve('src/core/testdata/ornek')
@@ -66,6 +66,47 @@ async function bigModule(copies: number): Promise<{ ports: CorePorts; mod: Loade
   }
   return { ports, mod: { meta, root: ROOT } }
 }
+
+describe('resetModule', () => {
+  it('resets one chapter and leaves the others alone', async () => {
+    const { ports, mod } = await bigModule(2)
+    await syncModule(db, ports, mod, NOW)
+    const cards = await db.selectFrom('card').select(['id', 'question_id']).execute()
+    const half = Math.floor(cards.length / 2)
+    const inA = cards.slice(0, half)
+    const inB = cards.slice(half)
+    const ids = (list: typeof cards): number[] => list.map((c) => c.id)
+    await db
+      .updateTable('card')
+      .set({ chapter: 'A', reps: 3 })
+      .where('id', 'in', ids(inA))
+      .execute()
+    await db
+      .updateTable('card')
+      .set({ chapter: 'B', reps: 3 })
+      .where('id', 'in', ids(inB))
+      .execute()
+    const marked = [inA[0], inB[0]].filter((c) => c !== undefined)
+    for (const c of marked)
+      await db
+        .insertInto('flag')
+        .values({ module_id: 'big', question_id: c.question_id, ts: NOW.toISOString(), note: null })
+        .execute()
+
+    await resetModule(db, 'big', 'A')
+
+    const after = await db.selectFrom('card').select(['chapter', 'reps']).execute()
+    expect(after.filter((c) => c.chapter === 'A').every((c) => c.reps === 0)).toBe(true)
+    expect(after.filter((c) => c.chapter === 'B').every((c) => c.reps === 3)).toBe(true)
+    const flags = await db.selectFrom('flag').select('question_id').execute()
+    expect(flags.map((f) => f.question_id)).toEqual([marked[1]?.question_id])
+
+    await resetModule(db, 'big')
+    const all = await db.selectFrom('card').select('reps').execute()
+    expect(all.every((c) => c.reps === 0)).toBe(true)
+    expect(await db.selectFrom('flag').select('id').execute()).toEqual([])
+  })
+})
 
 describe('syncModule', () => {
   it('adds every card when the inserts are batched', async () => {

@@ -60,7 +60,7 @@ const api: QuizloopApi = {
     },
     answer: (ask: number, yes: boolean) => ipcRenderer.send(CH.moduleAnswer, ask, yes),
     remove: (id: string) => ipcRenderer.invoke(CH.moduleRemove, id),
-    reset: (id: string) => ipcRenderer.invoke(CH.moduleReset, id),
+    reset: (id: string, chapter?: string) => ipcRenderer.invoke(CH.moduleReset, id, chapter),
     chapters: (id: string) => ipcRenderer.invoke(CH.moduleChapters, id),
     questions: (id: string) => ipcRenderer.invoke(CH.moduleQuestions, id),
     question: (id: string, qid: string) => ipcRenderer.invoke(CH.moduleQuestion, id, qid)

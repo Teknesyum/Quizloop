@@ -1005,6 +1005,15 @@ kbd {
   z-index: 3;
 }
 
+.tk-toast-stack > .tk-toast:not(.tk-panel) {
+  border-style: solid;
+  border-width: var(--tk-border-w);
+  border-radius: var(--tk-r);
+  background: var(--tk-surface);
+  box-shadow: var(--tk-shadow-panel);
+  font-weight: var(--tk-fw-strong);
+}
+
 .ql-shell:has(.ql-keys) .tk-toast-stack {
   bottom: calc(var(--ql-keys-h) + var(--tk-sp-4));
 }

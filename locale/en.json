@@ -56,6 +56,8 @@
   "chapters.subtitle": "Pick a chapter, or study a mix of all topics.",
   "chapters.all": "Mixed From All Topics",
   "chapters.unsorted": "Unsorted",
+  "chapters.resetConfirm": "Only this chapter's scores and review plan are reset; the other chapters stay as they are.",
+  "chapters.resetDone": "Chapter Reset",
   "library.more": "More Actions",
   "library.remove": "Remove Module",
   "library.reset": "Reset",

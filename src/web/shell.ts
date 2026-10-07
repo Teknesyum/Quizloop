@@ -161,7 +161,7 @@ export async function createShell(): Promise<QuizloopApi> {
       remove: async (id) => {
         await store.remove(await c.module.forget(id))
       },
-      reset: (id) => c.module.reset(id),
+      reset: (id, chapter) => c.module.reset(id, chapter),
       chapters: (id) => c.module.chapters(id),
       questions: (id) => c.module.questions(id),
       question: (id, qid) => c.module.question(id, qid)
