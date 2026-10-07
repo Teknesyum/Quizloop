@@ -1,4 +1,5 @@
 import { useEffect, useId, useRef } from 'react'
+import { useLayer } from '@renderer/hooks/useLayer'
 import { t } from '@renderer/i18n'
 
 interface Props {
@@ -11,6 +12,8 @@ export function Welcome({ onClose }: Props): React.JSX.Element {
   const id = useId()
   const phone = window.quizloop.capabilities.packageImport
   const ok = useRef<HTMLButtonElement>(null)
+  const panel = useRef<HTMLDivElement>(null)
+  useLayer(panel, onClose)
   useEffect(() => ok.current?.focus({ preventScroll: true }), [])
   useEffect(() => {
     const h = (e: KeyboardEvent): void => {
@@ -22,6 +25,7 @@ export function Welcome({ onClose }: Props): React.JSX.Element {
   return (
     <div className="tk-modal-scrim" data-tk-modal="confirm" role="presentation">
       <div
+        ref={panel}
         className="tk-panel tk-modal ql-welcome ql-transition-in"
         role="dialog"
         aria-modal="true"

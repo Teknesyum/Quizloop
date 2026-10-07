@@ -1,4 +1,4 @@
-import type { Settings } from '@shared/ipc'
+import type { GoalSetting, ModuleGoal, Settings } from '@shared/ipc'
 import { z } from 'zod'
 
 export const DEFAULT_SETTINGS: Settings = {
@@ -30,7 +30,11 @@ export const SettingsPatch = z
     samplesUsed: z.boolean(),
     goals: z.record(
       z.string(),
-      z.object({ days: z.number().int().min(1).max(3650), until: z.string() })
+      z.object({
+        days: z.number().int().min(1).max(3650),
+        until: z.string(),
+        perDay: z.number().int().min(1).max(5000).optional()
+      })
     ),
     goalNotify: z.boolean()
   })
@@ -39,18 +43,29 @@ export const SettingsPatch = z
 const DAY_MS = 86_400_000
 
 export function dailyGoal(
-  goal: { days: number; until: string },
+  goal: GoalSetting,
   open: number,
   retiredToday: number,
   start: Date
-): { days: number; daily: number; daysLeft: number; until: string } {
+): ModuleGoal {
+  if (goal.perDay) {
+    const daysLeft = Math.max(1, Math.ceil(open / goal.perDay))
+    return {
+      days: daysLeft,
+      daily: Math.min(goal.perDay, open + retiredToday),
+      daysLeft,
+      until: new Date(start.getTime() + daysLeft * DAY_MS).toISOString(),
+      perDay: true
+    }
+  }
   const left = Math.floor((new Date(goal.until).getTime() - start.getTime()) / DAY_MS)
   const daysLeft = Number.isFinite(left) ? Math.max(1, left) : 1
   return {
     days: goal.days,
     daily: Math.ceil((open + retiredToday) / daysLeft),
     daysLeft,
-    until: goal.until
+    until: goal.until,
+    perDay: false
   }
 }
 

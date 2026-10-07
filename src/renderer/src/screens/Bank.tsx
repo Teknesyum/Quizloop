@@ -10,6 +10,7 @@ import { Skeleton } from '@renderer/components/Skeleton'
 import { Solution } from '@renderer/components/Solution'
 import { StemMedia } from '@renderer/components/StemMedia'
 import { markBoxes } from '@renderer/components/media'
+import { pushBack } from '@renderer/back'
 import { kaynakGoster } from '@renderer/kaynak'
 import { t } from '@renderer/i18n'
 import { useApp } from '@renderer/store/app'
@@ -99,6 +100,7 @@ export function Bank({
   const [query, setQuery] = useState('')
   const [active, setActive] = useState(0)
   const [open, setOpen] = useState<BankQuestion | null>(null)
+  const [openChapter, setOpenChapter] = useState('')
   const [reading, setReading] = useState(false)
   const [book, setBook] = useState<SourceBook | null>(null)
   const listRef = useRef<HTMLDivElement | null>(null)
@@ -127,13 +129,29 @@ export function Bank({
 
   useEffect(() => {
     let dead = false
-    window.quizloop.module.questions(moduleId).then((r) => {
-      if (!dead) setRows(r)
-    })
+    window.quizloop.module
+      .questions(moduleId)
+      .then((r) => {
+        if (!dead) setRows(r)
+      })
+      .catch((e: unknown) => {
+        if (dead) return
+        setRows([])
+        toast('danger', `${t('common.error')}: ${String(e)}`)
+      })
     return () => {
       dead = true
     }
   }, [moduleId])
+
+  const shut = open !== null && !reading
+  useEffect(() => {
+    if (!shut) return
+    return pushBack(() => {
+      setOpen(null)
+      return true
+    })
+  }, [shut])
 
   const visible = useMemo(() => {
     if (!rows) return []
@@ -182,19 +200,27 @@ export function Bank({
     setActive(i)
   }, [])
 
-  const current = visible[active]
-
   const show = useCallback(async () => {
     const row = shown.current[at.current]
     if (!row) return
-    setOpen(await window.quizloop.module.question(moduleId, row.questionId))
-  }, [moduleId])
+    try {
+      setOpen(await window.quizloop.module.question(moduleId, row.questionId))
+      setOpenChapter(row.chapter ?? t('chapters.unsorted'))
+    } catch (e) {
+      toast('danger', `${t('common.error')}: ${String(e)}`)
+    }
+  }, [moduleId, toast])
 
   const toggleFlag = useCallback(async () => {
     const row = shown.current[at.current]
     if (!row) return
     const next = !row.flagged
-    await window.quizloop.flags.set(moduleId, row.questionId, next)
+    try {
+      await window.quizloop.flags.set(moduleId, row.questionId, next)
+    } catch (e) {
+      toast('danger', `${t('common.error')}: ${String(e)}`)
+      return
+    }
     setRows(
       (rs) =>
         rs?.map((r) =>
@@ -333,7 +359,7 @@ export function Bank({
             role="listbox"
             tabIndex={0}
             aria-label={t('bank.title')}
-            aria-activedescendant={current ? `ql-bank-${active}` : undefined}
+            aria-activedescendant={visible[active] ? `ql-bank-${active}` : undefined}
           >
             {visible.length === 0 && (
               <p className="tk-hint ql-bank-empty">
@@ -361,10 +387,13 @@ export function Bank({
                         '--ql-row': `${ROW_H}px`
                       } as React.CSSProperties
                     }
-                    onClick={() => pick(item.index)}
+                    onClick={() => {
+                      pick(item.index)
+                      if (window.matchMedia('(pointer: coarse)').matches) void show()
+                    }}
                     onDoubleClick={() => {
                       pick(item.index)
-                      void window.quizloop.module.question(moduleId, r.questionId).then(setOpen)
+                      void show()
                     }}
                   >
                     <span className="ql-bank-stem">{r.stem}</span>
@@ -383,7 +412,7 @@ export function Bank({
           {open && (
             <aside className="tk-panel ql-bank-detail" aria-label={t('bank.detail')}>
               <header className="ql-bank-detail-head">
-                <span className="tk-label">{current?.chapter ?? ''}</span>
+                <span className="tk-label">{openChapter}</span>
                 <button
                   type="button"
                   className="tk-btn tk-btn-ghost ql-btn-sm"

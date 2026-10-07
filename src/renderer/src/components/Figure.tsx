@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
 import type { ChoiceKey } from '@shared/schema/question'
+import { pushBack } from '@renderer/back'
 import { t } from '@renderer/i18n'
 import {
   boxVars,
@@ -193,6 +194,15 @@ function Lightbox({
     v.addEventListener('wheel', h, { passive: false })
     return () => v.removeEventListener('wheel', h)
   }, [zoom])
+
+  useEffect(
+    () =>
+      pushBack(() => {
+        onClose()
+        return true
+      }),
+    [onClose]
+  )
 
   const down = (e: React.PointerEvent<HTMLDivElement>): void => {
     if (scale === 1 || e.button !== 0) return

@@ -1,14 +1,15 @@
 import { useEffect, useState } from 'react'
 import { CardCover } from '@renderer/components/CardCover'
 import { CardInfo, CardMeter, GoalMeter } from '@renderer/components/CardFacts'
-import { CardMenu, GoalMenu, MenuItem } from '@renderer/components/CardMenu'
+import { CardMenu, MenuItem } from '@renderer/components/CardMenu'
 import { Confirm } from '@renderer/components/Confirm'
-import { goalToast, saveGoal } from '@renderer/goal'
+import { GoalDialog } from '@renderer/components/GoalPick'
+import { goalLabel, goalToast, saveGoal, type GoalSpec } from '@renderer/goal'
 import { tinykeys } from 'tinykeys'
 import { goalKey, type ChapterSummary } from '@shared/ipc'
 import { Skeleton } from '@renderer/components/Skeleton'
 import { ViewToggle } from '@renderer/components/ViewToggle'
-import { t } from '@renderer/i18n'
+import { lang, t } from '@renderer/i18n'
 import { useApp } from '@renderer/store/app'
 import { useView } from '@renderer/view'
 
@@ -22,16 +23,24 @@ export function Chapters({ moduleId }: { moduleId: string }): React.JSX.Element 
   const modules = useApp((s) => s.modules)
   const [rows, setRows] = useState<ChapterSummary[] | null>(null)
   const [resetting, setResetting] = useState<ChapterSummary | null>(null)
+  const [goaling, setGoaling] = useState<ChapterSummary | null>(null)
   const toast = useApp((s) => s.toast)
   const loadModules = useApp((s) => s.loadModules)
   const mod = modules?.find((m) => m.id === moduleId)
 
   useEffect(() => {
-    window.quizloop.module.chapters(moduleId).then(setRows)
+    window.quizloop.module
+      .chapters(moduleId)
+      .then(setRows)
+      .catch((e: unknown) => {
+        setRows([])
+        useApp.getState().toast('danger', `${t('common.error')}: ${String(e)}`)
+      })
   }, [moduleId])
 
-  const pick = async (chapter: string, days: number | null): Promise<void> => {
-    await saveGoal(goalKey(moduleId, chapter), days)
+  const pick = async (chapter: string, spec: GoalSpec | null): Promise<void> => {
+    await saveGoal(goalKey(moduleId, chapter), spec)
+    setGoaling(null)
     const next = await window.quizloop.module.chapters(moduleId)
     setRows(next)
     goalToast(next.find((x) => x.chapter === chapter)?.goal?.daily)
@@ -41,7 +50,7 @@ export function Chapters({ moduleId }: { moduleId: string }): React.JSX.Element 
   const [view, setView] = useView()
 
   useEffect(() => {
-    if (!rows?.length || resetting) return
+    if (!rows?.length || resetting || goaling) return
     const count = rows.length
     const focus = (i: number): void => {
       const next = (i + count) % count
@@ -69,7 +78,7 @@ export function Chapters({ moduleId }: { moduleId: string }): React.JSX.Element 
         go({ name: 'library' })
       }
     })
-  }, [rows, active, go, moduleId, resetting])
+  }, [rows, active, go, moduleId, resetting, goaling])
 
   return (
     <section className="ql-screen">
@@ -105,9 +114,9 @@ export function Chapters({ moduleId }: { moduleId: string }): React.JSX.Element 
         <div className="tk-panel ql-chapter-goal ql-transition-in">
           <GoalMeter done={mod.retiredToday} goal={mod.goal} />
           <p className="tk-hint ql-goal-line">
-            {t('goals.left', {
+            {t(mod.goal.perDay ? 'goals.leftCount' : 'goals.left', {
               days: mod.goal.daysLeft,
-              date: new Date(mod.goal.until).toLocaleDateString(),
+              date: new Date(mod.goal.until).toLocaleDateString(lang),
               count: mod.unseen + mod.dueToday + mod.learning
             })}
           </p>
@@ -157,11 +166,14 @@ export function Chapters({ moduleId }: { moduleId: string }): React.JSX.Element 
                 <CardMenu label={t('library.more')}>
                   <MenuItem onPick={() => setResetting(c)}>{t('library.reset')}</MenuItem>
                 </CardMenu>
-                <GoalMenu
-                  goal={c.goal}
-                  open={c.unseen + c.dueToday + c.learning + c.retiredToday}
-                  onPick={(d) => void pick(c.chapter, d)}
-                />
+                <button
+                  type="button"
+                  className="tk-btn tk-btn-ghost ql-btn-sm"
+                  title={t('library.goalHelp')}
+                  onClick={() => setGoaling(c)}
+                >
+                  {goalLabel(c)}
+                </button>
                 <button
                   type="button"
                   className="tk-btn tk-btn-primary ql-btn-sm"
@@ -173,6 +185,16 @@ export function Chapters({ moduleId }: { moduleId: string }): React.JSX.Element 
             </article>
           ))}
         </div>
+      )}
+
+      {goaling && (
+        <GoalDialog
+          name={goaling.chapter || t('chapters.unsorted')}
+          goal={goaling.goal}
+          open={goaling.unseen + goaling.dueToday + goaling.learning + goaling.retiredToday}
+          onClose={() => setGoaling(null)}
+          onPick={(spec) => void pick(goaling.chapter, spec)}
+        />
       )}
 
       {resetting && (

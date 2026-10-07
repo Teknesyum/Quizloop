@@ -1150,34 +1150,6 @@ kbd {
   color: var(--tk-renk-1);
 }
 
-.ql-bars {
-  list-style: none;
-  display: flex;
-  align-items: flex-end;
-  gap: var(--tk-sp-1);
-  height: calc(var(--tk-sp-5) * 5);
-  margin: var(--tk-sp-4) 0 0;
-  padding: 0;
-}
-
-.ql-bar {
-  flex: 1 1 0;
-  display: flex;
-  align-items: flex-end;
-  height: 100%;
-}
-
-.ql-bar-fill {
-  width: 100%;
-  height: var(--ql-h);
-  min-height: var(--tk-border-w);
-  border-radius: var(--tk-r);
-  background: var(--tk-renk-3);
-  transform-origin: bottom;
-  animation: ql-grow var(--tk-t-slow) var(--tk-e-out) both;
-  animation-delay: calc(var(--ql-i) * var(--tk-stagger));
-}
-
 /* --- settings --- */
 
 .ql-settings {
@@ -1340,12 +1312,6 @@ kbd {
 .ql-book-sheet {
   position: relative;
   box-shadow: var(--tk-shadow-panel);
-}
-
-.ql-book-canvas {
-  display: block;
-  width: 100%;
-  height: auto;
 }
 
 .ql-book-folio {
@@ -1813,17 +1779,6 @@ button.ql-mark:not(:disabled):active {
   }
 }
 
-@keyframes ql-grow {
-  from {
-    opacity: 0;
-    transform: scaleY(0);
-  }
-  to {
-    opacity: 1;
-    transform: scaleY(1);
-  }
-}
-
 @keyframes ql-bump {
   from {
     opacity: 0.4;
@@ -2204,6 +2159,52 @@ button.ql-mark:not(:disabled):active {
   justify-content: flex-end;
 }
 
+.ql-goal-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--tk-sp-3);
+  min-width: 0;
+}
+
+.ql-goal-custom {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--tk-sp-2);
+  margin: 0;
+}
+
+.ql-goal-custom > .tk-label,
+.ql-goal-custom > .ql-goal-custom-hint {
+  flex: 0 0 100%;
+  margin: 0;
+}
+
+.ql-goal-custom > .tk-input {
+  flex: 0 1 calc(var(--tk-sp-5) * 4);
+  width: auto;
+  min-width: 0;
+}
+
+.ql-goal-clear {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.ql-goal-dialog {
+  display: flex;
+  flex-direction: column;
+  gap: var(--tk-sp-3);
+}
+
+.ql-goal-dialog > p {
+  margin: 0;
+}
+
+.ql-goal-dialog .ql-goal-pick {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
 /* --- question bank --- */
 
 .ql-bank-tools,
@@ -2375,14 +2376,17 @@ button.ql-mark:not(:disabled):active {
   background: var(--ql-tint-success);
 }
 
-.ql-btn-xs {
-  padding: var(--tk-sp-1) var(--tk-sp-2);
-  font-size: var(--tk-fs-1);
-}
-
 /* --- phone --- */
 
 @media (max-width: 640px) {
+  .ql-bank-split {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .ql-bank-split > .ql-bank-list {
+    display: none;
+  }
+
   .ql-goal {
     gap: var(--tk-sp-3);
   }

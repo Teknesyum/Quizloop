@@ -27,12 +27,16 @@ export interface ModuleGoal {
   daily: number
   daysLeft: number
   until: string
+  perDay: boolean
 }
 
 export interface GoalSetting {
   days: number
   until: string
+  perDay?: number
 }
+
+export const SAMPLE_IDS: readonly string[] = ['genel-kultur', 'quizloop-rehberi']
 
 export const GOAL_DAYS = [7, 21, 30, 90, 365, 1095] as const
 

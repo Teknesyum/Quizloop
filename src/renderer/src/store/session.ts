@@ -1,5 +1,6 @@
 import { flushSync } from 'react-dom'
 import { create } from 'zustand'
+import { useApp } from './app'
 import type {
   AnswerResult,
   GradeResult,
@@ -66,6 +67,20 @@ function messageOf(e: unknown): string {
   return raw.replace(/^Error invoking remote method '[^']*':\s*/, '')
 }
 
+let busy = false
+
+async function once(job: () => Promise<void>): Promise<void> {
+  if (busy) return
+  busy = true
+  try {
+    await job()
+  } catch (e) {
+    useApp.getState().toast('danger', messageOf(e))
+  } finally {
+    busy = false
+  }
+}
+
 export const useSession = create<SessionState>((set, get) => ({
   sessionId: null,
   moduleId: null,
@@ -88,78 +103,82 @@ export const useSession = create<SessionState>((set, get) => ({
       set({ state: { phase: 'failed', message: messageOf(e) } })
     }
   },
-  known: async () => {
-    const { state, sessionId } = get()
-    if (state.phase !== 'stem' || !sessionId) return
-    await window.quizloop.session.known(sessionId)
-    const r = await window.quizloop.session.reveal(sessionId)
-    if (r) {
-      set({ state: { phase: 'solved', q: state.q, known: true, wrong: {}, result: r } })
-      return
-    }
-    set({ state: { phase: 'choices', q: state.q, known: true, wrong: {} } })
-  },
-  reveal: async () => {
-    const { state, sessionId } = get()
-    if (state.phase !== 'stem' || !sessionId) return
-    const r = await window.quizloop.session.reveal(sessionId)
-    if (r) {
-      set({ state: { phase: 'solved', q: state.q, known: state.known, wrong: {}, result: r } })
-      return
-    }
-    set({ state: { phase: 'choices', q: state.q, known: state.known, wrong: {} } })
-  },
-  pick: async (key) => {
-    const { state, sessionId } = get()
-    if (!sessionId) return
-    if (state.phase !== 'choices') return
-    if (state.phase === 'choices' && state.wrong[key]) return
-    const wrong = state.phase === 'choices' ? state.wrong : {}
-    const r = await window.quizloop.session.answer(sessionId, key)
-    if (r.correct) {
-      set({
-        state: {
-          phase: 'solved',
-          q: state.q,
-          known: state.known && r.wrongPicks === 0,
-          wrong,
-          result: r
-        }
-      })
-    } else {
-      set({
-        state: {
-          phase: 'choices',
-          q: state.q,
-          known: false,
-          wrong: { ...wrong, [key]: r.explanation ?? '' },
-          last: key
-        }
-      })
-    }
-  },
-  grade: async (self) => {
-    const { state, sessionId, shownAt } = get()
-    if (state.phase !== 'solved' || !sessionId) return
-    const g = await window.quizloop.session.grade(sessionId, self, performance.now() - shownAt)
-    if (g.next) {
-      const next = g.next
-      swap(() =>
-        set((s) => ({
-          score: s.score + g.scoreDelta,
-          state: show(next),
-          shownAt: performance.now(),
-          flagged: false
-        }))
-      )
-      return
-    }
-    set((s) => ({
-      score: s.score + g.scoreDelta,
-      state: { phase: 'graded', q: state.q, grade: g },
-      flagged: false
-    }))
-  },
+  known: () =>
+    once(async () => {
+      const { state, sessionId } = get()
+      if (state.phase !== 'stem' || !sessionId) return
+      await window.quizloop.session.known(sessionId)
+      const r = await window.quizloop.session.reveal(sessionId)
+      if (r) {
+        set({ state: { phase: 'solved', q: state.q, known: true, wrong: {}, result: r } })
+        return
+      }
+      set({ state: { phase: 'choices', q: state.q, known: true, wrong: {} } })
+    }),
+  reveal: () =>
+    once(async () => {
+      const { state, sessionId } = get()
+      if (state.phase !== 'stem' || !sessionId) return
+      const r = await window.quizloop.session.reveal(sessionId)
+      if (r) {
+        set({ state: { phase: 'solved', q: state.q, known: state.known, wrong: {}, result: r } })
+        return
+      }
+      set({ state: { phase: 'choices', q: state.q, known: state.known, wrong: {} } })
+    }),
+  pick: (key) =>
+    once(async () => {
+      const { state, sessionId } = get()
+      if (!sessionId) return
+      if (state.phase !== 'choices') return
+      if (state.phase === 'choices' && state.wrong[key]) return
+      const wrong = state.phase === 'choices' ? state.wrong : {}
+      const r = await window.quizloop.session.answer(sessionId, key)
+      if (r.correct) {
+        set({
+          state: {
+            phase: 'solved',
+            q: state.q,
+            known: state.known && r.wrongPicks === 0,
+            wrong,
+            result: r
+          }
+        })
+      } else {
+        set({
+          state: {
+            phase: 'choices',
+            q: state.q,
+            known: false,
+            wrong: { ...wrong, [key]: r.explanation ?? '' },
+            last: key
+          }
+        })
+      }
+    }),
+  grade: (self) =>
+    once(async () => {
+      const { state, sessionId, shownAt } = get()
+      if (state.phase !== 'solved' || !sessionId) return
+      const g = await window.quizloop.session.grade(sessionId, self, performance.now() - shownAt)
+      if (g.next) {
+        const next = g.next
+        swap(() =>
+          set((s) => ({
+            score: s.score + g.scoreDelta,
+            state: show(next),
+            shownAt: performance.now(),
+            flagged: false
+          }))
+        )
+        return
+      }
+      set((s) => ({
+        score: s.score + g.scoreDelta,
+        state: { phase: 'graded', q: state.q, grade: g },
+        flagged: false
+      }))
+    }),
   next: () => {
     const { state } = get()
     if (state.phase !== 'graded') return
@@ -171,17 +190,23 @@ export const useSession = create<SessionState>((set, get) => ({
     swap(() => set({ state: show(next), shownAt: performance.now() }))
   },
   flag: async () => {
-    const { sessionId, state } = get()
-    if (!sessionId || !('q' in state)) return
-    await window.quizloop.session.flag(sessionId)
+    const { sessionId, state, flagged } = get()
+    if (flagged || !sessionId || !('q' in state)) return
     set({ flagged: true })
+    try {
+      await window.quizloop.session.flag(sessionId)
+    } catch (e) {
+      set({ flagged: false })
+      throw e
+    }
   },
-  end: async () => {
-    const { sessionId } = get()
-    if (!sessionId) return
-    const summary = await window.quizloop.session.end(sessionId)
-    set({ sessionId: null, state: { phase: 'summary', summary } })
-  },
+  end: () =>
+    once(async () => {
+      const { sessionId } = get()
+      if (!sessionId) return
+      const summary = await window.quizloop.session.end(sessionId)
+      set({ sessionId: null, state: { phase: 'summary', summary } })
+    }),
   reset: () =>
     set({
       sessionId: null,

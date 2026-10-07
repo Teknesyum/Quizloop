@@ -6,6 +6,29 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.7.50] - 2026-10-07
+
+### Added
+
+- A goal can now be a number of questions a day as well as a finish date, and the
+  span takes any length in days, weeks or months.
+- "Remove Sample Modules" replaces the install button while the samples are installed.
+
+### Changed
+
+- The goal button opens a dialog in place instead of jumping to the Goals tab.
+- Installing the sample modules asks for confirmation first.
+- Number fields in Settings save when you leave the field, so a value such as 20 can be typed.
+- On a phone the question bank opens a question with one tap and shows it full width.
+
+### Fixed
+
+- Enter no longer confirms a dialog while Cancel is focused, and a confirmed action cannot run twice.
+- The Android back button closes an open dialog, picture or bank question before leaving the screen.
+- Tab stays inside an open dialog.
+- A fast double press in a session no longer sends an answer, grade or flag twice.
+- Dates follow the app language.
+
 ## [0.7.49] - 2026-10-07
 
 ### Added
