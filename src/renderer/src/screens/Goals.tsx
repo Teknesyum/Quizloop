@@ -3,7 +3,8 @@ import type { ModuleSummary } from '@shared/ipc'
 import { CardCover } from '@renderer/components/CardCover'
 import { GoalPick } from '@renderer/components/GoalPick'
 import { Skeleton } from '@renderer/components/Skeleton'
-import { t } from '@renderer/i18n'
+import { lang, t } from '@renderer/i18n'
+import { goalToast, saveGoal } from '@renderer/goal'
 import { askNotify, canNotify, forget, remind } from '@renderer/remind'
 import { useApp } from '@renderer/store/app'
 
@@ -54,9 +55,9 @@ function GoalRow({ m, index }: { m: ModuleSummary; index: number }): React.JSX.E
               <span style={{ width: share(m.retiredToday, g.daily) }} />
             </div>
             <p className="tk-hint ql-goal-line">
-              {t('goals.left', {
+              {t(g.perDay ? 'goals.leftCount' : 'goals.left', {
                 days: g.daysLeft,
-                date: new Date(g.until).toLocaleDateString(),
+                date: new Date(g.until).toLocaleDateString(lang),
                 count: left
               })}
             </p>
@@ -85,7 +86,16 @@ function GoalRow({ m, index }: { m: ModuleSummary; index: number }): React.JSX.E
             <span style={{ width: share(m.retired, m.questionCount) }} />
           </div>
         </div>
-        <GoalPick m={m} />
+        <GoalPick
+          key={g ? (g.perDay ? 'count' : 'span') : 'none'}
+          goal={g}
+          open={left + m.retiredToday}
+          onPick={async (spec) => {
+            await saveGoal(m.id, spec)
+            await useApp.getState().loadModules()
+            goalToast(useApp.getState().modules?.find((x) => x.id === m.id)?.goal?.daily)
+          }}
+        />
         <footer className="ql-card-foot ql-goal-foot">
           <div className="ql-card-actions">
             <button

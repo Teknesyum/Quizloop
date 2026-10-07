@@ -1,13 +1,14 @@
 import { useEffect, useState } from 'react'
 import { tinykeys } from 'tinykeys'
-import type { InstallResult, ModuleSummary } from '@shared/ipc'
+import { SAMPLE_IDS, type InstallResult, type ModuleSummary } from '@shared/ipc'
 import { CardCover } from '@renderer/components/CardCover'
 import { CardInfo, CardMeter } from '@renderer/components/CardFacts'
 import { CardMenu, MenuItem } from '@renderer/components/CardMenu'
 import { Confirm } from '@renderer/components/Confirm'
+import { GoalDialog } from '@renderer/components/GoalPick'
 import { Skeleton } from '@renderer/components/Skeleton'
 import { ViewToggle } from '@renderer/components/ViewToggle'
-import { goalLabel } from '@renderer/goal'
+import { dropGoals, goalLabel, goalToast, saveGoal } from '@renderer/goal'
 import { installedText, t, title } from '@renderer/i18n'
 import { useApp } from '@renderer/store/app'
 import { useView } from '@renderer/view'
@@ -18,7 +19,8 @@ function ModuleCard({
   active,
   onFocus,
   onRemove,
-  onReset
+  onReset,
+  onGoal
 }: {
   m: ModuleSummary
   index: number
@@ -26,6 +28,7 @@ function ModuleCard({
   onFocus(): void
   onRemove(): void
   onReset(): void
+  onGoal(): void
 }): React.JSX.Element {
   const go = useApp((s) => s.go)
   const percent = m.questionCount ? Math.round((m.retired / m.questionCount) * 100) : 0
@@ -70,7 +73,7 @@ function ModuleCard({
           type="button"
           className="tk-btn tk-btn-ghost ql-btn-sm"
           title={t('library.goalHelp')}
-          onClick={() => useApp.getState().go({ name: 'goals' })}
+          onClick={onGoal}
         >
           {goalLabel(m)}
         </button>
@@ -98,10 +101,11 @@ function ModuleCard({
 export function Library(): React.JSX.Element {
   const modules = useApp((s) => s.modules)
   const loadModules = useApp((s) => s.loadModules)
-  const samplesUsed = useApp((s) => s.settings?.samplesUsed ?? false)
   const toast = useApp((s) => s.toast)
   const [removing, setRemoving] = useState<ModuleSummary | null>(null)
   const [resetting, setResetting] = useState<ModuleSummary | null>(null)
+  const [goaling, setGoaling] = useState<string | null>(null)
+  const [sampling, setSampling] = useState<'install' | 'remove' | null>(null)
   const [dragging, setDragging] = useState(false)
   const [busy, setBusy] = useState(false)
   const [active, setActive] = useState(0)
@@ -113,7 +117,7 @@ export function Library(): React.JSX.Element {
   }, [loadModules])
 
   useEffect(() => {
-    if (!modules?.length || removing || resetting) return
+    if (!modules?.length || removing || resetting || goaling || sampling) return
     const count = modules.length
     const focus = (i: number): void => {
       const next = (i + count) % count
@@ -140,7 +144,10 @@ export function Library(): React.JSX.Element {
         go({ name: 'chapters', moduleId: m.id })
       }
     })
-  }, [modules, active, removing, resetting, go])
+  }, [modules, active, removing, resetting, goaling, sampling, go])
+
+  const samples = modules?.filter((m) => SAMPLE_IDS.includes(m.id)) ?? []
+  const goalOf = goaling ? modules?.find((m) => m.id === goaling) : undefined
 
   const report = async (r: InstallResult | null): Promise<void> => {
     if (!r || r.cancelled) return
@@ -194,16 +201,24 @@ export function Library(): React.JSX.Element {
           >
             {t('welcome.open')}
           </button>
-          {(!samplesUsed || modules?.length === 0) && (
+          {modules !== null && samples.length > 0 && (
+            <button
+              type="button"
+              className="tk-btn tk-btn-ghost"
+              disabled={busy}
+              title={busy ? t('common.loading') : t('library.removeSampleHelp')}
+              onClick={() => setSampling('remove')}
+            >
+              {t('library.removeSample')}
+            </button>
+          )}
+          {modules !== null && samples.length === 0 && (
             <button
               type="button"
               className="tk-btn tk-btn-ghost"
               disabled={busy}
               title={busy ? t('common.loading') : t('library.installSampleHelp')}
-              onClick={async () => {
-                await run(() => window.quizloop.module.installSample())
-                await useApp.getState().saveSettings({ samplesUsed: true })
-              }}
+              onClick={() => setSampling('install')}
             >
               {t('library.installSample')}
             </button>
@@ -286,6 +301,7 @@ export function Library(): React.JSX.Element {
               onFocus={() => setActive(i)}
               onRemove={() => setRemoving(m)}
               onReset={() => setResetting(m)}
+              onGoal={() => setGoaling(m.id)}
             />
           ))}
         </div>
@@ -296,6 +312,60 @@ export function Library(): React.JSX.Element {
       )}
 
       {dragging && <div className="ql-drop-veil tk-label">{t('library.dropHint')}</div>}
+
+      {goalOf && (
+        <GoalDialog
+          name={goalOf.name}
+          goal={goalOf.goal}
+          open={goalOf.unseen + goalOf.dueToday + goalOf.learning + goalOf.retiredToday}
+          onClose={() => setGoaling(null)}
+          onPick={async (spec) => {
+            await saveGoal(goalOf.id, spec)
+            setGoaling(null)
+            await loadModules()
+            goalToast(useApp.getState().modules?.find((x) => x.id === goalOf.id)?.goal?.daily)
+          }}
+        />
+      )}
+
+      {sampling === 'install' && (
+        <Confirm
+          title={t('library.installSampleTitle')}
+          text={t('library.installSampleConfirm')}
+          yes={t('library.installSampleYes')}
+          onNo={() => setSampling(null)}
+          onYes={async () => {
+            setSampling(null)
+            await run(() => window.quizloop.module.installSample())
+            await useApp.getState().saveSettings({ samplesUsed: true })
+          }}
+        />
+      )}
+
+      {sampling === 'remove' && (
+        <Confirm
+          title={t('library.removeSampleTitle')}
+          text={t('library.removeSampleConfirm', {
+            names: samples.map((m) => m.name).join(', ')
+          })}
+          yes={t('library.removeSampleYes')}
+          danger
+          onNo={() => setSampling(null)}
+          onYes={async () => {
+            setSampling(null)
+            setBusy(true)
+            try {
+              for (const m of samples) await window.quizloop.module.remove(m.id)
+              await dropGoals(samples.map((m) => m.id))
+              await useApp.getState().saveSettings({ samplesUsed: true })
+              await loadModules()
+              toast('success', t('library.removeSampleDone'))
+            } finally {
+              setBusy(false)
+            }
+          }}
+        />
+      )}
 
       {resetting && (
         <Confirm
@@ -322,9 +392,7 @@ export function Library(): React.JSX.Element {
           onNo={() => setRemoving(null)}
           onYes={async () => {
             await window.quizloop.module.remove(removing.id)
-            const goals = { ...(useApp.getState().settings?.goals ?? {}) }
-            delete goals[removing.id]
-            await useApp.getState().saveSettings({ goals })
+            await dropGoals([removing.id])
             setRemoving(null)
             await loadModules()
           }}

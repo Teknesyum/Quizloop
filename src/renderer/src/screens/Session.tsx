@@ -12,7 +12,7 @@ import { Skeleton } from '@renderer/components/Skeleton'
 import { StemMedia } from '@renderer/components/StemMedia'
 import { altFor, markBoxes, plainText } from '@renderer/components/media'
 import { useTyper } from '@renderer/hooks/useTyper'
-import { t, type Key } from '@renderer/i18n'
+import { lang, t, type Key } from '@renderer/i18n'
 import { kaynakGoster } from '@renderer/kaynak'
 import { KEYS } from '@renderer/keys'
 import { useApp } from '@renderer/store/app'
@@ -70,8 +70,8 @@ function Stem({
 function whenLabel(iso: string): string {
   const d = new Date(iso)
   const diff = d.getTime() - Date.now()
-  if (diff < 3600000) return d.toLocaleTimeString('tr', { hour: '2-digit', minute: '2-digit' })
-  return d.toLocaleDateString('tr', { day: '2-digit', month: 'short' })
+  if (diff < 3600000) return d.toLocaleTimeString(lang, { hour: '2-digit', minute: '2-digit' })
+  return d.toLocaleDateString(lang, { day: '2-digit', month: 'short' })
 }
 
 export function Session({
@@ -113,8 +113,14 @@ export function Session({
   }, [moduleId])
 
   const flag = async (): Promise<void> => {
-    if (s.flagged) return
-    await s.flag()
+    const now = useSession.getState()
+    if (now.flagged || !('q' in now.state)) return
+    try {
+      await now.flag()
+    } catch (e) {
+      toast('danger', `${t('common.error')}: ${e instanceof Error ? e.message : String(e)}`)
+      return
+    }
     toast('success', t('session.flagged'))
   }
 
@@ -168,7 +174,8 @@ export function Session({
         if (state.phase === 'stem') s.reveal()
         else if (state.phase === 'graded') s.next()
       },
-      [KEYS.next]: () => {
+      [KEYS.next]: (e) => {
+        if (e.target instanceof Element && e.target.closest('button')) return
         if (state.phase === 'graded') s.next()
       },
       [KEYS.known]: () => {

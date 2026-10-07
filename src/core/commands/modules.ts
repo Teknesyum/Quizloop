@@ -45,7 +45,7 @@ function goalOf(
   start: Date
 ): ModuleGoal | null {
   const open = c.unseen + c.dueToday + c.learning
-  return goal && new Date(goal.until) > start && open + c.retiredToday
+  return goal && (goal.perDay || new Date(goal.until) > start) && open + c.retiredToday
     ? dailyGoal(goal, open, c.retiredToday, start)
     : null
 }

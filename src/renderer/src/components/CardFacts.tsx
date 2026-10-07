@@ -65,6 +65,7 @@ export function CardMeter({
       <div
         className="ql-progress"
         role="progressbar"
+        aria-label={t('library.card.retiredHelp')}
         aria-valuemin={0}
         aria-valuemax={total}
         aria-valuenow={retired}

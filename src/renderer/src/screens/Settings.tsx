@@ -8,6 +8,45 @@ import { useApp } from '@renderer/store/app'
 
 const SPEEDS: S['typerSpeed'][] = ['slow', 'normal', 'fast', 'off']
 
+function NumberField({
+  id,
+  min,
+  max,
+  value,
+  onCommit
+}: {
+  id: string
+  min: number
+  max: number
+  value: number
+  onCommit(n: number): void
+}): React.JSX.Element {
+  const [draft, setDraft] = useState(String(value))
+  const commit = (text: string): void => {
+    const n = Math.round(Number(text))
+    const next =
+      text.trim() === '' || !Number.isFinite(n) ? value : Math.max(min, Math.min(max, n))
+    setDraft(String(next))
+    if (next !== value) onCommit(next)
+  }
+  return (
+    <input
+      id={id}
+      className="tk-input tk-mono"
+      type="number"
+      inputMode="numeric"
+      min={min}
+      max={max}
+      value={draft}
+      onChange={(e) => setDraft(e.target.value)}
+      onBlur={(e) => commit(e.currentTarget.value)}
+      onKeyDown={(e) => {
+        if (e.key === 'Enter') e.currentTarget.blur()
+      }}
+    />
+  )
+}
+
 export function Settings(): React.JSX.Element {
   const settings = useApp((s) => s.settings)
   const info = useApp((s) => s.info)
@@ -18,12 +57,14 @@ export function Settings(): React.JSX.Element {
   const caps = window.quizloop.capabilities
   const [importing, setImporting] = useState(false)
   const [busy, setBusy] = useState(false)
+  const [sampling, setSampling] = useState(false)
 
   useEffect(() => {
     if (!info) loadInfo()
   }, [info, loadInfo])
 
   const installSamples = async (): Promise<void> => {
+    setSampling(false)
     setBusy(true)
     try {
       const r = await window.quizloop.module.installSample()
@@ -36,8 +77,12 @@ export function Settings(): React.JSX.Element {
   }
 
   const apply = async (patch: Partial<S>): Promise<void> => {
-    await save(patch)
-    toast('success', t('settings.saved'))
+    try {
+      await save(patch)
+      toast('success', t('settings.saved'))
+    } catch (e) {
+      toast('danger', `${t('common.error')}: ${e instanceof Error ? e.message : String(e)}`)
+    }
   }
 
   const upLine = (): string => {
@@ -104,14 +149,13 @@ export function Settings(): React.JSX.Element {
               <label className="tk-label" htmlFor="dayStart">
                 {t('settings.dayStart')}
               </label>
-              <input
+              <NumberField
+                key={settings.dayStartHour}
                 id="dayStart"
-                className="tk-input tk-mono"
-                type="number"
                 min={0}
                 max={23}
                 value={settings.dayStartHour}
-                onChange={(e) => apply({ dayStartHour: Number(e.target.value) })}
+                onCommit={(n) => apply({ dayStartHour: n })}
               />
               <span className="tk-hint">{t('settings.dayStartHelp')}</span>
             </div>
@@ -120,14 +164,13 @@ export function Settings(): React.JSX.Element {
               <label className="tk-label" htmlFor="sessionLimit">
                 {t('settings.sessionLimit')}
               </label>
-              <input
+              <NumberField
+                key={settings.sessionLimit}
                 id="sessionLimit"
-                className="tk-input tk-mono"
-                type="number"
                 min={5}
                 max={200}
                 value={settings.sessionLimit}
-                onChange={(e) => apply({ sessionLimit: Number(e.target.value) })}
+                onCommit={(n) => apply({ sessionLimit: n })}
               />
               <span className="tk-hint">{t('settings.sessionLimitHelp')}</span>
             </div>
@@ -136,16 +179,13 @@ export function Settings(): React.JSX.Element {
               <label className="tk-label" htmlFor="blinkSeconds">
                 {t('settings.blink')}
               </label>
-              <input
+              <NumberField
+                key={settings.blinkSeconds}
                 id="blinkSeconds"
-                className="tk-input tk-mono"
-                type="number"
                 min={0}
                 max={30}
                 value={settings.blinkSeconds}
-                onChange={(e) =>
-                  apply({ blinkSeconds: Math.max(0, Math.min(30, Number(e.target.value) || 0)) })
-                }
+                onCommit={(n) => apply({ blinkSeconds: n })}
               />
               <span className="tk-hint">{t('settings.blinkHelp')}</span>
             </div>
@@ -364,7 +404,7 @@ export function Settings(): React.JSX.Element {
                 className="tk-btn tk-btn-ghost ql-btn-sm"
                 disabled={busy}
                 title={busy ? t('common.loading') : t('library.installSampleHelp')}
-                onClick={installSamples}
+                onClick={() => setSampling(true)}
               >
                 {t('library.installSample')}
               </button>
@@ -392,6 +432,16 @@ export function Settings(): React.JSX.Element {
             )}
           </div>
         </div>
+      )}
+
+      {sampling && (
+        <Confirm
+          title={t('library.installSampleTitle')}
+          text={t('library.installSampleConfirm')}
+          yes={t('library.installSampleYes')}
+          onNo={() => setSampling(false)}
+          onYes={installSamples}
+        />
       )}
 
       {importing && (
