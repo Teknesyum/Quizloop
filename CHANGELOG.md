@@ -6,6 +6,17 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.7.51] - 2026-10-07
+
+### Changed
+
+- Chapters you have studied are listed first, the most recently studied on top.
+
+### Fixed
+
+- The question text no longer loses its last letters on iPhone, iPad and Safari; the
+  typing effect is off there.
+
 ## [0.7.50] - 2026-10-07
 
 ### Added
