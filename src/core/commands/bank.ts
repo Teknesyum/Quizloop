@@ -106,6 +106,7 @@ export async function moduleQuestion(
     beklenenCevap: q.beklenenCevap,
     solution: q.solution,
     source: q.source,
+    tags: q.tags,
     assetBase: deps.assetBase(moduleId)
   }
 }
