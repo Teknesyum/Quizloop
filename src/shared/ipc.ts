@@ -138,6 +138,7 @@ export interface BankQuestion {
   beklenenCevap?: string
   solution: SolutionBlock[]
   source: Source
+  tags: string[]
   assetBase: string
 }
 

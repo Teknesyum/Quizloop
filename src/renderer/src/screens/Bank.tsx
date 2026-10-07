@@ -10,6 +10,7 @@ import { Skeleton } from '@renderer/components/Skeleton'
 import { Solution } from '@renderer/components/Solution'
 import { StemMedia } from '@renderer/components/StemMedia'
 import { markBoxes } from '@renderer/components/media'
+import { kaynakGoster } from '@renderer/kaynak'
 import { t } from '@renderer/i18n'
 import { useApp } from '@renderer/store/app'
 
@@ -59,23 +60,25 @@ function Detail({
         </div>
       )}
       <Solution blocks={q.solution} assetBase={q.assetBase} />
-      <blockquote className="ql-source">
-        <span className="tk-label ql-source-label">{t('session.source')}</span>
-        <p className="ql-source-quote">{q.source.quote}</p>
-        <span className="tk-hint ql-source-line">
-          {kitap ? (
-            <>
-              {t('session.sourceFile', { file: q.source.file })}
-              <span>
-                {t('session.sourcePages', { from: q.source.pages[0], to: q.source.pages[1] })}
-              </span>
-            </>
-          ) : (
-            q.source.file
-          )}
-        </span>
-        {kitap && <BookButton file={q.source.file} onOpen={onBook} />}
-      </blockquote>
+      {kaynakGoster(q.tags) && (
+        <blockquote className="ql-source">
+          <span className="tk-label ql-source-label">{t('session.source')}</span>
+          <p className="ql-source-quote">{q.source.quote}</p>
+          <span className="tk-hint ql-source-line">
+            {kitap ? (
+              <>
+                {t('session.sourceFile', { file: q.source.file })}
+                <span>
+                  {t('session.sourcePages', { from: q.source.pages[0], to: q.source.pages[1] })}
+                </span>
+              </>
+            ) : (
+              q.source.file
+            )}
+          </span>
+          {kitap && <BookButton file={q.source.file} onOpen={onBook} />}
+        </blockquote>
+      )}
     </div>
   )
 }

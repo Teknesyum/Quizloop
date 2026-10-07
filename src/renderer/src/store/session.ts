@@ -92,7 +92,11 @@ export const useSession = create<SessionState>((set, get) => ({
     const { state, sessionId } = get()
     if (state.phase !== 'stem' || !sessionId) return
     await window.quizloop.session.known(sessionId)
-    await window.quizloop.session.reveal(sessionId)
+    const r = await window.quizloop.session.reveal(sessionId)
+    if (r) {
+      set({ state: { phase: 'solved', q: state.q, known: true, wrong: {}, result: r } })
+      return
+    }
     set({ state: { phase: 'choices', q: state.q, known: true, wrong: {} } })
   },
   reveal: async () => {

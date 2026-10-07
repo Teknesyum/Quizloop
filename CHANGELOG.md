@@ -6,6 +6,17 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.7.48] - 2026-10-07
+
+### Fixed
+
+- Saying you know the answer on an open-ended question now opens the solution instead of
+  leaving an empty screen with nothing to press.
+
+### Changed
+
+- Word cards no longer show a source box under the solution.
+
 ## [0.7.47] - 2026-10-07
 
 ### Changed
@@ -327,8 +338,8 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 ### Added
 
 - A browser version at <https://teknesyum.github.io/Quizloop/>. It runs on an
-  iPhone or iPad without a store: open it in Safari and choose *Add to Home
-  Screen*. It works offline after the first visit, imports `.qlmod` files and
+  iPhone or iPad without a store: open it in Safari and choose _Add to Home
+  Screen_. It works offline after the first visit, imports `.qlmod` files and
   keeps progress in that browser. It has no in-app update check; a new version
   is picked up the next time the page is opened online. One tab at a time.
 

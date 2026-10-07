@@ -29,6 +29,25 @@ it('yukleme basarili olursa soru gosterilir', async () => {
   expect(useSession.getState().state.phase).toBe('stem')
 })
 
+it('acik uclu soruda biliyorum cozumu acar', async () => {
+  const q = { id: 'q1', stem: { md: 'soru' }, kind: 'acik-uclu', choices: [] }
+  const sonuc = { correct: true, beklenenCevap: 'cevap', wrongPicks: 0 }
+  ;(globalThis as unknown as { window: Record<string, unknown> }).window = {
+    quizloop: {
+      session: {
+        start: () => Promise.resolve({ sessionId: 's1', total: 1, first: q }),
+        known: () => Promise.resolve(),
+        reveal: () => Promise.resolve(sonuc)
+      }
+    }
+  }
+  await useSession.getState().start('m1', null)
+  await useSession.getState().known()
+  const s = useSession.getState().state
+  expect(s.phase).toBe('solved')
+  if (s.phase === 'solved') expect(s.known).toBe(true)
+})
+
 it('soru yoksa faz empty olur', async () => {
   stubStart(() => Promise.resolve({ sessionId: 's1', total: 0, first: null }))
   await useSession.getState().start('m1', null)

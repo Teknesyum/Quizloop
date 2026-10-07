@@ -13,6 +13,7 @@ import { StemMedia } from '@renderer/components/StemMedia'
 import { altFor, markBoxes, plainText } from '@renderer/components/media'
 import { useTyper } from '@renderer/hooks/useTyper'
 import { t, type Key } from '@renderer/i18n'
+import { kaynakGoster } from '@renderer/kaynak'
 import { KEYS } from '@renderer/keys'
 import { useApp } from '@renderer/store/app'
 import { useSession } from '@renderer/store/session'
@@ -466,7 +467,7 @@ export function Session({
             )}
             <h3 className="tk-h3">{t('session.solution')}</h3>
             {solved.solution && <Solution blocks={solved.solution} assetBase={q.assetBase} />}
-            {solved.source && (
+            {solved.source && kaynakGoster(q.tags) && (
               <blockquote className="ql-source">
                 <span className="tk-label ql-source-label">{t('session.source')}</span>
                 <p className="ql-source-quote">{solved.source.quote}</p>
