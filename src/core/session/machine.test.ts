@@ -8,6 +8,7 @@ import { nodePorts } from '@main/ports'
 import type { Database } from '@core/db/types'
 import { QuestionIndex, readMeta } from '@core/modules/loader'
 import { syncModule } from '@core/modules/sync'
+import { chapterCounts } from '@core/scheduler/queue'
 import { SessionMachine } from './machine'
 
 const NOW = new Date('2026-09-08T09:00:00.000Z')
@@ -168,5 +169,30 @@ describe('SessionMachine', () => {
       .executeTakeFirstOrThrow()
     expect(row.ended_at).not.toBeNull()
     expect(row.score).toBe(sum.score)
+  })
+})
+
+describe('chapterCounts', () => {
+  it('lists used chapters first, the most recent on top', async () => {
+    await machine()
+    const plain = await chapterCounts(db, 'ornek', NOW, NOW)
+    expect(plain.length).toBeGreaterThan(1)
+    expect(plain.every((r) => r.used === null)).toBe(true)
+    const last = plain[plain.length - 1]!.chapter
+    const first = plain[0]!.chapter
+    const stamp = async (chapter: string, at: string): Promise<void> => {
+      const card = await db
+        .selectFrom('card')
+        .select(['id'])
+        .where('chapter', '=', chapter)
+        .limit(1)
+        .executeTakeFirstOrThrow()
+      await db.updateTable('card').set({ last_review: at }).where('id', '=', card.id).execute()
+    }
+    await stamp(last, '2026-09-08T08:00:00.000Z')
+    expect((await chapterCounts(db, 'ornek', NOW, NOW))[0]!.chapter).toBe(last)
+    await stamp(first, '2026-09-08T08:30:00.000Z')
+    const both = await chapterCounts(db, 'ornek', NOW, NOW)
+    expect(both.slice(0, 2).map((r) => r.chapter)).toEqual([first, last])
   })
 })

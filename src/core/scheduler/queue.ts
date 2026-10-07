@@ -80,24 +80,29 @@ export async function chapterCounts(
   moduleId: string,
   now: Date,
   start: Date
-): Promise<{ chapter: string; total: number; count: DueCount }[]> {
+): Promise<{ chapter: string; total: number; used: string | null; count: DueCount }[]> {
   const rows = await db
     .selectFrom('card')
-    .select(['state', 'due', 'retired_at', 'orphaned', 'chapter'])
+    .select(['state', 'due', 'retired_at', 'orphaned', 'chapter', 'last_review'])
     .where('module_id', '=', moduleId)
     .execute()
   const iso = now.toISOString()
   const day = start.toISOString()
-  const map = new Map<string, { total: number; count: DueCount }>()
+  const map = new Map<string, { total: number; used: string | null; count: DueCount }>()
   for (const r of rows) {
     if (r.orphaned) continue
     const key = r.chapter ?? ''
     let e = map.get(key)
     if (!e) {
-      e = { total: 0, count: { dueToday: 0, unseen: 0, retired: 0, learning: 0, retiredToday: 0 } }
+      e = {
+        total: 0,
+        used: null,
+        count: { dueToday: 0, unseen: 0, retired: 0, learning: 0, retiredToday: 0 }
+      }
       map.set(key, e)
     }
     e.total++
+    for (const t of [r.last_review, r.retired_at]) if (t && (!e.used || t > e.used)) e.used = t
     if (r.retired_at) {
       e.count.retired++
       if (r.retired_at >= day) e.count.retiredToday++
@@ -107,7 +112,11 @@ export async function chapterCounts(
   }
   return [...map.entries()]
     .map(([chapter, v]) => ({ chapter, ...v }))
-    .sort((a, b) => a.chapter.localeCompare(b.chapter, 'tr', { numeric: true }))
+    .sort(
+      (a, b) =>
+        (b.used ?? '').localeCompare(a.used ?? '') ||
+        a.chapter.localeCompare(b.chapter, 'tr', { numeric: true })
+    )
 }
 
 export async function countDue(

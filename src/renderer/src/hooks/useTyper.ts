@@ -46,7 +46,11 @@ export function useTyper(
   const reduced =
     typeof matchMedia === 'function' && matchMedia('(prefers-reduced-motion: reduce)').matches
   const perChar = reduced ? 0 : MS_PER_CHAR[speed]
-  const supported = typeof CSS !== 'undefined' && 'highlights' in CSS
+  const webkit =
+    typeof navigator !== 'undefined' &&
+    /AppleWebKit/.test(navigator.userAgent) &&
+    !navigator.userAgent.includes('Chrome/')
+  const supported = typeof CSS !== 'undefined' && 'highlights' in CSS && !webkit
   const [done, setDone] = useState(perChar === 0 || !supported)
   const raf = useRef(0)
 
