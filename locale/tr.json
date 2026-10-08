@@ -404,5 +404,12 @@
   "goals.notifyDenied": "Bildirim izni verilmedi. Sistem ya da tarayıcı ayarlarından QuizLoop için bildirime izin ver.",
   "goals.notifyTitle": "QuizLoop Günlük Hedef",
   "goals.notifyBody": "Bugün {done}/{daily} soru emekli edildi.",
-  "goals.notifyNext": "Bugünkü hedefin {daily} soru. Hâlâ bitmediyse şimdi tam zamanı."
+  "goals.notifyNext": "Bugünkü hedefin {daily} soru. Hâlâ bitmediyse şimdi tam zamanı.",
+  "report.button": "Sorun Bildir",
+  "report.sent": "Bildirimin bize ulaştı, teşekkürler.",
+  "report.addNote": "Not Ekle",
+  "report.noteTitle": "Sorunu Kısaca Anlat",
+  "report.send": "Gönder",
+  "report.noteSent": "Notun eklendi, teşekkürler.",
+  "report.failed": "Bildirim gönderilemedi. Bağlantını kontrol edip yeniden dene."
 }

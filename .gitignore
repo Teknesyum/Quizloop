@@ -34,3 +34,6 @@ __pycache__/
 tmp/
 
 *.tsbuildinfo
+
+tools/bildirim/.dev.vars
+tools/bildirim/.wrangler/

@@ -12,12 +12,18 @@ export type Route =
 
 export type ToastKind = 'success' | 'warning' | 'danger'
 
+export interface ToastAction {
+  label: string
+  run(): void
+}
+
 export interface Toast {
   id: number
   kind: ToastKind
   text: string
   life?: number
   leaving?: boolean
+  action?: ToastAction
 }
 
 interface AppState {
@@ -34,7 +40,7 @@ interface AppState {
   loadSettings(): Promise<void>
   saveSettings(patch: Partial<Settings>): Promise<void>
   loadInfo(): Promise<void>
-  toast(kind: ToastKind, text: string, life?: number): void
+  toast(kind: ToastKind, text: string, life?: number, action?: ToastAction): void
   dismiss(id: number): void
 }
 
@@ -57,9 +63,15 @@ export const useApp = create<AppState>((set) => ({
   loadSettings: async () => set({ settings: await window.quizloop.settings.get() }),
   saveSettings: async (patch) => set({ settings: await window.quizloop.settings.set(patch) }),
   loadInfo: async () => set({ info: await window.quizloop.app.info() }),
-  toast: (kind, text, life) => {
+  toast: (kind, text, life, action) => {
     const id = ++seq
-    const t: Toast = { id, kind, text, life: kind === 'danger' ? undefined : (life ?? TOAST_LIFE) }
+    const t: Toast = {
+      id,
+      kind,
+      text,
+      action,
+      life: kind === 'danger' ? undefined : (life ?? TOAST_LIFE)
+    }
     set((s) => ({ toasts: [...s.toasts, t].slice(-TOAST_MAX) }))
   },
   dismiss: (id) => {
