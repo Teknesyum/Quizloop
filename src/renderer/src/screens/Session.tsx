@@ -315,9 +315,7 @@ export function Session({
     <section className="ql-screen ql-session">
       <header className="ql-session-bar ql-transition-in">
         <div className="ql-session-meta">
-          <span className="tk-mono">
-            {t('session.progress', { index: q.index, total: s.total })}
-          </span>
+          <span className="tk-mono">{t('session.left', { left: q.left })}</span>
           <span className={`tk-label ${open ? 'ql-badge-open' : 'ql-badge-choices'}`}>
             {open
               ? t('session.kindOpen')

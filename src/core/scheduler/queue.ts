@@ -73,6 +73,7 @@ export interface DueCount {
   retired: number
   learning: number
   retiredToday: number
+  partial: number
 }
 
 export async function chapterCounts(
@@ -83,7 +84,15 @@ export async function chapterCounts(
 ): Promise<{ chapter: string; total: number; used: string | null; count: DueCount }[]> {
   const rows = await db
     .selectFrom('card')
-    .select(['state', 'due', 'retired_at', 'orphaned', 'chapter', 'last_review'])
+    .select([
+      'state',
+      'due',
+      'retired_at',
+      'orphaned',
+      'chapter',
+      'last_review',
+      'last_self_assess'
+    ])
     .where('module_id', '=', moduleId)
     .execute()
   const iso = now.toISOString()
@@ -97,12 +106,13 @@ export async function chapterCounts(
       e = {
         total: 0,
         used: null,
-        count: { dueToday: 0, unseen: 0, retired: 0, learning: 0, retiredToday: 0 }
+        count: { dueToday: 0, unseen: 0, retired: 0, learning: 0, retiredToday: 0, partial: 0 }
       }
       map.set(key, e)
     }
     e.total++
     for (const t of [r.last_review, r.retired_at]) if (t && (!e.used || t > e.used)) e.used = t
+    if (!r.retired_at && r.last_self_assess === 2) e.count.partial++
     if (r.retired_at) {
       e.count.retired++
       if (r.retired_at >= day) e.count.retiredToday++
@@ -127,7 +137,7 @@ export async function countDue(
 ): Promise<DueCount> {
   const rows = await db
     .selectFrom('card')
-    .select(['state', 'due', 'retired_at', 'orphaned'])
+    .select(['state', 'due', 'retired_at', 'orphaned', 'last_self_assess'])
     .where('module_id', '=', moduleId)
     .execute()
   let dueToday = 0
@@ -135,6 +145,7 @@ export async function countDue(
   let retired = 0
   let learning = 0
   let retiredToday = 0
+  let partial = 0
   const iso = now.toISOString()
   const day = start.toISOString()
   for (const r of rows) {
@@ -144,9 +155,10 @@ export async function countDue(
       if (r.retired_at >= day) retiredToday++
       continue
     }
+    if (r.last_self_assess === 2) partial++
     if (r.state === State.New) unseen++
     else if (r.due <= iso) dueToday++
     else learning++
   }
-  return { dueToday, unseen, retired, learning, retiredToday }
+  return { dueToday, unseen, retired, learning, retiredToday, partial }
 }

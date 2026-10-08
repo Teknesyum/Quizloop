@@ -19,6 +19,7 @@ export interface ChapterSummary {
   retired: number
   learning: number
   retiredToday: number
+  partial: number
   goal: ModuleGoal | null
 }
 
@@ -57,6 +58,7 @@ export interface ModuleSummary {
   retired: number
   learning: number
   retiredToday: number
+  partial: number
   goal: ModuleGoal | null
 }
 
@@ -64,6 +66,7 @@ export interface QuestionView {
   questionId: string
   index: number
   total: number
+  left: number
   stem: Stem
   kind: QuestionKind
   choices: Choice[]
@@ -101,6 +104,7 @@ export interface SessionSummary {
   correctFirstTry: number
   score: number
   retired: number
+  partial: number
   relearned: number
   startedAt: string
   endedAt: string

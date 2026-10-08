@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { moved, ordered } from './order'
+import { moved, ordered, sunk } from './order'
 
 const id = (x: string): string => x
 
@@ -15,6 +15,12 @@ describe('ordered', () => {
 
   it('ignores saved ids that no longer exist', () => {
     expect(ordered(['a', 'b'], id, ['x', 'b', 'a'])).toEqual(['b', 'a'])
+  })
+})
+
+describe('sunk', () => {
+  it('moves finished rows to the end and keeps the rest in order', () => {
+    expect(sunk(['a', 'B', 'c', 'D'], (x) => x === 'B' || x === 'D')).toEqual(['a', 'c', 'B', 'D'])
   })
 })
 

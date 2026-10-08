@@ -62,7 +62,7 @@ function ModuleCard({
           goal={m.goal}
         />
       </div>
-      <CardMeter total={m.questionCount} retired={m.retired} />
+      <CardMeter total={m.questionCount} retired={m.retired} partial={m.partial} />
       <footer className="ql-card-foot">
         <CardMenu label={t('library.more')}>
           <MenuItem onPick={() => go({ name: 'bank', moduleId: m.id })}>

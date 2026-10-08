@@ -67,6 +67,35 @@ describe('SessionMachine', () => {
     expect(s.first).not.toBeNull()
   })
 
+  it('counts down the questions left and reports the partly understood ones', async () => {
+    const m = await machine()
+    const s = await m.start('ornek')
+    const id = s.sessionId
+    expect(s.first!.left).toBe(8)
+    const solve = (q: { choices: { key: 'A' | 'B' | 'C' | 'D' | 'E' }[] }): void => {
+      m.reveal(id)
+      for (const c of q.choices) if (m.answer(id, c.key).correct) break
+    }
+    solve(s.first!)
+    let next = (await m.grade(id, 2, 100)).next
+    expect(next!.left).toBe(7)
+    solve(next!)
+    next = (await m.grade(id, 1, 100)).next
+    expect(next!.left).toBe(7)
+    const left: number[] = []
+    while (next) {
+      left.push(next.left)
+      solve(next)
+      next = (await m.grade(id, 3, 100)).next
+    }
+    expect(left).toEqual([7, 6, 5, 4, 3, 2, 1])
+    const sum = await m.end(id)
+    expect(sum.partial).toBe(1)
+    expect(sum.retired).toBe(7)
+    const all = await chapterCounts(db, 'ornek', NOW, NOW)
+    expect(all.reduce((n, r) => n + r.count.partial, 0)).toBe(1)
+  })
+
   it('never leaks the correct key before the pick is right', async () => {
     const m = await machine()
     const s = await m.start('ornek')
