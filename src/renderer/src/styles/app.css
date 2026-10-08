@@ -1174,7 +1174,8 @@ kbd {
 
 .ql-themes {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(calc(var(--tk-sp-5) * 5), 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(calc(var(--tk-sp-5) * 6), 1fr));
+  grid-auto-rows: 1fr;
   gap: var(--tk-sp-2);
 }
 
@@ -1228,7 +1229,7 @@ kbd {
 
 .ql-theme-name {
   min-width: 0;
-  overflow-wrap: anywhere;
+  overflow-wrap: break-word;
 }
 
 .ql-dir-row {
@@ -2444,6 +2445,22 @@ button.ql-mark:not(:disabled):active {
 }
 
 /* --- phone --- */
+
+@media (min-width: 641px) and (max-width: 1040px) {
+  .ql-shell .tk-titlebar__version,
+  .ql-shell .ql-scale {
+    display: none;
+  }
+
+  .ql-shell .tk-titlebar__tab {
+    flex-shrink: 0;
+    padding: 0 var(--tk-sp-1);
+  }
+
+  .ql-shell .tk-titlebar__chip {
+    padding: 0 var(--tk-sp-2);
+  }
+}
 
 @media (max-width: 640px) {
   .ql-bank-split {
