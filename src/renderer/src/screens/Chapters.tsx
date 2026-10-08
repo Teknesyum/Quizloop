@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { CardCover } from '@renderer/components/CardCover'
 import { CardInfo, CardMeter, GoalMeter } from '@renderer/components/CardFacts'
 import { CardMenu, MenuItem } from '@renderer/components/CardMenu'
@@ -7,6 +7,8 @@ import { GoalDialog } from '@renderer/components/GoalPick'
 import { goalLabel, goalToast, saveGoal, type GoalSpec } from '@renderer/goal'
 import { tinykeys } from 'tinykeys'
 import { goalKey, type ChapterSummary } from '@shared/ipc'
+import { ordered } from '@shared/order'
+import { useOrder } from '@renderer/hooks/useOrder'
 import { Skeleton } from '@renderer/components/Skeleton'
 import { ViewToggle } from '@renderer/components/ViewToggle'
 import { lang, t } from '@renderer/i18n'
@@ -21,7 +23,10 @@ function chapterCover(c: ChapterSummary): string | null {
 export function Chapters({ moduleId }: { moduleId: string }): React.JSX.Element {
   const go = useApp((s) => s.go)
   const modules = useApp((s) => s.modules)
-  const [rows, setRows] = useState<ChapterSummary[] | null>(null)
+  const [loaded, setRows] = useState<ChapterSummary[] | null>(null)
+  const { order, move } = useOrder(moduleId)
+  const rows = useMemo(() => loaded && ordered(loaded, (c) => c.chapter, order), [loaded, order])
+  const ids = rows?.map((c) => c.chapter) ?? []
   const [resetting, setResetting] = useState<ChapterSummary | null>(null)
   const [goaling, setGoaling] = useState<ChapterSummary | null>(null)
   const toast = useApp((s) => s.toast)
@@ -164,6 +169,16 @@ export function Chapters({ moduleId }: { moduleId: string }): React.JSX.Element 
               {c.goal && <GoalMeter done={c.retiredToday} goal={c.goal} />}
               <footer className="ql-card-foot">
                 <CardMenu label={t('library.more')}>
+                  {i > 0 && (
+                    <MenuItem onPick={() => move(ids, c.chapter, -1)}>
+                      {t('library.moveUp')}
+                    </MenuItem>
+                  )}
+                  {i < ids.length - 1 && (
+                    <MenuItem onPick={() => move(ids, c.chapter, 1)}>
+                      {t('library.moveDown')}
+                    </MenuItem>
+                  )}
                   <MenuItem onPick={() => setResetting(c)}>{t('library.reset')}</MenuItem>
                 </CardMenu>
                 <button

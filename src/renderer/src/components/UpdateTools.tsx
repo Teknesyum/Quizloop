@@ -58,6 +58,15 @@ export function useUpdateTools(): {
   const [opener, setOpener] = useState<HTMLElement | null>(null)
   const u = window.quizloop.update
   const notice = up.state === 'notice'
+  const inSession = useApp((s) => s.route.name === 'session')
+  const offered = useRef(false)
+  const offer = (up.state === 'available' || notice) && !inSession
+
+  useEffect(() => {
+    if (!offer || offered.current) return
+    offered.current = true
+    setOpen(true)
+  }, [offer])
 
   useEffect(() => {
     void window.quizloop.app.info().then((i) => setVersion(i.version))
@@ -121,14 +130,14 @@ export function useUpdateTools(): {
           versionLabel: t('update.versionLabel'),
           notesLabel: t('update.notesLabel'),
           dryRun: t('update.dryRun'),
-          available: notice ? t('update.panelNotice') : t('update.panelAvailable'),
+          available: t('update.panelAvailable'),
           downloading: t('update.panelDownloading'),
           ready: t('update.panelReady'),
           installing: t('update.panelInstalling'),
           failed: (reason) => t('update.panelFailed', { reason }),
-          downloadInstall: notice ? t('update.open') : t('update.downloadInstall'),
+          downloadInstall: t('update.now'),
           download: t('update.get'),
-          cancel: t('update.cancel'),
+          cancel: up.state === 'downloading' ? t('update.cancel') : t('update.later'),
           install: t('update.apply'),
           close: t('update.close'),
           retry: t('update.retry'),

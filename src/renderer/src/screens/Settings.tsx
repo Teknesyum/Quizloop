@@ -5,8 +5,19 @@ import { Skeleton } from '@renderer/components/Skeleton'
 import { useUpdate } from '@renderer/hooks/useUpdate'
 import { t, type Key } from '@renderer/i18n'
 import { useApp } from '@renderer/store/app'
+import { THEMES, type Theme } from '@renderer/theme'
 
 const SPEEDS: S['typerSpeed'][] = ['slow', 'normal', 'fast', 'off']
+
+function swatch(th: Theme): React.CSSProperties {
+  return {
+    '--ql-sw-bg': th.black,
+    '--ql-sw-text': th.text,
+    '--ql-sw-1': th['renk-1'],
+    '--ql-sw-2': th['renk-2'],
+    '--ql-sw-3': th['renk-3']
+  } as React.CSSProperties
+}
 
 function NumberField({
   id,
@@ -24,8 +35,7 @@ function NumberField({
   const [draft, setDraft] = useState(String(value))
   const commit = (text: string): void => {
     const n = Math.round(Number(text))
-    const next =
-      text.trim() === '' || !Number.isFinite(n) ? value : Math.max(min, Math.min(max, n))
+    const next = text.trim() === '' || !Number.isFinite(n) ? value : Math.max(min, Math.min(max, n))
     setDraft(String(next))
     if (next !== value) onCommit(next)
   }
@@ -209,6 +219,31 @@ export function Settings(): React.JSX.Element {
               <span className="tk-hint">{t('settings.typerHelp')}</span>
             </div>
 
+            <div className="tk-field">
+              <span className="tk-label">{t('settings.theme')}</span>
+              <div className="ql-themes" role="radiogroup" aria-label={t('settings.theme')}>
+                {THEMES.map((th) => (
+                  <button
+                    key={th.id}
+                    type="button"
+                    role="radio"
+                    aria-checked={settings.theme === th.id}
+                    className="ql-theme"
+                    style={swatch(th)}
+                    onClick={() => apply({ theme: th.id })}
+                  >
+                    <span className="ql-theme-dots" aria-hidden="true">
+                      <i />
+                      <i />
+                      <i />
+                    </span>
+                    <span className="ql-theme-name">{th.ad}</span>
+                  </button>
+                ))}
+              </div>
+              <span className="tk-hint">{t('settings.themeHelp')}</span>
+            </div>
+
             {!caps.windowChrome && (
               <div className="tk-field">
                 <span className="tk-label">{t('settings.fontScale')}</span>
@@ -359,13 +394,17 @@ export function Settings(): React.JSX.Element {
                     {t('update.restart')}
                   </button>
                 )}
-                {up.state === 'notice' && (
+                {(up.state === 'notice' || up.state === 'available') && (
                   <button
                     type="button"
-                    className="tk-btn tk-btn-ghost ql-btn-sm"
-                    onClick={() => window.quizloop.update.open()}
+                    className="tk-btn tk-btn-primary ql-btn-sm"
+                    onClick={() =>
+                      up.state === 'notice'
+                        ? window.quizloop.update.open()
+                        : window.quizloop.update.download(true)
+                    }
                   >
-                    {t('update.open')}
+                    {t('update.now')}
                   </button>
                 )}
                 {upLine() && (

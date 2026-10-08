@@ -1164,6 +1164,73 @@ kbd {
   flex-wrap: wrap;
 }
 
+.update-panel[data-phase='available'] .update-panel__actions > .tk-btn:nth-child(2) {
+  display: none;
+}
+
+.ql-themed .tk-panel {
+  background: var(--tk-surface);
+}
+
+.ql-themes {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(calc(var(--tk-sp-5) * 5), 1fr));
+  gap: var(--tk-sp-2);
+}
+
+.ql-theme {
+  display: flex;
+  align-items: center;
+  gap: var(--tk-sp-2);
+  min-height: calc(var(--tk-btn-h) + var(--tk-sp-3));
+  padding: var(--tk-sp-2) var(--tk-sp-3);
+  border: var(--tk-border-w) solid var(--tk-border);
+  border-radius: var(--tk-r-btn);
+  background: var(--ql-sw-bg);
+  color: var(--ql-sw-text);
+  font: inherit;
+  font-size: var(--tk-fs-1);
+  text-align: start;
+  cursor: pointer;
+}
+
+.ql-theme[aria-checked='true'] {
+  border-color: var(--tk-text);
+  outline: var(--tk-border-w) solid var(--tk-text);
+}
+
+.ql-theme:focus-visible {
+  outline: var(--tk-focus-w) solid var(--tk-renk-1);
+  outline-offset: var(--tk-focus-offset);
+  box-shadow: 0 0 0 var(--tk-focus-w) var(--tk-bg);
+}
+
+.ql-theme-dots {
+  display: flex;
+  gap: var(--tk-sp-1);
+  flex: none;
+}
+
+.ql-theme-dots i {
+  width: var(--tk-sp-3);
+  height: var(--tk-sp-3);
+  border-radius: var(--tk-r-chip);
+  background: var(--ql-sw-1);
+}
+
+.ql-theme-dots i:nth-child(2) {
+  background: var(--ql-sw-2);
+}
+
+.ql-theme-dots i:nth-child(3) {
+  background: var(--ql-sw-3);
+}
+
+.ql-theme-name {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
 .ql-dir-row {
   display: flex;
   align-items: center;

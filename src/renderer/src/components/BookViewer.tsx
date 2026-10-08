@@ -17,6 +17,8 @@ import './bookviewer.css'
 const MAX_PX = 1 << 25
 const ZOOM_MAX = 4
 const DPR_MAX = 2
+const SWIPE_MIN = 48
+const TAP_MAX = 10
 
 interface Highlight {
   bbox?: [number, number, number, number]
@@ -538,6 +540,59 @@ export function BookViewer({
       }
     })
   }, [turn, onClose, zoomTo, rtl])
+
+  useEffect(() => {
+    const el = spreadRef.current
+    if (!el || !single) return
+    let from: { x: number; y: number } | null = null
+    const onStart = (e: TouchEvent): void => {
+      const p = e.touches[0]
+      if (e.touches.length !== 1 || !p || zoomRef.current > 1 || !flipRef.current) {
+        from = null
+        return
+      }
+      e.stopPropagation()
+      from = { x: p.clientX, y: p.clientY }
+    }
+    const onMove = (e: TouchEvent): void => {
+      if (from) e.stopPropagation()
+    }
+    const onEnd = (e: TouchEvent): void => {
+      const start = from
+      from = null
+      const p = e.changedTouches[0]
+      if (!start || !p) return
+      e.stopPropagation()
+      const dx = p.clientX - start.x
+      const dy = p.clientY - start.y
+      const forward = rtl ? 'prev' : 'next'
+      const back = rtl ? 'next' : 'prev'
+      if (Math.abs(dx) >= SWIPE_MIN && Math.abs(dx) > Math.abs(dy)) {
+        e.preventDefault()
+        turn(dx < 0 ? forward : back)
+        return
+      }
+      if (Math.abs(dx) > TAP_MAX || Math.abs(dy) > TAP_MAX) return
+      e.preventDefault()
+      const r = el.getBoundingClientRect()
+      const at = (p.clientX - r.left) / r.width
+      if (at > 1 / 3 && at < 2 / 3) return
+      turn(at >= 2 / 3 ? forward : back)
+    }
+    const onCancel = (): void => {
+      from = null
+    }
+    el.addEventListener('touchstart', onStart, { passive: true, capture: true })
+    el.addEventListener('touchmove', onMove, { passive: true, capture: true })
+    el.addEventListener('touchend', onEnd, { passive: false, capture: true })
+    el.addEventListener('touchcancel', onCancel, { capture: true })
+    return () => {
+      el.removeEventListener('touchstart', onStart, { capture: true })
+      el.removeEventListener('touchmove', onMove, { capture: true })
+      el.removeEventListener('touchend', onEnd, { capture: true })
+      el.removeEventListener('touchcancel', onCancel, { capture: true })
+    }
+  }, [single, rtl, turn])
 
   const highlight = useMemo<Highlight | null>(() => {
     if (source.kesit) return { bbox: source.kesit.bbox, bboxPage: source.kesit.pdfSayfa - base }

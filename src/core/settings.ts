@@ -13,7 +13,9 @@ export const DEFAULT_SETTINGS: Settings = {
   welcomeSeen: false,
   samplesUsed: false,
   goals: {},
-  goalNotify: false
+  goalNotify: false,
+  theme: 'Teknesyum',
+  order: {}
 }
 
 export const SettingsPatch = z
@@ -36,7 +38,9 @@ export const SettingsPatch = z
         perDay: z.number().int().min(1).max(5000).optional()
       })
     ),
-    goalNotify: z.boolean()
+    goalNotify: z.boolean(),
+    theme: z.string().min(1).max(40),
+    order: z.record(z.string(), z.array(z.string()).max(5000))
   })
   .partial()
 
