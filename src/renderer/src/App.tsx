@@ -22,6 +22,7 @@ import { Settings } from './screens/Settings'
 import { Goals } from './screens/Goals'
 import { Stats } from './screens/Stats'
 import { nextScale } from './scale'
+import { applyTheme } from '@renderer/theme'
 import { useApp, type Route } from './store/app'
 import logo from '../../../resources/icon.png'
 import type { InstallConfirm } from '@shared/ipc'
@@ -46,6 +47,11 @@ export default function App(): React.JSX.Element {
   const settings = useApp((s) => s.settings)
   const saveSettings = useApp((s) => s.saveSettings)
   const scale = settings?.fontScale ?? 1
+  const theme = settings?.theme
+
+  useEffect(() => {
+    if (theme) applyTheme(theme)
+  }, [theme])
   const help = useApp((s) => s.help)
   const showHelp = useApp((s) => s.showHelp)
   const welcome = help || (settings !== null && !settings.welcomeSeen)

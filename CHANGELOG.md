@@ -6,6 +6,22 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.7.52] - 2026-10-08
+
+### Added
+
+- Settings has a theme picker with 36 themes, dark and light. Text colours are
+  adjusted so every theme stays readable.
+- Modules and chapters can be reordered from the card menu with "Move Up" and
+  "Move Down"; the order is remembered.
+- On a phone the book turns with a swipe left or right, or a tap on either edge,
+  so the previous page is as easy to reach as the next.
+
+### Changed
+
+- When a new version is out the update window opens once at launch with two
+  buttons, "Update" and "Later"; the separate download choices are gone.
+
 ## [0.7.51] - 2026-10-07
 
 ### Changed

@@ -1,6 +1,7 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { tinykeys } from 'tinykeys'
 import { SAMPLE_IDS, type InstallResult, type ModuleSummary } from '@shared/ipc'
+import { LIBRARY_ORDER, ordered } from '@shared/order'
 import { CardCover } from '@renderer/components/CardCover'
 import { CardInfo, CardMeter } from '@renderer/components/CardFacts'
 import { CardMenu, MenuItem } from '@renderer/components/CardMenu'
@@ -8,6 +9,7 @@ import { Confirm } from '@renderer/components/Confirm'
 import { GoalDialog } from '@renderer/components/GoalPick'
 import { Skeleton } from '@renderer/components/Skeleton'
 import { ViewToggle } from '@renderer/components/ViewToggle'
+import { useOrder } from '@renderer/hooks/useOrder'
 import { dropGoals, goalLabel, goalToast, saveGoal } from '@renderer/goal'
 import { installedText, t, title } from '@renderer/i18n'
 import { useApp } from '@renderer/store/app'
@@ -20,7 +22,8 @@ function ModuleCard({
   onFocus,
   onRemove,
   onReset,
-  onGoal
+  onGoal,
+  onMove
 }: {
   m: ModuleSummary
   index: number
@@ -29,6 +32,7 @@ function ModuleCard({
   onRemove(): void
   onReset(): void
   onGoal(): void
+  onMove: { up?(): void; down?(): void }
 }): React.JSX.Element {
   const go = useApp((s) => s.go)
   const percent = m.questionCount ? Math.round((m.retired / m.questionCount) * 100) : 0
@@ -64,6 +68,8 @@ function ModuleCard({
           <MenuItem onPick={() => go({ name: 'bank', moduleId: m.id })}>
             {t('library.bank')}
           </MenuItem>
+          {onMove.up && <MenuItem onPick={onMove.up}>{t('library.moveUp')}</MenuItem>}
+          {onMove.down && <MenuItem onPick={onMove.down}>{t('library.moveDown')}</MenuItem>}
           <MenuItem onPick={onReset}>{t('library.reset')}</MenuItem>
           <MenuItem danger onPick={onRemove}>
             {t('library.remove')}
@@ -99,7 +105,10 @@ function ModuleCard({
 }
 
 export function Library(): React.JSX.Element {
-  const modules = useApp((s) => s.modules)
+  const raw = useApp((s) => s.modules)
+  const { order, move } = useOrder(LIBRARY_ORDER)
+  const modules = useMemo(() => raw && ordered(raw, (m) => m.id, order), [raw, order])
+  const ids = modules?.map((m) => m.id) ?? []
   const loadModules = useApp((s) => s.loadModules)
   const toast = useApp((s) => s.toast)
   const [removing, setRemoving] = useState<ModuleSummary | null>(null)
@@ -302,6 +311,10 @@ export function Library(): React.JSX.Element {
               onRemove={() => setRemoving(m)}
               onReset={() => setResetting(m)}
               onGoal={() => setGoaling(m.id)}
+              onMove={{
+                up: i > 0 ? () => move(ids, m.id, -1) : undefined,
+                down: i < ids.length - 1 ? () => move(ids, m.id, 1) : undefined
+              }}
             />
           ))}
         </div>
