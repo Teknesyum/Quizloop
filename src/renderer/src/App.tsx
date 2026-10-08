@@ -5,6 +5,7 @@ import { runBack } from './back'
 import { remind } from './remind'
 import { Confirm } from './components/Confirm'
 import { ScaleSwitch } from './components/ScaleSwitch'
+import { ReportButton } from '@renderer/components/ReportButton'
 import { TopMenu } from './components/TopMenu'
 import { useUpdateTools } from './components/UpdateTools'
 import { useBookWarmup } from './components/bookdoc'
@@ -203,6 +204,7 @@ export default function App(): React.JSX.Element {
         onMaximize={() => win.toggleMaximize()}
         onClose={() => win.close()}
       />
+      <ReportButton />
       <div className="ql-body">
         <main className="ql-main" key={route.name}>
           {route.name === 'library' && <Library />}

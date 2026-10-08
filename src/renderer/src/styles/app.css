@@ -2715,3 +2715,60 @@ button.ql-mark:not(:disabled):active {
   font-size: var(--tk-fs-3);
   line-height: var(--tk-lh-mono);
 }
+
+.ql-report {
+  position: fixed;
+  inset-inline-start: var(--tk-sp-2);
+  inset-block-end: calc(var(--tk-sp-2) + env(safe-area-inset-bottom, 0px));
+  z-index: 30;
+  min-width: var(--tk-sp-5);
+  padding: 0 var(--tk-sp-1);
+  border: 0;
+  border-radius: var(--tk-r-btn);
+  background: var(--tk-bg);
+  color: var(--tk-text-label);
+  font: inherit;
+  font-size: var(--tk-fs-1);
+  font-weight: var(--tk-fw-semi);
+  line-height: calc(var(--tk-titlebar-h-min) - var(--tk-sp-2));
+  cursor: pointer;
+  transition: color var(--tk-t-base) var(--tk-e-out);
+}
+
+.ql-report:hover,
+.ql-report:focus-visible {
+  color: var(--tk-renk-2-text);
+}
+
+.ql-report:focus-visible {
+  outline: var(--tk-focus-w) solid var(--tk-renk-1);
+  outline-offset: var(--tk-focus-offset);
+  box-shadow: 0 0 0 var(--tk-focus-w) var(--tk-bg);
+}
+
+.ql-report:active {
+  color: var(--tk-renk-1);
+}
+
+.ql-report:disabled {
+  color: var(--tk-disabled);
+  cursor: not-allowed;
+}
+
+.ql-report-note {
+  width: 100%;
+  resize: vertical;
+}
+
+.ql-toast-action {
+  display: block;
+  margin-block-start: var(--tk-sp-1);
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--tk-renk-2-text);
+  font: inherit;
+  font-weight: var(--tk-fw-semi);
+  text-decoration: underline;
+  cursor: pointer;
+}

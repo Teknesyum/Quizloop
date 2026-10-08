@@ -40,6 +40,18 @@ function Item({ x, i }: { x: Toast; i: number }): React.JSX.Element {
       <div className="tk-toast-body">
         <div className="tk-toast-title">{t(`toast.title.${x.kind}`)}</div>
         {x.text}
+        {x.action && (
+          <button
+            type="button"
+            className="ql-toast-action tk-no-drag"
+            onClick={() => {
+              x.action?.run()
+              dismiss(x.id)
+            }}
+          >
+            {x.action.label}
+          </button>
+        )}
       </div>
       <button
         type="button"
