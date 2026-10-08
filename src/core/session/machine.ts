@@ -35,6 +35,7 @@ interface Live {
   correctFirstTry: number
   score: number
   retired: number
+  partial: number
   relearned: number
   startedAt: Date
 }
@@ -77,6 +78,7 @@ export class SessionMachine {
       questionId: q.id,
       index: s.seen + 1,
       total: s.queue.length + s.relearn.length,
+      left: s.queue.length - s.pos + s.relearn.length + 1,
       stem: q.stem,
       choices: q.choices,
       difficulty: q.difficulty,
@@ -146,6 +148,7 @@ export class SessionMachine {
       correctFirstTry: 0,
       score: 0,
       retired: 0,
+      partial: 0,
       relearned: 0,
       startedAt: now
     }
@@ -265,6 +268,7 @@ export class SessionMachine {
     if (!c.relearn) s.seen++
     s.score += delta
     if (retired) s.retired++
+    if (self === 2) s.partial++
     if (c.relearn && self !== 1) s.relearned++
     if (self === 1) {
       const fresh = await this.deps.db
@@ -326,6 +330,7 @@ export class SessionMachine {
       correctFirstTry: s.correctFirstTry,
       score: s.score,
       retired: s.retired,
+      partial: s.partial,
       relearned: s.relearned,
       startedAt: s.startedAt.toISOString(),
       endedAt: now.toISOString()

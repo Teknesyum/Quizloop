@@ -50,17 +50,21 @@ export function CardInfo({
 
 export function CardMeter({
   total,
-  retired
+  retired,
+  partial
 }: {
   total: number
   retired: number
+  partial: number
 }): React.JSX.Element {
   const percent = total ? Math.round((retired / total) * 100) : 0
   return (
     <div className="ql-card-meter" title={t('library.card.retiredHelp')}>
       <p className="ql-card-meter-row">
-        <span className="tk-hint">{t('library.card.questions', { count: total })}</span>
-        <span className="tk-hint">{t('library.card.percent', { percent })}</span>
+        <span className="tk-hint">
+          {t('library.card.questions', { count: total })} · {t('goals.percent', { percent })}
+        </span>
+        <span className="tk-hint">{t('library.card.split', { retired, partial })}</span>
       </p>
       <div
         className="ql-progress"

@@ -7,7 +7,7 @@ import { GoalDialog } from '@renderer/components/GoalPick'
 import { goalLabel, goalToast, saveGoal, type GoalSpec } from '@renderer/goal'
 import { tinykeys } from 'tinykeys'
 import { goalKey, type ChapterSummary } from '@shared/ipc'
-import { ordered } from '@shared/order'
+import { ordered, sunk } from '@shared/order'
 import { useOrder } from '@renderer/hooks/useOrder'
 import { Skeleton } from '@renderer/components/Skeleton'
 import { ViewToggle } from '@renderer/components/ViewToggle'
@@ -25,7 +25,15 @@ export function Chapters({ moduleId }: { moduleId: string }): React.JSX.Element 
   const modules = useApp((s) => s.modules)
   const [loaded, setRows] = useState<ChapterSummary[] | null>(null)
   const { order, move } = useOrder(moduleId)
-  const rows = useMemo(() => loaded && ordered(loaded, (c) => c.chapter, order), [loaded, order])
+  const rows = useMemo(
+    () =>
+      loaded &&
+      sunk(
+        ordered(loaded, (c) => c.chapter, order),
+        (c) => c.total > 0 && c.retired === c.total
+      ),
+    [loaded, order]
+  )
   const ids = rows?.map((c) => c.chapter) ?? []
   const [resetting, setResetting] = useState<ChapterSummary | null>(null)
   const [goaling, setGoaling] = useState<ChapterSummary | null>(null)
@@ -165,7 +173,7 @@ export function Chapters({ moduleId }: { moduleId: string }): React.JSX.Element 
                 <CardCover src={chapterCover(c)} name={c.chapter || t('chapters.unsorted')} foot />
                 <CardInfo c={c} />
               </div>
-              <CardMeter total={c.total} retired={c.retired} />
+              <CardMeter total={c.total} retired={c.retired} partial={c.partial} />
               {c.goal && <GoalMeter done={c.retiredToday} goal={c.goal} />}
               <footer className="ql-card-foot">
                 <CardMenu label={t('library.more')}>

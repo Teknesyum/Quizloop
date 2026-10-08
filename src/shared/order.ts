@@ -9,6 +9,10 @@ export function ordered<T>(rows: T[], id: (row: T) => string, order: string[] | 
     .map((x) => x.row)
 }
 
+export function sunk<T>(rows: T[], done: (row: T) => boolean): T[] {
+  return [...rows.filter((row) => !done(row)), ...rows.filter(done)]
+}
+
 export function moved(ids: string[], id: string, step: -1 | 1): string[] {
   const from = ids.indexOf(id)
   const to = from + step

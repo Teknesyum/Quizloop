@@ -6,6 +6,16 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.7.54] - 2026-10-08
+
+### Changed
+
+- A chapter whose questions are all retired moves to the end of the chapter list.
+- The session counter counts down the questions left instead of counting up.
+- Cards show how many questions are retired and how many are partly understood,
+  as in "35 Retired / 5 Partly"; the session summary lists the partly understood
+  ones too. Those come back in later sessions.
+
 ## [0.7.53] - 2026-10-08
 
 ### Fixed

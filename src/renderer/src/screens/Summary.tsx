@@ -14,6 +14,7 @@ export function Summary({ summary, onBack, onAgain }: Props): React.JSX.Element 
     [t('summary.seen'), summary.seen],
     [t('summary.first'), summary.correctFirstTry],
     [t('summary.retired'), summary.retired],
+    [t('summary.partial'), summary.partial],
     [t('summary.relearned'), summary.relearned]
   ]
   useEffect(
