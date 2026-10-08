@@ -6,6 +6,15 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.7.53] - 2026-10-08
+
+### Fixed
+
+- In a small desktop window the four tabs in the top bar no longer overlap; the
+  version label and the size control step aside to make room.
+- Theme names in Settings are no longer split in the middle of a word, and every
+  theme tile has the same height.
+
 ## [0.7.52] - 2026-10-08
 
 ### Added
