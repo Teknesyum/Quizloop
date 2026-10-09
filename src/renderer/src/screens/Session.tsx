@@ -89,6 +89,7 @@ export function Session({
   const go = useApp((x) => x.go)
   const toast = useApp((x) => x.toast)
   const loadModules = useApp((x) => x.loadModules)
+  const saveSettings = useApp((x) => x.saveSettings)
   const [book, setBook] = useState<SourceBook | null>(null)
   const [reading, setReading] = useState<string | null>(null)
   const [whyAll, setWhyAll] = useState<string | null>(null)
@@ -227,9 +228,12 @@ export function Session({
         if (state.phase === 'solved') s.grade(3)
       },
       [KEYS.flag]: () => flag(),
+      KeyK: () => {
+        if (book?.available) void saveSettings({ bookAuto: !bookAuto })
+      },
       [KEYS.end]: () => void finish()
     })
-  }, [state, reading, flagging])
+  }, [state, reading, flagging, book, bookAuto, saveSettings])
 
   if (state.phase === 'summary') {
     return (
@@ -573,8 +577,25 @@ export function Session({
                     solved.source.file
                   )}
                 </span>
-                {book?.available && !bookAuto && (
-                  <BookButton file={solved.source.file} onOpen={() => setReading(q.questionId)} />
+                {book?.available && (
+                  <span className="ql-source-acts">
+                    {!bookAuto && (
+                      <BookButton
+                        file={solved.source.file}
+                        onOpen={() => setReading(q.questionId)}
+                      />
+                    )}
+                    <button
+                      type="button"
+                      className="tk-btn tk-btn-ghost ql-btn-sm"
+                      aria-pressed={bookAuto}
+                      title={t('settings.bookAutoHelp')}
+                      onClick={() => void saveSettings({ bookAuto: !bookAuto })}
+                    >
+                      {t(bookAuto ? 'session.bookAuto.off' : 'session.bookAuto.on')}
+                      <kbd>K</kbd>
+                    </button>
+                  </span>
                 )}
               </blockquote>
             )}
