@@ -18,6 +18,7 @@ const ZOOM_MAX = 4
 const DPR_MAX = 2
 const SWIPE_MIN = 48
 const TAP_MAX = 10
+const HOLD = '.ql-book-stage, .ql-bv-zoom, .ql-book-kesit, .ql-book-quote, button'
 
 interface Highlight {
   bbox?: [number, number, number, number]
@@ -290,7 +291,8 @@ export function BookViewer({
   source,
   assetBase,
   onBook,
-  onClose
+  onClose,
+  inline = false
 }: {
   book: SourceBook | null
   moduleId: string
@@ -298,6 +300,7 @@ export function BookViewer({
   assetBase: string
   onBook(next: SourceBook): void
   onClose(): void
+  inline?: boolean
 }): React.JSX.Element {
   const offset = book?.sayfaOfseti ?? 0
   const rtl = book?.sagdanSola === true
@@ -324,6 +327,7 @@ export function BookViewer({
   const [single, setSingle] = useState(false)
   const spreadRef = useRef<HTMLDivElement | null>(null)
   const frameRef = useRef<HTMLDivElement | null>(null)
+  const scrimRef = useRef<HTMLDivElement | null>(null)
   const paneRef = useRef<HTMLDivElement | null>(null)
   const trackRef = useRef<HTMLDivElement | null>(null)
   const [zoom, setZoom] = useState(1)
@@ -525,21 +529,83 @@ export function BookViewer({
   }, [])
 
   useEffect(() => {
+    const arrows = {
+      ArrowRight: () => turn(rtl ? 'prev' : 'next'),
+      ArrowLeft: () => turn(rtl ? 'next' : 'prev')
+    }
+    if (inline) return tinykeys(window, arrows)
     return tinykeys(window, {
+      ...arrows,
       Escape: (e) => {
         e.preventDefault()
         e.stopPropagation()
         if (zoomRef.current > 1) zoomTo(1)
         else onClose()
       },
-      ArrowRight: () => turn(rtl ? 'prev' : 'next'),
-      ArrowLeft: () => turn(rtl ? 'next' : 'prev'),
       Space: (e) => {
         e.preventDefault()
         turn('next')
       }
     })
-  }, [turn, onClose, zoomTo, rtl])
+  }, [turn, onClose, zoomTo, rtl, inline])
+
+  useEffect(() => {
+    const el = scrimRef.current
+    if (!el || inline) return
+    let from: { x: number; y: number; bare: boolean } | null = null
+    const begin = (target: EventTarget | null, x: number, y: number): boolean => {
+      const node = target instanceof Element ? target : null
+      if (!node || node.closest(HOLD)) {
+        from = null
+        return false
+      }
+      from = { x, y, bare: node === el }
+      return true
+    }
+    const finish = (x: number, y: number): void => {
+      const start = from
+      from = null
+      if (!start) return
+      const far = Math.hypot(x - start.x, y - start.y)
+      if (far >= SWIPE_MIN || (start.bare && far <= TAP_MAX)) onClose()
+    }
+    const onTouchStart = (e: TouchEvent): void => {
+      const p = e.touches[0]
+      if (e.touches.length !== 1 || !p) {
+        from = null
+        return
+      }
+      if (begin(e.target, p.clientX, p.clientY)) e.stopPropagation()
+    }
+    const onTouchEnd = (e: TouchEvent): void => {
+      const p = e.changedTouches[0]
+      if (!from || !p) return
+      e.stopPropagation()
+      e.preventDefault()
+      finish(p.clientX, p.clientY)
+    }
+    const onCancel = (): void => {
+      from = null
+    }
+    const onDown = (e: MouseEvent): void => {
+      if (e.button === 0) begin(e.target, e.clientX, e.clientY)
+    }
+    const onUp = (e: MouseEvent): void => finish(e.clientX, e.clientY)
+    el.addEventListener('touchstart', onTouchStart, { passive: true, capture: true })
+    el.addEventListener('touchend', onTouchEnd, { passive: false, capture: true })
+    el.addEventListener('touchcancel', onCancel, { capture: true })
+    el.addEventListener('mousedown', onDown)
+    el.addEventListener('mouseup', onUp)
+    el.addEventListener('mouseleave', onCancel)
+    return () => {
+      el.removeEventListener('touchstart', onTouchStart, { capture: true })
+      el.removeEventListener('touchend', onTouchEnd, { capture: true })
+      el.removeEventListener('touchcancel', onCancel, { capture: true })
+      el.removeEventListener('mousedown', onDown)
+      el.removeEventListener('mouseup', onUp)
+      el.removeEventListener('mouseleave', onCancel)
+    }
+  }, [inline, onClose])
 
   useEffect(() => {
     const el = spreadRef.current
@@ -628,12 +694,17 @@ export function BookViewer({
   }
 
   return (
-    <div className="tk-modal-scrim ql-book-scrim" data-tk-modal="confirm" role="presentation">
+    <div
+      ref={scrimRef}
+      className={inline ? 'ql-book-inline' : 'tk-modal-scrim ql-book-scrim'}
+      data-tk-modal={inline ? undefined : 'confirm'}
+      role="presentation"
+    >
       <div
-        className="tk-panel ql-book ql-transition-in"
+        className={`tk-panel ql-book ql-transition-in ${inline ? 'ql-book-embed' : ''}`}
         style={{ '--ql-blink-n': blinkN } as React.CSSProperties}
-        role="dialog"
-        aria-modal="true"
+        role={inline ? 'region' : 'dialog'}
+        aria-modal={inline ? undefined : true}
         aria-label={t('book.title')}
       >
         <header className="ql-book-bar">
@@ -671,14 +742,16 @@ export function BookViewer({
             >
               {t('book.next')}
             </button>
-            <button
-              type="button"
-              className="tk-btn tk-btn-primary ql-btn-sm"
-              onClick={onClose}
-              autoFocus
-            >
-              {t('book.close')}
-            </button>
+            {!inline && (
+              <button
+                type="button"
+                className="tk-btn tk-btn-primary ql-btn-sm"
+                onClick={onClose}
+                autoFocus
+              >
+                {t('book.close')}
+              </button>
+            )}
           </div>
         </header>
 
@@ -808,7 +881,7 @@ export function BookViewer({
               )}
             </span>
           )}
-          <span className="tk-hint">{t('book.keys')}</span>
+          <span className="tk-hint">{t(inline ? 'book.keysInline' : 'book.keys')}</span>
         </footer>
       </div>
     </div>

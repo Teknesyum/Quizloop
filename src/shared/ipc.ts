@@ -192,6 +192,7 @@ export interface Settings {
   soundOn: boolean
   fontScale: number
   autoUpdate: boolean
+  bookAuto: boolean
   welcomeSeen: boolean
   samplesUsed: boolean
   goals: Record<string, GoalSetting>

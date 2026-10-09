@@ -95,7 +95,9 @@ export function Session({
   const [telling, setTelling] = useState<string | null>(null)
   const [flagging, setFlagging] = useState(false)
   const solvedRef = useRef<HTMLDivElement | null>(null)
+  const gradeRef = useRef<HTMLDivElement | null>(null)
   const speed = settings?.typerSpeed ?? 'normal'
+  const bookAuto = settings?.bookAuto === true
   const state = s.state
 
   useEffect(() => {
@@ -159,6 +161,17 @@ export function Session({
     if (state.phase !== 'solved') return
     solvedRef.current?.scrollIntoView({ block: 'nearest' })
   }, [state.phase])
+
+  useEffect(() => {
+    const bar = gradeRef.current
+    const host = solvedRef.current
+    if (!bar || !host || !bookAuto) return
+    const fit = (): void => host.style.setProperty('--ql-grade-h', `${bar.offsetHeight}px`)
+    fit()
+    const seen = new ResizeObserver(fit)
+    seen.observe(bar)
+    return () => seen.disconnect()
+  }, [bookAuto, state])
 
   const liveQ = 'q' in state ? state.q : null
   useTargetWarmup(book, liveQ ? viewPdfPage(liveQ, book?.sayfaOfseti ?? 0) : null)
@@ -560,12 +573,24 @@ export function Session({
                     solved.source.file
                   )}
                 </span>
-                {book?.available && (
+                {book?.available && !bookAuto && (
                   <BookButton file={solved.source.file} onOpen={() => setReading(q.questionId)} />
                 )}
               </blockquote>
             )}
-            <div className="ql-grade">
+            {solved.source && kaynakGoster(q.tags) && book?.available && bookAuto && (
+              <BookViewer
+                key={`${book.path ?? 'kesit'}:${here}`}
+                book={book}
+                moduleId={moduleId}
+                source={solved.source}
+                assetBase={q.assetBase}
+                onBook={setBook}
+                onClose={() => undefined}
+                inline
+              />
+            )}
+            <div className="ql-grade" ref={gradeRef}>
               <span className="tk-label">{t('session.grade.title')}</span>
               <div className="ql-grade-row">
                 {([1, 2, 3] as SelfAssess[]).map((g) => (

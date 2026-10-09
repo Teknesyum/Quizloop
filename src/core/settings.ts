@@ -9,6 +9,7 @@ export const DEFAULT_SETTINGS: Settings = {
   soundOn: false,
   fontScale: 1,
   autoUpdate: true,
+  bookAuto: false,
   welcomeSeen: false,
   samplesUsed: false,
   goals: {},
@@ -26,6 +27,7 @@ export const SettingsPatch = z
     soundOn: z.boolean(),
     fontScale: z.number().min(0.5).max(2),
     autoUpdate: z.boolean(),
+    bookAuto: z.boolean(),
     welcomeSeen: z.boolean(),
     samplesUsed: z.boolean(),
     goals: z.record(

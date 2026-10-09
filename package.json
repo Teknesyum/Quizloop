@@ -1,6 +1,6 @@
 {
   "name": "quizloop",
-  "version": "0.7.57",
+  "version": "0.7.58",
   "description": "Cross-platform spaced-repetition quiz engine",
   "main": "./out/main/boot.js",
   "author": "Teknesyum",
