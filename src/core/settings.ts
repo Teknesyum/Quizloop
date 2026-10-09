@@ -11,6 +11,7 @@ export const DEFAULT_SETTINGS: Settings = {
   autoUpdate: true,
   bookAuto: false,
   welcomeSeen: false,
+  newsSeen: '',
   samplesUsed: false,
   goals: {},
   goalNotify: false,
@@ -29,6 +30,7 @@ export const SettingsPatch = z
     autoUpdate: z.boolean(),
     bookAuto: z.boolean(),
     welcomeSeen: z.boolean(),
+    newsSeen: z.string().max(20),
     samplesUsed: z.boolean(),
     goals: z.record(
       z.string(),

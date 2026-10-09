@@ -443,5 +443,10 @@
   "library.resume": "Continue Where You Left Off",
   "library.resumeMixed": "Mixed",
   "chapters.partial": "Solve Partly Known ({count})",
-  "chapters.partialHelp": "Asks only the questions you graded \"partly\", without waiting for their due date."
+  "chapters.partialHelp": "Asks only the questions you graded \"partly\", without waiting for their due date.",
+  "news.title": "What Came With This Update",
+  "news.again": "You can open this summary again from About in Settings.",
+  "news.close": "Fine, Carry On",
+  "settings.news": "Show again what the latest updates brought.",
+  "settings.newsOpen": "Show What Is New"
 }
