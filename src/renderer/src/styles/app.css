@@ -814,6 +814,46 @@ kbd {
   padding: var(--tk-sp-2) var(--tk-sp-4) 0;
 }
 
+.ql-why {
+  margin-top: calc(var(--tk-sp-3) * -1);
+  padding: 0 var(--tk-sp-5) var(--tk-sp-3);
+}
+
+.ql-note-md > :first-child {
+  margin-top: 0;
+}
+
+.ql-note-md > :last-child {
+  margin-bottom: 0;
+}
+
+.ql-why-all {
+  align-self: flex-start;
+}
+
+.ql-tell {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--tk-sp-3);
+}
+
+.ql-tell-body {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  gap: var(--tk-sp-3);
+  padding: var(--tk-sp-3) var(--tk-sp-4);
+  border-left: 2px solid var(--tk-renk-3);
+}
+
+.ql-resume {
+  display: flex;
+  align-items: center;
+  gap: var(--tk-sp-4);
+  flex-wrap: wrap;
+}
+
 /* --- solution --- */
 
 .ql-solution {
@@ -1462,11 +1502,6 @@ kbd {
     animation: none;
     opacity: 1;
   }
-}
-
-.ql-book-still .ql-book-mark {
-  animation: none;
-  opacity: 1;
 }
 
 /* --- media: figure, masks, marks, zoom, table --- */

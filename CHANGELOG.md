@@ -6,6 +6,24 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.7.55] - 2026-10-09
+
+### Added
+
+- After the right answer, "Explain Wrong Choices" shows why each remaining choice
+  is wrong, not only the ones that were picked.
+- Questions can carry an optional topic explanation (`anlatim`); when one is
+  present an "Explain" button opens it on the question. The guide sample carries
+  one on its first question.
+- The library opens with "Continue Where You Left Off", which resumes the chapter
+  studied last.
+
+### Changed
+
+- Modules in the library are listed by last use instead of by name.
+- The highlight in the book viewer blinks for one second; the setting for its
+  length is gone.
+
 ## [0.7.54] - 2026-10-08
 
 ### Changed

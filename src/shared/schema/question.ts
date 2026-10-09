@@ -91,6 +91,7 @@ export const Question = z
     beklenenCevap: z.string().min(1).optional(),
     distractors: z.partialRecord(ChoiceKey, z.string().min(1)).default({}),
     solution: z.array(SolutionBlock).min(1),
+    anlatim: z.array(SolutionBlock).min(1).optional(),
     source: Source,
     difficulty: Difficulty,
     tags: z.array(z.string()).default([]),

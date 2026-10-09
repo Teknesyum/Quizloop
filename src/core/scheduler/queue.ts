@@ -129,6 +129,30 @@ export async function chapterCounts(
     )
 }
 
+export async function lastUse(
+  db: Kysely<Database>,
+  moduleId: string
+): Promise<{ used: string | null; chapter: string | null }> {
+  const rows = await db
+    .selectFrom('card')
+    .select(['chapter', 'last_review', 'retired_at'])
+    .where('module_id', '=', moduleId)
+    .where('orphaned', '=', 0)
+    .execute()
+  let used: string | null = null
+  let chapter: string | null = null
+  const open = new Set<string>()
+  for (const r of rows) {
+    if (!r.retired_at && r.chapter) open.add(r.chapter)
+    for (const t of [r.last_review, r.retired_at]) {
+      if (!t || (used && t <= used)) continue
+      used = t
+      chapter = r.chapter
+    }
+  }
+  return { used, chapter: chapter && open.has(chapter) ? chapter : null }
+}
+
 export async function countDue(
   db: Kysely<Database>,
   moduleId: string,

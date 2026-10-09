@@ -336,6 +336,127 @@
         ]
       }
     },
+    "anlatim": {
+      "minItems": 1,
+      "type": "array",
+      "items": {
+        "oneOf": [
+          {
+            "type": "object",
+            "properties": {
+              "type": {
+                "type": "string",
+                "const": "text"
+              },
+              "md": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "type",
+              "md"
+            ]
+          },
+          {
+            "type": "object",
+            "properties": {
+              "type": {
+                "type": "string",
+                "const": "hint"
+              },
+              "md": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "type",
+              "md"
+            ]
+          },
+          {
+            "type": "object",
+            "properties": {
+              "type": {
+                "type": "string",
+                "const": "formula"
+              },
+              "tex": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "type",
+              "tex"
+            ]
+          },
+          {
+            "type": "object",
+            "properties": {
+              "type": {
+                "type": "string",
+                "const": "image"
+              },
+              "ref": {
+                "type": "string",
+                "pattern": "^assets\\/(img|tbl|kaynak)\\/[\\w.-]+\\.(webp|png|svg)$"
+              },
+              "caption": {
+                "type": "string"
+              },
+              "alt": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 400
+              }
+            },
+            "required": [
+              "type",
+              "ref"
+            ]
+          },
+          {
+            "type": "object",
+            "properties": {
+              "header": {
+                "minItems": 1,
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "rows": {
+                "minItems": 1,
+                "type": "array",
+                "items": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              },
+              "caption": {
+                "type": "string"
+              },
+              "rowHeader": {
+                "type": "boolean"
+              },
+              "type": {
+                "type": "string",
+                "const": "table"
+              }
+            },
+            "required": [
+              "header",
+              "rows",
+              "type"
+            ]
+          }
+        ]
+      }
+    },
     "source": {
       "type": "object",
       "properties": {

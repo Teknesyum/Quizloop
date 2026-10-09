@@ -186,21 +186,6 @@ export function Settings(): React.JSX.Element {
             </div>
 
             <div className="tk-field">
-              <label className="tk-label" htmlFor="blinkSeconds">
-                {t('settings.blink')}
-              </label>
-              <NumberField
-                key={settings.blinkSeconds}
-                id="blinkSeconds"
-                min={0}
-                max={30}
-                value={settings.blinkSeconds}
-                onCommit={(n) => apply({ blinkSeconds: n })}
-              />
-              <span className="tk-hint">{t('settings.blinkHelp')}</span>
-            </div>
-
-            <div className="tk-field">
               <span className="tk-label">{t('settings.typer')}</span>
               <div className="ql-segment" role="radiogroup" aria-label={t('settings.typer')}>
                 {SPEEDS.map((sp) => (

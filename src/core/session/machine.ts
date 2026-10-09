@@ -87,6 +87,7 @@ export class SessionMachine {
       vurgu: q.vurgu,
       assetBase: this.deps.assetBase(s.moduleId),
       relearn: c.relearn,
+      ...(q.anlatim ? { anlatim: q.anlatim } : {}),
       kaynak: {
         sayfa: q.source.pages[0],
         ...(q.source.kesit ? { pdfSayfa: q.source.kesit.pdfSayfa } : {})
@@ -204,6 +205,7 @@ export class SessionMachine {
         correct: true,
         key,
         correctKey: q.correct,
+        distractors: q.distractors,
         solution: q.solution,
         source: q.source,
         wrongPicks: c.wrongPicks

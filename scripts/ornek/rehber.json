@@ -98,6 +98,7 @@
       ],
       "solution": "Modül bir soru paketidir: bir konunun sorularını, şıklarını, çözümlerini ve varsa görsellerini bir arada taşır.",
       "hint": "Uygulamanın kendi sorusu yoktur; sorular bir yerden gelmelidir.",
+      "tell": "QuizLoop bir motor gibidir: soruları sıraya koyar, cevapları puanlar ve yanlışları açıklar. Soruların kendisi ise modül adı verilen paketlerle gelir. Bu yüzden aynı uygulamayla istediğin konuyu çalışabilirsin.",
       "quote": "Modül, bir konunun sorularını, şıklarını, çözümlerini ve varsa görsellerini bir arada taşıyan soru paketidir.",
       "tags": ["rehber", "modül"]
     },

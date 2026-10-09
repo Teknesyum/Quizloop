@@ -96,6 +96,25 @@ describe('SessionMachine', () => {
     expect(all.reduce((n, r) => n + r.count.partial, 0)).toBe(1)
   })
 
+  it('hands over every wrong choice explanation once the pick is right', async () => {
+    const m = await machine()
+    const s = await m.start('ornek')
+    m.reveal(s.sessionId)
+    const keys = s.first!.choices.map((c) => c.key)
+    let right: ReturnType<typeof m.answer> | null = null
+    for (const k of keys) {
+      const r = m.answer(s.sessionId, k)
+      expect(r.correct ? r.explanation : r.distractors).toBeUndefined()
+      if (r.correct) {
+        right = r
+        break
+      }
+    }
+    expect(Object.keys(right?.distractors ?? {}).sort()).toEqual(
+      keys.filter((k) => k !== right?.correctKey).sort()
+    )
+  })
+
   it('never leaks the correct key before the pick is right', async () => {
     const m = await machine()
     const s = await m.start('ornek')

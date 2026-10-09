@@ -4,7 +4,7 @@ import { fingerprint, ModuleError, readMeta, validateModule, type Tick } from '@
 import { syncModule } from '@core/modules/sync'
 import { joinPath, type CorePorts } from '@core/ports'
 import { dailyGoal } from '@core/settings'
-import { chapterCounts, countDue } from '@core/scheduler/queue'
+import { chapterCounts, countDue, lastUse } from '@core/scheduler/queue'
 import { newer } from '@core/version'
 import { goalKey } from '@shared/ipc'
 import type {
@@ -60,6 +60,7 @@ export async function listModules(deps: ModuleDeps): Promise<ModuleSummary[]> {
   const out: ModuleSummary[] = []
   for (const r of rows) {
     const c = await countDue(db, r.id, now, start)
+    const last = await lastUse(db, r.id)
     const goal = goals[r.id]
     out.push({
       id: r.id,
@@ -70,10 +71,14 @@ export async function listModules(deps: ModuleDeps): Promise<ModuleSummary[]> {
       tags: await tagsOf(ports, r.path),
       questionCount: r.question_count,
       ...c,
+      used: last.used,
+      lastChapter: last.chapter,
       goal: goalOf(goal, c, start)
     })
   }
-  return out
+  return out.sort(
+    (a, b) => (b.used ?? '').localeCompare(a.used ?? '') || a.name.localeCompare(b.name, 'tr')
+  )
 }
 
 export async function moduleChapters(

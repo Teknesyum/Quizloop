@@ -10,7 +10,6 @@ import { findQuoteRuns, pdfPageOf } from '@shared/kaynak'
 import { Skeleton } from '@renderer/components/Skeleton'
 import { t } from '@renderer/i18n'
 import { shortAlt } from './media'
-import { useApp } from '@renderer/store/app'
 import { bookTarget, idle, knownUnit, openBook, sourcePdfPage, warmBook } from './bookdoc'
 import './bookviewer.css'
 
@@ -54,6 +53,8 @@ function tokenMs(name: string): number {
   const n = Number.parseFloat(raw)
   return Number.isFinite(n) && n > 0 ? (raw.endsWith('ms') ? n : n * 1000) : 1
 }
+
+const BLINK_MS = 1000
 
 function slowMs(): number {
   return tokenMs('--tk-t-slow')
@@ -320,7 +321,6 @@ export function BookViewer({
   const curRef = useRef(cur)
   const [leafWidth, setLeafWidth] = useState(0)
   const [ratio, setRatio] = useState(() => warm?.ratio ?? 1.4)
-  const blinkSeconds = useApp((s) => s.settings?.blinkSeconds ?? 5)
   const [single, setSingle] = useState(false)
   const spreadRef = useRef<HTMLDivElement | null>(null)
   const frameRef = useRef<HTMLDivElement | null>(null)
@@ -602,7 +602,7 @@ export function BookViewer({
   }, [source, base])
 
   const pages = portrait ? [Math.max(lo, left)] : [Math.max(lo, left), Math.min(left + 1, maxLeft)]
-  const blinkN = Math.max(2, Math.round((blinkSeconds * 1000) / slowMs() / 2) * 2)
+  const blinkN = Math.max(2, Math.round(BLINK_MS / slowMs() / 2) * 2)
   const kesitRef = source.kesit?.ref
   const showPick = !usePdf || failed
   const canPick = window.quizloop.capabilities.folders
@@ -630,7 +630,7 @@ export function BookViewer({
   return (
     <div className="tk-modal-scrim ql-book-scrim" data-tk-modal="confirm" role="presentation">
       <div
-        className={`tk-panel ql-book ql-transition-in ${blinkSeconds === 0 ? 'ql-book-still' : ''}`}
+        className="tk-panel ql-book ql-transition-in"
         style={{ '--ql-blink-n': blinkN } as React.CSSProperties}
         role="dialog"
         aria-modal="true"
