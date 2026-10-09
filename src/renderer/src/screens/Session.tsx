@@ -88,6 +88,8 @@ export function Session({
   const loadModules = useApp((x) => x.loadModules)
   const [book, setBook] = useState<SourceBook | null>(null)
   const [reading, setReading] = useState<string | null>(null)
+  const [whyAll, setWhyAll] = useState<string | null>(null)
+  const [telling, setTelling] = useState<string | null>(null)
   const solvedRef = useRef<HTMLDivElement | null>(null)
   const speed = settings?.typerSpeed ?? 'normal'
   const state = s.state
@@ -310,6 +312,22 @@ export function Session({
               ['Esc', 'session.hint.end']
             ]
   const known = 'known' in state && state.known
+  const here = `${q.questionId}:${q.index}`
+  const others = Object.fromEntries(
+    Object.entries(solved?.distractors ?? {}).filter(([k]) => !wrong[k as ChoiceKey])
+  ) as Partial<Record<ChoiceKey, string>>
+  const hasOthers = Object.keys(others).length > 0
+  const why = whyAll === here ? others : {}
+  const whyButton = hasOthers && (
+    <button
+      type="button"
+      className="tk-btn tk-btn-ghost ql-btn-sm ql-why-all"
+      aria-expanded={whyAll === here}
+      onClick={() => setWhyAll(whyAll === here ? null : here)}
+    >
+      {t(whyAll === here ? 'session.whyOthersHide' : 'session.whyOthers')}
+    </button>
+  )
 
   return (
     <section className="ql-screen ql-session">
@@ -362,7 +380,26 @@ export function Session({
           marks={marks}
           onMark={state.phase === 'choices' ? (k) => void s.pick(k) : undefined}
         />
-        <Stem key={`${q.questionId}:${q.index}`} q={q} speed={speed} />
+        <Stem key={here} q={q} speed={speed} />
+
+        {q.anlatim && (
+          <div className="ql-tell">
+            <button
+              type="button"
+              className="tk-btn tk-btn-ghost ql-btn-sm"
+              aria-expanded={telling === here}
+              onClick={() => setTelling(telling === here ? null : here)}
+            >
+              {t('session.explain')}
+            </button>
+            {telling === here && (
+              <div className="ql-tell-body ql-transition-in">
+                <span className="tk-label">{t('session.explainTitle')}</span>
+                <Solution blocks={q.anlatim} assetBase={q.assetBase} />
+              </div>
+            )}
+          </div>
+        )}
 
         {!showChoices && (
           <div className="ql-actions">
@@ -393,6 +430,15 @@ export function Session({
                   <span>{wrong[c.key]}</span>
                 </p>
               ))}
+            {q.choices
+              .filter((c) => why[c.key])
+              .map((c) => (
+                <div key={c.key} className="tk-hint ql-distractor ql-mark-note">
+                  <span className="tk-mono">{c.key}</span>
+                  <Markdown md={why[c.key] ?? ''} assetBase={q.assetBase} className="ql-note-md" />
+                </div>
+              ))}
+            {whyButton}
             {marks?.some((m) => m.open) && (
               <ul className="ql-mark-legend">
                 {marks.map((m) => (
@@ -443,11 +489,20 @@ export function Session({
                       <span>{wrong[c.key]}</span>
                     </p>
                   )}
+                  {why[c.key] && (
+                    <Markdown
+                      md={why[c.key] ?? ''}
+                      assetBase={q.assetBase}
+                      className="tk-hint ql-why ql-note-md"
+                    />
+                  )}
                 </li>
               )
             })}
           </ol>
         )}
+
+        {!marking && whyButton}
 
         {solved && (
           <div className="ql-solved ql-transition-in" ref={solvedRef}>

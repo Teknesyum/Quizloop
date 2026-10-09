@@ -155,6 +155,16 @@ export function Library(): React.JSX.Element {
     })
   }, [modules, active, removing, resetting, goaling, sampling, go])
 
+  const last = raw?.reduce<ModuleSummary | null>(
+    (best, m) => (m.used && (!best || m.used > (best.used ?? '')) ? m : best),
+    null
+  )
+  const resume = (): void => {
+    if (!last) return
+    if (last.retired >= last.questionCount) go({ name: 'chapters', moduleId: last.id })
+    else go({ name: 'session', moduleId: last.id, chapter: last.lastChapter })
+  }
+
   const samples = modules?.filter((m) => SAMPLE_IDS.includes(m.id)) ?? []
   const goalOf = goaling ? modules?.find((m) => m.id === goaling) : undefined
 
@@ -294,6 +304,17 @@ export function Library(): React.JSX.Element {
           {window.quizloop.capabilities.folders && (
             <p className="tk-hint">{t('library.dropHint')}</p>
           )}
+        </div>
+      )}
+
+      {last && (
+        <div className="ql-resume ql-transition-in">
+          <button type="button" className="tk-btn tk-btn-primary" onClick={resume} autoFocus>
+            {t('library.resume')}
+          </button>
+          <span className="tk-hint">
+            {[last.name, last.lastChapter ?? t('library.resumeMixed')].join(' · ')}
+          </span>
         </div>
       )}
 

@@ -294,8 +294,6 @@
   "settings.transferImported": "Package Imported, The App Is Restarting",
   "settings.transferFailed": "Transfer Failed",
   "settings.transferNotPackage": "The chosen folder is not a QuizLoop transfer package",
-  "settings.blink": "Book Highlight Blink (s)",
-  "settings.blinkHelp": "How long the quoted passage blinks when the book opens. 0 turns it off.",
   "update.get": "Download",
   "update.cancel": "Cancel",
   "update.now": "Update",
@@ -416,5 +414,11 @@
   "report.noteTitle": "Describe The Problem Briefly",
   "report.send": "Send",
   "report.noteSent": "Your note was added, thank you.",
-  "report.failed": "The report could not be sent. Check your connection and try again."
+  "report.failed": "The report could not be sent. Check your connection and try again.",
+  "session.explain": "Explain",
+  "session.explainTitle": "Topic Explanation",
+  "session.whyOthers": "Explain Wrong Choices",
+  "session.whyOthersHide": "Hide Explanations",
+  "library.resume": "Continue Where You Left Off",
+  "library.resumeMixed": "Mixed"
 }

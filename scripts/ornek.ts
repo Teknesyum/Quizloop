@@ -21,6 +21,7 @@ interface Draft {
   why: string[]
   solution: string
   hint?: string
+  tell?: string
   quote: string
   tags: string[]
 }
@@ -40,7 +41,7 @@ const SPECS: Spec[] = [
     draft: 'rehber',
     id: 'quizloop-rehberi',
     name: 'QuizLoop Rehberi: Uygulama Nasıl Kullanılır',
-    version: '1.0.2',
+    version: '1.0.3',
     description:
       'Modül nedir, nasıl eklenir, oturum nasıl işler, sorular neden geri gelir: uygulamayı soru çözerek öğreten rehber.',
     tags: ['rehber', 'örnek'],
@@ -124,6 +125,7 @@ function build(spec: Spec): number {
       correct,
       distractors,
       solution,
+      ...(d.tell ? { anlatim: [{ type: 'text', md: d.tell }] } : {}),
       source: { file: NOTES, pages: [d.page, d.page], quote: d.quote, chapter: d.chapter },
       difficulty: d.difficulty,
       tags: d.tags,

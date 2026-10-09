@@ -59,6 +59,8 @@ export interface ModuleSummary {
   learning: number
   retiredToday: number
   partial: number
+  used: string | null
+  lastChapter: string | null
   goal: ModuleGoal | null
 }
 
@@ -75,6 +77,7 @@ export interface QuestionView {
   vurgu: string[]
   assetBase: string
   relearn: boolean
+  anlatim?: SolutionBlock[]
   kaynak?: { sayfa: number; pdfSayfa?: number }
 }
 
@@ -83,6 +86,7 @@ export interface AnswerResult {
   key?: ChoiceKey
   beklenenCevap?: string
   explanation?: string
+  distractors?: Partial<Record<ChoiceKey, string>>
   correctKey?: ChoiceKey
   solution?: SolutionBlock[]
   source?: Source
@@ -187,7 +191,6 @@ export interface Settings {
   sessionLimit: number
   soundOn: boolean
   fontScale: number
-  blinkSeconds: number
   autoUpdate: boolean
   welcomeSeen: boolean
   samplesUsed: boolean

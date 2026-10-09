@@ -47,6 +47,12 @@
           "md": "Uygulamanın kendi sorusu yoktur; sorular bir yerden gelmelidir."
         }
       ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "QuizLoop bir motor gibidir: soruları sıraya koyar, cevapları puanlar ve yanlışları açıklar. Soruların kendisi ise modül adı verilen paketlerle gelir. Bu yüzden aynı uygulamayla istediğin konuyu çalışabilirsin."
+        }
+      ],
       "source": {
         "file": "notlar.md",
         "pages": [

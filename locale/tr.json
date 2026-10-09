@@ -294,8 +294,6 @@
   "settings.transferImported": "Paket Alındı, Uygulama Yeniden Başlıyor",
   "settings.transferFailed": "Taşıma Başarısız",
   "settings.transferNotPackage": "Seçilen klasör bir QuizLoop taşıma paketi değil",
-  "settings.blink": "Kitap Vurgusu Yanıp Sönme Süresi (sn)",
-  "settings.blinkHelp": "Kitap açıldığında ilgili bölüm bu kadar saniye yanıp söner. 0 kapatır.",
   "update.get": "İndir",
   "update.cancel": "İptal",
   "update.now": "Güncelle",
@@ -416,5 +414,11 @@
   "report.noteTitle": "Sorunu Kısaca Anlat",
   "report.send": "Gönder",
   "report.noteSent": "Notun eklendi, teşekkürler.",
-  "report.failed": "Bildirim gönderilemedi. Bağlantını kontrol edip yeniden dene."
+  "report.failed": "Bildirim gönderilemedi. Bağlantını kontrol edip yeniden dene.",
+  "session.explain": "Anlat",
+  "session.explainTitle": "Konu Anlatımı",
+  "session.whyOthers": "Yanlış Şıkları Açıkla",
+  "session.whyOthersHide": "Açıklamaları Gizle",
+  "library.resume": "Kaldığın Yerden Devam Et",
+  "library.resumeMixed": "Karışık"
 }
