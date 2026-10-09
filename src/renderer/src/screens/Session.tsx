@@ -93,7 +93,7 @@ export function Session({
   const saveSettings = useApp((x) => x.saveSettings)
   const [book, setBook] = useState<SourceBook | null>(null)
   const [reading, setReading] = useState<string | null>(null)
-  const [whyAll, setWhyAll] = useState<string | null>(null)
+  const [whyOpen, setWhyOpen] = useState<{ at: string; keys: ChoiceKey[] }>({ at: '', keys: [] })
   const [telling, setTelling] = useState<string | null>(null)
   const [flagging, setFlagging] = useState(false)
   const solvedRef = useRef<HTMLDivElement | null>(null)
@@ -345,16 +345,17 @@ export function Session({
     Object.entries(solved?.distractors ?? {}).filter(([k]) => !wrong[k as ChoiceKey])
   ) as Partial<Record<ChoiceKey, string>>
   const hasOthers = Object.keys(others).length > 0
-  const why = whyAll === here ? others : {}
-  const whyButton = hasOthers && (
-    <button
-      type="button"
-      className="tk-btn tk-btn-ghost ql-btn-sm ql-why-all"
-      aria-expanded={whyAll === here}
-      onClick={() => setWhyAll(whyAll === here ? null : here)}
-    >
-      {t(whyAll === here ? 'session.whyOthersHide' : 'session.whyOthers')}
-    </button>
+  const whyKeys = whyOpen.at === here ? whyOpen.keys : []
+  const why = Object.fromEntries(
+    Object.entries(others).filter(([k]) => whyKeys.includes(k as ChoiceKey))
+  ) as Partial<Record<ChoiceKey, string>>
+  const toggleWhy = (key: ChoiceKey): void =>
+    setWhyOpen({
+      at: here,
+      keys: whyKeys.includes(key) ? whyKeys.filter((k) => k !== key) : [...whyKeys, key]
+    })
+  const whyHint = hasOthers && whyKeys.length === 0 && (
+    <p className="tk-hint ql-why-hint">{t('session.whyTap')}</p>
   )
 
   return (
@@ -465,18 +466,37 @@ export function Session({
             {q.choices
               .filter((c) => why[c.key])
               .map((c) => (
-                <div key={c.key} className="tk-hint ql-distractor ql-mark-note">
+                <div
+                  key={c.key}
+                  className="tk-error ql-distractor ql-mark-note ql-transition-in"
+                  role="status"
+                >
+                  <span aria-hidden="true">✕</span>
                   <span className="tk-mono">{c.key}</span>
                   <Markdown md={why[c.key] ?? ''} assetBase={q.assetBase} className="ql-note-md" />
                 </div>
               ))}
-            {whyButton}
+            {whyHint}
             {marks?.some((m) => m.open) && (
               <ul className="ql-mark-legend">
                 {marks.map((m) => (
                   <li key={m.key} className={`ql-mark-legend-row ql-mark-legend-${m.state}`}>
-                    <span className="tk-mono ql-mark-legend-key">{m.key}</span>
-                    <span>{plainText(m.md)}</span>
+                    {others[m.key] ? (
+                      <button
+                        type="button"
+                        className="ql-mark-legend-ask"
+                        aria-expanded={Boolean(why[m.key])}
+                        onClick={() => toggleWhy(m.key)}
+                      >
+                        <span className="tk-mono ql-mark-legend-key">{m.key}</span>
+                        <span>{plainText(m.md)}</span>
+                      </button>
+                    ) : (
+                      <>
+                        <span className="tk-mono ql-mark-legend-key">{m.key}</span>
+                        <span>{plainText(m.md)}</span>
+                      </>
+                    )}
                   </li>
                 ))}
               </ul>
@@ -489,17 +509,20 @@ export function Session({
             {q.choices.map((c, i) => {
               const isWrong = Boolean(wrong[c.key])
               const isCorrect = (solved?.correctKey ?? (graded ? undefined : undefined)) === c.key
-              const disabled = Boolean(solved) || Boolean(graded) || isWrong
+              const asks = Boolean(solved) && Boolean(others[c.key])
+              const told = Boolean(why[c.key])
+              const disabled = !asks && (Boolean(solved) || Boolean(graded) || isWrong)
               return (
                 <li
                   key={c.key}
-                  className={`ql-choice ${isWrong ? 'ql-choice-wrong' : ''} ${isCorrect ? 'ql-choice-right' : ''}`}
+                  className={`ql-choice ${isWrong || told ? 'ql-choice-wrong' : ''} ${isCorrect ? 'ql-choice-right' : ''}`}
                   style={{ '--ql-i': i } as React.CSSProperties}
                 >
                   <button
                     type="button"
-                    onClick={() => s.pick(c.key)}
+                    onClick={() => (asks ? toggleWhy(c.key) : s.pick(c.key))}
                     disabled={disabled}
+                    aria-expanded={asks ? told : undefined}
                     title={
                       isWrong ? t('session.wrong') : isCorrect ? t('session.correct') : undefined
                     }
@@ -521,12 +544,15 @@ export function Session({
                       <span>{wrong[c.key]}</span>
                     </p>
                   )}
-                  {why[c.key] && (
-                    <Markdown
-                      md={why[c.key] ?? ''}
-                      assetBase={q.assetBase}
-                      className="tk-hint ql-why ql-note-md"
-                    />
+                  {told && (
+                    <div className="tk-error ql-distractor ql-why ql-transition-in" role="status">
+                      <span aria-hidden="true">✕</span>
+                      <Markdown
+                        md={why[c.key] ?? ''}
+                        assetBase={q.assetBase}
+                        className="ql-note-md"
+                      />
+                    </div>
                   )}
                 </li>
               )
@@ -534,7 +560,7 @@ export function Session({
           </ol>
         )}
 
-        {!marking && whyButton}
+        {!marking && whyHint}
 
         {solved && (
           <div className="ql-solved ql-transition-in" ref={solvedRef}>

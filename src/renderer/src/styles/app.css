@@ -804,6 +804,10 @@ kbd {
   color: var(--tk-danger-text);
 }
 
+.ql-choice-wrong > button[aria-expanded='true'] {
+  border-color: transparent;
+}
+
 .ql-choice-right > button {
   border-color: var(--tk-success);
   background-color: var(--ql-tint-success);
@@ -815,8 +819,9 @@ kbd {
 }
 
 .ql-why {
-  margin-top: calc(var(--tk-sp-3) * -1);
-  padding: 0 var(--tk-sp-5) var(--tk-sp-3);
+  display: flex;
+  align-items: baseline;
+  gap: var(--tk-sp-2);
 }
 
 .ql-note-md > :first-child {
@@ -827,8 +832,8 @@ kbd {
   margin-bottom: 0;
 }
 
-.ql-why-all {
-  align-self: flex-start;
+.ql-why-hint {
+  margin: 0;
 }
 
 .ql-tell {
@@ -1761,6 +1766,30 @@ button.ql-mark:not(:disabled):active {
 
 .ql-mark-legend-key {
   color: var(--tk-text-label);
+}
+
+.ql-mark-legend-ask {
+  display: flex;
+  align-items: baseline;
+  gap: var(--tk-sp-2);
+  padding: 0;
+  font: inherit;
+  color: inherit;
+  text-align: left;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+.ql-mark-legend-ask:hover,
+.ql-mark-legend-ask:focus-visible,
+.ql-mark-legend-ask:active,
+.ql-mark-legend-ask[aria-expanded='true'] {
+  color: var(--tk-danger-text);
+}
+
+.ql-mark-legend-ask:disabled {
+  cursor: not-allowed;
 }
 
 .ql-mark-legend-right {
