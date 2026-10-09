@@ -6,6 +6,13 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.7.61] - 2026-10-09
+
+### Changed
+
+- After a question is solved, clicking a wrong choice shows why it is wrong, in the
+  same colour as the choice you picked wrongly. The separate button is gone.
+
 ## [0.7.60] - 2026-10-09
 
 ### Added
