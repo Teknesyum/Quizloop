@@ -96,6 +96,7 @@
   "session.showMarks": "Start Marking",
   "session.known": "I Know The Answer",
   "session.knownMarked": "Known Without Choices, Bonus Points",
+  "session.knownMarkedOpen": "Knew It Before The Answer, Bonus Points",
   "session.flag": "Flag Question",
   "session.back": "Chapters",
   "session.flagged": "Question Flagged",
@@ -420,5 +421,7 @@
   "session.whyOthers": "Explain Wrong Choices",
   "session.whyOthersHide": "Hide Explanations",
   "library.resume": "Continue Where You Left Off",
-  "library.resumeMixed": "Mixed"
+  "library.resumeMixed": "Mixed",
+  "chapters.partial": "Solve Partly Known ({count})",
+  "chapters.partialHelp": "Asks only the questions you graded \"partly\", without waiting for their due date."
 }

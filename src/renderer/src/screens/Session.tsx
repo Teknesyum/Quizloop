@@ -76,10 +76,12 @@ function whenLabel(iso: string): string {
 
 export function Session({
   moduleId,
-  chapter
+  chapter,
+  partial
 }: {
   moduleId: string
   chapter: string | null
+  partial: boolean
 }): React.JSX.Element {
   const s = useSession()
   const settings = useApp((x) => x.settings)
@@ -95,9 +97,9 @@ export function Session({
   const state = s.state
 
   useEffect(() => {
-    s.start(moduleId, chapter)
+    s.start(moduleId, chapter, partial)
     return () => s.reset()
-  }, [moduleId, chapter])
+  }, [moduleId, chapter, partial])
 
   useEffect(() => {
     let dead = false
@@ -213,7 +215,7 @@ export function Session({
       <Summary
         summary={state.summary}
         onBack={() => go({ name: 'chapters', moduleId })}
-        onAgain={() => s.start(moduleId, chapter)}
+        onAgain={() => s.start(moduleId, chapter, partial)}
       />
     )
   }
@@ -239,7 +241,7 @@ export function Session({
             <button
               type="button"
               className="tk-btn tk-btn-primary"
-              onClick={() => s.start(moduleId, chapter)}
+              onClick={() => s.start(moduleId, chapter, partial)}
             >
               {t('session.failed.retry')}
             </button>
@@ -344,7 +346,11 @@ export function Session({
           {q.relearn && (
             <span className="tk-label ql-badge-relearn">{t('session.relearnBadge')}</span>
           )}
-          {known && <span className="tk-label ql-badge-known">{t('session.knownMarked')}</span>}
+          {known && (
+            <span className="tk-label ql-badge-known">
+              {t(open ? 'session.knownMarkedOpen' : 'session.knownMarked')}
+            </span>
+          )}
         </div>
         <div className="ql-session-meta">
           <span className="tk-label">{t('session.score')}</span>

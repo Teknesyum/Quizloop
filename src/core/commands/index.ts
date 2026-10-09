@@ -105,9 +105,9 @@ export function createCore(deps: CoreDeps): Core {
       file: (moduleId: string) => flagFile(ctx, moduleId)
     },
     session: {
-      start: async (moduleId: string, chapter?: string | null) => {
+      start: async (moduleId: string, chapter?: string | null, partial?: boolean) => {
         await library.refresh()
-        return machine.start(moduleId, chapter ?? null)
+        return machine.start(moduleId, chapter ?? null, partial ?? false)
       },
       known: async (id: string) => machine.known(id),
       reveal: async (id: string) => machine.reveal(id),

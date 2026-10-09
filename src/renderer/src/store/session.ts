@@ -41,7 +41,7 @@ interface SessionState extends Record<string, unknown> {
   state: Phase
   shownAt: number
   flagged: boolean
-  start(moduleId: string, chapter?: string | null): Promise<void>
+  start(moduleId: string, chapter?: string | null, partial?: boolean): Promise<void>
   known(): Promise<void>
   reveal(): Promise<void>
   pick(key: ChoiceKey): Promise<void>
@@ -89,10 +89,10 @@ export const useSession = create<SessionState>((set, get) => ({
   state: { phase: 'idle' },
   shownAt: 0,
   flagged: false,
-  start: async (moduleId, chapter) => {
+  start: async (moduleId, chapter, partial) => {
     set({ state: { phase: 'loading' }, moduleId, score: 0, flagged: false })
     try {
-      const r = await window.quizloop.session.start(moduleId, chapter ?? null)
+      const r = await window.quizloop.session.start(moduleId, chapter ?? null, partial ?? false)
       set({
         sessionId: r.sessionId,
         total: r.total,

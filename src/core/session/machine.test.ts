@@ -115,6 +115,18 @@ describe('SessionMachine', () => {
     )
   })
 
+  it('starts a session with only the partly understood cards', async () => {
+    const m = await machine()
+    const s = await m.start('ornek')
+    m.reveal(s.sessionId)
+    for (const c of s.first!.choices) if (m.answer(s.sessionId, c.key).correct) break
+    await m.grade(s.sessionId, 2, 1000)
+    await m.end(s.sessionId)
+    const again = await m.start('ornek', null, true)
+    expect(again.total).toBe(1)
+    expect(again.first?.questionId).toBe(s.first!.questionId)
+  })
+
   it('never leaks the correct key before the pick is right', async () => {
     const m = await machine()
     const s = await m.start('ornek')
