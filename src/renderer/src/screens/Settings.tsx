@@ -205,6 +205,25 @@ export function Settings(): React.JSX.Element {
             </div>
 
             <div className="tk-field">
+              <span className="tk-label">{t('settings.bookAuto')}</span>
+              <div className="ql-segment" role="radiogroup" aria-label={t('settings.bookAuto')}>
+                {[true, false].map((on) => (
+                  <button
+                    key={String(on)}
+                    type="button"
+                    role="radio"
+                    aria-checked={settings.bookAuto === on}
+                    className={`tk-btn ${settings.bookAuto === on ? 'tk-btn-primary' : 'tk-btn-ghost'} ql-btn-sm`}
+                    onClick={() => apply({ bookAuto: on })}
+                  >
+                    {t(on ? 'settings.autoUpdate.on' : 'settings.autoUpdate.off')}
+                  </button>
+                ))}
+              </div>
+              <span className="tk-hint">{t('settings.bookAutoHelp')}</span>
+            </div>
+
+            <div className="tk-field">
               <span className="tk-label">{t('settings.theme')}</span>
               <div className="ql-themes" role="radiogroup" aria-label={t('settings.theme')}>
                 {THEMES.map((th) => (

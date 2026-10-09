@@ -6,6 +6,15 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.7.58] - 2026-10-09
+
+### Added
+
+- A setting opens the book page by itself under the solution, inside the question
+  instead of a separate window, so there is nothing to close.
+- The book window closes with a swipe or drag that starts anywhere outside the
+  page, and with a tap on the dimmed edge.
+
 ## [0.7.57] - 2026-10-09
 
 ### Changed

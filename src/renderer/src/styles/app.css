@@ -2908,3 +2908,13 @@ button.ql-mark:not(:disabled):active {
   text-align: left;
   white-space: normal;
 }
+
+.ql-book-embed {
+  width: 100%;
+  height: min(
+    940px,
+    calc(
+      100vh - var(--ql-titlebar-h) - var(--ql-keys-h) - var(--ql-grade-h, 0px) - 2 * var(--tk-sp-4)
+    )
+  );
+}
