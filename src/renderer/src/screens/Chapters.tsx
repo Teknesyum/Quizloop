@@ -197,6 +197,18 @@ export function Chapters({ moduleId }: { moduleId: string }): React.JSX.Element 
                 >
                   {goalLabel(c)}
                 </button>
+                {c.partial > 0 && (
+                  <button
+                    type="button"
+                    className="tk-btn tk-btn-ghost ql-btn-sm"
+                    title={t('chapters.partialHelp')}
+                    onClick={() =>
+                      go({ name: 'session', moduleId, chapter: c.chapter, partial: true })
+                    }
+                  >
+                    {t('chapters.partial', { count: c.partial })}
+                  </button>
+                )}
                 <button
                   type="button"
                   className="tk-btn tk-btn-primary ql-btn-sm"

@@ -150,11 +150,14 @@ export function registerHandlers(ctx: Context): {
     core.module.chapters(z.string().parse(moduleId))
   )
 
-  ipcMain.handle(CH.sessionStart, async (_e, moduleId: unknown, chapter: unknown) =>
-    core.session.start(
-      z.string().parse(moduleId),
-      z.string().nullable().optional().parse(chapter) ?? null
-    )
+  ipcMain.handle(
+    CH.sessionStart,
+    async (_e, moduleId: unknown, chapter: unknown, partial: unknown) =>
+      core.session.start(
+        z.string().parse(moduleId),
+        z.string().nullable().optional().parse(chapter) ?? null,
+        z.boolean().optional().parse(partial) ?? false
+      )
   )
   ipcMain.handle(CH.sessionKnown, (_e, id: unknown) => core.session.known(z.string().parse(id)))
   ipcMain.handle(CH.sessionReveal, (_e, id: unknown) => core.session.reveal(z.string().parse(id)))

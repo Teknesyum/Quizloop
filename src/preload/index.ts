@@ -88,8 +88,8 @@ const api: QuizloopApi = {
     importFrom: () => ipcRenderer.invoke(CH.transferImport)
   },
   session: {
-    start: (moduleId: string, chapter?: string | null) =>
-      ipcRenderer.invoke(CH.sessionStart, moduleId, chapter ?? null),
+    start: (moduleId: string, chapter?: string | null, partial?: boolean) =>
+      ipcRenderer.invoke(CH.sessionStart, moduleId, chapter ?? null, partial ?? false),
     known: (id: string) => ipcRenderer.invoke(CH.sessionKnown, id),
     reveal: (id: string) => ipcRenderer.invoke(CH.sessionReveal, id),
     answer: (id: string, key: ChoiceKey) => ipcRenderer.invoke(CH.sessionAnswer, id, key),

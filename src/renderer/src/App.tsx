@@ -220,7 +220,11 @@ export default function App(): React.JSX.Element {
           {route.name === 'chapters' && <Chapters moduleId={route.moduleId} />}
           {route.name === 'bank' && <Bank moduleId={route.moduleId} filter={route.filter} />}
           {route.name === 'session' && (
-            <Session moduleId={route.moduleId} chapter={route.chapter ?? null} />
+            <Session
+              moduleId={route.moduleId}
+              chapter={route.chapter ?? null}
+              partial={route.partial ?? false}
+            />
           )}
         </main>
       </div>

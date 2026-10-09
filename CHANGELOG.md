@@ -6,6 +6,18 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.7.56] - 2026-10-09
+
+### Added
+
+- A chapter card with partly understood questions gets a "Solve Partly Known"
+  button that starts a session with only those, without waiting for their due date.
+
+### Changed
+
+- A question without choices says "Cevabı Göster" on its button and in the key
+  hints, and its bonus badge no longer mentions choices.
+
 ## [0.7.55] - 2026-10-09
 
 ### Added

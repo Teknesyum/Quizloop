@@ -367,7 +367,8 @@ export interface QuizloopApi {
   session: {
     start(
       moduleId: string,
-      chapter?: string | null
+      chapter?: string | null,
+      partial?: boolean
     ): Promise<{ sessionId: string; first: QuestionView | null; total: number }>
     known(sessionId: string): Promise<void>
     reveal(sessionId: string): Promise<AnswerResult | null>

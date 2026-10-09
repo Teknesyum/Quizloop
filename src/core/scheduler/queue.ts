@@ -9,6 +9,7 @@ export interface QueueOptions {
   limit: number
   seed?: number
   chapter?: string | null
+  partial?: boolean
 }
 
 function jitter(seed: number, id: number): number {
@@ -46,10 +47,10 @@ export async function buildQueue(db: Kysely<Database>, opt: QueueOptions): Promi
     .where('review_log.kind', '=', 'review')
     .execute()
 
-  const buried = new Set(reviewedToday.map((r) => r.concept_id))
+  const buried = new Set(opt.partial ? [] : reviewedToday.map((r) => r.concept_id))
 
   const candidates = rows
-    .filter((c) => rank(c, opt.now) <= 2)
+    .filter((c) => (opt.partial ? c.last_self_assess === 2 : rank(c, opt.now) <= 2))
     .sort((a, b) => {
       const r = rank(a, opt.now) - rank(b, opt.now)
       if (r !== 0) return r

@@ -125,7 +125,8 @@ export class SessionMachine {
 
   async start(
     moduleId: string,
-    chapter?: string | null
+    chapter?: string | null,
+    partial = false
   ): Promise<{ sessionId: string; first: QuestionView | null; total: number }> {
     const now = this.clock()
     const queue = await buildQueue(this.deps.db, {
@@ -134,7 +135,8 @@ export class SessionMachine {
       dayStart: this.deps.dayStart(now),
       limit: this.deps.limit(),
       seed: this.seed(),
-      chapter: chapter ?? null
+      chapter: chapter ?? null,
+      partial
     })
     const id = globalThis.crypto.randomUUID()
     const s: Live = {

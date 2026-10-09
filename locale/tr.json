@@ -87,7 +87,7 @@
   "session.relearn": "Tekrar Sırası",
   "session.relearnBadge": "Bu Oturumda Tekrar",
   "session.showChoices": "Şıkları Göster",
-  "session.showAnswer": "Cevabı Gör",
+  "session.showAnswer": "Cevabı Göster",
   "session.kindChoices": "Çoktan Seçmeli",
   "session.kindOpen": "Açık Uçlu",
   "session.kindMark": "İşaretleme",
@@ -96,11 +96,12 @@
   "session.showMarks": "İşaretlemeye Geç",
   "session.known": "Cevabı Biliyorum",
   "session.knownMarked": "Şıksız Bildin, Ekstra Puan",
+  "session.knownMarkedOpen": "Cevabı Görmeden Bildin, Ekstra Puan",
   "session.flag": "Soruyu İşaretle",
   "session.back": "Bölümler",
   "session.flagged": "Soru İşaretlendi",
   "session.hint.reveal": "Şıkları Aç",
-  "session.hint.answer": "Cevabı Gör",
+  "session.hint.answer": "Cevabı Göster",
   "session.hint.knownOpen": "Cevabı Biliyorum",
   "session.hint.known": "Şıksız Biliyorum",
   "session.hint.pick": "Şıkkı İşaretle",
@@ -420,5 +421,7 @@
   "session.whyOthers": "Yanlış Şıkları Açıkla",
   "session.whyOthersHide": "Açıklamaları Gizle",
   "library.resume": "Kaldığın Yerden Devam Et",
-  "library.resumeMixed": "Karışık"
+  "library.resumeMixed": "Karışık",
+  "chapters.partial": "Kısmenleri Çöz ({count})",
+  "chapters.partialHelp": "Yalnız \"kısmen\" dediğin soruları, zamanı gelmeden yeniden sorar."
 }
