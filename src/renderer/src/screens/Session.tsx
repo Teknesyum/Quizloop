@@ -2,7 +2,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { tinykeys } from 'tinykeys'
 import type { QuestionView, SelfAssess, SourceBook } from '@shared/ipc'
 import type { ChoiceKey } from '@shared/schema/question'
-import { BookButton } from '@renderer/components/BookButton'
+import { bookLabel } from '@renderer/components/bookLabel'
 import { BookViewer } from '@renderer/components/BookViewer'
 import { FlagDialog } from '@renderer/components/FlagDialog'
 import { useTargetWarmup, viewPdfPage } from '@renderer/components/bookdoc'
@@ -92,12 +92,10 @@ export function Session({
   const loadModules = useApp((x) => x.loadModules)
   const saveSettings = useApp((x) => x.saveSettings)
   const [book, setBook] = useState<SourceBook | null>(null)
-  const [reading, setReading] = useState<string | null>(null)
   const [whyOpen, setWhyOpen] = useState<{ at: string; keys: ChoiceKey[] }>({ at: '', keys: [] })
   const [telling, setTelling] = useState<string | null>(null)
   const [flagging, setFlagging] = useState(false)
   const solvedRef = useRef<HTMLDivElement | null>(null)
-  const gradeRef = useRef<HTMLDivElement | null>(null)
   const speed = settings?.typerSpeed ?? 'normal'
   const bookAuto = settings?.bookAuto === true
   const state = s.state
@@ -150,30 +148,18 @@ export function Session({
     () =>
       pushBack(() => {
         if (flagging) setFlagging(false)
-        else if (reading !== null) setReading(null)
         else if (['summary', 'idle', 'loading', 'empty', 'failed'].includes(state.phase))
           go({ name: 'chapters', moduleId })
         else void finish()
         return true
       }),
-    [reading, flagging, state.phase, go, moduleId, finish]
+    [flagging, state.phase, go, moduleId, finish]
   )
 
   useEffect(() => {
     if (state.phase !== 'solved') return
     solvedRef.current?.scrollIntoView({ block: 'nearest' })
   }, [state.phase])
-
-  useEffect(() => {
-    const bar = gradeRef.current
-    const host = solvedRef.current
-    if (!bar || !host || !bookAuto) return
-    const fit = (): void => host.style.setProperty('--ql-grade-h', `${bar.offsetHeight}px`)
-    fit()
-    const seen = new ResizeObserver(fit)
-    seen.observe(bar)
-    return () => seen.disconnect()
-  }, [bookAuto, state])
 
   const liveQ = 'q' in state ? state.q : null
   useTargetWarmup(book, liveQ ? viewPdfPage(liveQ, book?.sayfaOfseti ?? 0) : null)
@@ -188,7 +174,7 @@ export function Session({
   }, [autoNext])
 
   useEffect(() => {
-    if (reading !== null || flagging || state.phase === 'summary') return
+    if (flagging || state.phase === 'summary') return
     const picks = Object.fromEntries(
       (Object.entries(KEYS.pick) as [ChoiceKey, string][]).map(([k, code]) => [
         code,
@@ -234,7 +220,7 @@ export function Session({
       },
       [KEYS.end]: () => void finish()
     })
-  }, [state, reading, flagging, book, bookAuto, saveSettings])
+  }, [state, flagging, book, bookAuto, saveSettings])
 
   if (state.phase === 'summary') {
     return (
@@ -606,20 +592,14 @@ export function Session({
                 </span>
                 {book?.available && (
                   <span className="ql-source-acts">
-                    {!bookAuto && (
-                      <BookButton
-                        file={solved.source.file}
-                        onOpen={() => setReading(q.questionId)}
-                      />
-                    )}
                     <button
                       type="button"
-                      className="tk-btn tk-btn-ghost ql-btn-sm"
+                      className="tk-btn tk-btn-ghost ql-btn-sm ql-book-open"
                       aria-pressed={bookAuto}
                       title={t('settings.bookAutoHelp')}
                       onClick={() => void saveSettings({ bookAuto: !bookAuto })}
                     >
-                      {t(bookAuto ? 'session.bookAuto.off' : 'session.bookAuto.on')}
+                      {bookAuto ? t('session.bookAuto.off') : bookLabel(solved.source.file)}
                       <kbd>K</kbd>
                     </button>
                   </span>
@@ -638,7 +618,7 @@ export function Session({
                 inline
               />
             )}
-            <div className="ql-grade" ref={gradeRef}>
+            <div className="ql-grade">
               <span className="tk-label">{t('session.grade.title')}</span>
               <div className="ql-grade-row">
                 {([1, 2, 3] as SelfAssess[]).map((g) => (
@@ -695,18 +675,6 @@ export function Session({
       </p>
 
       {flagging && <FlagDialog onPick={sendFlag} onClose={() => setFlagging(false)} />}
-
-      {reading === q.questionId && solved?.source && (
-        <BookViewer
-          key={book?.path ?? 'kesit'}
-          book={book}
-          moduleId={moduleId}
-          source={solved.source}
-          assetBase={q.assetBase}
-          onBook={setBook}
-          onClose={() => setReading(null)}
-        />
-      )}
     </section>
   )
 }

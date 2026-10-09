@@ -107,7 +107,7 @@ export function useUpdateTools(): {
         percent={up.percent ?? 0}
         version={up.version}
         labels={{
-          available: t('update.label'),
+          available: t('update.now'),
           downloadingPercent: (percent) => t('update.badgeDownloading', { percent }),
           ready: t('update.badgeReady'),
           availableAria: (v) => t('update.ariaAvailable', { version: v }),

@@ -6,6 +6,26 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.7.62] - 2026-10-09
+
+### Changed
+
+- Continue Where You Left Off is the first and largest thing in the library.
+- One book button under the source opens and hides the page in place; the separate
+  book window is gone from the session.
+- The in-question book takes its full height and scrolls with the page, so turning
+  pages no longer happens inside a short strip.
+- The update badge reads Update.
+- On a phone the text size control leaves the title bar; it stays in Settings.
+- A chapter row with two buttons puts them on their own line on a phone.
+- On the phone and the web the title bar scrolls away with the question during a
+  session, leaving the whole screen to it.
+
+### Fixed
+
+- The list view of chapters shows the Solve Partly Known button.
+- On a phone the version no longer shows cut off beside the update badge.
+
 ## [0.7.61] - 2026-10-09
 
 ### Changed
