@@ -318,6 +318,33 @@ body {
   margin: 0;
 }
 
+.ql-news {
+  display: flex;
+  flex-direction: column;
+}
+
+.ql-news > .ql-welcome-list {
+  min-height: 0;
+  margin: var(--tk-sp-3) 0;
+  padding: var(--tk-sp-3) var(--tk-sp-2) var(--tk-sp-3) 0;
+  overflow-y: auto;
+  border-block: var(--tk-border-w) solid var(--tk-border-strong);
+  scrollbar-width: thin;
+  scrollbar-color: var(--tk-border-strong) transparent;
+}
+
+.ql-news-items > li {
+  display: list-item;
+}
+
+.ql-news-items {
+  display: flex;
+  flex-direction: column;
+  gap: var(--tk-sp-1);
+  margin: 0;
+  padding-left: var(--tk-sp-4);
+}
+
 .ql-empty {
   display: flex;
   flex-direction: column;

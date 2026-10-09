@@ -443,5 +443,10 @@
   "library.resume": "Kaldığın Yerden Devam Et",
   "library.resumeMixed": "Karışık",
   "chapters.partial": "Kısmenleri Çöz ({count})",
-  "chapters.partialHelp": "Yalnız \"kısmen\" dediğin soruları, zamanı gelmeden yeniden sorar."
+  "chapters.partialHelp": "Yalnız \"kısmen\" dediğin soruları, zamanı gelmeden yeniden sorar.",
+  "news.title": "Bu Güncellemeyle Gelenler",
+  "news.again": "Bu özeti Ayarlar'daki Hakkında bölümünden yeniden açabilirsin.",
+  "news.close": "Tamam, Devam Et",
+  "settings.news": "Son güncellemelerle gelen yenilikleri yeniden göster.",
+  "settings.newsOpen": "Yenilikleri Göster"
 }

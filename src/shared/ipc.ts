@@ -194,6 +194,7 @@ export interface Settings {
   autoUpdate: boolean
   bookAuto: boolean
   welcomeSeen: boolean
+  newsSeen: string
   samplesUsed: boolean
   goals: Record<string, GoalSetting>
   goalNotify: boolean

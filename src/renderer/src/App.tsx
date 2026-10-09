@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { tinykeys } from 'tinykeys'
 import { LangSwitch, TitleBar } from '../../../teknesyum-ui/ustcubuk/TitleBar'
 import { runBack } from './back'
@@ -8,6 +8,8 @@ import { ScaleSwitch } from './components/ScaleSwitch'
 import { ReportButton } from '@renderer/components/ReportButton'
 import { TopMenu } from './components/TopMenu'
 import { useUpdateTools } from './components/UpdateTools'
+import { WhatsNew } from './components/WhatsNew'
+import { newsSince } from '@shared/news'
 import { useBookWarmup } from './components/bookdoc'
 import { useUpdate } from './hooks/useUpdate'
 import { Toasts } from './components/Toast'
@@ -55,6 +57,19 @@ export default function App(): React.JSX.Element {
   const help = useApp((s) => s.help)
   const showHelp = useApp((s) => s.showHelp)
   const welcome = help || (settings !== null && !settings.welcomeSeen)
+  const info = useApp((s) => s.info)
+  const news = useApp((s) => s.news)
+  const showNews = useApp((s) => s.showNews)
+  const current = info?.version ?? ''
+  const fresh = settings !== null && !settings.welcomeSeen
+  const unseen = useMemo(
+    () => (settings && current && !fresh ? newsSince(settings.newsSeen, current) : []),
+    [settings, current, fresh]
+  )
+  const told = news && current ? newsSince('', current) : unseen
+  useEffect(() => {
+    if (fresh && current && settings.newsSeen !== current) void saveSettings({ newsSeen: current })
+  }, [fresh, current, settings, saveSettings])
   const [max, setMax] = useState(false)
   const [changes, setChanges] = useState<InstallConfirm[]>([])
   const change = changes[0]
@@ -233,6 +248,15 @@ export default function App(): React.JSX.Element {
           onClose={() => {
             showHelp(false)
             if (!settings?.welcomeSeen) saveSettings({ welcomeSeen: true })
+          }}
+        />
+      )}
+      {!welcome && told.length > 0 && (
+        <WhatsNew
+          entries={told}
+          onClose={() => {
+            showNews(false)
+            if (current && settings?.newsSeen !== current) void saveSettings({ newsSeen: current })
           }}
         />
       )}

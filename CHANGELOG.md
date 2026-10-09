@@ -6,6 +6,13 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.7.63] - 2026-10-09
+
+### Added
+
+- The first launch after an update sums up what is new, and About in Settings opens
+  the same summary again. A release without a note for its version fails the tests.
+
 ## [0.7.62] - 2026-10-09
 
 ### Changed
