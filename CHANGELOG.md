@@ -6,6 +6,14 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.7.57] - 2026-10-09
+
+### Changed
+
+- "Soruyu İşaretle" opens a small window with two choices: save the question for
+  later, or call it faulty, which asks for a short note first. The question bank
+  shows which is which.
+
 ## [0.7.56] - 2026-10-09
 
 ### Added
