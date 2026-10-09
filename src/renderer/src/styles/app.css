@@ -295,7 +295,7 @@ body {
 .ql-grid-list .ql-card-rest,
 .ql-grid-list .ql-card-meter-row,
 .ql-grid:not(.ql-grid-list) .ql-percent,
-.ql-grid-list .ql-card-foot .tk-btn-ghost {
+.ql-grid-list .ql-card-foot .tk-btn-ghost:not(.ql-partial-go) {
   display: none;
 }
 
@@ -896,9 +896,23 @@ kbd {
 
 .ql-resume {
   display: flex;
-  align-items: center;
-  gap: var(--tk-sp-4);
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--tk-sp-1);
+  width: 100%;
+  padding: var(--tk-sp-4) var(--tk-sp-5);
+  text-align: left;
+}
+
+.ql-resume-title {
+  font-size: var(--tk-fs-4);
+  font-weight: var(--tk-fw-strong);
+  line-height: var(--tk-lh-heading);
+}
+
+.ql-resume-where {
+  font-size: var(--tk-fs-2);
+  overflow-wrap: anywhere;
 }
 
 /* --- solution --- */
@@ -2597,6 +2611,19 @@ button.ql-mark:not(:disabled):active {
     row-gap: var(--tk-sp-1);
   }
 
+  .ql-grid-list > .ql-card:has(.ql-partial-go) {
+    grid-template-areas:
+      'cover head head'
+      'cover info info'
+      'cover meter meter'
+      'foot foot foot';
+  }
+
+  .ql-grid-list > .ql-card:has(.ql-partial-go) > .ql-card-foot {
+    justify-content: flex-end;
+    margin-top: var(--tk-sp-2);
+  }
+
   :root {
     --ql-titlebar-h: calc(var(--tk-sp-5) + var(--tk-sp-4) + env(safe-area-inset-top));
     --ql-nav-h: calc(var(--tk-sp-5) * 2);
@@ -2628,6 +2655,16 @@ button.ql-mark:not(:disabled):active {
 
   .ql-shell .tk-titlebar__version {
     min-width: 0;
+  }
+
+  .ql-shell .tk-titlebar:has(.tk-update) .tk-titlebar__version,
+  .ql-shell .ql-scale {
+    display: none;
+  }
+
+  .ql-shell .tk-titlebar__logo,
+  .ql-shell .tk-titlebar__name {
+    flex-shrink: 0;
   }
 
   .ql-shell .tk-update {
@@ -2994,10 +3031,32 @@ button.ql-mark:not(:disabled):active {
 
 .ql-book-embed {
   width: 100%;
-  height: min(
-    940px,
-    calc(
-      100vh - var(--ql-titlebar-h) - var(--ql-keys-h) - var(--ql-grade-h, 0px) - 2 * var(--tk-sp-4)
-    )
-  );
+  height: auto;
+  overflow: visible;
+}
+
+.ql-book-embed .ql-book-spread {
+  flex: none;
+  overflow: hidden;
+}
+
+.ql-book-embed .ql-book-bar {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  padding-block: var(--tk-sp-2);
+  background: var(--tk-surface);
+}
+
+.ql-shell[data-chrome='none']:has(.ql-session) {
+  display: block;
+  overflow: hidden auto;
+}
+
+.ql-shell[data-chrome='none']:has(.ql-session) .ql-body {
+  display: block;
+}
+
+.ql-shell[data-chrome='none']:has(.ql-session) .ql-main {
+  overflow-y: visible;
 }

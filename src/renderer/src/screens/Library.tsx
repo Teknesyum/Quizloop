@@ -207,6 +207,20 @@ export function Library(): React.JSX.Element {
       onDragLeave={() => setDragging(false)}
       onDrop={onDrop}
     >
+      {last && (
+        <button
+          type="button"
+          className="tk-btn tk-btn-primary ql-resume ql-transition-in"
+          onClick={resume}
+          autoFocus
+        >
+          <span className="ql-resume-title">{t('library.resume')}</span>
+          <span className="ql-resume-where">
+            {[last.name, last.lastChapter ?? t('library.resumeMixed')].join(' · ')}
+          </span>
+        </button>
+      )}
+
       <header className="ql-screen-head ql-transition-in">
         <div>
           <h2 className="tk-h2">{t('library.title')}</h2>
@@ -255,7 +269,7 @@ export function Library(): React.JSX.Element {
               </button>
               <button
                 type="button"
-                className="tk-btn tk-btn-primary"
+                className={`tk-btn ${last ? 'tk-btn-ghost' : 'tk-btn-primary'}`}
                 disabled={busy}
                 title={busy ? t('common.loading') : t('library.addFileHelp')}
                 onClick={() => run(() => window.quizloop.module.pick('file'))}
@@ -267,7 +281,7 @@ export function Library(): React.JSX.Element {
           {window.quizloop.capabilities.packageImport && (
             <button
               type="button"
-              className="tk-btn tk-btn-primary"
+              className={`tk-btn ${last ? 'tk-btn-ghost' : 'tk-btn-primary'}`}
               disabled={busy}
               title={busy ? t('common.loading') : t('library.addFileHelp')}
               onClick={() => run(() => window.quizloop.module.pick('file'))}
@@ -304,17 +318,6 @@ export function Library(): React.JSX.Element {
           {window.quizloop.capabilities.folders && (
             <p className="tk-hint">{t('library.dropHint')}</p>
           )}
-        </div>
-      )}
-
-      {last && (
-        <div className="ql-resume ql-transition-in">
-          <button type="button" className="tk-btn tk-btn-primary" onClick={resume} autoFocus>
-            {t('library.resume')}
-          </button>
-          <span className="tk-hint">
-            {[last.name, last.lastChapter ?? t('library.resumeMixed')].join(' · ')}
-          </span>
         </div>
       )}
 

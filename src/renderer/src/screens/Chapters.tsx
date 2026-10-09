@@ -200,7 +200,7 @@ export function Chapters({ moduleId }: { moduleId: string }): React.JSX.Element 
                 {c.partial > 0 && (
                   <button
                     type="button"
-                    className="tk-btn tk-btn-ghost ql-btn-sm"
+                    className="tk-btn tk-btn-ghost ql-btn-sm ql-partial-go"
                     title={t('chapters.partialHelp')}
                     onClick={() =>
                       go({ name: 'session', moduleId, chapter: c.chapter, partial: true })

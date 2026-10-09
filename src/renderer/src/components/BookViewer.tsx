@@ -782,7 +782,7 @@ export function BookViewer({
                             ratio={ratio}
                             highlight={highlight}
                             shown={portrait ? i === cur : i === left || i === left + 1}
-                            follow
+                            follow={!inline}
                           />,
                           el,
                           String(i)
