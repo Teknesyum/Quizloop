@@ -7,6 +7,7 @@ import { BookViewer } from '@renderer/components/BookViewer'
 import { FlagDialog } from '@renderer/components/FlagDialog'
 import { useTargetWarmup, viewPdfPage } from '@renderer/components/bookdoc'
 import { Solution } from '@renderer/components/Solution'
+import { Tell } from '@renderer/components/Tell'
 import { pushBack } from '@renderer/back'
 import { Markdown } from '@renderer/components/Markdown'
 import { Skeleton } from '@renderer/components/Skeleton'
@@ -426,7 +427,7 @@ export function Session({
             {telling === here && (
               <div className="ql-tell-body ql-transition-in">
                 <span className="tk-label">{t('session.explainTitle')}</span>
-                <Solution blocks={q.anlatim} assetBase={q.assetBase} />
+                <Tell key={here} blocks={q.anlatim} assetBase={q.assetBase} book={book} />
               </div>
             )}
           </div>
