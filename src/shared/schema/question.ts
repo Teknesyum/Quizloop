@@ -53,7 +53,16 @@ export const SolutionBlock = z.discriminatedUnion('type', [
     caption: z.string().optional(),
     alt: Alt.optional()
   }),
-  Table.extend({ type: z.literal('table') })
+  Table.extend({ type: z.literal('table') }),
+  z.object({
+    type: z.literal('sayfa'),
+    pdfSayfa: z.number().int().positive(),
+    alinti: z.string().min(1).optional(),
+    isaretler: z
+      .array(z.object({ bbox: z.tuple([z.number(), z.number(), z.number(), z.number()]) }))
+      .optional(),
+    ref: ImageRef.optional()
+  })
 ])
 
 export const Kesit = z.object({

@@ -1,6 +1,6 @@
 // @vitest-environment node
 import { describe, expect, it } from 'vitest'
-import type { Choice } from '@shared/schema/question'
+import type { Choice, SolutionBlock } from '@shared/schema/question'
 import {
   altFor,
   boxPlace,
@@ -13,6 +13,7 @@ import {
   tableModel,
   tableParts,
   tagSide,
+  tellSteps,
   ZOOM_MAX,
   ZOOM_MIN
 } from './media'
@@ -172,5 +173,24 @@ describe('tableParts', () => {
 
   it('satir sirasini korur', () => {
     expect(tableParts(rows(20), 2).flat()).toEqual(rows(20))
+  })
+})
+
+describe('tellSteps', () => {
+  const text = (md: string): SolutionBlock => ({ type: 'text', md })
+  const page = (pdfSayfa: number): SolutionBlock => ({ type: 'sayfa', pdfSayfa })
+
+  it('closes a step at every book page and keeps the page order as written', () => {
+    const steps = tellSteps([text('a'), page(3), text('b'), text('c'), page(4), page(1), text('d')])
+    expect(steps.map((s) => s.map((b) => (b.type === 'sayfa' ? b.pdfSayfa : b.type)))).toEqual([
+      ['text', 3],
+      ['text', 'text', 4],
+      [1],
+      ['text']
+    ])
+  })
+
+  it('keeps a telling without pages as one step', () => {
+    expect(tellSteps([text('a'), text('b')])).toHaveLength(1)
   })
 })

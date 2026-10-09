@@ -107,7 +107,7 @@ function mirrorPointer(pf: PageFlip): void {
   }
 }
 
-function Leaf({
+export function Leaf({
   doc,
   pdfPage,
   folio,

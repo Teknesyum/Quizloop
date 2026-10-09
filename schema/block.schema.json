@@ -342,6 +342,63 @@
                     "rows",
                     "type"
                   ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "type": {
+                      "type": "string",
+                      "const": "sayfa"
+                    },
+                    "pdfSayfa": {
+                      "type": "integer",
+                      "exclusiveMinimum": 0,
+                      "maximum": 9007199254740991
+                    },
+                    "alinti": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "isaretler": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "bbox": {
+                            "type": "array",
+                            "prefixItems": [
+                              {
+                                "type": "number"
+                              },
+                              {
+                                "type": "number"
+                              },
+                              {
+                                "type": "number"
+                              },
+                              {
+                                "type": "number"
+                              }
+                            ],
+                            "items": false,
+                            "minItems": 4,
+                            "maxItems": 4
+                          }
+                        },
+                        "required": [
+                          "bbox"
+                        ]
+                      }
+                    },
+                    "ref": {
+                      "type": "string",
+                      "pattern": "^assets\\/(img|tbl|kaynak)\\/[\\w.-]+\\.(webp|png|svg)$"
+                    }
+                  },
+                  "required": [
+                    "type",
+                    "pdfSayfa"
+                  ]
                 }
               ]
             }
@@ -462,6 +519,63 @@
                     "header",
                     "rows",
                     "type"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "type": {
+                      "type": "string",
+                      "const": "sayfa"
+                    },
+                    "pdfSayfa": {
+                      "type": "integer",
+                      "exclusiveMinimum": 0,
+                      "maximum": 9007199254740991
+                    },
+                    "alinti": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "isaretler": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "bbox": {
+                            "type": "array",
+                            "prefixItems": [
+                              {
+                                "type": "number"
+                              },
+                              {
+                                "type": "number"
+                              },
+                              {
+                                "type": "number"
+                              },
+                              {
+                                "type": "number"
+                              }
+                            ],
+                            "items": false,
+                            "minItems": 4,
+                            "maxItems": 4
+                          }
+                        },
+                        "required": [
+                          "bbox"
+                        ]
+                      }
+                    },
+                    "ref": {
+                      "type": "string",
+                      "pattern": "^assets\\/(img|tbl|kaynak)\\/[\\w.-]+\\.(webp|png|svg)$"
+                    }
+                  },
+                  "required": [
+                    "type",
+                    "pdfSayfa"
                   ]
                 }
               ]

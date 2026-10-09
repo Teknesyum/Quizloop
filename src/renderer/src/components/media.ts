@@ -1,4 +1,4 @@
-import type { Box, Choice, ChoiceKey, Mask, Table } from '@shared/schema/question'
+import type { Box, Choice, ChoiceKey, Mask, SolutionBlock, Table } from '@shared/schema/question'
 
 export type MaskBox = Mask
 
@@ -158,4 +158,18 @@ export function clampPan(
     x: Math.min(mx, Math.max(-mx, pan.x)) + 0,
     y: Math.min(my, Math.max(-my, pan.y)) + 0
   }
+}
+
+export function tellSteps(blocks: SolutionBlock[]): SolutionBlock[][] {
+  const steps: SolutionBlock[][] = []
+  let open: SolutionBlock[] = []
+  for (const b of blocks) {
+    open.push(b)
+    if (b.type === 'sayfa') {
+      steps.push(open)
+      open = []
+    }
+  }
+  if (open.length) steps.push(open)
+  return steps
 }

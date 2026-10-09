@@ -6,6 +6,15 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.7.60] - 2026-10-09
+
+### Added
+
+- A topic explanation can walk through the book: each step tells a part, then shows
+  the one book page it rests on with the passage underlined or outlined, and the
+  next step comes with a button. A question carries this as `sayfa` blocks in
+  `anlatim`.
+
 ## [0.7.59] - 2026-10-09
 
 ### Added
