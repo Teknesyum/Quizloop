@@ -6,6 +6,13 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.7.59] - 2026-10-09
+
+### Added
+
+- A button under the source and the K key turn the in-question book page on and
+  off during a session, without a trip to the settings.
+
 ## [0.7.58] - 2026-10-09
 
 ### Added

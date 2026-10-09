@@ -2909,6 +2909,18 @@ button.ql-mark:not(:disabled):active {
   white-space: normal;
 }
 
+.ql-source-acts {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--tk-sp-3);
+}
+
+.ql-source-acts kbd {
+  margin-inline-start: var(--tk-sp-2);
+}
+
 .ql-book-embed {
   width: 100%;
   height: min(
