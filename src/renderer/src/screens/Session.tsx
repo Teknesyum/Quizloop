@@ -4,6 +4,7 @@ import type { QuestionView, SelfAssess, SourceBook } from '@shared/ipc'
 import type { ChoiceKey } from '@shared/schema/question'
 import { BookButton } from '@renderer/components/BookButton'
 import { BookViewer } from '@renderer/components/BookViewer'
+import { FlagDialog } from '@renderer/components/FlagDialog'
 import { useTargetWarmup, viewPdfPage } from '@renderer/components/bookdoc'
 import { Solution } from '@renderer/components/Solution'
 import { pushBack } from '@renderer/back'
@@ -92,6 +93,7 @@ export function Session({
   const [reading, setReading] = useState<string | null>(null)
   const [whyAll, setWhyAll] = useState<string | null>(null)
   const [telling, setTelling] = useState<string | null>(null)
+  const [flagging, setFlagging] = useState(false)
   const solvedRef = useRef<HTMLDivElement | null>(null)
   const speed = settings?.typerSpeed ?? 'normal'
   const state = s.state
@@ -116,16 +118,21 @@ export function Session({
     }
   }, [moduleId])
 
-  const flag = async (): Promise<void> => {
+  const flag = (): void => {
     const now = useSession.getState()
     if (now.flagged || !('q' in now.state)) return
+    setFlagging(true)
+  }
+
+  const sendFlag = async (note?: string): Promise<void> => {
     try {
-      await now.flag()
+      await useSession.getState().flag(note)
     } catch (e) {
       toast('danger', `${t('common.error')}: ${e instanceof Error ? e.message : String(e)}`)
       return
     }
-    toast('success', t('session.flagged'))
+    setFlagging(false)
+    toast('success', t(note ? 'flag.faultyDone' : 'flag.saveDone'))
   }
 
   const finish = useCallback(async (): Promise<void> => {
@@ -138,13 +145,14 @@ export function Session({
   useEffect(
     () =>
       pushBack(() => {
-        if (reading !== null) setReading(null)
+        if (flagging) setFlagging(false)
+        else if (reading !== null) setReading(null)
         else if (['summary', 'idle', 'loading', 'empty', 'failed'].includes(state.phase))
           go({ name: 'chapters', moduleId })
         else void finish()
         return true
       }),
-    [reading, state.phase, go, moduleId, finish]
+    [reading, flagging, state.phase, go, moduleId, finish]
   )
 
   useEffect(() => {
@@ -165,7 +173,7 @@ export function Session({
   }, [autoNext])
 
   useEffect(() => {
-    if (reading !== null || state.phase === 'summary') return
+    if (reading !== null || flagging || state.phase === 'summary') return
     const picks = Object.fromEntries(
       (Object.entries(KEYS.pick) as [ChoiceKey, string][]).map(([k, code]) => [
         code,
@@ -208,7 +216,7 @@ export function Session({
       [KEYS.flag]: () => flag(),
       [KEYS.end]: () => void finish()
     })
-  }, [state, reading])
+  }, [state, reading, flagging])
 
   if (state.phase === 'summary') {
     return (
@@ -612,6 +620,8 @@ export function Session({
           </span>
         ))}
       </p>
+
+      {flagging && <FlagDialog onPick={sendFlag} onClose={() => setFlagging(false)} />}
 
       {reading === q.questionId && solved?.source && (
         <BookViewer

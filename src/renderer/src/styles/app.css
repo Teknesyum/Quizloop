@@ -2891,3 +2891,20 @@ button.ql-mark:not(:disabled):active {
   text-decoration: underline;
   cursor: pointer;
 }
+
+.ql-flag-picks {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--tk-sp-3);
+}
+
+.ql-flag-pick {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--tk-sp-1);
+  height: auto;
+  padding: var(--tk-sp-3);
+  text-align: left;
+  white-space: normal;
+}

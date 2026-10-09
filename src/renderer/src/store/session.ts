@@ -47,7 +47,7 @@ interface SessionState extends Record<string, unknown> {
   pick(key: ChoiceKey): Promise<void>
   grade(self: SelfAssess): Promise<void>
   next(): void
-  flag(): Promise<void>
+  flag(note?: string): Promise<void>
   end(): Promise<void>
   reset(): void
 }
@@ -189,12 +189,12 @@ export const useSession = create<SessionState>((set, get) => ({
     }
     swap(() => set({ state: show(next), shownAt: performance.now() }))
   },
-  flag: async () => {
+  flag: async (note?: string) => {
     const { sessionId, state, flagged } = get()
     if (flagged || !sessionId || !('q' in state)) return
     set({ flagged: true })
     try {
-      await window.quizloop.session.flag(sessionId)
+      await window.quizloop.session.flag(sessionId, note)
     } catch (e) {
       set({ flagged: false })
       throw e
