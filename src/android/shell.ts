@@ -28,7 +28,8 @@ export const ANDROID_CAPABILITIES: Capabilities = {
   updater: true,
   folders: false,
   settingsFile: false,
-  packageImport: true
+  packageImport: true,
+  catalogs: false
 }
 
 const UNSUPPORTED: TransferResult = { ok: false }
@@ -213,6 +214,11 @@ export async function createShell(): Promise<QuizloopApi> {
       chapters: (id) => c.module.chapters(id),
       questions: (id) => c.module.questions(id),
       question: (id, qid) => c.module.question(id, qid)
+    },
+    catalog: {
+      read: async () => ({ ok: false, fault: 'network' }),
+      install: async () => ({ ok: false }),
+      refresh: async () => ({ updated: [], failed: 0 })
     },
     flags: {
       set: (id, qid, flagged, note) => c.flags.set(id, qid, flagged, note),

@@ -10,7 +10,7 @@ drill it until it sticks.
 QuizLoop separates the **engine** from the **content**. The engine is this
 repository: a desktop application for Windows, macOS and Linux that schedules
 questions, scores answers and explains mistakes. The content lives in
-*modules*, question banks generated from source material. Modules are not part
+_modules_, question banks generated from source material. Modules are not part
 of this repository; only a five-question sample ships with it.
 
 ## Install
@@ -20,18 +20,18 @@ of this repository; only a five-question sample ships with it.
 1. Download [`Teknesyum-Base.exe`](https://github.com/Teknesyum/Teknesyum-Base/releases/latest/download/Teknesyum-Base.exe) ([`.sha256`](https://github.com/Teknesyum/Teknesyum-Base/releases/latest/download/Teknesyum-Base.exe.sha256)) and run it. No admin rights are needed.
 2. Find **Quizloop** in the list and install it. Base also updates and removes it later.
 
-Base is not code-signed yet, so Windows SmartScreen may warn on first launch: choose *More info*, then *Run anyway*. More: [Teknesyum Base](https://github.com/Teknesyum/Teknesyum-Base).
+Base is not code-signed yet, so Windows SmartScreen may warn on first launch: choose _More info_, then _Run anyway_. More: [Teknesyum Base](https://github.com/Teknesyum/Teknesyum-Base).
 
 **Other platforms, or manually:**
 
 Download the latest build from
 [Releases](https://github.com/Teknesyum/Quizloop/releases):
 
-| Platform | File | Updates |
-| -------- | ---- | ------- |
-| Windows  | `quizloop-<version>-setup.exe` | Asks before it downloads and again before it installs |
-| macOS    | `quizloop-<version>-unsigned.dmg` | The app tells you when a new version is out |
-| Linux    | `.AppImage` or `.deb` | The app tells you when a new version is out |
+| Platform | File                              | Updates                                               |
+| -------- | --------------------------------- | ----------------------------------------------------- |
+| Windows  | `quizloop-<version>-setup.exe`    | Asks before it downloads and again before it installs |
+| macOS    | `quizloop-<version>-unsigned.dmg` | The app tells you when a new version is out           |
+| Linux    | `.AppImage` or `.deb`             | The app tells you when a new version is out           |
 
 **iPhone, iPad, Android, or any browser:** use QuizLoop Web, described under
 [Web version](#web-version).
@@ -52,15 +52,15 @@ modules stay on the device.
 
 **Install**
 
-- **iPhone, iPad:** open the address in Safari, tap *Share*, then
-  *Add to Home Screen*, then *Add*.
-- **Android:** open it in Chrome, tap the three dots, then *Install app* (or
-  *Add to Home screen*), then *Install*.
+- **iPhone, iPad:** open the address in Safari, tap _Share_, then
+  _Add to Home Screen_, then _Add_.
+- **Android:** open it in Chrome, tap the three dots, then _Install app_ (or
+  _Add to Home screen_), then _Install_.
 - **Computer:** open it in Chrome or Edge. It runs as a tab; the install icon
   in the address bar turns it into its own window.
 
-**First use.** *Install The Sample Modules* adds two samples to try.
-*Add A Module File* imports a `.qlmod` file. The three-dot menu at the top right holds text size, language
+**First use.** _Install The Sample Modules_ adds two samples to try.
+_Add A Module File_ imports a `.qlmod` file. The three-dot menu at the top right holds text size, language
 and the support link. The first visit needs a connection.
 
 **Updates** arrive on their own: a new version downloads in the background and
@@ -84,7 +84,7 @@ is shown next to the title. Progress is kept.
 1. The question appears **without its options**. You think first.
 2. You ask for the options. Answering without them earns a bonus.
 3. A correct pick scores. A wrong pick costs points, removes that option and
-   prints an explanation written for *that specific* wrong answer.
+   prints an explanation written for _that specific_ wrong answer.
 4. When the question closes, the solution plays back with its source: file,
    pages and the quoted passage. If the book is on disk, the page opens in a
    built-in viewer with the passage highlighted.
@@ -103,6 +103,43 @@ every file is in [`schema/`](schema/).
 The **question bank** lists every question of a module with its state. Flag a
 broken question with `F` and export the flags as JSON; the generator reads
 that file and regenerates only the affected units.
+
+## Catalogs
+
+A catalog is one address a publisher gives you. **Catalogs** in the library takes that
+address, shows a warning that the content is not QuizLoop's, and lists the publisher's
+channels. Subscribe to the ones you want: each installs its module and takes new versions
+on its own. Unsubscribing or removing the catalog keeps the module and your progress.
+
+QuizLoop hosts and recommends no catalog. Catalogs work on the desktop and the web
+version; the Android app does not have them yet.
+
+To publish one, put a JSON file and your `.qlmod` packages on any `https` host:
+
+```json
+{
+  "schemaVersion": 1,
+  "name": "My Catalog",
+  "publisher": "Your Name",
+  "contact": "you@example.org",
+  "channels": [
+    {
+      "id": "my-module",
+      "name": "My Module",
+      "version": "1.2.0",
+      "package": "packages/my-module-1.2.0.qlmod",
+      "size": 1048576,
+      "sha256": "<sha256 of the package file>"
+    }
+  ]
+}
+```
+
+`package` is relative to the catalog address or a full address. `id` must equal the
+module id inside the package, and `size` and `sha256` must match the file or the app
+refuses it. Raise `version` and replace the three package fields to ship an update.
+The schema is [`schema/catalog.schema.json`](schema/catalog.schema.json). For the web
+version the host must allow cross-origin requests.
 
 ## Building modules
 

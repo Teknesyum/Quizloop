@@ -200,6 +200,42 @@ export interface Settings {
   goalNotify: boolean
   theme: string
   order: Record<string, string[]>
+  catalogs: CatalogSetting[]
+}
+
+export interface CatalogSetting {
+  url: string
+  name: string
+  publisher: string
+  channels: string[]
+}
+
+export interface CatalogChannelView {
+  id: string
+  name: string
+  description: string | null
+  version: string
+  size: number
+  questionCount: number | null
+}
+
+export interface CatalogView {
+  url: string
+  name: string
+  publisher: string
+  contact: string | null
+  channels: CatalogChannelView[]
+}
+
+export interface CatalogRead {
+  ok: boolean
+  catalog?: CatalogView
+  fault?: string
+}
+
+export interface CatalogRefresh {
+  updated: { moduleId: string; name: string; version: string }[]
+  failed: number
 }
 
 export const FONT_SCALES = [0.9, 1, 1.1, 1.25, 1.4, 1.6] as const
@@ -285,6 +321,7 @@ export interface Capabilities {
   folders: boolean
   settingsFile: boolean
   packageImport: boolean
+  catalogs: boolean
 }
 
 export const DESKTOP_CAPABILITIES: Capabilities = {
@@ -295,7 +332,8 @@ export const DESKTOP_CAPABILITIES: Capabilities = {
   updater: true,
   folders: true,
   settingsFile: true,
-  packageImport: false
+  packageImport: false,
+  catalogs: true
 }
 
 export interface Reminder {
@@ -348,6 +386,11 @@ export interface QuizloopApi {
     chapters(moduleId: string): Promise<ChapterSummary[]>
     questions(moduleId: string): Promise<BankRow[]>
     question(moduleId: string, questionId: string): Promise<BankQuestion | null>
+  }
+  catalog: {
+    read(url: string): Promise<CatalogRead>
+    install(url: string, channelId: string): Promise<InstallResult>
+    refresh(): Promise<CatalogRefresh>
   }
   flags: {
     set(moduleId: string, questionId: string, flagged: boolean, note?: string): Promise<void>
@@ -417,6 +460,9 @@ export const CH = {
   moduleChapters: 'module:chapters',
   moduleQuestions: 'module:questions',
   moduleQuestion: 'module:question',
+  catalogRead: 'catalog:read',
+  catalogInstall: 'catalog:install',
+  catalogRefresh: 'catalog:refresh',
   flagSet: 'flags:set',
   flagExport: 'flags:export',
   updateStatus: 'update:status',

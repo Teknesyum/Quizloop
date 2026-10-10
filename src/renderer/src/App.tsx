@@ -23,6 +23,8 @@ import { Session } from './screens/Session'
 import { Settings } from './screens/Settings'
 import { Goals } from './screens/Goals'
 import { Stats } from './screens/Stats'
+import { Catalogs } from './screens/Catalogs'
+import { refreshCatalogs } from './catalog'
 import { nextScale } from './scale'
 import { applyTheme } from '@renderer/theme'
 import { useApp, type Route } from './store/app'
@@ -31,6 +33,7 @@ import type { InstallConfirm } from '@shared/ipc'
 
 const GITHUB = 'https://github.com/Teknesyum'
 const SPONSOR = 'https://github.com/sponsors/Teknesyum'
+const CATALOG_POLL_MS = 3_600_000
 
 const NAV: { route: Route; label: string }[] = [
   { route: { name: 'library' }, label: t('nav.library') },
@@ -119,6 +122,15 @@ export default function App(): React.JSX.Element {
     loadSettings()
     loadInfo()
   }, [loadSettings, loadInfo])
+
+  const subscribed = caps.catalogs && (settings?.catalogs ?? []).some((s) => s.channels.length > 0)
+  const quiet = route.name !== 'session'
+  useEffect(() => {
+    if (!subscribed || !quiet) return
+    void refreshCatalogs()
+    const id = window.setInterval(() => void refreshCatalogs(), CATALOG_POLL_MS)
+    return () => window.clearInterval(id)
+  }, [subscribed, quiet])
 
   useEffect(() => {
     const off = window.quizloop.module.onInstalled((r) => {
@@ -232,6 +244,7 @@ export default function App(): React.JSX.Element {
           {route.name === 'goals' && <Goals />}
           {route.name === 'stats' && <Stats />}
           {route.name === 'settings' && <Settings />}
+          {route.name === 'catalogs' && <Catalogs />}
           {route.name === 'chapters' && <Chapters moduleId={route.moduleId} />}
           {route.name === 'bank' && <Bank moduleId={route.moduleId} filter={route.filter} />}
           {route.name === 'session' && (

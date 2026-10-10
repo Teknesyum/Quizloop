@@ -3087,3 +3087,53 @@ button.ql-mark:not(:disabled):active {
 .ql-shell[data-chrome='none']:has(.ql-session) .ql-main {
   overflow-y: visible;
 }
+
+.ql-catalog {
+  display: flex;
+  flex-direction: column;
+  gap: var(--tk-sp-4);
+}
+
+.ql-catalog-head,
+.ql-catalog-channel {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--tk-sp-3);
+  flex-wrap: wrap;
+}
+
+.ql-catalog-what {
+  display: flex;
+  flex-direction: column;
+  gap: var(--tk-sp-1);
+  flex: 1 1 240px;
+  min-width: 0;
+}
+
+.ql-catalog-what > * {
+  margin: 0;
+}
+
+.ql-catalog-url {
+  overflow-wrap: anywhere;
+  user-select: text;
+}
+
+.ql-catalog-channels {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ql-catalog-channel {
+  align-items: center;
+  padding-block: var(--tk-sp-3);
+  border-top: var(--tk-border-w) solid var(--tk-border);
+}
+
+.ql-catalog-name {
+  font-weight: var(--tk-fw-semi);
+}

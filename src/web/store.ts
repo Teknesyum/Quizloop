@@ -26,7 +26,8 @@ export interface WebStore {
     file: File,
     db: Kysely<Database>,
     sink: ProgressSink,
-    ask: AskChange
+    ask: AskChange,
+    expect?: string
   ): Promise<InstallResult>
 }
 
@@ -151,7 +152,8 @@ export function openStore(bundled: CorePorts, bundleRoot: string): WebStore {
     file: File,
     db: Kysely<Database>,
     sink: ProgressSink,
-    ask: AskChange
+    ask: AskChange,
+    expect?: string
   ): Promise<InstallResult> => {
     const work = new Work('install', sink)
     const stamp = `${Date.now().toString(36)}${Math.random().toString(36).slice(2, 8)}`
@@ -168,6 +170,8 @@ export function openStore(bundled: CorePorts, bundleRoot: string): WebStore {
       if (inner === null) throw new Error('pakette module.json yok')
       const root = inner ? `${base}/${stamp}/${inner}` : `${base}/${stamp}`
       const { meta } = await checkFolder(ports, root, work.span('verify', 75, 88))
+      if (expect && meta.id !== expect)
+        throw new Error(`paket kimliği kanalla uyuşmuyor: ${meta.id}`)
       if (!(await mayInstall(db, meta, ask))) {
         work.finish(true)
         return { ok: false, cancelled: true }

@@ -1,5 +1,12 @@
 import { createCore, type Core } from '@core/commands'
 import { installFailure, resyncFolders, syncFolder } from '@core/commands/modules'
+import {
+  installChannel,
+  readCatalog,
+  refreshCatalogs,
+  type CatalogNet
+} from '@core/commands/catalogs'
+import { bytesSha256 } from '@core/ports'
 import { SettingsPatch } from '@core/settings'
 import { SOURCE_URL } from '@shared/ipc'
 import type {
@@ -20,6 +27,8 @@ import { openStore } from './store'
 const UNSUPPORTED: TransferResult = { ok: false }
 const IDLE: UpdateStatus = { state: 'idle' }
 const off = (): void => undefined
+const TEXT_MS = 20_000
+const PACKAGE_MS = 900_000
 
 function capabilities(): Capabilities {
   const keyboard = matchMedia('(hover: hover) and (pointer: fine)').matches
@@ -31,7 +40,8 @@ function capabilities(): Capabilities {
     updater: false,
     folders: false,
     settingsFile: false,
-    packageImport: true
+    packageImport: true,
+    catalogs: true
   }
 }
 
@@ -108,6 +118,32 @@ export async function createShell(): Promise<QuizloopApi> {
       for (const cb of confirmers) cb({ ...change, ask: id })
     })
 
+  const reach = async (url: string, ms: number): Promise<Response> => {
+    const r = await fetch(url, {
+      cache: 'no-store',
+      credentials: 'omit',
+      signal: AbortSignal.timeout(ms)
+    })
+    if (!r.ok) throw new Error(`HTTP ${r.status}`)
+    return r
+  }
+  const net: CatalogNet = {
+    text: async (url) => (await reach(url, TEXT_MS)).text(),
+    install: async (pkg) => {
+      let blob: Blob
+      try {
+        blob = await (await reach(pkg.url, PACKAGE_MS)).blob()
+      } catch {
+        return { ok: false, error: 'network' }
+      }
+      if (blob.size !== pkg.size || (await bytesSha256(await blob.arrayBuffer())) !== pkg.sha256)
+        return { ok: false, error: 'hash' }
+      const r = await store.install(new File([blob], `${pkg.id}.qlmod`), db, emit, ask, pkg.id)
+      if (r.ok) await c.library.reload()
+      return r
+    }
+  }
+
   return {
     capabilities: capabilities(),
     pathOf: () => null,
@@ -165,6 +201,11 @@ export async function createShell(): Promise<QuizloopApi> {
       chapters: (id) => c.module.chapters(id),
       questions: (id) => c.module.questions(id),
       question: (id, qid) => c.module.question(id, qid)
+    },
+    catalog: {
+      read: (url) => readCatalog(net, url),
+      install: (url, id) => installChannel(db, net, url, id),
+      refresh: () => refreshCatalogs(db, net, c.settings.get().catalogs ?? [])
     },
     flags: {
       set: (id, qid, flagged, note) => c.flags.set(id, qid, flagged, note),

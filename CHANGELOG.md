@@ -6,6 +6,16 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.7.64] - 2026-10-10
+
+### Added
+
+- Catalogs. Paste the one address a publisher gives you, confirm that the content is
+  not QuizLoop's, and subscribe to any of its channels. A subscribed module installs
+  now and updates itself when the channel does; the package size and SHA-256 must match
+  what the catalog declares. Unsubscribing keeps the module and your progress. Desktop
+  and web; not on Android yet.
+
 ## [0.7.63] - 2026-10-09
 
 ### Added

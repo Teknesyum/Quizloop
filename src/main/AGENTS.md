@@ -7,7 +7,7 @@ Platform logic lives in `src/core`; this folder adapts it to Electron.
   commands, and keep only shell work here: dialogs, windows, file writes.
 - `db/index.ts` — better-sqlite3 + kysely, WAL, runs `@core/db/migrations`.
 - `modules/` — `install.ts` (copy into the user folder, then core validate and
-  sync), `paket.ts` (`.qlmod` unzip).
+  sync), `paket.ts` (`.qlmod` unzip), `catalog.ts` (catalog fetch, hashed download; 0029).
 - `assets/` — `quizloop://module/<id>/assets/...` and the source-book protocol.
 - `settings.ts`, `transfer.ts`, `update.ts`, `window.ts`, `fstree.ts`, `work.ts`.
 - `boot.ts` — the package entry. Loads a downloaded code bundle from
