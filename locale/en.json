@@ -430,10 +430,8 @@
   "goals.notifyNext": "Today's goal is {daily} questions. If it is not done yet, now is a good time.",
   "report.button": "Report A Problem",
   "report.sent": "Your report reached us, thank you.",
-  "report.addNote": "Add A Note",
   "report.noteTitle": "Describe The Problem Briefly",
   "report.send": "Send",
-  "report.noteSent": "Your note was added, thank you.",
   "report.failed": "The report could not be sent. Check your connection and try again.",
   "session.explain": "Explain",
   "session.explainTitle": "Topic Explanation",
@@ -492,5 +490,11 @@
   "settings.contact": "A problem, an idea or a complaint",
   "settings.contactOpen": "Contact Us",
   "catalog.report": "You can write to us with a complaint about content in a catalog.",
-  "catalog.fault.blocked": "This address is blocked by QuizLoop."
+  "catalog.fault.blocked": "This address is blocked by QuizLoop.",
+  "report.shot": "Include a picture of the app",
+  "report.shotHint": "Only this window as it looks now is sent; no other app or screen is captured.",
+  "report.shotOffTitle": "Turn The Picture Off",
+  "report.shotOffText": "A picture of the app can hold important clues that help us understand the problem. Do you still want to turn it off?",
+  "report.shotOffYes": "Turn Picture Off",
+  "report.emptyHelp": "Write a note or leave the picture on to send."
 }

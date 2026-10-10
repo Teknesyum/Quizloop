@@ -430,10 +430,8 @@
   "goals.notifyNext": "Bugünkü hedefin {daily} soru. Hâlâ bitmediyse şimdi tam zamanı.",
   "report.button": "Sorun Bildir",
   "report.sent": "Bildirimin bize ulaştı, teşekkürler.",
-  "report.addNote": "Not Ekle",
   "report.noteTitle": "Sorunu Kısaca Anlat",
   "report.send": "Gönder",
-  "report.noteSent": "Notun eklendi, teşekkürler.",
   "report.failed": "Bildirim gönderilemedi. Bağlantını kontrol edip yeniden dene.",
   "session.explain": "Anlat",
   "session.explainTitle": "Konu Anlatımı",
@@ -492,5 +490,11 @@
   "settings.contact": "Sorun, öneri ya da şikâyet",
   "settings.contactOpen": "Bize Ulaş",
   "catalog.report": "Bir katalogdaki içerikle ilgili şikâyetini bize yazabilirsin.",
-  "catalog.fault.blocked": "Bu adres QuizLoop tarafından engellendi."
+  "catalog.fault.blocked": "Bu adres QuizLoop tarafından engellendi.",
+  "report.shot": "Uygulama görüntüsünü ekle",
+  "report.shotHint": "Yalnız bu pencerenin o anki görüntüsü gönderilir; başka bir uygulama ya da ekran alınmaz.",
+  "report.shotOffTitle": "Görüntü Kapatılsın Mı",
+  "report.shotOffText": "Uygulama görüntüsü, sorunu net anlamamız için önemli ipuçları içerebilir. Yine de kapatmak istiyor musun?",
+  "report.shotOffYes": "Görüntüyü Kapat",
+  "report.emptyHelp": "Göndermek için bir not yaz ya da görüntüyü açık bırak."
 }

@@ -1,19 +1,26 @@
 import { useCallback, useEffect, useId, useRef, useState } from 'react'
-import type { ReportTicket } from '@shared/bildirim'
-import { reportEnabled, sendNote, sendReport } from '@renderer/bildirim'
+import { reportEnabled, sendReport } from '@renderer/bildirim'
+import { Confirm } from '@renderer/components/Confirm'
 import { useLayer } from '@renderer/hooks/useLayer'
 import { t } from '@renderer/i18n'
 import { useApp } from '@renderer/store/app'
 
 const NOTE_MAX = 2000
-const OFFER_MS = 12000
 
-function Note({ ticket, onClose }: { ticket: ReportTicket; onClose(): void }): React.JSX.Element {
+interface FormProps {
+  text: string
+  shot: boolean
+  busy: boolean
+  onText(text: string): void
+  onShot(on: boolean): void
+  onSend(): void
+  onClose(): void
+}
+
+function Form({ text, shot, busy, onText, onShot, onSend, onClose }: FormProps): React.JSX.Element {
   const id = useId()
   const panel = useRef<HTMLDivElement>(null)
-  const [text, setText] = useState('')
-  const [busy, setBusy] = useState(false)
-  const toast = useApp((s) => s.toast)
+  const empty = !shot && !text.trim()
 
   const cancel = useCallback((): void => {
     if (!busy) onClose()
@@ -28,20 +35,6 @@ function Note({ ticket, onClose }: { ticket: ReportTicket; onClose(): void }): R
     window.addEventListener('keydown', h)
     return () => window.removeEventListener('keydown', h)
   }, [cancel])
-
-  const send = async (): Promise<void> => {
-    const note = text.trim()
-    if (!note || busy) return
-    setBusy(true)
-    try {
-      await sendNote(ticket, note)
-      toast('success', t('report.noteSent'))
-      onClose()
-    } catch {
-      toast('danger', t('report.failed'))
-      setBusy(false)
-    }
-  }
 
   return (
     <div className="tk-modal-scrim" data-tk-modal="report" data-ql-noshot="" role="presentation">
@@ -61,9 +54,21 @@ function Note({ ticket, onClose }: { ticket: ReportTicket; onClose(): void }): R
           rows={4}
           maxLength={NOTE_MAX}
           value={text}
-          onChange={(e) => setText(e.target.value)}
+          onChange={(e) => onText(e.target.value)}
+          disabled={busy}
           autoFocus
         />
+        <label className="ql-report-shot">
+          <input
+            type="checkbox"
+            checked={shot}
+            disabled={busy}
+            title={busy ? t('common.loading') : undefined}
+            onChange={(e) => onShot(e.target.checked)}
+          />
+          <span>{t('report.shot')}</span>
+        </label>
+        <p className="tk-hint">{t('report.shotHint')}</p>
         <div className="tk-modal-actions">
           <button
             type="button"
@@ -77,9 +82,9 @@ function Note({ ticket, onClose }: { ticket: ReportTicket; onClose(): void }): R
           <button
             type="button"
             className="tk-btn tk-btn-primary"
-            onClick={() => void send()}
-            disabled={busy || !text.trim()}
-            title={busy ? t('common.loading') : undefined}
+            onClick={onSend}
+            disabled={busy || empty}
+            title={busy ? t('common.loading') : empty ? t('report.emptyHelp') : undefined}
           >
             {t('report.send')}
           </button>
@@ -90,21 +95,29 @@ function Note({ ticket, onClose }: { ticket: ReportTicket; onClose(): void }): R
 }
 
 export function ReportButton(): React.JSX.Element | null {
+  const [open, setOpen] = useState(false)
+  const [asking, setAsking] = useState(false)
+  const [text, setText] = useState('')
+  const [shot, setShot] = useState(true)
   const [busy, setBusy] = useState(false)
-  const [ticket, setTicket] = useState<ReportTicket | null>(null)
   const toast = useApp((s) => s.toast)
 
   if (!reportEnabled) return null
 
-  const report = async (): Promise<void> => {
+  const close = (): void => {
+    setOpen(false)
+    setAsking(false)
+    setText('')
+    setShot(true)
+  }
+
+  const send = async (): Promise<void> => {
     if (busy) return
     setBusy(true)
     try {
-      const sent = await sendReport()
-      toast('success', t('report.sent'), OFFER_MS, {
-        label: t('report.addNote'),
-        run: () => setTicket(sent)
-      })
+      await sendReport(text.trim(), shot)
+      toast('success', t('report.sent'))
+      close()
     } catch {
       toast('danger', t('report.failed'))
     } finally {
@@ -118,14 +131,35 @@ export function ReportButton(): React.JSX.Element | null {
         type="button"
         className="ql-report tk-no-drag"
         data-ql-noshot=""
-        onClick={() => void report()}
-        disabled={busy}
+        onClick={() => setOpen(true)}
         aria-label={t('report.button')}
-        title={busy ? t('common.loading') : t('report.button')}
+        title={t('report.button')}
       >
         <span aria-hidden="true">!</span>
       </button>
-      {ticket && <Note ticket={ticket} onClose={() => setTicket(null)} />}
+      {open && !asking && (
+        <Form
+          text={text}
+          shot={shot}
+          busy={busy}
+          onText={setText}
+          onShot={(on) => (on ? setShot(true) : setAsking(true))}
+          onSend={() => void send()}
+          onClose={close}
+        />
+      )}
+      {open && asking && (
+        <Confirm
+          title={t('report.shotOffTitle')}
+          text={t('report.shotOffText')}
+          yes={t('report.shotOffYes')}
+          onNo={() => setAsking(false)}
+          onYes={() => {
+            setShot(false)
+            setAsking(false)
+          }}
+        />
+      )}
     </>
   )
 }

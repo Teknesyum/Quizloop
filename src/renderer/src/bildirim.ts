@@ -1,5 +1,5 @@
 import { domToJpeg } from 'modern-screenshot'
-import { REPORT_URL, type ReportContext, type ReportTicket } from '@shared/bildirim'
+import { REPORT_APP, REPORT_URL, type ReportContext, type ReportTicket } from '@shared/bildirim'
 import { lang } from '@renderer/i18n'
 import { useApp } from '@renderer/store/app'
 import { useSession } from '@renderer/store/session'
@@ -56,12 +56,8 @@ async function post<T>(path: string, body: unknown): Promise<T> {
   return (await res.json()) as T
 }
 
-export async function sendReport(): Promise<ReportTicket> {
+export async function sendReport(note: string, withShot: boolean): Promise<ReportTicket> {
   const ctx = context()
-  const image = await shot()
-  return post<ReportTicket>('/bildir', { image, ctx })
-}
-
-export async function sendNote(ticket: ReportTicket, note: string): Promise<void> {
-  await post<{ ok: true }>('/not', { ...ticket, note })
+  const image = withShot ? await shot() : null
+  return post<ReportTicket>('/bildir', { app: REPORT_APP, note, shot: withShot, image, ctx })
 }
