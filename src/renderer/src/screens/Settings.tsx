@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { FONT_SCALES, SOURCE_URL, type Settings as S } from '@shared/ipc'
+import { CONTACT_URL, FONT_SCALES, SOURCE_URL, type Settings as S } from '@shared/ipc'
 import { Confirm } from '@renderer/components/Confirm'
 import { Skeleton } from '@renderer/components/Skeleton'
 import { useUpdate } from '@renderer/hooks/useUpdate'
@@ -438,6 +438,17 @@ export function Settings(): React.JSX.Element {
                 onClick={() => window.quizloop.app.openSource()}
               >
                 {t('settings.sourceOpen')}
+              </button>
+            </div>
+            <div className="ql-row">
+              <span className="tk-hint">{t('settings.contact')}</span>
+              <button
+                type="button"
+                className="tk-btn tk-btn-ghost ql-btn-sm"
+                title={CONTACT_URL}
+                onClick={() => window.quizloop.app.openContact()}
+              >
+                {t('settings.contactOpen')}
               </button>
             </div>
             <div className="ql-row">

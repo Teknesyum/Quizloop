@@ -311,6 +311,7 @@ export interface IntegrityReport {
 }
 
 export const SOURCE_URL = 'https://github.com/Teknesyum/Quizloop'
+export const CONTACT_URL = `${SOURCE_URL}/issues/new`
 
 export interface Capabilities {
   windowChrome: boolean
@@ -358,6 +359,7 @@ export interface QuizloopApi {
     }>
     onBack(cb: () => void): () => void
     openSource(): void
+    openContact(): void
   }
   window: {
     minimize(): void
@@ -438,6 +440,7 @@ export interface QuizloopApi {
 export const CH = {
   appInfo: 'app:info',
   appOpenSource: 'app:openSource',
+  appOpenContact: 'app:openContact',
   winMin: 'window:minimize',
   winMax: 'window:toggleMaximize',
   winClose: 'window:close',

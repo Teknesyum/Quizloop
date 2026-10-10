@@ -1,5 +1,14 @@
 import { describe, expect, it } from 'vitest'
-import { packageAddress, catalogAddress, catalogHost, catalogOf, withoutChannels } from './catalog'
+import {
+  addressBlocked,
+  catalogAddress,
+  catalogHost,
+  catalogOf,
+  hashBlocked,
+  packageAddress,
+  withoutChannels
+} from './catalog'
+import { BLOCKED } from './blocked'
 
 describe('catalog address', () => {
   it('accepts https and trims the fragment', () => {
@@ -27,6 +36,22 @@ describe('catalog address', () => {
     expect(packageAddress(catalog, 'a-1.0.0.qlmod')).toBe('https://ornek.dev/yayin/a-1.0.0.qlmod')
     expect(packageAddress(catalog, 'https://baska.dev/a.qlmod')).toBe('https://baska.dev/a.qlmod')
     expect(packageAddress(catalog, 'http://baska.dev/a.qlmod')).toBeNull()
+  })
+
+  it('ships with nothing blocked', () => {
+    expect(BLOCKED).toEqual([])
+    expect(addressBlocked('https://ornek.dev/katalog.json')).toBe(false)
+  })
+
+  it('blocks a host with its subdomains, an address prefix and a package hash', () => {
+    const list = ['Kotu.dev', 'https://ortak.dev/kotu/', 'AB'.repeat(32)]
+    expect(addressBlocked('https://kotu.dev/katalog.json', list)).toBe(true)
+    expect(addressBlocked('https://cdn.kotu.dev/a.qlmod', list)).toBe(true)
+    expect(addressBlocked('https://iyikotu.dev/katalog.json', list)).toBe(false)
+    expect(addressBlocked('https://ortak.dev/kotu/katalog.json', list)).toBe(true)
+    expect(addressBlocked('https://ortak.dev/iyi/katalog.json', list)).toBe(false)
+    expect(hashBlocked('ab'.repeat(32), list)).toBe(true)
+    expect(hashBlocked('cd'.repeat(32), list)).toBe(false)
   })
 
   it('names the host and finds the catalog of a module', () => {

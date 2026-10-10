@@ -1,5 +1,11 @@
 import { useEffect, useId, useState } from 'react'
-import type { CatalogChannelView, CatalogRead, CatalogSetting, CatalogView } from '@shared/ipc'
+import {
+  CONTACT_URL,
+  type CatalogChannelView,
+  type CatalogRead,
+  type CatalogSetting,
+  type CatalogView
+} from '@shared/ipc'
 import { catalogAddress, catalogOf } from '@shared/catalog'
 import { Confirm } from '@renderer/components/Confirm'
 import { Skeleton } from '@renderer/components/Skeleton'
@@ -289,6 +295,18 @@ export function Catalogs(): React.JSX.Element {
           </article>
         )
       })}
+
+      <div className="ql-row ql-transition-in">
+        <span className="tk-hint">{t('catalog.report')}</span>
+        <button
+          type="button"
+          className="tk-btn tk-btn-ghost ql-btn-sm"
+          title={CONTACT_URL}
+          onClick={() => window.quizloop.app.openContact()}
+        >
+          {t('settings.contactOpen')}
+        </button>
+      </div>
 
       {offer && (
         <Confirm

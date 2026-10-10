@@ -4,7 +4,7 @@ import { LocalNotifications } from '@capacitor/local-notifications'
 import { createCore, type Core } from '@core/commands'
 import { installFailure, resyncFolders, syncFolder } from '@core/commands/modules'
 import { SettingsPatch } from '@core/settings'
-import { SOURCE_URL } from '@shared/ipc'
+import { CONTACT_URL, SOURCE_URL } from '@shared/ipc'
 import type {
   Capabilities,
   InstallConfirm,
@@ -169,7 +169,8 @@ export async function createShell(): Promise<QuizloopApi> {
         backs.add(cb)
         return () => backs.delete(cb)
       },
-      openSource: () => void Browser.open({ url: SOURCE_URL })
+      openSource: () => void Browser.open({ url: SOURCE_URL }),
+      openContact: () => void Browser.open({ url: CONTACT_URL })
     },
     window: {
       minimize: () => void App.minimizeApp(),

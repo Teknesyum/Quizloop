@@ -21,6 +21,7 @@ import { registerBank } from './bank'
 import {
   CH,
   SOURCE_URL,
+  CONTACT_URL,
   type IntegrityReport,
   type ChapterSummary,
   type InstallConfirm,
@@ -67,6 +68,7 @@ export function registerHandlers(ctx: Context): {
   }))
 
   ipcMain.on(CH.appOpenSource, () => void shell.openExternal(SOURCE_URL))
+  ipcMain.on(CH.appOpenContact, () => void shell.openExternal(CONTACT_URL))
 
   ipcMain.on(CH.winMin, (e) => windowOf(e)?.minimize())
   ipcMain.on(CH.winMax, (e) => {

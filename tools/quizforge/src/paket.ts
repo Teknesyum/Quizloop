@@ -1,10 +1,11 @@
 import fs from 'node:fs'
 import path from 'node:path'
 import { spawnSync } from 'node:child_process'
-import { zipSync, type Zippable } from 'fflate'
+import type { Zippable } from 'fflate'
 import { ModuleMeta, type BookPart } from '../../../src/shared/schema/module.ts'
 import type { Loaded } from './rules.ts'
 import { moduleDir } from './generate.ts'
+import { izsizZip } from './iz.ts'
 
 const SIKISMIS = /\.(webp|png|jpe?g|gif|avif|pdf)$/i
 const ESIK = 1.2
@@ -139,7 +140,7 @@ export function paket(l: Loaded): PaketSonucu {
   fs.mkdirSync(outDir, { recursive: true })
   const out = path.join(outDir, `quizloop-${next.id}-${next.version}.qlmod`)
   if (!kitapYolu(l)) {
-    const zip = zipSync(entries)
+    const zip = izsizZip(entries)
     fs.writeFileSync(out, zip)
     return { out, files: files.length, bytes: zip.length }
   }
@@ -151,7 +152,7 @@ export function paket(l: Loaded): PaketSonucu {
   }
   const meta2 = ModuleMeta.parse({ ...disk, source: src })
   entries['module.json'] = [Buffer.from(JSON.stringify(meta2, null, 1)), { level: 6 }]
-  const zip = zipSync(entries)
+  const zip = izsizZip(entries)
   fs.writeFileSync(out, zip)
   return { out, files: files.length + b.dosyalar.size, bytes: zip.length, bolum: b }
 }

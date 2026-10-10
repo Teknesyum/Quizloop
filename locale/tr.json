@@ -488,5 +488,9 @@
   "catalog.fault.format": "Bu adreste geçerli bir katalog dosyası yok.",
   "catalog.fault.hash": "İndirilen paket, yayıncının bildirdiği özetle uyuşmuyor; kurulmadı.",
   "catalog.fault.missing": "Bu kanal artık katalogda yok.",
-  "catalog.updated": "Kanaldan güncellendi: {names}"
+  "catalog.updated": "Kanaldan güncellendi: {names}",
+  "settings.contact": "Sorun, öneri ya da şikâyet",
+  "settings.contactOpen": "Bize Ulaş",
+  "catalog.report": "Bir katalogdaki içerikle ilgili şikâyetini bize yazabilirsin.",
+  "catalog.fault.blocked": "Bu adres QuizLoop tarafından engellendi."
 }

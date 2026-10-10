@@ -6,6 +6,17 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.7.65] - 2026-10-10
+
+### Added
+
+- Contact Us. A button under Settings, About and at the foot of the Catalogs screen opens
+  a new issue on GitHub, for a problem, an idea or a complaint about catalog content.
+- An embedded block list for catalogs, shipped empty and with no screen of its own. A
+  blocked host, address or package hash is refused; installed modules are left alone.
+- quizforge refuses to write a package that carries a trace of the machine that built it
+  (names, e-mail, host name, home folder path) and pins the file dates inside the zip.
+
 ## [0.7.64] - 2026-10-10
 
 ### Added
