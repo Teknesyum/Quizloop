@@ -114,7 +114,17 @@ on its own. Unsubscribing or removing the catalog keeps the module and your prog
 QuizLoop hosts and recommends no catalog. Catalogs work on the desktop and the web
 version; the Android app does not have them yet.
 
-To publish one, put a JSON file and your `.qlmod` packages on any `https` host:
+### Publishing a catalog
+
+You need nothing from QuizLoop to publish: no account, no approval, no listing.
+
+1. Build or collect your `.qlmod` packages.
+2. Take the size in bytes and the SHA-256 of each package, for example with
+   `sha256sum my-module-1.2.0.qlmod` or, on Windows,
+   `Get-FileHash my-module-1.2.0.qlmod -Algorithm SHA256`.
+3. Write the catalog file below and upload it with the packages to any `https` host you
+   control (object storage, a static site, your own server).
+4. Give people the address of the catalog file. That one address is all they paste.
 
 ```json
 {
@@ -140,6 +150,19 @@ module id inside the package, and `size` and `sha256` must match the file or the
 refuses it. Raise `version` and replace the three package fields to ship an update.
 The schema is [`schema/catalog.schema.json`](schema/catalog.schema.json). For the web
 version the host must allow cross-origin requests.
+
+### Complaints and the block list
+
+You answer for what you publish; put a working `contact` in your catalog. Anyone with a
+complaint about a catalog, such as content published without the right to do so, can
+[open an issue](https://github.com/Teknesyum/Quizloop/issues/new) or use **Contact Us**
+in the app.
+
+When a complaint holds, the catalog goes on the block list embedded in the app
+([`src/shared/blocked.ts`](src/shared/blocked.ts)): its host, its address, or the SHA-256
+of the package, so the same file is refused wherever it is moved. From the next release
+the app does not open a blocked catalog, list a blocked channel or update from it. The
+list is public, ships with the app and is never fetched at run time.
 
 ## Building modules
 
