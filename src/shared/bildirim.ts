@@ -1,4 +1,5 @@
 export const REPORT_URL = ''
+export const REPORT_APP = 'Quizloop'
 
 export interface ReportContext {
   version: string
@@ -13,5 +14,4 @@ export interface ReportContext {
 
 export interface ReportTicket {
   no: number
-  key: string
 }

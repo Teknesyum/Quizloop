@@ -3014,6 +3014,18 @@ button.ql-mark:not(:disabled):active {
   resize: vertical;
 }
 
+.ql-report-shot {
+  display: flex;
+  align-items: center;
+  gap: var(--tk-sp-1);
+  margin-block-start: var(--tk-sp-2);
+  cursor: pointer;
+}
+
+.ql-report-shot input {
+  accent-color: var(--tk-renk-1);
+}
+
 .ql-toast-action {
   display: block;
   margin-block-start: var(--tk-sp-1);

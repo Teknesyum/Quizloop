@@ -237,7 +237,6 @@ export default function App(): React.JSX.Element {
         onMaximize={() => win.toggleMaximize()}
         onClose={() => win.close()}
       />
-      <ReportButton />
       <div className="ql-body">
         <main className="ql-main" key={route.name}>
           {route.name === 'library' && <Library />}
@@ -283,6 +282,7 @@ export default function App(): React.JSX.Element {
           onNo={() => answer(false)}
         />
       )}
+      <ReportButton />
       <Toasts />
     </div>
   )

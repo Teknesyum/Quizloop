@@ -1,14 +1,15 @@
 # bildirim — agent guide
 
-Relay for the in-app "Report A Problem" button (decision 0028). A Cloudflare Worker, deployed on
-its own; the app only knows its URL.
+Relay for in-app problem reports (decisions 0028, 0031). A Cloudflare Worker, deployed on its
+own; an app only knows its URL. One relay and one private repository serve every Teknesyum app.
 
-- `src/worker.ts` — `POST /bildir` stores the screenshot in the reports repository and opens an
-  issue; `POST /not` adds the reporter's note as a comment. The note call carries the HMAC key
-  the first call returned, so only the reporter can comment.
-- `wrangler.toml` — `REPO` is the private reports repository. Secrets `GITHUB_TOKEN` (fine-grained,
-  that repository only: Issues and Contents read/write) and `IMZA` (random string) are set with
-  `npx wrangler secret put`; a token in git would be revoked by GitHub secret scanning.
+- `src/worker.ts` — `POST /bildir` takes `{ app, note, shot, image, ctx }`, stores the screenshot
+  under `g/<app>/<month>/` in the reports repository and opens an issue titled
+  `<app>: <first words of the note>`. `app` must be a plain name or it becomes `Bilinmeyen`.
+- `wrangler.toml` — `REPO` is the private reports repository `Teknesyum/privateissues`. The one
+  secret `GITHUB_TOKEN` (fine-grained, that repository only: Issues and Contents read/write) is
+  set with `npx wrangler secret put GITHUB_TOKEN`; a token in git would be revoked by GitHub
+  secret scanning.
 - Deploy: `npx wrangler deploy` from this folder. The printed URL goes into `REPORT_URL` in
   `src/shared/bildirim.ts` and into `connect-src` of the four CSP strings (`src/main/index.ts`,
   `src/renderer/index.html`, `src/web/index.html`, `src/android/index.html`).
