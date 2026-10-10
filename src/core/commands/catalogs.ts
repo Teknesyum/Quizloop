@@ -9,7 +9,13 @@ import type {
   CatalogView
 } from '@shared/ipc'
 import { CatalogFile, type CatalogChannel } from '@shared/schema/catalog'
-import { packageAddress, catalogAddress, type CatalogFault } from '@shared/catalog'
+import {
+  addressBlocked,
+  catalogAddress,
+  hashBlocked,
+  packageAddress,
+  type CatalogFault
+} from '@shared/catalog'
 
 export interface CatalogPackage {
   id: string
@@ -21,6 +27,7 @@ export interface CatalogPackage {
 export interface CatalogNet {
   text(url: string): Promise<string>
   install(pkg: CatalogPackage): Promise<InstallResult>
+  blocked?: readonly string[]
 }
 
 type Opened = { ok: true; url: string; file: CatalogFile } | { ok: false; fault: CatalogFault }
@@ -28,6 +35,7 @@ type Opened = { ok: true; url: string; file: CatalogFile } | { ok: false; fault:
 async function open(net: CatalogNet, input: string): Promise<Opened> {
   const url = catalogAddress(input)
   if (!url) return { ok: false, fault: 'address' }
+  if (addressBlocked(url, net.blocked)) return { ok: false, fault: 'blocked' }
   let text: string
   try {
     text = await net.text(url)
@@ -46,7 +54,12 @@ async function open(net: CatalogNet, input: string): Promise<Opened> {
   if (ids.size !== parsed.data.channels.length) return { ok: false, fault: 'format' }
   if (parsed.data.channels.some((c) => !packageAddress(url, c.package)))
     return { ok: false, fault: 'format' }
-  return { ok: true, url, file: parsed.data }
+  const channels = parsed.data.channels.filter(
+    (c) =>
+      !hashBlocked(c.sha256, net.blocked) &&
+      !addressBlocked(packageAddress(url, c.package) ?? '', net.blocked)
+  )
+  return { ok: true, url, file: { ...parsed.data, channels } }
 }
 
 function packageOf(catalog: string, c: CatalogChannel): CatalogPackage {

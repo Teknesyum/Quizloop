@@ -1,8 +1,16 @@
 import type { CatalogSetting } from './ipc'
+import { BLOCKED } from './blocked'
 
 const LOCAL = new Set(['localhost', '127.0.0.1'])
 
-export const CATALOG_FAULTS = ['address', 'network', 'format', 'hash', 'missing'] as const
+export const CATALOG_FAULTS = [
+  'address',
+  'network',
+  'format',
+  'hash',
+  'missing',
+  'blocked'
+] as const
 export type CatalogFault = (typeof CATALOG_FAULTS)[number]
 
 export function catalogAddress(input: string): string | null {
@@ -25,6 +33,28 @@ export function packageAddress(catalog: string, pkg: string): string | null {
   } catch {
     return null
   }
+}
+
+export function addressBlocked(url: string, list: readonly string[] = BLOCKED): boolean {
+  let u: URL
+  try {
+    u = new URL(url)
+  } catch {
+    return false
+  }
+  const host = u.hostname.toLocaleLowerCase('en')
+  const href = u.href.toLocaleLowerCase('en')
+  return list.some((raw) => {
+    const e = raw.trim().toLocaleLowerCase('en')
+    if (!e) return false
+    if (e.includes('://')) return href.startsWith(e)
+    return host === e || host.endsWith(`.${e}`)
+  })
+}
+
+export function hashBlocked(sha256: string, list: readonly string[] = BLOCKED): boolean {
+  const h = sha256.toLocaleLowerCase('en')
+  return list.some((raw) => raw.trim().toLocaleLowerCase('en') === h)
 }
 
 export function catalogHost(url: string): string {

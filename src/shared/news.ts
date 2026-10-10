@@ -6,6 +6,15 @@ export interface NewsEntry {
 
 export const NEWS: NewsEntry[] = [
   {
+    version: '0.7.65',
+    tr: [
+      'Bize Ulaş: Ayarlar, Hakkında bölümünden ve Kataloglar ekranından sorun, öneri ya da şikâyet yazabilirsin.'
+    ],
+    en: [
+      'Contact Us: write a problem, an idea or a complaint from Settings, About or the Catalogs screen.'
+    ]
+  },
+  {
     version: '0.7.64',
     tr: [
       'Kataloglar: yayıncının verdiği tek adresi yapıştır, kanallarından istediğine abone ol.',

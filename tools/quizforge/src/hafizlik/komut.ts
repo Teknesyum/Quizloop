@@ -2,7 +2,8 @@ import fs from 'node:fs'
 import path from 'node:path'
 import { spawnSync } from 'node:child_process'
 import { parseArgs } from 'node:util'
-import { zipSync, type Zippable } from 'fflate'
+import type { Zippable } from 'fflate'
+import { izsizZip } from '../iz.ts'
 import { ModuleMeta, type BookPart } from '../../../../src/shared/schema/module.ts'
 import { Block } from '../../../../src/shared/schema/question.ts'
 import { sha256 } from '../hash.ts'
@@ -91,11 +92,15 @@ export async function hafizlik(argv: string[], root: string): Promise<number> {
   const kitap = values.kitapsiz ? null : await kitapYukle(buildDir)
   let satirlar: Record<string, Satir[]> | undefined
   if (kitap) {
-    const py = spawnSync(python, [path.join(pyDir, 'hafizlik_satir.py'), kitap, path.join(buildDir, 'kuran.json')], {
-      encoding: 'utf8',
-      maxBuffer: 1 << 26,
-      env: { ...process.env, PYTHONIOENCODING: 'utf-8' }
-    })
+    const py = spawnSync(
+      python,
+      [path.join(pyDir, 'hafizlik_satir.py'), kitap, path.join(buildDir, 'kuran.json')],
+      {
+        encoding: 'utf8',
+        maxBuffer: 1 << 26,
+        env: { ...process.env, PYTHONIOENCODING: 'utf-8' }
+      }
+    )
     if (py.status !== 0)
       throw new Error(
         `mushaf satırları okunamadı: ${(py.stderr || py.error?.message || '').trim()}`
@@ -178,7 +183,7 @@ export async function hafizlik(argv: string[], root: string): Promise<number> {
   const paketDir = path.join(root, 'dist', 'modules')
   fs.mkdirSync(paketDir, { recursive: true })
   const paket = path.join(paketDir, `quizloop-${MODUL}-${meta.version}.qlmod`)
-  const sikisik = zipSync(zip)
+  const sikisik = izsizZip(zip)
   fs.writeFileSync(paket, sikisik)
   console.log(
     `${r.sorular.length} soru (${r.sikli} çoktan seçmeli, ${r.mutesabih} tanesi benzer ayetli; ${r.acik} açık uçlu), ${blocks.length} blok, ${(bayt / 1048576).toFixed(1)} MB`

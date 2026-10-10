@@ -170,6 +170,12 @@ draft release.
 
 See [`docs/PLAN.md`](docs/PLAN.md) for the architecture.
 
+## Contact
+
+A problem, an idea, or a complaint about content someone publishes for QuizLoop: open an
+[issue](https://github.com/Teknesyum/Quizloop/issues/new). The app has the same link under
+Settings, About.
+
 ## License
 
 AGPL-3.0-or-later. See [LICENSE](LICENSE).

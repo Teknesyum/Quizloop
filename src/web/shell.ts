@@ -8,7 +8,7 @@ import {
 } from '@core/commands/catalogs'
 import { bytesSha256 } from '@core/ports'
 import { SettingsPatch } from '@core/settings'
-import { SOURCE_URL } from '@shared/ipc'
+import { CONTACT_URL, SOURCE_URL } from '@shared/ipc'
 import type {
   Capabilities,
   InstallConfirm,
@@ -154,7 +154,8 @@ export async function createShell(): Promise<QuizloopApi> {
         integrity: opened.integrity
       }),
       onBack: () => off,
-      openSource: () => void window.open(SOURCE_URL, '_blank', 'noopener')
+      openSource: () => void window.open(SOURCE_URL, '_blank', 'noopener'),
+      openContact: () => void window.open(CONTACT_URL, '_blank', 'noopener')
     },
     window: {
       minimize: off,

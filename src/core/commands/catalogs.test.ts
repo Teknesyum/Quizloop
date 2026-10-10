@@ -116,6 +116,22 @@ describe('installChannel', () => {
     expect(asked).toEqual([])
   })
 
+  it('refuses a blocked catalog and hides a blocked package', async () => {
+    const asked: CatalogPackage[] = []
+    const kapali = { ...net(catalog(), asked), blocked: ['ornek.dev'] }
+    expect(await readCatalog(kapali, URL)).toEqual({ ok: false, fault: 'blocked' })
+    expect(await installChannel(db, kapali, URL, id)).toEqual({ ok: false, error: 'blocked' })
+    const ozet = { ...net(catalog(), asked), blocked: [HASH] }
+    const r = await readCatalog(ozet, URL)
+    expect(r.catalog?.channels).toEqual([])
+    const dis = {
+      ...net(catalog({}, { package: 'https://kotu.dev/a.qlmod' }), asked),
+      blocked: ['kotu.dev']
+    }
+    expect(await installChannel(db, dis, URL, id)).toEqual({ ok: false, error: 'missing' })
+    expect(asked).toEqual([])
+  })
+
   it('reports a channel that left the catalog', async () => {
     const r = await installChannel(db, net(catalog()), URL, 'baska-kanal')
     expect(r).toEqual({ ok: false, error: 'missing' })
