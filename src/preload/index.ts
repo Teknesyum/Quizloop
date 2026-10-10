@@ -65,6 +65,11 @@ const api: QuizloopApi = {
     questions: (id: string) => ipcRenderer.invoke(CH.moduleQuestions, id),
     question: (id: string, qid: string) => ipcRenderer.invoke(CH.moduleQuestion, id, qid)
   },
+  catalog: {
+    read: (url: string) => ipcRenderer.invoke(CH.catalogRead, url),
+    install: (url: string, id: string) => ipcRenderer.invoke(CH.catalogInstall, url, id),
+    refresh: () => ipcRenderer.invoke(CH.catalogRefresh)
+  },
   flags: {
     set: (id: string, qid: string, flagged: boolean, note?: string) =>
       ipcRenderer.invoke(CH.flagSet, id, qid, flagged, note),

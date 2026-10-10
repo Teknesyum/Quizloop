@@ -6,6 +6,7 @@ export type Route =
   | { name: 'goals' }
   | { name: 'stats' }
   | { name: 'settings' }
+  | { name: 'catalogs' }
   | { name: 'chapters'; moduleId: string }
   | { name: 'session'; moduleId: string; chapter?: string | null; partial?: boolean }
   | { name: 'bank'; moduleId: string; filter?: 'all' | 'flagged' }

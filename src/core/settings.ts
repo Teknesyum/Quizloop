@@ -16,7 +16,8 @@ export const DEFAULT_SETTINGS: Settings = {
   goals: {},
   goalNotify: false,
   theme: 'Teknesyum',
-  order: {}
+  order: {},
+  catalogs: []
 }
 
 export const SettingsPatch = z
@@ -42,7 +43,17 @@ export const SettingsPatch = z
     ),
     goalNotify: z.boolean(),
     theme: z.string().min(1).max(40),
-    order: z.record(z.string(), z.array(z.string()).max(5000))
+    order: z.record(z.string(), z.array(z.string()).max(5000)),
+    catalogs: z
+      .array(
+        z.object({
+          url: z.string().min(1).max(2000),
+          name: z.string().max(120),
+          publisher: z.string().max(120),
+          channels: z.array(z.string().max(64)).max(500)
+        })
+      )
+      .max(50)
   })
   .partial()
 

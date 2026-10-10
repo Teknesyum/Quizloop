@@ -37,7 +37,8 @@ export async function installFrom(
   source: string,
   now: Date,
   work: Work = new Work('install'),
-  ask?: AskChange
+  ask?: AskChange,
+  expect?: string
 ): Promise<InstallResult> {
   let paket: Unpacked | null = null
   try {
@@ -50,6 +51,7 @@ export async function installFrom(
       source = paket.root
     }
     const { meta } = await checkFolder(nodePorts, source)
+    if (expect && meta.id !== expect) throw new Error(`paket kimliği kanalla uyuşmuyor: ${meta.id}`)
     if (ask && !(await mayInstall(db, meta, ask))) {
       work.finish(true)
       return { ok: false, cancelled: true }

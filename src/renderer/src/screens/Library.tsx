@@ -1,6 +1,12 @@
 import { useEffect, useMemo, useState } from 'react'
 import { tinykeys } from 'tinykeys'
-import { SAMPLE_IDS, type InstallResult, type ModuleSummary } from '@shared/ipc'
+import {
+  SAMPLE_IDS,
+  type InstallResult,
+  type ModuleSummary,
+  type CatalogSetting
+} from '@shared/ipc'
+import { catalogHost, catalogOf } from '@shared/catalog'
 import { LIBRARY_ORDER, ordered } from '@shared/order'
 import { CardCover } from '@renderer/components/CardCover'
 import { CardInfo, CardMeter } from '@renderer/components/CardFacts'
@@ -11,12 +17,14 @@ import { Skeleton } from '@renderer/components/Skeleton'
 import { ViewToggle } from '@renderer/components/ViewToggle'
 import { useOrder } from '@renderer/hooks/useOrder'
 import { dropGoals, goalLabel, goalToast, saveGoal } from '@renderer/goal'
+import { dropChannels } from '@renderer/catalog'
 import { installedText, t, title } from '@renderer/i18n'
 import { useApp } from '@renderer/store/app'
 import { useView } from '@renderer/view'
 
 function ModuleCard({
   m,
+  catalog,
   index,
   active,
   onFocus,
@@ -26,6 +34,7 @@ function ModuleCard({
   onMove
 }: {
   m: ModuleSummary
+  catalog?: string
   index: number
   active: boolean
   onFocus(): void
@@ -56,6 +65,7 @@ function ModuleCard({
         <CardInfo
           tags={[
             t('library.card.version', { version: m.version }),
+            ...(catalog ? [catalog] : []),
             ...m.tags.map((tag) => title(tag))
           ].join(' · ')}
           c={m}
@@ -104,6 +114,14 @@ function ModuleCard({
   )
 }
 
+function catalogHostOf(
+  catalogs: CatalogSetting[] | undefined,
+  moduleId: string
+): string | undefined {
+  const s = catalogs && catalogOf(catalogs, moduleId)
+  return s ? catalogHost(s.url) : undefined
+}
+
 export function Library(): React.JSX.Element {
   const raw = useApp((s) => s.modules)
   const { order, move } = useOrder(LIBRARY_ORDER)
@@ -120,6 +138,7 @@ export function Library(): React.JSX.Element {
   const [active, setActive] = useState(0)
   const [view, setView] = useView()
   const go = useApp((s) => s.go)
+  const catalogs = useApp((s) => s.settings?.catalogs)
 
   useEffect(() => {
     loadModules()
@@ -256,6 +275,16 @@ export function Library(): React.JSX.Element {
               {t('library.installSample')}
             </button>
           )}
+          {window.quizloop.capabilities.catalogs && (
+            <button
+              type="button"
+              className="tk-btn tk-btn-ghost"
+              title={t('library.catalogsHelp')}
+              onClick={() => go({ name: 'catalogs' })}
+            >
+              {t('library.catalogs')}
+            </button>
+          )}
           {window.quizloop.capabilities.folders && (
             <>
               <button
@@ -329,6 +358,7 @@ export function Library(): React.JSX.Element {
             <ModuleCard
               key={m.id}
               m={m}
+              catalog={catalogHostOf(catalogs, m.id)}
               index={i}
               active={i === active}
               onFocus={() => setActive(i)}
@@ -394,6 +424,7 @@ export function Library(): React.JSX.Element {
             try {
               for (const m of samples) await window.quizloop.module.remove(m.id)
               await dropGoals(samples.map((m) => m.id))
+              await dropChannels(samples.map((m) => m.id))
               await useApp.getState().saveSettings({ samplesUsed: true })
               await loadModules()
               toast('success', t('library.removeSampleDone'))
@@ -430,6 +461,7 @@ export function Library(): React.JSX.Element {
           onYes={async () => {
             await window.quizloop.module.remove(removing.id)
             await dropGoals([removing.id])
+            await dropChannels([removing.id])
             setRemoving(null)
             await loadModules()
           }}

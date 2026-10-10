@@ -6,6 +6,19 @@ export interface NewsEntry {
 
 export const NEWS: NewsEntry[] = [
   {
+    version: '0.7.64',
+    tr: [
+      'Kataloglar: yayıncının verdiği tek adresi yapıştır, kanallarından istediğine abone ol.',
+      'Abone olduğun modül, kanalı güncellendikçe kendiliğinden güncellenir.',
+      'Aboneliği istediğin zaman bırakırsın; modül ve ilerlemen kütüphanede kalır.'
+    ],
+    en: [
+      'Catalogs: paste the one address a publisher gives you and subscribe to its channels.',
+      'A subscribed module updates itself whenever its channel does.',
+      'Unsubscribe whenever you like; the module and your progress stay in the library.'
+    ]
+  },
+  {
     version: '0.7.63',
     tr: ['Her güncellemeden sonraki ilk açılışta gelen yenilikler bu pencerede özetlenir.'],
     en: ['On the first launch after every update, this window sums up what is new.']

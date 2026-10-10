@@ -4,6 +4,7 @@ import { fileURLToPath } from 'node:url'
 import { z } from 'zod'
 import { ModuleMeta } from '../src/shared/schema/module'
 import { Block, Question } from '../src/shared/schema/question'
+import { CatalogFile } from '../src/shared/schema/catalog'
 
 const out = resolve(dirname(fileURLToPath(import.meta.url)), '..', 'schema')
 mkdirSync(out, { recursive: true })
@@ -11,7 +12,8 @@ mkdirSync(out, { recursive: true })
 const targets: [string, z.ZodType][] = [
   ['module.schema.json', ModuleMeta],
   ['question.schema.json', Question],
-  ['block.schema.json', Block]
+  ['block.schema.json', Block],
+  ['catalog.schema.json', CatalogFile]
 ]
 
 for (const [name, schema] of targets) {

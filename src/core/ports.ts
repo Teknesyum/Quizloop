@@ -19,7 +19,11 @@ export function joinPath(root: string, ...parts: string[]): string {
   return [head, ...tail].join(sep)
 }
 
-export async function subtleSha256(text: string): Promise<string> {
-  const digest = await globalThis.crypto.subtle.digest('SHA-256', new TextEncoder().encode(text))
+export async function bytesSha256(bytes: BufferSource): Promise<string> {
+  const digest = await globalThis.crypto.subtle.digest('SHA-256', bytes)
   return [...new Uint8Array(digest)].map((b) => b.toString(16).padStart(2, '0')).join('')
+}
+
+export function subtleSha256(text: string): Promise<string> {
+  return bytesSha256(new TextEncoder().encode(text))
 }

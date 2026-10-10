@@ -2,11 +2,18 @@ import { app, BrowserWindow, dialog, ipcMain, shell, type IpcMainInvokeEvent } f
 import type { Kysely } from 'kysely'
 import type { Database } from '@core/db/types'
 import { createCore } from '@core/commands'
+import {
+  installChannel,
+  readCatalog,
+  refreshCatalogs,
+  type CatalogNet
+} from '@core/commands/catalogs'
 import { SettingsPatch } from '@core/settings'
 import { forgetPdf, kaynakBase, kaynakFile, rememberPdf, resolvePdf } from '@main/assets/kaynak'
 import { assetBase } from '@main/assets/protocol'
 import { installFrom, installSamples, removeModuleTree } from '@main/modules/install'
 import { PACKAGE_EXT } from '@main/modules/paket'
+import { CatalogHashError, catalogDownload, catalogText } from '@main/modules/catalog'
 import { nodePorts } from '@main/ports'
 import { Work } from '@main/work'
 import { settingsStore } from '@main/settings'
@@ -103,8 +110,8 @@ export function registerHandlers(ctx: Context): {
     answer?.(z.boolean().parse(yes))
   })
 
-  const install = async (path: string): Promise<InstallResult> => {
-    const r = await installFrom(db, path, nodePorts.now(), new Work('install'), ask)
+  const install = async (path: string, expect?: string): Promise<InstallResult> => {
+    const r = await installFrom(db, path, nodePorts.now(), new Work('install'), ask, expect)
     await library.reload()
     return r
   }
@@ -141,6 +148,32 @@ export function registerHandlers(ctx: Context): {
   ipcMain.handle(CH.moduleRemove, async (_e, id: unknown) => {
     await removeModuleTree(await core.module.forget(z.string().parse(id)))
   })
+
+  const net: CatalogNet = {
+    text: catalogText,
+    install: async (pkg) => {
+      let got
+      try {
+        got = await catalogDownload(pkg)
+      } catch (e) {
+        return { ok: false, error: e instanceof CatalogHashError ? 'hash' : 'network' }
+      }
+      try {
+        return await install(got.file, pkg.id)
+      } finally {
+        got.cleanup()
+      }
+    }
+  }
+  ipcMain.handle(CH.catalogRead, (_e, url: unknown) =>
+    readCatalog(net, z.string().max(2000).parse(url))
+  )
+  ipcMain.handle(CH.catalogInstall, (_e, url: unknown, id: unknown) =>
+    installChannel(db, net, z.string().max(2000).parse(url), z.string().max(64).parse(id))
+  )
+  ipcMain.handle(CH.catalogRefresh, () =>
+    refreshCatalogs(db, net, core.settings.get().catalogs ?? [])
+  )
 
   ipcMain.handle(CH.moduleReset, async (_e, id: unknown, chapter: unknown) => {
     await core.module.reset(z.string().parse(id), z.string().optional().parse(chapter))
