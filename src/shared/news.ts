@@ -6,6 +6,23 @@ export interface NewsEntry {
 
 export const NEWS: NewsEntry[] = [
   {
+    version: '0.7.68',
+    tr: [
+      'Telefonda Paylaş ve Bize Ulaş sağ üstteki üç nokta menüsünde.',
+      'Bir bölümde az kavram olsa da soruların hepsi oturuma giriyor; aynı kavramın soruları araya başka soru girerek gelir.',
+      'Görselde işaretleme soruları doğrudan işaretlemeyle başlar; görsel basılı tutunca büyür, büyümüş görselde de kutu seçilir.',
+      'Kitabı otomatik açma, açılan kitap panelinin sol üstünde bir anahtar oldu.',
+      'Anlat düğmesi her soruda görünür; anlatımı olmayan soruda bunu söyler.'
+    ],
+    en: [
+      'On a phone, Share and Contact Us are in the three-dot menu at the top right.',
+      'Every question of a chapter enters the session even when it has few concepts; questions of one concept come with others in between.',
+      'Marking questions start in marking mode; press and hold enlarges the image, and boxes can be picked in the enlarged view.',
+      'Opening the book automatically is now a switch at the top left of the book panel.',
+      'The Explain button shows on every question and says so when a question has no explanation.'
+    ]
+  },
+  {
     version: '0.7.67',
     tr: [
       'Telefonda tablolar ekrana sığıyor; uzun satır başlıkları artık alt satıra geçiyor.',

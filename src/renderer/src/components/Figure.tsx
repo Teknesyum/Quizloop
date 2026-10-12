@@ -83,6 +83,8 @@ function Overlay({ masks, marks, onMark, live }: Layer & { live: boolean }): Rea
   )
 }
 
+const HOLD_MS = 450
+
 const FOCUSABLE = 'button:not([disabled]), [tabindex]:not([tabindex="-1"])'
 
 function Lightbox({
@@ -90,6 +92,7 @@ function Lightbox({
   alt,
   masks,
   marks,
+  onMark,
   back,
   onClose
 }: Layer & {
@@ -206,6 +209,7 @@ function Lightbox({
 
   const down = (e: React.PointerEvent<HTMLDivElement>): void => {
     if (scale === 1 || e.button !== 0) return
+    if ((e.target as HTMLElement).closest('button')) return
     e.currentTarget.setPointerCapture(e.pointerId)
     grab.current = { id: e.pointerId, x: e.clientX, y: e.clientY, px: pan.x, py: pan.y }
     setDrag(true)
@@ -295,7 +299,7 @@ function Lightbox({
                 if (i.naturalWidth && i.naturalHeight) setRatio(i.naturalWidth / i.naturalHeight)
               }}
             />
-            <Overlay masks={masks} marks={marks} live={false} />
+            <Overlay masks={masks} marks={marks} onMark={onMark} live={Boolean(onMark)} />
           </div>
         </div>
       </div>
@@ -321,6 +325,14 @@ export function Figure({
   const [zoomed, setZoomed] = useState(false)
   const openRef = useRef<HTMLButtonElement | null>(null)
   const close = useCallback(() => setZoomed(false), [])
+  const hold = Boolean(onMark)
+  const timer = useRef<number | null>(null)
+  const stop = useCallback(() => {
+    if (timer.current === null) return
+    window.clearTimeout(timer.current)
+    timer.current = null
+  }, [])
+  useEffect(() => stop, [stop])
   return (
     <figure className={`ql-media ${className ?? ''}`}>
       <div className="ql-media-frame">
@@ -329,8 +341,24 @@ export function Figure({
           type="button"
           className="ql-media-open"
           aria-haspopup="dialog"
-          title={t('media.zoom')}
-          onClick={() => setZoomed(true)}
+          title={t(hold ? 'media.zoomHold' : 'media.zoom')}
+          onClick={(e) => {
+            if (!hold || e.detail === 0) setZoomed(true)
+          }}
+          onPointerDown={(e) => {
+            if (!hold || e.button !== 0) return
+            stop()
+            timer.current = window.setTimeout(() => {
+              timer.current = null
+              setZoomed(true)
+            }, HOLD_MS)
+          }}
+          onPointerUp={stop}
+          onPointerLeave={stop}
+          onPointerCancel={stop}
+          onContextMenu={(e) => {
+            if (hold) e.preventDefault()
+          }}
           onKeyDown={(e) => {
             if (e.code === 'Enter' || e.code === 'Space') e.stopPropagation()
           }}
@@ -341,7 +369,15 @@ export function Figure({
       </div>
       {caption && <figcaption className="tk-hint">{caption}</figcaption>}
       {zoomed && (
-        <Lightbox src={src} alt={alt} masks={masks} marks={marks} back={openRef} onClose={close} />
+        <Lightbox
+          src={src}
+          alt={alt}
+          masks={masks}
+          marks={marks}
+          onMark={onMark}
+          back={openRef}
+          onClose={close}
+        />
       )}
     </figure>
   )

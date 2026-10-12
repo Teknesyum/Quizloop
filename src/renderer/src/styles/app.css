@@ -3022,6 +3022,76 @@ button.ql-mark:not(:disabled):active {
   gap: var(--tk-sp-3);
 }
 
+.ql-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--tk-sp-2);
+  padding: 0;
+  border: 0;
+  border-radius: var(--tk-r-chip);
+  background: transparent;
+  color: var(--tk-text-label);
+  font: inherit;
+  font-size: var(--tk-fs-1);
+  cursor: pointer;
+  transition: color var(--tk-t-fast) var(--tk-e-out);
+}
+
+.ql-switch-track {
+  display: inline-flex;
+  width: calc(var(--tk-sp-3) * 2 + var(--tk-sp-1) * 2);
+  padding: var(--tk-sp-1);
+  border: var(--tk-border-w) solid var(--tk-border-strong);
+  border-radius: var(--tk-r-chip);
+  background: transparent;
+  transition: background var(--tk-t-fast) var(--tk-e-out);
+}
+
+.ql-switch-thumb {
+  width: var(--tk-sp-3);
+  height: var(--tk-sp-3);
+  border-radius: var(--tk-r-chip);
+  background: var(--tk-text-label);
+}
+
+.ql-switch[aria-checked='true'] .ql-switch-track {
+  justify-content: flex-end;
+  border-color: var(--tk-renk-1);
+  background: var(--tk-renk-1);
+}
+
+.ql-switch[aria-checked='true'] .ql-switch-thumb {
+  background: var(--tk-on-renk-1);
+}
+
+.ql-switch:hover {
+  color: var(--tk-text);
+}
+
+.ql-switch:focus-visible {
+  outline: var(--tk-focus-w) solid var(--tk-renk-1);
+  outline-offset: var(--tk-focus-offset);
+  box-shadow: 0 0 0 var(--tk-focus-w) var(--tk-bg);
+}
+
+.ql-switch:active {
+  color: var(--tk-renk-2-text);
+}
+
+.ql-switch:disabled {
+  cursor: not-allowed;
+  color: var(--tk-text-label);
+}
+
+.ql-switch kbd {
+  margin-inline-start: var(--tk-sp-1);
+}
+
+.ql-media-mark .ql-media-open {
+  -webkit-touch-callout: none;
+  user-select: none;
+}
+
 .ql-source-acts kbd {
   margin-inline-start: var(--tk-sp-2);
 }

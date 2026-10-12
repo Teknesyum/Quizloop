@@ -292,7 +292,8 @@ export function BookViewer({
   assetBase,
   onBook,
   onClose,
-  inline = false
+  inline = false,
+  lead
 }: {
   book: SourceBook | null
   moduleId: string
@@ -301,6 +302,7 @@ export function BookViewer({
   onBook(next: SourceBook): void
   onClose(): void
   inline?: boolean
+  lead?: React.ReactNode
 }): React.JSX.Element {
   const offset = book?.sayfaOfseti ?? 0
   const rtl = book?.sagdanSola === true
@@ -709,6 +711,7 @@ export function BookViewer({
       >
         <header className="ql-book-bar">
           <div className="ql-book-meta">
+            {lead}
             <span className="tk-label">{t('book.title')}</span>
             <span className="tk-mono">
               {t('book.spread', { from: pages[0] ?? left, to: pages[pages.length - 1] ?? left })}

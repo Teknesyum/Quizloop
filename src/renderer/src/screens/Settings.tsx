@@ -449,28 +449,32 @@ export function Settings(): React.JSX.Element {
                 {t('settings.sourceOpen')}
               </button>
             </div>
-            <div className="ql-row">
-              <span className="tk-hint">{t('settings.contact')}</span>
-              <button
-                type="button"
-                className="tk-btn tk-btn-ghost ql-btn-sm"
-                title={CONTACT_URL}
-                onClick={() => window.quizloop.app.openContact()}
-              >
-                {t('settings.contactOpen')}
-              </button>
-            </div>
-            <div className="ql-row">
-              <span className="tk-hint">{t('settings.share')}</span>
-              <button
-                type="button"
-                className="tk-btn tk-btn-ghost ql-btn-sm"
-                title={SHARE_URL}
-                onClick={() => void share()}
-              >
-                {t('settings.shareOpen')}
-              </button>
-            </div>
+            {caps.windowChrome && (
+              <>
+                <div className="ql-row">
+                  <span className="tk-hint">{t('settings.contact')}</span>
+                  <button
+                    type="button"
+                    className="tk-btn tk-btn-ghost ql-btn-sm"
+                    title={CONTACT_URL}
+                    onClick={() => window.quizloop.app.openContact()}
+                  >
+                    {t('settings.contactOpen')}
+                  </button>
+                </div>
+                <div className="ql-row">
+                  <span className="tk-hint">{t('settings.share')}</span>
+                  <button
+                    type="button"
+                    className="tk-btn tk-btn-ghost ql-btn-sm"
+                    title={SHARE_URL}
+                    onClick={() => void share()}
+                  >
+                    {t('settings.shareOpen')}
+                  </button>
+                </div>
+              </>
+            )}
             <div className="ql-row">
               <span className="tk-hint">{t('settings.samples')}</span>
               <button

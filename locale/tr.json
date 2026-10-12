@@ -91,7 +91,7 @@
   "session.kindChoices": "Çoktan Seçmeli",
   "session.kindOpen": "Açık Uçlu",
   "session.kindMark": "İşaretleme",
-  "session.markPrompt": "Görselde doğru yeri seç: kutuya tıkla ya da A–E tuşuna bas.",
+  "session.markPrompt": "Görselde doğru yeri seç: kutuya dokun ya da A–E tuşuna bas. Büyütmek için görsele basılı tut.",
   "session.markBox": "Kutu {key}",
   "session.showMarks": "İşaretlemeye Geç",
   "session.known": "Cevabı Biliyorum",
@@ -120,7 +120,6 @@
   "session.hint.pick": "Şıkkı İşaretle",
   "session.hint.grade": "kendini puanla: 1 anlamadım · 2 kısmen · 3 anladım",
   "session.hint.flag": "Soruyu Kaydet Ya Da Hatalı De",
-  "session.bookAuto.off": "Kitabı Gizle",
   "session.hint.next": "Sonraki Soru",
   "session.hint.end": "Oturumu Bitir",
   "session.hint.zoom": "Yazıyı Büyüt / Küçült",
@@ -162,7 +161,7 @@
   "book.kesitAlt": "Kaynak kesiti, {file} sayfa {page}: {quote}",
   "media.zoom": "Görseli Büyütmek İçin Tıkla",
   "media.dialog": "Büyütülmüş Görsel",
-  "media.keys": "Tekerlek ya da + − yakınlaştır · sürükle kaydır · 0 sığdır · Esc kapat",
+  "media.keys": "Tekerlek ya da + − yakınlaştır · sürükle kaydır · 0 sığdır · Esc kapat · kutular burada da seçilir",
   "media.zoomIn": "Yakınlaştır",
   "media.zoomOut": "Uzaklaştır",
   "media.fit": "Sığdır",
@@ -501,5 +500,8 @@
   "report.shotOffTitle": "Görüntü Kapatılsın Mı",
   "report.shotOffText": "Uygulama görüntüsü, sorunu net anlamamız için önemli ipuçları içerebilir. Yine de kapatmak istiyor musun?",
   "report.shotOffYes": "Görüntüyü Kapat",
-  "report.emptyHelp": "Göndermek için bir not yaz ya da görüntüyü açık bırak."
+  "report.emptyHelp": "Göndermek için bir not yaz ya da görüntüyü açık bırak.",
+  "media.zoomHold": "Görseli Büyütmek İçin Basılı Tut",
+  "session.bookAuto.switch": "Kitabı Otomatik Aç",
+  "session.explainNone": "Bu soruya konu anlatımı eklenmemiş. Modül güncellenince burada görünür."
 }

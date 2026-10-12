@@ -91,7 +91,7 @@
   "session.kindChoices": "Multiple Choice",
   "session.kindOpen": "Open-ended",
   "session.kindMark": "Marking",
-  "session.markPrompt": "Pick the right spot on the image: click a box or press A–E.",
+  "session.markPrompt": "Pick the right spot on the image: tap a box or press A–E. Press and hold the image to enlarge it.",
   "session.markBox": "Box {key}",
   "session.showMarks": "Start Marking",
   "session.known": "I Know The Answer",
@@ -120,7 +120,6 @@
   "session.hint.pick": "Mark A Choice",
   "session.hint.grade": "grade yourself: 1 lost · 2 partly · 3 got it",
   "session.hint.flag": "Save The Question Or Call It Faulty",
-  "session.bookAuto.off": "Hide The Book",
   "session.hint.next": "Next Question",
   "session.hint.end": "End The Session",
   "session.hint.zoom": "Grow / Shrink The Text",
@@ -162,7 +161,7 @@
   "book.kesitAlt": "Source excerpt, {file} page {page}: {quote}",
   "media.zoom": "Click To Enlarge The Image",
   "media.dialog": "Enlarged Image",
-  "media.keys": "Wheel or + − to zoom · drag to pan · 0 to fit · Esc to close",
+  "media.keys": "Wheel or + − to zoom · drag to pan · 0 to fit · Esc to close · boxes can be picked here too",
   "media.zoomIn": "Zoom In",
   "media.zoomOut": "Zoom Out",
   "media.fit": "Fit",
@@ -501,5 +500,8 @@
   "report.shotOffTitle": "Turn The Picture Off",
   "report.shotOffText": "A picture of the app can hold important clues that help us understand the problem. Do you still want to turn it off?",
   "report.shotOffYes": "Turn Picture Off",
-  "report.emptyHelp": "Write a note or leave the picture on to send."
+  "report.emptyHelp": "Write a note or leave the picture on to send.",
+  "media.zoomHold": "Press And Hold To Enlarge The Image",
+  "session.bookAuto.switch": "Open The Book Automatically",
+  "session.explainNone": "This question has no topic explanation yet. It shows up here once the module is updated."
 }

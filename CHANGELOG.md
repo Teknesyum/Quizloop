@@ -6,6 +6,25 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.7.68] - 2026-10-12
+
+### Changed
+
+- On a phone, Share and Contact Us moved from Settings into the three-dot menu at the top
+  right.
+- Opening the book automatically is a switch at the top left of the book panel instead of a
+  button under the source line.
+- A marking question starts in marking mode, without a separate step. While marking, the
+  image enlarges on press and hold, so a missed tap no longer opens it.
+- Boxes can be picked in the enlarged image.
+- The Explain button shows on every question; a question without an explanation says so.
+
+### Fixed
+
+- A chapter card showed 22 questions and the session served 2: only one question per concept
+  entered the queue for the day. The queue still takes one per concept first, then fills the
+  remaining room with the other questions of those concepts, spread apart.
+
 ## [0.7.67] - 2026-10-12
 
 ### Fixed

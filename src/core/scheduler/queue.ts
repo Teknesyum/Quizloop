@@ -59,11 +59,29 @@ export async function buildQueue(db: Kysely<Database>, opt: QueueOptions): Promi
     })
 
   const out: Card[] = []
+  let rest: Card[] = []
   for (const c of candidates) {
     if (out.length >= opt.limit) break
-    if (buried.has(c.concept_id)) continue
+    if (buried.has(c.concept_id)) {
+      rest.push(c)
+      continue
+    }
     buried.add(c.concept_id)
     out.push(c)
+  }
+  while (out.length < opt.limit && rest.length > 0) {
+    const round = new Set<string>()
+    const next: Card[] = []
+    for (const c of rest) {
+      if (out.length >= opt.limit) break
+      if (round.has(c.concept_id)) {
+        next.push(c)
+        continue
+      }
+      round.add(c.concept_id)
+      out.push(c)
+    }
+    rest = next
   }
   return out
 }

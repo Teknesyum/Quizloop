@@ -99,6 +99,15 @@ export function Session({
   const speed = settings?.typerSpeed ?? 'normal'
   const bookAuto = settings?.bookAuto === true
   const state = s.state
+  const startMarking = s.reveal
+  const markingStem =
+    state.phase === 'stem' && state.q.kind === 'isaretleme'
+      ? `${state.q.questionId}:${state.q.index}`
+      : null
+
+  useEffect(() => {
+    if (markingStem) void startMarking()
+  }, [markingStem, startMarking])
 
   useEffect(() => {
     s.start(moduleId, chapter, partial)
@@ -401,24 +410,26 @@ export function Session({
         />
         <Stem key={here} q={q} speed={speed} />
 
-        {q.anlatim && (
-          <div className="ql-tell">
-            <button
-              type="button"
-              className="tk-btn tk-btn-ghost ql-btn-sm"
-              aria-expanded={telling === here}
-              onClick={() => setTelling(telling === here ? null : here)}
-            >
-              {t('session.explain')}
-            </button>
-            {telling === here && (
-              <div className="ql-tell-body ql-transition-in">
-                <span className="tk-label">{t('session.explainTitle')}</span>
+        <div className="ql-tell">
+          <button
+            type="button"
+            className="tk-btn tk-btn-ghost ql-btn-sm"
+            aria-expanded={telling === here}
+            onClick={() => setTelling(telling === here ? null : here)}
+          >
+            {t('session.explain')}
+          </button>
+          {telling === here && (
+            <div className="ql-tell-body ql-transition-in">
+              <span className="tk-label">{t('session.explainTitle')}</span>
+              {q.anlatim ? (
                 <Tell key={here} blocks={q.anlatim} assetBase={q.assetBase} book={book} />
-              </div>
-            )}
-          </div>
-        )}
+              ) : (
+                <p className="tk-hint">{t('session.explainNone')}</p>
+              )}
+            </div>
+          )}
+        </div>
 
         {!showChoices && (
           <div className="ql-actions">
@@ -590,16 +601,15 @@ export function Session({
                     solved.source.file
                   )}
                 </span>
-                {book?.available && (
+                {book?.available && !bookAuto && (
                   <span className="ql-source-acts">
                     <button
                       type="button"
                       className="tk-btn tk-btn-ghost ql-btn-sm ql-book-open"
-                      aria-pressed={bookAuto}
                       title={t('settings.bookAutoHelp')}
-                      onClick={() => void saveSettings({ bookAuto: !bookAuto })}
+                      onClick={() => void saveSettings({ bookAuto: true })}
                     >
-                      {bookAuto ? t('session.bookAuto.off') : bookLabel(solved.source.file)}
+                      {bookLabel(solved.source.file)}
                       <kbd>K</kbd>
                     </button>
                   </span>
@@ -616,6 +626,22 @@ export function Session({
                 onBook={setBook}
                 onClose={() => undefined}
                 inline
+                lead={
+                  <button
+                    type="button"
+                    role="switch"
+                    aria-checked={bookAuto}
+                    className="ql-switch"
+                    title={t('settings.bookAutoHelp')}
+                    onClick={() => void saveSettings({ bookAuto: false })}
+                  >
+                    <span className="ql-switch-track" aria-hidden="true">
+                      <span className="ql-switch-thumb" />
+                    </span>
+                    {t('session.bookAuto.switch')}
+                    <kbd>K</kbd>
+                  </button>
+                }
               />
             )}
             <div className="ql-grade">
