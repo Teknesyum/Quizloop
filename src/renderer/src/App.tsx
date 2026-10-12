@@ -1,10 +1,10 @@
 import { useEffect, useMemo, useState } from 'react'
 import { tinykeys } from 'tinykeys'
+import { ScaleSwitch } from '../../../teknesyum-ui/ustcubuk/ScaleSwitch'
 import { LangSwitch, TitleBar } from '../../../teknesyum-ui/ustcubuk/TitleBar'
 import { runBack } from './back'
 import { remind } from './remind'
 import { Confirm } from './components/Confirm'
-import { ScaleSwitch } from './components/ScaleSwitch'
 import { ReportButton } from '@renderer/components/ReportButton'
 import { TopMenu } from './components/TopMenu'
 import { useUpdateTools } from './components/UpdateTools'
@@ -25,11 +25,11 @@ import { Goals } from './screens/Goals'
 import { Stats } from './screens/Stats'
 import { Catalogs } from './screens/Catalogs'
 import { refreshCatalogs } from './catalog'
-import { nextScale } from './scale'
+import { nextScale, scaleLabels } from './scale'
 import { applyTheme } from '@renderer/theme'
 import { useApp, type Route } from './store/app'
 import logo from '../../../resources/icon.png'
-import type { InstallConfirm } from '@shared/ipc'
+import { FONT_SCALES, type InstallConfirm } from '@shared/ipc'
 
 const GITHUB = 'https://github.com/Teknesyum'
 const SPONSOR = 'https://github.com/sponsors/Teknesyum'
@@ -217,12 +217,19 @@ export default function App(): React.JSX.Element {
         }}
         version={caps.updater ? tools.version : tools.label}
         update={caps.updater ? tools.update : undefined}
+        scale={
+          caps.windowChrome ? (
+            <ScaleSwitch
+              scale={scale}
+              steps={FONT_SCALES}
+              labels={scaleLabels()}
+              onChange={(next) => saveSettings({ fontScale: next })}
+            />
+          ) : undefined
+        }
         language={
           caps.windowChrome ? (
-            <>
-              <ScaleSwitch scale={scale} onChange={(next) => saveSettings({ fontScale: next })} />
-              <LangSwitch lang={lang} label={t('lang.label')} onChange={setLang} />
-            </>
+            <LangSwitch lang={lang} label={t('lang.label')} onChange={setLang} />
           ) : (
             <TopMenu
               scale={scale}
