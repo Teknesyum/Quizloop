@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { CONTACT_URL, FONT_SCALES, SOURCE_URL, type Settings as S } from '@shared/ipc'
+import { CONTACT_URL, FONT_SCALES, SHARE_URL, SOURCE_URL, type Settings as S } from '@shared/ipc'
 import { Confirm } from '@renderer/components/Confirm'
 import { Skeleton } from '@renderer/components/Skeleton'
 import { useUpdate } from '@renderer/hooks/useUpdate'
@@ -63,6 +63,15 @@ export function Settings(): React.JSX.Element {
   const save = useApp((s) => s.saveSettings)
   const loadInfo = useApp((s) => s.loadInfo)
   const toast = useApp((s) => s.toast)
+
+  const share = async (): Promise<void> => {
+    try {
+      const r = await window.quizloop.app.share(t('settings.shareText'))
+      if (r === 'copied') toast('success', t('settings.shareCopied'))
+    } catch {
+      toast('danger', t('settings.shareFailed'))
+    }
+  }
   const up = useUpdate()
   const caps = window.quizloop.capabilities
   const [importing, setImporting] = useState(false)
@@ -449,6 +458,17 @@ export function Settings(): React.JSX.Element {
                 onClick={() => window.quizloop.app.openContact()}
               >
                 {t('settings.contactOpen')}
+              </button>
+            </div>
+            <div className="ql-row">
+              <span className="tk-hint">{t('settings.share')}</span>
+              <button
+                type="button"
+                className="tk-btn tk-btn-ghost ql-btn-sm"
+                title={SHARE_URL}
+                onClick={() => void share()}
+              >
+                {t('settings.shareOpen')}
               </button>
             </div>
             <div className="ql-row">

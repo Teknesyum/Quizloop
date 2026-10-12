@@ -1,4 +1,12 @@
-import { app, BrowserWindow, dialog, ipcMain, shell, type IpcMainInvokeEvent } from 'electron'
+import {
+  app,
+  BrowserWindow,
+  clipboard,
+  dialog,
+  ipcMain,
+  shell,
+  type IpcMainInvokeEvent
+} from 'electron'
 import type { Kysely } from 'kysely'
 import type { Database } from '@core/db/types'
 import { createCore } from '@core/commands'
@@ -22,6 +30,7 @@ import {
   CH,
   SOURCE_URL,
   CONTACT_URL,
+  SHARE_URL,
   type IntegrityReport,
   type ChapterSummary,
   type InstallConfirm,
@@ -69,6 +78,10 @@ export function registerHandlers(ctx: Context): {
 
   ipcMain.on(CH.appOpenSource, () => void shell.openExternal(SOURCE_URL))
   ipcMain.on(CH.appOpenContact, () => void shell.openExternal(CONTACT_URL))
+  ipcMain.handle(CH.appShare, (_e, text: unknown) => {
+    clipboard.writeText(`${String(text).slice(0, 300)} ${SHARE_URL}`)
+    return 'copied'
+  })
 
   ipcMain.on(CH.winMin, (e) => windowOf(e)?.minimize())
   ipcMain.on(CH.winMax, (e) => {

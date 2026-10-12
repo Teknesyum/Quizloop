@@ -1,10 +1,11 @@
 import { App } from '@capacitor/app'
 import { Browser } from '@capacitor/browser'
 import { LocalNotifications } from '@capacitor/local-notifications'
+import { Share } from '@capacitor/share'
 import { createCore, type Core } from '@core/commands'
 import { installFailure, resyncFolders, syncFolder } from '@core/commands/modules'
 import { SettingsPatch } from '@core/settings'
-import { CONTACT_URL, SOURCE_URL } from '@shared/ipc'
+import { CONTACT_URL, SHARE_URL, SOURCE_URL } from '@shared/ipc'
 import type {
   Capabilities,
   InstallConfirm,
@@ -170,7 +171,15 @@ export async function createShell(): Promise<QuizloopApi> {
         return () => backs.delete(cb)
       },
       openSource: () => void Browser.open({ url: SOURCE_URL }),
-      openContact: () => void Browser.open({ url: CONTACT_URL })
+      openContact: () => void Browser.open({ url: CONTACT_URL }),
+      share: async (text) => {
+        try {
+          await Share.share({ title: 'QuizLoop', text, url: SHARE_URL })
+          return 'shared'
+        } catch {
+          return 'cancelled'
+        }
+      }
     },
     window: {
       minimize: () => void App.minimizeApp(),

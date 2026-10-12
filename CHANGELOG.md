@@ -6,6 +6,18 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.7.66] - 2026-10-12
+
+### Added
+
+- Share. A button under Settings, About sends the QuizLoop link to a friend: the system
+  share sheet on a phone and in browsers that have one, the clipboard on the desktop.
+
+### Changed
+
+- The interface size control in the title bar now comes from the shared title bar kit.
+- The catalog picture shows only the shipped sample modules.
+
 ## [0.7.65] - 2026-10-10
 
 ### Added

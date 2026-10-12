@@ -6,6 +6,17 @@ export interface NewsEntry {
 
 export const NEWS: NewsEntry[] = [
   {
+    version: '0.7.66',
+    tr: [
+      'Paylaş: Ayarlar, Hakkında bölümünden QuizLoop bağlantısını bir arkadaşına gönderebilirsin.',
+      'Üst çubuktaki boyut denetimi yenilendi.'
+    ],
+    en: [
+      'Share: send the QuizLoop link to a friend from Settings, About.',
+      'The size control in the top bar was renewed.'
+    ]
+  },
+  {
     version: '0.7.65',
     tr: [
       'Bize Ulaş: Ayarlar, Hakkında bölümünden ve Kataloglar ekranından sorun, öneri ya da şikâyet yazabilirsin.'
