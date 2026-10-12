@@ -1,0 +1,29 @@
+module:
+  id: example
+  ad: Example Book
+  surum: 0.1.0
+  dil: tr
+  etiketler: [example]
+kaynak:
+  tip: pdf
+  yol: database/example.pdf
+  sha256: 0000000000000000000000000000000000000000000000000000000000000000
+  kulliyat: sources/example/pages.jsonl
+  bolumHaritasi: sources/example/chapters.json
+  sayfaNumarasi: kitap
+  sayfaOfseti: 0
+  govde: [1, 100]
+  atlanacakSayfalar: []
+  atlanacakBolumler: []
+uretim:
+  parcaBirimi: altBaslik
+  parcaSayfaAraligi: [3, 8]
+  parcaBasinaSoru: 8
+  sikSayisi: 5
+  zorlukDagilimi: { kolay: 0.3, orta: 0.5, zor: 0.2 }
+  cozumBloklari: [text, hint, image, table]
+  yasakli: []
+  aliciOnce: true
+stil:
+  ton: sınav dili
+  uzunluk: kök en çok 60 kelime, şık en çok 20 kelime

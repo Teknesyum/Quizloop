@@ -298,7 +298,7 @@ export const SECENEK_KURALLARI = [
 
 export function secenekIstemi(batch: string, out: string): string {
   return [
-    `Görev: ${batch} dosyasındaki anestezi uzmanlık sınavı sorularının kökünü ve şıklarını denetle, gerekirse yeniden yaz.`,
+    `Görev: ${batch} dosyasındaki sınav sorularının kökünü ve şıklarını denetle, gerekirse yeniden yaz.`,
     `Her soruyu kendin oku ve karar ver; script, anahtar kelime kuralı ya da alt ajan kullanma. Kitap bilgisi için kaynak.alinti ve cozum alanına dayan.`,
     `Bilinen sorunlar: doğru şık çoğu soruda en uzun ve en ayrıntılı şık (öğrenci "en uzunu işaretle" diyerek çözebiliyor); bazı çeldiriciler uydurma ya da saçma; bazı sorularda iki şık birbirinin neredeyse aynısı; bazı kökler soru değil betimleme, şıklar olmadan ne sorulduğu anlaşılmıyor.`,
     '',

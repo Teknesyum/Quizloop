@@ -74,7 +74,7 @@ export function toItem(q: UnitOutput['questions'][number]): Item {
 
 export function labelPrompt(batch: string, out: string): string {
   return [
-    `Görev: ${batch} dosyasındaki anestezi uzmanlık sınavı sorularının her birine zorluk etiketi ver.`,
+    `Görev: ${batch} dosyasındaki sınav sorularının her birine zorluk etiketi ver.`,
     `Her soruyu kendin oku ve karar ver; script, anahtar kelime kuralı ya da alt ajan kullanma.`,
     '',
     ZORLUK_OLCUTU,

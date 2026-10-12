@@ -19,6 +19,11 @@ modules/*
 sources/**/pages.jsonl
 sources/**/build/
 
+# Real source data (rules, chapter maps, build state) never enters git.
+# Only the neutral template under sources/example/ is tracked.
+sources/*
+!sources/example/
+
 # Local agent/relay working state.
 .claude/relay/
 .claude/agent-memory/
