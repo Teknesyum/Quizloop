@@ -6,6 +6,21 @@ export interface NewsEntry {
 
 export const NEWS: NewsEntry[] = [
   {
+    version: '0.7.67',
+    tr: [
+      'Telefonda tablolar ekrana sığıyor; uzun satır başlıkları artık alt satıra geçiyor.',
+      'Kitap sayfasında boş kalan şekiller çiziliyor.',
+      'Telefonda saat ve gezinme tuşları artık yazının ve düğmelerin üstüne binmiyor.',
+      'Dokunduğun şık, sonraki soruda seçili gibi kalmıyor.'
+    ],
+    en: [
+      'Tables fit the phone screen; long row headings now wrap.',
+      'Figures that stayed blank on a book page are drawn.',
+      'On a phone the clock and the navigation keys no longer sit on top of text and buttons.',
+      'The option you tapped no longer looks selected on the next question.'
+    ]
+  },
+  {
     version: '0.7.66',
     tr: [
       'Paylaş: Ayarlar, Hakkında bölümünden QuizLoop bağlantısını bir arkadaşına gönderebilirsin.',

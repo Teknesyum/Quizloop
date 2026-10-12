@@ -2,6 +2,7 @@ import { cpSync, mkdirSync, readdirSync, statSync, writeFileSync } from 'node:fs
 import { join, relative, resolve, sep } from 'node:path'
 import react from '@vitejs/plugin-react'
 import { defineConfig, type Plugin } from 'vite'
+import { pdfWasm } from './scripts/pdfwasm'
 
 const SAMPLES = resolve('resources/ornek')
 const BUNDLED = readdirSync(SAMPLES).sort()
@@ -58,7 +59,7 @@ export default defineConfig({
       { find: '@locale', replacement: resolve('locale') }
     ]
   },
-  plugins: [react(), bundledModules()],
+  plugins: [react(), pdfWasm(), bundledModules()],
   build: {
     outDir: OUT,
     emptyOutDir: true,

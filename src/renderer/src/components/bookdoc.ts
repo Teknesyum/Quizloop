@@ -13,6 +13,8 @@ import { pdfPageOf } from '@shared/kaynak'
 
 GlobalWorkerOptions.workerSrc = workerUrl
 
+const wasmUrl = new URL('pdfwasm/', document.baseURI).href
+
 const CHUNK = 1 << 15
 const BATCH = 512
 
@@ -67,7 +69,7 @@ async function loadWhole(
   const res = await fetch(url)
   if (!res.ok) throw new Error(String(res.status))
   const data = new Uint8Array(await res.arrayBuffer())
-  own.task = getDocument({ data, isImageDecoderSupported: false })
+  own.task = getDocument({ data, wasmUrl, isImageDecoderSupported: false })
   return own.task.promise
 }
 
@@ -79,7 +81,7 @@ async function load(
   const total = Number(/\/(\d+)$/.exec(head.headers.get('content-range') ?? '')?.[1] ?? NaN)
   const initial = new Uint8Array(await head.arrayBuffer())
   if (head.status !== 206 || !Number.isFinite(total) || initial.length >= total) {
-    own.task = getDocument(head.status === 206 ? { url } : { data: initial })
+    own.task = getDocument(head.status === 206 ? { url, wasmUrl } : { data: initial, wasmUrl })
     return own.task.promise
   }
   const transport = new PDFDataRangeTransport(total, initial)
@@ -117,6 +119,7 @@ async function load(
   }
   own.task = getDocument({
     range: transport,
+    wasmUrl,
     disableAutoFetch: true,
     isImageDecoderSupported: false,
     disableStream: true,

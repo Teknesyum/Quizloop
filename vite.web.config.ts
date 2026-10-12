@@ -3,6 +3,7 @@ import { createHash } from 'node:crypto'
 import { join, relative, resolve, sep } from 'node:path'
 import react from '@vitejs/plugin-react'
 import { defineConfig, type Plugin } from 'vite'
+import { pdfWasm } from './scripts/pdfwasm'
 
 const SAMPLES = resolve('resources/ornek')
 const BUNDLED = readdirSync(SAMPLES).sort()
@@ -72,7 +73,7 @@ export default defineConfig({
       { find: '@locale', replacement: resolve('locale') }
     ]
   },
-  plugins: [react(), offline()],
+  plugins: [react(), pdfWasm(), offline()],
   worker: { format: 'es' },
   optimizeDeps: { exclude: ['@sqlite.org/sqlite-wasm'] },
   build: {

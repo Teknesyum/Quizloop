@@ -6,6 +6,19 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.7.67] - 2026-10-12
+
+### Fixed
+
+- A table with long row headings ran off a phone screen and its columns overlapped; row
+  headings now wrap and the table fits the width.
+- Figures stored as JBIG2 or JPEG 2000 images stayed blank in the book view. The decoders
+  that pdf.js needs for them now ship with every build.
+- On a phone the status bar and the navigation keys covered text and the grading buttons
+  during a session. The insets Capacitor reports are used and both bars get a solid strip.
+- A tapped option kept its hover tint on the next question on touch screens.
+- The page stamp no longer covers the text of a book page on a phone.
+
 ## [0.7.66] - 2026-10-12
 
 ### Added

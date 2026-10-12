@@ -2,6 +2,7 @@ import { resolve } from 'path'
 import { defineConfig } from 'electron-vite'
 import react from '@vitejs/plugin-react'
 import { kabuk } from './scripts/kabuk'
+import { pdfWasm } from './scripts/pdfwasm'
 
 const shared = {
   '@core': resolve('src/core'),
@@ -25,6 +26,6 @@ export default defineConfig({
   },
   renderer: {
     resolve: { alias: { '@renderer': resolve('src/renderer/src'), ...shared } },
-    plugins: [react()]
+    plugins: [react(), pdfWasm()]
   }
 })

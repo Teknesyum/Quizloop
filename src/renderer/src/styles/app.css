@@ -16,6 +16,13 @@
   --ql-paper-stamp: color-mix(in srgb, var(--tk-warning) 72%, var(--tk-text));
 }
 
+:root {
+  --ql-inset-top: max(var(--safe-area-inset-top, 0px), env(safe-area-inset-top, 0px));
+  --ql-inset-right: max(var(--safe-area-inset-right, 0px), env(safe-area-inset-right, 0px));
+  --ql-inset-bottom: max(var(--safe-area-inset-bottom, 0px), env(safe-area-inset-bottom, 0px));
+  --ql-inset-left: max(var(--safe-area-inset-left, 0px), env(safe-area-inset-left, 0px));
+}
+
 html,
 body,
 #root {
@@ -684,10 +691,20 @@ kbd {
     transform var(--tk-t-instant) var(--tk-e-out);
 }
 
-.ql-choice > button:hover,
 .ql-choice > button:focus-visible {
   background-color: var(--ql-tint-blue);
   border-color: var(--tk-border);
+}
+
+@media (hover: hover) {
+  .ql-choice > button:hover {
+    background-color: var(--ql-tint-blue);
+    border-color: var(--tk-border);
+  }
+
+  .ql-choice > button:hover .ql-choice-key {
+    color: var(--tk-renk-1);
+  }
 }
 
 .ql-choice > button:active {
@@ -711,7 +728,6 @@ kbd {
   font-size: var(--tk-fs-2);
 }
 
-.ql-choice > button:hover .ql-choice-key,
 .ql-choice > button:focus-visible .ql-choice-key {
   color: var(--tk-renk-1);
 }
@@ -1894,7 +1910,12 @@ button.ql-mark:not(:disabled):active {
 }
 
 .ql-table tbody th {
-  white-space: nowrap;
+  text-align: start;
+}
+
+.ql-table th,
+.ql-table td {
+  overflow-wrap: anywhere;
 }
 
 /* --- motion --- */
@@ -2568,7 +2589,7 @@ button.ql-mark:not(:disabled):active {
   }
 
   :root {
-    --ql-titlebar-h: calc(var(--tk-sp-5) + var(--tk-sp-4) + env(safe-area-inset-top));
+    --ql-titlebar-h: calc(var(--tk-sp-5) + var(--tk-sp-4) + var(--ql-inset-top));
     --ql-nav-h: calc(var(--tk-sp-5) * 2);
     --ql-keys-h: 0px;
     --ql-pad: var(--tk-sp-4);
@@ -2578,8 +2599,7 @@ button.ql-mark:not(:disabled):active {
     box-sizing: border-box;
     height: var(--ql-titlebar-h);
     min-height: 0;
-    padding: env(safe-area-inset-top) var(--ql-pad) 0
-      calc(var(--ql-pad) + env(safe-area-inset-left));
+    padding: var(--ql-inset-top) var(--ql-pad) 0 calc(var(--ql-pad) + var(--ql-inset-left));
     -webkit-app-region: no-drag;
   }
 
@@ -2636,9 +2656,9 @@ button.ql-mark:not(:disabled):active {
     bottom: 0;
     z-index: 4;
     box-sizing: border-box;
-    height: calc(var(--ql-nav-h) + env(safe-area-inset-bottom));
+    height: calc(var(--ql-nav-h) + var(--ql-inset-bottom));
     min-height: 0;
-    padding-bottom: env(safe-area-inset-bottom);
+    padding-bottom: var(--ql-inset-bottom);
     gap: 0;
     background: var(--tk-surface);
     border-top: var(--tk-border-w) solid var(--tk-border-strong);
@@ -2650,16 +2670,16 @@ button.ql-mark:not(:disabled):active {
   }
 
   .ql-shell:has(nav.tk-titlebar__tabs) .ql-body {
-    padding-bottom: calc(var(--ql-nav-h) + env(safe-area-inset-bottom));
+    padding-bottom: calc(var(--ql-nav-h) + var(--ql-inset-bottom));
   }
 
   .ql-shell:has(nav.tk-titlebar__tabs) .tk-toast-stack {
-    bottom: calc(var(--ql-nav-h) + env(safe-area-inset-bottom) + var(--tk-sp-3));
+    bottom: calc(var(--ql-nav-h) + var(--ql-inset-bottom) + var(--tk-sp-3));
   }
 
   .tk-toast-stack {
-    left: calc(var(--ql-pad) + env(safe-area-inset-left));
-    right: calc(var(--ql-pad) + env(safe-area-inset-right));
+    left: calc(var(--ql-pad) + var(--ql-inset-left));
+    right: calc(var(--ql-pad) + var(--ql-inset-right));
   }
 
   .tk-toast-stack > .tk-toast {
@@ -2669,13 +2689,36 @@ button.ql-mark:not(:disabled):active {
 
   .ql-main,
   .ql-main:has(> .ql-session) {
-    padding: var(--ql-pad) calc(var(--ql-pad) + env(safe-area-inset-right))
-      calc(var(--ql-pad) + env(safe-area-inset-bottom))
-      calc(var(--ql-pad) + env(safe-area-inset-left));
+    padding: var(--ql-pad) calc(var(--ql-pad) + var(--ql-inset-right))
+      calc(var(--ql-pad) + var(--ql-inset-bottom)) calc(var(--ql-pad) + var(--ql-inset-left));
   }
 
   .ql-keys,
   kbd {
+    display: none;
+  }
+
+  .ql-shell[data-chrome='none']::before,
+  .ql-shell[data-chrome='none']::after {
+    content: '';
+    position: fixed;
+    inset-inline: 0;
+    z-index: 3;
+    background: var(--tk-bg-from);
+    pointer-events: none;
+  }
+
+  .ql-shell[data-chrome='none']::before {
+    top: 0;
+    height: var(--ql-inset-top);
+  }
+
+  .ql-shell[data-chrome='none']::after {
+    bottom: 0;
+    height: var(--ql-inset-bottom);
+  }
+
+  .ql-book-folio {
     display: none;
   }
 
@@ -2759,8 +2802,8 @@ button.ql-mark:not(:disabled):active {
   }
 
   .ql-grade {
-    bottom: calc(-1 * (var(--ql-pad) + env(safe-area-inset-bottom)));
-    padding-bottom: calc(var(--tk-sp-3) + env(safe-area-inset-bottom));
+    bottom: 0;
+    padding-bottom: calc(var(--tk-sp-3) + var(--ql-inset-bottom));
   }
 
   .ql-grade-row {
@@ -2785,8 +2828,8 @@ button.ql-mark:not(:disabled):active {
 
   body .tk-modal-scrim {
     z-index: 5;
-    padding: calc(var(--tk-sp-3) + env(safe-area-inset-top)) var(--tk-sp-3)
-      calc(var(--tk-sp-3) + env(safe-area-inset-bottom));
+    padding: calc(var(--tk-sp-3) + var(--ql-inset-top)) var(--tk-sp-3)
+      calc(var(--tk-sp-3) + var(--ql-inset-bottom));
   }
 
   body .tk-modal {
@@ -2806,8 +2849,7 @@ button.ql-mark:not(:disabled):active {
   }
 
   body .ql-book-scrim {
-    padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom)
-      env(safe-area-inset-left);
+    padding: var(--ql-inset-top) var(--ql-inset-right) var(--ql-inset-bottom) var(--ql-inset-left);
   }
 
   body .ql-book {
@@ -2889,7 +2931,7 @@ button.ql-mark:not(:disabled):active {
 .ql-report {
   position: fixed;
   inset-inline-start: var(--tk-sp-2);
-  inset-block-end: calc(var(--tk-sp-2) + env(safe-area-inset-bottom, 0px));
+  inset-block-end: calc(var(--tk-sp-2) + var(--ql-inset-bottom));
   z-index: 30;
   min-width: var(--tk-sp-5);
   padding: 0 var(--tk-sp-1);
