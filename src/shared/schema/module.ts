@@ -18,6 +18,10 @@ export const ModuleMeta = z.object({
   id: z.string().regex(/^[a-z0-9][a-z0-9-]{1,63}$/),
   name: z.string().min(1),
   version: z.string().regex(/^\d+\.\d+\.\d+$/),
+  standart: z
+    .string()
+    .regex(/^\d+\.\d+\.\d+$/)
+    .optional(),
   language: z.string().default('tr'),
   description: z.string().optional(),
   tags: z

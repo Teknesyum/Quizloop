@@ -7,6 +7,7 @@ Vite, packaged with electron-builder for Windows, macOS and Linux. AGPL-3.0-or-l
 - `docs/kararlar/` — decision log (Turkish, internal). It overrides the plan.
 - `docs/taramalar/` — prior-art survey (Turkish, internal, historical).
 - `src/AGENTS.md` — process layout and the IPC rule. Each subfolder has its own.
+- `docs/modul-standardi.md` — versioned module standard. "Update the module to the standard" means apply it.
 - `schema/` — generated JSON Schema. Edit the zod source, run `npm run schema:gen`.
 - `sources/` — per-book rules and build state, git-ignored except the neutral
   `sources/example/` template. Book names, quotes and screenshots of real content stay local (0032).

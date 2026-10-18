@@ -4,6 +4,11 @@ export const ImageRef = z.string().regex(/^assets\/(img|tbl|kaynak)\/[\w.-]+\.(w
 
 export const Alt = z.string().min(1).max(400)
 
+export const Bolge = z.object({
+  pdfSayfa: z.number().int().positive(),
+  bbox: z.tuple([z.number(), z.number(), z.number(), z.number()])
+})
+
 const Unit = z.number().min(0).max(1)
 
 export const Box = z
@@ -28,6 +33,7 @@ export const Mask = z.object({
 export const Stem = z.object({
   md: z.string().min(1),
   imageRef: ImageRef.optional(),
+  bolge: Bolge.optional(),
   alt: Alt.optional(),
   table: Table.optional(),
   masks: z.array(Mask).max(12).optional()
@@ -39,6 +45,7 @@ export const Choice = z.object({
   key: ChoiceKey,
   md: z.string().min(1),
   imageRef: ImageRef.optional(),
+  bolge: Bolge.optional(),
   alt: Alt.optional(),
   box: Box.optional()
 })
@@ -50,6 +57,7 @@ export const SolutionBlock = z.discriminatedUnion('type', [
   z.object({
     type: z.literal('image'),
     ref: ImageRef,
+    bolge: Bolge.optional(),
     caption: z.string().optional(),
     alt: Alt.optional()
   }),

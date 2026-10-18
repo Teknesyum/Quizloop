@@ -22,6 +22,40 @@
           "type": "string",
           "pattern": "^assets\\/(img|tbl|kaynak)\\/[\\w.-]+\\.(webp|png|svg)$"
         },
+        "bolge": {
+          "type": "object",
+          "properties": {
+            "pdfSayfa": {
+              "type": "integer",
+              "exclusiveMinimum": 0,
+              "maximum": 9007199254740991
+            },
+            "bbox": {
+              "type": "array",
+              "prefixItems": [
+                {
+                  "type": "number"
+                },
+                {
+                  "type": "number"
+                },
+                {
+                  "type": "number"
+                },
+                {
+                  "type": "number"
+                }
+              ],
+              "items": false,
+              "minItems": 4,
+              "maxItems": 4
+            }
+          },
+          "required": [
+            "pdfSayfa",
+            "bbox"
+          ]
+        },
         "alt": {
           "type": "string",
           "minLength": 1,
@@ -142,6 +176,40 @@
           "imageRef": {
             "type": "string",
             "pattern": "^assets\\/(img|tbl|kaynak)\\/[\\w.-]+\\.(webp|png|svg)$"
+          },
+          "bolge": {
+            "type": "object",
+            "properties": {
+              "pdfSayfa": {
+                "type": "integer",
+                "exclusiveMinimum": 0,
+                "maximum": 9007199254740991
+              },
+              "bbox": {
+                "type": "array",
+                "prefixItems": [
+                  {
+                    "type": "number"
+                  },
+                  {
+                    "type": "number"
+                  },
+                  {
+                    "type": "number"
+                  },
+                  {
+                    "type": "number"
+                  }
+                ],
+                "items": false,
+                "minItems": 4,
+                "maxItems": 4
+              }
+            },
+            "required": [
+              "pdfSayfa",
+              "bbox"
+            ]
           },
           "alt": {
             "type": "string",
@@ -281,6 +349,40 @@
               "ref": {
                 "type": "string",
                 "pattern": "^assets\\/(img|tbl|kaynak)\\/[\\w.-]+\\.(webp|png|svg)$"
+              },
+              "bolge": {
+                "type": "object",
+                "properties": {
+                  "pdfSayfa": {
+                    "type": "integer",
+                    "exclusiveMinimum": 0,
+                    "maximum": 9007199254740991
+                  },
+                  "bbox": {
+                    "type": "array",
+                    "prefixItems": [
+                      {
+                        "type": "number"
+                      },
+                      {
+                        "type": "number"
+                      },
+                      {
+                        "type": "number"
+                      },
+                      {
+                        "type": "number"
+                      }
+                    ],
+                    "items": false,
+                    "minItems": 4,
+                    "maxItems": 4
+                  }
+                },
+                "required": [
+                  "pdfSayfa",
+                  "bbox"
+                ]
               },
               "caption": {
                 "type": "string"
@@ -459,6 +561,40 @@
               "ref": {
                 "type": "string",
                 "pattern": "^assets\\/(img|tbl|kaynak)\\/[\\w.-]+\\.(webp|png|svg)$"
+              },
+              "bolge": {
+                "type": "object",
+                "properties": {
+                  "pdfSayfa": {
+                    "type": "integer",
+                    "exclusiveMinimum": 0,
+                    "maximum": 9007199254740991
+                  },
+                  "bbox": {
+                    "type": "array",
+                    "prefixItems": [
+                      {
+                        "type": "number"
+                      },
+                      {
+                        "type": "number"
+                      },
+                      {
+                        "type": "number"
+                      },
+                      {
+                        "type": "number"
+                      }
+                    ],
+                    "items": false,
+                    "minItems": 4,
+                    "maxItems": 4
+                  }
+                },
+                "required": [
+                  "pdfSayfa",
+                  "bbox"
+                ]
               },
               "caption": {
                 "type": "string"
