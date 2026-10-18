@@ -2,7 +2,7 @@ import type { SourceBook } from '@shared/ipc'
 import type { SolutionBlock } from '@shared/schema/question'
 import { t } from '@renderer/i18n'
 import { DataTable } from './DataTable'
-import { Figure } from './Figure'
+import { BookFigure } from './BookFigure'
 import { Markdown } from './Markdown'
 import { altFor } from './media'
 import { PageStep } from './PageStep'
@@ -22,8 +22,11 @@ function Block({
   if (b.type === 'formula') return <Markdown md={`$$${b.tex}$$`} />
   if (b.type === 'image')
     return (
-      <Figure
-        src={assetBase + b.ref}
+      <BookFigure
+        book={book}
+        assetBase={assetBase}
+        imageRef={b.ref}
+        bolge={b.bolge}
         alt={altFor(b.alt, b.caption, t('media.solutionAlt'))}
         caption={b.caption}
       />

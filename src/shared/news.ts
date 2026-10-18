@@ -6,6 +6,19 @@ export interface NewsEntry {
 
 export const NEWS: NewsEntry[] = [
   {
+    version: '0.7.69',
+    tr: [
+      'Kitabı içinde olan modüllerde görseller doğrudan kitaptan çiziliyor; modül paketleri küçülüyor.',
+      'Eski modüller görselleriyle eskisi gibi açılıyor.',
+      'Uygulamadan yeni bir modül kurarken uygulama güncellemesi gerekiyorsa bunu söylüyor.'
+    ],
+    en: [
+      'In modules that carry their book, images are drawn straight from the book, so module packages get smaller.',
+      'Older modules open with their images as before.',
+      'Installing a module that needs a newer app now says so.'
+    ]
+  },
+  {
     version: '0.7.68',
     tr: [
       'Telefonda Paylaş ve Bize Ulaş sağ üstteki üç nokta menüsünde.',

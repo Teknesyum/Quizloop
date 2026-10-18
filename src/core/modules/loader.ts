@@ -1,6 +1,14 @@
 import { joinPath, type CorePorts } from '@core/ports'
 import { ModuleMeta } from '@shared/schema/module'
 import { Block, type Question } from '@shared/schema/question'
+import {
+  atLeast,
+  BOLGE_STANDART,
+  bookImages,
+  compareStandart,
+  emptyImages,
+  STANDART
+} from '@shared/standart'
 
 export interface LoadedModule {
   meta: ModuleMeta
@@ -77,10 +85,29 @@ export async function validateModule(
   const mod = await readMeta(ports, root)
   let count = 0
   const ids = new Set<string>()
+  const declared = mod.meta.standart
+  if (declared && compareStandart(declared, STANDART) > 0) {
+    throw new ModuleError(
+      `module follows standard ${declared}, this app supports up to ${STANDART}; update the app`
+    )
+  }
   tick?.(0, mod.meta.questionCount)
   for await (const q of iterateQuestions(ports, mod)) {
     if (ids.has(q.id)) throw new ModuleError(`duplicate question id: ${q.id}`)
     ids.add(q.id)
+    if (emptyImages(q) > 0) throw new ModuleError(`image without ref or bolge: ${q.id}`)
+    if (bookImages(q) > 0) {
+      if (!atLeast(declared, BOLGE_STANDART)) {
+        throw new ModuleError(
+          `question ${q.id} draws its image from the book, which needs standard ${BOLGE_STANDART}; module declares ${declared ?? 'none'}`
+        )
+      }
+      if (!mod.meta.source?.bolumler?.length) {
+        throw new ModuleError(
+          `question ${q.id} draws its image from the book, but the book is not in the package`
+        )
+      }
+    }
     count++
     tick?.(count, mod.meta.questionCount)
   }

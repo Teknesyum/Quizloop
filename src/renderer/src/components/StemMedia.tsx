@@ -1,26 +1,33 @@
+import type { SourceBook } from '@shared/ipc'
 import type { ChoiceKey, Stem } from '@shared/schema/question'
 import { t } from '@renderer/i18n'
+import { BookFigure } from './BookFigure'
 import { DataTable } from './DataTable'
-import { Figure } from './Figure'
 import { altFor, type MarkBox } from './media'
 
 export function StemMedia({
   stem,
   assetBase,
+  book = null,
   marks,
   onMark
 }: {
   stem: Stem
   assetBase: string
+  book?: SourceBook | null
   marks?: MarkBox[]
   onMark?(key: ChoiceKey): void
 }): React.JSX.Element | null {
-  if (!stem.imageRef && !stem.table) return null
+  const image = stem.imageRef ?? stem.bolge
+  if (!image && !stem.table) return null
   return (
     <div className="ql-stem-media">
-      {stem.imageRef && (
-        <Figure
-          src={assetBase + stem.imageRef}
+      {image && (
+        <BookFigure
+          book={book}
+          assetBase={assetBase}
+          imageRef={stem.imageRef}
+          bolge={stem.bolge}
           alt={altFor(stem.alt, stem.md, t('media.imageAlt'))}
           masks={stem.masks}
           marks={marks}

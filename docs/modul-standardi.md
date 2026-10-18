@@ -1,6 +1,6 @@
 # Modül Standardı
 
-**Sürüm: 1.0.0** — 2026-10-18
+**Sürüm: 1.1.0** — 2026-10-18 · En düşük uygulama: 0.7.69
 
 Bir QuizLoop modülünün uyması gereken kurallar. Modül üreten oturuma "modülü standarda göre
 güncelle" demek yeter: o oturum bu dosyayı okur, kuralları uygular, `module.json` içindeki
@@ -17,8 +17,15 @@ Alanların biçimi tek yerde tanımlıdır: `src/shared/schema/*.ts` (zod). `sch
 - **Yama:** yalnızca anlatım düzeltmesi; modüle dokunmak gerekmez.
 - Her değişiklik en alttaki Sürüm Geçmişi'ne bir satırla girer. Kuralı değiştiren
   `docs/kararlar/` altına karar da yazar.
-- Modül, uyduğu sürümü `module.json` içinde `standart` alanıyla söyler. Alanı olmayan modül
-  "standart öncesi" sayılır.
+- Modül, uyduğu sürümü `module.json` içinde `standart` alanıyla söyler. **Yeni üretilen ya da
+  güncellenen her modül bu alanı yazmak zorundadır.** Alanı olmayan modül "standart öncesi"
+  sayılır ve eski usulle (görsel dosyasıyla) gösterilir.
+- **Uygulama modülü verisine göre davranır.** Görsel dosyası (`imageRef`, `ref`) olan alan
+  dosyadan gösterilir; dosyası olmayıp `bolge` taşıyan alan gömülü PDF'ten çizilir. Böylece
+  eski modüller değişmeden çalışır, yeni modüller yeni yolla.
+- Kurulumda uygulama denetler: modülün `standart`'ı uygulamanın desteklediğinden yeniyse
+  kurulum "uygulamayı güncelle" diyerek durur. PDF'ten çizilen görseli olan modül en az
+  1.1.0 yazmalı ve kitabı pakette taşımalıdır (`source.bolumler`); yoksa kurulmaz.
 
 ## Güncelleme Yordamı
 
@@ -93,8 +100,17 @@ anlatımıdır; sorunun çözümü (`solution`) ayrı kalır ve onu tekrar etmez
   `image` bloğu) `bolge: { pdfSayfa, bbox }` eklenir. `pdfSayfa` kitabın tamamındaki sayfa
   numarasıdır (`source.kesit` ile aynı); `bbox` o sayfada PDF noktası cinsinden
   `[x0, y0, x1, y1]`.
-- Görselin kendisi şimdilik pakette kalır. Uygulama görseli PDF'ten çizmeye başlayınca
-  standart 1.1.0 olur ve bölgesi kayıtlı görseller paketten çıkar (aşağıda).
+- **Kitabı pakette gömülü modülde bölgesi kayıtlı görsel paketten çıkar:** alanda yalnızca
+  `bolge` kalır, `imageRef` / `ref` silinir, dosya `assets/` altından atılır. Uygulama o
+  bölgeyi gömülü PDF'ten çizer.
+- Kitabı gömülü olmayan modülde görsel pakette kalır (`imageRef` / `ref`), `bolge` yine de
+  yazılabilir.
+- PDF'te karşılığı olmayan görsel (üretimde çizilen şema, başka kaynaktan şekil) pakette
+  kalır.
+- Görsel dosyadan çizilirken de, bölgeden çizilirken de `image` bloğu en az birini taşır:
+  `ref` ya da `bolge`.
+- Bölgenin doğru çizildiği uygulamada denetlenir: sınır kesilmiş, yanlış sayfa ya da boş
+  alan çıkıyorsa `bbox` düzeltilir.
 - Kutular (`masks`, şık `box`) görsele göre 0–1 oranıyla yazılır; görsel bölgeden çizilince
   de aynı kalır.
 
@@ -102,9 +118,5 @@ anlatımıdır; sorunun çözümü (`solution`) ayrı kalır ve onu tekrar etmez
 
 | Sürüm | Tarih      | Değişiklik                                                                                                                                                                                                             |
 | ----- | ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1.1.0 | 2026-10-18 | `standart` alanı zorunlu. Kitabı gömülü modülde bölgesi kayıtlı görseller paketten çıkar, uygulama gömülü PDF'ten çizer. `image` bloğunda `ref` ya da `bolge`. En düşük uygulama 0.7.69.                               |
 | 1.0.0 | 2026-10-18 | İlk numaralı sürüm. Paket yapısı ve iz kuralları yazıya geçti. Kavram başına `anlatim` zorunlu. Görseller WebP. Sahipsiz dosya pakete girmez. Kitaptan alınan görsel `bolge` kaydeder. Modül `standart` alanını taşır. |
-
-**Sıradaki (yürürlükte değil): 1.1.0 — Görsel PDF'ten Çizilir.** Kitabı pakette gömülü olan
-modülde `bolge` kaydı olan görseller paketten çıkar; uygulama o bölgeyi gömülü PDF'ten
-çizer. Kitabı gömülü olmayan modülde görsel pakette kalır. Uygulama desteği yayımlanınca bu
-satır tabloya girer ve gereken en düşük uygulama sürümü yazılır.

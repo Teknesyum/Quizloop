@@ -12,6 +12,7 @@ import { pushBack } from '@renderer/back'
 import { Markdown } from '@renderer/components/Markdown'
 import { Skeleton } from '@renderer/components/Skeleton'
 import { StemMedia } from '@renderer/components/StemMedia'
+import { ChoiceImage } from '@renderer/components/BookFigure'
 import { altFor, markBoxes, plainText } from '@renderer/components/media'
 import { useTyper } from '@renderer/hooks/useTyper'
 import { lang, t, type Key } from '@renderer/i18n'
@@ -405,6 +406,7 @@ export function Session({
         <StemMedia
           stem={q.stem}
           assetBase={q.assetBase}
+          book={book}
           marks={marks}
           onMark={state.phase === 'choices' ? (k) => void s.pick(k) : undefined}
         />
@@ -527,11 +529,13 @@ export function Session({
                   >
                     <span className="tk-mono ql-choice-key">{c.key})</span>
                     <Markdown md={c.md} assetBase={q.assetBase} className="ql-choice-text" />
-                    {c.imageRef && (
-                      <img
-                        src={q.assetBase + c.imageRef}
+                    {(c.imageRef ?? c.bolge) && (
+                      <ChoiceImage
+                        book={book}
+                        assetBase={q.assetBase}
+                        imageRef={c.imageRef}
+                        bolge={c.bolge}
                         alt={altFor(c.alt, c.md, t('media.choiceAlt', { key: c.key }))}
-                        className="ql-choice-img"
                       />
                     )}
                   </button>
@@ -581,7 +585,9 @@ export function Session({
               </div>
             )}
             <h3 className="tk-h3">{t('session.solution')}</h3>
-            {solved.solution && <Solution blocks={solved.solution} assetBase={q.assetBase} />}
+            {solved.solution && (
+              <Solution blocks={solved.solution} assetBase={q.assetBase} book={book} />
+            )}
             {solved.source && kaynakGoster(q.tags) && (
               <blockquote className="ql-source">
                 <span className="tk-label ql-source-label">{t('session.source')}</span>

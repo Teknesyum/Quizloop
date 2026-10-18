@@ -62,7 +62,7 @@ export function viewPdfPage(q: QuestionView, offset: number): number | null {
   return q.kaynak.pdfSayfa ?? pdfPageOf(q.kaynak.sayfa, offset)
 }
 
-async function loadWhole(
+export async function loadWhole(
   url: string,
   own: { task: PDFDocumentLoadingTask | null }
 ): Promise<PDFDocumentProxy> {
@@ -73,7 +73,7 @@ async function loadWhole(
   return own.task.promise
 }
 
-async function load(
+export async function load(
   url: string,
   own: { task: PDFDocumentLoadingTask | null }
 ): Promise<PDFDocumentProxy> {

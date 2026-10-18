@@ -6,6 +6,22 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.7.69] - 2026-10-18
+
+### Added
+
+- Images of a module that embeds its book can be drawn straight from the book: a question,
+  choice or solution image that records only its page region is rendered from the embedded
+  PDF, so the package no longer carries a copy of the picture.
+- Modules declare the module standard they follow (`standart` in `module.json`). Installing
+  a module that needs a newer app asks for an app update.
+
+### Changed
+
+- Modules with image files keep showing them exactly as before.
+- Installing checks that a module drawing images from its book declares standard 1.1.0 or
+  later and carries the book.
+
 ## [0.7.68] - 2026-10-12
 
 ### Changed

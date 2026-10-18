@@ -404,8 +404,7 @@
                     }
                   },
                   "required": [
-                    "type",
-                    "ref"
+                    "type"
                   ]
                 },
                 {
@@ -616,8 +615,7 @@
                     }
                   },
                   "required": [
-                    "type",
-                    "ref"
+                    "type"
                   ]
                 },
                 {

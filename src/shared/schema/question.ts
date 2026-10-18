@@ -56,7 +56,7 @@ export const SolutionBlock = z.discriminatedUnion('type', [
   z.object({ type: z.literal('formula'), tex: z.string().min(1) }),
   z.object({
     type: z.literal('image'),
-    ref: ImageRef,
+    ref: ImageRef.optional(),
     bolge: Bolge.optional(),
     caption: z.string().optional(),
     alt: Alt.optional()
@@ -139,7 +139,7 @@ export const Question = z
       return
     }
     if (q.kind === 'isaretleme') {
-      if (!q.stem.imageRef) {
+      if (!q.stem.imageRef && !q.stem.bolge) {
         ctx.issues.push({
           code: 'custom',
           message: 'marking question needs a stem image',

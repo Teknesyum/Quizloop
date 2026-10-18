@@ -26,10 +26,12 @@ function fold(s: string): string {
 function Detail({
   q,
   kitap,
+  book,
   onBook
 }: {
   q: BankQuestion
   kitap: boolean
+  book: SourceBook | null
   onBook(): void
 }): React.JSX.Element {
   return (
@@ -38,6 +40,7 @@ function Detail({
       <StemMedia
         stem={q.stem}
         assetBase={q.assetBase}
+        book={book}
         marks={
           q.kind === 'isaretleme'
             ? markBoxes(q.choices, { correct: q.correct, open: true, live: false })
@@ -60,7 +63,7 @@ function Detail({
           <Markdown md={q.beklenenCevap} assetBase={q.assetBase} />
         </div>
       )}
-      <Solution blocks={q.solution} assetBase={q.assetBase} />
+      <Solution blocks={q.solution} assetBase={q.assetBase} book={book} />
       {kaynakGoster(q.tags) && (
         <blockquote className="ql-source">
           <span className="tk-label ql-source-label">{t('session.source')}</span>
@@ -425,7 +428,12 @@ export function Bank({
                   {t('book.close')}
                 </button>
               </header>
-              <Detail q={open} kitap={book?.available === true} onBook={() => setReading(true)} />
+              <Detail
+                q={open}
+                kitap={book?.available === true}
+                book={book}
+                onBook={() => setReading(true)}
+              />
             </aside>
           )}
         </div>
