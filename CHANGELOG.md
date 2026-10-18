@@ -15,11 +15,14 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ### Changed
 
-- Share sends both the Android app link and the web version link together.
+- Share sends the web version link and the download page for the desktop and Android apps
+  together.
 - Answers stay saved if the app closes without pressing Finish: a session's counters are
   written together with each answer, and a session left open is closed at its last answer
   when the next one starts.
 - Questions without a chapter can be studied from their own row.
+- The Android app is built with R8 and draws edge to edge on every Android version; the
+  package is about 3 MB smaller.
 
 ## [0.7.69] - 2026-10-18
 

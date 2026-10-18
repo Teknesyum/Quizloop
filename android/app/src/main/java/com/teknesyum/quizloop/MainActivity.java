@@ -1,6 +1,7 @@
 package com.teknesyum.quizloop;
 
 import android.os.Bundle;
+import androidx.activity.EdgeToEdge;
 import com.getcapacitor.BridgeActivity;
 
 public class MainActivity extends BridgeActivity {
@@ -10,5 +11,6 @@ public class MainActivity extends BridgeActivity {
         registerPlugin(PaketPlugin.class);
         registerPlugin(MagazaPlugin.class);
         super.onCreate(savedInstanceState);
+        EdgeToEdge.enable(this);
     }
 }

@@ -312,12 +312,12 @@ export interface IntegrityReport {
 
 export const SOURCE_URL = 'https://github.com/Teknesyum/Quizloop'
 export const SHARE_URL = 'https://teknesyum.github.io/Quizloop/'
-export const PLAY_URL = 'https://play.google.com/store/apps/details?id=com.teknesyum.QuizLoop'
+export const DOWNLOAD_URL = `${SOURCE_URL}/releases/latest`
 export function shareMessage(text: string): string {
   return `${String(text).slice(0, 300)}
 
-Android: ${PLAY_URL}
-Web: ${SHARE_URL}`
+Web: ${SHARE_URL}
+Windows · macOS · Linux · Android: ${DOWNLOAD_URL}`
 }
 export type ShareResult = 'shared' | 'copied' | 'cancelled'
 
