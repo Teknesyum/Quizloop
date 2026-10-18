@@ -311,8 +311,14 @@ export interface IntegrityReport {
 }
 
 export const SOURCE_URL = 'https://github.com/Teknesyum/Quizloop'
-export const CONTACT_URL = `${SOURCE_URL}/issues/new`
 export const SHARE_URL = 'https://teknesyum.github.io/Quizloop/'
+export const PLAY_URL = 'https://play.google.com/store/apps/details?id=com.teknesyum.QuizLoop'
+export function shareMessage(text: string): string {
+  return `${String(text).slice(0, 300)}
+
+Android: ${PLAY_URL}
+Web: ${SHARE_URL}`
+}
 export type ShareResult = 'shared' | 'copied' | 'cancelled'
 
 export interface Capabilities {
@@ -361,7 +367,6 @@ export interface QuizloopApi {
     }>
     onBack(cb: () => void): () => void
     openSource(): void
-    openContact(): void
     share(text: string): Promise<ShareResult>
   }
   window: {
@@ -443,7 +448,6 @@ export interface QuizloopApi {
 export const CH = {
   appInfo: 'app:info',
   appOpenSource: 'app:openSource',
-  appOpenContact: 'app:openContact',
   appShare: 'app:share',
   winMin: 'window:minimize',
   winMax: 'window:toggleMaximize',

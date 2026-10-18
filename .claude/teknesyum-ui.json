@@ -47,16 +47,16 @@
       "reason": "Yanlış alarm: namespace zaten tamamen küçük harf (com.teknesyum.quizloop), mobil-kimlik kitabına uygun. Tarayıcı deseni büyük-küçük harf ayırmadan eşliyor; tarayıcı düzelince kaldırılır."
     }
   ],
-  "plugin": "0.36.0",
+  "plugin": "0.37.0",
   "denetim": {
     "tarih": "2026-10-05T00:39:18.809Z",
     "duzen": "920c61ba2837ca0d"
   },
   "uc": {
-    "surum": "0.36.0",
+    "surum": "0.37.0",
     "duzen": "920c61ba2837ca0d",
-    "commit": "a8072f584d8abf07b53241856b92a511f032c2c5",
-    "tarih": "2026-10-12"
+    "commit": "4415f3b609d111ef6d74ec527e91bf654a2e4039",
+    "tarih": "2026-10-15"
   },
   "pencere": "maximize"
 }

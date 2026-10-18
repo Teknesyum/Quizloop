@@ -24,6 +24,8 @@ jobs:
           cache: npm
       - run: npm ci --ignore-scripts
       - run: npm run web:build
+        env:
+          TEKNESYUM_BILDIRIM_KEY: ${{ secrets.TEKNESYUM_BILDIRIM_KEY }}
       - uses: actions/upload-pages-artifact@v3
         with:
           path: out/web

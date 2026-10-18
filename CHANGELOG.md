@@ -6,6 +6,21 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.7.70] - 2026-10-18
+
+### Added
+
+- Contact Us is now a form inside the app: a note, an optional way to reach you and one
+  optional image, delivered to the developer privately instead of opening a public GitHub page.
+
+### Changed
+
+- Share sends both the Android app link and the web version link together.
+- Answers stay saved if the app closes without pressing Finish: a session's counters are
+  written together with each answer, and a session left open is closed at its last answer
+  when the next one starts.
+- Questions without a chapter can be studied from their own row.
+
 ## [0.7.69] - 2026-10-18
 
 ### Added

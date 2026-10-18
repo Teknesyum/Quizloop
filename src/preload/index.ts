@@ -24,7 +24,6 @@ const api: QuizloopApi = {
     info: () => ipcRenderer.invoke(CH.appInfo),
     onBack: () => () => undefined,
     openSource: () => ipcRenderer.send(CH.appOpenSource),
-    openContact: () => ipcRenderer.send(CH.appOpenContact),
     share: (text) => ipcRenderer.invoke(CH.appShare, text)
   },
   window: {

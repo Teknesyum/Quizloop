@@ -6,6 +6,19 @@ export interface NewsEntry {
 
 export const NEWS: NewsEntry[] = [
   {
+    version: '0.7.70',
+    tr: [
+      'Bize Ulaş artık uygulamanın içinde bir form: notunu, istersen sana ulaşma yolunu ve bir görüntü yazıp doğrudan bize gönderebilirsin.',
+      'Paylaş, Android uygulama bağlantısını ve web sürümünü birlikte gönderiyor.',
+      'Bitir demeden uygulama kapansa da verdiğin cevaplar kaybolmuyor; Karışık oturumdaki cevaplar sorunun kendi bölümüne işleniyor.'
+    ],
+    en: [
+      'Contact Us is now a form inside the app: write your note, optionally how to reach you and an image, and send it straight to us.',
+      'Share sends the Android app link and the web version together.',
+      'Your answers are kept even if the app closes before you press Finish; answers in a Mixed session count toward each question’s own chapter.'
+    ]
+  },
+  {
     version: '0.7.69',
     tr: [
       'Kitabı içinde olan modüllerde görseller doğrudan kitaptan çiziliyor; modül paketleri küçülüyor.',

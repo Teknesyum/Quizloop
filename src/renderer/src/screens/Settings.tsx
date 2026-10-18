@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { CONTACT_URL, FONT_SCALES, SHARE_URL, SOURCE_URL, type Settings as S } from '@shared/ipc'
+import { FONT_SCALES, SHARE_URL, SOURCE_URL, type Settings as S } from '@shared/ipc'
 import { Confirm } from '@renderer/components/Confirm'
 import { Skeleton } from '@renderer/components/Skeleton'
 import { useUpdate } from '@renderer/hooks/useUpdate'
@@ -456,8 +456,7 @@ export function Settings(): React.JSX.Element {
                   <button
                     type="button"
                     className="tk-btn tk-btn-ghost ql-btn-sm"
-                    title={CONTACT_URL}
-                    onClick={() => window.quizloop.app.openContact()}
+                    onClick={() => useApp.getState().showContact(true)}
                   >
                     {t('settings.contactOpen')}
                   </button>

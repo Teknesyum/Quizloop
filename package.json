@@ -1,6 +1,6 @@
 {
   "name": "quizloop",
-  "version": "0.7.69",
+  "version": "0.7.70",
   "description": "Cross-platform spaced-repetition quiz engine",
   "main": "./out/main/boot.js",
   "author": "Teknesyum",
@@ -13,7 +13,8 @@
   "scripts": {
     "dev": "node scripts/abi.mjs electron && electron-vite dev -w",
     "start": "node scripts/abi.mjs electron && electron-vite preview",
-    "build": "node scripts/abi.mjs electron && npm run typecheck && electron-vite build",
+    "bildirim:anahtar": "node teknesyum-ui/bildirim/bildirim-anahtar.mjs",
+    "build": "npm run bildirim:anahtar && node scripts/abi.mjs electron && npm run typecheck && electron-vite build",
     "build:unpack": "npm run build && electron-builder --dir -c.directories.output=dist/desktop",
     "build:win": "npm run build && electron-builder --win -c.directories.output=dist/desktop",
     "build:mac": "npm run build && electron-builder --mac -c.directories.output=dist/desktop",
@@ -32,9 +33,9 @@
     "icon:gen": "node scripts/icon.mjs",
     "kod": "tsx scripts/kod.ts",
     "ornek": "tsx scripts/ornek.ts",
-    "web:build": "npm run typecheck && vite build -c vite.web.config.ts",
+    "web:build": "npm run bildirim:anahtar && npm run typecheck && vite build -c vite.web.config.ts",
     "web:serve": "vite preview -c vite.web.config.ts --port 4173 --strictPort",
-    "android:build": "npm run typecheck && vite build -c vite.android.config.ts",
+    "android:build": "npm run bildirim:anahtar && npm run typecheck && vite build -c vite.android.config.ts",
     "android:sync": "npm run android:build && cap sync android",
     "android:apk": "npm run android:sync && node scripts/android-apk.mjs",
     "android:release": "npm run android:sync && node scripts/android-apk.mjs --release"

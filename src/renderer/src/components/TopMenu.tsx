@@ -39,7 +39,7 @@ export function TopMenu({
         <LangSwitch lang={lang} label={t('lang.label')} onChange={onLang} />
       </div>
       <MenuItem onPick={() => void share()}>{t('settings.shareOpen')}</MenuItem>
-      <MenuItem onPick={() => window.quizloop.app.openContact()}>
+      <MenuItem onPick={() => useApp.getState().showContact(true)}>
         {t('settings.contactOpen')}
       </MenuItem>
       <a

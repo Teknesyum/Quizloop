@@ -31,6 +31,7 @@ jobs:
       - run: npm run ${{ matrix.script }} -- --publish never
         env:
           CSC_IDENTITY_AUTO_DISCOVERY: false
+          TEKNESYUM_BILDIRIM_KEY: ${{ secrets.TEKNESYUM_BILDIRIM_KEY }}
       - name: Pack the code bundle
         if: matrix.os == 'windows-latest'
         run: npm run kod
@@ -55,6 +56,7 @@ jobs:
       QUIZLOOP_KEY_ALIAS: upload
       QUIZLOOP_STORE_PASSWORD: ${{ secrets.QUIZLOOP_STORE_PASSWORD }}
       QUIZLOOP_KEY_PASSWORD: ${{ secrets.QUIZLOOP_KEY_PASSWORD }}
+      TEKNESYUM_BILDIRIM_KEY: ${{ secrets.TEKNESYUM_BILDIRIM_KEY }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -102,6 +104,7 @@ jobs:
       pages: write
       id-token: write
     uses: ./.github/workflows/pages.yml
+    secrets: inherit
 
   play:
     needs: [build, android]

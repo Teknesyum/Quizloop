@@ -15,6 +15,7 @@ jobs:
       QUIZLOOP_KEY_ALIAS: upload
       QUIZLOOP_STORE_PASSWORD: ${{ secrets.QUIZLOOP_STORE_PASSWORD }}
       QUIZLOOP_KEY_PASSWORD: ${{ secrets.QUIZLOOP_KEY_PASSWORD }}
+      TEKNESYUM_BILDIRIM_KEY: ${{ secrets.TEKNESYUM_BILDIRIM_KEY }}
     steps:
       - uses: actions/checkout@v4
         with:

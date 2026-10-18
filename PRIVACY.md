@@ -1,6 +1,6 @@
 # QuizLoop Privacy Policy
 
-Effective date: 2026-10-04
+Effective date: 2026-10-18
 
 QuizLoop is a free, open-source (AGPL-3.0-or-later) spaced-repetition quiz app
 for Android, Windows, macOS and Linux, published by Teknesyum. This policy
@@ -35,12 +35,13 @@ the app's files.
 - No analytics, crash reporting, tracking or profiling libraries.
 - No access to your contacts, location, camera, microphone, photos or
   phone identifiers.
-- No selling or sharing of personal data, because none is collected.
+- No selling or sharing of personal data. The only thing that ever leaves the
+  device about you is what you type into the **Contact Us** form yourself.
 
 ## Network use
 
 The app works fully offline. It contacts the network only to look for a new
-version of itself. A check requests
+version of itself, and when you send the **Contact Us** form. A check requests
 `https://api.github.com/repos/Teknesyum/Quizloop/releases/latest`, or on Windows
 the small `kod.json` file attached to the latest release, and compares that
 version with the installed one. It sends no information about you or your study
@@ -68,9 +69,27 @@ exists.
 If you open the update notice or the source-code link, your browser opens a
 GitHub page. That visit is governed by GitHub's policy, not this one.
 
+## Contact Us form
+
+The **Contact Us** form sends only what you put in it, and only when you press
+**Send**:
+
+- your note;
+- a way to reach you, if you write one (optional);
+- one image you pick, if you add one (optional), shrunk on the device first;
+- the app version, the platform (Windows, macOS, Linux, Android or Web) and the
+  interface language.
+
+It goes to `https://api.github.com` and is stored as an issue in a private
+GitHub repository that only the developer can read. It is used only to answer
+you and to fix or improve the app, is never sold or shared, and you can ask for
+it to be deleted through the same form. GitHub handles the request under its
+privacy statement linked above.
+
 ## Android permissions
 
-- `INTERNET`: used only for the update check described above.
+- `INTERNET`: used only for the update check and the Contact Us form described
+  above.
 - The app does not request storage, location, camera, microphone or contacts
   permissions. Modules are imported through Android's system file picker, which
   gives the app access only to the file you choose.
@@ -95,7 +114,7 @@ that backup is done in your Google account settings.
 
 ## Children
 
-QuizLoop is a general-purpose study tool and is not directed at children under 13. It collects no personal information from anyone.
+QuizLoop is a general-purpose study tool and is not directed at children under 13. It collects no personal information unless someone chooses to type it into the Contact Us form.
 
 ## Changes
 
@@ -104,4 +123,5 @@ with a new effective date.
 
 ## Contact
 
-Open an issue at <https://github.com/Teknesyum/Quizloop/issues>.
+Use **Contact Us** inside the app, or open an issue at
+<https://github.com/Teknesyum/Quizloop/issues>.

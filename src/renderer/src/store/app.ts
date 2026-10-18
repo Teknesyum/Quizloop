@@ -35,9 +35,11 @@ interface AppState {
   toasts: Toast[]
   help: boolean
   news: boolean
+  contact: boolean
   fresh: number
   showHelp(open: boolean): void
   showNews(open: boolean): void
+  showContact(open: boolean): void
   go(route: Route): void
   loadModules(): Promise<void>
   loadSettings(): Promise<void>
@@ -60,9 +62,11 @@ export const useApp = create<AppState>((set) => ({
   toasts: [],
   help: false,
   news: false,
+  contact: false,
   fresh: 0,
   showHelp: (open) => set({ help: open }),
   showNews: (open) => set({ news: open }),
+  showContact: (open) => set({ contact: open }),
   go: (route) => set((s) => ({ route, toasts: s.toasts.filter((t) => t.kind === 'danger') })),
   loadModules: async () => set({ modules: await window.quizloop.module.list() }),
   loadSettings: async () => set({ settings: await window.quizloop.settings.get() }),

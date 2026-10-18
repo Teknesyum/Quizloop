@@ -129,6 +129,7 @@ export class SessionMachine {
     partial = false
   ): Promise<{ sessionId: string; first: QuestionView | null; total: number }> {
     const now = this.clock()
+    await this.closeStale()
     const queue = await buildQueue(this.deps.db, {
       moduleId,
       now,
@@ -169,6 +170,30 @@ export class SessionMachine {
       })
       .execute()
     return { sessionId: id, first: await this.advance(s), total: queue.length }
+  }
+
+  async closeStale(): Promise<number> {
+    const open = await this.deps.db
+      .selectFrom('session')
+      .select(['id', 'started_at'])
+      .where('ended_at', 'is', null)
+      .execute()
+    let closed = 0
+    for (const row of open) {
+      if (this.live.has(row.id)) continue
+      const last = await this.deps.db
+        .selectFrom('review_log')
+        .select((eb) => eb.fn.max('ts').as('ts'))
+        .where('session_id', '=', row.id)
+        .executeTakeFirst()
+      await this.deps.db
+        .updateTable('session')
+        .set({ ended_at: last?.ts ?? row.started_at })
+        .where('id', '=', row.id)
+        .execute()
+      closed++
+    }
+    return closed
   }
 
   known(id: string): void {
@@ -240,6 +265,10 @@ export class SessionMachine {
       delta = Math.max(0, SCORE_FIRST_TRY - SCORE_WRONG_PENALTY * c.wrongPicks)
     }
 
+    const seen = s.seen + (c.relearn ? 0 : 1)
+    const correct = s.correctFirstTry
+    const score = s.score + delta
+
     await this.deps.db.transaction().execute(async (trx) => {
       await trx
         .updateTable('card')
@@ -267,10 +296,15 @@ export class SessionMachine {
           scheduled_days: log.scheduled_days
         })
         .execute()
+      await trx
+        .updateTable('session')
+        .set({ seen, correct, score })
+        .where('id', '=', s.id)
+        .execute()
     })
 
-    if (!c.relearn) s.seen++
-    s.score += delta
+    s.seen = seen
+    s.score = score
     if (retired) s.retired++
     if (self === 2) s.partial++
     if (c.relearn && self !== 1) s.relearned++
@@ -282,12 +316,6 @@ export class SessionMachine {
         .executeTakeFirst()
       if (fresh) s.relearn.push(fresh)
     }
-
-    await this.deps.db
-      .updateTable('session')
-      .set({ seen: s.seen, correct: s.correctFirstTry, score: s.score })
-      .where('id', '=', s.id)
-      .execute()
 
     return {
       rating,

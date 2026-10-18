@@ -19,7 +19,7 @@ const CSP = [
   "img-src 'self' quizloop: data:",
   "style-src 'self' 'unsafe-inline'",
   "font-src 'self'",
-  "connect-src 'self' quizloop:",
+  "connect-src 'self' quizloop: https://api.github.com",
   "worker-src 'self' blob:"
 ].join('; ')
 

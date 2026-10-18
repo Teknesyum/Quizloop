@@ -29,8 +29,7 @@ import { registerBank } from './bank'
 import {
   CH,
   SOURCE_URL,
-  CONTACT_URL,
-  SHARE_URL,
+  shareMessage,
   type IntegrityReport,
   type ChapterSummary,
   type InstallConfirm,
@@ -77,9 +76,8 @@ export function registerHandlers(ctx: Context): {
   }))
 
   ipcMain.on(CH.appOpenSource, () => void shell.openExternal(SOURCE_URL))
-  ipcMain.on(CH.appOpenContact, () => void shell.openExternal(CONTACT_URL))
   ipcMain.handle(CH.appShare, (_e, text: unknown) => {
-    clipboard.writeText(`${String(text).slice(0, 300)} ${SHARE_URL}`)
+    clipboard.writeText(shareMessage(String(text)))
     return 'copied'
   })
 

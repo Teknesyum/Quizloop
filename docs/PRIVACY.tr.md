@@ -1,6 +1,6 @@
 # QuizLoop Gizlilik Politikası
 
-Yürürlük tarihi: 2026-10-02
+Yürürlük tarihi: 2026-10-18
 
 QuizLoop, Teknesyum tarafından yayımlanan; Android, Windows, macOS ve Linux için
 ücretsiz, açık kaynaklı (AGPL-3.0-or-later) bir aralıklı tekrarlı soru çalışma
@@ -30,11 +30,13 @@ dosyalar cihazda okunur, hiçbir yere yüklenmez.
 - Analitik, çökme raporlama, izleme ya da profilleme kitaplığı yoktur.
 - Rehbere, konuma, kameraya, mikrofona, fotoğraflara ya da telefon
   tanımlayıcılarına erişilmez.
-- Kişisel veri toplanmadığı için satılacak ya da paylaşılacak bir şey yoktur.
+- Kişisel veri satılmaz ya da paylaşılmaz. Sizinle ilgili cihazdan çıkan tek şey,
+  **Bize Ulaş** formuna kendi yazdıklarınızdır.
 
 ## Ağ kullanımı
 
-Uygulama tümüyle çevrim dışı çalışır. Ağa yalnızca bir durumda bağlanır: Ayarlar'da
+Uygulama tümüyle çevrim dışı çalışır. Ağa iki durumda bağlanır: güncelleme
+denetiminde ve **Bize Ulaş** formunu gönderdiğinizde. Güncelleme için Ayarlar'da
 **Güncellemeleri denetle** düğmesine bastığınızda. Uygulama o zaman en son sürüm
 etiketini kurulu sürümle karşılaştırmak için
 `https://api.github.com/repos/Teknesyum/Quizloop/releases/latest` adresini ister.
@@ -50,9 +52,25 @@ GitHub sayfası açılır. O ziyaret GitHub'ın politikasına tabidir.
 Masaüstü sürümleri de aynıdır: tek ağ isteği, kendi başlattığınız güncelleme
 denetimidir.
 
+## Bize Ulaş Formu
+
+**Bize Ulaş** formu yalnızca içine yazdıklarınızı, yalnızca **Gönder**'e bastığınızda
+gönderir:
+
+- notunuz;
+- yazarsanız size ulaşma yolu (isteğe bağlı);
+- eklerseniz seçtiğiniz bir görüntü (isteğe bağlı), önce cihazda küçültülür;
+- uygulama sürümü, platform (Windows, macOS, Linux, Android ya da Web) ve arayüz dili.
+
+Bunlar `https://api.github.com` adresine gider ve yalnızca geliştiricinin okuyabildiği
+özel bir GitHub deposunda konu olarak saklanır. Yalnızca size yanıt vermek ve
+uygulamayı düzeltmek ya da geliştirmek için kullanılır, satılmaz, paylaşılmaz;
+silinmesini aynı formdan isteyebilirsiniz. GitHub isteği yukarıda bağlantısı verilen
+beyan uyarınca işler.
+
 ## Android izinleri
 
-- `INTERNET`: yalnızca yukarıdaki güncelleme denetimi için.
+- `INTERNET`: yalnızca yukarıdaki güncelleme denetimi ve Bize Ulaş formu için.
 - Uygulama depolama, konum, kamera, mikrofon ya da rehber izni istemez. Modüller
   Android'in sistem dosya seçicisiyle içeri alınır; uygulama yalnızca seçtiğiniz
   dosyaya erişir.
@@ -84,4 +102,5 @@ Politika değişirse yeni sürüm yeni yürürlük tarihiyle bu depoda yayımlan
 
 ## İletişim
 
+Uygulama içindeki **Bize Ulaş** formunu kullanın ya da
 <https://github.com/Teknesyum/Quizloop/issues> adresinde bir konu açın.

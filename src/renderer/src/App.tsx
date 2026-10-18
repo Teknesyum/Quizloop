@@ -5,6 +5,7 @@ import { LangSwitch, TitleBar } from '../../../teknesyum-ui/ustcubuk/TitleBar'
 import { runBack } from './back'
 import { remind } from './remind'
 import { Confirm } from './components/Confirm'
+import { ContactDialog } from '@renderer/components/ContactDialog'
 import { ReportButton } from '@renderer/components/ReportButton'
 import { TopMenu } from './components/TopMenu'
 import { useUpdateTools } from './components/UpdateTools'
@@ -290,6 +291,7 @@ export default function App(): React.JSX.Element {
         />
       )}
       <ReportButton />
+      <ContactDialog />
       <Toasts />
     </div>
   )

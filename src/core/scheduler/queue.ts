@@ -35,7 +35,8 @@ export async function buildQueue(db: Kysely<Database>, opt: QueueOptions): Promi
     .where('module_id', '=', opt.moduleId)
     .where('retired_at', 'is', null)
     .where('orphaned', '=', 0)
-    .$if(opt.chapter != null, (qb) => qb.where('chapter', '=', opt.chapter as string))
+    .$if(!!opt.chapter, (qb) => qb.where('chapter', '=', opt.chapter as string))
+    .$if(opt.chapter === '', (qb) => qb.where('chapter', 'is', null))
     .execute()
 
   const reviewedToday = await db

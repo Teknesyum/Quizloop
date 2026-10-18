@@ -8,7 +8,7 @@ import {
 } from '@core/commands/catalogs'
 import { bytesSha256 } from '@core/ports'
 import { SettingsPatch } from '@core/settings'
-import { CONTACT_URL, SHARE_URL, SOURCE_URL } from '@shared/ipc'
+import { shareMessage, SOURCE_URL } from '@shared/ipc'
 import type {
   Capabilities,
   InstallConfirm,
@@ -155,17 +155,16 @@ export async function createShell(): Promise<QuizloopApi> {
       }),
       onBack: () => off,
       openSource: () => void window.open(SOURCE_URL, '_blank', 'noopener'),
-      openContact: () => void window.open(CONTACT_URL, '_blank', 'noopener'),
       share: async (text) => {
         if (typeof navigator.share === 'function') {
           try {
-            await navigator.share({ title: 'QuizLoop', text, url: SHARE_URL })
+            await navigator.share({ title: 'QuizLoop', text: shareMessage(text) })
             return 'shared'
           } catch {
             return 'cancelled'
           }
         }
-        await navigator.clipboard.writeText(`${text} ${SHARE_URL}`)
+        await navigator.clipboard.writeText(shareMessage(text))
         return 'copied'
       }
     },

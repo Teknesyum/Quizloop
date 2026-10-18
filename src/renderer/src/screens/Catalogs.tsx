@@ -1,6 +1,5 @@
 import { useEffect, useId, useState } from 'react'
 import {
-  CONTACT_URL,
   type CatalogChannelView,
   type CatalogRead,
   type CatalogSetting,
@@ -301,8 +300,7 @@ export function Catalogs(): React.JSX.Element {
         <button
           type="button"
           className="tk-btn tk-btn-ghost ql-btn-sm"
-          title={CONTACT_URL}
-          onClick={() => window.quizloop.app.openContact()}
+          onClick={() => useApp.getState().showContact(true)}
         >
           {t('settings.contactOpen')}
         </button>

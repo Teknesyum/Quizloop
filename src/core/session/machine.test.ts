@@ -232,6 +232,151 @@ describe('SessionMachine', () => {
   })
 })
 
+async function solveAndGrade(
+  m: SessionMachine,
+  id: string,
+  q: { choices: { key: 'A' | 'B' | 'C' | 'D' | 'E' }[] },
+  self: 1 | 2 | 3
+): Promise<Awaited<ReturnType<SessionMachine['grade']>>> {
+  m.reveal(id)
+  for (const c of q.choices) if (m.answer(id, c.key).correct) break
+  return m.grade(id, self, 300)
+}
+
+async function chapterOf(questionId: string): Promise<string> {
+  const row = await db
+    .selectFrom('card')
+    .select(['chapter'])
+    .where('question_id', '=', questionId)
+    .executeTakeFirstOrThrow()
+  return row.chapter ?? ''
+}
+
+describe('mixed session', () => {
+  it('counts each answer against the chapter of its own question', async () => {
+    const m = await machine()
+    const before = await chapterCounts(db, 'ornek', NOW, NOW)
+    const s = await m.start('ornek', null)
+    const first = s.first!
+    const g = await solveAndGrade(m, s.sessionId, first, 3)
+    const second = g.next!
+    await solveAndGrade(m, s.sessionId, second, 2)
+    const after = await chapterCounts(db, 'ornek', NOW, NOW)
+    const pick = (rows: typeof before, ch: string): (typeof before)[number] =>
+      rows.find((r) => r.chapter === ch)!
+    const a = await chapterOf(first.questionId)
+    const b = await chapterOf(second.questionId)
+    const touched = new Set([a, b])
+    expect(pick(after, a).count.retired - pick(before, a).count.retired).toBe(1)
+    expect(pick(after, a).used).not.toBeNull()
+    expect(pick(after, b).count.partial - pick(before, b).count.partial).toBe(1)
+    const unseen = (rows: typeof before): number =>
+      [...touched].reduce((n, ch) => n + pick(rows, ch).count.unseen, 0)
+    expect(unseen(before) - unseen(after)).toBe(2)
+    for (const r of after)
+      if (!touched.has(r.chapter)) expect(r.count).toEqual(pick(before, r.chapter).count)
+    await m.end(s.sessionId)
+    const chapter = await m.start('ornek', a)
+    expect(chapter.total).toBe(pick(after, a).total - pick(after, a).count.retired)
+  })
+
+  it('leaves the same chapter counts a chapter session would', async () => {
+    const m = await machine()
+    const s = await m.start('ornek', null)
+    const q = s.first!
+    await solveAndGrade(m, s.sessionId, q, 2)
+    const ch = await chapterOf(q.questionId)
+    const mixed = await chapterCounts(db, 'ornek', NOW, NOW)
+
+    const mainDb = db
+    const second = await openDatabase(join(dir, 'chapter.db'))
+    db = second.db
+    try {
+      const m2 = await machine()
+      const c = await m2.start('ornek', ch)
+      expect(c.first!.questionId).toBe(q.questionId)
+      await solveAndGrade(m2, c.sessionId, c.first!, 2)
+      expect(await chapterCounts(db, 'ornek', NOW, NOW)).toEqual(mixed)
+    } finally {
+      await second.db.destroy()
+      db = mainDb
+    }
+  })
+})
+
+describe('chapterless questions', () => {
+  it('start a session from the blank chapter row', async () => {
+    const m = await machine()
+    const card = await db.selectFrom('card').select(['id']).limit(1).executeTakeFirstOrThrow()
+    await db.updateTable('card').set({ chapter: null }).where('id', '=', card.id).execute()
+    const rows = await chapterCounts(db, 'ornek', NOW, NOW)
+    expect(rows.find((r) => r.chapter === '')!.total).toBe(1)
+    const s = await m.start('ornek', '')
+    expect(s.total).toBe(1)
+  })
+})
+
+describe('closing without End Session', () => {
+  it('keeps every graded answer on disk and closes the open session at the last answer', async () => {
+    const m = await machine()
+    const s = await m.start('ornek', null)
+    const g = await solveAndGrade(m, s.sessionId, s.first!, 3)
+    await solveAndGrade(m, s.sessionId, g.next!, 2)
+
+    const other = await openDatabase(join(dir, 'test.db'))
+    try {
+      const logs = await other.db.selectFrom('review_log').selectAll().execute()
+      expect(logs.length).toBe(2)
+      const cards = await other.db
+        .selectFrom('card')
+        .select(['question_id', 'retired_at', 'last_self_assess', 'reps'])
+        .where('reps', '>', 0)
+        .execute()
+      expect(cards.map((c) => c.question_id).sort()).toEqual(
+        [s.first!.questionId, g.next!.questionId].sort()
+      )
+      expect(cards.find((c) => c.question_id === s.first!.questionId)!.retired_at).not.toBeNull()
+      const open = await other.db
+        .selectFrom('session')
+        .selectAll()
+        .where('id', '=', s.sessionId)
+        .executeTakeFirstOrThrow()
+      expect(open.ended_at).toBeNull()
+      expect(open.seen).toBe(2)
+
+      const mod = await readMeta(nodePorts, SAMPLE)
+      const index = new QuestionIndex(nodePorts, mod)
+      const later = new Date(NOW.getTime() + 3600000)
+      const reopened = new SessionMachine({
+        db: other.db,
+        indexFor: () => index,
+        assetBase: (id) => `quizloop://module/${id}/`,
+        dayStart: (now) => new Date(now.getTime() - 9 * 3600000),
+        limit: () => 50,
+        now: () => later,
+        seed: () => 1
+      })
+      const next = await reopened.start('ornek', null)
+      expect(next.total).toBe(7)
+      const closed = await other.db
+        .selectFrom('session')
+        .selectAll()
+        .where('id', '=', s.sessionId)
+        .executeTakeFirstOrThrow()
+      expect(closed.ended_at).toBe(NOW.toISOString())
+      expect(closed.seen).toBe(2)
+      const live = await other.db
+        .selectFrom('session')
+        .selectAll()
+        .where('id', '=', next.sessionId)
+        .executeTakeFirstOrThrow()
+      expect(live.ended_at).toBeNull()
+    } finally {
+      await other.db.destroy()
+    }
+  })
+})
+
 describe('chapterCounts', () => {
   it('lists used chapters first, the most recent on top', async () => {
     await machine()
