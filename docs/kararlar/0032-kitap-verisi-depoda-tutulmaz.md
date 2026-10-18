@@ -4,7 +4,7 @@ Tarih: 2026-10-12. Karar 0004'ün kaynak klasörü maddesini değiştirir.
 
 ## Sahibin Sözü
 
-"neden projemizde lange falan var example şekilde olacak githubdaki veriler".
+"neden projemizde [kitap adı] falan var example şekilde olacak githubdaki veriler".
 
 "kitap verisi gite aktarılmayacak gitignore o kısım geçmişi de düzelt telif davası açsa adam
 şimdi bize haklı".
