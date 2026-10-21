@@ -42,3 +42,10 @@ tmp/
 
 tools/bildirim/.dev.vars
 tools/bildirim/.wrangler/
+
+# Requests from module sessions stay local; only the guide and template are tracked.
+docs/iskelet-talepleri/*
+!docs/iskelet-talepleri/AGENTS.md
+!docs/iskelet-talepleri/CLAUDE.md
+!docs/iskelet-talepleri/_sablon.md
+OrijinalSorular/

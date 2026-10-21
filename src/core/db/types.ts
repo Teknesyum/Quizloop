@@ -46,6 +46,7 @@ export interface ReviewLogTable {
   known_without_choices: number
   wrong_picks: number
   duration_ms: number
+  picks: string | null
   state_before: number
   due_before: string
   stability_before: number
@@ -62,6 +63,8 @@ export interface SessionTable {
   seen: number
   correct: number
   score: number
+  chapter: string | null
+  mixed: Generated<number>
 }
 
 export interface FlagTable {

@@ -11,8 +11,10 @@ Vite, packaged with electron-builder for Windows, macOS and Linux. AGPL-3.0-or-l
 - `schema/` — generated JSON Schema. Edit the zod source, run `npm run schema:gen`.
 - `sources/` — per-book rules and build state, git-ignored except the neutral
   `sources/example/` template. Book names, quotes and screenshots of real content stay local (0032).
-- `modules/` — content packages, git-ignored. `resources/ornek/` holds the two shipped
-  samples, built from `scripts/ornek/*.json` by `npm run ornek`; a hand edit breaks hashes.
+- `modules/` — content packages, git-ignored. `resources/varsayilan/` holds the bundled
+  defaults: `genel-kultur` from `scripts/ornek/*.json` (`npm run ornek`), `arapca` and
+  `ingilizce-lite` from `modules/` (`npm run varsayilan`). Open licences only; a hand edit breaks hashes.
+- `docs/iskelet-talepleri/` — module sessions file engine change requests here, never edit `src/`.
 - `dist/` — build output: `desktop/`, `android/`, `modules/` (0012). `out/web` — PWA (0015).
 
 Commands: `npm run dev`, `npm test`, `npm run typecheck`, `npm run lint`,

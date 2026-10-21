@@ -852,6 +852,10 @@
               "type": "string"
             }
           },
+          "devam": {
+            "type": "string",
+            "minLength": 1
+          },
           "contentHash": {
             "type": "string",
             "minLength": 64,

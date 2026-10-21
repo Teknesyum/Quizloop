@@ -1,0 +1,2605 @@
+{
+  "blockId": "0005",
+  "questions": [
+    {
+      "id": "genel-kultur-0185",
+      "conceptId": "au-simgesi",
+      "stem": {
+        "md": "Kimyada Au simgesi hangi elementi gösterir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Gümüş"
+        },
+        {
+          "key": "B",
+          "md": "Altın"
+        },
+        {
+          "key": "C",
+          "md": "Alüminyum"
+        },
+        {
+          "key": "D",
+          "md": "Argon"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Gümüşün simgesi Ag'dir; ikisi de değerli metal olduğu için karışır.",
+        "C": "Alüminyumun simgesi Al'dir.",
+        "D": "Argonun simgesi Ar'dir ve bir soy gazdır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Au, altının simgesidir.\n- Simge, altının Latince adı aurum sözcüğünden gelir."
+        },
+        {
+          "type": "hint",
+          "md": "Latince adı aurum."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Element simgeleri bir ya da iki harften oluşur ve çoğu zaman elementin Latince adından türetilir. Bu yüzden bazı simgeler Türkçe adla hiç benzeşmez."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          38,
+          38
+        ],
+        "quote": "Altının kimyasal simgesi Au'dur.",
+        "chapter": "Kimya"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "kimya"
+      ],
+      "vurgu": [],
+      "contentHash": "24fde8ec5f9b6c58bc84b25bc475554e990c8db18e5de8c800e3f7f591605c21",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0186",
+      "conceptId": "km-metal-simgeleri",
+      "stem": {
+        "md": "Metalleri simgeleriyle eşleştirin.\n\n1. Gümüş\n2. Demir\n3. Kurşun\n\na. Pb\nb. Fe\nc. Ag"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "1-a, 2-b, 3-c"
+        },
+        {
+          "key": "B",
+          "md": "1-c, 2-b, 3-a"
+        },
+        {
+          "key": "C",
+          "md": "1-c, 2-a, 3-b"
+        },
+        {
+          "key": "D",
+          "md": "1-b, 2-c, 3-a"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Pb gümüşün değil kurşunun simgesidir.",
+        "C": "Pb demiri değil kurşunu gösterir; Fe de kurşunun simgesi değildir.",
+        "D": "Fe gümüşü değil demiri gösterir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Gümüş: Ag (argentum)\n- Demir: Fe (ferrum)\n- Kurşun: Pb (plumbum)"
+        },
+        {
+          "type": "hint",
+          "md": "Simgeler Latince adlardan gelir: argentum, ferrum, plumbum."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Eski çağlardan beri bilinen metallerin simgeleri genellikle Latince adlarından gelir. Bu adlar bazı Türkçe sözcüklerde de iz bırakmıştır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          38,
+          38
+        ],
+        "quote": "Gümüşün simgesi Ag, demirin simgesi Fe'dir.",
+        "chapter": "Kimya"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "kimya"
+      ],
+      "vurgu": [],
+      "contentHash": "453d4df209a64f12fa12942d75228fbf8101da575d00bf065c60861f47413079",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0187",
+      "conceptId": "km-sodyum-simgesi",
+      "stem": {
+        "md": "Na simgesi hangi elemente aittir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Azot"
+        },
+        {
+          "key": "B",
+          "md": "Nikel"
+        },
+        {
+          "key": "C",
+          "md": "Neon"
+        },
+        {
+          "key": "D",
+          "md": "Sodyum"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Azotun simgesi N'dir.",
+        "B": "Nikelin simgesi Ni'dir.",
+        "C": "Neonun simgesi Ne'dir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Na, sodyumun simgesidir.\n- Simge, Latince natrium adından gelir."
+        },
+        {
+          "type": "hint",
+          "md": "Sofra tuzunun içindeki metal."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Bazı element simgeleri, elementin günümüzdeki adıyla değil eski Latince adıyla ilişkilidir. Bu element suyla şiddetli tepkimeye giren yumuşak bir metaldir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          38,
+          38
+        ],
+        "quote": "Sodyumun simgesi Na'dır ve Latince natrium adından gelir.",
+        "chapter": "Kimya"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "kimya"
+      ],
+      "vurgu": [],
+      "contentHash": "5e6fb4855557e9927ad2f5b7aa87455e8f1463624dbbbda8389f38322520a77c",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0188",
+      "conceptId": "km-potasyum-simgesi",
+      "stem": {
+        "md": "Aşağıdaki element-simge eşleşmelerinden hangisi yanlıştır?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Kalsiyum - Ca"
+        },
+        {
+          "key": "B",
+          "md": "Klor - Cl"
+        },
+        {
+          "key": "C",
+          "md": "Karbon - C"
+        },
+        {
+          "key": "D",
+          "md": "Potasyum - P"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Kalsiyumun simgesi gerçekten Ca'dır.",
+        "B": "Klorun simgesi gerçekten Cl'dir.",
+        "C": "Karbonun simgesi gerçekten C'dir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Yanlış eşleşme Potasyum - P'dir.\n- Potasyumun simgesi K'dir (Latince kalium).\n- P simgesi fosfora aittir."
+        },
+        {
+          "type": "hint",
+          "md": "Simgesi Latince kalium adından gelen elementi düşünün."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Periyodik tabloda harf çakışmalarını önlemek için bazı elementler iki harfli, bazıları tek harfli simgelerle gösterilir. Tek harfli simgeler genellikle erken keşfedilen ya da Latince adı farklı olan elementlere aittir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          38,
+          38
+        ],
+        "quote": "Potasyumun simgesi K'dir.",
+        "chapter": "Kimya"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "kimya"
+      ],
+      "vurgu": [],
+      "contentHash": "3d566ddf6477b51623b66e6106d088dcbe8d637e2e7ced032c4a999aa57d02e0",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0189",
+      "conceptId": "km-civa",
+      "stem": {
+        "md": "Oda sıcaklığında sıvı hâlde bulunan ve eskiden termometrelerde kullanılan metal hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Kurşun"
+        },
+        {
+          "key": "B",
+          "md": "Kalay"
+        },
+        {
+          "key": "C",
+          "md": "Galyum"
+        },
+        {
+          "key": "D",
+          "md": "Cıva"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Kurşun oda sıcaklığında katı, ağır bir metaldir.",
+        "B": "Kalay oda sıcaklığında katıdır; lehimde kullanılır.",
+        "C": "Galyum avuçta eriyebilir ama oda sıcaklığında katıdır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap cıvadır.\n- Oda sıcaklığında sıvı olduğu için termometre ve barometrelerde kullanılmıştır.\n- Zehirli olduğu için bugün kullanımı azaltılmıştır."
+        },
+        {
+          "type": "hint",
+          "md": "Simgesi Hg'dir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Metallerin büyük çoğunluğu oda sıcaklığında katıdır. Erime noktası çok düşük olan birkaç metal, ölçüm aletlerinde özel bir yere sahip olmuştur."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          38,
+          38
+        ],
+        "quote": "Cıva, oda sıcaklığında sıvı hâlde bulunan bir metaldir.",
+        "chapter": "Kimya"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "kimya"
+      ],
+      "vurgu": [],
+      "contentHash": "624e58dca315e9cb485b9fdd999fc2a164a578dd09c056ccff5b589c75de8318",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0190",
+      "conceptId": "km-mendeleyev",
+      "stem": {
+        "md": "Elementleri özelliklerine göre düzenlediği periyodik tabloyu 1869'da yayımlayan Rus kimyacı kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Antoine Lavoisier"
+        },
+        {
+          "key": "B",
+          "md": "John Dalton"
+        },
+        {
+          "key": "C",
+          "md": "Ernest Rutherford"
+        },
+        {
+          "key": "D",
+          "md": "Dmitri Mendeleyev"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Lavoisier Fransız kimyacıdır ve kütlenin korunumuyla tanınır.",
+        "B": "Dalton İngiliz bilim insanıdır ve atom kuramıyla bilinir.",
+        "C": "Rutherford Yeni Zelandalı bir fizikçidir ve atom çekirdeğini keşfetmiştir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Dmitri Mendeleyev'dir.\n- Tablosunda henüz bulunmamış elementler için boşluk bırakmış ve özelliklerini öngörmüştür.\n- 101 numaralı mendelevyum elementi onun adını taşır."
+        },
+        {
+          "type": "hint",
+          "md": "Bir element adını ondan almıştır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "19. yüzyılda bilinen element sayısı arttıkça kimyacılar bunları düzenli bir biçimde sınıflandırmaya çalıştı. Benzer özellikteki elementlerin belirli aralıklarla tekrar ettiği fark edildi."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          39,
+          39
+        ],
+        "quote": "Dmitri Mendeleyev, elementleri özelliklerine göre düzenlediği periyodik tabloyu 1869'da yayımlamıştır.",
+        "chapter": "Kimya"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "kimya"
+      ],
+      "vurgu": [],
+      "contentHash": "902cb55ff9b587749b97be2def04ced968bb1879b0961ba5a672f8c1d76be0f0",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0191",
+      "conceptId": "km-grup-periyot",
+      "stem": {
+        "md": "Periyodik tablonun dikey sütunlarına ____, yatay satırlarına periyot denir."
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "blok"
+        },
+        {
+          "key": "B",
+          "md": "seri"
+        },
+        {
+          "key": "C",
+          "md": "katman"
+        },
+        {
+          "key": "D",
+          "md": "grup"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Blok, tablonun s, p, d, f gibi bölgelerine verilen addır.",
+        "B": "Seri, lantanit gibi tablonun altındaki özel dizilerde kullanılır.",
+        "C": "Katman, atomdaki elektronların bulunduğu enerji düzeyleridir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Dikey sütunlara grup denir.\n- Aynı gruptaki elementlerin kimyasal özellikleri birbirine benzer."
+        },
+        {
+          "type": "hint",
+          "md": "Benzer özellikteki elementler bu sütunlarda bir araya toplanır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Periyodik tablo, elementlerin özelliklerindeki düzenli tekrarı gösterecek biçimde satır ve sütunlara yerleştirilmiştir. Bir elementin tablodaki konumu onun davranışı hakkında ipucu verir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          39,
+          39
+        ],
+        "quote": "Periyodik tablonun dikey sütunlarına grup, yatay satırlarına periyot denir.",
+        "chapter": "Kimya"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "kimya"
+      ],
+      "vurgu": [],
+      "contentHash": "f3ab1112bc0f282cef5ce264ccdecb06152e1dbe33e62be5755c4913bca59901",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0192",
+      "conceptId": "km-soy-gaz",
+      "stem": {
+        "md": "Aşağıdakilerden hangisi bir soy gaz değildir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Azot"
+        },
+        {
+          "key": "B",
+          "md": "Helyum"
+        },
+        {
+          "key": "C",
+          "md": "Neon"
+        },
+        {
+          "key": "D",
+          "md": "Argon"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Helyum bir soy gazdır; balonlarda kullanılır.",
+        "C": "Neon bir soy gazdır; ışıklı tabelalarda kullanılır.",
+        "D": "Argon bir soy gazdır; havada az miktarda bulunur."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Azot soy gaz değildir; 15. grupta yer alır.\n- Helyum, neon ve argon tepkimeye girmeye çok isteksiz soy gazlardır."
+        },
+        {
+          "type": "hint",
+          "md": "Havada en bol bulunan gaz bu grupta değildir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Soy gazlar periyodik tablonun en sağdaki sütununda yer alır. Dış elektron katmanları dolu olduğundan başka elementlerle çok zor tepkimeye girerler."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          39,
+          39
+        ],
+        "quote": "Helyum, neon ve argon, tepkimeye girme eğilimi çok düşük olan soy gazlardandır.",
+        "chapter": "Kimya"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "kimya"
+      ],
+      "vurgu": [],
+      "contentHash": "47b5b24387130c8bad9e14e78c005a8cfe80c8633b7d816caf354e0208a110d6",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0193",
+      "conceptId": "km-hidrojen",
+      "stem": {
+        "md": "Periyodik tablonun ilk ve en hafif elementi hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Helyum"
+        },
+        {
+          "key": "B",
+          "md": "Lityum"
+        },
+        {
+          "key": "C",
+          "md": "Hidrojen"
+        },
+        {
+          "key": "D",
+          "md": "Oksijen"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Helyum ikinci elementtir.",
+        "B": "Lityum üçüncü elementtir ve en hafif metaldir.",
+        "D": "Oksijen sekizinci elementtir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- İlk element hidrojendir.\n- Atom numarası 1'dir; çekirdeğinde tek bir proton bulunur.\n- Evrende en bol bulunan elementtir."
+        },
+        {
+          "type": "hint",
+          "md": "Suyun formülündeki H harfi."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Periyodik tablo en hafif elementten başlayarak ağırlaşan elementlere doğru ilerler. Yıldızlar hayatlarının büyük kısmında bu elementi yakıt olarak kullanır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          39,
+          39
+        ],
+        "quote": "Hidrojen, periyodik tablonun ilk ve en hafif elementidir.",
+        "chapter": "Kimya"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "kimya"
+      ],
+      "vurgu": [],
+      "contentHash": "3c9d4949e176de3f8eb15b0bd4af14b9c5e399868319a6b177c57626be0810a0",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0194",
+      "conceptId": "km-alkali-metal",
+      "stem": {
+        "md": "Sofra tuzunun içindeki metal ile aynı grupta yer alan element hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Magnezyum"
+        },
+        {
+          "key": "B",
+          "md": "Potasyum"
+        },
+        {
+          "key": "C",
+          "md": "Kalsiyum"
+        },
+        {
+          "key": "D",
+          "md": "Alüminyum"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Magnezyum toprak alkali metaller grubundadır.",
+        "C": "Kalsiyum da toprak alkali metaldir.",
+        "D": "Alüminyum 13. grupta yer alır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Sofra tuzundaki metal sodyumdur.\n- Sodyum, lityum ve potasyum ile birlikte alkali metaller grubundadır.\n- Bu yüzden doğru cevap potasyumdur."
+        },
+        {
+          "type": "hint",
+          "md": "Önce sofra tuzundaki metali bulun, sonra muz gibi besinlerde bol bulunan bir akrabasını düşünün."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Periyodik tablonun ilk sütunundaki metaller çok tepkin, yumuşak metallerdir. Suyla şiddetli tepkimeye girdikleri için genellikle yağ içinde saklanırlar."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          39,
+          39
+        ],
+        "quote": "Lityum, sodyum ve potasyum alkali metaller grubunda yer alır.",
+        "chapter": "Kimya"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "kimya"
+      ],
+      "vurgu": [],
+      "contentHash": "35bf1e788b45f8dce122e73724c1dc84bf3b3dcbd12f9d5f5f4efc93aa54cc59",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0195",
+      "conceptId": "km-halojen",
+      "stem": {
+        "md": "Flor, klor, brom ve iyodun birlikte oluşturduğu grubun adı nedir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Alkali metaller"
+        },
+        {
+          "key": "B",
+          "md": "Halojenler"
+        },
+        {
+          "key": "C",
+          "md": "Soy gazlar"
+        },
+        {
+          "key": "D",
+          "md": "Toprak alkali metaller"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Alkali metaller lityum, sodyum ve potasyum gibi ilk sütundaki metallerdir.",
+        "C": "Soy gazlar tepkimeye çok isteksizdir; bu elementler ise oldukça tepkindir.",
+        "D": "Toprak alkali metaller magnezyum ve kalsiyum gibi ikinci sütundaki metallerdir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Bu grubun adı halojenlerdir.\n- Ad 'tuz oluşturan' anlamına gelir.\n- Metallerle kolayca tuz oluştururlar."
+        },
+        {
+          "type": "hint",
+          "md": "Adı Yunancada 'tuz yapan' anlamına gelir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Bu grup, periyodik tablonun sağ tarafında soy gazların hemen solunda yer alır. Üyeleri tepkin ametallerdir ve dezenfektanlarda sıkça kullanılır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          39,
+          39
+        ],
+        "quote": "Flor, klor, brom ve iyot halojenler grubunu oluşturur.",
+        "chapter": "Kimya"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "kimya"
+      ],
+      "vurgu": [],
+      "contentHash": "9a4513bff9b7e50dfac84142cdbd5167539d9a015416cd262a36165403fbefda",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0196",
+      "conceptId": "km-elektron",
+      "stem": {
+        "md": "Atomda çekirdeğin içinde değil, çevresinde bulunan tanecik hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Proton"
+        },
+        {
+          "key": "B",
+          "md": "Elektron"
+        },
+        {
+          "key": "C",
+          "md": "Nötron"
+        },
+        {
+          "key": "D",
+          "md": "Kuark"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Proton çekirdeğin içindedir.",
+        "C": "Nötron da çekirdeğin içindedir.",
+        "D": "Kuarklar proton ve nötronun yapı taşlarıdır; onlar da çekirdektedir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap elektrondur.\n- Protonlar ve nötronlar çekirdekte, elektronlar ise çevresinde bulunur."
+        },
+        {
+          "type": "hint",
+          "md": "Elektrik akımını taşıyan tanecik."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Atom, çok küçük bir merkez ile onun çevresindeki geniş bir bölgeden oluşur. Atomun kütlesinin neredeyse tamamı merkezde toplanmıştır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          40,
+          40
+        ],
+        "quote": "Atom çekirdeğinde protonlar ve nötronlar bulunur, elektronlar ise çekirdeğin çevresinde yer alır.",
+        "chapter": "Kimya"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "kimya"
+      ],
+      "vurgu": [],
+      "contentHash": "404486e201da0086fa0e7127161fa6bb2e358c7f136b16bdecf3c07c3f9a74bd",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0197",
+      "conceptId": "km-notron",
+      "stem": {
+        "md": "Atom çekirdeğinde bulunan yüksüz tanecik hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Proton"
+        },
+        {
+          "key": "B",
+          "md": "Elektron"
+        },
+        {
+          "key": "C",
+          "md": "İyon"
+        },
+        {
+          "key": "D",
+          "md": "Nötron"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Proton artı yüklüdür.",
+        "B": "Elektron eksi yüklüdür.",
+        "C": "İyon, elektron alıp vermiş yüklü bir atom ya da atom grubudur."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Yüksüz tanecik nötrondur.\n- Adı da 'nötr' sözcüğünden gelir."
+        },
+        {
+          "type": "hint",
+          "md": "Adı yükünü ele verir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Atomun temel tanecikleri elektrik yüklerine göre birbirinden ayrılır. Yüklü tanecikler birbirini çeker ya da iter; yüksüz olan bu etkileşime katılmaz."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          40,
+          40
+        ],
+        "quote": "Proton artı, elektron eksi yüklüdür, nötron ise yüksüzdür.",
+        "chapter": "Kimya"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "kimya"
+      ],
+      "vurgu": [],
+      "contentHash": "f7a6ae4bd7453fd1553e9fe316de39b6ac0ce00b441d330ea14b0f43b63da293",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0198",
+      "conceptId": "km-atom-numarasi",
+      "stem": {
+        "md": "Bir elementin atom numarası neye eşittir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Çekirdeğindeki nötron sayısına"
+        },
+        {
+          "key": "B",
+          "md": "Proton ve nötron sayılarının toplamına"
+        },
+        {
+          "key": "C",
+          "md": "Elektron katmanı sayısına"
+        },
+        {
+          "key": "D",
+          "md": "Çekirdeğindeki proton sayısına"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Nötron sayısı aynı elementin atomlarında değişebilir.",
+        "B": "Proton ve nötron toplamı kütle numarasıdır.",
+        "C": "Katman sayısı elementin periyodunu belirler, atom numarasını değil."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Atom numarası proton sayısına eşittir.\n- Elementin kimliğini belirleyen budur.\n- Modern periyodik tablo atom numarasına göre sıralanır."
+        },
+        {
+          "type": "hint",
+          "md": "Bir elementi başka bir elementten ayıran sayı."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Her elementin kendine özgü bir sırası vardır ve bu sıra elementin kimliğini belirler. Atom kütlesi ise bu sayıdan farklı bir büyüklüktür."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          40,
+          40
+        ],
+        "quote": "Bir elementin atom numarası, çekirdeğindeki proton sayısına eşittir.",
+        "chapter": "Kimya"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "kimya"
+      ],
+      "vurgu": [],
+      "contentHash": "86feb3caa6d850317824da8ec3e0e55a63e55713b91402b1d2ed264314c9e8ab",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0199",
+      "conceptId": "km-izotop",
+      "stem": {
+        "md": "Proton sayıları aynı, nötron sayıları farklı olan atomlara ne ad verilir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "İzomer"
+        },
+        {
+          "key": "B",
+          "md": "İyon"
+        },
+        {
+          "key": "C",
+          "md": "Allotrop"
+        },
+        {
+          "key": "D",
+          "md": "İzotop"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "İzomer, formülü aynı ama yapısı farklı moleküllere denir.",
+        "B": "İyon, elektron alıp vermiş yüklü taneciktir.",
+        "C": "Allotrop, aynı elementin farklı yapısal biçimleridir; nötron sayısıyla ilgili değildir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Bu atomlara izotop denir.\n- Örneğin karbon-12 ve karbon-14 karbonun izotoplarıdır.\n- Kimyasal özellikleri benzer, kütleleri farklıdır."
+        },
+        {
+          "type": "hint",
+          "md": "Yunanca 'aynı yer' anlamına gelir; periyodik tabloda aynı kutudadırlar."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Aynı elementin atomları farklı kütlelerde olabilir. Bazı türleri kararsızdır ve ışıma yaparak bozunur; arkeologlar bu bozunmayı yaş tayininde kullanır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          40,
+          40
+        ],
+        "quote": "Proton sayısı aynı, nötron sayısı farklı atomlara izotop denir.",
+        "chapter": "Kimya"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "kimya"
+      ],
+      "vurgu": [],
+      "contentHash": "6d14a813b16ca4b4e695461924f418c660b792e848500bb52c2f0d606904154f",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0200",
+      "conceptId": "km-rutherford",
+      "stem": {
+        "md": "Altın levha deneyiyle atomun küçük ve yoğun bir çekirdeği olduğunu gösteren bilim insanı kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "J. J. Thomson"
+        },
+        {
+          "key": "B",
+          "md": "Niels Bohr"
+        },
+        {
+          "key": "C",
+          "md": "John Dalton"
+        },
+        {
+          "key": "D",
+          "md": "Ernest Rutherford"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Thomson elektronu keşfetmiş ve 'üzümlü kek' modelini önermiştir.",
+        "B": "Bohr, elektronların belirli enerji düzeylerinde dolandığı modeli geliştirmiştir.",
+        "C": "Dalton atomu bölünemez, içi dolu küreler olarak düşünmüştür."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Ernest Rutherford'dur.\n- İnce altın levhaya gönderilen alfa taneciklerinin bir kısmı geri sekti.\n- Bu, atomun kütlesinin küçük bir çekirdekte toplandığını gösterdi."
+        },
+        {
+          "type": "hint",
+          "md": "Yeni Zelanda doğumlu, 'nükleer fiziğin babası' denen bilim insanı."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "20. yüzyılın başında atomun iç yapısı deneylerle sınanmaya başlandı. Alfa tanecikleri ince bir metal levhaya gönderildiğinde beklenmedik sonuçlar gözlendi."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          40,
+          40
+        ],
+        "quote": "Ernest Rutherford, altın levha deneyiyle atomun küçük ve yoğun bir çekirdeği olduğunu göstermiştir.",
+        "chapter": "Kimya"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "kimya"
+      ],
+      "vurgu": [],
+      "contentHash": "0ecde3570f114487d940cf51eb1075fee9268afdc38780387815c90dac8b5932",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0201",
+      "conceptId": "km-atom-modelleri-sirasi",
+      "stem": {
+        "md": "Atom modeli geliştiren bilim insanlarının tarih sırasına göre doğru dizilişi hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Thomson - Dalton - Rutherford - Bohr"
+        },
+        {
+          "key": "B",
+          "md": "Dalton - Rutherford - Thomson - Bohr"
+        },
+        {
+          "key": "C",
+          "md": "Dalton - Thomson - Bohr - Rutherford"
+        },
+        {
+          "key": "D",
+          "md": "Dalton - Thomson - Rutherford - Bohr"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Dalton'un modeli 19. yüzyılın başındadır; Thomson'dan öncedir.",
+        "B": "Rutherford, Thomson'ın modelini sınayarak çekirdeği bulmuştur; ondan sonra gelir.",
+        "C": "Bohr modeli, Rutherford'un çekirdekli modelinin üzerine kurulmuştur."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru sıra: Dalton - Thomson - Rutherford - Bohr.\n- Her model bir öncekinin eksiğini gidermeye çalışmıştır."
+        },
+        {
+          "type": "hint",
+          "md": "Elektron keşfedilmeden çekirdek bulunamazdı."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Atom kavramı, bölünemez kürelerden başlayıp çekirdek ve enerji düzeyleri içeren yapılara doğru adım adım gelişti. Her yeni deney, önceki modelin açıklayamadığı bir gözlemi ortaya çıkardı."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          40,
+          40
+        ],
+        "quote": "Atom modelleri tarih sırasıyla Dalton, Thomson, Rutherford ve Bohr tarafından geliştirilmiştir.",
+        "chapter": "Kimya"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "kimya"
+      ],
+      "vurgu": [],
+      "contentHash": "442b2343d7c15670a8f44e1474b9dd1ff9e4964ae349c4926b1eb73a7b2e3332",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0202",
+      "conceptId": "km-su-formulu",
+      "stem": {
+        "md": "Suyun kimyasal formülü hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "HO₂"
+        },
+        {
+          "key": "B",
+          "md": "H₂O₂"
+        },
+        {
+          "key": "C",
+          "md": "H₂O"
+        },
+        {
+          "key": "D",
+          "md": "OH"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "HO₂ formülü iki oksijen ve bir hidrojen gösterir; su böyle değildir.",
+        "B": "H₂O₂ hidrojen peroksittir; ağartıcı ve dezenfektan olarak kullanılır.",
+        "D": "OH hidroksit grubudur; tek başına su değildir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Suyun formülü H₂O'dur.\n- Bir molekülde iki hidrojen ve bir oksijen atomu bulunur."
+        },
+        {
+          "type": "hint",
+          "md": "İki hidrojen, bir oksijen."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Kimyasal formül, bir maddenin hangi atomlardan ve kaçar tane içerdiğini gösterir. Formüldeki küçük alt sayılar her atomdan kaç tane bulunduğunu belirtir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          41,
+          41
+        ],
+        "quote": "Suyun formülü H₂O'dur; bir molekülünde iki hidrojen ve bir oksijen atomu bulunur.",
+        "chapter": "Kimya"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "kimya"
+      ],
+      "vurgu": [],
+      "contentHash": "fac00acb547cf946c13e39592f1f4c1d804a8a6ea9f5236838b31ac138747652",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0203",
+      "conceptId": "km-sofra-tuzu",
+      "stem": {
+        "md": "Sofra tuzunun kimyasal adı nedir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Kalsiyum karbonat"
+        },
+        {
+          "key": "B",
+          "md": "Sodyum klorür"
+        },
+        {
+          "key": "C",
+          "md": "Sodyum bikarbonat"
+        },
+        {
+          "key": "D",
+          "md": "Potasyum nitrat"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Kalsiyum karbonat kireç taşı ve tebeşirin ana bileşenidir.",
+        "C": "Sodyum bikarbonat, mutfakta kabartma tozu ve karbonat olarak kullanılır.",
+        "D": "Potasyum nitrat gübre ve barut yapımında kullanılır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Sofra tuzu sodyum klorürdür (NaCl).\n- Sodyum ve klor iyonlarının iyonik bağla birleşmesiyle oluşur."
+        },
+        {
+          "type": "hint",
+          "md": "Bir alkali metal ile bir halojenin bileşiği."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Tuz kimyada geniş bir kavramdır: bir asit ile bir bazın tepkimesinden oluşan iyonik bileşiklerin genel adıdır. Mutfakta kullandığımız tuz bunların yalnızca biridir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          41,
+          41
+        ],
+        "quote": "Sofra tuzu, sodyum ile klorun iyonik bağla oluşturduğu sodyum klorürdür.",
+        "chapter": "Kimya"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "kimya"
+      ],
+      "vurgu": [],
+      "contentHash": "3bd89b82381b00e67c794bf08bdddd49173d867f6a2d43bde8f2ca4af638d5b2",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0204",
+      "conceptId": "km-kovalent-bag",
+      "stem": {
+        "md": "Atomların elektronlarını ortaklaşa kullanarak oluşturduğu bağa ne ad verilir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "İyonik bağ"
+        },
+        {
+          "key": "B",
+          "md": "Kovalent bağ"
+        },
+        {
+          "key": "C",
+          "md": "Metalik bağ"
+        },
+        {
+          "key": "D",
+          "md": "Hidrojen bağı"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "İyonik bağda elektron bir atomdan diğerine geçer ve zıt yüklü iyonlar birbirini çeker.",
+        "C": "Metalik bağda serbest elektronlar bütün metal örgüsüne yayılır.",
+        "D": "Hidrojen bağı moleküller arasındaki zayıf bir çekimdir, atomlar arası asıl bağ değildir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Bu bağ kovalent bağdır.\n- Su ve karbondioksit molekülleri kovalent bağlarla oluşur."
+        },
+        {
+          "type": "hint",
+          "md": "Ad, 'birlikte' anlamındaki 'ko-' önekini taşır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Atomlar dış katmanlarını daha kararlı bir düzene getirmek için birbirleriyle bağ kurar. Bağın türü, elektronların atomlar arasında nasıl paylaşıldığına bağlıdır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          41,
+          41
+        ],
+        "quote": "Kovalent bağda atomlar elektronlarını ortaklaşa kullanır.",
+        "chapter": "Kimya"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "kimya"
+      ],
+      "vurgu": [],
+      "contentHash": "45fcd79e1c47985adee8fd89218a29d4baa1aea73f6e7ab3da662b8929129689",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0205",
+      "conceptId": "elmasin-elementi",
+      "stem": {
+        "md": "Elmas hangi elementten oluşur?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Silisyum"
+        },
+        {
+          "key": "B",
+          "md": "Karbon"
+        },
+        {
+          "key": "C",
+          "md": "Kalsiyum"
+        },
+        {
+          "key": "D",
+          "md": "Demir"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Silisyum kuvarsın ve camın temel elementidir, elmasın değil.",
+        "C": "Kalsiyum kireç taşında ve kemikte bulunur.",
+        "D": "Demir bir metaldir; elmas metal değildir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Elmas karbondan oluşur.\n- Kurşun kalemdeki grafit de karbondur; yalnızca atomların dizilişi farklıdır."
+        },
+        {
+          "type": "hint",
+          "md": "Grafit ve kömürle aynı element."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Elmas, bilinen en sert doğal maddedir ve yer kabuğunun derinliklerinde yüksek basınç ile sıcaklık altında oluşur. Kesme ve delme araçlarında da kullanılır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          41,
+          41
+        ],
+        "quote": "Elmas, karbon elementinden oluşur.",
+        "chapter": "Kimya"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "kimya"
+      ],
+      "vurgu": [],
+      "contentHash": "82248c5aa7a8f5eb7b13427ec0cc28e056aaa482bc762e6ed683b454b07b8135",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0206",
+      "conceptId": "km-allotrop",
+      "stem": {
+        "md": "Elmas ile kurşun kalem ucundaki grafitin aynı elementin farklı yapıları olması hangi kavramla açıklanır?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Allotropi"
+        },
+        {
+          "key": "B",
+          "md": "İzotopi"
+        },
+        {
+          "key": "C",
+          "md": "İzomeri"
+        },
+        {
+          "key": "D",
+          "md": "Polimerleşme"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "İzotopi, nötron sayısı farklı atomlarla ilgilidir; yapı farkını anlatmaz.",
+        "C": "İzomeri, aynı formüllü farklı moleküller için kullanılır, tek bir elementin biçimleri için değil.",
+        "D": "Polimerleşme, küçük moleküllerin zincir oluşturarak birleşmesidir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Bu kavram allotropidir.\n- Elmas ile grafit aynı elementin allotroplarıdır.\n- Atomların dizilişi farklı olduğu için biri çok sert, diğeri yumuşaktır."
+        },
+        {
+          "type": "hint",
+          "md": "Yunanca 'başka biçim' anlamına gelir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Aynı atomlar farklı biçimlerde dizildiğinde ortaya çok farklı özellikte maddeler çıkabilir. Oksijen gazı ile ozon da benzer bir ilişkiye örnektir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          41,
+          41
+        ],
+        "quote": "Elmas ile grafit gibi aynı elementin farklı yapılardaki biçimlerine allotrop denir.",
+        "chapter": "Kimya"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "kimya"
+      ],
+      "vurgu": [],
+      "contentHash": "abf0b987c686537a3d2534b057c23cae98d53170e46ded3446d05b915522b7c7",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0207",
+      "conceptId": "km-ph-olcegi",
+      "stem": {
+        "md": "pH değeri 3 olan bir çözelti nasıl nitelendirilir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Bazik"
+        },
+        {
+          "key": "B",
+          "md": "Nötr"
+        },
+        {
+          "key": "C",
+          "md": "Asidik"
+        },
+        {
+          "key": "D",
+          "md": "Doymuş"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Bazik çözeltilerin pH değeri 7'den büyüktür.",
+        "B": "Nötr çözeltilerin pH değeri 7'dir.",
+        "D": "Doymuşluk, çözünen madde miktarıyla ilgilidir; pH ile ilgili değildir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- pH 3 olan çözelti asidiktir.\n- pH 7 nötr; 7'den küçükler asidik, büyükler baziktir."
+        },
+        {
+          "type": "hint",
+          "md": "7'nin altında mı üstünde mi?"
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "pH ölçeği, bir çözeltinin asitlik ya da bazlık derecesini gösterir. Ölçek genellikle 0 ile 14 arasında ifade edilir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          42,
+          42
+        ],
+        "quote": "pH ölçeğinde 7 nötr, 7'den küçük değerler asidik, 7'den büyük değerler baziktir.",
+        "chapter": "Kimya"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "kimya"
+      ],
+      "vurgu": [],
+      "contentHash": "bcc054e50dce6fa3e76ed2d28a230c3cdb574a611a7e9521261c1fb95d1d5062",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0208",
+      "conceptId": "km-saf-su-ph",
+      "stem": {
+        "md": "Saf suyun pH değeri 25 santigrat derecede ____'dir."
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "7"
+        },
+        {
+          "key": "B",
+          "md": "0"
+        },
+        {
+          "key": "C",
+          "md": "1"
+        },
+        {
+          "key": "D",
+          "md": "14"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "pH 0 çok güçlü asitlere karşılık gelir.",
+        "C": "pH 1 mide özsuyu gibi güçlü asidik ortamlara yakındır.",
+        "D": "pH 14 çok güçlü bazlara karşılık gelir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Saf suyun pH değeri 25 °C'de 7'dir.\n- Bu değer nötr kabul edilir."
+        },
+        {
+          "type": "hint",
+          "md": "Ölçeğin tam ortası."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Su, ne asidik ne bazik sayılan bir maddedir ve bu yüzden asitlik ölçeğinde referans noktası olarak kullanılır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          42,
+          42
+        ],
+        "quote": "Saf suyun pH değeri 25 santigrat derecede 7'dir.",
+        "chapter": "Kimya"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "kimya"
+      ],
+      "vurgu": [],
+      "contentHash": "5a612b0a35741925e1898839ebdf679add8c724f21ab2754dbdd94d781fef2b3",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0209",
+      "conceptId": "km-turnusol",
+      "stem": {
+        "md": "Mavi turnusol kâğıdı bir çözeltiye daldırıldığında kırmızıya dönüyorsa çözelti için ne söylenebilir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Bazdır"
+        },
+        {
+          "key": "B",
+          "md": "Saf sudur"
+        },
+        {
+          "key": "C",
+          "md": "Nötr bir tuz çözeltisidir"
+        },
+        {
+          "key": "D",
+          "md": "Asittir"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Bazlar mavi turnusolün rengini değiştirmez; kırmızı turnusolü maviye çevirir.",
+        "B": "Saf su nötrdür ve turnusolün rengini değiştirmez.",
+        "C": "Nötr çözeltiler turnusol kâğıdının rengini değiştirmez."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Çözelti asittir.\n- Asitler mavi turnusolü kırmızıya çevirir.\n- Bazlar ise kırmızı turnusolü maviye çevirir."
+        },
+        {
+          "type": "hint",
+          "md": "Limon suyu damlatsanız ne olurdu?"
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Turnusol, likenlerden elde edilen ve ortamın asitliğine göre renk değiştiren bir boyadır. Bu tür maddelere belirteç (indikatör) denir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          42,
+          42
+        ],
+        "quote": "Mavi turnusol kâğıdı asitte kırmızıya, kırmızı turnusol kâğıdı bazda maviye döner.",
+        "chapter": "Kimya"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "kimya"
+      ],
+      "vurgu": [],
+      "contentHash": "2e02ff024cdff3db46c6b046cc1f7ca5e3bd9721928dd2ac576fe8b8c89cf6cb",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0210",
+      "conceptId": "km-notrallesme",
+      "stem": {
+        "md": "Bir asit ile bir bazın tepkimeye girerek tuz ve su oluşturmasına ne ad verilir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Nötralleşme"
+        },
+        {
+          "key": "B",
+          "md": "Yanma"
+        },
+        {
+          "key": "C",
+          "md": "Paslanma"
+        },
+        {
+          "key": "D",
+          "md": "Elektroliz"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Yanma, bir maddenin oksijenle tepkimeye girip ısı ve ışık vermesidir.",
+        "C": "Paslanma, demirin nem ve oksijenle yavaşça tepkimesidir.",
+        "D": "Elektroliz, bir maddenin elektrik akımıyla ayrıştırılmasıdır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Bu tepkime nötralleşmedir.\n- Asit + baz → tuz + su.\n- Mide yanmasında antasit almak bunun gündelik bir örneğidir."
+        },
+        {
+          "type": "hint",
+          "md": "Sonuçta ortam ne asidik ne bazik olur."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Asitler ve bazlar birbirinin etkisini giderebilen iki madde sınıfıdır. Arı sokması veya mide ekşimesi gibi durumlarda bu ilkeden yararlanılır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          42,
+          42
+        ],
+        "quote": "Bir asit ile bir baz tepkimeye girdiğinde tuz ve su oluşur; bu tepkimeye nötralleşme denir.",
+        "chapter": "Kimya"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "kimya"
+      ],
+      "vurgu": [],
+      "contentHash": "47ce9768fcc4166bd79ff0e3dbc31f8d95c40a5cb128bb890a409ed622ce227a",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0211",
+      "conceptId": "km-mide-asidi",
+      "stem": {
+        "md": "Midede sindirime yardımcı olan asit hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Sülfürik asit"
+        },
+        {
+          "key": "B",
+          "md": "Sitrik asit"
+        },
+        {
+          "key": "C",
+          "md": "Nitrik asit"
+        },
+        {
+          "key": "D",
+          "md": "Hidroklorik asit"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Sülfürik asit akülerde ve sanayide kullanılır; vücut üretmez.",
+        "B": "Sitrik asit turunçgillerde bulunur, midede salgılanmaz.",
+        "C": "Nitrik asit gübre ve patlayıcı üretiminde kullanılır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Midede hidroklorik asit (HCl) salgılanır.\n- Proteinlerin sindirimine ve mikropların öldürülmesine yardım eder.\n- Mide duvarı mukusla korunur."
+        },
+        {
+          "type": "hint",
+          "md": "Formülünde hidrojen ve klor vardır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Mide, besinleri parçalamak için oldukça asidik bir ortam oluşturur. Bu ortamın dengesi bozulduğunda mide ekşimesi ve ülser gibi sorunlar görülebilir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          42,
+          42
+        ],
+        "quote": "Midede sindirime yardım eden asit hidroklorik asittir.",
+        "chapter": "Kimya"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "kimya"
+      ],
+      "vurgu": [],
+      "contentHash": "04d1f3155731f6f7a659e5b29f021bc550f7ab26839332df0d4fa017d4e22343",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0212",
+      "conceptId": "km-gundelik-asitler",
+      "stem": {
+        "md": "Maddeleri içerdikleri asitlerle eşleştirin.\n\n1. Sirke\n2. Limon\n3. Araç aküsü\n\na. sülfürik asit\nb. asetik asit\nc. sitrik asit"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "1-c, 2-b, 3-a"
+        },
+        {
+          "key": "B",
+          "md": "1-b, 2-a, 3-c"
+        },
+        {
+          "key": "C",
+          "md": "1-b, 2-c, 3-a"
+        },
+        {
+          "key": "D",
+          "md": "1-a, 2-c, 3-b"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Sirke ile limonun asitleri yer değiştirmiştir.",
+        "B": "Limonda sülfürik asit yoktur; akü de sitrik asitle çalışmaz.",
+        "D": "Sirkede sülfürik asit bulunmaz; asetik asit de akülerde kullanılmaz."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Sirke: asetik asit\n- Limon: sitrik asit\n- Araç aküsü: sülfürik asit"
+        },
+        {
+          "type": "hint",
+          "md": "Limon gibi turunçgillerin İngilizcesi 'citrus'tur."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Asitler yalnızca laboratuvarda değil mutfakta ve araçlarda da bulunur. Besinlerdeki zayıf asitler ekşi tat verir, sanayideki güçlü asitler ise aşındırıcıdır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          42,
+          42
+        ],
+        "quote": "Limonun ekşi tadı sitrik asitten, sirkeninki asetik asitten gelir; araç akülerinde ise sülfürik asit kullanılır.",
+        "chapter": "Kimya"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "kimya"
+      ],
+      "vurgu": [],
+      "contentHash": "f5d71ef17757bd0f476fc9d78b583cd99041039cd7b7fe8a3408bd2f467e6ed7",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0213",
+      "conceptId": "km-kimyasal-degisim",
+      "stem": {
+        "md": "Aşağıdakilerden hangisi kimyasal bir değişimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Buzun erimesi"
+        },
+        {
+          "key": "B",
+          "md": "Demirin paslanması"
+        },
+        {
+          "key": "C",
+          "md": "Kâğıdın yırtılması"
+        },
+        {
+          "key": "D",
+          "md": "Şekerin suda çözünmesi"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Buz eridiğinde yine su olarak kalır; bu fiziksel bir değişimdir.",
+        "C": "Yırtılan kâğıt yine kâğıttır; yalnızca biçimi değişir.",
+        "D": "Suda çözünen şeker kimliğini korur; su buharlaşınca geri elde edilir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Kimyasal değişim demirin paslanmasıdır.\n- Demir oksijenle tepkimeye girerek yeni bir madde olan demir oksidi oluşturur.\n- Diğerlerinde maddenin kimliği değişmez."
+        },
+        {
+          "type": "hint",
+          "md": "Hangisinde yeni bir madde oluşuyor?"
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Fiziksel değişimde maddenin yalnızca biçimi ya da hâli değişir. Kimyasal değişimde ise atomlar yeniden düzenlenir ve farklı özellikte yeni maddeler oluşur."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          43,
+          43
+        ],
+        "quote": "Demirin nemli havada oksijenle tepkimeye girerek paslanması bir kimyasal değişimdir.",
+        "chapter": "Kimya"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "kimya"
+      ],
+      "vurgu": [],
+      "contentHash": "58755297aa1438debba87aa735efbf60a45c0c18500efe3bcb2fc8d790efb99b",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0214",
+      "conceptId": "km-yanma",
+      "stem": {
+        "md": "Yanma, bir maddenin ____ ile hızla tepkimeye girerek ısı ve ışık açığa çıkarmasıdır."
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "azot"
+        },
+        {
+          "key": "B",
+          "md": "helyum"
+        },
+        {
+          "key": "C",
+          "md": "argon"
+        },
+        {
+          "key": "D",
+          "md": "oksijen"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Azot havada bol bulunsa da yanmayı sağlamaz.",
+        "B": "Helyum bir soy gazdır ve tepkimeye girmez.",
+        "C": "Argon bir soy gazdır; yangın söndürmede bile kullanılabilir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Yanma için oksijen gerekir.\n- Yangın söndürmede oksijenin ateşe ulaşması engellenir."
+        },
+        {
+          "type": "hint",
+          "md": "Soluduğumuz havadaki yaşamsal gaz."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Ateşin sürmesi için üç şey gerekir: yakıt, ısı ve uygun bir gaz. Yangın söndürme yöntemleri bu üçünden birini ortadan kaldırmaya dayanır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          43,
+          43
+        ],
+        "quote": "Yanma, bir maddenin oksijenle hızla tepkimeye girerek ısı ve ışık açığa çıkarmasıdır.",
+        "chapter": "Kimya"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "kimya"
+      ],
+      "vurgu": [],
+      "contentHash": "a26a07db00136748c09cfab2c7c2352420135ac9f1663992673d0ca1b6cb5a6a",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0215",
+      "conceptId": "km-fotosentez",
+      "stem": {
+        "md": "Bitkilerin fotosentez sırasında havaya verdiği gaz hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Karbondioksit"
+        },
+        {
+          "key": "B",
+          "md": "Oksijen"
+        },
+        {
+          "key": "C",
+          "md": "Azot"
+        },
+        {
+          "key": "D",
+          "md": "Metan"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Karbondioksit fotosentezde üretilmez, kullanılır.",
+        "C": "Azot fotosentezin ürünü değildir.",
+        "D": "Metan bataklıklarda ve hayvanların sindiriminde oluşur, fotosentezde değil."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Bitkiler fotosentezde oksijen üretir.\n- Bunun için karbondioksit, su ve güneş ışığı kullanırlar.\n- Ayrıca besin olarak glikoz oluştururlar."
+        },
+        {
+          "type": "hint",
+          "md": "Soluduğumuz gaz."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Fotosentez, bitkilerin güneş ışığının enerjisini kimyasal enerjiye dönüştürdüğü süreçtir. Yaprakların yeşil rengini veren klorofil bu süreçte görev alır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          43,
+          43
+        ],
+        "quote": "Bitkiler fotosentezde karbondioksit ve suyu kullanarak glikoz ve oksijen üretir.",
+        "chapter": "Kimya"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "kimya"
+      ],
+      "vurgu": [],
+      "contentHash": "6556baba112385487c49afa2c0cdcb98eae10afaaeb95dd635c39ef62322c095",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0216",
+      "conceptId": "km-karbonat-sirke",
+      "stem": {
+        "md": "Karbonat ile sirke karıştırıldığında görülen köpürmeye hangi gaz yol açar?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Oksijen"
+        },
+        {
+          "key": "B",
+          "md": "Karbondioksit"
+        },
+        {
+          "key": "C",
+          "md": "Hidrojen"
+        },
+        {
+          "key": "D",
+          "md": "Klor"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Oksijen bu tepkimede açığa çıkmaz.",
+        "C": "Hidrojen, bazı metallerin asitle tepkimesinde çıkar; karbonatla değil.",
+        "D": "Klor bu tepkimede oluşmaz; zehirli ve keskin kokulu bir gazdır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Köpürmeye karbondioksit gazı yol açar.\n- Sodyum bikarbonat (baz özellikli) ile asetik asit tepkimeye girer.\n- Kabartma tozlu hamurun kabarması da benzer biçimde gaz çıkışıyla olur."
+        },
+        {
+          "type": "hint",
+          "md": "Gazlı içeceklerdeki kabarcıkların gazı."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Mutfaktaki karbonat, asitlerle tepkimeye girdiğinde gaz açığa çıkaran bir maddedir. Okullardaki 'yanardağ' deneyi bu tepkimeyle yapılır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          43,
+          43
+        ],
+        "quote": "Karbonat olarak bilinen sodyum bikarbonat sirkeyle tepkimeye girince karbondioksit gazı açığa çıkar.",
+        "chapter": "Kimya"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "kimya"
+      ],
+      "vurgu": [],
+      "contentHash": "62e6aaf087b7d2984b2eb5cc6333381bdbcc42c5bd3bcc71f28fcb211fc9d812",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0217",
+      "conceptId": "km-lavoisier",
+      "stem": {
+        "md": "Kimyasal tepkimelerde toplam kütlenin korunduğunu göstererek modern kimyanın kurucusu sayılan bilim insanı kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Robert Boyle"
+        },
+        {
+          "key": "B",
+          "md": "Antoine Lavoisier"
+        },
+        {
+          "key": "C",
+          "md": "Dmitri Mendeleyev"
+        },
+        {
+          "key": "D",
+          "md": "Amedeo Avogadro"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Boyle gazların basınç-hacim ilişkisiyle tanınır.",
+        "C": "Mendeleyev periyodik tabloyu düzenlemiştir.",
+        "D": "Avogadro, gazların hacmi ile tanecik sayısı arasındaki ilişkiyi öne sürmüştür."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Antoine Lavoisier'dir.\n- Kapalı kaplarda yaptığı hassas tartımlarla kütlenin korunduğunu göstermiştir.\n- Fransız Devrimi sırasında giyotinle idam edilmiştir."
+        },
+        {
+          "type": "hint",
+          "md": "18. yüzyılda yaşamış bir Fransız kimyacı."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "18. yüzyılda kimya, simyadan ayrılarak ölçüme dayalı bir bilim hâline geldi. Hassas teraziler, tepkimelerde maddenin nereye gittiğini izlemeyi mümkün kıldı."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          43,
+          43
+        ],
+        "quote": "Antoine Lavoisier, kimyasal tepkimelerde toplam kütlenin korunduğunu göstermiştir.",
+        "chapter": "Kimya"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "kimya"
+      ],
+      "vurgu": [],
+      "contentHash": "2efd70511300bb296e301c266ce264007c151f6f71263f01150b87bf3fe350d9",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0218",
+      "conceptId": "km-katalizor",
+      "stem": {
+        "md": "Bir tepkimeyi hızlandıran ama tepkime sonunda kendisi tükenmeden kalan maddeye ne ad verilir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "İnhibitör"
+        },
+        {
+          "key": "B",
+          "md": "Çözücü"
+        },
+        {
+          "key": "C",
+          "md": "Katalizör"
+        },
+        {
+          "key": "D",
+          "md": "İndikatör"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "İnhibitör tepkimeyi yavaşlatan maddedir.",
+        "B": "Çözücü, başka maddeleri içinde çözen ortamdır.",
+        "D": "İndikatör, ortamın asitliğini renk değişimiyle gösteren maddedir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Bu maddeye katalizör denir.\n- Tepkimenin gerçekleşmesi için gereken enerjiyi düşürür.\n- Vücuttaki enzimler biyolojik katalizörlerdir."
+        },
+        {
+          "type": "hint",
+          "md": "Araçların egzozundaki bir parça da bu adı taşır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Bazı tepkimeler kendiliğinden çok yavaş ilerler. Sanayide ve canlıların vücudunda bu tepkimeleri hızlandırmak için özel maddelerden yararlanılır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          43,
+          43
+        ],
+        "quote": "Katalizör, tepkimeyi hızlandıran ama kendisi tükenmeyen maddedir.",
+        "chapter": "Kimya"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "kimya"
+      ],
+      "vurgu": [],
+      "contentHash": "e825977cef69b78da3b62cc6156e32dd7aa9d6491b8049eda9070f0bbb373cee",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0219",
+      "conceptId": "km-curie",
+      "stem": {
+        "md": "Eşiyle birlikte polonyum ve radyum elementlerini keşfeden bilim insanı kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Lise Meitner"
+        },
+        {
+          "key": "B",
+          "md": "Rosalind Franklin"
+        },
+        {
+          "key": "C",
+          "md": "Marie Curie"
+        },
+        {
+          "key": "D",
+          "md": "Dorothy Hodgkin"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Meitner, nükleer fisyonun açıklanmasına katkısıyla tanınır.",
+        "B": "Franklin, DNA'nın yapısını aydınlatan X-ışını çalışmalarıyla bilinir.",
+        "D": "Hodgkin, X-ışınıyla penisilin ve B12 vitamininin yapısını çözmüştür."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Marie Curie'dir.\n- Polonyumu, doğduğu ülke Polonya'nın adıyla anmıştır.\n- Hem fizik hem kimya dalında Nobel Ödülü almıştır."
+        },
+        {
+          "type": "hint",
+          "md": "Keşfettiği elementlerden biri doğduğu ülkenin adını taşır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "19. yüzyılın sonunda bazı elementlerin kendiliğinden ışıma yaptığı fark edildi. Bu olaya radyoaktivite adı verildi ve yeni elementlerin keşfine yol açtı."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          44,
+          44
+        ],
+        "quote": "Marie Curie, eşi Pierre Curie ile birlikte polonyum ve radyum elementlerini keşfetmiştir.",
+        "chapter": "Kimya"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "kimya"
+      ],
+      "vurgu": [],
+      "contentHash": "ffb5519247f8522dad4d9d01e619af0a67964fadf98ddbce6fdb97a2ef1a746b",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0220",
+      "conceptId": "km-nobel-dinamit",
+      "stem": {
+        "md": "Servetini Nobel Ödülleri'nin kurulmasına bırakan Alfred Nobel neyi icat etmiştir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Barut"
+        },
+        {
+          "key": "B",
+          "md": "Ampul"
+        },
+        {
+          "key": "C",
+          "md": "Telefon"
+        },
+        {
+          "key": "D",
+          "md": "Dinamit"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Barut Çin'de yüzyıllar önce bulunmuştur.",
+        "B": "Ampul Edison ve çağdaşlarının çalışmalarıyla gelişmiştir.",
+        "C": "Telefon Graham Bell ile anılır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Alfred Nobel dinamiti icat etmiştir.\n- Dinamit, nitrogliserini daha güvenli taşınır hâle getirmiştir.\n- Vasiyetiyle Nobel Ödülleri kurulmuştur."
+        },
+        {
+          "type": "hint",
+          "md": "Madencilikte ve inşaatta kaya patlatmak için kullanılır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Alfred Nobel İsveçli bir kimyacı ve mucitti. Ödüller her yıl fizik, kimya, tıp, edebiyat ve barış gibi alanlarda verilir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          44,
+          44
+        ],
+        "quote": "Alfred Nobel dinamiti icat etmiş ve servetini Nobel Ödülleri'nin kurulmasına bırakmıştır.",
+        "chapter": "Kimya"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "kimya"
+      ],
+      "vurgu": [],
+      "contentHash": "b7608acffcbdabbad9e63bd3f502b53c6f1beb43837379bd98f0c20243b1c074",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0221",
+      "conceptId": "km-avogadro",
+      "stem": {
+        "md": "Bir moldeki tanecik sayısını veren Avogadro sayısının yaklaşık değeri hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "3,00 × 10⁸"
+        },
+        {
+          "key": "B",
+          "md": "6,02 × 10²³"
+        },
+        {
+          "key": "C",
+          "md": "6,67 × 10⁻¹¹"
+        },
+        {
+          "key": "D",
+          "md": "1,60 × 10⁻¹⁹"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "3,00 × 10⁸, ışığın metre bölü saniye cinsinden hızıdır.",
+        "C": "6,67 × 10⁻¹¹, evrensel çekim sabitinin değeridir.",
+        "D": "1,60 × 10⁻¹⁹, bir elektronun yükünün coulomb cinsinden büyüklüğüdür."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Avogadro sayısı yaklaşık 6,02 × 10²³'tür.\n- Bir mol maddede bu kadar tanecik bulunur."
+        },
+        {
+          "type": "hint",
+          "md": "Çok büyük bir sayıdır; üssü pozitif ve yirminin üstündedir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Atomlar tek tek sayılamayacak kadar küçük olduğu için kimyacılar onları büyük paketler hâlinde sayar. Mol, bu paketin adıdır ve SI temel birimlerinden biridir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          44,
+          44
+        ],
+        "quote": "Avogadro sayısı yaklaşık 6,02 × 10²³'tür ve bir moldeki tanecik sayısını verir.",
+        "chapter": "Kimya"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "kimya"
+      ],
+      "vurgu": [],
+      "contentHash": "0572726192ab49431e19909e73fe9f79f8829ce714a4cd4cb94b130dd0b99030",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0222",
+      "conceptId": "km-hava-azot",
+      "stem": {
+        "md": "Kuru havada hacimce en çok bulunan gaz hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Azot"
+        },
+        {
+          "key": "B",
+          "md": "Oksijen"
+        },
+        {
+          "key": "C",
+          "md": "Argon"
+        },
+        {
+          "key": "D",
+          "md": "Karbondioksit"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Oksijen havanın yaklaşık beşte birini oluşturur; en bol gaz değildir.",
+        "C": "Argon havada yüzde birden az bulunur.",
+        "D": "Karbondioksit havada çok küçük bir oranda bulunur."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- En bol gaz azottur (yaklaşık %78).\n- Oksijen yaklaşık %21'dir.\n- Kalan küçük kısmı argon, karbondioksit ve diğer gazlar oluşturur."
+        },
+        {
+          "type": "hint",
+          "md": "Soluduğumuz gaz sanılır ama değildir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Atmosfer farklı gazların karışımıdır. Canlılar için en önemli görülen gaz, karışımın en büyük bileşeni değildir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          44,
+          44
+        ],
+        "quote": "Kuru havanın hacimce yaklaşık yüzde 78'i azot, yüzde 21'i oksijendir.",
+        "chapter": "Kimya"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "kimya"
+      ],
+      "vurgu": [],
+      "contentHash": "0fb2a7d34e482888a631b87a243f0bd5914c90bde7a01ac396efefc8ba605f49",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0223",
+      "conceptId": "km-ozon",
+      "stem": {
+        "md": "Ozon molekülü kaç oksijen atomundan oluşur?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "2"
+        },
+        {
+          "key": "B",
+          "md": "3"
+        },
+        {
+          "key": "C",
+          "md": "4"
+        },
+        {
+          "key": "D",
+          "md": "1"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "İki oksijen atomlu molekül, soluduğumuz oksijen gazıdır (O₂).",
+        "C": "Dört atomlu kararlı bir oksijen molekülü atmosferde ozon olarak bulunmaz.",
+        "D": "Tek oksijen atomu kararsızdır; ozon bir moleküldür."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Ozon üç oksijen atomundan oluşur (O₃).\n- Oksijen gazı ise iki atomludur (O₂).\n- Ozon tabakası Güneş'in morötesi ışınlarının çoğunu süzer."
+        },
+        {
+          "type": "hint",
+          "md": "Soluduğumuz oksijen molekülünden bir fazla."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Ozon, oksijen elementinin farklı bir biçimidir ve keskin bir kokusu vardır. Atmosferin üst katmanlarında Dünya'yı zararlı ışınlardan koruyan bir tabaka oluşturur."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          44,
+          44
+        ],
+        "quote": "Ozon molekülü üç oksijen atomundan oluşur.",
+        "chapter": "Kimya"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "kimya"
+      ],
+      "vurgu": [],
+      "contentHash": "049cbbb23191d60c8098b5c267ec09490d66fdfd294c06f9fa5fc18b26d1de7d",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0224",
+      "conceptId": "km-metan",
+      "stem": {
+        "md": "Evlerde kullanılan doğal gazın temel bileşeni hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Metan"
+        },
+        {
+          "key": "B",
+          "md": "Propan"
+        },
+        {
+          "key": "C",
+          "md": "Bütan"
+        },
+        {
+          "key": "D",
+          "md": "Etanol"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Propan, tüplerde satılan LPG'nin bileşenlerinden biridir.",
+        "C": "Bütan da LPG ve çakmak gazında kullanılır.",
+        "D": "Etanol bir alkoldür ve oda sıcaklığında sıvıdır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğal gazın temel bileşeni metandır (CH₄).\n- En basit hidrokarbondur: bir karbon, dört hidrojen."
+        },
+        {
+          "type": "hint",
+          "md": "En basit hidrokarbon."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Hidrokarbonlar, yalnızca karbon ve hidrojenden oluşan bileşiklerdir ve yakıtların büyük kısmını oluşturur. Karbon sayısı arttıkça gazdan sıvıya doğru geçerler."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          44,
+          44
+        ],
+        "quote": "Doğal gazın temel bileşeni metandır.",
+        "chapter": "Kimya"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "kimya"
+      ],
+      "vurgu": [],
+      "contentHash": "47a141e3c9a853ec2a501e7d637f276759eea8affe3772b74fabdd75a59d189b",
+      "deleted": false
+    }
+  ]
+}

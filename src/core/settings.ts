@@ -10,9 +10,11 @@ export const DEFAULT_SETTINGS: Settings = {
   fontScale: 1,
   autoUpdate: true,
   bookAuto: false,
+  autoChoices: false,
   welcomeSeen: false,
   newsSeen: '',
   samplesUsed: false,
+  defaults: [],
   goals: {},
   goalNotify: false,
   theme: 'Teknesyum',
@@ -30,9 +32,11 @@ export const SettingsPatch = z
     fontScale: z.number().min(0.5).max(2),
     autoUpdate: z.boolean(),
     bookAuto: z.boolean(),
+    autoChoices: z.boolean(),
     welcomeSeen: z.boolean(),
     newsSeen: z.string().max(20),
     samplesUsed: z.boolean(),
+    defaults: z.array(z.string().min(1).max(80)).max(100),
     goals: z.record(
       z.string(),
       z.object({

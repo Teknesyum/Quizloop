@@ -27,6 +27,11 @@
       "default": "tr",
       "type": "string"
     },
+    "sessionSize": {
+      "type": "integer",
+      "minimum": 5,
+      "maximum": 200
+    },
     "description": {
       "type": "string"
     },

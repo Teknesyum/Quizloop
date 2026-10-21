@@ -1,0 +1,2605 @@
+{
+  "blockId": "0009",
+  "questions": [
+    {
+      "id": "genel-kultur-0345",
+      "conceptId": "odysseus-yurdu",
+      "stem": {
+        "md": "Odysseia destanında Odysseus'un yurdu olan ada hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "İthaka"
+        },
+        {
+          "key": "B",
+          "md": "Girit"
+        },
+        {
+          "key": "C",
+          "md": "Rodos"
+        },
+        {
+          "key": "D",
+          "md": "Sicilya"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Girit, Minos ve labirent söylencesinin adasıdır.",
+        "C": "Rodos bir Ege adasıdır ama Odysseus'un yurdu değildir.",
+        "D": "Sicilya, yolculuktaki duraklarla ilişkilendirilir; yurdu değildir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap İthaka'dır.\n- Destan, Troya Savaşı'ndan sonra bu adaya dönüş yolculuğunu anlatır.\n- Odysseus'un dönüşü yaklaşık on yıl sürer."
+        },
+        {
+          "type": "hint",
+          "md": "Penelope onu bu adada bekler."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Odysseia, Troya Savaşı'ndan sonra evine dönmeye çalışan kurnaz bir kahramanın yıllar süren yolculuğunu anlatır. Kahraman yol boyunca Tepegöz, Sirenler ve büyücü Kirke gibi engellerle karşılaşır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          67,
+          67
+        ],
+        "quote": "Odysseia destanında Odysseus'un yurdu İthaka adasıdır.",
+        "chapter": "Dünya Edebiyatı"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "edebiyat"
+      ],
+      "vurgu": [],
+      "contentHash": "eeadd6eb93633b1f294b6e9ec1457a0f666ae53fc9e21fabb20af732777faeb7",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0346",
+      "conceptId": "de-gilgamis",
+      "stem": {
+        "md": "Bilinen en eski destanlardan biri olan ve Uruk kralının ölümsüzlük arayışını anlatan Mezopotamya destanı hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Mahabharata"
+        },
+        {
+          "key": "B",
+          "md": "Kalevala"
+        },
+        {
+          "key": "C",
+          "md": "Beowulf"
+        },
+        {
+          "key": "D",
+          "md": "Gılgamış Destanı"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Mahabharata bir Hint destanıdır ve iki aile kolu arasındaki savaşı anlatır.",
+        "B": "Kalevala, Fin halk şiirlerinden 19. yüzyılda derlenmiş bir destandır.",
+        "C": "Beowulf, Eski İngilizceyle yazılmış bir kahramanlık destanıdır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Gılgamış Destanı'dır.\n- Uruk kralının dostu Enkidu'nun ölümünden sonra ölümsüzlüğü arayışını anlatır.\n- Çivi yazılı tabletler üzerinde günümüze ulaşmıştır."
+        },
+        {
+          "type": "hint",
+          "md": "Kahramanın dostu Enkidu'dur."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Mezopotamya'da Sümer ve Babil uygarlıkları, edebî metinlerini kil tabletlere çivi yazısıyla kaydetti. Bu metinler arasında tufan anlatısı gibi sonraki kültürlerde de karşımıza çıkan konular bulunur."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          67,
+          67
+        ],
+        "quote": "Gılgamış Destanı, Uruk kralının ölümsüzlük arayışını anlatan ve bilinen en eski destanlardan biri olan Mezopotamya destanıdır.",
+        "chapter": "Dünya Edebiyatı"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "edebiyat"
+      ],
+      "vurgu": [],
+      "contentHash": "5ef1eadb1bee434fcb1d87dd27286ac5ff0cf424c7a471bfd2d59e3e239f012d",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0347",
+      "conceptId": "de-ilyada",
+      "stem": {
+        "md": "Odysseia'nın da şairi sayılan ozanın, Troya Savaşı'nın son yılından bir kesiti anlatan destanı hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "İlyada"
+        },
+        {
+          "key": "B",
+          "md": "Aeneis"
+        },
+        {
+          "key": "C",
+          "md": "Theogonia"
+        },
+        {
+          "key": "D",
+          "md": "Argonautika"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Aeneis, Latin şair Vergilius'un destanıdır.",
+        "C": "Theogonia, Hesiodos'un tanrıların doğuşunu anlatan şiiridir.",
+        "D": "Argonautika, Altın Post'u arayan Argonotları anlatan destandır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Odysseia'nın şairi Homeros'tur.\n- Homeros'un Troya Savaşı'nı anlatan destanı İlyada'dır.\n- Destan, Akhilleus'un öfkesini merkezine alır."
+        },
+        {
+          "type": "hint",
+          "md": "Adı Troya'nın eski adı İlion'dan gelir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Antik Yunan destanları uzun süre sözlü olarak, ozanlar tarafından ezberden okunarak aktarıldı. Bu destanlarda tanrılar da insanların savaşlarına karışan karakterler olarak yer alır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          67,
+          67
+        ],
+        "quote": "Homeros'un İlyada destanı, Troya Savaşı'nın son yılından bir kesiti anlatır.",
+        "chapter": "Dünya Edebiyatı"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "edebiyat"
+      ],
+      "vurgu": [],
+      "contentHash": "9bfa73e5646ca3d7212c2289fdf6a3d18bbb75a1d62763343c7a47997dbf64a5",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0348",
+      "conceptId": "de-aeneis-vergilius",
+      "stem": {
+        "md": "Troyalı Aeneas'ın İtalya'ya uzanan yolculuğunu anlatan Latin destanı Aeneis'in şairi kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Vergilius"
+        },
+        {
+          "key": "B",
+          "md": "Ovidius"
+        },
+        {
+          "key": "C",
+          "md": "Horatius"
+        },
+        {
+          "key": "D",
+          "md": "Homeros"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Ovidius, Dönüşümler adlı eseriyle tanınan Latin şairidir.",
+        "C": "Horatius daha çok odları ve şiir sanatı üzerine yazdıklarıyla bilinir.",
+        "D": "Homeros Yunan destan şairidir; Latince yazmamıştır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Vergilius'tur.\n- Aeneis, Roma'nın kökenini Troyalı Aeneas'a bağlar.\n- Augustus döneminde yazılmıştır."
+        },
+        {
+          "type": "hint",
+          "md": "Dante'nin İlahi Komedya'daki rehberi de odur."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Roma edebiyatı Yunan örneklerinden beslenmiş, ama kendi kuruluş efsanelerini anlatmayı da amaçlamıştır. Augustus döneminde Latin şiiri altın çağını yaşamıştır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          67,
+          67
+        ],
+        "quote": "Troyalı Aeneas'ın yolculuğunu anlatan Aeneis destanının şairi Vergilius'tur.",
+        "chapter": "Dünya Edebiyatı"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "edebiyat"
+      ],
+      "vurgu": [],
+      "contentHash": "aedbc54b4590323e964d81c849dc9f1c634f3680933ac93603665ba498c78789",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0349",
+      "conceptId": "de-mahabharata",
+      "stem": {
+        "md": "Bhagavad Gita'yı içinde barındıran ve iki aile kolu arasındaki büyük savaşı anlatan Hint destanı hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Ramayana"
+        },
+        {
+          "key": "B",
+          "md": "Şehname"
+        },
+        {
+          "key": "C",
+          "md": "Gılgamış Destanı"
+        },
+        {
+          "key": "D",
+          "md": "Mahabharata"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Ramayana, Prens Rama'nın kaçırılan eşi Sita'yı kurtarmasını anlatan başka bir Hint destanıdır.",
+        "B": "Şehname, Firdevsi'nin İran destanıdır.",
+        "C": "Gılgamış Destanı bir Mezopotamya destanıdır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Mahabharata'dır.\n- Pandava ve Kaurava kolları arasındaki savaşı anlatır.\n- Bhagavad Gita bu destanın bir bölümüdür."
+        },
+        {
+          "type": "hint",
+          "md": "Dünyanın en uzun destanlarından biridir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Hint edebiyatının iki büyük destanı Sanskritçe yazılmıştır ve dinî, ahlaki öğretileri kahramanlık anlatılarıyla birleştirir. Bu destanlar Güney ve Güneydoğu Asya kültürlerini derinden etkilemiştir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          67,
+          67
+        ],
+        "quote": "Bhagavad Gita'yı içinde barındıran Mahabharata, iki aile kolu arasındaki büyük savaşı anlatan Hint destanıdır.",
+        "chapter": "Dünya Edebiyatı"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "edebiyat"
+      ],
+      "vurgu": [],
+      "contentHash": "6cf07a62c731bd66cf0c6564b1f9351ef781e0ff055f7e045906debc1bb456c3",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0350",
+      "conceptId": "de-kalevala",
+      "stem": {
+        "md": "Elias Lönnrot'un halk şiirlerini derleyerek oluşturduğu Kalevala hangi ülkenin ulusal destanıdır?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "İsveç"
+        },
+        {
+          "key": "B",
+          "md": "Finlandiya"
+        },
+        {
+          "key": "C",
+          "md": "Norveç"
+        },
+        {
+          "key": "D",
+          "md": "Estonya"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "İsveç'in ulusal destanı olarak bilinen böyle bir derleme yoktur.",
+        "C": "Norveç'in eski anlatıları İzlanda sagaları ve Edda ile ilişkilidir.",
+        "D": "Estonya'nın ulusal destanı Kalevipoeg'dir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Finlandiya'dır.\n- Elias Lönnrot, Fin halk şiirlerini 19. yüzyılda derleyerek Kalevala'yı oluşturmuştur.\n- Destan, Fin ulusal kimliğinin oluşmasında önemli rol oynamıştır."
+        },
+        {
+          "type": "hint",
+          "md": "Bu ülkede 28 Şubat, destanın adıyla anılan bir gün olarak kutlanır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "19. yüzyılda Avrupa'da romantizm ve milliyetçilik etkisiyle birçok halk, sözlü geleneğindeki şiirleri derleyerek ulusal destanlar oluşturdu. Bu çalışmalar dilin ve kimliğin korunması için önemli sayıldı."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          67,
+          67
+        ],
+        "quote": "Elias Lönnrot'un halk şiirlerini derleyerek oluşturduğu Kalevala, Finlandiya'nın ulusal destanıdır.",
+        "chapter": "Dünya Edebiyatı"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "edebiyat"
+      ],
+      "vurgu": [],
+      "contentHash": "ed32ca084b2990f26092d08c47256f8a9a6eec706e0d18d1f5c1dcaf34db1afc",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0351",
+      "conceptId": "de-kral-oidipus",
+      "stem": {
+        "md": "Bilmeden babasını öldürüp annesiyle evlenen bir kralın trajedisini anlatan Kral Oidipus'un yazarı kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Aiskhylos"
+        },
+        {
+          "key": "B",
+          "md": "Euripides"
+        },
+        {
+          "key": "C",
+          "md": "Aristophanes"
+        },
+        {
+          "key": "D",
+          "md": "Sophokles"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Aiskhylos, Oresteia üçlemesiyle tanınan tragedya yazarıdır.",
+        "B": "Euripides, Medea ile tanınan tragedya yazarıdır.",
+        "C": "Aristophanes tragedya değil komedi yazarıdır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Sophokles'tir.\n- Kral Oidipus, kaderden kaçılamayacağını işleyen bir tragedyadır.\n- Aristoteles bu eseri tragedyanın en iyi örneği saymıştır."
+        },
+        {
+          "type": "hint",
+          "md": "Antigone de aynı yazarındır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Antik Yunan tragedyası, Dionysos şenliklerinde sahnelenen, kahramanın kaderiyle çatışmasını anlatan tiyatro türüdür. Koro, olayları yorumlayan ve seyirciyle konuşan önemli bir unsurdur."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          68,
+          68
+        ],
+        "quote": "Kral Oidipus tragedyasının yazarı Sophokles'tir.",
+        "chapter": "Dünya Edebiyatı"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "edebiyat"
+      ],
+      "vurgu": [],
+      "contentHash": "d277c79239eb5b1f969a8e11b4a3f898a0c87a02a1134c20e9210caec147a96f",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0352",
+      "conceptId": "de-ilahi-komedya-sira",
+      "stem": {
+        "md": "Dante'nin İlahi Komedya'sında anlatıcının geçtiği bölümlerin sırası hangisinde doğru verilmiştir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Cehennem – Araf – Cennet"
+        },
+        {
+          "key": "B",
+          "md": "Araf – Cehennem – Cennet"
+        },
+        {
+          "key": "C",
+          "md": "Cennet – Araf – Cehennem"
+        },
+        {
+          "key": "D",
+          "md": "Cehennem – Cennet – Araf"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Yolculuk Araf'tan değil, karanlık bir ormandan inilen Cehennem'den başlar.",
+        "C": "Cennet yolculuğun başı değil, varılan son noktadır.",
+        "D": "Araf, Cehennem ile Cennet arasındaki geçiş bölümüdür; en sona gelmez."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru sıra Cehennem – Araf – Cennet'tir.\n- Eser bu sırayla üç bölümden oluşur.\n- Anlatıcı ilk iki bölümde Vergilius'un, Cennet'te Beatrice'in rehberliğinde ilerler."
+        },
+        {
+          "type": "hint",
+          "md": "Yolculuk aşağıdan yukarıya, karanlıktan ışığa doğrudur."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "İlahi Komedya, Orta Çağ'ın dünya görüşünü ve İtalyancanın yazı dili olarak gelişimini derinden etkileyen alegorik bir şiirdir. Eser, Latince yerine halkın konuştuğu Toskana lehçesiyle yazılmıştır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          68,
+          68
+        ],
+        "quote": "Dante'nin İlahi Komedya'sı sırasıyla Cehennem, Araf ve Cennet bölümlerinden oluşur.",
+        "chapter": "Dünya Edebiyatı"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "edebiyat"
+      ],
+      "vurgu": [],
+      "contentHash": "76a42f15e1da873a1f71a92bd8ba1d484a1f7c48adc2021af2dd46ab81559012",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0353",
+      "conceptId": "de-decameron",
+      "stem": {
+        "md": "Vebadan kaçıp Floransa dışındaki bir villaya sığınan on gencin anlattığı yüz öyküden oluşan eser hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Canterbury Hikâyeleri"
+        },
+        {
+          "key": "B",
+          "md": "Decameron"
+        },
+        {
+          "key": "C",
+          "md": "Binbir Gece Masalları"
+        },
+        {
+          "key": "D",
+          "md": "Gargantua ve Pantagruel"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Canterbury Hikâyeleri'nde öyküleri hacca giden yolcular anlatır.",
+        "C": "Binbir Gece Masalları'nda öyküleri Şehrazat anlatır.",
+        "D": "Gargantua ve Pantagruel, Rabelais'nin devleri konu alan güldürü romanıdır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Decameron'dur.\n- Giovanni Boccaccio tarafından yazılmıştır.\n- On genç, on gün boyunca her gün birer öykü anlatır."
+        },
+        {
+          "type": "hint",
+          "md": "Adı Yunanca 'on gün' anlamına gelir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Çerçeve öykü, bir ana anlatının içine çok sayıda küçük öykünün yerleştirildiği anlatım tekniğidir. Doğu ve Batı edebiyatında yüzyıllar boyunca kullanılmıştır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          68,
+          68
+        ],
+        "quote": "Boccaccio'nun Decameron'u, vebadan kaçan on gencin anlattığı yüz öyküden oluşur.",
+        "chapter": "Dünya Edebiyatı"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "edebiyat"
+      ],
+      "vurgu": [],
+      "contentHash": "0527ef8423670449302ee83362b84cea9e9855877aaf27144606b0b17115b689",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0354",
+      "conceptId": "de-don-kisot",
+      "stem": {
+        "md": "Şövalye romanlarını okuya okuya kendini şövalye sanan bir soylunun, yaveri Sancho Panza ile maceralarını anlatan Don Kişot'un yazarı kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Lope de Vega"
+        },
+        {
+          "key": "B",
+          "md": "François Rabelais"
+        },
+        {
+          "key": "C",
+          "md": "Miguel de Cervantes"
+        },
+        {
+          "key": "D",
+          "md": "Pedro Calderón de la Barca"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Lope de Vega, aynı dönemin çok üretken bir İspanyol oyun yazarıdır.",
+        "B": "François Rabelais Fransız bir yazardır.",
+        "D": "Calderón de la Barca, Hayat Bir Rüyadır oyunuyla tanınan İspanyol oyun yazarıdır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Miguel de Cervantes'tir.\n- Don Kişot, şövalye romanlarının parodisidir.\n- Modern romanın ilk örneklerinden sayılır."
+        },
+        {
+          "type": "hint",
+          "md": "Lepanto Deniz Savaşı'nda yaralanan İspanyol yazar."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Rönesans sonrasında şövalye romanları Avrupa'da çok okunuyor, ama giderek abartılı bulunuyordu. Bu türün parodileri, gerçekçi romana giden yolu açtı."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          68,
+          68
+        ],
+        "quote": "Sancho Panza'nın efendisi Don Kişot'u yaratan yazar Miguel de Cervantes'tir.",
+        "chapter": "Dünya Edebiyatı"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "edebiyat"
+      ],
+      "vurgu": [],
+      "contentHash": "58fdcea2484d3f3c224712d06f1116476e28a778607c004577898072679aefb7",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0355",
+      "conceptId": "de-hamlet",
+      "stem": {
+        "md": "Shakespeare'in Hamlet'i hangi ülkenin prensidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "İskoçya"
+        },
+        {
+          "key": "B",
+          "md": "İsveç"
+        },
+        {
+          "key": "C",
+          "md": "Danimarka"
+        },
+        {
+          "key": "D",
+          "md": "Norveç"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "İskoçya, Shakespeare'in Macbeth oyununun geçtiği yerdir.",
+        "B": "İsveç'in bu oyunda bir rolü yoktur.",
+        "D": "Norveç oyunda geçer ama Hamlet'in ülkesi değildir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Danimarka'dır.\n- Hamlet, babasının ölümünün intikamını almakla yükümlü bir prenstir.\n- Oyun Elsinor Şatosu'nda geçer."
+        },
+        {
+          "type": "hint",
+          "md": "Oyun Elsinor Şatosu'nda geçer."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Shakespeare'in büyük tragedyalarında kahraman, iç çatışmaları ve kararsızlıkları yüzünden felakete sürüklenir. Bu oyunlarda iktidar, intikam ve vicdan temaları iç içe işlenir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          68,
+          68
+        ],
+        "quote": "Shakespeare'in Hamlet'i Danimarka prensidir.",
+        "chapter": "Dünya Edebiyatı"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "edebiyat"
+      ],
+      "vurgu": [],
+      "contentHash": "55ff25dc6f7aa22174288748f113d3d27c6aadfca1bc8e62ae5a6fe4555ff09e",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0356",
+      "conceptId": "de-klasik-eslestirme",
+      "stem": {
+        "md": "Aşağıdaki eserleri yazarlarıyla eşleştiriniz.\n\n1. Faust\n2. Kayıp Cennet\n3. Gargantua ve Pantagruel\n\na) John Milton\nb) François Rabelais\nc) Johann Wolfgang von Goethe"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "1-c, 2-a, 3-b"
+        },
+        {
+          "key": "B",
+          "md": "1-a, 2-c, 3-b"
+        },
+        {
+          "key": "C",
+          "md": "1-c, 2-b, 3-a"
+        },
+        {
+          "key": "D",
+          "md": "1-b, 2-a, 3-c"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Faust, İngiliz şair Milton'ın değil, bir Alman yazarın eseridir.",
+        "C": "Kayıp Cennet'i Rabelais yazmamıştır; o bir Fransız güldürü yazarıdır.",
+        "D": "Faust'u Fransız yazar Rabelais yazmamıştır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Faust, Goethe'nindir.\n- Kayıp Cennet, Milton'ın Âdem ile Havva'nın cennetten düşüşünü anlatan destanıdır.\n- Gargantua ve Pantagruel, Rabelais'nin devleri anlatan güldürü romanıdır."
+        },
+        {
+          "type": "hint",
+          "md": "Bir Alman, bir İngiliz, bir Fransız: eserlerin dilini düşünün."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Avrupa edebiyatının büyük klasikleri farklı dillerde yazılmış, ama ortak konuları paylaşmıştır: insanın bilgi ve güç arzusu, iyilik-kötülük çatışması ve topluma yönelik hiciv bunlardandır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          69,
+          69
+        ],
+        "quote": "Faust Goethe'nin, Kayıp Cennet Milton'ın, Gargantua ve Pantagruel Rabelais'nin eseridir.",
+        "chapter": "Dünya Edebiyatı"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "edebiyat"
+      ],
+      "vurgu": [],
+      "contentHash": "b8c511312aa7058fe200f00fae1dc10c968f5ace2e239a45465b3cd76efaec95",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0357",
+      "conceptId": "de-moliere",
+      "stem": {
+        "md": "Cimri ve Tartuffe komedilerinin yazarı olan Fransız oyun yazarı kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Jean Racine"
+        },
+        {
+          "key": "B",
+          "md": "Pierre Corneille"
+        },
+        {
+          "key": "C",
+          "md": "Molière"
+        },
+        {
+          "key": "D",
+          "md": "Voltaire"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Jean Racine, Phaedra gibi tragedyalarıyla tanınır.",
+        "B": "Pierre Corneille, Le Cid gibi tragedyalarıyla tanınır.",
+        "D": "Voltaire daha çok felsefi öyküleri ve denemeleriyle tanınır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Molière'dir.\n- Cimri'de para hırsını, Tartuffe'te din kisvesindeki ikiyüzlülüğü eleştirir.\n- Fransız klasik komedisinin en büyük ustası sayılır."
+        },
+        {
+          "type": "hint",
+          "md": "Kendi oyununda sahnedeyken fenalaşan ünlü oyun yazarı ve oyuncu."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Fransız klasisizmi 17. yüzyılda akıl, ölçü ve kurallara bağlılığı esas aldı. Bu dönemde tragedyada antik konular, komedide ise insan kusurları ve toplum tipleri işlendi."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          69,
+          69
+        ],
+        "quote": "Cimri ve Tartuffe komedilerinin yazarı Fransız oyun yazarı Molière'dir.",
+        "chapter": "Dünya Edebiyatı"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "edebiyat"
+      ],
+      "vurgu": [],
+      "contentHash": "1b81c94a6dfa1b919d588fbe13ee865068ad03b21ab7fb14ee7c935bd5f48c4e",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0358",
+      "conceptId": "de-robinson",
+      "stem": {
+        "md": "Issız bir adada yıllarca yaşayan ve Cuma adını verdiği bir yerliyle dostluk kuran roman kahramanı kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Gulliver"
+        },
+        {
+          "key": "B",
+          "md": "Kaptan Nemo"
+        },
+        {
+          "key": "C",
+          "md": "Long John Silver"
+        },
+        {
+          "key": "D",
+          "md": "Robinson Crusoe"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Gulliver, cüceler ve devler ülkesine giden bir gemi hekimidir.",
+        "B": "Kaptan Nemo, Jules Verne'in denizaltı Nautilus'un kaptanıdır.",
+        "C": "Long John Silver, Define Adası'nın tek bacaklı korsanıdır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Robinson Crusoe'dur.\n- Daniel Defoe'nun romanının kahramanıdır.\n- Gemi kazası sonucu düştüğü adada uzun yıllar hayatta kalmayı başarır."
+        },
+        {
+          "type": "hint",
+          "md": "Yazarı Daniel Defoe'dur."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Issız ada anlatıları, insanın uygarlıktan kopunca neler yapabileceğini sorgular. Bu tür öykülerde doğayla mücadele, yalnızlık ve kendi düzenini kurma temaları öne çıkar."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          69,
+          69
+        ],
+        "quote": "Daniel Defoe'nun kahramanı Robinson Crusoe, ıssız adada Cuma adını verdiği bir yerliyle dostluk kurar.",
+        "chapter": "Dünya Edebiyatı"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "edebiyat"
+      ],
+      "vurgu": [],
+      "contentHash": "4248c8b28c1616221cda2936d0db7a9cc5955cfbe07a3c45acdcfba664191c8a",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0359",
+      "conceptId": "de-gulliver",
+      "stem": {
+        "md": "Cüceler ve devler ülkesine giden bir gemi hekiminin gözünden insan toplumunu hicveden Gulliver'in Gezileri'nin yazarı kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Daniel Defoe"
+        },
+        {
+          "key": "B",
+          "md": "Henry Fielding"
+        },
+        {
+          "key": "C",
+          "md": "Jonathan Swift"
+        },
+        {
+          "key": "D",
+          "md": "Laurence Sterne"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Daniel Defoe, Robinson Crusoe'nun yazarıdır.",
+        "B": "Henry Fielding, Tom Jones romanıyla tanınır.",
+        "D": "Laurence Sterne, Tristram Shandy romanıyla tanınır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Jonathan Swift'tir.\n- Eser, çocuk kitabı gibi okunsa da sert bir siyasi ve toplumsal hicivdir.\n- Swift, İrlandalı bir din adamı ve yazardır."
+        },
+        {
+          "type": "hint",
+          "md": "Dublin'deki bir katedralin dekanı olan yazar."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Hiciv, toplumun ya da kişilerin kusurlarını alay ve abartı yoluyla eleştiren anlatımdır. 18. yüzyıl İngiliz edebiyatında hayalî yolculuklar, hiciv için sıkça kullanılan bir kalıptı."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          69,
+          69
+        ],
+        "quote": "Gulliver'in Gezileri'nin yazarı Jonathan Swift'tir ve eser insan toplumunu hicveder.",
+        "chapter": "Dünya Edebiyatı"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "edebiyat"
+      ],
+      "vurgu": [],
+      "contentHash": "614a773420eb9b73574b692db4cc680dee05413ff3d764ab0f631fbd547592bc",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0360",
+      "conceptId": "de-candide-voltaire",
+      "stem": {
+        "md": "Her şeyin mümkün dünyaların en iyisinde olduğu iyimserliğini alaya alan Candide adlı felsefi öykünün yazarı kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Jean-Jacques Rousseau"
+        },
+        {
+          "key": "B",
+          "md": "Denis Diderot"
+        },
+        {
+          "key": "C",
+          "md": "Montesquieu"
+        },
+        {
+          "key": "D",
+          "md": "Voltaire"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Rousseau, Toplum Sözleşmesi ve Emile ile tanınır.",
+        "B": "Diderot daha çok Ansiklopedi'nin editörü olarak bilinir.",
+        "C": "Montesquieu, Kanunların Ruhu ve İran Mektupları ile tanınır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Voltaire'dir.\n- Candide, saf bir gencin felaketlerle dolu yolculuğunu anlatır.\n- Eser, Leibniz'in iyimser felsefesini hicveder."
+        },
+        {
+          "type": "hint",
+          "md": "Asıl adı François-Marie Arouet olan Aydınlanma yazarı."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Aydınlanma, 18. yüzyılda aklı, bilimi ve eleştirel düşünceyi öne çıkaran düşünce hareketidir. Bu dönemin yazarları felsefi fikirlerini çoğu zaman öykü ve romanlarla yaydı."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          69,
+          69
+        ],
+        "quote": "Candide adlı felsefi öykünün yazarı Voltaire'dir.",
+        "chapter": "Dünya Edebiyatı"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "edebiyat"
+      ],
+      "vurgu": [],
+      "contentHash": "c2d74a5cade51b7bdaf3727620b4ac03ad57620666bbf4f733c7c8b61b1c5d63",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0361",
+      "conceptId": "de-sefiller",
+      "stem": {
+        "md": "Bir somun ekmek çaldığı için yıllarca kürek mahkûmu olan Jean Valjean'ın öyküsünü anlatan Sefiller'in yazarı kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Honoré de Balzac"
+        },
+        {
+          "key": "B",
+          "md": "Émile Zola"
+        },
+        {
+          "key": "C",
+          "md": "Victor Hugo"
+        },
+        {
+          "key": "D",
+          "md": "Alexandre Dumas"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Balzac, İnsanlık Komedyası adlı roman dizisiyle tanınır.",
+        "B": "Émile Zola natüralizmin öncüsüdür.",
+        "D": "Alexandre Dumas macera romanlarıyla tanınır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Victor Hugo'dur.\n- Sefiller, yoksulluk, adalet ve merhamet temalarını işler.\n- Hugo, Notre-Dame'ın Kamburu'nun da yazarıdır."
+        },
+        {
+          "type": "hint",
+          "md": "Notre-Dame'ın Kamburu da aynı yazarındır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Fransız romantizmi 19. yüzyılın ilk yarısında güçlendi; duyguyu, bireyi ve toplumun ezdiği insanları öne çıkardı. Romantik romanlarda iyilik ile kötülük çoğu zaman keskin karakterlerle temsil edilir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          70,
+          70
+        ],
+        "quote": "Jean Valjean'ın öyküsünü anlatan Sefiller'in yazarı Victor Hugo'dur.",
+        "chapter": "Dünya Edebiyatı"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "edebiyat"
+      ],
+      "vurgu": [],
+      "contentHash": "79180909eb0b0e54279687a87a442d703e3f57eabd768ba9dcbd773d84bd2ecc",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0362",
+      "conceptId": "de-madame-bovary",
+      "stem": {
+        "md": "Taşra hayatından sıkılan Emma adlı kadını anlatan ve Fransız realizminin başyapıtlarından sayılan Madame Bovary'nin yazarı kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Stendhal"
+        },
+        {
+          "key": "B",
+          "md": "Guy de Maupassant"
+        },
+        {
+          "key": "C",
+          "md": "Honoré de Balzac"
+        },
+        {
+          "key": "D",
+          "md": "Gustave Flaubert"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Stendhal, Kırmızı ve Siyah romanıyla tanınır.",
+        "B": "Guy de Maupassant daha çok kısa öyküleriyle tanınır.",
+        "C": "Balzac realizmin öncülerindendir ama bu romanı yazmamıştır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Gustave Flaubert'tir.\n- Roman, romantik hayallerle gerçek hayat arasında sıkışan Emma'yı anlatır.\n- Flaubert, doğru sözcüğü bulmaya verdiği önemle tanınır."
+        },
+        {
+          "type": "hint",
+          "md": "Maupassant'ın edebiyattaki ustası sayılan yazar."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Realizm, 19. yüzyılın ortasında romantizme tepki olarak doğdu ve hayatı olduğu gibi, gözleme dayanarak anlatmayı amaçladı. Realist yazarlar yazarın kişiliğini esere yansıtmamaya çalıştı."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          70,
+          70
+        ],
+        "quote": "Fransız realizminin başyapıtlarından Madame Bovary'nin yazarı Gustave Flaubert'tir.",
+        "chapter": "Dünya Edebiyatı"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "edebiyat"
+      ],
+      "vurgu": [],
+      "contentHash": "b10cd36bb6562e9fc10d09895fbfa302eb91b986c3696c08998017d689f0f513",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0363",
+      "conceptId": "de-uc-silahsorler",
+      "stem": {
+        "md": "Gascogne'lu genç d'Artagnan'ın Athos, Porthos ve Aramis'le maceralarını anlatan roman hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Monte Kristo Kontu"
+        },
+        {
+          "key": "B",
+          "md": "Notre-Dame'ın Kamburu"
+        },
+        {
+          "key": "C",
+          "md": "Kırmızı ve Siyah"
+        },
+        {
+          "key": "D",
+          "md": "Üç Silahşörler"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Monte Kristo Kontu, haksız yere hapsedilen Edmond Dantès'in intikamını anlatır.",
+        "B": "Notre-Dame'ın Kamburu, Quasimodo'nun öyküsüdür.",
+        "C": "Kırmızı ve Siyah, Julien Sorel'in yükselme hırsını anlatır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Üç Silahşörler'dir.\n- Alexandre Dumas'nın romanıdır.\n- Olaylar XIII. Louis döneminde geçer."
+        },
+        {
+          "type": "hint",
+          "md": "Kahramanlar kralın muhafız birliğinde görev yapar."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Tarihî macera romanı, gerçek bir tarihsel dönemi arka plan yapıp kurgusal kahramanların serüvenlerini anlatır. 19. yüzyılda gazetelerde tefrika edilerek geniş okur kitlelerine ulaştı."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          70,
+          70
+        ],
+        "quote": "d'Artagnan ile Athos, Porthos ve Aramis'in maceralarını anlatan Üç Silahşörler, Alexandre Dumas'nın romanıdır.",
+        "chapter": "Dünya Edebiyatı"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "edebiyat"
+      ],
+      "vurgu": [],
+      "contentHash": "e843da076a5f8b59cb8920686da26dcf75d5df04c3e6adcfc38e143746bda19a",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0364",
+      "conceptId": "de-zola",
+      "stem": {
+        "md": "Fransız edebiyatında natüralizmin öncüsü sayılan ____, maden işçilerinin hayatını anlatan Germinal romanını yazmıştır. Boşluğa hangisi gelir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Gustave Flaubert"
+        },
+        {
+          "key": "B",
+          "md": "Victor Hugo"
+        },
+        {
+          "key": "C",
+          "md": "Marcel Proust"
+        },
+        {
+          "key": "D",
+          "md": "Émile Zola"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Flaubert realizmin ustasıdır; Germinal'i yazmamıştır.",
+        "B": "Victor Hugo romantizmin temsilcisidir.",
+        "C": "Marcel Proust, Kayıp Zamanın İzinde ile tanınan modernist bir romancıdır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Émile Zola'dır.\n- Germinal, maden işçilerinin grevini ve yoksulluğunu anlatır.\n- Zola, Dreyfus Davası'ndaki tutumuyla da tanınır."
+        },
+        {
+          "type": "hint",
+          "md": "Dreyfus Davası sırasında bir gazeteye yazdığı açık mektupla tanınır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Natüralizm, realizmi bilimsel bir yönteme dönüştürmeye çalışan akımdır. İnsan davranışını kalıtım ve çevrenin belirlediğini savunur ve toplumun en yoksul kesimlerini ayrıntıyla anlatır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          70,
+          70
+        ],
+        "quote": "Natüralizmin öncüsü Émile Zola, maden işçilerini anlatan Germinal romanını yazmıştır.",
+        "chapter": "Dünya Edebiyatı"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "edebiyat"
+      ],
+      "vurgu": [],
+      "contentHash": "475b46f45481f41e95d3cc7e3d726a9e7e8ab62771c90c091fd299c9ba2bf79d",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0365",
+      "conceptId": "de-kucuk-prens",
+      "stem": {
+        "md": "Küçük Prens'in yazarı, yazarlığının yanı sıra hangi meslekle tanınır?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Denizcilik"
+        },
+        {
+          "key": "B",
+          "md": "Hekimlik"
+        },
+        {
+          "key": "C",
+          "md": "Pilotluk"
+        },
+        {
+          "key": "D",
+          "md": "Ressamlık"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Denizcilik, yazarın yaptığı bir iş değildir.",
+        "B": "Hekimlik yazarın yaptığı bir iş değildir.",
+        "D": "Kitabın resimlerini kendisi çizmiştir ama asıl mesleği ressamlık değildir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Küçük Prens'in yazarı Antoine de Saint-Exupéry'dir.\n- Yazar bir pilottu ve uçuş deneyimlerini eserlerine taşıdı.\n- Kitapta da anlatıcı, uçağı çölde arızalanan bir pilottur."
+        },
+        {
+          "type": "hint",
+          "md": "Kitabın anlatıcısı Sahra Çölü'ne zorunlu iniş yapar."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Küçük Prens, başka bir gezegenden gelen bir çocuğun gözünden yetişkinlerin dünyasını sorgulayan alegorik bir öyküdür. Dostluk, sevgi ve sorumluluk temaları sade bir dille anlatılır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          70,
+          70
+        ],
+        "quote": "Küçük Prens'in yazarı Antoine de Saint-Exupéry aynı zamanda bir pilottur.",
+        "chapter": "Dünya Edebiyatı"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "edebiyat"
+      ],
+      "vurgu": [],
+      "contentHash": "4858246787052b80c43c39160704e954d1a31810382ca1774bc9941c91bd01b5",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0366",
+      "conceptId": "de-yabanci-camus",
+      "stem": {
+        "md": "Annesinin ölümüne kayıtsız kalan ve bir cinayet işleyen Meursault'yu anlatan Yabancı romanının yazarı kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Jean-Paul Sartre"
+        },
+        {
+          "key": "B",
+          "md": "André Gide"
+        },
+        {
+          "key": "C",
+          "md": "Marcel Proust"
+        },
+        {
+          "key": "D",
+          "md": "Albert Camus"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Jean-Paul Sartre, Bulantı romanının yazarıdır.",
+        "B": "André Gide, Dar Kapı ve Kalpazanlar ile tanınır.",
+        "C": "Marcel Proust, Kayıp Zamanın İzinde dizisinin yazarıdır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Albert Camus'dür.\n- Yabancı, absürt düşüncenin en tanınmış romanlarındandır.\n- Camus 1957'de Nobel Edebiyat Ödülü'nü almıştır."
+        },
+        {
+          "type": "hint",
+          "md": "Sisifos Söyleni'nin de yazarı olan, Cezayir doğumlu yazar."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Absürt düşünce, insanın anlam arayışı ile dünyanın bu arayışa sessiz kalması arasındaki çelişkiyi konu alır. Bu anlayışın kahramanları toplumun beklediği duyguları göstermedikleri için yabancılaşır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          70,
+          70
+        ],
+        "quote": "Meursault'yu anlatan Yabancı romanının yazarı Albert Camus'dür.",
+        "chapter": "Dünya Edebiyatı"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "edebiyat"
+      ],
+      "vurgu": [],
+      "contentHash": "0648690bb8f61b38a6d0183cfccbd80c60b0649dd11532961da62953903de6ad",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0367",
+      "conceptId": "dostoyevski-romani",
+      "stem": {
+        "md": "Hangi romanın yazarı Fyodor Dostoyevski'dir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Savaş ve Barış"
+        },
+        {
+          "key": "B",
+          "md": "Anna Karenina"
+        },
+        {
+          "key": "C",
+          "md": "Ölü Canlar"
+        },
+        {
+          "key": "D",
+          "md": "Suç ve Ceza"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Savaş ve Barış, Lev Tolstoy'un romanıdır.",
+        "B": "Anna Karenina da Lev Tolstoy'un eseridir.",
+        "C": "Ölü Canlar, Nikolay Gogol'ün romanıdır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Suç ve Ceza'dır.\n- Roman, Raskolnikov adlı gencin işlediği cinayeti ve vicdan azabını anlatır.\n- Dostoyevski, Karamazov Kardeşler ve Budala'nın da yazarıdır."
+        },
+        {
+          "type": "hint",
+          "md": "Kahramanı Raskolnikov."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "19. yüzyıl Rus romanı, insanın ahlaki ve dinî bunalımlarını derinlemesine işler. Bu romanlarda karakterlerin iç çatışmaları ve vicdan sorgulaması olay örgüsünün merkezindedir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          71,
+          71
+        ],
+        "quote": "Suç ve Ceza romanının yazarı Fyodor Dostoyevski'dir.",
+        "chapter": "Dünya Edebiyatı"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "edebiyat"
+      ],
+      "vurgu": [],
+      "contentHash": "ca48ddf6c506e6df1d5cf66f946c3474b4758bcb53b55ecb7e594897e05a779c",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0368",
+      "conceptId": "de-palto-gogol",
+      "stem": {
+        "md": "Akakiy Akakiyeviç adlı küçük bir memurun yeni bir palto edinme çabasını anlatan Palto öyküsünün yazarı kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Nikolay Gogol"
+        },
+        {
+          "key": "B",
+          "md": "Anton Çehov"
+        },
+        {
+          "key": "C",
+          "md": "Aleksandr Puşkin"
+        },
+        {
+          "key": "D",
+          "md": "İvan Turgenyev"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Anton Çehov da öykü ustasıdır ama Palto'yu yazmamıştır.",
+        "C": "Puşkin daha çok şiirleri ve manzum romanıyla tanınır.",
+        "D": "Turgenyev, Babalar ve Oğullar ile tanınır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Nikolay Gogol'dür.\n- Palto, sıradan ve ezilen 'küçük insan' tipini işler.\n- Rus gerçekçi öykücülüğünün temel eserlerinden sayılır."
+        },
+        {
+          "type": "hint",
+          "md": "Müfettiş oyununun da yazarıdır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Rus edebiyatında 'küçük insan' teması, bürokrasi ve yoksulluk içinde ezilen sıradan kişileri anlatır. Bu tema 19. yüzyıl Rus yazarlarının birçoğunu derinden etkilemiştir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          71,
+          71
+        ],
+        "quote": "Akakiy Akakiyeviç'in palto edinme çabasını anlatan Palto öyküsünün yazarı Nikolay Gogol'dür.",
+        "chapter": "Dünya Edebiyatı"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "edebiyat"
+      ],
+      "vurgu": [],
+      "contentHash": "8cfa17309523df7845de84b5b1b293677ea9f25cf411a1c2c43fc1516d019636",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0369",
+      "conceptId": "de-puskin",
+      "stem": {
+        "md": "Rus edebiyatının kurucusu sayılan ve Yevgeni Onegin adlı manzum romanı yazan şair kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Aleksandr Puşkin"
+        },
+        {
+          "key": "B",
+          "md": "Mihail Lermontov"
+        },
+        {
+          "key": "C",
+          "md": "Lev Tolstoy"
+        },
+        {
+          "key": "D",
+          "md": "Vladimir Mayakovski"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Lermontov, Zamanımızın Bir Kahramanı romanıyla tanınır.",
+        "C": "Lev Tolstoy şair değil romancıdır ve daha sonraki kuşaktandır.",
+        "D": "Mayakovski 20. yüzyılın fütürist şairidir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Aleksandr Puşkin'dir.\n- Yevgeni Onegin, şiir biçiminde yazılmış bir romandır.\n- Puşkin, modern Rus edebî dilinin kurucusu sayılır."
+        },
+        {
+          "type": "hint",
+          "md": "Bir düelloda aldığı yarayla genç yaşta ölmüştür."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Manzum roman, romanın karakter ve olay örgüsünü şiir biçimiyle birleştiren türdür. Rus edebiyatında 19. yüzyılın başında modern edebî dilin oluşumunda önemli rol oynamıştır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          71,
+          71
+        ],
+        "quote": "Rus edebiyatının kurucusu sayılan Aleksandr Puşkin, Yevgeni Onegin adlı manzum romanı yazmıştır.",
+        "chapter": "Dünya Edebiyatı"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "edebiyat"
+      ],
+      "vurgu": [],
+      "contentHash": "9827601daf145df42f0fc8e7a3f5a4d6161f2179f7aee5db14c5c850ecac5f28",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0370",
+      "conceptId": "de-cehov",
+      "stem": {
+        "md": "Vişne Bahçesi ve Martı oyunlarının yazarı, aynı zamanda kısa öykünün büyük ustası sayılan Rus yazar kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Maksim Gorki"
+        },
+        {
+          "key": "B",
+          "md": "Nikolay Gogol"
+        },
+        {
+          "key": "C",
+          "md": "Anton Çehov"
+        },
+        {
+          "key": "D",
+          "md": "Fyodor Dostoyevski"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Maksim Gorki, Ana romanıyla tanınır.",
+        "B": "Gogol, Müfettiş ve Ölü Canlar ile tanınır.",
+        "D": "Dostoyevski oyun yazarı değil, romancıdır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Anton Çehov'dur.\n- Oyunlarında olaydan çok atmosfer ve karakterlerin iç dünyası öne çıkar.\n- Çehov aynı zamanda bir hekimdir."
+        },
+        {
+          "type": "hint",
+          "md": "Mesleği hekimlik olan yazar."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Modern tiyatroda bazı yazarlar büyük olaylar yerine gündelik hayatın sessiz dramlarını sahneye taşıdı. Bu oyunlarda konuşulmayan duygular, söylenen sözler kadar önemlidir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          71,
+          71
+        ],
+        "quote": "Vişne Bahçesi ve Martı oyunlarının yazarı Anton Çehov, kısa öykünün de büyük ustasıdır.",
+        "chapter": "Dünya Edebiyatı"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "edebiyat"
+      ],
+      "vurgu": [],
+      "contentHash": "a9f75348e3f9f8593e55d7ea9c494479152100b803e2a599f2963f468e63cc21",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0371",
+      "conceptId": "de-babalar-ogullar",
+      "stem": {
+        "md": "Nihilist Bazarov karakterini yaratan Babalar ve Oğullar romanının yazarı kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Lev Tolstoy"
+        },
+        {
+          "key": "B",
+          "md": "İvan Gonçarov"
+        },
+        {
+          "key": "C",
+          "md": "İvan Turgenyev"
+        },
+        {
+          "key": "D",
+          "md": "Mihail Lermontov"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Lev Tolstoy, Savaş ve Barış ile tanınır.",
+        "B": "İvan Gonçarov, Oblomov romanıyla tanınır.",
+        "D": "Lermontov, Zamanımızın Bir Kahramanı'nın yazarıdır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap İvan Turgenyev'dir.\n- Roman, kuşaklar arasındaki düşünce çatışmasını işler.\n- Bazarov, her türlü otoriteyi reddeden nihilist tipin simgesidir."
+        },
+        {
+          "type": "hint",
+          "md": "Avcının Notları da aynı yazarındır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Nihilizm, 19. yüzyıl Rusya'sında geleneksel değerleri, otoriteyi ve dinî inançları reddeden düşünce akımıdır. Bu akım edebiyatta kuşak çatışması temasıyla birlikte işlenmiştir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          71,
+          71
+        ],
+        "quote": "Nihilist Bazarov'u yaratan Babalar ve Oğullar romanının yazarı İvan Turgenyev'dir.",
+        "chapter": "Dünya Edebiyatı"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "edebiyat"
+      ],
+      "vurgu": [],
+      "contentHash": "fa16c651de64b6851a8fb2bc22ec79b0d5f5adafaeaf3b667cb130ca88521552",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0372",
+      "conceptId": "de-usta-margarita",
+      "stem": {
+        "md": "Şeytanın 1930'ların Moskova'sına gelişini anlatan Usta ile Margarita romanının yazarı kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Boris Pasternak"
+        },
+        {
+          "key": "B",
+          "md": "Aleksandr Soljenitsin"
+        },
+        {
+          "key": "C",
+          "md": "Vladimir Nabokov"
+        },
+        {
+          "key": "D",
+          "md": "Mihail Bulgakov"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Boris Pasternak, Doktor Jivago'nun yazarıdır.",
+        "B": "Soljenitsin, İvan Denisoviç'in Bir Günü ile tanınır.",
+        "C": "Nabokov, Lolita ile tanınan ve sonradan İngilizce yazan bir yazardır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Mihail Bulgakov'dur.\n- Roman, Sovyet dönemi Moskova'sını fantastik ve hiciv dolu bir dille anlatır.\n- Yazarın ölümünden yıllar sonra yayımlanabilmiştir."
+        },
+        {
+          "type": "hint",
+          "md": "Köpek Kalbi de aynı yazarındır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Sovyet döneminde sansür nedeniyle birçok eser yazıldığı zaman yayımlanamadı, yıllar sonra okurla buluştu. Bu dönem yazarları baskıyı çoğu zaman fantastik öğeler ve hicivle eleştirdi."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          71,
+          71
+        ],
+        "quote": "Usta ile Margarita romanının yazarı Mihail Bulgakov'dur.",
+        "chapter": "Dünya Edebiyatı"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "edebiyat"
+      ],
+      "vurgu": [],
+      "contentHash": "c80af111970f03c70d17a5b5dccaeca533627aedf262e59773013dacaf174513",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0373",
+      "conceptId": "de-gurur-onyargi",
+      "stem": {
+        "md": "Elizabeth Bennet ile Bay Darcy'nin öyküsünü anlatan Gurur ve Önyargı'nın yazarı kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Charlotte Brontë"
+        },
+        {
+          "key": "B",
+          "md": "Jane Austen"
+        },
+        {
+          "key": "C",
+          "md": "George Eliot"
+        },
+        {
+          "key": "D",
+          "md": "Virginia Woolf"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Charlotte Brontë, Jane Eyre'in yazarıdır.",
+        "C": "George Eliot, Middlemarch romanıyla tanınır.",
+        "D": "Virginia Woolf 20. yüzyılın modernist yazarıdır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Jane Austen'dır.\n- Roman, İngiliz taşra soyluları arasında evlilik ve sınıf meselelerini işler.\n- Austen ince ironisiyle tanınır."
+        },
+        {
+          "type": "hint",
+          "md": "Emma romanını da yazan İngiliz kadın romancı."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "19. yüzyıl başında İngiliz romanı, taşra hayatını, evlilik pazarlıklarını ve toplumsal sınıfları ince bir ironiyle anlattı. Bu eserlerde kadınların kısıtlı seçenekleri sıkça işlendi."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          72,
+          72
+        ],
+        "quote": "Elizabeth Bennet ile Bay Darcy'nin öyküsünü anlatan Gurur ve Önyargı'nın yazarı Jane Austen'dır.",
+        "chapter": "Dünya Edebiyatı"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "edebiyat"
+      ],
+      "vurgu": [],
+      "contentHash": "19535627c395d30f163f0b396edc20223145c2f34394fd3128f7bd144926a64a",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0374",
+      "conceptId": "de-dickens",
+      "stem": {
+        "md": "Oliver Twist ve İki Şehrin Hikâyesi romanlarının yazarı kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Thomas Hardy"
+        },
+        {
+          "key": "B",
+          "md": "William Thackeray"
+        },
+        {
+          "key": "C",
+          "md": "Charles Dickens"
+        },
+        {
+          "key": "D",
+          "md": "Oscar Wilde"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Thomas Hardy, Tess romanıyla tanınır.",
+        "B": "William Thackeray, Gösteriş Panayırı romanıyla tanınır.",
+        "D": "Oscar Wilde, Dorian Gray'in Portresi'nin yazarıdır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Charles Dickens'tır.\n- Romanlarında Viktorya dönemi İngiltere'sindeki yoksulluğu ve çocuk emeğini eleştirir.\n- İki Şehrin Hikâyesi, Fransız Devrimi döneminde Londra ve Paris'te geçer."
+        },
+        {
+          "type": "hint",
+          "md": "Bir Noel Şarkısı'nın da yazarıdır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Viktorya dönemi İngiltere'sinde sanayileşme büyük şehirlerde yoksulluk ve sefalet yarattı. Bu dönemin romanları tefrika olarak yayımlanır, toplumsal adaletsizliği geniş kitlelere duyururdu."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          72,
+          72
+        ],
+        "quote": "Oliver Twist ve İki Şehrin Hikâyesi romanlarının yazarı Charles Dickens'tır.",
+        "chapter": "Dünya Edebiyatı"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "edebiyat"
+      ],
+      "vurgu": [],
+      "contentHash": "46bc2f08f334f9bde659dda715e7509fb54a3bfe524a624d3816a1bcf976b4c2",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0375",
+      "conceptId": "de-1984",
+      "stem": {
+        "md": "Büyük Birader'in yönettiği totaliter bir toplumu anlatan 1984 romanının yazarı kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Aldous Huxley"
+        },
+        {
+          "key": "B",
+          "md": "Ray Bradbury"
+        },
+        {
+          "key": "C",
+          "md": "H. G. Wells"
+        },
+        {
+          "key": "D",
+          "md": "George Orwell"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Aldous Huxley, Cesur Yeni Dünya adlı distopyanın yazarıdır.",
+        "B": "Ray Bradbury, Fahrenheit 451'in yazarıdır.",
+        "C": "H. G. Wells, Zaman Makinesi ile tanınır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap George Orwell'dir.\n- Roman, gözetim, propaganda ve düşünce denetimini anlatır.\n- Orwell, Hayvan Çiftliği'nin de yazarıdır."
+        },
+        {
+          "type": "hint",
+          "md": "Hayvan Çiftliği de aynı yazarındır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Distopya, baskıcı ve insanlık dışı bir gelecek toplumunu anlatan kurgu türüdür. 20. yüzyılda totaliter rejimlerin yükselişi bu türün en güçlü örneklerinin yazılmasına yol açtı."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          72,
+          72
+        ],
+        "quote": "Büyük Birader'in yönettiği toplumu anlatan 1984 romanının yazarı George Orwell'dir.",
+        "chapter": "Dünya Edebiyatı"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "edebiyat"
+      ],
+      "vurgu": [],
+      "contentHash": "ffb77b10172977c471bd21e4a1abf7d8d1c268e37143e72f945ae5cb5a950f66",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0376",
+      "conceptId": "de-moby-dick",
+      "stem": {
+        "md": "Kaptan Ahab'ın, bacağını koparan beyaz bir balinayı saplantıyla izlemesini anlatan roman hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Moby Dick"
+        },
+        {
+          "key": "B",
+          "md": "Denizler Altında Yirmi Bin Fersah"
+        },
+        {
+          "key": "C",
+          "md": "Define Adası"
+        },
+        {
+          "key": "D",
+          "md": "Yaşlı Adam ve Deniz"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Denizler Altında Yirmi Bin Fersah, Kaptan Nemo'nun denizaltısını anlatır.",
+        "C": "Define Adası, bir hazine avını ve korsanları anlatır.",
+        "D": "Yaşlı Adam ve Deniz, yaşlı bir balıkçının büyük bir balıkla mücadelesini anlatır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Moby Dick'tir.\n- Herman Melville'in romanıdır.\n- Anlatıcı, İsmail adlı bir denizcidir."
+        },
+        {
+          "type": "hint",
+          "md": "Anlatıcısı İsmail adlı bir denizcidir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Deniz romanları, insanın doğanın uçsuz bucaksız gücü karşısındaki yerini sorgular. 19. yüzyıl Amerikan edebiyatında balina avcılığı bu sorgulamanın önemli bir sahnesi oldu."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          72,
+          72
+        ],
+        "quote": "Kaptan Ahab'ın beyaz balinayı izlemesini anlatan Moby Dick, Herman Melville'in romanıdır.",
+        "chapter": "Dünya Edebiyatı"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "edebiyat"
+      ],
+      "vurgu": [],
+      "contentHash": "402fb6466bd18b7ec8deac6161d962d42d8151bbfc905825a42457ad741ce3e8",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0377",
+      "conceptId": "de-hemingway",
+      "stem": {
+        "md": "Santiago adlı yaşlı bir balıkçının dev bir balıkla mücadelesini anlatan Yaşlı Adam ve Deniz'in yazarı kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Ernest Hemingway"
+        },
+        {
+          "key": "B",
+          "md": "John Steinbeck"
+        },
+        {
+          "key": "C",
+          "md": "William Faulkner"
+        },
+        {
+          "key": "D",
+          "md": "F. Scott Fitzgerald"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "John Steinbeck, Gazap Üzümleri'nin yazarıdır.",
+        "C": "William Faulkner, Ses ve Öfke ile tanınır.",
+        "D": "F. Scott Fitzgerald, Muhteşem Gatsby'nin yazarıdır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Ernest Hemingway'dir.\n- Eser, yenilgi içindeki insanın onurunu işler.\n- Hemingway, yalın ve kısa cümlelerden oluşan üslubuyla tanınır."
+        },
+        {
+          "type": "hint",
+          "md": "Silahlara Veda da aynı yazarındır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "20. yüzyıl Amerikan edebiyatında bazı yazarlar süslü anlatım yerine yalın cümleleri ve söylenmeyeni ima etmeyi seçti. Bu yaklaşıma, görünenin altında büyük bir kütle saklayan buzdağı benzetmesi yapılır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          72,
+          72
+        ],
+        "quote": "Santiago'nun dev bir balıkla mücadelesini anlatan Yaşlı Adam ve Deniz'in yazarı Ernest Hemingway'dir.",
+        "chapter": "Dünya Edebiyatı"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "edebiyat"
+      ],
+      "vurgu": [],
+      "contentHash": "dc723a64cc0e3b1db7f91d57aca66e40d750a28e91a5b7373c9c58101614b2c6",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0378",
+      "conceptId": "de-ugultulu-tepeler",
+      "stem": {
+        "md": "Heathcliff ile Catherine'in tutkulu ve yıkıcı ilişkisini anlatan Uğultulu Tepeler'in yazarı kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Charlotte Brontë"
+        },
+        {
+          "key": "B",
+          "md": "Anne Brontë"
+        },
+        {
+          "key": "C",
+          "md": "Mary Shelley"
+        },
+        {
+          "key": "D",
+          "md": "Emily Brontë"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Charlotte Brontë, Jane Eyre'in yazarıdır.",
+        "B": "Anne Brontë, Agnes Grey ile tanınır.",
+        "C": "Mary Shelley, Frankenstein'ın yazarıdır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Emily Brontë'dir.\n- Uğultulu Tepeler, yazarın tek romanıdır.\n- Roman, İngiltere'nin Yorkshire kırlarında geçer."
+        },
+        {
+          "type": "hint",
+          "md": "Üç kız kardeşten tek roman yazmış olanı."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Brontë kardeşler, 19. yüzyılın ortasında kadın adlarıyla yayımlanmanın zorluğu nedeniyle eserlerini önce erkek takma adlarıyla yayımladı. Romanlarında tutku, yalnızlık ve sert doğa öne çıkar."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          72,
+          72
+        ],
+        "quote": "Heathcliff ile Catherine'in öyküsünü anlatan Uğultulu Tepeler'in yazarı Emily Brontë'dir.",
+        "chapter": "Dünya Edebiyatı"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "edebiyat"
+      ],
+      "vurgu": [],
+      "contentHash": "23bbf77c30d93186bf08bdb4ecf6bdf6269bf0ed021b8112ceb47b9b138f2bec",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0379",
+      "conceptId": "de-yuz-yillik-yalnizlik",
+      "stem": {
+        "md": "Macondo kasabasında Buendía ailesinin kuşaklarını anlatan roman hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Kolera Günlerinde Aşk"
+        },
+        {
+          "key": "B",
+          "md": "Pedro Páramo"
+        },
+        {
+          "key": "C",
+          "md": "Ruhlar Evi"
+        },
+        {
+          "key": "D",
+          "md": "Yüz Yıllık Yalnızlık"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Kolera Günlerinde Aşk aynı yazarın, ama başka bir aşk öyküsünü anlatan romanıdır.",
+        "B": "Pedro Páramo, Meksikalı Juan Rulfo'nun romanıdır.",
+        "C": "Ruhlar Evi, Şilili Isabel Allende'nin romanıdır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Yüz Yıllık Yalnızlık'tır.\n- Gabriel García Márquez'in romanıdır.\n- Büyülü gerçekçiliğin en tanınmış örneklerindendir."
+        },
+        {
+          "type": "hint",
+          "md": "Yazarı Kolombiyalıdır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Latin Amerika edebiyatı 1960'larda dünya çapında tanındı; bu döneme Latin Amerika patlaması denir. Bu dönemin romanları aile kuşakları, sömürgecilik ve iktidar konularını işledi."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          73,
+          73
+        ],
+        "quote": "Macondo kasabasında Buendía ailesini anlatan Yüz Yıllık Yalnızlık, Gabriel García Márquez'in romanıdır.",
+        "chapter": "Dünya Edebiyatı"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "edebiyat"
+      ],
+      "vurgu": [],
+      "contentHash": "37a8f5034b2cd94fb2be3b976487d36093287a38bd39675ba2a1d279fda3cb79",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0380",
+      "conceptId": "de-buyulu-gerceklik",
+      "stem": {
+        "md": "Gerçekçi bir anlatıya doğaüstü öğeleri olağan şeylermiş gibi katan ve Latin Amerika edebiyatıyla özdeşleşen anlatım tarzı hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Natüralizm"
+        },
+        {
+          "key": "B",
+          "md": "Büyülü gerçekçilik"
+        },
+        {
+          "key": "C",
+          "md": "Sürrealizm"
+        },
+        {
+          "key": "D",
+          "md": "Romantizm"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Natüralizm doğaüstüne yer vermez, olayları bilimsel bir gözlemle anlatır.",
+        "C": "Sürrealizm bilinçaltı ve rüyaya dayanır; gerçekçi bir anlatı çerçevesi kurmaz.",
+        "D": "Romantizm duyguyu ve bireyi öne çıkarır; bu tarzla özdeşleşmez."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap büyülü gerçekçiliktir.\n- Bu tarzda doğaüstü olaylar şaşırtıcı değil, gündelik bir şey gibi anlatılır.\n- García Márquez bu tarzın en tanınmış temsilcisidir."
+        },
+        {
+          "type": "hint",
+          "md": "Adında birbirine zıt görünen iki sözcük vardır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Edebî akımlar gerçeklikle ilişkilerine göre ayrılır: kimi gerçeği olduğu gibi yansıtmayı, kimi onu aşmayı amaçlar. 20. yüzyılda bazı yazarlar bu iki yönü aynı anlatıda birleştirdi."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          73,
+          73
+        ],
+        "quote": "Büyülü gerçekçilik, gerçekçi bir anlatıya doğaüstü öğeleri olağan şeylermiş gibi katan anlatım tarzıdır.",
+        "chapter": "Dünya Edebiyatı"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "edebiyat"
+      ],
+      "vurgu": [],
+      "contentHash": "643c3839ddf119febf91722df543061afe6c75716f5105d897f74bb29afe3627",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0381",
+      "conceptId": "de-borges",
+      "stem": {
+        "md": "Alef adlı öykü kitabıyla tanınan, labirent ve sonsuz kütüphane imgelerini kullanan Arjantinli yazar kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Julio Cortázar"
+        },
+        {
+          "key": "B",
+          "md": "Pablo Neruda"
+        },
+        {
+          "key": "C",
+          "md": "Mario Vargas Llosa"
+        },
+        {
+          "key": "D",
+          "md": "Jorge Luis Borges"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Julio Cortázar da Arjantinlidir ama Seksek romanıyla tanınır.",
+        "B": "Pablo Neruda Şilili bir şairdir.",
+        "C": "Mario Vargas Llosa Perulu bir romancıdır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Jorge Luis Borges'tir.\n- Kısa, felsefi ve oyunlu öyküleriyle tanınır.\n- Labirent, ayna ve sonsuzluk imgeleri eserlerinin temelidir."
+        },
+        {
+          "type": "hint",
+          "md": "Buenos Aires'teki Ulusal Kütüphane'nin müdürlüğünü de yapmıştır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "20. yüzyıl Latin Amerika öykücülüğü, gerçeklik ile kurgu arasındaki sınırı sorgulayan oyunlu metinler üretti. Bu metinlerde felsefi düşünceler kısa ve şaşırtıcı öykülere dönüştürüldü."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          73,
+          73
+        ],
+        "quote": "Alef adlı öykü kitabıyla tanınan Jorge Luis Borges Arjantinli bir yazardır.",
+        "chapter": "Dünya Edebiyatı"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "edebiyat"
+      ],
+      "vurgu": [],
+      "contentHash": "3504908610f7ae4fb0bdcf37d8515d89ef976950da608024477ef26f8c50e420",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0382",
+      "conceptId": "de-sartre-nobel",
+      "stem": {
+        "md": "1964'te kendisine verilen Nobel Edebiyat Ödülü'nü reddeden yazar kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Albert Camus"
+        },
+        {
+          "key": "B",
+          "md": "Ernest Hemingway"
+        },
+        {
+          "key": "C",
+          "md": "Gabriel García Márquez"
+        },
+        {
+          "key": "D",
+          "md": "Jean-Paul Sartre"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Albert Camus 1957'de ödülü kabul etmiştir.",
+        "B": "Ernest Hemingway 1954'te ödülü kabul etmiştir.",
+        "C": "Gabriel García Márquez 1982'de ödülü kabul etmiştir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Jean-Paul Sartre'dır.\n- Sartre, yazarın bir kuruma dönüşmemesi gerektiğini savunarak ödülü reddetmiştir.\n- Varoluşçuluğun önde gelen düşünürüdür."
+        },
+        {
+          "type": "hint",
+          "md": "Bulantı romanının yazarı olan varoluşçu filozof."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Varoluşçuluk, insanın önce var olduğunu ve özünü kendi seçimleriyle yarattığını savunan felsefi akımdır. Bu akım 20. yüzyılın ortasında roman ve tiyatroda geniş yer buldu."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          73,
+          73
+        ],
+        "quote": "Jean-Paul Sartre, 1964'te kendisine verilen Nobel Edebiyat Ödülü'nü reddetmiştir.",
+        "chapter": "Dünya Edebiyatı"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "edebiyat"
+      ],
+      "vurgu": [],
+      "contentHash": "f5239440de911c97dafad45be7a0c35cd3e38704db6ee646baff160181605447",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0383",
+      "conceptId": "de-akim-sirasi",
+      "stem": {
+        "md": "Aşağıdaki edebî akımların ortaya çıkış sırası hangisinde doğru verilmiştir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Romantizm – Klasisizm – Realizm – Natüralizm"
+        },
+        {
+          "key": "B",
+          "md": "Klasisizm – Realizm – Romantizm – Natüralizm"
+        },
+        {
+          "key": "C",
+          "md": "Klasisizm – Romantizm – Realizm – Natüralizm"
+        },
+        {
+          "key": "D",
+          "md": "Klasisizm – Romantizm – Natüralizm – Realizm"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Romantizm, klasisizmin kurallarına tepki olarak doğmuştur; ondan önce gelemez.",
+        "B": "Realizm, romantizme tepki olarak doğmuştur; ondan sonra gelir.",
+        "D": "Natüralizm, realizmin bilimsel yönteme dayanan bir uzantısıdır; ondan sonra gelir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru sıra Klasisizm – Romantizm – Realizm – Natüralizm'dir.\n- Klasisizm 17. yüzyılda, romantizm 18. yüzyıl sonu ile 19. yüzyıl başında öne çıkmıştır.\n- Realizm 19. yüzyıl ortasında, natüralizm 19. yüzyılın sonlarında gelişmiştir."
+        },
+        {
+          "type": "hint",
+          "md": "Her akım bir öncekine tepki olarak doğmuştur."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Batı edebiyatında akımlar çoğunlukla bir önceki akımın aşırılıklarına tepki olarak doğmuştur. Akıl ve kural, duygu ve birey, gözlem ve bilim sırayla öne çıkan değerlerdir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          73,
+          73
+        ],
+        "quote": "Batı edebiyatında klasisizmi sırasıyla romantizm, realizm ve natüralizm izlemiştir.",
+        "chapter": "Dünya Edebiyatı"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "edebiyat"
+      ],
+      "vurgu": [],
+      "contentHash": "85325cf2a0a7c702eb2fada0eb447a7f5e9206ea3ebdfe8972bb4aef532c1740",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0384",
+      "conceptId": "de-donusum-kafka",
+      "stem": {
+        "md": "Bir sabah uyandığında kendini dev bir böceğe dönüşmüş bulan Gregor Samsa hangi eserin kahramanıdır?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Dava"
+        },
+        {
+          "key": "B",
+          "md": "Dönüşüm"
+        },
+        {
+          "key": "C",
+          "md": "Şato"
+        },
+        {
+          "key": "D",
+          "md": "Bulantı"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Dava, nedenini bilmediği bir suçla yargılanan Josef K.'yı anlatır.",
+        "C": "Şato, bir kadastrocunun ulaşılmaz bir şatoya erişme çabasını anlatır.",
+        "D": "Bulantı, Jean-Paul Sartre'ın romanıdır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Dönüşüm'dür.\n- Franz Kafka'nın uzun öyküsüdür.\n- Eser, yabancılaşma ve aile içindeki yalnızlık temalarını işler."
+        },
+        {
+          "type": "hint",
+          "md": "Yazarı Prag doğumlu, Almanca yazan bir yazardır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Kafkaesk sözcüğü, bürokrasinin ve anlaşılmaz güçlerin insanı çaresiz bıraktığı, kâbusa benzeyen durumları anlatmak için kullanılır. Bu tür anlatılarda olağanüstü olaylar sakin, gündelik bir dille aktarılır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          73,
+          73
+        ],
+        "quote": "Kendini dev bir böceğe dönüşmüş bulan Gregor Samsa, Franz Kafka'nın Dönüşüm adlı eserinin kahramanıdır.",
+        "chapter": "Dünya Edebiyatı"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "edebiyat"
+      ],
+      "vurgu": [],
+      "contentHash": "53661016b9fece95541ced990e5ee805f9dd6524dbe37b2db9033109f14f0a30",
+      "deleted": false
+    }
+  ]
+}

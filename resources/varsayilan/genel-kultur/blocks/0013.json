@@ -1,0 +1,2605 @@
+{
+  "blockId": "0013",
+  "questions": [
+    {
+      "id": "genel-kultur-0505",
+      "conceptId": "on-bir-oyunculu-spor",
+      "stem": {
+        "md": "Hangi sporda her takım sahaya on bir oyuncuyla çıkar?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Futbol"
+        },
+        {
+          "key": "B",
+          "md": "Basketbol"
+        },
+        {
+          "key": "C",
+          "md": "Voleybol"
+        },
+        {
+          "key": "D",
+          "md": "Hentbol"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Basketbolda sahada beş oyuncu bulunur.",
+        "C": "Voleybolda sahada altı oyuncu bulunur.",
+        "D": "Hentbolda sahada yedi oyuncu bulunur."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap futboldur.\n- Futbolda her takım sahaya on bir oyuncuyla çıkar.\n- Bu oyunculardan biri kalecidir."
+        },
+        {
+          "type": "hint",
+          "md": "Kalecisi olan ve ayakla oynanan bir oyun."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Takım sporlarında sahadaki oyuncu sayısı, sahanın büyüklüğüne ve oyunun temposuna göre belirlenmiştir. Büyük açık sahalarda oynanan sporlar genellikle daha kalabalık takımlarla oynanır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          96,
+          96
+        ],
+        "quote": "Futbolda her takım sahaya on bir oyuncuyla çıkar.",
+        "chapter": "Spor"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "spor"
+      ],
+      "vurgu": [],
+      "contentHash": "b781ad1f8ce251e85452219c067396bb90ee5e433ff1ecb7972c3117f02dbd30",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0506",
+      "conceptId": "basketbol-oyuncu-sayisi",
+      "stem": {
+        "md": "Basketbolda bir takım sahada kaç oyuncuyla oynar?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Altı"
+        },
+        {
+          "key": "B",
+          "md": "Yedi"
+        },
+        {
+          "key": "C",
+          "md": "On bir"
+        },
+        {
+          "key": "D",
+          "md": "Beş"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Altı, voleybolda sahadaki oyuncu sayısıdır.",
+        "B": "Yedi, hentbolda sahadaki oyuncu sayısıdır.",
+        "C": "On bir, futboldaki oyuncu sayısıdır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Basketbolda sahada beş oyuncu bulunur.\n- Yedek oyuncular maç içinde sınırsız değişebilir.\n- Oyun kalesiz, potaya atışla oynanır."
+        },
+        {
+          "type": "hint",
+          "md": "Salon sporları içinde sahadaki en az sayılardan biri."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Basketbol, on dokuzuncu yüzyılın sonunda ABD'de kış aylarında salonda oynanabilecek bir spor olarak icat edilmiştir. İlk potalar şeftali sepetleriydi."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          96,
+          96
+        ],
+        "quote": "Basketbolda her takım sahada beş oyuncuyla oynar.",
+        "chapter": "Spor"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "spor"
+      ],
+      "vurgu": [],
+      "contentHash": "64b46ed8992374dd6226e6deea19b8f77240f3c3f6352913f5ae14918513746e",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0507",
+      "conceptId": "sp-hentbol-oyuncu",
+      "stem": {
+        "md": "Hentbolda her takım sahada biri kaleci olmak üzere ____ oyuncuyla oynar. Boşluğa hangisi gelir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "beş"
+        },
+        {
+          "key": "B",
+          "md": "yedi"
+        },
+        {
+          "key": "C",
+          "md": "altı"
+        },
+        {
+          "key": "D",
+          "md": "dokuz"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Beş, basketbolda sahadaki oyuncu sayısıdır.",
+        "C": "Altı, voleybolda sahadaki oyuncu sayısıdır.",
+        "D": "Dokuz, salon hentbolu için fazla olan bir sayıdır; bu sporun bir kuralında geçmez."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Hentbolda sahada yedi oyuncu bulunur.\n- Bunlardan biri kalecidir.\n- Oyun elle pas ve atışla oynanır."
+        },
+        {
+          "type": "hint",
+          "md": "Haftanın gün sayısı kadar."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Hentbol, elle oynanan ve kaleye atışla sayı kazanılan bir salon sporudur. Kaleci dışındaki oyuncular kale önündeki alana giremez."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          96,
+          96
+        ],
+        "quote": "Hentbolda her takım sahada biri kaleci olmak üzere yedi oyuncuyla oynar.",
+        "chapter": "Spor"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "spor"
+      ],
+      "vurgu": [],
+      "contentHash": "7037a8789b59379347402a0e7fe23e1d4f584bc26dae15ca2bc14c6d91113195",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0508",
+      "conceptId": "sp-voleybol-dokunus",
+      "stem": {
+        "md": "Voleybolda bir takım, blok dışında topa en fazla kaç kez dokunarak onu rakip sahaya geçirmelidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "İki"
+        },
+        {
+          "key": "B",
+          "md": "Dört"
+        },
+        {
+          "key": "C",
+          "md": "Üç"
+        },
+        {
+          "key": "D",
+          "md": "Beş"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "İki dokunuşla sınırlama yoktur; takım bir dokunuş daha yapabilir.",
+        "B": "Dört dokunuş kurala aykırıdır ve sayı rakibe geçer.",
+        "D": "Beş dokunuş kural dışıdır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Takım topa en fazla üç kez dokunabilir.\n- Bloktaki dokunuş bu sayıya eklenmez.\n- Klasik düzen manşet, pas ve smaçtır."
+        },
+        {
+          "type": "hint",
+          "md": "Manşet, pas, smaç."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Voleybolda top yere düşmeden file üzerinden karşı sahaya geçirilir. Aynı oyuncunun topa art arda iki kez dokunması da kural ihlalidir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          96,
+          96
+        ],
+        "quote": "Voleybolda bir takım, blok dışında topa en fazla üç kez dokunarak onu rakip sahaya geçirmelidir.",
+        "chapter": "Spor"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "spor"
+      ],
+      "vurgu": [],
+      "contentHash": "8d17bf50c2482174255e05762522a68db7c51dcb03e4e6453179a013e821368c",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0509",
+      "conceptId": "sp-basket-sayilar",
+      "stem": {
+        "md": "Basketbolda atış türlerini değerleriyle eşleştirin.\n\n1. Serbest atış\n2. Üç sayı çizgisinin içinden basket\n3. Üç sayı çizgisinin dışından basket\n\na. 3 sayı\nb. 1 sayı\nc. 2 sayı"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "1-b, 2-c, 3-a"
+        },
+        {
+          "key": "B",
+          "md": "1-c, 2-b, 3-a"
+        },
+        {
+          "key": "C",
+          "md": "1-b, 2-a, 3-c"
+        },
+        {
+          "key": "D",
+          "md": "1-a, 2-c, 3-b"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Serbest atış iki değil, bir sayı değerindedir.",
+        "C": "Çizginin içinden atılan basket üç sayı değildir; üç sayı yalnızca çizginin dışından gelir.",
+        "D": "Serbest atış üç sayı değerinde değildir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Serbest atış: 1 sayı.\n- Çizginin içinden basket: 2 sayı.\n- Çizginin dışından basket: 3 sayı."
+        },
+        {
+          "type": "hint",
+          "md": "Rakibin hiç engelleyemediği atış en az değerli olandır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Basketbolda sayı değeri atışın zorluğuna göre değişir. Faul sonrası verilen atışlar rakip savunma olmadan kullanılır; uzaktan atışlar ise daha çok ödüllendirilir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          96,
+          96
+        ],
+        "quote": "Basketbolda üç sayı çizgisinin dışından atılan basket üç sayı değerindedir.",
+        "chapter": "Spor"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "spor"
+      ],
+      "vurgu": [],
+      "contentHash": "816ca55047b653bcf0793c5c536b3818aa9ed1568143d45d0e9f3b7bcbb27141",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0510",
+      "conceptId": "sp-penalti-mesafesi",
+      "stem": {
+        "md": "Futbolda penaltı atışı kale çizgisinden kaç metre uzaklıktaki noktadan kullanılır?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "11 metre"
+        },
+        {
+          "key": "B",
+          "md": "9,15 metre"
+        },
+        {
+          "key": "C",
+          "md": "16,5 metre"
+        },
+        {
+          "key": "D",
+          "md": "5,5 metre"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "9,15 metre, serbest vuruşta rakip oyuncuların topa yaklaşamayacağı mesafedir.",
+        "C": "16,5 metre, ceza sahasının kale çizgisinden derinliğidir.",
+        "D": "5,5 metre, kale alanının derinliğidir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Penaltı noktası kale çizgisinden 11 metre uzaktadır.\n- Bu mesafe İngiliz ölçüsüyle 12 yarda karşılığıdır.\n- Penaltıda vuruşu yapan ile kaleci karşı karşıya kalır."
+        },
+        {
+          "type": "hint",
+          "md": "Futbol takımındaki oyuncu sayısıyla aynı."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Futbol sahası ölçüleri İngiliz ölçü birimlerinden gelir; bu yüzden metre karşılıkları küsuratlıdır. Ceza sahası içinde yapılan bazı fauller penaltıyla cezalandırılır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          97,
+          97
+        ],
+        "quote": "Futbolda penaltı atışı, kale çizgisinden 11 metre uzaklıktaki penaltı noktasından kullanılır.",
+        "chapter": "Spor"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "spor"
+      ],
+      "vurgu": [],
+      "contentHash": "bcb38d5f5c445925fb26811961d0f9bae68b0a46fba1447e9dbfc9a1f533d7ee",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0511",
+      "conceptId": "sp-kale-olculeri",
+      "stem": {
+        "md": "Futbol kalesinin genişliği ve yüksekliği hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "7,32 metre – 2,44 metre"
+        },
+        {
+          "key": "B",
+          "md": "3 metre – 2 metre"
+        },
+        {
+          "key": "C",
+          "md": "7,50 metre – 2,50 metre"
+        },
+        {
+          "key": "D",
+          "md": "7,32 metre – 2,20 metre"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "3 metreye 2 metre, hentbol kalesinin ölçüsüdür.",
+        "C": "7,50 metreye 2,50 metre yuvarlak bir tahmindir, kural ölçüsü değildir.",
+        "D": "Genişlik doğrudur ama 2,20 metre kuraldaki yükseklikten kısadır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Futbol kalesi 7,32 metre geniş, 2,44 metre yüksektir.\n- Bu ölçüler 8 yarda ve 8 fit karşılığıdır.\n- Ölçüler direklerin iç kenarlarından alınır."
+        },
+        {
+          "type": "hint",
+          "md": "Ölçüler İngiliz birimlerinden çevrilmiştir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Futbolun kuralları on dokuzuncu yüzyılda İngiltere'de yazıya geçirilmiştir. Bu yüzden saha ve kale ölçüleri yarda ve fit cinsinden belirlenmiş, metreye çevrilince küsuratlı kalmıştır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          97,
+          97
+        ],
+        "quote": "Futbol kalesinin genişliği 7,32 metre, yüksekliği 2,44 metredir.",
+        "chapter": "Spor"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "spor"
+      ],
+      "vurgu": [],
+      "contentHash": "d2b0d0a6023f20d7afe0340878384c1b59a4d2fef501a9f73ff3f74ee1d9dc8f",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0512",
+      "conceptId": "sp-hat-trick",
+      "stem": {
+        "md": "Bir oyuncunun aynı maçta üç gol atmasına ____ denir. Boşluğa hangisi gelir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "frikik"
+        },
+        {
+          "key": "B",
+          "md": "hat-trick"
+        },
+        {
+          "key": "C",
+          "md": "korner"
+        },
+        {
+          "key": "D",
+          "md": "ofsayt"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Frikik, faul sonrasında kullanılan serbest vuruştur.",
+        "C": "Korner, top kale çizgisinden çıktığında köşeden kullanılan vuruştur.",
+        "D": "Ofsayt, rakip kaleye yakın konumla ilgili bir kural ihlalidir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap hat-trick'tir.\n- Aynı oyuncunun tek maçta üç gol atması anlamına gelir.\n- Terim başka sporlarda da üç başarı için kullanılır."
+        },
+        {
+          "type": "hint",
+          "md": "Terim İngilizcede bir şapka sözcüğü içerir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Bu terim futboldan önce krikette kullanılmıştır. Futbolda zamanla tek maçta aynı oyuncunun belli sayıda gol atmasını anlatan yaygın bir söze dönüşmüştür."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          97,
+          97
+        ],
+        "quote": "Bir oyuncunun aynı maçta üç gol atmasına hat-trick denir.",
+        "chapter": "Spor"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "spor"
+      ],
+      "vurgu": [],
+      "contentHash": "78d5b2602081c4dbe0b9337a4b31a53d0333c5537224b3602150a1cd2c47c71c",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0513",
+      "conceptId": "sp-futbol-mac-suresi",
+      "stem": {
+        "md": "Futbolda bir maçın normal süresi toplam kaç dakikadır?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "90 dakika"
+        },
+        {
+          "key": "B",
+          "md": "80 dakika"
+        },
+        {
+          "key": "C",
+          "md": "60 dakika"
+        },
+        {
+          "key": "D",
+          "md": "70 dakika"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "80 dakika, iki devresi 40'ar dakika olan ragbi maçının süresidir.",
+        "C": "60 dakika, iki devresi 30'ar dakika olan hentbol maçının süresidir.",
+        "D": "70 dakika futbolda kural olan bir süre değildir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Futbol maçı 45'er dakikalık iki devreden oluşur.\n- Toplam normal süre 90 dakikadır.\n- Hakem durmalar için uzatma süresi ekleyebilir."
+        },
+        {
+          "type": "hint",
+          "md": "İki eşit devre, her biri 45 dakika."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Futbolda süre durmaz; oyun dursa da saat işler. Bu yüzden hakem, kaybedilen zamanı her devrenin sonuna ek süre olarak ekler."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          97,
+          97
+        ],
+        "quote": "Futbolda bir maçın normal süresi 45'er dakikalık iki devreden oluşur.",
+        "chapter": "Spor"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "spor"
+      ],
+      "vurgu": [],
+      "contentHash": "1a963f9f00abe3930614ee05c838fbb0c0157d8d0c1ee5d08676510be0edf2ff",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0514",
+      "conceptId": "wimbledon-sporu",
+      "stem": {
+        "md": "Wimbledon hangi sporun turnuvasıdır?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Tenis"
+        },
+        {
+          "key": "B",
+          "md": "Golf"
+        },
+        {
+          "key": "C",
+          "md": "Kriket"
+        },
+        {
+          "key": "D",
+          "md": "Ragbi"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Golf de çimde oynanır ama Wimbledon bir golf turnuvası değildir.",
+        "C": "Kriket İngiltere'de çok sevilir, Wimbledon ile ilgisi yoktur.",
+        "D": "Ragbi de İngiltere kökenlidir ama Wimbledon'da oynanmaz."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Wimbledon bir tenis turnuvasıdır.\n- Londra'da, çim kortlarda oynanır.\n- Dünyanın en eski tenis turnuvasıdır."
+        },
+        {
+          "type": "hint",
+          "md": "Raketle ve çim kortta oynanır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Wimbledon, Londra'nın bir semtinin adını taşıyan ve 1877'den beri düzenlenen bir turnuvadır. Oyuncuların ağırlıklı olarak beyaz giyme kuralı bu turnuvanın gelenekleri arasındadır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          98,
+          98
+        ],
+        "quote": "Wimbledon, Londra'da çim kortlarda oynanan bir tenis turnuvasıdır.",
+        "chapter": "Spor"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "spor"
+      ],
+      "vurgu": [],
+      "contentHash": "aa55728ba56470c696a57be15655e9f7e0588945c7aeed4a4a9c553b4ddc6f5b",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0515",
+      "conceptId": "sp-grand-slam",
+      "stem": {
+        "md": "Aşağıdakilerden hangisi teniste Grand Slam diye anılan dört büyük turnuvadan biri değildir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Avustralya Açık"
+        },
+        {
+          "key": "B",
+          "md": "ABD Açık"
+        },
+        {
+          "key": "C",
+          "md": "Fransa Açık"
+        },
+        {
+          "key": "D",
+          "md": "Davis Kupası"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Avustralya Açık, yılın ilk Grand Slam turnuvasıdır.",
+        "B": "ABD Açık, New York'ta oynanan bir Grand Slam turnuvasıdır.",
+        "C": "Fransa Açık, Roland Garros diye de bilinen bir Grand Slam turnuvasıdır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Davis Kupası'dır.\n- Davis Kupası, ülke takımları arasında oynanan bir yarışmadır.\n- Grand Slam: Avustralya Açık, Fransa Açık, Wimbledon, ABD Açık."
+        },
+        {
+          "type": "hint",
+          "md": "Biri bireysel değil, milli takım yarışmasıdır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Teniste dört büyük turnuva farklı zeminlerde oynanır ve bir yılda dördünü birden kazanmak sporun en zor başarılarından sayılır. Bu turnuvalar en yüksek puan ve ödül veren yarışmalardır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          98,
+          98
+        ],
+        "quote": "Avustralya Açık, Fransa Açık, Wimbledon ve ABD Açık, teniste Grand Slam diye anılan dört büyük turnuvadır.",
+        "chapter": "Spor"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "spor"
+      ],
+      "vurgu": [],
+      "contentHash": "432ac5b34baf28ce9548666138973c141a30100c30da8c1ba8b9e52124cb01e2",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0516",
+      "conceptId": "sp-roland-garros",
+      "stem": {
+        "md": "Grand Slam turnuvalarından Paris'te oynanan hangi zeminde yapılır?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Çim kort"
+        },
+        {
+          "key": "B",
+          "md": "Sert kort"
+        },
+        {
+          "key": "C",
+          "md": "Halı kort"
+        },
+        {
+          "key": "D",
+          "md": "Toprak kort"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Çim kort, Londra'daki Grand Slam turnuvasının zeminidir.",
+        "B": "Sert kort, Avustralya ve ABD'deki Grand Slam turnuvalarının zeminidir.",
+        "C": "Halı kort Grand Slam turnuvalarında kullanılmaz."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Önce turnuvayı bulmak gerekir: Fransa Açık, yani Roland Garros.\n- Roland Garros toprak kortta oynanır.\n- Toprak zemin topu yavaşlatır ve uzun ralliler doğurur."
+        },
+        {
+          "type": "hint",
+          "md": "Kortun rengi kiremit kırmızısıdır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Tenis kortunun zemini, topun ne kadar hızlı ve ne kadar yüksek sekeceğini belirler. Bu yüzden bazı oyuncular belli zeminlerde çok daha başarılı olur."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          98,
+          98
+        ],
+        "quote": "Fransa Açık, Roland Garros diye de bilinir ve toprak kortta oynanır.",
+        "chapter": "Spor"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "spor"
+      ],
+      "vurgu": [],
+      "contentHash": "df7bee6e8760b881ca6c453873f252dc528bd05207c6ca5f8af6b7c5be2ce6d6",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0517",
+      "conceptId": "sp-tenis-puan",
+      "stem": {
+        "md": "Teniste bir oyunun kazanılmasına kadar puanların doğru sayılış sırası hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "15 – 30 – 40 – Oyun"
+        },
+        {
+          "key": "B",
+          "md": "15 – 30 – 45 – Oyun"
+        },
+        {
+          "key": "C",
+          "md": "10 – 20 – 30 – Oyun"
+        },
+        {
+          "key": "D",
+          "md": "1 – 2 – 3 – Oyun"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "45 tenis sayımında yoktur; üçüncü puan farklı söylenir.",
+        "C": "10'ar artan sayım teniste kullanılmaz.",
+        "D": "1, 2, 3 diye sayım masa tenisi gibi sporlarda olur, teniste olmaz."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Sayım 15, 30, 40 ve oyun diye ilerler.\n- 40-40 eşitliğine 'deuce' denir.\n- Eşitlikten sonra iki puan farkla oyun kazanılır."
+        },
+        {
+          "type": "hint",
+          "md": "İlk iki puan 15'er artar, üçüncüsü öyle değildir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Tenisteki alışılmadık puan sayımı Orta Çağ'dan kalma bir gelenektir ve kökeni üzerine farklı açıklamalar vardır. Puanlar oyunları, oyunlar setleri, setler de maçı oluşturur."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          98,
+          98
+        ],
+        "quote": "Teniste bir oyundaki puanlar 15, 30 ve 40 diye sayılır.",
+        "chapter": "Spor"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "spor"
+      ],
+      "vurgu": [],
+      "contentHash": "49de006eb3604ef53ee6e0f54dc3dbeea15c41a04bc30b9f50be35ecf44c1a9d",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0518",
+      "conceptId": "sp-masa-tenisi-set",
+      "stem": {
+        "md": "Masa tenisinde bir set, en az iki sayı farkla kaç sayıya ilk ulaşan tarafından kazanılır?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "21"
+        },
+        {
+          "key": "B",
+          "md": "15"
+        },
+        {
+          "key": "C",
+          "md": "11"
+        },
+        {
+          "key": "D",
+          "md": "25"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "21, masa tenisinde eskiden kullanılan sayıdır; bugün badmintonda kullanılır.",
+        "B": "15 masa tenisinde set sayısı olarak kullanılmaz.",
+        "D": "25, voleybolda bir setin bittiği sayıdır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Masa tenisinde set 11 sayıda biter.\n- İki sayı fark şartı vardır; 10-10'dan sonra oyun sürer.\n- Eski 21 sayılık sistem yirmi birinci yüzyılın başında bırakılmıştır."
+        },
+        {
+          "type": "hint",
+          "md": "Futbol takımındaki oyuncu sayısı kadar."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Masa tenisi, küçük bir masa üzerinde hafif bir topla oynanan hızlı bir raket sporudur. Servis hakkı belli sayıda sayıdan sonra rakibe geçer."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          98,
+          98
+        ],
+        "quote": "Masa tenisinde bir set, en az iki sayı farkla 11 sayıya ilk ulaşan tarafından kazanılır.",
+        "chapter": "Spor"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "spor"
+      ],
+      "vurgu": [],
+      "contentHash": "e4810698990f1835c426de40eb6f0edd5cd0da40e92cc791b02a0785ceba3f16",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0519",
+      "conceptId": "sp-golf-par",
+      "stem": {
+        "md": "Golfte bir delik için belirlenmiş standart vuruş sayısına ne denir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Birdie"
+        },
+        {
+          "key": "B",
+          "md": "Bogey"
+        },
+        {
+          "key": "C",
+          "md": "Par"
+        },
+        {
+          "key": "D",
+          "md": "Eagle"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Birdie, standart sayının bir altında deliği tamamlamaktır.",
+        "B": "Bogey, standart sayının bir üstünde deliği tamamlamaktır.",
+        "D": "Eagle, standart sayının iki altında deliği tamamlamaktır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap par'dır.\n- Par, iyi bir oyuncunun deliği tamamlaması beklenen vuruş sayısıdır.\n- Birdie, bogey ve eagle par'a göre tanımlanır."
+        },
+        {
+          "type": "hint",
+          "md": "Gündelik İngilizcede 'beklenen düzey' anlamında da kullanılır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Golfte amaç topu en az vuruşla deliğe sokmaktır. Sahadaki her deliğin uzunluğuna ve zorluğuna göre bir beklenen vuruş sayısı vardır; skorlar bu sayıya göre anlatılır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          98,
+          98
+        ],
+        "quote": "Golfte bir delik için belirlenmiş standart vuruş sayısına par denir.",
+        "chapter": "Spor"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "spor"
+      ],
+      "vurgu": [],
+      "contentHash": "0b3b887b911ff18cae3b0aebcaf298e6cf135ee7dd814804e44ffd666c2ed290",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0520",
+      "conceptId": "olimpiyat-halkalari",
+      "stem": {
+        "md": "Olimpiyat bayrağında kaç halka bulunur?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Üç"
+        },
+        {
+          "key": "B",
+          "md": "Beş"
+        },
+        {
+          "key": "C",
+          "md": "Dört"
+        },
+        {
+          "key": "D",
+          "md": "Yedi"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Üç, madalya kürsüsündeki basamak sayısıyla karıştırılır.",
+        "C": "Dört, oyunların dört yılda bir yapılmasıyla karıştırılır.",
+        "D": "Yedi, kıtaların yedi diye sayıldığı sınıflamayla karıştırılır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Olimpiyat bayrağında iç içe geçmiş beş halka vardır.\n- Halkalar mavi, sarı, siyah, yeşil ve kırmızıdır.\n- Beyaz zeminle birlikte bu renkler pek çok ülke bayrağını kapsar."
+        },
+        {
+          "type": "hint",
+          "md": "Bir elin parmakları kadar."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Olimpiyat bayrağı, modern olimpiyatların kurucusunun tasarımıdır. Halkalar, olimpiyat hareketine katılan kıtaların birliğini simgeler."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          99,
+          99
+        ],
+        "quote": "Olimpiyat bayrağında iç içe geçmiş beş halka bulunur.",
+        "chapter": "Spor"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "spor"
+      ],
+      "vurgu": [],
+      "contentHash": "d00cb99b65946e25956a084ca47f4ca0ef3fb3b601076eda60a506bfc5c1be70",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0521",
+      "conceptId": "sp-antik-olympia",
+      "stem": {
+        "md": "Antik Olimpiyat Oyunları nerede düzenlenirdi?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Atina"
+        },
+        {
+          "key": "B",
+          "md": "Olympia"
+        },
+        {
+          "key": "C",
+          "md": "Sparta"
+        },
+        {
+          "key": "D",
+          "md": "Delfi"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Atina modern oyunlara ev sahipliği yapmıştır, antik oyunlar orada düzenlenmezdi.",
+        "C": "Sparta güçlü bir askeri kent devletiydi, oyunların yeri değildi.",
+        "D": "Delfi'de olimpiyat değil, Pythia oyunları düzenlenirdi."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Antik oyunlar Yunanistan'daki Olympia'da düzenlenirdi.\n- Olympia, Zeus'a adanmış kutsal bir alandı.\n- Oyunlar dört yılda bir yapılırdı."
+        },
+        {
+          "type": "hint",
+          "md": "Oyunlar adını bu yerden alır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Antik Yunan'da oyunlar dinsel bir bayramın parçasıydı ve Zeus onuruna düzenlenirdi. Oyunlar sürerken kent devletleri arasında ateşkes ilan edilirdi."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          99,
+          99
+        ],
+        "quote": "Antik Olimpiyat Oyunları, Yunanistan'daki Olympia'da düzenlenirdi.",
+        "chapter": "Spor"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "spor"
+      ],
+      "vurgu": [],
+      "contentHash": "cb9748ca482d78fac9be27dddd4c8dce05ab904ac8e30af1ed4bb1f38f7b1ab2",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0522",
+      "conceptId": "sp-coubertin",
+      "stem": {
+        "md": "Modern olimpiyatları yeniden canlandıran Fransız eğitimci kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Demetrios Vikelas"
+        },
+        {
+          "key": "B",
+          "md": "Avery Brundage"
+        },
+        {
+          "key": "C",
+          "md": "Pierre de Coubertin"
+        },
+        {
+          "key": "D",
+          "md": "Juan Antonio Samaranch"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Demetrios Vikelas Yunan'dır; Uluslararası Olimpiyat Komitesi'nin ilk başkanı olmuştur.",
+        "B": "Avery Brundage, yirminci yüzyılda komiteye başkanlık etmiş bir Amerikalıdır.",
+        "D": "Juan Antonio Samaranch, yirminci yüzyılın sonunda komiteye başkanlık etmiş bir İspanyoldur."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Pierre de Coubertin'dir.\n- 1894'te Uluslararası Olimpiyat Komitesi'nin kurulmasına öncülük etmiştir.\n- Olimpiyat bayrağını da o tasarlamıştır."
+        },
+        {
+          "type": "hint",
+          "md": "Soyadının başında soyluluk belirten bir 'de' vardır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "On dokuzuncu yüzyılın sonunda Olympia'daki kazılar antik oyunlara ilgiyi artırmıştı. Bu ilgi, sporu eğitimin ve uluslararası barışın aracı gören bir hareketle birleşti."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          99,
+          99
+        ],
+        "quote": "Modern olimpiyatları yeniden canlandıran kişi Fransız eğitimci Pierre de Coubertin'dir.",
+        "chapter": "Spor"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "spor"
+      ],
+      "vurgu": [],
+      "contentHash": "8efb0cafe21f5a87adea51c6050bbd615df2fa2d61f69fe5db2146ee408278f8",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0523",
+      "conceptId": "ilk-modern-olimpiyat",
+      "stem": {
+        "md": "İlk modern Olimpiyat Oyunları 1896'da hangi şehirde yapılmıştır?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Paris"
+        },
+        {
+          "key": "B",
+          "md": "Londra"
+        },
+        {
+          "key": "C",
+          "md": "Atina"
+        },
+        {
+          "key": "D",
+          "md": "Roma"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Paris, 1900'deki ikinci oyunların şehridir.",
+        "B": "Londra oyunları ilk kez 1908'de düzenlemiştir.",
+        "D": "Roma oyunları ilk kez 1960'ta düzenlemiştir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- İlk modern oyunlar Atina'da yapılmıştır.\n- Şehir, antik oyunların doğduğu ülke olan Yunanistan'ın başkentidir.\n- Oyunlarda maraton koşusu da ilk kez yer almıştır."
+        },
+        {
+          "type": "hint",
+          "md": "Antik oyunların doğduğu ülkenin başkenti."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "1896 oyunları yalnızca erkek sporcuların katıldığı, birkaç düzine ülkeden sporcunun yarıştığı küçük bir organizasyondu. Oyunların yeri, antik geleneğe bağlılığı göstermek için seçilmişti."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          99,
+          99
+        ],
+        "quote": "İlk modern Olimpiyat Oyunları 1896'da Atina'da yapılmıştır.",
+        "chapter": "Spor"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "spor"
+      ],
+      "vurgu": [],
+      "contentHash": "ba912742f9414f0a457609613e6c6ed151796342104903d8815db5450b25d229",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0524",
+      "conceptId": "sp-olimpiyat-atesi",
+      "stem": {
+        "md": "Olimpiyat ateşi nasıl yakılır?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Ev sahibi şehirde açılış töreninde bir kibritle"
+        },
+        {
+          "key": "B",
+          "md": "Olympia'da güneş ışınlarının bir aynayla odaklanmasıyla"
+        },
+        {
+          "key": "C",
+          "md": "Önceki oyunların kazanı söndürülmeden taşınarak"
+        },
+        {
+          "key": "D",
+          "md": "Atina'daki stadyumda bir kandilden"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Ateş açılış töreninde ilk kez yakılmaz; oraya meşaleyle taşınarak gelir.",
+        "C": "Her oyun için ateş yeniden yakılır, önceki oyunlardan taşınmaz.",
+        "D": "Ateş Atina'da değil, antik oyunların yapıldığı yerde yakılır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Ateş Olympia'da, güneş ışınları bir aynayla odaklanarak yakılır.\n- Ardından meşale bayrak yarışıyla ev sahibi şehre taşınır.\n- Açılış töreninde olimpiyat kazanı bu meşaleyle yakılır."
+        },
+        {
+          "type": "hint",
+          "md": "Güneşten yararlanılır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Antik Olympia'da kutsal alanda oyunlar boyunca bir ateş yanardı. Modern oyunlarda bu gelenek, ateşin meşaleyle ülke ülke dolaştırıldığı bir törene dönüşmüştür."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          99,
+          99
+        ],
+        "quote": "Olimpiyat ateşi, Olympia'da güneş ışınlarının bir aynayla odaklanmasıyla yakılır.",
+        "chapter": "Spor"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "spor"
+      ],
+      "vurgu": [],
+      "contentHash": "9281f860e06480ada810614e6351a2a1e86d385b8ead047c3eb33ff04d6e0a4b",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0525",
+      "conceptId": "sp-kis-olimpiyati",
+      "stem": {
+        "md": "İlk Kış Olimpiyat Oyunları 1924'te hangi kentte yapılmıştır?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "St. Moritz"
+        },
+        {
+          "key": "B",
+          "md": "Lake Placid"
+        },
+        {
+          "key": "C",
+          "md": "Chamonix"
+        },
+        {
+          "key": "D",
+          "md": "Oslo"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "St. Moritz, 1928'deki ikinci Kış Oyunları'na ev sahipliği yapmıştır.",
+        "B": "Lake Placid, 1932'de Kış Oyunları'nı düzenlemiştir.",
+        "D": "Oslo, Kış Oyunları'nı 1952'de düzenlemiştir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- İlk Kış Olimpiyatları 1924'te Chamonix'de yapılmıştır.\n- Chamonix, Fransız Alpleri'nde, Mont Blanc eteğindedir.\n- Kış Oyunları 1992'ye kadar Yaz Oyunları ile aynı yıl yapılırdı."
+        },
+        {
+          "type": "hint",
+          "md": "Fransız Alpleri'nde, Mont Blanc eteğinde."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Kış sporları, olimpiyatlara önce Yaz Oyunları içinde birkaç dalla girmiştir. Ayrı bir Kış Oyunları fikri, kayak ve buz sporlarının yaygınlaşmasıyla güç kazanmıştır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          99,
+          99
+        ],
+        "quote": "İlk Kış Olimpiyat Oyunları 1924'te Fransa'nın Chamonix kentinde yapılmıştır.",
+        "chapter": "Spor"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "spor"
+      ],
+      "vurgu": [],
+      "contentHash": "0324b12df007d3dee8c4fb2a460894c8b9f401334788d39666dc2d33c2f9a59f",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0526",
+      "conceptId": "sp-olimpiyat-slogani",
+      "stem": {
+        "md": "Olimpiyatların geleneksel sloganı olan Latince Citius, Altius, Fortius ne anlama gelir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Birlik, barış, dostluk"
+        },
+        {
+          "key": "B",
+          "md": "Katılmak, yarışmak, kazanmak"
+        },
+        {
+          "key": "C",
+          "md": "Daha hızlı, daha yüksek, daha güçlü"
+        },
+        {
+          "key": "D",
+          "md": "Hız, denge, dayanıklılık"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Birlik, barış ve dostluk olimpiyat değerlerini çağrıştırır ama sloganın çevirisi değildir.",
+        "B": "Katılmak ve kazanmak üzerine söz, sloganla ilgisi olmayan başka bir olimpiyat düşüncesidir.",
+        "D": "Bu sözcükler sloganın karşılaştırma bildiren yapısını yansıtmaz."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Slogan 'daha hızlı, daha yüksek, daha güçlü' demektir.\n- 2021'de sona Communiter, yani 'birlikte' sözcüğü eklenmiştir.\n- Sözcükler Latincede karşılaştırma bildirir."
+        },
+        {
+          "type": "hint",
+          "md": "Üç sözcük de bir karşılaştırma bildirir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Olimpiyat sloganı, sporcunun kendi sınırlarını aşma çabasını anlatır. Slogan, modern olimpiyatların ilk yıllarından beri kullanılmaktadır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          99,
+          99
+        ],
+        "quote": "Olimpiyatların geleneksel sloganı Latince Citius, Altius, Fortius sözleridir.",
+        "chapter": "Spor"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "spor"
+      ],
+      "vurgu": [],
+      "contentHash": "0f31b08e46afa13ed7cebdd3dfea4911ab99dbba09aade98b49d31a0f264a206",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0527",
+      "conceptId": "maraton-mesafesi",
+      "stem": {
+        "md": "Maraton koşusunun mesafesi ne kadardır?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "40 kilometre"
+        },
+        {
+          "key": "B",
+          "md": "42,195 kilometre"
+        },
+        {
+          "key": "C",
+          "md": "21,0975 kilometre"
+        },
+        {
+          "key": "D",
+          "md": "50 kilometre"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "40 kilometre yuvarlak bir tahmindir; resmi mesafe biraz daha uzundur.",
+        "C": "21,0975 kilometre yarı maratonun mesafesidir.",
+        "D": "50 kilometre, maratondan uzun olan ultra koşuların mesafesidir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Maraton 42,195 kilometredir.\n- Bu mesafe 1921'de resmi ölçü olarak kabul edilmiştir.\n- Yarı maraton bunun tam yarısıdır."
+        },
+        {
+          "type": "hint",
+          "md": "Yarı maratonun tam iki katı."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Maraton, atletizmin en uzun olimpik koşusudur ve stadyum dışında, şehir yollarında koşulur. Mesafe ilk oyunlarda sabit değildi; sonradan belirli bir ölçüde sabitlendi."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          100,
+          100
+        ],
+        "quote": "Maraton koşusunun mesafesi 42,195 kilometredir.",
+        "chapter": "Spor"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "spor"
+      ],
+      "vurgu": [],
+      "contentHash": "6e398ff7536295f6a3e9fffc52795766ac16391b3c88b1c492548d9b6d5e2482",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0528",
+      "conceptId": "sp-maraton-adi",
+      "stem": {
+        "md": "42,195 kilometrelik uzun mesafe koşusu adını hangi yerden alır?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Yunanistan'daki Maraton Ovası"
+        },
+        {
+          "key": "B",
+          "md": "Olympia'daki kutsal alan"
+        },
+        {
+          "key": "C",
+          "md": "Sparta kenti"
+        },
+        {
+          "key": "D",
+          "md": "Termopil Geçidi"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Olympia antik oyunların yeridir, bu koşunun adı oradan gelmez.",
+        "C": "Sparta'ya koşan bir haberci anlatısı da vardır ama koşunun adı bu kentten gelmez.",
+        "D": "Termopil, Perslerle yapılan başka bir savaşın geçidir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Koşu adını Maraton Ovası'ndan alır.\n- Efsaneye göre bir haberci zafer haberini Maraton'dan Atina'ya koşarak getirmiştir.\n- Ova, Perslere karşı kazanılan bir savaşın yeridir."
+        },
+        {
+          "type": "hint",
+          "md": "Bir Pers savaşının yaşandığı ova."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Bu koşu, antik bir savaş sonrasında haber taşıyan bir haberciye ilişkin efsaneye dayanır. Modern olimpiyatlara bu efsaneyi anmak için eklenmiştir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          100,
+          100
+        ],
+        "quote": "Maraton adını, Yunanistan'daki Maraton Ovası'ndan Atina'ya koşan haberci efsanesinden alır.",
+        "chapter": "Spor"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "spor"
+      ],
+      "vurgu": [],
+      "contentHash": "caa1a619e41c50fcded46fe445d95183ec391c4626e96f4a9f76aeb59319d71d",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0529",
+      "conceptId": "sp-cok-yonlu-yarismalar",
+      "stem": {
+        "md": "Yarışmaları içerdikleri dal ya da bölüm sayısıyla eşleştirin.\n\n1. Dekatlon\n2. Heptatlon\n3. Triatlon\n\na. Yedi dal\nb. Üç bölüm\nc. On dal"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "1-a, 2-c, 3-b"
+        },
+        {
+          "key": "B",
+          "md": "1-c, 2-a, 3-b"
+        },
+        {
+          "key": "C",
+          "md": "1-c, 2-b, 3-a"
+        },
+        {
+          "key": "D",
+          "md": "1-b, 2-a, 3-c"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Dekatlon yedi daldan oluşmaz; adındaki 'deka' on demektir.",
+        "C": "Heptatlon üç bölümden oluşmaz; adındaki 'hepta' yedi demektir.",
+        "D": "Dekatlon üç bölümden oluşmaz; triatlondaki 'tri' üç demektir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Dekatlon: on dal.\n- Heptatlon: yedi dal.\n- Triatlon: üç bölüm (yüzme, bisiklet, koşu)."
+        },
+        {
+          "type": "hint",
+          "md": "Adlardaki Yunanca sayı önekleri işinizi görür."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Çok yönlü yarışmalarda sporcu birçok dalda yarışır ve her daldaki derecesi puana çevrilip toplanır. Bu yarışmalar sporcunun hız, güç ve dayanıklılığını birlikte ölçer."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          100,
+          100
+        ],
+        "quote": "Dekatlon on, heptatlon yedi daldan oluşan çok yönlü atletizm yarışmalarıdır.",
+        "chapter": "Spor"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "spor"
+      ],
+      "vurgu": [],
+      "contentHash": "df701a141a1f50afff63d49a1353de42da0fc5726a460b4d70d8b733d7900d49",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0530",
+      "conceptId": "sp-triatlon-sirasi",
+      "stem": {
+        "md": "Triatlonda bölümler hangi sırayla yapılır?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Koşu – Bisiklet – Yüzme"
+        },
+        {
+          "key": "B",
+          "md": "Yüzme – Bisiklet – Koşu"
+        },
+        {
+          "key": "C",
+          "md": "Bisiklet – Yüzme – Koşu"
+        },
+        {
+          "key": "D",
+          "md": "Yüzme – Koşu – Bisiklet"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Bu sıra tersine çevrilmiştir; yarış koşuyla başlamaz.",
+        "C": "Yarış bisikletle başlamaz; ilk bölüm suda yapılır.",
+        "D": "Bisiklet bölümü sona değil, ortaya gelir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru sıra: yüzme, bisiklet, koşu.\n- Bölümler arasındaki geçişler de yarış süresine dahildir.\n- Yarış bitiş çizgisinde koşuyla sona erer."
+        },
+        {
+          "type": "hint",
+          "md": "Yarış suda başlar."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Triatlon, üç farklı dayanıklılık sporunun ara vermeden art arda yapıldığı bir yarıştır. Sporcular bölümler arasında geçiş alanında ekipman değiştirir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          100,
+          100
+        ],
+        "quote": "Triatlon sırasıyla yüzme, bisiklet ve koşu bölümlerinden oluşur.",
+        "chapter": "Spor"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "spor"
+      ],
+      "vurgu": [],
+      "contentHash": "1d2139cbb25cd3109127345011d476c0604a8bdb6b175016ee07f665cd478343",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0531",
+      "conceptId": "sp-pist-turu",
+      "stem": {
+        "md": "Standart bir atletizm pistinin iç kulvardan bir turu ____ metredir. Boşluğa hangisi gelir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "200"
+        },
+        {
+          "key": "B",
+          "md": "300"
+        },
+        {
+          "key": "C",
+          "md": "500"
+        },
+        {
+          "key": "D",
+          "md": "400"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "200 metre, standart pistin yarım turuna denk gelen bir koşu mesafesidir.",
+        "B": "300 metre standart pistin bir tur uzunluğu değildir.",
+        "C": "500 metre standart pistin bir turundan uzundur."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Standart pistin iç kulvardan bir turu 400 metredir.\n- Bu yüzden 400 metre koşusu tam bir turdur.\n- Dış kulvarlarda başlangıç çizgileri kaydırılarak mesafe eşitlenir."
+        },
+        {
+          "type": "hint",
+          "md": "Bir tam tur, aynı adlı koşunun mesafesidir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Atletizm pisti iki düzlük ve iki virajdan oluşan oval bir yoldur. Dış kulvarlar daha uzun olduğu için virajlı koşularda sporcular kademeli çizgilerden başlar."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          100,
+          100
+        ],
+        "quote": "Standart bir atletizm pistinin iç kulvardan bir turu 400 metredir.",
+        "chapter": "Spor"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "spor"
+      ],
+      "vurgu": [],
+      "contentHash": "570b8d12b86a35a4b541d263229c7e3aec3216707fe3351628d4e16a23d8c802",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0532",
+      "conceptId": "sp-kirkpinar",
+      "stem": {
+        "md": "Kırkpınar Yağlı Güreşleri her yıl hangi ilde düzenlenir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Bursa"
+        },
+        {
+          "key": "B",
+          "md": "Edirne"
+        },
+        {
+          "key": "C",
+          "md": "Konya"
+        },
+        {
+          "key": "D",
+          "md": "Manisa"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Bursa'da güreş geleneği vardır ama Kırkpınar orada yapılmaz.",
+        "C": "Konya, Mevlana ile anılır; Kırkpınar'ın yeri değildir.",
+        "D": "Manisa, mesir macunu festivaliyle tanınır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Kırkpınar her yıl Edirne'de düzenlenir.\n- Güreşler Sarayiçi'nde yapılır.\n- Dünyanın en eski süregelen spor organizasyonlarından sayılır."
+        },
+        {
+          "type": "hint",
+          "md": "Selimiye Camii'nin de bulunduğu sınır ili."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Yağlı güreş, pehlivanların vücutlarını zeytinyağıyla yağlayarak çayır üzerinde güreştiği geleneksel bir Türk sporudur. Kırkpınar'ın kökeni bir Rumeli seferi efsanesine dayanır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          101,
+          101
+        ],
+        "quote": "Kırkpınar Yağlı Güreşleri her yıl Edirne'de düzenlenir.",
+        "chapter": "Spor"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "spor"
+      ],
+      "vurgu": [],
+      "contentHash": "30a3de38946e81d2bae6770fc6a65c740c76672f0ba60326355f3628f900803c",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0533",
+      "conceptId": "sp-kispet",
+      "stem": {
+        "md": "Yağlı güreşte pehlivanların giydiği deri giysiye ne ad verilir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Kıspet"
+        },
+        {
+          "key": "B",
+          "md": "Cepken"
+        },
+        {
+          "key": "C",
+          "md": "Şalvar"
+        },
+        {
+          "key": "D",
+          "md": "Mintan"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Cepken, kolları yırtmaçlı kısa bir üst giysidir.",
+        "C": "Şalvar, bol paçalı bir pantolondur; deriden yapılmaz.",
+        "D": "Mintan, gömlek türünden bir üst giysidir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap kıspettir.\n- Kıspet genellikle manda ya da dana derisinden yapılır.\n- Yağlı vücutta tutunmayı sağlayan en önemli yer kıspettir."
+        },
+        {
+          "type": "hint",
+          "md": "Rakibin elini sokabildiği tek tutunma yeri."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Yağlı güreşte vücut yağlı olduğu için rakibi kavramak zordur. Bu yüzden belden aşağısını saran giysi, oyunun tekniklerinde özel bir yer tutar."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          101,
+          101
+        ],
+        "quote": "Yağlı güreşte pehlivanlar, kıspet adı verilen deri bir giysi giyer.",
+        "chapter": "Spor"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "spor"
+      ],
+      "vurgu": [],
+      "contentHash": "0769b6380ed97baa651a7219b1af5a154df87c71808e91eb1dfa9b33904f14fb",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0534",
+      "conceptId": "sp-cazgir",
+      "stem": {
+        "md": "Yağlı güreşte pehlivanları tanıtıp dualarla güreşe çağıran kişiye ne denir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Ağa"
+        },
+        {
+          "key": "B",
+          "md": "Başpehlivan"
+        },
+        {
+          "key": "C",
+          "md": "Hakem"
+        },
+        {
+          "key": "D",
+          "md": "Cazgır"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Ağa, güreşlerin masraflarını üstlenen ve organizasyonu sahiplenen kişidir.",
+        "B": "Başpehlivan, en üst ağırlıkta kazanan güreşçinin unvanıdır.",
+        "C": "Hakem güreşi yönetir; pehlivanları dualarla tanıtmak onun görevi değildir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap cazgırdır.\n- Cazgır, pehlivanları tanıtırken manzum dualar okur.\n- Güreş meydanının en renkli geleneklerinden biridir."
+        },
+        {
+          "type": "hint",
+          "md": "Sesi gür, sözleri manzum olur."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Yağlı güreş meydanında güreşin kendisi kadar törenleri de önemlidir. Davul zurna eşliğinde yapılan tanıtım ve dualar, güreşe geleneksel bir çerçeve kazandırır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          101,
+          101
+        ],
+        "quote": "Yağlı güreşte pehlivanları tanıtıp dualarla güreşe çağıran kişiye cazgır denir.",
+        "chapter": "Spor"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "spor"
+      ],
+      "vurgu": [],
+      "contentHash": "5322b3571fb2609d78585bebf73e8caf1094cb47ee1c65f3933cc4724cd12a8c",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0535",
+      "conceptId": "sp-pesrev",
+      "stem": {
+        "md": "Yağlı güreşte pehlivanların güreş öncesi yaptığı selamlaşma ve ısınma hareketlerine ____ denir. Boşluğa hangisi gelir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "paça"
+        },
+        {
+          "key": "B",
+          "md": "peşrev"
+        },
+        {
+          "key": "C",
+          "md": "kemer"
+        },
+        {
+          "key": "D",
+          "md": "çağrı"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Paça, güreşte bir tutuş ve oyun türünü anlatan sözcüktür.",
+        "C": "Kemer, başpehlivana verilen ödülle ilgilidir.",
+        "D": "Çağrı, cazgırın yaptığı tanıtımı anlatır, pehlivanların hareketini değil."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap peşrevdir.\n- Peşrevde pehlivanlar el ele tutuşup diz vurarak ilerler.\n- Aynı sözcük müzikte bir saz eseri biçimini de anlatır."
+        },
+        {
+          "type": "hint",
+          "md": "Aynı sözcük Türk müziğinde bir saz eseri türüdür."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Geleneksel sporlarda yarışmanın başlangıcı çoğu zaman bir törenle yapılır. Yağlı güreşte bu hareketler hem ısınma hem de rakibe saygının göstergesidir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          101,
+          101
+        ],
+        "quote": "Yağlı güreşte pehlivanların güreş öncesi yaptığı selamlaşma ve ısınma hareketlerine peşrev denir.",
+        "chapter": "Spor"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "spor"
+      ],
+      "vurgu": [],
+      "contentHash": "e12ff9b9a7231faed9a080b8ebbf020df29afafb858f4c9fa8c48ba11bac30a1",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0536",
+      "conceptId": "sp-cirit",
+      "stem": {
+        "md": "Atlı oyuncuların birbirine değnek fırlattığı geleneksel Türk sporu hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Polo"
+        },
+        {
+          "key": "B",
+          "md": "Cirit"
+        },
+        {
+          "key": "C",
+          "md": "Kökbörü"
+        },
+        {
+          "key": "D",
+          "md": "Okçuluk"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Polo da atlı oynanır ama sopayla top sürülerek kaleye atılır.",
+        "C": "Kökbörü atlı bir spordur ama oyuncular bir oğlak ya da keçi postunu kapmaya çalışır.",
+        "D": "Okçulukta değnek değil, yayla ok atılır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap cirittir.\n- Oyuncular iki takıma ayrılır ve rakibe değnek fırlatır.\n- Erzurum gibi Doğu Anadolu illerinde hâlâ yaşatılır."
+        },
+        {
+          "type": "hint",
+          "md": "Erzurum'da yaşatılan bir atlı oyun."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Atlı oyunlar, Orta Asya'dan beri savaş becerilerini geliştirmek için oynanmıştır. Bu oyunlar binicilik, nişan alma ve kaçma ustalığını birlikte gerektirir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          101,
+          101
+        ],
+        "quote": "Cirit, atlı oyuncuların birbirine değnek fırlattığı geleneksel bir Türk sporudur.",
+        "chapter": "Spor"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "spor"
+      ],
+      "vurgu": [],
+      "contentHash": "fcd80aa3237774bf1f38a03a66eaa9c06d3daa251c85d540d8b16b3b76362414",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0537",
+      "conceptId": "sp-okmeydani",
+      "stem": {
+        "md": "Osmanlı döneminde İstanbul'da okçuların atış yaptığı alanın adı nedir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "At Meydanı"
+        },
+        {
+          "key": "B",
+          "md": "Eminönü"
+        },
+        {
+          "key": "C",
+          "md": "Okmeydanı"
+        },
+        {
+          "key": "D",
+          "md": "Beyazıt Meydanı"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "At Meydanı, Bizans döneminden kalma hipodromdur; okçulukla anılmaz.",
+        "B": "Eminönü, liman ve çarşılarıyla bilinen bir semttir.",
+        "D": "Beyazıt Meydanı, cami ve çarşı çevresinde gelişmiş bir meydandır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Okmeydanı'dır.\n- Fatih Sultan Mehmed döneminde okçuluk alanı olarak ayrılmıştır.\n- Rekor atışlar menzil taşlarıyla işaretlenirdi."
+        },
+        {
+          "type": "hint",
+          "md": "Adı, yapılan işi doğrudan söyler."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Osmanlı'da okçuluk hem askerî bir beceri hem de saygın bir spordu. Okçular bir tekke çevresinde örgütlenir, uzaklık atışlarını taşlarla kayda geçirirdi."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          101,
+          101
+        ],
+        "quote": "Osmanlı döneminde İstanbul'da okçuların atış yaptığı alana Okmeydanı denir.",
+        "chapter": "Spor"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "spor"
+      ],
+      "vurgu": [],
+      "contentHash": "b4478b2d1fb5f33be9bfd770f9991a6571bb09a314d81129c3b0098e915c6192",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0538",
+      "conceptId": "sp-turk-yayi",
+      "stem": {
+        "md": "Geleneksel Türk okçuluğunda kullanılan yayın özelliği hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Tek parça porsuk ağacından yapılmış uzun bir yay"
+        },
+        {
+          "key": "B",
+          "md": "Makaralı ve teleskopik nişangâhlı modern bir yay"
+        },
+        {
+          "key": "C",
+          "md": "Boynuz, ağaç ve sinirden yapılmış kısa bir kompozit yay"
+        },
+        {
+          "key": "D",
+          "md": "Kundağa yatay bağlanmış tetikli bir yay"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Tek parça uzun ağaç yay, Orta Çağ İngiliz okçularının yayıdır.",
+        "B": "Makaralı yay yirminci yüzyılda geliştirilmiş modern bir yaydır.",
+        "D": "Kundağa bağlı tetikli yay, tatar yayı denen başka bir silahtır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Türk yayı boynuz, ağaç ve sinirden yapılan kısa bir kompozit yaydır.\n- Kısa olduğu için at üstünde kullanımı kolaydır.\n- Katmanlı yapısı yaya küçük boyuna göre yüksek güç verir."
+        },
+        {
+          "type": "hint",
+          "md": "Birden çok malzemenin katmanlanmasıyla yapılır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Bozkır halklarının yayları at üstünde kullanılmak üzere geliştirilmiştir. Farklı malzemelerin birlikte kullanılması, yayın hem esnek hem güçlü olmasını sağlar."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          101,
+          101
+        ],
+        "quote": "Geleneksel Türk okçuluğunda boynuz, ağaç ve sinirden yapılan kısa bir kompozit yay kullanılır.",
+        "chapter": "Spor"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "spor"
+      ],
+      "vurgu": [],
+      "contentHash": "e956cca6fdbde56bd67474e0a59d6ccc792c712c30780930fd7fd89b380b8dce",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0539",
+      "conceptId": "sp-satranc-tas",
+      "stem": {
+        "md": "Satrançta her oyuncu oyuna ____ taşla başlar. Boşluğa hangisi gelir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "8"
+        },
+        {
+          "key": "B",
+          "md": "12"
+        },
+        {
+          "key": "C",
+          "md": "16"
+        },
+        {
+          "key": "D",
+          "md": "32"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "8, bir oyuncunun yalnızca piyon sayısıdır.",
+        "B": "12, dama oyununda bir oyuncunun taş sayısıdır.",
+        "D": "32, iki oyuncunun toplam taş sayısıdır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Her oyuncunun 16 taşı vardır.\n- Bunlar 8 piyon, 2 kale, 2 at, 2 fil, 1 vezir ve 1 şahtır.\n- Tahtada toplam 32 taş bulunur."
+        },
+        {
+          "type": "hint",
+          "md": "Tahtanın 64 karesinin dörtte biri kadar."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Satranç taşları başlangıçta tahtanın iki uç sırasına dizilir. Ön sırada piyonlar, arka sırada diğer taşlar yer alır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          102,
+          102
+        ],
+        "quote": "Satrançta her oyuncu oyuna 16 taşla başlar.",
+        "chapter": "Spor"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "satranç"
+      ],
+      "vurgu": [],
+      "contentHash": "6d45e296159b6ec1605b09afca17c38038cfb3d4c216937ac067a627848c18b2",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0540",
+      "conceptId": "sp-satranc-ilk-hamle",
+      "stem": {
+        "md": "Satrançta oyuna hangi taraf başlar?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Siyah taşlarla oynayan"
+        },
+        {
+          "key": "B",
+          "md": "Yazı tura atışını kazanan"
+        },
+        {
+          "key": "C",
+          "md": "Daha yüksek dereceli oyuncu"
+        },
+        {
+          "key": "D",
+          "md": "Beyaz taşlarla oynayan"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Siyah taşlarla oynayan oyuncu ilk hamleden sonra oynar.",
+        "B": "Yazı tura renkleri belirlemek için kullanılabilir ama ilk hamleyi belirlemez.",
+        "C": "Derece, kimin önce oynayacağını belirlemez."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Oyuna her zaman beyaz başlar.\n- Renkler kura ya da eşleştirmeyle belirlenir.\n- İlk hamle beyaza küçük bir avantaj sağlar."
+        },
+        {
+          "type": "hint",
+          "md": "Renklerden açık olanı."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Satrançta iki oyuncu sırayla birer hamle yapar. Turnuvalarda oyuncuların bu avantajı eşit paylaşması için renkler maçtan maça değiştirilir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          102,
+          102
+        ],
+        "quote": "Satrançta oyuna her zaman beyaz taşlarla oynayan taraf başlar.",
+        "chapter": "Spor"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "satranç"
+      ],
+      "vurgu": [],
+      "contentHash": "2ceeebce7b95044539063a0573bd9c9e82e5dfdbc13607b717444097cf4f47cc",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0541",
+      "conceptId": "sp-at-hareketi",
+      "stem": {
+        "md": "Satrançta L biçiminde hareket eden ve taşların üzerinden atlayabilen taş hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "At"
+        },
+        {
+          "key": "B",
+          "md": "Fil"
+        },
+        {
+          "key": "C",
+          "md": "Vezir"
+        },
+        {
+          "key": "D",
+          "md": "Kale"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Fil yalnızca çapraz hareket eder ve taşların üzerinden atlayamaz.",
+        "C": "Vezir her yöne gidebilir ama taşların üzerinden atlayamaz.",
+        "D": "Kale düz çizgide hareket eder ve önü kesilince ilerleyemez."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap attır.\n- At, iki kare düz ve bir kare yana giderek L çizer.\n- Önünde taş olsa bile hamlesini yapabilir."
+        },
+        {
+          "type": "hint",
+          "md": "Görünüşü bir hayvan başıdır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Satrançta her taşın kendine özgü bir hareket biçimi vardır. Çoğu taşın yolu başka bir taşla kesilebilir; bu kuralın bir istisnası vardır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          102,
+          102
+        ],
+        "quote": "At, satrançta L biçiminde hareket eder ve taşların üzerinden atlayabilir.",
+        "chapter": "Spor"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "satranç"
+      ],
+      "vurgu": [],
+      "contentHash": "3a94e694e40081449c04a594f8e3c6f9365bf5203062629f6f1614e465988d20",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0542",
+      "conceptId": "sp-rok",
+      "stem": {
+        "md": "Şah ile kalenin aynı hamlede birlikte oynadığı özel hamleye ne denir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Terfi"
+        },
+        {
+          "key": "B",
+          "md": "Rok"
+        },
+        {
+          "key": "C",
+          "md": "Geçerken alma"
+        },
+        {
+          "key": "D",
+          "md": "Pat"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Terfi, son sıraya ulaşan piyonun başka bir taşa dönüşmesidir.",
+        "C": "Geçerken alma, piyonların yaptığı özel bir alma hamlesidir.",
+        "D": "Pat, hamle yapılamayan bir durumda oyunun berabere bitmesidir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap roktur.\n- Şah kaleye doğru iki kare gider, kale şahın öbür yanına geçer.\n- Şahı korumaya almak ve kaleyi oyuna sokmak için yapılır."
+        },
+        {
+          "type": "hint",
+          "md": "Bir oyunda her oyuncu bunu en fazla bir kez yapabilir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Satrançta iki taşın aynı hamlede oynadığı tek durum budur. Bu hamle için şahın ve ilgili kalenin daha önce hiç oynamamış olması gerekir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          102,
+          102
+        ],
+        "quote": "Şah ile kalenin aynı hamlede birlikte oynadığı özel hamleye rok denir.",
+        "chapter": "Spor"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "satranç"
+      ],
+      "vurgu": [],
+      "contentHash": "f74b1ebe4ac117561c817155738b4cc87324c1458f31288954b011beb9e92787",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0543",
+      "conceptId": "sp-piyon-terfisi",
+      "stem": {
+        "md": "Son sıraya ulaşan bir piyon aşağıdakilerden hangisine terfi edemez?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Şah"
+        },
+        {
+          "key": "B",
+          "md": "Vezir"
+        },
+        {
+          "key": "C",
+          "md": "At"
+        },
+        {
+          "key": "D",
+          "md": "Fil"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Vezir, piyonun en sık terfi ettiği taştır.",
+        "C": "Ata terfi kurala uygundur ve bazen veziden daha işe yarar.",
+        "D": "File terfi de kurala uygundur."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap şahtır.\n- Piyon vezir, kale, fil ya da ata terfi edebilir.\n- Her oyuncunun tahtada yalnızca bir şahı olabilir."
+        },
+        {
+          "type": "hint",
+          "md": "Oyunda her renkten yalnızca bir tane olabilen taş."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Piyon, satrancın en zayıf ama en çok sayıdaki taşıdır. Yalnızca ileri gidebilir; tahtanın sonuna ulaştığında ise önemli bir dönüşüm hakkı kazanır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          102,
+          102
+        ],
+        "quote": "Son sıraya ulaşan piyon vezir, kale, fil ya da ata terfi edebilir.",
+        "chapter": "Spor"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "satranç"
+      ],
+      "vurgu": [],
+      "contentHash": "3fc68af3c5f21e63c5914a146d26a85eea52bdbad21ab25499dbea9859e32ffd",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0544",
+      "conceptId": "sp-pat",
+      "stem": {
+        "md": "Sırası gelen oyuncunun şahı tehdit altında değilse ve yapabileceği yasal hamle yoksa oyun nasıl sonuçlanır?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Hamle yapamayan oyuncu kaybeder"
+        },
+        {
+          "key": "B",
+          "md": "Pat ile berabere biter"
+        },
+        {
+          "key": "C",
+          "md": "Sıra rakibe geçer ve oyun sürer"
+        },
+        {
+          "key": "D",
+          "md": "Oyuncu son hamlesini geri alır"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Bu durumda kaybetmek için şahın tehdit altında olması gerekir; bu mat durumudur.",
+        "C": "Satrançta pas geçme hakkı yoktur.",
+        "D": "Satrançta yapılmış bir hamle geri alınmaz."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Bu durum pattır ve oyun berabere biter.\n- Mattan farkı, şahın tehdit altında olmamasıdır.\n- Kaybetmek üzere olan taraf bazen pat arayarak beraberlik kurtarır."
+        },
+        {
+          "type": "hint",
+          "md": "Mat ile karıştırılan ama sonucu farklı olan durum."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Satrançta oyun yalnızca kazanma ya da kaybetmeyle değil, çeşitli beraberlik yollarıyla da bitebilir. Bu beraberlik türlerinden biri hamle yapılamamasıyla ilgilidir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          102,
+          102
+        ],
+        "quote": "Sırası gelen oyuncunun şahı tehdit altında değilse ve yapabileceği yasal hamle yoksa oyun pat ile berabere biter.",
+        "chapter": "Spor"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "satranç"
+      ],
+      "vurgu": [],
+      "contentHash": "1e18210efe2b3eddb25a9ab95e3b1cb0174815304a66086e6727b2828fc11414",
+      "deleted": false
+    }
+  ]
+}

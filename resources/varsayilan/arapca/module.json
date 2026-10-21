@@ -1,0 +1,229 @@
+{
+  "schemaVersion": 1,
+  "id": "arapca",
+  "name": "Arapça",
+  "version": "0.1.5",
+  "language": "tr",
+  "description": "Altı düzey: 7360 kelime kartı (harekeli yazım, okunuş, Türkçe karşılık) ve 84 kuraldan 912 dil bilgisi sorusu. Düzeyler sıklık sırasından türetilmiştir. Kural sorunun çözümünde öğretilir. Lisans: CC BY-SA 4.0. Kaynak: Wiktionary ve Vikisözlük katkıcıları (Kaikki.org), FrequencyWords (Hermit Dave).",
+  "tags": [
+    "arapca"
+  ],
+  "source": {
+    "title": "Lisans: CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/); Wiktionary katkıcıları, Arapça girişler (https://en.wiktionary.org), CC BY-SA 4.0; Vikisözlük katkıcıları, Türkçe karşılıklar (https://tr.wiktionary.org), CC BY-SA 4.0; Kaikki.org Wiktionary dökümü, 2026-10-03 (https://kaikki.org); FrequencyWords 2018 ar_50k, Hermit Dave, OpenSubtitles derleminden (https://github.com/hermitdave/FrequencyWords), kod MIT, içerik CC BY-SA 4.0; Kural dosyaları ve Wiktionary örneği olmayan kartların cümleleri QuizLoop üretimidir",
+    "sayfaOfseti": 0
+  },
+  "blocks": [
+    {
+      "file": "blocks/0001.json",
+      "count": 200,
+      "sha256": "41505f04f671bd87a3de1f278ed1e872a2ee8d95c6fc65a2f9a3a7931283930b"
+    },
+    {
+      "file": "blocks/0002.json",
+      "count": 200,
+      "sha256": "800af66a6ce087781f65438510b1a16b0b1d461661f2249d5a1875237fd638b2"
+    },
+    {
+      "file": "blocks/0003.json",
+      "count": 200,
+      "sha256": "e5ab8defe619cdb6b81dd6138e4be365c698e310ce65f1c75945273d4a90c4c9"
+    },
+    {
+      "file": "blocks/0004.json",
+      "count": 200,
+      "sha256": "c99105b0f8d75274d8b2702db5475f87751d156a907021ead76b6784709a45a0"
+    },
+    {
+      "file": "blocks/0005.json",
+      "count": 200,
+      "sha256": "9de48826408b09e61bc61cd84693727acb281a051dd4c33b6d2143f011c205d5"
+    },
+    {
+      "file": "blocks/0006.json",
+      "count": 200,
+      "sha256": "099d9ededb608ac5de3ae67ad6222d82a9b4285509ddaf5e3f56357dceeac0de"
+    },
+    {
+      "file": "blocks/0007.json",
+      "count": 200,
+      "sha256": "8306ce561c935a394ece870db1622825386645f3fe328daaff1a48f8ea49c03f"
+    },
+    {
+      "file": "blocks/0008.json",
+      "count": 200,
+      "sha256": "77f50882eb59d4bb1ab9658935d279ecd55766cb1c7a015314fb40c0b4bfb7c7"
+    },
+    {
+      "file": "blocks/0009.json",
+      "count": 200,
+      "sha256": "7eb6b2ac4418817cc49d44a119da71c808dbff0e2441bc7dae348a02390ac195"
+    },
+    {
+      "file": "blocks/0010.json",
+      "count": 200,
+      "sha256": "ff909293f01fb695d9d9a084de9d0e0548bf456ac3e70b849eef57fb6981f388"
+    },
+    {
+      "file": "blocks/0011.json",
+      "count": 200,
+      "sha256": "6a5baea1d11b08a5d0ede56fd7a47f40ffd44b6cbbeb8e8eb352937f73c67e13"
+    },
+    {
+      "file": "blocks/0012.json",
+      "count": 200,
+      "sha256": "bf288f0fd42e4baf9b5911549c88aa3daa110bd13ccef16230cdd60243830fa0"
+    },
+    {
+      "file": "blocks/0013.json",
+      "count": 200,
+      "sha256": "88fa30e84afe488611822d49026642dd34781f12092d83f8fc14813c3bf2993b"
+    },
+    {
+      "file": "blocks/0014.json",
+      "count": 200,
+      "sha256": "9b08282f9f9d8f74da0a0f13a6c858a275d6258fb80898246da92d06407262f4"
+    },
+    {
+      "file": "blocks/0015.json",
+      "count": 200,
+      "sha256": "635a0040f9dce6ac1ae7bd95fc55cc033da21406c431275a42148808426c754c"
+    },
+    {
+      "file": "blocks/0016.json",
+      "count": 200,
+      "sha256": "66c461b080637ca6403ca35e61aac4e6063a058c7ae78a831e321fbf33bbf7a5"
+    },
+    {
+      "file": "blocks/0017.json",
+      "count": 200,
+      "sha256": "0d81ba6bb4e33cdef1a738d7965556611b263432b098d56928265a5a1452a12b"
+    },
+    {
+      "file": "blocks/0018.json",
+      "count": 200,
+      "sha256": "ff674b51dc13faa9356bed0eb0c3962649fbbca087da6ce71f7853475b0d58d0"
+    },
+    {
+      "file": "blocks/0019.json",
+      "count": 200,
+      "sha256": "ed4f2e9896de0f309bd4ec193c589a373267406aae72eaa5d0b9000a732ec65b"
+    },
+    {
+      "file": "blocks/0020.json",
+      "count": 200,
+      "sha256": "fc7fcf83081aab90ee6a509882432671fca8618f53a01798d9f2d0ea80a2a415"
+    },
+    {
+      "file": "blocks/0021.json",
+      "count": 200,
+      "sha256": "193af46dbea0983f031b6bc952861fd1077ec8e9d7e45842ee7c7af338563ee2"
+    },
+    {
+      "file": "blocks/0022.json",
+      "count": 200,
+      "sha256": "74b4797d98be4eba85373a26d08771c438b2f6ab6bc618526b7e96adcefd03b3"
+    },
+    {
+      "file": "blocks/0023.json",
+      "count": 200,
+      "sha256": "b5ab50731225d575e2e6250f4ffbbdfa3929ff14538e6459f73c8bdf49b6c214"
+    },
+    {
+      "file": "blocks/0024.json",
+      "count": 200,
+      "sha256": "7a6ed988fc38be3125dedd08515cc391235bcfb2e2f9ed79728558b109ade856"
+    },
+    {
+      "file": "blocks/0025.json",
+      "count": 200,
+      "sha256": "a8a082c98a82cefbc27993a20656db8af64a66891dfd418d1836a267fb99c32d"
+    },
+    {
+      "file": "blocks/0026.json",
+      "count": 200,
+      "sha256": "8b48aac79fcc978714b77e3c7ff5a8b3dcaa2e32ca3c8ac78e601d9d7c0590fb"
+    },
+    {
+      "file": "blocks/0027.json",
+      "count": 200,
+      "sha256": "9229b11a438dc38537d7a127f4bec5f23c27e263e2010496de9f764d9d985732"
+    },
+    {
+      "file": "blocks/0028.json",
+      "count": 200,
+      "sha256": "2d0e55e9abbf3174e3c4aa424af307a251746f925017bfd40cf9e371f620c6a2"
+    },
+    {
+      "file": "blocks/0029.json",
+      "count": 200,
+      "sha256": "9cf89d8036a7de8b26e2876e173d014bb278e71789f4e8381bba2744e7db1584"
+    },
+    {
+      "file": "blocks/0030.json",
+      "count": 200,
+      "sha256": "03479cfea0809a9825c449d0f087c60fb350ef505e8b6c768ae792f9ca0907eb"
+    },
+    {
+      "file": "blocks/0031.json",
+      "count": 200,
+      "sha256": "5b123ca4b9bca85c56369d7eb55797902077359bbc04e7ff18181c63678bd825"
+    },
+    {
+      "file": "blocks/0032.json",
+      "count": 200,
+      "sha256": "0fd9918aaea8fa016425c755364fe5f69b222ceeda45ccc80f39ba8d25df1b29"
+    },
+    {
+      "file": "blocks/0033.json",
+      "count": 200,
+      "sha256": "cfeb0bfea130856884dd7fde4ea2e6c455a3b742873176aa53b0acec062c6291"
+    },
+    {
+      "file": "blocks/0034.json",
+      "count": 200,
+      "sha256": "5f2a4a6c279af9b018e5efaa3056507a56570d367fb8120f96fc12e352dd3ca6"
+    },
+    {
+      "file": "blocks/0035.json",
+      "count": 200,
+      "sha256": "cd0a32f807cde26db3c728c81319ae974da7bcb3c4c59e50d6c3ae5dff0fa075"
+    },
+    {
+      "file": "blocks/0036.json",
+      "count": 200,
+      "sha256": "10e95a3218a478dc5374851474caf2d7d4c9f65a7be52268e547d98549c5d132"
+    },
+    {
+      "file": "blocks/0037.json",
+      "count": 200,
+      "sha256": "9f9e2c6ceedddbbee8207edc48e4398a42b8da03c8aed2b83424b5c71d63a9d9"
+    },
+    {
+      "file": "blocks/0038.json",
+      "count": 200,
+      "sha256": "8a07fd591ec8a9890620d6c2a9a8b19db5e16c50f7afa3fd535ab1911aecca29"
+    },
+    {
+      "file": "blocks/0039.json",
+      "count": 200,
+      "sha256": "79d1c9ca6251a0c1ac23f18655af5df4f4192ad464464c27d3a1148e546ccd83"
+    },
+    {
+      "file": "blocks/0040.json",
+      "count": 200,
+      "sha256": "8bff98b15efbde03c077e1ee10299c025620c2a2c3df0363d813538967f2385f"
+    },
+    {
+      "file": "blocks/0041.json",
+      "count": 200,
+      "sha256": "fd5f9539652022f6837355583c9064e18e7d73e832db4a6b542e7d67d441f42d"
+    },
+    {
+      "file": "blocks/0042.json",
+      "count": 72,
+      "sha256": "8dbe65538ceb13f8c79a76e3b792901d25f692dd93b99c64aeac2347e2f7926b"
+    }
+  ],
+  "questionCount": 8272,
+  "createdAt": "2026-10-08T06:59:32.342Z"
+}

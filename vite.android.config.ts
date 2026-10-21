@@ -4,7 +4,7 @@ import react from '@vitejs/plugin-react'
 import { defineConfig, type Plugin } from 'vite'
 import { pdfWasm } from './scripts/pdfwasm'
 
-const SAMPLES = resolve('resources/ornek')
+const SAMPLES = resolve('resources/varsayilan')
 const BUNDLED = readdirSync(SAMPLES).sort()
 const BANNED = /\.(gz|mjs)$/i
 const OUT = resolve('out/android')

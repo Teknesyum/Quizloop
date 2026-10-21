@@ -23,6 +23,7 @@ export const ModuleMeta = z.object({
     .regex(/^\d+\.\d+\.\d+$/)
     .optional(),
   language: z.string().default('tr'),
+  sessionSize: z.number().int().min(5).max(200).optional(),
   description: z.string().optional(),
   tags: z
     .array(z.string().regex(/^[\p{Ll}\p{N}][\p{Ll}\p{N}-]{0,31}$/u))

@@ -1,0 +1,2192 @@
+{
+  "blockId": "0002",
+  "questions": [
+    {
+      "id": "genel-kultur-0070",
+      "conceptId": "amerika-1492",
+      "stem": {
+        "md": "1492'de Atlas Okyanusu'nu aşarak Amerika kıtasına ulaşan denizci kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Vasco da Gama"
+        },
+        {
+          "key": "B",
+          "md": "Kristof Kolomb"
+        },
+        {
+          "key": "C",
+          "md": "Ferdinand Macellan"
+        },
+        {
+          "key": "D",
+          "md": "James Cook"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Vasco da Gama, Afrika'yı dolaşarak Hindistan'a deniz yoluyla ulaşmıştır.",
+        "C": "Macellan, dünyayı dolaşan ilk seferi başlatan denizcidir.",
+        "D": "James Cook on sekizinci yüzyılda Pasifik'i keşfe çıkmıştır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Bu denizci Kristof Kolomb'dur.\n- İspanya adına yola çıkmış ve Hindistan'a vardığını sanmıştır."
+        },
+        {
+          "type": "hint",
+          "md": "İspanya adına yelken açan Cenovalı."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "15. yüzyılın sonunda Avrupalı denizciler Asya'ya yeni deniz yolları aradı. Atlas Okyanusu'nu batıya doğru aşma girişimi, Avrupa ile Amerika arasında kalıcı temasın başlangıcı oldu."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          16,
+          16
+        ],
+        "quote": "Kristof Kolomb 1492'de Atlas Okyanusu'nu aşarak Amerika kıtasına ulaştı.",
+        "chapter": "Dünya Tarihi"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "tarih"
+      ],
+      "vurgu": [],
+      "contentHash": "ad9822bc7873be3f6c19329631b3463aa2232f7e631cd5b9ae73dd7ca3bba138",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0071",
+      "conceptId": "kades-antlasmasi",
+      "stem": {
+        "md": "Mısırlılar Kadeş Antlaşması'nı hangi uygarlıkla yapmıştır?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Sümerler"
+        },
+        {
+          "key": "B",
+          "md": "Frigler"
+        },
+        {
+          "key": "C",
+          "md": "Asurlular"
+        },
+        {
+          "key": "D",
+          "md": "Hititler"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Sümerler Mezopotamya'da çok daha önce yaşamıştır.",
+        "B": "Frigler Anadolu'da Hititlerden sonra ortaya çıkmıştır.",
+        "C": "Asurlular Mezopotamya'nın gücüdür; bu antlaşmanın tarafı değildir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Antlaşma Hititler ile Mısırlılar arasında yapılmıştır.\n- Metni günümüze ulaşan en eski barış antlaşmalarından biridir."
+        },
+        {
+          "type": "hint",
+          "md": "Başkenti Hattuşa olan Anadolu uygarlığı."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Kadeş, Suriye'de iki büyük Tunç Çağı gücünün karşılaştığı yerdir. Savaştan sonra imzalanan barış, metni günümüze ulaşan en eski yazılı antlaşmalardandır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          16,
+          16
+        ],
+        "quote": "Kadeş Antlaşması Hititler ile Mısırlılar arasında yapılmıştır.",
+        "chapter": "Dünya Tarihi"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "tarih"
+      ],
+      "vurgu": [],
+      "contentHash": "c9513ca9c186ae3ed0edd91f51b13c114ec8052c254b043f14d75c5cab5bfac8",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0072",
+      "conceptId": "otuz-yil-savasi-barisi",
+      "stem": {
+        "md": "Otuz Yıl Savaşı'nı 1648'de sona erdiren barış hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Westfalya Barışı"
+        },
+        {
+          "key": "B",
+          "md": "Utrecht Antlaşması"
+        },
+        {
+          "key": "C",
+          "md": "Viyana Kongresi"
+        },
+        {
+          "key": "D",
+          "md": "Versay Antlaşması"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Utrecht Antlaşması on sekizinci yüzyılın başında İspanya Veraset Savaşı'nı bitirmiştir.",
+        "C": "Viyana Kongresi, Napolyon Savaşları'ndan sonra 1815'te toplanmıştır.",
+        "D": "Versay Antlaşması 1919'da Birinci Dünya Savaşı'nın ardından imzalanmıştır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Savaşı Westfalya Barışı bitirmiştir.\n- Bu barış, egemen devletlere dayanan Avrupa düzeninin başlangıcı sayılır."
+        },
+        {
+          "type": "hint",
+          "md": "Adını Almanya'daki bir bölgeden alır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Otuz Yıl Savaşı, Orta Avrupa'da dinsel ve siyasal nedenlerle yürütülen yıkıcı bir savaştı. Sonundaki barış, egemen devletler düzeninin başlangıcı sayılır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          16,
+          16
+        ],
+        "quote": "1648'de imzalanan Westfalya Barışı, Otuz Yıl Savaşı'nı sona erdirmiştir.",
+        "chapter": "Dünya Tarihi"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "tarih"
+      ],
+      "vurgu": [],
+      "contentHash": "a0b4639ec219e67bcdde2fcb2f459398b94778d820128e8892357eb6c2c727bc",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0073",
+      "conceptId": "dt-yaziyi-bulanlar",
+      "stem": {
+        "md": "Yazıyı ilk kullanan toplum olarak kabul edilenler kimlerdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Hititler"
+        },
+        {
+          "key": "B",
+          "md": "Fenikeliler"
+        },
+        {
+          "key": "C",
+          "md": "Lidyalılar"
+        },
+        {
+          "key": "D",
+          "md": "Sümerler"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Hititler çivi yazısını sonradan Mezopotamya'dan almıştır.",
+        "B": "Fenikeliler alfabeyi geliştirmiştir, yazıyı ilk kullanan değildir.",
+        "C": "Lidyalılar parayı ilk kullanan toplumdur."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Sümerler MÖ 3200 dolaylarında çivi yazısını kullandı.\n- Yazının bulunması tarih çağlarının başlangıcı sayılır."
+        },
+        {
+          "type": "hint",
+          "md": "Mezopotamya'nın güneyinde yaşamışlardır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Yazı, kayıt tutma ihtiyacından doğdu ve önce resim işaretleriyle başladı. Kil tabletlere kamışla bastırılarak yazılan işaretler zamanla soyutlaştı."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          16,
+          16
+        ],
+        "quote": "Yazıyı ilk kullanan toplum Sümerlerdir.",
+        "chapter": "Dünya Tarihi"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "tarih"
+      ],
+      "vurgu": [],
+      "contentHash": "6a16bce6779acbbda70e3493f830d8d541fde4016ce34659f5a02eee83e92d6e",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0074",
+      "conceptId": "dt-parayi-bulanlar",
+      "stem": {
+        "md": "Parayı ilk kullanan uygarlık olarak kabul edilen Lidyalıların başkenti neresidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Hattuşa"
+        },
+        {
+          "key": "B",
+          "md": "Gordion"
+        },
+        {
+          "key": "C",
+          "md": "Efes"
+        },
+        {
+          "key": "D",
+          "md": "Sardes"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Hattuşa Hititlerin başkentidir.",
+        "B": "Gordion Frigyalıların başkentidir.",
+        "C": "Efes bir İyon kentidir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Lidyalılar Batı Anadolu'da yaşadı ve parayı ilk kullananlar oldu.\n- Başkentleri Sardes'tir (Manisa yakınları)."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Paradan önce ticaret takasla yapılıyordu. Ağırlığı ve değeri devletçe güvence altına alınan madenî para ticareti kolaylaştırdı."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          16,
+          16
+        ],
+        "quote": "Lidyalıların başkenti Sardes'tir.",
+        "chapter": "Dünya Tarihi"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "tarih"
+      ],
+      "vurgu": [],
+      "contentHash": "30725df946793d20cc85366f4c3ad2f0cb497fca571353acfd9efe5b6eff8e67",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0075",
+      "conceptId": "dt-hammurabi",
+      "stem": {
+        "md": "Bilinen en eski yazılı kanunlardan birini hazırlatan Babil kralı kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Hammurabi"
+        },
+        {
+          "key": "B",
+          "md": "Nebukadnezar"
+        },
+        {
+          "key": "C",
+          "md": "Sargon"
+        },
+        {
+          "key": "D",
+          "md": "Darius"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Nebukadnezar Babil'in sonraki dönem kralıdır, Asma Bahçeler ona atfedilir.",
+        "C": "Sargon Akad İmparatorluğu'nun kurucusudur.",
+        "D": "Darius Pers kralıdır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Hammurabi Kanunları MÖ 18. yüzyılda taşa yazıldı.\n- \"Göze göz, dişe diş\" ilkesine dayanır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Mezopotamya'da kanunların taş dikilitaşlara yazılması, kuralların herkesçe bilinmesini amaçlıyordu. Cezalar çoğunlukla kısasa dayanıyordu."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          17,
+          17
+        ],
+        "quote": "Hammurabi Kanunları Babil kralı Hammurabi tarafından hazırlatılmıştır.",
+        "chapter": "Dünya Tarihi"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "tarih"
+      ],
+      "vurgu": [],
+      "contentHash": "68287ea424f4c8781d8237b542651757b3046cab72eb71a14162c10c19ec1b9d",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0076",
+      "conceptId": "dt-roma-ikiye",
+      "stem": {
+        "md": "Roma İmparatorluğu kesin olarak hangi yıl Doğu ve Batı olarak ikiye ayrılmıştır?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "476"
+        },
+        {
+          "key": "B",
+          "md": "395"
+        },
+        {
+          "key": "C",
+          "md": "330"
+        },
+        {
+          "key": "D",
+          "md": "1453"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "476 Batı Roma'nın yıkılış yılıdır.",
+        "C": "330 İstanbul'un başkent yapıldığı yıldır.",
+        "D": "1453 Doğu Roma'nın sona erdiği yıldır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- İmparator Theodosius'un ölümüyle 395'te imparatorluk ikiye bölündü.\n- Batı Roma 476'da, Doğu Roma 1453'te sona erdi."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Geniş topraklarını tek merkezden yönetmekte zorlanan Roma, sonunda iki ayrı imparatorluğa ayrıldı. Doğu kısmı Bizans olarak da anılır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          17,
+          17
+        ],
+        "quote": "Roma İmparatorluğu 395'te ikiye ayrılmıştır.",
+        "chapter": "Dünya Tarihi"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "tarih"
+      ],
+      "vurgu": [],
+      "contentHash": "ddcf6df31724c5d563751d234fda510ce6d796d86f84c2591700a330f545bf11",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0077",
+      "conceptId": "dt-bati-roma-yikilis",
+      "stem": {
+        "md": "Batı Roma İmparatorluğu'nun yıkıldığı 476 yılı, geleneksel olarak hangi çağın başlangıcı kabul edilir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Yeni Çağ"
+        },
+        {
+          "key": "B",
+          "md": "Orta Çağ"
+        },
+        {
+          "key": "C",
+          "md": "İlk Çağ"
+        },
+        {
+          "key": "D",
+          "md": "Yakın Çağ"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Yeni Çağ İstanbul'un fethiyle başlatılır.",
+        "C": "İlk Çağ yazının bulunmasıyla başlar.",
+        "D": "Yakın Çağ Fransız İhtilali ile başlatılır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- 476'da Batı Roma'nın yıkılması Orta Çağ'ın başlangıcıdır.\n- Orta Çağ 1453'te İstanbul'un fethiyle sona erer."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Tarih, büyük dönüm noktalarına göre çağlara ayrılır. Bu ayrım Avrupa merkezlidir ve başlangıç yılları farklı olaylara göre belirlenir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          17,
+          17
+        ],
+        "quote": "476'da Batı Roma'nın yıkılması Orta Çağ'ın başlangıcı kabul edilir.",
+        "chapter": "Dünya Tarihi"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "tarih"
+      ],
+      "vurgu": [],
+      "contentHash": "c56b690e97b8c44ee5ea71e8930d0f6ce6f85756db2c6e99bb662c2e8daf4ad8",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0078",
+      "conceptId": "dt-cag-sirasi",
+      "stem": {
+        "md": "Aşağıdaki olayların kronolojik sırası hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "İstanbul'un fethi - Batı Roma'nın yıkılışı - Fransız İhtilali - Birinci Dünya Savaşı"
+        },
+        {
+          "key": "B",
+          "md": "Batı Roma'nın yıkılışı - Fransız İhtilali - İstanbul'un fethi - Birinci Dünya Savaşı"
+        },
+        {
+          "key": "C",
+          "md": "Batı Roma'nın yıkılışı - İstanbul'un fethi - Fransız İhtilali - Birinci Dünya Savaşı"
+        },
+        {
+          "key": "D",
+          "md": "Batı Roma'nın yıkılışı - İstanbul'un fethi - Birinci Dünya Savaşı - Fransız İhtilali"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "İstanbul'un fethi 1453'tedir, 476'dan sonradır.",
+        "B": "Fransız İhtilali 1789'dadır, 1453'ten sonradır.",
+        "D": "Birinci Dünya Savaşı 1914'te başlamıştır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- 476: Batı Roma'nın yıkılışı.\n- 1453: İstanbul'un fethi.\n- 1789: Fransız İhtilali.\n- 1914: Birinci Dünya Savaşı."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Bu dört olay, geleneksel çağ ayrımındaki geçiş noktalarına ve sonrasına denk gelir. Yıllarını bilmek sıralamayı kolaylaştırır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          17,
+          17
+        ],
+        "quote": "Batı Roma 476'da yıkılmış, Fransız İhtilali 1789'da başlamıştır.",
+        "chapter": "Dünya Tarihi"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "tarih"
+      ],
+      "vurgu": [],
+      "contentHash": "f26898c07ff26301fba634b6bcd90f7d7a2c6e187298c24bb1d87899e6022fa5",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0079",
+      "conceptId": "dt-magna-carta",
+      "stem": {
+        "md": "1215'te İngiltere'de kralın yetkilerini sınırlayan belge hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Haklar Bildirgesi"
+        },
+        {
+          "key": "B",
+          "md": "İnsan ve Yurttaş Hakları Bildirisi"
+        },
+        {
+          "key": "C",
+          "md": "Westfalya Barışı"
+        },
+        {
+          "key": "D",
+          "md": "Magna Carta"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Haklar Bildirgesi (Bill of Rights) 1689 tarihlidir.",
+        "B": "İnsan ve Yurttaş Hakları Bildirisi Fransız İhtilali'nin belgesidir.",
+        "C": "Westfalya Barışı 1648 tarihli bir barış antlaşmasıdır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Magna Carta 1215'te Kral John'a imzalatıldı.\n- Kralın keyfî vergi ve cezalandırma yetkisini sınırladı."
+        },
+        {
+          "type": "hint",
+          "md": "Adı Latincede \"büyük ferman\" anlamına gelir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Orta Çağ İngiltere'sinde soylular kralın yetkilerine karşı ayaklandı. Ortaya çıkan belge, yasaların hükümdarı da bağladığı fikrinin erken örneklerindendir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          17,
+          17
+        ],
+        "quote": "Magna Carta 1215'te İngiltere'de imzalanmıştır.",
+        "chapter": "Dünya Tarihi"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "tarih"
+      ],
+      "vurgu": [],
+      "contentHash": "c54f93a7da25271b461ab99e69c6f9bdfb76dc876d32c2e479cd65afc781a3c1",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0080",
+      "conceptId": "dt-hacli-seferleri",
+      "stem": {
+        "md": "Haçlı Seferleri'nin başlangıcında Avrupalıların ilan ettiği temel hedef hangisiydi?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Kudüs'ü ele geçirmek"
+        },
+        {
+          "key": "B",
+          "md": "Amerika'yı keşfetmek"
+        },
+        {
+          "key": "C",
+          "md": "Roma'yı yeniden kurmak"
+        },
+        {
+          "key": "D",
+          "md": "Mısır'ı sömürgeleştirmek"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Amerika 1492'de, seferlerden çok sonra keşfedildi.",
+        "C": "Roma'nın yeniden kurulması seferlerin hedefi değildi.",
+        "D": "Sömürgecilik çok daha sonraki bir dönemin olgusudur."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Haçlı Seferleri 1096'da başladı.\n- İlan edilen hedef Kudüs'ü almaktı.\n- Seferler Doğu ile Batı arasında ticaret ve kültür etkileşimini artırdı."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Seferler Papa'nın çağrısıyla başladı ve yaklaşık iki yüzyıl sürdü. Dinî amaçların yanında ekonomik ve siyasal nedenleri de vardı."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          18,
+          18
+        ],
+        "quote": "Haçlı Seferleri'nin ilan edilen hedefi Kudüs'ü ele geçirmekti.",
+        "chapter": "Dünya Tarihi"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "tarih"
+      ],
+      "vurgu": [],
+      "contentHash": "ab97989c96761a3401052fde06e40fd2e99f4a68753907c6e775fe3408b730a2",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0081",
+      "conceptId": "dt-ronesans-yeri",
+      "stem": {
+        "md": "Rönesans hareketi ilk olarak hangi ülkede başlamıştır?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Fransa"
+        },
+        {
+          "key": "B",
+          "md": "İngiltere"
+        },
+        {
+          "key": "C",
+          "md": "İtalya"
+        },
+        {
+          "key": "D",
+          "md": "İspanya"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Fransa Rönesans'tan sonra etkilenmiştir.",
+        "B": "İngiltere'de Rönesans daha geç yaşanmıştır.",
+        "D": "İspanya Rönesans'ın çıkış yeri değildir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Rönesans 14.-15. yüzyılda İtalya'da başladı.\n- Floransa öncü kentlerdendir.\n- Antik Yunan ve Roma eserlerine ilgi canlandı."
+        },
+        {
+          "type": "hint",
+          "md": "Floransa ve Venedik bu ülkededir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Rönesans \"yeniden doğuş\" demektir. Sanat, bilim ve düşüncede insanı merkeze alan bir anlayışla Orta Çağ'dan çıkışı simgeler."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          18,
+          18
+        ],
+        "quote": "Rönesans ilk olarak İtalya'da başlamıştır.",
+        "chapter": "Dünya Tarihi"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "tarih"
+      ],
+      "vurgu": [],
+      "contentHash": "efa0ff1db7b2cda0d7b076afe9cd8a3cf11e39f9e1c08685e90e56f0d194090b",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0082",
+      "conceptId": "dt-reform-luther",
+      "stem": {
+        "md": "1517'de Katolik Kilisesi'nin uygulamalarını eleştiren 95 tezi yayımlayarak Reform hareketini başlatan kişi kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Jean Calvin"
+        },
+        {
+          "key": "B",
+          "md": "Erasmus"
+        },
+        {
+          "key": "C",
+          "md": "Galileo Galilei"
+        },
+        {
+          "key": "D",
+          "md": "Martin Luther"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Calvin Reform'un ikinci kuşak önderlerindendir.",
+        "B": "Erasmus hümanist bir düşünürdür, Katolik kalmıştır.",
+        "C": "Galileo bir bilim insanıdır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Martin Luther 95 tezini 1517'de yayımladı.\n- Endüljans satışını eleştirdi.\n- Hareket Protestanlığın doğuşuna yol açtı."
+        },
+        {
+          "type": "hint",
+          "md": "Alman bir rahip."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Reform, Batı Hristiyanlığında kilisenin yetkisini sorgulayan dinsel bir yenilenme hareketidir. Matbaa, fikirlerin hızla yayılmasını sağladı."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          18,
+          18
+        ],
+        "quote": "Reform hareketini 1517'de Martin Luther başlatmıştır.",
+        "chapter": "Dünya Tarihi"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "tarih"
+      ],
+      "vurgu": [],
+      "contentHash": "b11a9bb507f6e68628f5faefcfb497b5ee5a45d76da0005839e49495b989ae03",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0083",
+      "conceptId": "dt-cografi-kesif-umit",
+      "stem": {
+        "md": "Afrika'nın güneyini dolaşarak Hindistan'a ulaşan ilk Avrupalı denizci kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Bartolomeu Dias"
+        },
+        {
+          "key": "B",
+          "md": "Macellan"
+        },
+        {
+          "key": "C",
+          "md": "Amerigo Vespucci"
+        },
+        {
+          "key": "D",
+          "md": "Vasco da Gama"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Dias Ümit Burnu'na ulaştı ama Hindistan'a gitmedi.",
+        "B": "Macellan'ın seferi dünyanın çevresini dolaşmayı hedefledi.",
+        "C": "Vespucci Amerika kıyılarını inceledi."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Vasco da Gama 1498'de Hindistan'a ulaştı.\n- Ümit Burnu yolunu kullandı.\n- Portekiz Hint ticaretinde güç kazandı."
+        },
+        {
+          "type": "hint",
+          "md": "Portekizli bir denizci."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Coğrafi Keşifler, Akdeniz dışındaki deniz yollarının bulunmasını sağladı. Portekiz ve İspanya bu yarışın öncüleriydi."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          18,
+          18
+        ],
+        "quote": "Vasco da Gama Ümit Burnu'nu dolaşarak Hindistan'a ulaşmıştır.",
+        "chapter": "Dünya Tarihi"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "tarih"
+      ],
+      "vurgu": [],
+      "contentHash": "facd149bc095add29dd091d8501ace0d25cac789145f7bc40944a18810c09ea5",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0084",
+      "conceptId": "dt-macellan",
+      "stem": {
+        "md": "Dünyanın çevresini dolaşan ilk seferi başlatan, ancak yolculuk sırasında ölen denizci kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Juan Sebastián Elcano"
+        },
+        {
+          "key": "B",
+          "md": "James Cook"
+        },
+        {
+          "key": "C",
+          "md": "Francis Drake"
+        },
+        {
+          "key": "D",
+          "md": "Ferdinand Macellan"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Elcano seferi tamamlayıp İspanya'ya dönen kaptandır.",
+        "B": "James Cook 18. yüzyılda Pasifik'i keşfetti.",
+        "C": "Drake dünyayı dolaşan ikinci seferi yönetti ve sağ döndü."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Sefer 1519'da başladı.\n- Macellan Filipinler'de öldürüldü.\n- Sefer 1522'de Elcano komutasında tamamlandı."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Bu sefer, Dünya'nın yuvarlak olduğunu ve okyanusların birbirine bağlı olduğunu uygulamada kanıtladı. Güney Amerika'nın ucundaki bir boğaz seferin önderinin adını taşır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          18,
+          18
+        ],
+        "quote": "Dünyayı dolaşan ilk seferi Macellan başlatmış, sefer onun ölümünden sonra tamamlanmıştır.",
+        "chapter": "Dünya Tarihi"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "tarih"
+      ],
+      "vurgu": [],
+      "contentHash": "2eba0250b161e7d8289f7341c29bde49c5a3beb42727e72566440564549c570d",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0085",
+      "conceptId": "dt-fransiz-ihtilali-yil",
+      "stem": {
+        "md": "Fransız İhtilali hangi yıl başlamıştır?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "1789"
+        },
+        {
+          "key": "B",
+          "md": "1776"
+        },
+        {
+          "key": "C",
+          "md": "1815"
+        },
+        {
+          "key": "D",
+          "md": "1848"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "1776 ABD Bağımsızlık Bildirgesi'nin yılıdır.",
+        "C": "1815 Waterloo Savaşı'nın yılıdır.",
+        "D": "1848 Avrupa'da yaygın devrimlerin yılıdır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Fransız İhtilali 1789'da başladı.\n- 14 Temmuz'da Bastille Hapishanesi basıldı.\n- Özgürlük, eşitlik, kardeşlik ve milliyetçilik fikirlerini yaydı."
+        },
+        {
+          "type": "hint",
+          "md": "Bastille baskını bu yıldadır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "İhtilal, mutlak monarşiye ve ayrıcalıklı sınıflara karşı bir halk ayaklanmasıydı. Yaydığı milliyetçilik fikri çok uluslu imparatorlukları sarstı."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          19,
+          19
+        ],
+        "quote": "Fransız İhtilali 1789'da başlamıştır.",
+        "chapter": "Dünya Tarihi"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "tarih"
+      ],
+      "vurgu": [],
+      "contentHash": "1c6f6f287c5035bca7c4bd05f92d469c6906c4078224696c96b7e43bd744b095",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0086",
+      "conceptId": "dt-waterloo",
+      "stem": {
+        "md": "Napolyon Bonapart'ın son kez yenildiği savaş hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Waterloo"
+        },
+        {
+          "key": "B",
+          "md": "Austerlitz"
+        },
+        {
+          "key": "C",
+          "md": "Trafalgar"
+        },
+        {
+          "key": "D",
+          "md": "Borodino"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Austerlitz Napolyon'un en büyük zaferlerindendir.",
+        "C": "Trafalgar'da Fransız donanması yenildi ama Napolyon'un son yenilgisi değildir.",
+        "D": "Borodino Rusya seferindeki bir savaştır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Waterloo Savaşı 1815'te bugünkü Belçika'da yapıldı.\n- Napolyon yenildi ve Saint Helena Adası'na sürüldü."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Napolyon, Avrupa'nın büyük kısmını denetimine alan Fransız imparatoruydu. Sürgünden dönüşünün ardından \"Yüz Gün\" olarak bilinen kısa bir dönem yaşandı."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          19,
+          19
+        ],
+        "quote": "Napolyon son kez Waterloo Savaşı'nda yenilmiştir.",
+        "chapter": "Dünya Tarihi"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "tarih"
+      ],
+      "vurgu": [],
+      "contentHash": "2061f4d47e7433df596f0b434b835db522ae6cf276f0e0bfcc32bbb303e5dfd4",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0087",
+      "conceptId": "dt-abd-bagimsizlik",
+      "stem": {
+        "md": "Amerika Birleşik Devletleri'nin Bağımsızlık Bildirgesi hangi yıl ilan edilmiştir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "1789"
+        },
+        {
+          "key": "B",
+          "md": "1492"
+        },
+        {
+          "key": "C",
+          "md": "1776"
+        },
+        {
+          "key": "D",
+          "md": "1865"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "1789 Fransız İhtilali'nin yılıdır.",
+        "B": "1492 Kolomb'un Amerika'ya ulaştığı yıldır.",
+        "D": "1865 ABD İç Savaşı'nın bittiği yıldır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Bildirge 4 Temmuz 1776'da ilan edildi.\n- On üç koloni İngiltere'den bağımsızlığını duyurdu."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Kuzey Amerika'daki İngiliz kolonileri, temsil edilmeden vergilendirilmeye karşı çıktı. Çatışma bağımsızlık savaşına dönüştü."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          19,
+          19
+        ],
+        "quote": "ABD Bağımsızlık Bildirgesi 1776'da ilan edilmiştir.",
+        "chapter": "Dünya Tarihi"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "tarih"
+      ],
+      "vurgu": [],
+      "contentHash": "26143f4d9b628a25783acc35eb6ecab91438a312c37b563264988d428bb92dba",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0088",
+      "conceptId": "dt-sanayi-devrimi",
+      "stem": {
+        "md": "Sanayi Devrimi ilk olarak hangi ülkede başlamıştır?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Fransa"
+        },
+        {
+          "key": "B",
+          "md": "Almanya"
+        },
+        {
+          "key": "C",
+          "md": "ABD"
+        },
+        {
+          "key": "D",
+          "md": "İngiltere"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Fransa sanayileşmeye daha geç geçti.",
+        "B": "Almanya birliğini 19. yüzyılın sonunda kurdu ve sonradan sanayileşti.",
+        "C": "ABD sanayileşmede İngiltere'yi izledi."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Sanayi Devrimi 18. yüzyılın ikinci yarısında İngiltere'de başladı.\n- Buhar makinesi ve dokuma tezgâhları üretimi değiştirdi."
+        },
+        {
+          "type": "hint",
+          "md": "Kömür ve demir yatakları zengin bir ada ülkesi."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Sanayi Devrimi, el emeğine dayalı üretimden makineli fabrika üretimine geçiştir. Kentleşme ve işçi sınıfının doğuşu bu dönemde hızlandı."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          19,
+          19
+        ],
+        "quote": "Sanayi Devrimi ilk olarak İngiltere'de başlamıştır.",
+        "chapter": "Dünya Tarihi"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "tarih"
+      ],
+      "vurgu": [],
+      "contentHash": "2fa5de30013c0accd628da7c6c152a061a6ae1ff0281310a3a9d6bf5210ffc68",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0089",
+      "conceptId": "dt-ww1-baslangic",
+      "stem": {
+        "md": "Birinci Dünya Savaşı'nı başlatan kıvılcım kabul edilen suikast hangi şehirde gerçekleşmiştir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Viyana"
+        },
+        {
+          "key": "B",
+          "md": "Belgrad"
+        },
+        {
+          "key": "C",
+          "md": "Berlin"
+        },
+        {
+          "key": "D",
+          "md": "Saraybosna"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Viyana Avusturya-Macaristan'ın başkentidir; suikast orada olmadı.",
+        "B": "Belgrad Sırbistan'ın başkentidir.",
+        "C": "Berlin Almanya'nın başkentidir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Avusturya-Macaristan veliahdı Franz Ferdinand 1914'te Saraybosna'da öldürüldü.\n- Ardından savaş ilanları zincirleme geldi."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Savaşın asıl nedenleri sömürge rekabeti, bloklaşma ve silahlanmaydı. Bir suikast bu gerginliği açık savaşa dönüştürdü."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          19,
+          19
+        ],
+        "quote": "Birinci Dünya Savaşı'nı başlatan suikast Saraybosna'da gerçekleşmiştir.",
+        "chapter": "Dünya Tarihi"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "tarih"
+      ],
+      "vurgu": [],
+      "contentHash": "205ec9afc19539911022b81120797d24308fe05caba895b91be0a845dd3ca3ba",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0090",
+      "conceptId": "dt-ww1-bitis-versay",
+      "stem": {
+        "md": "Birinci Dünya Savaşı'ndan sonra Almanya ile imzalanan antlaşma hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Versay"
+        },
+        {
+          "key": "B",
+          "md": "Sevr"
+        },
+        {
+          "key": "C",
+          "md": "Nöyyi"
+        },
+        {
+          "key": "D",
+          "md": "Trianon"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Sevr Osmanlı Devleti ile imzalandı.",
+        "C": "Nöyyi Bulgaristan ile imzalandı.",
+        "D": "Trianon Macaristan ile imzalandı."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Versay Antlaşması 1919'da imzalandı.\n- Almanya'ya ağır savaş tazminatı ve ordu sınırlamaları getirdi.\n- Bu ağır koşullar İkinci Dünya Savaşı'nın nedenleri arasında sayılır."
+        },
+        {
+          "type": "hint",
+          "md": "Paris yakınlarındaki ünlü bir sarayın adı."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Paris Barış Konferansı'nda yenilen devletlerin her biriyle ayrı antlaşmalar imzalandı. Bu antlaşmalar Avrupa'nın haritasını yeniden çizdi."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          20,
+          20
+        ],
+        "quote": "Birinci Dünya Savaşı'ndan sonra Almanya ile Versay Antlaşması imzalanmıştır.",
+        "chapter": "Dünya Tarihi"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "tarih"
+      ],
+      "vurgu": [],
+      "contentHash": "e6ada780b9ba7d1efa6789bc2fdee9ac928474be07dbb3f5b26a8cdd149a7d47",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0091",
+      "conceptId": "dt-milletler-cemiyeti",
+      "stem": {
+        "md": "Birinci Dünya Savaşı'ndan sonra barışı korumak için kurulan uluslararası örgüt hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Birleşmiş Milletler"
+        },
+        {
+          "key": "B",
+          "md": "NATO"
+        },
+        {
+          "key": "C",
+          "md": "Milletler Cemiyeti"
+        },
+        {
+          "key": "D",
+          "md": "Avrupa Konseyi"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Birleşmiş Milletler İkinci Dünya Savaşı'ndan sonra kuruldu.",
+        "B": "NATO 1949'da kurulmuş bir askerî ittifaktır.",
+        "D": "Avrupa Konseyi 1949'da kuruldu."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Milletler Cemiyeti 1920'de kuruldu.\n- İkinci Dünya Savaşı'nı önleyemedi.\n- Yerini Birleşmiş Milletler aldı."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Savaşın yıkımı, devletler arası anlaşmazlıkları görüşmeyle çözecek bir kurum fikrini doğurdu. Örgütün yaptırım gücü sınırlıydı."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          20,
+          20
+        ],
+        "quote": "Birinci Dünya Savaşı'ndan sonra Milletler Cemiyeti kurulmuştur.",
+        "chapter": "Dünya Tarihi"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "tarih"
+      ],
+      "vurgu": [],
+      "contentHash": "ca756d06a8138fe167e34a52311c294ec35dbfb94ca02fec5895854cfc599656",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0092",
+      "conceptId": "dt-ww2-baslangic",
+      "stem": {
+        "md": "İkinci Dünya Savaşı, Almanya'nın hangi ülkeye saldırmasıyla başlamıştır?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Fransa"
+        },
+        {
+          "key": "B",
+          "md": "Sovyetler Birliği"
+        },
+        {
+          "key": "C",
+          "md": "Polonya"
+        },
+        {
+          "key": "D",
+          "md": "Çekoslovakya"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Fransa'ya saldırı 1940'tadır.",
+        "B": "Sovyetler Birliği'ne saldırı 1941'dedir.",
+        "D": "Çekoslovakya savaştan önce, saldırısız olarak işgal edildi."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Almanya 1 Eylül 1939'da Polonya'ya saldırdı.\n- İngiltere ve Fransa Almanya'ya savaş ilan etti."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Savaştan önce Almanya bazı toprakları silahlı çatışma olmadan ele geçirmişti. Bu ülkeye saldırı ise büyük güçlerin savaşa girmesine yol açtı."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          20,
+          20
+        ],
+        "quote": "İkinci Dünya Savaşı Almanya'nın Polonya'ya saldırmasıyla başlamıştır.",
+        "chapter": "Dünya Tarihi"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "tarih"
+      ],
+      "vurgu": [],
+      "contentHash": "cb5d860969f0aaa42093aa355dc7d1aa0d67c46e3b0c0c4fba4b3187527644ba",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0093",
+      "conceptId": "dt-pearl-harbor",
+      "stem": {
+        "md": "ABD'nin İkinci Dünya Savaşı'na girmesine yol açan 1941 saldırısını hangi ülke yapmıştır?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Japonya"
+        },
+        {
+          "key": "B",
+          "md": "Almanya"
+        },
+        {
+          "key": "C",
+          "md": "İtalya"
+        },
+        {
+          "key": "D",
+          "md": "Sovyetler Birliği"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Almanya Pearl Harbor'a saldırmadı.",
+        "C": "İtalya Pasifik'te etkin değildi.",
+        "D": "Sovyetler Birliği ABD ile aynı safta yer aldı."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Japonya 7 Aralık 1941'de Pearl Harbor'a saldırdı.\n- ABD ertesi gün savaşa girdi."
+        },
+        {
+          "type": "hint",
+          "md": "Pasifik'teki bir ada ülkesi."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Pearl Harbor, Hawaii'deki ABD deniz üssüdür. Ani hava saldırısı Pasifik'teki savaşın başlangıcı oldu."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          20,
+          20
+        ],
+        "quote": "Pearl Harbor saldırısını Japonya yapmıştır.",
+        "chapter": "Dünya Tarihi"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "tarih"
+      ],
+      "vurgu": [],
+      "contentHash": "2fa7e85493bad1cff4d412f2d4b91c395e66b2c6b280b829a9d4b021d90a13d9",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0094",
+      "conceptId": "dt-bm-kurulus",
+      "stem": {
+        "md": "Birleşmiş Milletler hangi yıl kurulmuştur?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "1919"
+        },
+        {
+          "key": "B",
+          "md": "1949"
+        },
+        {
+          "key": "C",
+          "md": "1945"
+        },
+        {
+          "key": "D",
+          "md": "1957"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "1919 Paris Barış Konferansı'nın yılıdır.",
+        "B": "1949 NATO'nun kuruluş yılıdır.",
+        "D": "1957 Roma Antlaşması'nın yılıdır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- BM, 1945'te San Francisco Konferansı'ndan sonra kuruldu.\n- Merkezi New York'tadır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "İkinci Dünya Savaşı'nın ardından kurulan bu örgüt, uluslararası barış ve güvenliği korumayı amaçlar. Güvenlik Konseyi'nde beş daimî üye vardır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          20,
+          20
+        ],
+        "quote": "Birleşmiş Milletler 1945'te kurulmuştur.",
+        "chapter": "Dünya Tarihi"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "tarih"
+      ],
+      "vurgu": [],
+      "contentHash": "8b2f796e388e20e2f5ad3666d4b35106b47529f2b9be7eba224077f8707ea077",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0095",
+      "conceptId": "dt-berlin-duvari",
+      "stem": {
+        "md": "Berlin Duvarı hangi yıl yıkılmıştır?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "1961"
+        },
+        {
+          "key": "B",
+          "md": "1989"
+        },
+        {
+          "key": "C",
+          "md": "1991"
+        },
+        {
+          "key": "D",
+          "md": "1945"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "1961 duvarın yapıldığı yıldır.",
+        "C": "1991 Sovyetler Birliği'nin dağıldığı yıldır.",
+        "D": "1945 İkinci Dünya Savaşı'nın bittiği yıldır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Berlin Duvarı 9 Kasım 1989'da açıldı.\n- Almanya 1990'da yeniden birleşti."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Duvar, Soğuk Savaş döneminde Doğu ve Batı Berlin'i ayıran sınırdı. Doğu ile Batı bloklarının bölünmüşlüğünün simgesi oldu."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          21,
+          21
+        ],
+        "quote": "Berlin Duvarı 1989'da yıkılmıştır.",
+        "chapter": "Dünya Tarihi"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "tarih"
+      ],
+      "vurgu": [],
+      "contentHash": "c96f79ff23c70b6c007750b2a58159d7c0e17fdc4bd1710d792eae9af900347a",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0096",
+      "conceptId": "dt-soguk-savas-taraf",
+      "stem": {
+        "md": "Soğuk Savaş hangi iki süper güç arasındaki rekabeti anlatır?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "İngiltere ve Fransa"
+        },
+        {
+          "key": "B",
+          "md": "Almanya ve Japonya"
+        },
+        {
+          "key": "C",
+          "md": "ABD ve Sovyetler Birliği"
+        },
+        {
+          "key": "D",
+          "md": "Çin ve Hindistan"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "İngiltere ve Fransa aynı blokta yer aldı.",
+        "B": "Almanya ve Japonya savaştan yenik çıkmıştı.",
+        "D": "Çin ve Hindistan bu rekabetin ana tarafı değildi."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Soğuk Savaş 1945 sonrası ABD ile Sovyetler Birliği arasında yaşandı.\n- Doğrudan savaş yerine silahlanma, uzay yarışı ve vekâlet savaşlarıyla sürdü."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Adındaki \"soğuk\", iki büyük gücün birbiriyle doğrudan savaşmamasını anlatır. Dünya iki ideolojik bloka bölündü."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          21,
+          21
+        ],
+        "quote": "Soğuk Savaş ABD ile Sovyetler Birliği arasındaki rekabettir.",
+        "chapter": "Dünya Tarihi"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "tarih"
+      ],
+      "vurgu": [],
+      "contentHash": "a5246743bb6dcd60979de5e6b3f29955ade29447c926c1e12fef373fc080c224",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0097",
+      "conceptId": "dt-sssr-dagilma",
+      "stem": {
+        "md": "Sovyetler Birliği hangi yıl dağılmıştır?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "1989"
+        },
+        {
+          "key": "B",
+          "md": "1991"
+        },
+        {
+          "key": "C",
+          "md": "1985"
+        },
+        {
+          "key": "D",
+          "md": "1999"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "1989 Berlin Duvarı'nın yıkılış yılıdır.",
+        "C": "1985 Gorbaçov'un yönetime geldiği yıldır.",
+        "D": "1999'da Sovyetler Birliği zaten yoktu."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Sovyetler Birliği Aralık 1991'de dağıldı.\n- Yerine on beş bağımsız devlet çıktı.\n- Soğuk Savaş sona erdi."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "1980'lerin sonunda Doğu Bloku'nda ekonomik sıkıntılar ve reform girişimleri büyük değişimlere yol açtı. Birlik içindeki cumhuriyetler bağımsızlık ilan etti."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          21,
+          21
+        ],
+        "quote": "Sovyetler Birliği 1991'de dağılmıştır.",
+        "chapter": "Dünya Tarihi"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "tarih"
+      ],
+      "vurgu": [],
+      "contentHash": "6ac085fe86ceb4b5c1c1e34ebb6700266f4f93e4954829a660ca5630951769af",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0098",
+      "conceptId": "dt-cin-seddi",
+      "stem": {
+        "md": "Çin Seddi'nin yapılmasının başlıca amacı neydi?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Nehirlerin taşmasını önlemek"
+        },
+        {
+          "key": "B",
+          "md": "Kuzeyden gelen göçebe saldırılarına karşı korunmak"
+        },
+        {
+          "key": "C",
+          "md": "İpek Yolu'ndan vergi toplamak için gümrük kurmak"
+        },
+        {
+          "key": "D",
+          "md": "Japonya'ya karşı kıyıları korumak"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Taşkın önleme için set ve kanallar yapılmıştır, Sed bunun için değildir.",
+        "C": "Ticaretin denetimi yan bir işlevdir, temel amaç değildir.",
+        "D": "Sed kıyıda değil, kuzey sınırındadır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Çin Seddi kuzey sınırı boyunca yapıldı.\n- Amaç Hunlar gibi bozkır topluluklarının akınlarını durdurmaktı.\n- Yüzyıllar boyunca farklı hanedanlarca genişletildi."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Bozkırdaki atlı göçebe topluluklar ile yerleşik Çin arasında uzun süren bir mücadele vardı. Duvarlar, gözetleme kuleleri ve garnizonlarla bir savunma hattı oluşturuldu."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          21,
+          21
+        ],
+        "quote": "Çin Seddi kuzeyden gelen göçebe saldırılarına karşı yapılmıştır.",
+        "chapter": "Dünya Tarihi"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "tarih"
+      ],
+      "vurgu": [],
+      "contentHash": "6dd5a8fc924b7cb5b3d173411ab5178cb6ac0e9bb6eb3aa8576d9fadafc21ff1",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0099",
+      "conceptId": "dt-iskender",
+      "stem": {
+        "md": "Makedonya kralı olup Pers İmparatorluğu'nu yıkan ve Hindistan'a kadar ilerleyen hükümdar kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Jül Sezar"
+        },
+        {
+          "key": "B",
+          "md": "Hannibal"
+        },
+        {
+          "key": "C",
+          "md": "II. Filip"
+        },
+        {
+          "key": "D",
+          "md": "Büyük İskender"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Jül Sezar bir Romalı devlet adamıdır.",
+        "B": "Hannibal Kartacalı bir komutandır.",
+        "C": "II. Filip İskender'in babasıdır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Büyük İskender MÖ 4. yüzyılda yaşadı.\n- Pers İmparatorluğu'nu yıktı.\n- Kurduğu imparatorluk ölümünden sonra parçalandı."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "İskender'in fetihleri Yunan kültürü ile Doğu kültürlerini kaynaştırdı. Bu döneme Helenistik Çağ denir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          21,
+          21
+        ],
+        "quote": "Pers İmparatorluğu'nu Makedonya kralı Büyük İskender yıkmıştır.",
+        "chapter": "Dünya Tarihi"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "tarih"
+      ],
+      "vurgu": [],
+      "contentHash": "46ad36f7f5be3cd11d61cb1ceb77de4cf2d69e5243ae4883c3efe35b1324166d",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0100",
+      "conceptId": "dt-jul-sezar",
+      "stem": {
+        "md": "Roma Cumhuriyeti'nde senatörlerce öldürülen ve adı sonradan \"imparator\" unvanının karşılıklarına kaynaklık eden devlet adamı kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Augustus"
+        },
+        {
+          "key": "B",
+          "md": "Neron"
+        },
+        {
+          "key": "C",
+          "md": "Konstantin"
+        },
+        {
+          "key": "D",
+          "md": "Jül Sezar"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Augustus ilk Roma imparatorudur ama suikasta kurban gitmedi.",
+        "B": "Neron imparatordu ve kendi canına kıydı.",
+        "C": "Konstantin İstanbul'u başkent yapan imparatordur."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Jül Sezar MÖ 44'te senatörler tarafından öldürüldü.\n- Adı Almancadaki \"Kaiser\" ve Rusçadaki \"Çar\" unvanlarına kaynaklık etti."
+        },
+        {
+          "type": "hint",
+          "md": "Mart ayının ortasında öldürüldü."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Roma, krallıktan sonra yüzyıllarca cumhuriyetle yönetildi. Güçlü komutanların siyasete hâkim olması cumhuriyetten imparatorluğa geçişi hazırladı."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          22,
+          22
+        ],
+        "quote": "Jül Sezar MÖ 44'te senatörlerce öldürülmüştür.",
+        "chapter": "Dünya Tarihi"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "tarih"
+      ],
+      "vurgu": [],
+      "contentHash": "2de7816ebc5ac4277892352136633ad343d04c7163f3e55322794db62eec10e2",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0101",
+      "conceptId": "dt-hindistan-bagimsizlik",
+      "stem": {
+        "md": "Hindistan'ın İngiltere'den bağımsızlığını kazanmasında şiddetsiz direniş yöntemiyle öne çıkan önder kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Nelson Mandela"
+        },
+        {
+          "key": "B",
+          "md": "Martin Luther King"
+        },
+        {
+          "key": "C",
+          "md": "Mahatma Gandhi"
+        },
+        {
+          "key": "D",
+          "md": "Ho Chi Minh"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Mandela Güney Afrika'da ırk ayrımına karşı mücadele etti.",
+        "B": "Martin Luther King ABD'de sivil haklar hareketinin önderidir.",
+        "D": "Ho Chi Minh Vietnam'ın bağımsızlık önderidir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Hindistan 1947'de bağımsız oldu.\n- Gandhi şiddetsiz direniş ve sivil itaatsizliği savundu.\n- Tuz Yürüyüşü en bilinen eylemlerindendir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Sömürge yönetimine karşı silah yerine boykot, yürüyüş ve yasa tanımama gibi yöntemler kullanıldı. Bu yaklaşım dünyadaki birçok hak hareketini etkiledi."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          22,
+          22
+        ],
+        "quote": "Hindistan'ın bağımsızlık mücadelesinde Mahatma Gandhi şiddetsiz direnişle öne çıkmıştır.",
+        "chapter": "Dünya Tarihi"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "tarih"
+      ],
+      "vurgu": [],
+      "contentHash": "a6d34a088df1fca8ed7c208ac4298d146306fb1c1c26556004ffc5dadc6cb6c9",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0102",
+      "conceptId": "dt-mandela",
+      "stem": {
+        "md": "Güney Afrika'da ırk ayrımı politikasına verilen ad nedir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Apartheid"
+        },
+        {
+          "key": "B",
+          "md": "Kast sistemi"
+        },
+        {
+          "key": "C",
+          "md": "Feodalizm"
+        },
+        {
+          "key": "D",
+          "md": "Merkantilizm"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Kast sistemi Hindistan'daki geleneksel toplumsal tabakalaşmadır.",
+        "C": "Feodalizm Orta Çağ Avrupa'sının toprak düzenidir.",
+        "D": "Merkantilizm bir ekonomi politikasıdır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Apartheid 1948–1990'ların başı arasında Güney Afrika'da uygulandı.\n- Nelson Mandela bu düzene karşı mücadelenin simgesi oldu.\n- Mandela 1994'te ülkenin ilk siyahi devlet başkanı oldu."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Bu politika insanları ırklarına göre ayırıp farklı haklar tanıyan yasal bir düzendi. Uluslararası yaptırımlar ve iç direniş sonunda kaldırıldı."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          22,
+          22
+        ],
+        "quote": "Güney Afrika'daki ırk ayrımı politikasına apartheid denir.",
+        "chapter": "Dünya Tarihi"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "tarih"
+      ],
+      "vurgu": [],
+      "contentHash": "043eebb9935d7d2e87ae71ed5ab55f021d675e14a562e7c708d5e678debb9bac",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0103",
+      "conceptId": "dt-ay-inis-yil",
+      "stem": {
+        "md": "İnsanın Ay'a ilk kez ayak bastığı yıl hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "1957"
+        },
+        {
+          "key": "B",
+          "md": "1961"
+        },
+        {
+          "key": "C",
+          "md": "1969"
+        },
+        {
+          "key": "D",
+          "md": "1975"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "1957 ilk yapay uydu Sputnik'in fırlatıldığı yıldır.",
+        "B": "1961 ilk insanlı uzay uçuşunun yılıdır.",
+        "D": "1975'te insanlı Ay inişi yapılmadı."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Apollo 11 ile 1969'da Ay'a inildi.\n- Ay'a ilk ayak basan Neil Armstrong'dur."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Uzay yarışı, Soğuk Savaş'ın bilim ve teknoloji alanındaki yansımasıydı. İki süper güç ilk uydu, ilk insanlı uçuş ve Ay hedefi için yarıştı."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          22,
+          22
+        ],
+        "quote": "İnsan Ay'a ilk kez 1969'da ayak basmıştır.",
+        "chapter": "Dünya Tarihi"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "tarih"
+      ],
+      "vurgu": [],
+      "contentHash": "7a998ad5758ac481e9de9e2798fdb5268cb3545b1bc3841e7ddb3d1b13b6652f",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0104",
+      "conceptId": "dt-mohenjo-degil",
+      "stem": {
+        "md": "Aşağıdakilerden hangisi Mezopotamya'da kurulmuş bir uygarlık değildir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Sümer"
+        },
+        {
+          "key": "B",
+          "md": "Mısır"
+        },
+        {
+          "key": "C",
+          "md": "Akad"
+        },
+        {
+          "key": "D",
+          "md": "Asur"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Sümerler Mezopotamya'nın güneyinde yaşadı.",
+        "C": "Akadlar Mezopotamya'da ilk imparatorluğu kurdu.",
+        "D": "Asurlular Kuzey Mezopotamya'da güçlü bir devlet kurdu."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Mezopotamya Dicle ile Fırat arasındaki bölgedir.\n- Sümer, Akad, Babil ve Asur burada kuruldu.\n- Mısır uygarlığı Nil kıyısında gelişti."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "İlk büyük uygarlıklar verimli nehir vadilerinde doğdu. Her biri kendi nehrinin taşkın düzenine göre tarım yaptı."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          22,
+          22
+        ],
+        "quote": "Mısır uygarlığı Mezopotamya'da değil Nil kıyısında gelişmiştir.",
+        "chapter": "Dünya Tarihi"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "tarih"
+      ],
+      "vurgu": [],
+      "contentHash": "3d1b4d6dc6fe3563bf67f3dac52d00115d6aff7a131947af51ec5e3657d0493b",
+      "deleted": false
+    }
+  ]
+}

@@ -7,13 +7,16 @@ import type {
   BankQuestion,
   BankRow,
   ChapterSummary,
+  HistoryPage,
   ModuleSummary,
   QuizloopApi,
+  RecentSession,
   Settings,
   SourceBook,
   StatsOverview
 } from '@shared/ipc'
 import { flagFile, type FlagFile, moduleQuestion, moduleQuestions, setFlag } from './bank'
+import { historyPage, recentSessions } from './history'
 import { Library } from './library'
 import { forgetModule, listModules, moduleChapters, resetModule } from './modules'
 import { sourceBook, type BookResolver } from './source'
@@ -54,6 +57,10 @@ export interface Core {
   }
   stats: {
     overview(): Promise<StatsOverview>
+  }
+  history: {
+    recent(limit?: number): Promise<RecentSession[]>
+    page(offset: number, limit?: number): Promise<HistoryPage>
   }
 }
 
@@ -126,6 +133,10 @@ export function createCore(deps: CoreDeps): Core {
     },
     stats: {
       overview: () => statsOverview(db, ports.now(), dayOf)
+    },
+    history: {
+      recent: (limit?: number) => recentSessions({ db, library }, limit),
+      page: (offset: number, limit?: number) => historyPage({ db, library }, offset, limit)
     }
   }
 }

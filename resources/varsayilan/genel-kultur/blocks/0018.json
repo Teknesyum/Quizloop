@@ -1,0 +1,2605 @@
+{
+  "blockId": "0018",
+  "questions": [
+    {
+      "id": "genel-kultur-0703",
+      "conceptId": "kan-pompalayan-organ",
+      "stem": {
+        "md": "Kanı bütün vücuda pompalayan organ hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Kalp"
+        },
+        {
+          "key": "B",
+          "md": "Akciğer"
+        },
+        {
+          "key": "C",
+          "md": "Karaciğer"
+        },
+        {
+          "key": "D",
+          "md": "Böbrek"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Akciğer kana oksijen kazandırır ama kanı pompalamaz.",
+        "C": "Karaciğer kandaki maddeleri işler, pompalama yapmaz.",
+        "D": "Böbrek kanı süzer ve idrarı oluşturur."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: Kalp.\n- Kalp kasılıp gevşeyerek kanı damarlara iter.\n- Bu atışlar bilekten ya da boyundan nabız olarak hissedilir."
+        },
+        {
+          "type": "hint",
+          "md": "Göğsümüzde atışını hissederiz."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Dolaşım sistemi kanı, damarları ve kanı hareket ettiren bir pompadan oluşur. Kan bu sistemde dolaşarak hücrelere oksijen ve besin götürür, atıkları toplar."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          135,
+          135
+        ],
+        "quote": "Kalp, kanı bütün vücuda pompalayan organdır.",
+        "chapter": "Sağlık"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "sağlık"
+      ],
+      "vurgu": [],
+      "contentHash": "1b167b4477efac7e4955c3895868a93ef2ba166e8c43062b943b4cbdb288379b",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0704",
+      "conceptId": "sg-kalp-odacik",
+      "stem": {
+        "md": "İnsan kalbi ____ odacıktan oluşur. Boşluğa hangisi gelmelidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "İki"
+        },
+        {
+          "key": "B",
+          "md": "Üç"
+        },
+        {
+          "key": "C",
+          "md": "Altı"
+        },
+        {
+          "key": "D",
+          "md": "Dört"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "İki odacıklı kalp balıklarda görülür.",
+        "B": "Üç odacıklı kalp kurbağa gibi iki yaşamlılarda görülür.",
+        "C": "Altı odacıklı bir kalp omurgalılarda bulunmaz."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: Dört.\n- Üstte iki kulakçık, altta iki karıncık bulunur.\n- Sağ ve sol taraf birbirinden ayrıldığı için temiz ve kirli kan karışmaz."
+        },
+        {
+          "type": "hint",
+          "md": "Kuşlar ve diğer memelilerle aynı sayı."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Omurgalıların kalpleri, odacık sayısı bakımından gruptan gruba farklılık gösterir. Odacık sayısı arttıkça oksijenli ve oksijensiz kanın ayrılması daha etkin olur."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          135,
+          135
+        ],
+        "quote": "İnsan kalbi iki kulakçık ve iki karıncık olmak üzere dört odacıktan oluşur.",
+        "chapter": "Sağlık"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "sağlık"
+      ],
+      "vurgu": [],
+      "contentHash": "aa733d19e093c7a9a0f662de9dc18f9dabf35b3c4b9542364b7c472c16a049b6",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0705",
+      "conceptId": "sg-kucuk-dolasim-sirasi",
+      "stem": {
+        "md": "Küçük dolaşımda kanın izlediği yolun doğru sırası hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Sol karıncık - Akciğerler - Sağ kulakçık - Sağ karıncık"
+        },
+        {
+          "key": "B",
+          "md": "Sağ kulakçık - Akciğerler - Sol karıncık - Sol kulakçık"
+        },
+        {
+          "key": "C",
+          "md": "Sağ karıncık - Sol kulakçık - Akciğerler - Sol karıncık"
+        },
+        {
+          "key": "D",
+          "md": "Sağ karıncık - Akciğerler - Sol kulakçık - Sol karıncık"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Sol karıncık kanı akciğere değil, bütün vücuda gönderir.",
+        "B": "Akciğerden dönen kan önce sol karıncığa değil, sol kulakçığa girer.",
+        "C": "Kan akciğerlere uğramadan sol kulakçığa geçemez."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru sıra: Sağ karıncık - Akciğerler - Sol kulakçık - Sol karıncık.\n- Kan akciğerlerde karbondioksit bırakıp oksijen alır.\n- Sol karıncıktan sonra büyük dolaşım başlar."
+        },
+        {
+          "type": "hint",
+          "md": "Kirli kan sağ taraftan çıkar, temizlenmiş kan sol tarafa döner."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "İnsanda kan iki ayrı devrede dolaşır: biri kanı akciğerlere götürüp getirir, diğeri bütün vücudu dolaşır. Kalbin sağ ve sol yarısı bu iki devreyi ayrı ayrı yönetir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          135,
+          135
+        ],
+        "quote": "Küçük dolaşımda kan sağ karıncıktan akciğerlere gider ve oksijence zenginleşerek sol kulakçığa döner; buradan sol karıncığa geçer.",
+        "chapter": "Sağlık"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "sağlık"
+      ],
+      "vurgu": [],
+      "contentHash": "7b4bb0b2a06b4ddb6b9248d81c615a6290b9210602eb95e886afd320d8cc5c2d",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0706",
+      "conceptId": "sg-hemoglobin",
+      "stem": {
+        "md": "Kırmızı kan hücrelerinde bulunan ve kana kırmızı rengini veren protein hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Keratin"
+        },
+        {
+          "key": "B",
+          "md": "İnsülin"
+        },
+        {
+          "key": "C",
+          "md": "Hemoglobin"
+        },
+        {
+          "key": "D",
+          "md": "Kolajen"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Keratin saç ve tırnakta bulunan yapı proteinidir.",
+        "B": "İnsülin kan şekerini düzenleyen bir hormondur.",
+        "D": "Kolajen deri, kıkırdak ve kemikte bulunan bağ dokusu proteinidir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: Hemoglobin.\n- Hemoglobin akciğerde oksijene bağlanır, dokularda onu bırakır.\n- Yapısındaki demir kana kırmızı rengini verir."
+        },
+        {
+          "type": "hint",
+          "md": "Adı \"kan\" anlamına gelen Yunanca bir kökle başlar."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Oksijen kanda kendi başına çok az çözünür. Bu yüzden kan hücreleri, oksijeni bağlayıp taşıyabilen özel bir molekülle doludur."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          135,
+          135
+        ],
+        "quote": "Kırmızı kan hücreleri oksijeni hemoglobin adlı protein sayesinde taşır.",
+        "chapter": "Sağlık"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "sağlık"
+      ],
+      "vurgu": [],
+      "contentHash": "eaba3baed4143411d265278c8ce7abfffb56ef6102149eb85429b6148c955714",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0707",
+      "conceptId": "sg-kan-hucre-eslestirme",
+      "stem": {
+        "md": "Kan hücrelerini görevleriyle eşleştirin.\n\n1. Alyuvar\n2. Akyuvar\n3. Kan pulcuğu (trombosit)\n\na. Kanın pıhtılaşması\nb. Oksijen taşıma\nc. Mikroplara karşı savunma"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "1-c, 2-b, 3-a"
+        },
+        {
+          "key": "B",
+          "md": "1-b, 2-a, 3-c"
+        },
+        {
+          "key": "C",
+          "md": "1-b, 2-c, 3-a"
+        },
+        {
+          "key": "D",
+          "md": "1-a, 2-c, 3-b"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Alyuvar savunma değil oksijen taşıma işini görür.",
+        "B": "Akyuvar pıhtılaşmayı değil, savunmayı üstlenir.",
+        "D": "Alyuvar pıhtılaşmada değil, oksijen taşımada görevlidir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Alyuvar: oksijen taşıma (1-b).\n- Akyuvar: mikroplara karşı savunma (2-c).\n- Kan pulcuğu: pıhtılaşma (3-a)."
+        },
+        {
+          "type": "hint",
+          "md": "Bir yerimiz kesildiğinde kanamanın durmasını sağlayan en küçük parçacıklardır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Kan, sıvı bir plazma ile içinde yüzen farklı hücre ve parçacıklardan oluşur. Her biri taşıma, savunma ya da onarım gibi ayrı bir işi üstlenir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          135,
+          135
+        ],
+        "quote": "Kan pulcukları (trombositler) kanın pıhtılaşmasında görev alır.",
+        "chapter": "Sağlık"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "sağlık"
+      ],
+      "vurgu": [],
+      "contentHash": "34e1d2d808cc15f8fc25b218ff13e737c1d44fb72c4d81f37cd1f939d1e2fc02",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0708",
+      "conceptId": "sg-alveol",
+      "stem": {
+        "md": "Akciğerlerde bulunan, oksijen ile karbondioksitin kan ile hava arasında yer değiştirdiği küçük keseciklere ne ad verilir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Alveol"
+        },
+        {
+          "key": "B",
+          "md": "Bronş"
+        },
+        {
+          "key": "C",
+          "md": "Gırtlak"
+        },
+        {
+          "key": "D",
+          "md": "Diyafram"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Bronşlar havayı akciğerlere taşıyan borulardır; gaz alışverişi orada olmaz.",
+        "C": "Gırtlak ses tellerinin bulunduğu hava yoludur.",
+        "D": "Diyafram soluk alıp vermeyi sağlayan kastır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: Alveol.\n- Alveollerin çevresi ince kılcal damarlarla sarılıdır.\n- Oksijen kana geçer, karbondioksit kandan havaya bırakılır."
+        },
+        {
+          "type": "hint",
+          "md": "Üzüm salkımına benzeyen, sayıca milyonlarca olan yapılar."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Soluk borusu dallanarak akciğerin derinlerine doğru giderek incelir. Bu dallanmanın sonunda, gazların ince bir duvar boyunca kanla buluştuğu çok geniş bir yüzey oluşur."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          135,
+          135
+        ],
+        "quote": "Akciğerlerdeki alveoller, oksijen ile karbondioksit alışverişinin yapıldığı küçük keseciklerdir.",
+        "chapter": "Sağlık"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "sağlık"
+      ],
+      "vurgu": [],
+      "contentHash": "4a976f8105c9282e6f9b7d775a4da7235868aa9428425e49ee7b4c9ecc854ecf",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0709",
+      "conceptId": "sg-harvey",
+      "stem": {
+        "md": "1628'de yayımladığı eserinde kanın vücutta bir döngü hâlinde dolaştığını gösteren hekim kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Galenos"
+        },
+        {
+          "key": "B",
+          "md": "William Harvey"
+        },
+        {
+          "key": "C",
+          "md": "Andreas Vesalius"
+        },
+        {
+          "key": "D",
+          "md": "Edward Jenner"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Galenos Antik Çağ'da yaşadı ve kanın karaciğerde sürekli üretildiğini düşünüyordu.",
+        "C": "Vesalius insan anatomisi kitabıyla bilinir, dolaşımı tanımlamamıştır.",
+        "D": "Jenner çiçek aşısıyla bilinir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: William Harvey.\n- Harvey kanın kalpten çıkıp yine kalbe döndüğünü gösterdi.\n- Bu buluş Galenos'tan kalan eski görüşü değiştirdi."
+        },
+        {
+          "type": "hint",
+          "md": "İngiliz bir hekimdi; kral I. Charles'ın da hekimliğini yaptı."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Yüzyıllarca kanın sürekli üretilip vücutta tüketildiği sanıldı. 17. yüzyılda ölçüme ve deneye dayanan bir çalışma, kalbin aynı kanı tekrar tekrar pompaladığını ortaya koydu."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          135,
+          135
+        ],
+        "quote": "William Harvey, 1628'de yayımladığı eserinde kanın vücutta bir döngü hâlinde dolaştığını gösterdi.",
+        "chapter": "Sağlık"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "sağlık"
+      ],
+      "vurgu": [],
+      "contentHash": "b1d807c30e929f98a5c50a1dd51266b0a7b5cd4e25da83d2828c36e2b7e2bb07",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0710",
+      "conceptId": "sg-nisasta-agiz",
+      "stem": {
+        "md": "Nişastanın sindirimi ilk olarak nerede başlar?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Ağız"
+        },
+        {
+          "key": "B",
+          "md": "Mide"
+        },
+        {
+          "key": "C",
+          "md": "İnce bağırsak"
+        },
+        {
+          "key": "D",
+          "md": "Kalın bağırsak"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Midede öncelikle proteinlerin sindirimi başlar.",
+        "C": "İnce bağırsak nişasta sindiriminin tamamlandığı yerdir, başladığı yer değil.",
+        "D": "Kalın bağırsakta daha çok su emilir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: Ağız.\n- Tükürükteki amilaz enzimi nişastayı parçalamaya başlar.\n- Ekmeği uzun çiğneyince tatlı bir tat alınması bundandır."
+        },
+        {
+          "type": "hint",
+          "md": "Ekmeği uzun süre çiğneyince tadı değişir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Sindirim, büyük besin moleküllerinin emilebilecek küçük parçalara ayrılmasıdır. Her besin türünün sindirimi sindirim kanalının farklı bir noktasında başlar."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          136,
+          136
+        ],
+        "quote": "Sindirim ağızda başlar; tükürükteki amilaz enzimi nişastayı parçalamaya başlar.",
+        "chapter": "Sağlık"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "sağlık"
+      ],
+      "vurgu": [],
+      "contentHash": "52a1b205661b40751422c37f4261e66c650dec11c3da78f74b58df1963be3eda",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0711",
+      "conceptId": "sg-mide-asidi",
+      "stem": {
+        "md": "Midede salgılanan ve besinlerle gelen birçok mikrobu etkisiz hâle getiren asit ____ asittir. Boşluğa hangisi gelmelidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Sülfürik"
+        },
+        {
+          "key": "B",
+          "md": "Sitrik"
+        },
+        {
+          "key": "C",
+          "md": "Hidroklorik"
+        },
+        {
+          "key": "D",
+          "md": "Laktik"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Sülfürik asit vücutta mide özsuyu olarak salgılanmaz.",
+        "B": "Sitrik asit turunçgillerde bulunan asittir.",
+        "D": "Laktik asit yoğun egzersizde kaslarda birikir, midede salgılanmaz."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: Hidroklorik asit.\n- Mide ortamını çok asitli yapar.\n- Hem mikropları etkisiz kılar hem de protein sindirimine yardım eder."
+        },
+        {
+          "type": "hint",
+          "md": "Kimyasal formülü HCl'dir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Midenin iç ortamı vücudun en asitli bölgelerinden biridir. Mide duvarı, kendini bu güçlü ortamdan koruyan bir mukus tabakasıyla kaplıdır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          136,
+          136
+        ],
+        "quote": "Midede salgılanan hidroklorik asit, besinlerle gelen birçok mikrobu etkisiz hâle getirir.",
+        "chapter": "Sağlık"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "sağlık"
+      ],
+      "vurgu": [],
+      "contentHash": "5c661d6465d395cb64128ef94249ec9ed55d210f817a5a0374a721b0ba737c0d",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0712",
+      "conceptId": "sg-ince-bagirsak",
+      "stem": {
+        "md": "Besinlerin büyük kısmı sindirim kanalının hangi bölümünde emilir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Mide"
+        },
+        {
+          "key": "B",
+          "md": "İnce bağırsak"
+        },
+        {
+          "key": "C",
+          "md": "Yemek borusu"
+        },
+        {
+          "key": "D",
+          "md": "Kalın bağırsak"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Mide besinleri karıştırıp kısmen sindirir; emilim burada sınırlıdır.",
+        "C": "Yemek borusu besinleri yalnızca mideye iletir.",
+        "D": "Kalın bağırsak daha çok su ve bazı tuzları emer."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: İnce bağırsak.\n- İç yüzeyindeki parmak biçimli çıkıntılar emilim yüzeyini çok genişletir.\n- Sindirilen besinler buradan kana geçer."
+        },
+        {
+          "type": "hint",
+          "md": "Sindirim kanalının en uzun bölümüdür."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Sindirilmiş besinlerin kana geçmesine emilim denir. Emilimin verimli olması için, çok geniş bir iç yüzeye sahip uzun bir kanal gerekir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          136,
+          136
+        ],
+        "quote": "Besinlerin büyük kısmı ince bağırsakta emilir.",
+        "chapter": "Sağlık"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "sağlık"
+      ],
+      "vurgu": [],
+      "contentHash": "90b9d46e4c7c7294ea0214982ce54afe1c2ff777736bfe5559430f959cc4c723",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0713",
+      "conceptId": "sg-safra-kesesi",
+      "stem": {
+        "md": "Vücudun en büyük iç organının ürettiği ve yağların sindirimine yardım eden sıvı nerede depolanır?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Pankreas"
+        },
+        {
+          "key": "B",
+          "md": "Safra kesesi"
+        },
+        {
+          "key": "C",
+          "md": "Dalak"
+        },
+        {
+          "key": "D",
+          "md": "İdrar kesesi"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Pankreas kendi sindirim özsuyunu üretir; bu sıvıyı depolamaz.",
+        "C": "Dalak kan hücreleriyle ilgili görevler üstlenir, sindirim sıvısı depolamaz.",
+        "D": "İdrar kesesi böbreklerin ürettiği idrarı biriktirir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Sıvı safradır ve karaciğerde üretilir.\n- Safra, karaciğerin altındaki safra kesesinde depolanır.\n- Yağlı yemekten sonra ince bağırsağa boşaltılır."
+        },
+        {
+          "type": "hint",
+          "md": "Karaciğerin hemen altındaki küçük bir kese."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Bazı sindirim sıvıları üretildikleri yerde değil, başka bir yerde biriktirilir ve gerektiğinde salınır. Yağlar suda çözünmediği için sindirimlerinde küçük damlacıklara ayrılmaları gerekir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          136,
+          136
+        ],
+        "quote": "Karaciğer, yağların sindirimine yardım eden safrayı üretir ve safra, safra kesesinde depolanır.",
+        "chapter": "Sağlık"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "sağlık"
+      ],
+      "vurgu": [],
+      "contentHash": "4b9964a4f56f052d3284f1e84bc353b0934b7330db236ad1193d60138d6bbf25",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0714",
+      "conceptId": "sg-insulin",
+      "stem": {
+        "md": "Pankreasın salgıladığı ve kan şekerini düzenleyen hormon hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Adrenalin"
+        },
+        {
+          "key": "B",
+          "md": "Tiroksin"
+        },
+        {
+          "key": "C",
+          "md": "İnsülin"
+        },
+        {
+          "key": "D",
+          "md": "Melatonin"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Adrenalin böbreküstü bezlerinden salgılanır.",
+        "B": "Tiroksin tiroit bezinin hormonudur.",
+        "D": "Melatonin uyku düzeniyle ilgili bir hormondur ve beyinde salgılanır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: İnsülin.\n- İnsülin, kandaki şekerin hücrelere geçmesini sağlar.\n- Yetersizliğinde ya da etkisizliğinde şeker hastalığı (diyabet) görülür."
+        },
+        {
+          "type": "hint",
+          "md": "Eksikliği şeker hastalığıyla ilişkilidir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Pankreas hem sindirim özsuyu üreten hem de hormon salgılayan karma bir bezdir. Kandaki şeker düzeyinin dar bir aralıkta tutulması hormonlarla sağlanır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          136,
+          136
+        ],
+        "quote": "Pankreas, kan şekerini düzenleyen insülin hormonunu salgılar.",
+        "chapter": "Sağlık"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "sağlık"
+      ],
+      "vurgu": [],
+      "contentHash": "b2d005f67a9c508dc964ada298241ce8b4afbd150b53ba4bca2d6a75f6d63e09",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0715",
+      "conceptId": "sg-bobrek",
+      "stem": {
+        "md": "Kanı süzerek idrarı oluşturan organ hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Karaciğer"
+        },
+        {
+          "key": "B",
+          "md": "Dalak"
+        },
+        {
+          "key": "C",
+          "md": "Böbrek"
+        },
+        {
+          "key": "D",
+          "md": "Mide"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Karaciğer kandaki maddeleri işler ve safra üretir, idrar oluşturmaz.",
+        "B": "Dalak yaşlanmış kan hücrelerinin ayıklanmasında görev alır.",
+        "D": "Mide sindirim organıdır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: Böbrek.\n- Böbrekler kandaki atıkları ve fazla suyu süzer.\n- Oluşan idrar idrar kesesinde birikir."
+        },
+        {
+          "type": "hint",
+          "md": "Bel bölgesinde, fasulye biçimli bir çift organ."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Hücrelerin çalışması sırasında kana atık maddeler karışır. Bu atıkların vücuttan uzaklaştırılmasına boşaltım denir ve kanın sürekli temizlenmesini gerektirir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          136,
+          136
+        ],
+        "quote": "Böbrekler kanı süzerek idrarı oluşturur.",
+        "chapter": "Sağlık"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "sağlık"
+      ],
+      "vurgu": [],
+      "contentHash": "96ba370d60aac25fadc1f4048c893eec2d5ebdc1dbc882835355774cadca6d82",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0716",
+      "conceptId": "sg-merkezi-sinir",
+      "stem": {
+        "md": "Merkezi sinir sistemini oluşturan iki yapı hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Beyin ve kalp"
+        },
+        {
+          "key": "B",
+          "md": "Beyin ve omurilik"
+        },
+        {
+          "key": "C",
+          "md": "Omurilik ve sinirler"
+        },
+        {
+          "key": "D",
+          "md": "Beyin ve gözler"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Kalp dolaşım sisteminin organıdır.",
+        "C": "Vücuda dağılan sinirler çevresel sinir sistemine aittir.",
+        "D": "Gözler bir duyu organıdır, merkezi sinir sisteminin parçası sayılmaz."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: Beyin ve omurilik.\n- Bu ikisi kafatası ve omurga tarafından korunur.\n- Vücuda yayılan sinirler çevresel sinir sistemini oluşturur."
+        },
+        {
+          "type": "hint",
+          "md": "İkisi de kemikten bir kılıf içinde korunur."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Sinir sistemi, bilgiyi işleyen bir merkez ile bu merkezi vücudun her yerine bağlayan yollardan oluşur. Merkezdeki yapılar kemik ve zarlarla özenle korunur."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          137,
+          137
+        ],
+        "quote": "Beyin ve omurilik merkezi sinir sistemini oluşturur.",
+        "chapter": "Sağlık"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "sağlık"
+      ],
+      "vurgu": [],
+      "contentHash": "faccc955e52313c436a37d25bd2ba5bf82b328857da15a73349dd000b4106549",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0717",
+      "conceptId": "sg-beyincik",
+      "stem": {
+        "md": "Vücudun dengesini ve hareketlerin uyumunu sağlayan beyin bölümü hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Omurilik soğanı"
+        },
+        {
+          "key": "B",
+          "md": "Hipotalamus"
+        },
+        {
+          "key": "C",
+          "md": "Beyincik"
+        },
+        {
+          "key": "D",
+          "md": "Beyin kabuğunun görme alanı"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Omurilik soğanı solunum ve kalp atışı gibi istemsiz işleri yönetir.",
+        "B": "Hipotalamus vücut sıcaklığı, açlık ve susuzluk gibi işleri düzenler.",
+        "D": "Görme alanı gözden gelen bilgileri işler, dengeyi sağlamaz."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: Beyincik.\n- Beynin arka-alt kısmında yer alır.\n- Bisiklete binmek gibi öğrenilmiş hareketlerin akıcı yapılmasında rol oynar."
+        },
+        {
+          "type": "hint",
+          "md": "Beynin arka-alt kısmındadır; adı büyük kardeşinin küçültülmüşüdür."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Beyin tek parça çalışmaz; farklı bölümleri farklı işleri üstlenir. Yürümek ya da top yakalamak gibi hareketler, kasların zamanlamasını ayarlayan ayrı bir merkezin denetimindedir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          137,
+          137
+        ],
+        "quote": "Beyincik, vücudun dengesini ve hareketlerin uyumunu sağlar.",
+        "chapter": "Sağlık"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "sağlık"
+      ],
+      "vurgu": [],
+      "contentHash": "82f0a38009d4dd231015a9e38d33b1f96354fdec71323b8adbdf73f0e9a68892",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0718",
+      "conceptId": "sg-retina",
+      "stem": {
+        "md": "Gözde ışığa duyarlı hücrelerin bulunduğu tabaka hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Saydam tabaka (kornea)"
+        },
+        {
+          "key": "B",
+          "md": "İris"
+        },
+        {
+          "key": "C",
+          "md": "Göz merceği"
+        },
+        {
+          "key": "D",
+          "md": "Ağ tabaka (retina)"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Kornea gözün önündeki saydam koruyucu tabakadır; ışığı algılamaz.",
+        "B": "İris göz bebeğinin büyüklüğünü ayarlayan renkli kısımdır.",
+        "C": "Mercek ışığı kırarak odaklar, algılamaz."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: Ağ tabaka (retina).\n- Retinadaki çubuk ve koni hücreleri ışığı sinir uyarısına çevirir.\n- Uyarılar görme siniriyle beyne iletilir."
+        },
+        {
+          "type": "hint",
+          "md": "Gözün en iç tabakası; görüntü buraya düşer."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Göz bir fotoğraf makinesine benzetilir: ışığı ayarlayan, odaklayan ve kaydeden bölümleri vardır. Görme, ışığın sinir uyarısına dönüştürülmesiyle başlar."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          137,
+          137
+        ],
+        "quote": "Gözde ışığa duyarlı hücrelerin bulunduğu tabakaya ağ tabaka (retina) denir.",
+        "chapter": "Sağlık"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "sağlık"
+      ],
+      "vurgu": [],
+      "contentHash": "7c849cbcdbb07341e74fac58574672518c5c7b75ed73787ae628c2ca9c2e9762",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0719",
+      "conceptId": "sg-tiroit",
+      "stem": {
+        "md": "Boyunda, gırtlağın önünde yer alan ve metabolizma hızını etkileyen hormonlar salgılayan bez hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Hipofiz bezi"
+        },
+        {
+          "key": "B",
+          "md": "Tiroit bezi"
+        },
+        {
+          "key": "C",
+          "md": "Böbreküstü bezi"
+        },
+        {
+          "key": "D",
+          "md": "Tükürük bezi"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Hipofiz beynin altında yer alır, boyunda değil.",
+        "C": "Böbreküstü bezleri karın boşluğunda, böbreklerin üstündedir.",
+        "D": "Tükürük bezleri hormon değil, sindirim salgısı üretir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: Tiroit bezi.\n- Kelebek biçimli bir bezdir.\n- Salgıladığı hormonlar vücudun enerji kullanım hızını belirler."
+        },
+        {
+          "type": "hint",
+          "md": "Kelebeğe benzeyen bir bez."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Hormonlar, iç salgı bezlerinin kana bıraktığı ve uzaktaki organları etkileyen kimyasal habercilerdir. Vücudun ne hızda enerji harcayacağı da böyle bir bezin denetimindedir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          137,
+          137
+        ],
+        "quote": "Tiroit bezi, boyunda bulunan ve metabolizma hızını etkileyen hormonlar salgılayan bir bezdir.",
+        "chapter": "Sağlık"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "sağlık"
+      ],
+      "vurgu": [],
+      "contentHash": "2254b11257d9a2395e15221f4d3564c61156f2153e99106f6645b57373c6e882",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0720",
+      "conceptId": "sg-adrenalin",
+      "stem": {
+        "md": "Böbreküstü bezlerinden salgılanan ve vücudu ani tehlikeye hazırlayan hormon hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "İnsülin"
+        },
+        {
+          "key": "B",
+          "md": "Büyüme hormonu"
+        },
+        {
+          "key": "C",
+          "md": "Melatonin"
+        },
+        {
+          "key": "D",
+          "md": "Adrenalin"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "İnsülin pankreastan salgılanır ve kan şekerini düşürür.",
+        "B": "Büyüme hormonu hipofizden salgılanır.",
+        "C": "Melatonin uyku düzeniyle ilgilidir, vücudu tehlikeye hazırlamaz."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: Adrenalin.\n- Kalp atışını hızlandırır ve kaslara daha çok kan gönderir.\n- \"Savaş ya da kaç\" tepkisinin hormonu olarak bilinir."
+        },
+        {
+          "type": "hint",
+          "md": "Korkunca kalbin hızla çarpmasından sorumludur."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Vücut ani bir tehlike sezdiğinde saniyeler içinde hazırlık yapar: kalp hızlanır, solunum derinleşir, kaslara enerji yönlenir. Bu hızlı tepki sinir sistemi ile hormonların birlikte çalışmasıyla olur."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          137,
+          137
+        ],
+        "quote": "Adrenalin, böbreküstü bezlerinden salgılanan ve vücudu ani tehlikeye hazırlayan bir hormondur.",
+        "chapter": "Sağlık"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "sağlık"
+      ],
+      "vurgu": [],
+      "contentHash": "f3c3ff35e335a5611c8a328bc84eb691cf3d9f315fbd2acffac7158eb362a188",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0721",
+      "conceptId": "sg-iskorbut",
+      "stem": {
+        "md": "Diş eti kanamasıyla bilinen iskorbüt hastalığı hangi vitaminin eksikliğinden kaynaklanır?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "C vitamini"
+        },
+        {
+          "key": "B",
+          "md": "A vitamini"
+        },
+        {
+          "key": "C",
+          "md": "D vitamini"
+        },
+        {
+          "key": "D",
+          "md": "B12 vitamini"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "A vitamini eksikliği gece körlüğüyle ilişkilidir.",
+        "C": "D vitamini eksikliği kemik gelişimini bozar.",
+        "D": "B12 eksikliği kansızlık ve sinir sorunlarına yol açar."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: C vitamini.\n- Uzun deniz yolculuklarında taze sebze ve meyve bulamayan denizcilerde sık görülürdü.\n- Turunçgiller C vitamini bakımından zengindir."
+        },
+        {
+          "type": "hint",
+          "md": "Eskiden denizcilere limon verilmesinin nedeni."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Vitaminler vücudun az miktarda ama düzenli olarak ihtiyaç duyduğu maddelerdir. Her birinin eksikliği kendine özgü belirtilerle ortaya çıkar."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          138,
+          138
+        ],
+        "quote": "C vitamini eksikliği, diş eti kanamasıyla bilinen iskorbüt hastalığına yol açar.",
+        "chapter": "Sağlık"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "sağlık"
+      ],
+      "vurgu": [],
+      "contentHash": "fe9ab27ef9345eef83e88d9f17b5c63f4f7e001a2d9573fd331d7bcc99f35d2d",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0722",
+      "conceptId": "sg-d-vitamini-gunes",
+      "stem": {
+        "md": "Derimizin güneş ışığının etkisiyle üretebildiği vitamin hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "C vitamini"
+        },
+        {
+          "key": "B",
+          "md": "D vitamini"
+        },
+        {
+          "key": "C",
+          "md": "K vitamini"
+        },
+        {
+          "key": "D",
+          "md": "B1 vitamini"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "C vitamini insan vücudunda üretilmez, besinlerle alınır.",
+        "C": "K vitamini deride güneşle üretilmez.",
+        "D": "B1 vitamini besinlerle alınır, güneşle oluşmaz."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: D vitamini.\n- Deri güneşin morötesi ışınlarıyla D vitamini üretir.\n- D vitamini kalsiyum emilimine yardım ederek kemik sağlığını destekler."
+        },
+        {
+          "type": "hint",
+          "md": "\"Güneş vitamini\" olarak da anılır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Vitaminlerin çoğu yalnızca besinlerle alınabilir. Bunlardan biri ise istisnadır: vücut onu uygun koşullarda kendisi üretebilir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          138,
+          138
+        ],
+        "quote": "Deri, güneş ışığının etkisiyle D vitamini üretebilir.",
+        "chapter": "Sağlık"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "sağlık"
+      ],
+      "vurgu": [],
+      "contentHash": "38ba2d009c911d8ff4f35c13b85abe21b6af3981a924c85fd7dad3f289200754",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0723",
+      "conceptId": "sg-k-vitamini",
+      "stem": {
+        "md": "Kanın pıhtılaşması için gerekli olan vitamin hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "E vitamini"
+        },
+        {
+          "key": "B",
+          "md": "K vitamini"
+        },
+        {
+          "key": "C",
+          "md": "A vitamini"
+        },
+        {
+          "key": "D",
+          "md": "B6 vitamini"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "E vitamini daha çok hücreleri koruyan bir antioksidan olarak bilinir.",
+        "C": "A vitamini görme ve deri sağlığıyla ilişkilidir.",
+        "D": "B6 vitamini protein metabolizmasında görev alır, pıhtılaşmayı sağlamaz."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: K vitamini.\n- Pıhtılaşmada görev alan bazı proteinlerin yapımı için gereklidir.\n- Yeşil yapraklı sebzelerde bol bulunur."
+        },
+        {
+          "type": "hint",
+          "md": "Adı pıhtılaşmanın Almanca/Danca karşılığının baş harfinden gelir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Bir damar zedelendiğinde kanın pıhtılaşması bir dizi proteinin sırayla devreye girmesiyle olur. Bu proteinlerin bir kısmının üretimi belirli bir vitamine bağlıdır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          138,
+          138
+        ],
+        "quote": "K vitamini, kanın pıhtılaşması için gereklidir.",
+        "chapter": "Sağlık"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "sağlık"
+      ],
+      "vurgu": [],
+      "contentHash": "26921200f5f5e495975e8b92052465500d9a227bb43693da21ad82aa7fb62b65",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0724",
+      "conceptId": "sg-demir-anemi",
+      "stem": {
+        "md": "Kansızlığın (anemi) en yaygın nedenlerinden biri hangi mineralin eksikliğidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Kalsiyum"
+        },
+        {
+          "key": "B",
+          "md": "Sodyum"
+        },
+        {
+          "key": "C",
+          "md": "Flor"
+        },
+        {
+          "key": "D",
+          "md": "Demir"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Kalsiyum eksikliği daha çok kemik ve dişleri etkiler.",
+        "B": "Sodyum vücudun su dengesiyle ilgilidir.",
+        "C": "Flor eksikliği diş çürüğüyle ilişkilendirilir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: Demir.\n- Demir, kana oksijen taşıtan proteinin yapısına girer.\n- Eksikliğinde yorgunluk ve solukluk görülebilir."
+        },
+        {
+          "type": "hint",
+          "md": "Kırmızı et ve baklagillerde bulunan, mıknatısın çektiği element."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Mineraller vücudun az miktarda ihtiyaç duyduğu inorganik maddelerdir. Bazıları kemik yapısına, bazıları da kanın oksijen taşıma kapasitesine katkıda bulunur."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          138,
+          138
+        ],
+        "quote": "Demir eksikliği, kansızlığın (anemi) en yaygın nedenlerinden biridir.",
+        "chapter": "Sağlık"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "sağlık"
+      ],
+      "vurgu": [],
+      "contentHash": "760bb2f70cb2c716a12d563a4b48c6f170bf8afc4ad3bf028bb3afd88a6ed4a7",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0725",
+      "conceptId": "sg-iyot-guatr",
+      "stem": {
+        "md": "Tiroit bezinin büyümesi olan guatr, hangi elementin eksikliğiyle ilişkilidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Çinko"
+        },
+        {
+          "key": "B",
+          "md": "Magnezyum"
+        },
+        {
+          "key": "C",
+          "md": "İyot"
+        },
+        {
+          "key": "D",
+          "md": "Potasyum"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Çinko eksikliği bağışıklık ve büyümeyi etkiler, guatrın tipik nedeni değildir.",
+        "B": "Magnezyum kas ve sinir işleyişiyle ilgilidir.",
+        "D": "Potasyum kalp ritmi ve kas işlevleriyle ilgilidir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: İyot.\n- Tiroit bezi hormonlarını üretmek için iyoda gereksinim duyar.\n- Bu yüzden sofra tuzuna iyot eklenir."
+        },
+        {
+          "type": "hint",
+          "md": "Markette satılan tuzların paketinde adı yazar."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Bazı bezler hormon üretmek için çevreden belirli bir elementi almak zorundadır. Bu element yetersiz kalınca bez daha çok çalışmaya çalışır ve büyüyebilir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          138,
+          138
+        ],
+        "quote": "İyot eksikliği, tiroit bezinin büyümesi olan guatra yol açabilir.",
+        "chapter": "Sağlık"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "sağlık"
+      ],
+      "vurgu": [],
+      "contentHash": "c509f9a7f0b101b769e29bafc2906bc3221413fecbda49ca7f231065ed164ec7",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0726",
+      "conceptId": "sg-antikor",
+      "stem": {
+        "md": "Yabancı maddeleri tanıyıp etkisiz hâle getirmeye yardım eden bağışıklık proteinlerine ne ad verilir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Enzim"
+        },
+        {
+          "key": "B",
+          "md": "Hormon"
+        },
+        {
+          "key": "C",
+          "md": "Antijen"
+        },
+        {
+          "key": "D",
+          "md": "Antikor"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Enzimler kimyasal tepkimeleri hızlandırır.",
+        "B": "Hormonlar kan yoluyla taşınan kimyasal habercilerdir.",
+        "C": "Antijen, bağışıklık sisteminin tanıdığı yabancı maddenin kendisidir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: Antikor.\n- Antikorlar belirli bir yabancı maddeye özgü olarak üretilir.\n- Tanıdıkları maddeye bağlanarak onu etkisiz kılar."
+        },
+        {
+          "type": "hint",
+          "md": "Yabancı maddeye \"karşı\" üretilen bir molekül."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Bağışıklık sistemi vücuda giren yabancı maddeleri kendi maddelerinden ayırt edebilir. Bu tanıma, her yabancı maddeye özgü olarak üretilen moleküllerle yapılır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          139,
+          139
+        ],
+        "quote": "Antikorlar, yabancı maddeleri tanıyıp etkisiz hâle getirmeye yardım eden proteinlerdir.",
+        "chapter": "Sağlık"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "sağlık"
+      ],
+      "vurgu": [],
+      "contentHash": "5279cd427b117c1a3150969a56457230ec6092ede5ad16d2f5de20f7af766ca7",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0727",
+      "conceptId": "sg-asi-tanimi",
+      "stem": {
+        "md": "Hastalık etkeninin zayıflatılmış ya da öldürülmüş hâlini veya bir parçasını içererek bağışıklık sistemini hastalığa karşı hazırlayan uygulama hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Aşı"
+        },
+        {
+          "key": "B",
+          "md": "Antibiyotik"
+        },
+        {
+          "key": "C",
+          "md": "Ağrı kesici"
+        },
+        {
+          "key": "D",
+          "md": "Vitamin takviyesi"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Antibiyotik bakterilere karşı kullanılan bir ilaçtır, bağışıklık sistemini önceden hazırlamaz.",
+        "C": "Ağrı kesici yalnızca ağrıyı hafifletir.",
+        "D": "Vitamin takviyesi besin eksiğini giderir, belirli bir hastalığa karşı bağışıklık kazandırmaz."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: Aşı.\n- Aşı, vücudun gerçek hastalıkla karşılaşmadan savunma geliştirmesini sağlar.\n- Bağışıklık sistemi etkeni hatırlar ve sonra hızlı yanıt verir."
+        },
+        {
+          "type": "hint",
+          "md": "Çocukluktan itibaren takvimle uygulanır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Bağışıklık sistemi bir kez karşılaştığı etkeni hatırlar ve ikinci karşılaşmada çok daha hızlı savunma yapar. Tıp, bu belleği hastalık yaşanmadan oluşturmanın yollarını geliştirmiştir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          139,
+          139
+        ],
+        "quote": "Aşı, hastalık etkeninin zayıflatılmış ya da öldürülmüş hâlini veya bir parçasını içererek bağışıklık sistemini hastalığa karşı hazırlar.",
+        "chapter": "Sağlık"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "sağlık"
+      ],
+      "vurgu": [],
+      "contentHash": "b233696e4d5a217b4dd8a25e1310a282533318957a61b915bffaae0dbbf77923",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0728",
+      "conceptId": "sg-jenner",
+      "stem": {
+        "md": "1796'da sığır çiçeğini kullanarak çiçek hastalığına karşı ilk aşıyı geliştiren hekim kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Louis Pasteur"
+        },
+        {
+          "key": "B",
+          "md": "Robert Koch"
+        },
+        {
+          "key": "C",
+          "md": "Edward Jenner"
+        },
+        {
+          "key": "D",
+          "md": "Alexander Fleming"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Pasteur'ün aşı çalışmaları yaklaşık bir yüzyıl sonradır.",
+        "B": "Koch hastalık etkenlerini tanımlamasıyla bilinir.",
+        "D": "Fleming 20. yüzyılda penisilini keşfetmesiyle bilinir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: Edward Jenner.\n- Sığır çiçeği geçiren sağıcıların çiçek hastalığına yakalanmadığını gözlemledi.\n- \"Aşı\" anlamındaki \"vaccine\" sözcüğü Latincede inek anlamındaki \"vacca\"dan gelir."
+        },
+        {
+          "type": "hint",
+          "md": "İngiliz bir köy hekimi; süt sağıcılarını gözlemledi."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "18. yüzyılda çiçek hastalığı büyük salgınlara yol açıyordu. Halk arasındaki bir gözlemin bilimsel olarak denenmesi, aşılamanın doğuşunu sağladı."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          139,
+          139
+        ],
+        "quote": "Edward Jenner 1796'da sığır çiçeğini kullanarak çiçek hastalığına karşı ilk aşıyı geliştirdi.",
+        "chapter": "Sağlık"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "sağlık"
+      ],
+      "vurgu": [],
+      "contentHash": "c9c871a890806f9849554b7dfb5755d925ba1e8045e56ce5eec5b33e36415d82",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0729",
+      "conceptId": "sg-cicek-silinen",
+      "stem": {
+        "md": "Aşılama sayesinde dünyadan tamamen silinen ilk insan hastalığı hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Çocuk felci"
+        },
+        {
+          "key": "B",
+          "md": "Çiçek"
+        },
+        {
+          "key": "C",
+          "md": "Kızamık"
+        },
+        {
+          "key": "D",
+          "md": "Verem"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Çocuk felci büyük ölçüde azaltıldı ama dünyadan tamamen silinmedi.",
+        "C": "Kızamık bugün de salgınlara yol açabilmektedir.",
+        "D": "Verem hâlâ dünyada yaygın görülen bir hastalıktır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: Çiçek.\n- Dünya Sağlık Örgütü çiçek hastalığının silindiğini 1980'de açıkladı.\n- Bu başarı dünya çapında yürütülen aşılama kampanyalarıyla sağlandı."
+        },
+        {
+          "type": "hint",
+          "md": "İlk aşının geliştirildiği hastalıkla aynıdır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Bir hastalığın dünyadan silinmesi, etkenin doğada hiçbir yerde kalmaması demektir. Bunun için hastalığın yalnızca insanlarda bulunması ve etkili bir aşının geniş çapta uygulanması gerekir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          139,
+          139
+        ],
+        "quote": "Çiçek hastalığı, aşılama sayesinde dünyadan tamamen silinen ilk insan hastalığıdır.",
+        "chapter": "Sağlık"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "sağlık"
+      ],
+      "vurgu": [],
+      "contentHash": "eb9db8dd25b1d7833bff51f49295619bb51710bc4efa2ce46f04eaaf3a4ef45d",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0730",
+      "conceptId": "sg-pasteur-kuduz",
+      "stem": {
+        "md": "Kuduz aşısını geliştiren bilim insanı kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Edward Jenner"
+        },
+        {
+          "key": "B",
+          "md": "Alexander Fleming"
+        },
+        {
+          "key": "C",
+          "md": "Wilhelm Röntgen"
+        },
+        {
+          "key": "D",
+          "md": "Louis Pasteur"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Jenner çiçek aşısını geliştirdi, kuduz aşısını değil.",
+        "B": "Fleming penisilini keşfetti.",
+        "C": "Röntgen X ışınlarını keşfetti."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: Louis Pasteur.\n- Pasteur aşıyı 1885'te kuduz köpek ısırmış bir çocukta başarıyla kullandı.\n- Sütün ısıtılarak mikroplardan arındırılması da onun adıyla anılır."
+        },
+        {
+          "type": "hint",
+          "md": "Adı süt kutularında yazan bir yöntemle anılan Fransız bilim insanı."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Kuduz, hayvan ısırığıyla bulaşan ve belirtiler başladıktan sonra çok ağır seyreden bir hastalıktır. 19. yüzyılda mikrobiyolojinin gelişmesi bu hastalığa karşı da koruma yolu açtı."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          139,
+          139
+        ],
+        "quote": "Louis Pasteur, kuduz aşısını geliştiren bilim insanıdır.",
+        "chapter": "Sağlık"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "sağlık"
+      ],
+      "vurgu": [],
+      "contentHash": "8505ec4a4ab13eb0e0c32f5f16bbe0a515927382ffb028d9b5dd5b87005fc60a",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0731",
+      "conceptId": "sg-penicillium",
+      "stem": {
+        "md": "Alexander Fleming'in 1928'de keşfettiği antibiyotik hangi tür canlı tarafından üretilir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Küf mantarı"
+        },
+        {
+          "key": "B",
+          "md": "Bakteri"
+        },
+        {
+          "key": "C",
+          "md": "Bitki kökü"
+        },
+        {
+          "key": "D",
+          "md": "Deniz süngeri"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Bu antibiyotik bakterilere etki eder; bir bakteri tarafından üretilmez.",
+        "C": "Bu madde bir bitkiden elde edilmemiştir.",
+        "D": "Deniz süngeri bu keşifle ilgili değildir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Fleming'in keşfettiği antibiyotik penisilindir.\n- Penisilin, Penicillium adlı bir küf tarafından üretilir.\n- Fleming, küf bulaşan bir besiyerinde bakterilerin üremediğini fark etti."
+        },
+        {
+          "type": "hint",
+          "md": "Bayat ekmekte görülen yeşilimsi tabakayı düşünün."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Bazı canlılar, çevrelerindeki rakiplerinin üremesini engelleyen maddeler salgılar. 20. yüzyılda bu doğal maddelerin ilaç olarak kullanılması enfeksiyonlarla mücadelede yeni bir dönem başlattı."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          140,
+          140
+        ],
+        "quote": "Penisilin, Penicillium adlı bir küfün ürettiği bir antibiyotiktir.",
+        "chapter": "Sağlık"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "sağlık"
+      ],
+      "vurgu": [],
+      "contentHash": "4e52c1d387abf005e05f84c8cbc1fc61fb75f7ed0f128b03bcdea1ed1c6117a2",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0732",
+      "conceptId": "sg-antibiyotik-virus",
+      "stem": {
+        "md": "Aşağıdaki hastalıklardan hangisi bir virüsten kaynaklandığı için antibiyotiklerden etkilenmez?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Kolera"
+        },
+        {
+          "key": "B",
+          "md": "Boğmaca"
+        },
+        {
+          "key": "C",
+          "md": "Grip"
+        },
+        {
+          "key": "D",
+          "md": "Tetanoz"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Kolera bir bakterinin yol açtığı hastalıktır.",
+        "B": "Boğmaca bir bakterinin yol açtığı hastalıktır.",
+        "D": "Tetanoz bir bakterinin yol açtığı hastalıktır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: Grip.\n- Grip bir virüs hastalığıdır.\n- Antibiyotikler yalnızca bakterilere etki eder."
+        },
+        {
+          "type": "hint",
+          "md": "Kış aylarında yaygınlaşan, her yıl aşısı yenilenen hastalık."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Bakteriler kendi başına yaşayıp çoğalabilen hücrelerdir; virüsler ise ancak bir hücrenin içinde çoğalabilir. Bu fark, onlara karşı kullanılan ilaçların da farklı olmasını gerektirir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          140,
+          140
+        ],
+        "quote": "Antibiyotikler bakterilere etki eder, virüslerin yol açtığı hastalıklarda işe yaramaz.",
+        "chapter": "Sağlık"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "sağlık"
+      ],
+      "vurgu": [],
+      "contentHash": "dccec6457843882210b5a5e7186c484b219f17147fa43694aa4030baad330cc5",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0733",
+      "conceptId": "sg-kesif-eslestirme",
+      "stem": {
+        "md": "Bilim insanlarını buluşlarıyla eşleştirin.\n\n1. Alexander Fleming\n2. Wilhelm Röntgen\n3. Robert Koch\n\na. X ışınları\nb. Penisilin\nc. Verem etkeni"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "1-a, 2-b, 3-c"
+        },
+        {
+          "key": "B",
+          "md": "1-b, 2-a, 3-c"
+        },
+        {
+          "key": "C",
+          "md": "1-c, 2-a, 3-b"
+        },
+        {
+          "key": "D",
+          "md": "1-b, 2-c, 3-a"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Fleming X ışınlarını değil, bir antibiyotiği keşfetti.",
+        "C": "Fleming verem etkenini tanımlamadı.",
+        "D": "Röntgen bir hastalık etkenini değil, bir ışınımı keşfetti."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Fleming: penisilin (1-b), 1928.\n- Röntgen: X ışınları (2-a), 1895.\n- Koch: verem etkeni (3-c), 1882."
+        },
+        {
+          "type": "hint",
+          "md": "Bugün hastanelerde çekilen filmler bir bilim insanının adıyla anılır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "19. yüzyılın sonu ile 20. yüzyılın başı tıpta büyük buluşlar dönemidir. Hastalık etkenlerinin tanımlanması, vücudun içinin görüntülenmesi ve ilk antibiyotik bu dönemde gerçekleşti."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          140,
+          140
+        ],
+        "quote": "Alexander Fleming 1928'de penisilini keşfetti.",
+        "chapter": "Sağlık"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "sağlık"
+      ],
+      "vurgu": [],
+      "contentHash": "4c799a2794342aea1e2384b3c107b80fe183a5c33788f29cb7d86fc1dbac5aff",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0734",
+      "conceptId": "sg-sitma",
+      "stem": {
+        "md": "Tek hücreli bir parazitin yol açtığı sıtma hastalığı insanlara hangi canlı aracılığıyla bulaşır?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Kene"
+        },
+        {
+          "key": "B",
+          "md": "Pire"
+        },
+        {
+          "key": "C",
+          "md": "Karasinek"
+        },
+        {
+          "key": "D",
+          "md": "Sivrisinek"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Keneler başka hastalıkları taşır; sıtma onlarla bulaşmaz.",
+        "B": "Pire veba gibi hastalıkların taşıyıcısı olarak bilinir.",
+        "C": "Karasinek sıtma parazitini taşıyan canlı değildir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: Sivrisinek.\n- Parazit, sivrisineğin sokmasıyla kana geçer.\n- Bataklıkların kurutulması sıtmayla mücadelede eski bir yöntemdir."
+        },
+        {
+          "type": "hint",
+          "md": "Durgun suların yakınında çoğalan, vızıldayan bir böcek."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Bazı hastalıklar insandan insana doğrudan değil, bir aracı canlı yoluyla geçer. Bu tür hastalıklarla mücadelede aracı canlının kontrolü de önemlidir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          140,
+          140
+        ],
+        "quote": "Sıtma, sivrisinekler aracılığıyla bulaşan tek hücreli bir parazitin yol açtığı hastalıktır.",
+        "chapter": "Sağlık"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "sağlık"
+      ],
+      "vurgu": [],
+      "contentHash": "8ffccebbd6a43ff49cb7c2f308fec58ef7810168b6d5c4e74e3f017b69835a67",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0735",
+      "conceptId": "sg-semmelweis",
+      "stem": {
+        "md": "Doğumhanelerde ellerin yıkanmasının lohusa hummasından ölümleri azalttığını gösteren 19. yüzyıl hekimi kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Joseph Lister"
+        },
+        {
+          "key": "B",
+          "md": "Robert Koch"
+        },
+        {
+          "key": "C",
+          "md": "William Harvey"
+        },
+        {
+          "key": "D",
+          "md": "Ignaz Semmelweis"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Lister ameliyatlarda antiseptik kullanımını yaygınlaştırdı; doğumhane gözlemi ona ait değildir.",
+        "B": "Koch hastalık etkenlerini tanımlamasıyla bilinir.",
+        "C": "Harvey kan dolaşımını açıklayan 17. yüzyıl hekimidir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: Ignaz Semmelweis.\n- Viyana'daki bir doğumhanede çalışan Macar hekimdir.\n- Görüşleri yaşadığı dönemde pek kabul görmedi."
+        },
+        {
+          "type": "hint",
+          "md": "Viyana'da çalışan Macar bir hekim; \"annelerin kurtarıcısı\" diye anılır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Mikropların hastalık yaptığı henüz bilinmeden önce, hastaneler bulaşmanın önemli bir kaynağıydı. Basit bir hijyen önleminin etkisini sayılarla gösteren gözlemler, bu alanda dönüm noktası oldu."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          140,
+          140
+        ],
+        "quote": "Ignaz Semmelweis, doğumhanelerde ellerin yıkanmasının lohusa hummasından ölümleri azalttığını gösterdi.",
+        "chapter": "Sağlık"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "sağlık"
+      ],
+      "vurgu": [],
+      "contentHash": "8fd4838170502d678620c5577dd6c393c815592d2f4d7d158032fb2bd92f60f4",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0736",
+      "conceptId": "sg-hipokrat",
+      "stem": {
+        "md": "\"Tıbbın babası\" olarak anılan Antik Yunan hekimi ____'tır. Boşluğa hangisi gelmelidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Galenos"
+        },
+        {
+          "key": "B",
+          "md": "İbn-i Sina"
+        },
+        {
+          "key": "C",
+          "md": "Asklepios"
+        },
+        {
+          "key": "D",
+          "md": "Hipokrat"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Galenos Roma döneminde yaşamış, Hipokrat'tan sonra gelen bir hekimdir.",
+        "B": "İbn-i Sina Orta Çağ İslam dünyasının hekimidir, Antik Yunanlı değildir.",
+        "C": "Asklepios bir hekim değil, Yunan mitolojisinde tıp tanrısıdır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: Hipokrat.\n- Hastalıkları doğaüstü değil, doğal nedenlerle açıklamaya çalıştı.\n- Hekimlerin ettiği ant onun adıyla anılır."
+        },
+        {
+          "type": "hint",
+          "md": "Hekimlik andı onun adını taşır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Antik Çağ'da hastalıklar çoğu zaman tanrıların cezası olarak görülürdü. Bazı hekimler hastayı gözlemleyip belirtileri kaydederek tıbbı bir bilim olarak kurmaya başladı."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          140,
+          140
+        ],
+        "quote": "Hipokrat, \"tıbbın babası\" olarak anılan Antik Yunan hekimidir.",
+        "chapter": "Sağlık"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "sağlık"
+      ],
+      "vurgu": [],
+      "contentHash": "878350e3c696926936f2099ad57d92bfd394431b5176b2277cbcd5807abd48f0",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0737",
+      "conceptId": "sg-ilk-yardim-amaci",
+      "stem": {
+        "md": "İlk yardımın temel amacı hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Hastaya kesin tanı koymak"
+        },
+        {
+          "key": "B",
+          "md": "Tıbbi yardım gelene kadar hayatı korumak ve durumun kötüleşmesini önlemek"
+        },
+        {
+          "key": "C",
+          "md": "Yaralıya ilaç vererek tedaviyi tamamlamak"
+        },
+        {
+          "key": "D",
+          "md": "Yaralıyı her durumda hemen kendi aracıyla hastaneye götürmek"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Tanı koymak hekimin işidir, ilk yardımcının değil.",
+        "C": "İlk yardımda tedavi tamamlanmaz ve ilaç verilmez.",
+        "D": "Yaralıyı gelişigüzel taşımak durumu kötüleştirebilir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: Hayatı korumak ve durumun kötüleşmesini önlemek.\n- İlk yardım tıbbi tedavinin yerini tutmaz.\n- Profesyonel yardım gelene kadar yapılan geçici müdahaledir."
+        },
+        {
+          "type": "hint",
+          "md": "Hekim gelene kadar yapılanlar."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Bir kaza ya da ani hastalıkta olay yerindeki ilk dakikalar çok önemlidir. Bu dakikalarda sağlık eğitimi olmayan kişilerin de uygulayabileceği basit müdahaleler tanımlanmıştır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          141,
+          141
+        ],
+        "quote": "İlk yardımın amacı, olay yerinde tıbbi yardım gelene kadar hayatı korumak ve durumun kötüleşmesini önlemektir.",
+        "chapter": "Sağlık"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "sağlık"
+      ],
+      "vurgu": [],
+      "contentHash": "c937efa331626255f6beb5350dfa8de3101eca30d430c92f6ee8096207eed481",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0738",
+      "conceptId": "sg-112",
+      "stem": {
+        "md": "Türkiye'de acil durumlarda aranan numara hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "911"
+        },
+        {
+          "key": "B",
+          "md": "999"
+        },
+        {
+          "key": "C",
+          "md": "112"
+        },
+        {
+          "key": "D",
+          "md": "118"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "911 Kuzey Amerika'daki acil numarasıdır.",
+        "B": "999 Birleşik Krallık'taki acil numarasıdır.",
+        "D": "118 Türkiye'de acil yardım numarası olarak kullanılmaz."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: 112.\n- Ambulans, itfaiye ve emniyet gibi acil hizmetlere bu numarayla ulaşılır.\n- Avrupa'nın birçok ülkesinde de aynı numara kullanılır."
+        },
+        {
+          "type": "hint",
+          "md": "Avrupa'da da ortak kullanılan üç haneli numara."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Acil durumda zaman kaybetmemek için birçok ülke tek ve akılda kalıcı bir numara belirlemiştir. Bu numara farklı acil hizmetleri tek merkezde toplar."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          141,
+          141
+        ],
+        "quote": "Türkiye'de acil durumlarda aranan numara 112'dir.",
+        "chapter": "Sağlık"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "sağlık"
+      ],
+      "vurgu": [],
+      "contentHash": "efa7ea5619dc098f0c2397e8d104ccb85018b262148c594a18b4d86a045cd865",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0739",
+      "conceptId": "sg-kanama-baski",
+      "stem": {
+        "md": "Dışarıdan kanayan bir yaraya ilk olarak temiz bir bezle ____ uygulanır. Boşluğa hangisi gelmelidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "sıcak kompres"
+        },
+        {
+          "key": "B",
+          "md": "alkollü pamuk"
+        },
+        {
+          "key": "C",
+          "md": "doğrudan baskı"
+        },
+        {
+          "key": "D",
+          "md": "buz masajı"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Sıcak uygulama damarları genişletir ve kanamayı artırabilir.",
+        "B": "Alkollü pamuk kanamayı durdurmaz, açık yarada tahriş yapar.",
+        "D": "Buz masajı kanayan yarada ilk yapılacak işlem değildir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: Doğrudan baskı.\n- Yaranın üzerine temiz bir bezle bastırılır.\n- Bez kanla ıslanırsa kaldırılmaz, üzerine yenisi eklenir."
+        },
+        {
+          "type": "hint",
+          "md": "Elinizle bastırmayı düşünün."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Kanamalar kaynaklandığı damara ve yaranın yerine göre farklı türlere ayrılır. Dış kanamalarda amaç, kan kaybını en kısa sürede ve en basit yolla azaltmaktır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          141,
+          141
+        ],
+        "quote": "Dışarıdan kanayan bir yaraya ilk olarak temiz bir bezle doğrudan baskı uygulanır.",
+        "chapter": "Sağlık"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "sağlık"
+      ],
+      "vurgu": [],
+      "contentHash": "7b214a4cedd3f4dfbaa9de3da4a63f3e9acfddee634536b48686030e073363d1",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0740",
+      "conceptId": "sg-yanik",
+      "stem": {
+        "md": "Küçük bir yanıkta aşağıdakilerden hangisi yapılmalıdır?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Yanık bölgeyi serin akar suyla soğutmak"
+        },
+        {
+          "key": "B",
+          "md": "Üzerine diş macunu sürmek"
+        },
+        {
+          "key": "C",
+          "md": "Üzerine yoğurt sürmek"
+        },
+        {
+          "key": "D",
+          "md": "Üzerine yağ sürmek"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Diş macunu ısıyı hapsedebilir ve yarayı kirletir.",
+        "C": "Yoğurt yanığı soğutmaz, mikrop bulaşma riskini artırır.",
+        "D": "Yağ ısıyı dokuda tutar ve yanığı derinleştirebilir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: Serin akar suyla soğutmak.\n- Soğutma, dokudaki ısının yayılmasını durdurur ve ağrıyı azaltır.\n- Halk arasında sürülen maddeler yanığa zarar verebilir."
+        },
+        {
+          "type": "hint",
+          "md": "Halk arasında yaygın olan uygulamalar çoğu zaman yanlıştır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Yanık, dokunun ısı, kimyasal ya da elektrikle zarar görmesidir. Isı kaynağından uzaklaşıldıktan sonra da doku bir süre zarar görmeye devam eder; ilk müdahale bunu durdurmaya yöneliktir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          141,
+          141
+        ],
+        "quote": "Küçük yanıklarda yanık bölge serin akar suyla soğutulur; üzerine diş macunu, yoğurt ya da yağ sürülmez.",
+        "chapter": "Sağlık"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "sağlık"
+      ],
+      "vurgu": [],
+      "contentHash": "6bdd6bbbc9a3c95b958f6828feb1635de283eb78fc2c32a35be951dfe27e70f9",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0741",
+      "conceptId": "sg-heimlich",
+      "stem": {
+        "md": "Yabancı cisimle hava yolu tıkanan bir kişide uygulanan karına bası tekniğine ne ad verilir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Heimlich manevrası"
+        },
+        {
+          "key": "B",
+          "md": "Kalp masajı"
+        },
+        {
+          "key": "C",
+          "md": "Turnike"
+        },
+        {
+          "key": "D",
+          "md": "Derlenme pozisyonu"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Kalp masajı göğse yapılır ve kalbi durmuş kişiye uygulanır.",
+        "C": "Turnike uzuvdaki kanamayı durdurmak için sıkı bağlamadır.",
+        "D": "Derlenme pozisyonu bilinci kapalı kişiyi yan yatırmaktır, cismi çıkarmaz."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: Heimlich manevrası.\n- Kişinin arkasına geçilip göbeğin üstüne içe ve yukarı doğru bası yapılır.\n- Amaç, akciğerdeki havanın basıncıyla cismi dışarı atmaktır."
+        },
+        {
+          "type": "hint",
+          "md": "Adını onu tanımlayan Amerikalı hekimden alır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Yemek yerken bir lokmanın soluk borusuna kaçması kişinin nefes almasını engelleyebilir. Böyle bir durumda karın boşluğundaki basıncı aniden artıran bir yöntem kullanılır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          141,
+          141
+        ],
+        "quote": "Heimlich manevrası, yabancı cisimle hava yolu tıkanan bir kişide uygulanan karına bası tekniğidir.",
+        "chapter": "Sağlık"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "sağlık"
+      ],
+      "vurgu": [],
+      "contentHash": "6994743901bb5a26affb6b48bd217e8f3867a6fad687de65fdbd027dbd27fb29",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0742",
+      "conceptId": "sg-derlenme",
+      "stem": {
+        "md": "Bilinci kapalı ama soluk alan bir yaralı, hava yolunun açık kalması için hangi pozisyona getirilir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Sırtüstü, başı yastıkla yükseltilmiş"
+        },
+        {
+          "key": "B",
+          "md": "Yüzüstü, kollar iki yanda"
+        },
+        {
+          "key": "C",
+          "md": "Yan yatış (derlenme) pozisyonu"
+        },
+        {
+          "key": "D",
+          "md": "Oturur, başı dizlerine eğik"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Sırtüstü yatışta dil ya da kusmuk hava yolunu tıkayabilir.",
+        "B": "Yüzüstü yatış solunumu zorlaştırır ve izlemeyi güçleştirir.",
+        "D": "Bilinci kapalı biri oturur hâlde tutulamaz, düşebilir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: Yan yatış (derlenme) pozisyonu.\n- Bu pozisyonda dil geriye kaçıp hava yolunu kapatmaz.\n- Kusmuk ağızdan dışarı akar, solunum yoluna kaçmaz."
+        },
+        {
+          "type": "hint",
+          "md": "Kişi bir yanına yatırılır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Bilinci kapalı birinde kaslar gevşer ve hava yolu kendiliğinden kapanabilir. İlk yardımda bu riski azaltan, yardım gelene kadar güvenle bekletmeye yarayan bir yatış biçimi öğretilir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          141,
+          141
+        ],
+        "quote": "Bilinci kapalı ama soluk alan bir yaralı, hava yolunun açık kalması için yan yatış (derlenme) pozisyonuna getirilir.",
+        "chapter": "Sağlık"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "sağlık"
+      ],
+      "vurgu": [],
+      "contentHash": "caeb2d2ba2623555630654f3c44c31c5c7d6cb616a031ef707ed9ff228f69158",
+      "deleted": false
+    }
+  ]
+}

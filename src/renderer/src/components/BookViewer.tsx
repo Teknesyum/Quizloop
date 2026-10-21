@@ -16,6 +16,9 @@ import './bookviewer.css'
 const MAX_PX = 1 << 25
 const ZOOM_MAX = 4
 const DPR_MAX = 2
+const ZOOM_FOCUS = 2.5
+const FOCUS_MIN = 1.15
+const KEEP = 8
 const SWIPE_MIN = 48
 const TAP_MAX = 10
 const HOLD = '.ql-book-stage, .ql-bv-zoom, .ql-book-kesit, .ql-book-quote, button'
@@ -61,11 +64,80 @@ function slowMs(): number {
   return tokenMs('--tk-t-slow')
 }
 
+function curve(name: string): (x: number) => number {
+  const raw = getComputedStyle(document.documentElement).getPropertyValue(name)
+  const v = (raw.match(/-?[\d.]+/g) ?? []).map(Number)
+  if (v.length < 4 || v.some((n) => !Number.isFinite(n))) return (x) => x
+  const [a, b, c, d] = v as [number, number, number, number]
+  const at = (t: number, p: number, q: number): number =>
+    3 * (1 - t) * (1 - t) * t * p + 3 * (1 - t) * t * t * q + t * t * t
+  return (x) => {
+    let lo = 0
+    let hi = 1
+    for (let i = 0; i < 24; i++) {
+      const mid = (lo + hi) / 2
+      if (at(mid, a, c) < x) lo = mid
+      else hi = mid
+    }
+    return at((lo + hi) / 2, b, d)
+  }
+}
+
+const painted = new WeakMap<PDFDocumentProxy, Map<number, HTMLCanvasElement>>()
+const kept = new WeakSet<HTMLCanvasElement>()
+
+function wipe(c: HTMLCanvasElement): void {
+  c.width = 0
+  c.height = 0
+}
+
 function release(host: HTMLElement | null): void {
   host?.querySelectorAll('canvas').forEach((c) => {
-    c.width = 0
-    c.height = 0
+    if (!kept.has(c)) wipe(c)
   })
+}
+
+function remember(doc: PDFDocumentProxy, page: number, canvas: HTMLCanvasElement): void {
+  let pages = painted.get(doc)
+  if (!pages) {
+    pages = new Map()
+    painted.set(doc, pages)
+  }
+  const old = pages.get(page)
+  if (old && old !== canvas) {
+    kept.delete(old)
+    if (!old.isConnected) wipe(old)
+  }
+  pages.delete(page)
+  pages.set(page, canvas)
+  kept.add(canvas)
+  while (pages.size > KEEP) {
+    const first = pages.keys().next().value as number
+    const gone = pages.get(first)
+    pages.delete(first)
+    if (gone) {
+      kept.delete(gone)
+      if (!gone.isConnected) wipe(gone)
+    }
+  }
+}
+
+function reuse(
+  doc: PDFDocumentProxy,
+  page: number,
+  width: number,
+  host: HTMLElement
+): HTMLCanvasElement | null {
+  const c = painted.get(doc)?.get(page)
+  const w = Number(c?.dataset.w)
+  if (!c || !c.width || !(w >= width * 0.95 && w <= width * 1.6)) return null
+  if (!c.isConnected || c.parentElement === host) return c
+  const copy = document.createElement('canvas')
+  copy.className = c.className
+  copy.width = c.width
+  copy.height = c.height
+  copy.getContext('2d')?.drawImage(c, 0, 0)
+  return copy
 }
 
 function pinchSpan(t: TouchList): { d: number; x: number; y: number } | null {
@@ -116,7 +188,8 @@ export function Leaf({
   ratio,
   highlight,
   shown,
-  follow
+  follow,
+  onMarks
 }: {
   doc: PDFDocumentProxy | null
   pdfPage: number
@@ -127,7 +200,9 @@ export function Leaf({
   highlight: Highlight | null
   shown: boolean
   follow: boolean
+  onMarks?(sheet: HTMLElement): void
 }): React.JSX.Element {
+  const [ready, setReady] = useState(false)
   const paintRef = useRef<HTMLDivElement | null>(null)
   const sheetRef = useRef<HTMLDivElement | null>(null)
   const doneRef = useRef('')
@@ -160,6 +235,11 @@ export function Leaf({
       ?.querySelector('.ql-book-mark')
       ?.scrollIntoView({ block: 'center', behavior: 'auto' })
   }, [rects, shown, follow])
+
+  useEffect(() => {
+    const sheet = sheetRef.current
+    if (onMarks && sheet && shown && ready && rects.length > 0) onMarks(sheet)
+  }, [onMarks, shown, ready, rects])
 
   useEffect(() => {
     let dead = false
@@ -222,6 +302,17 @@ export function Leaf({
       }
     }
     live?.task?.cancel()
+    const host = paintRef.current
+    const hit = host ? reuse(doc, pdfPage, renderWidth, host) : null
+    if (hit && host) {
+      if (hit.parentElement !== host) {
+        release(host)
+        host.replaceChildren(hit)
+      }
+      doneRef.current = key
+      setReady(true)
+      return
+    }
     const job: Job = { key, want: true, task: null }
     jobRef.current = job
     const run = async (): Promise<void> => {
@@ -236,6 +327,7 @@ export function Leaf({
       canvas.className = 'ql-bv-canvas'
       canvas.width = Math.max(1, Math.round(viewport.width * px))
       canvas.height = Math.max(1, Math.round(viewport.height * px))
+      canvas.dataset.w = String(renderWidth)
       job.task = page.render({
         canvas,
         viewport,
@@ -245,7 +337,9 @@ export function Leaf({
       if (!job.want || !paintRef.current) return
       release(paintRef.current)
       paintRef.current.replaceChildren(canvas)
+      remember(doc, pdfPage, canvas)
       doneRef.current = key
+      setReady(true)
     }
     run()
       .catch(() => undefined)
@@ -336,6 +430,8 @@ export function BookViewer({
   const [sharpZoom, setSharpZoom] = useState(1)
   const zoomRef = useRef(1)
   const anchorRef = useRef<{ px: number; py: number; cx: number; cy: number } | null>(null)
+  const glideRef = useRef(0)
+  const focusedRef = useRef(false)
 
   const targetUrl = target?.url ?? null
   const targetPath = target?.path ?? null
@@ -431,7 +527,65 @@ export function BookViewer({
     return () => window.clearTimeout(h)
   }, [zoom, sharpZoom])
 
+  useEffect(() => () => cancelAnimationFrame(glideRef.current), [])
+
+  const focusMarks = useCallback((sheet: HTMLElement) => {
+    if (focusedRef.current) return
+    focusedRef.current = true
+    const host = hostRef.current
+    const frame = frameRef.current
+    if (!host || !frame || zoomRef.current !== 1) return
+    const boxes = [...sheet.querySelectorAll<HTMLElement>('.ql-book-mark')].map((m) =>
+      m.getBoundingClientRect()
+    )
+    if (boxes.length === 0) return
+    const l = Math.min(...boxes.map((r) => r.left))
+    const r = Math.max(...boxes.map((b) => b.right))
+    const top = Math.min(...boxes.map((b) => b.top))
+    const bottom = Math.max(...boxes.map((b) => b.bottom))
+    const f = frame.getBoundingClientRect()
+    const goal = Math.min(
+      ZOOM_FOCUS,
+      (f.width * 0.8) / Math.max(1, r - l),
+      (f.height * 0.6) / Math.max(1, bottom - top)
+    )
+    if (goal < FOCUS_MIN) return
+    const h = host.getBoundingClientRect()
+    const ux = (l + r) / 2
+    const uy = (top + bottom) / 2
+    const px = ux - h.left
+    const py = uy - h.top
+    const ox = ux - f.left
+    const oy = uy - f.top
+    const place = (e: number): void => {
+      const now = frame.getBoundingClientRect()
+      anchorRef.current = {
+        px,
+        py,
+        cx: now.left + ox + (now.width / 2 - ox) * e,
+        cy: now.top + oy + (now.height / 2 - oy) * e
+      }
+      const z = 1 + (goal - 1) * e
+      zoomRef.current = z
+      setZoom(z)
+    }
+    if (reduced()) {
+      place(1)
+      return
+    }
+    const ease = curve('--tk-e-in-out')
+    const total = slowMs() * 3
+    const begin = performance.now() + slowMs()
+    const tick = (now: number): void => {
+      const k = Math.min(1, Math.max(0, (now - begin) / total))
+      if (k > 0) place(ease(k))
+      if (k < 1) glideRef.current = requestAnimationFrame(tick)
+    }
+    glideRef.current = requestAnimationFrame(tick)
+  }, [])
+
   const zoomTo = useCallback((next: number, cx?: number, cy?: number) => {
+    cancelAnimationFrame(glideRef.current)
     const z = zoomRef.current
     const clamped = Math.min(ZOOM_MAX, Math.max(1, next))
     const target = clamped < 1.04 ? 1 : clamped
@@ -468,7 +622,7 @@ export function BookViewer({
 
   useEffect(() => {
     const el = frameRef.current
-    if (!el || !window.quizloop.capabilities.pinchZoom) return
+    if (!el) return
     let start: { d: number; z: number; x: number; y: number } | null = null
     const onStart = (e: TouchEvent): void => {
       const s = e.touches.length === 2 ? pinchSpan(e.touches) : null
@@ -786,6 +940,7 @@ export function BookViewer({
                             highlight={highlight}
                             shown={portrait ? i === cur : i === left || i === left + 1}
                             follow={!inline}
+                            onMarks={focusMarks}
                           />,
                           el,
                           String(i)

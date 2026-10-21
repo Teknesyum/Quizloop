@@ -76,6 +76,7 @@ The **Contact Us** form sends only what you put in it, and only when you press
 
 - your note;
 - a way to reach you, if you write one (optional);
+- a screenshot of the app window, attached for you and removable before you send it (optional);
 - one image you pick, if you add one (optional), shrunk on the device first;
 - the app version, the platform (Windows, macOS, Linux, Android or Web) and the
   interface language.

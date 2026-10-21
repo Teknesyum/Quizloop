@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 1,
+  "id": "genel-kultur",
+  "name": "Genel Kültür",
+  "version": "2.0.0",
+  "language": "tr",
+  "description": "Tarihten bilime, edebiyattan spora 18 bölümde 742 özgün genel kültür sorusu.",
+  "tags": [
+    "genel-kültür"
+  ],
+  "source": {
+    "title": "QuizLoop Genel Kültür Notları",
+    "file": "notlar.md",
+    "pages": 141,
+    "sayfaOfseti": 0
+  },
+  "blocks": [
+    {
+      "file": "blocks/0001.json",
+      "count": 69,
+      "sha256": "d8ebf2792755cd5fab553b157826fc54cbe3793cd2f2f9e8f6c5a8b68045a0fc"
+    },
+    {
+      "file": "blocks/0002.json",
+      "count": 35,
+      "sha256": "bc0e91c6ba22cc05af003fff4ed9efad8621aa02e7936467a0311af90dbb36c3"
+    },
+    {
+      "file": "blocks/0003.json",
+      "count": 40,
+      "sha256": "703063161b121986c1ea0ec13ddf29d780bf00b87637fe42dbc0a7b2965d87c8"
+    },
+    {
+      "file": "blocks/0004.json",
+      "count": 40,
+      "sha256": "2439918dc72ab911182a9383e3e84796688319fa82ab9bd911b70d7d38980ade"
+    },
+    {
+      "file": "blocks/0005.json",
+      "count": 40,
+      "sha256": "8525e2dcc266a87c5272170db3b0a9a367d64319a86be7da185e08284dfbbf1b"
+    },
+    {
+      "file": "blocks/0006.json",
+      "count": 40,
+      "sha256": "2f550c2746e4d1c8777074f16ecff89b8272876457cfab7b8b5b7462cc8ee74a"
+    },
+    {
+      "file": "blocks/0007.json",
+      "count": 40,
+      "sha256": "20807318a88d73da05e475e5c1f1591595ae7e704fe6181c50553bf79b57d086"
+    },
+    {
+      "file": "blocks/0008.json",
+      "count": 40,
+      "sha256": "2db845897196cb2fb57b70b5392579ae53ac1ba5a9637ed7a7097e33f0f4e870"
+    },
+    {
+      "file": "blocks/0009.json",
+      "count": 40,
+      "sha256": "e0fe52a46156c0a337e02be8ea645fd997c2c298bc9661351a35bfb117dc739c"
+    },
+    {
+      "file": "blocks/0010.json",
+      "count": 40,
+      "sha256": "ce4fc3fd6320394f77664f65667fe4c7cf3970969bd813278388b17c969bcb80"
+    },
+    {
+      "file": "blocks/0011.json",
+      "count": 40,
+      "sha256": "a548511a6e83e4341d0948c78a8a4d9995d9bd52fc903ea32880f436fb4e3115"
+    },
+    {
+      "file": "blocks/0012.json",
+      "count": 40,
+      "sha256": "6d39bc0ea96d68b70b203df68d2e67836f9d514b3a918464b9151e79baf85bdb"
+    },
+    {
+      "file": "blocks/0013.json",
+      "count": 40,
+      "sha256": "f8fb38362a928015937e5b727f786b35cfc8a699a185014bffa9ea06794de311"
+    },
+    {
+      "file": "blocks/0014.json",
+      "count": 40,
+      "sha256": "f28bc020f8efa72ffa2ca9016fd130f0ce9b7e63a1f65df133070398192e977f"
+    },
+    {
+      "file": "blocks/0015.json",
+      "count": 39,
+      "sha256": "0efdc572fbb2270b822917f9ec3c5b17a7fca67e8b8bc6252240924c83c1bccf"
+    },
+    {
+      "file": "blocks/0016.json",
+      "count": 40,
+      "sha256": "ccfdb74411eeed78fde4b26e2d0a94edf4215afedb9f34e545b6346d89be35a6"
+    },
+    {
+      "file": "blocks/0017.json",
+      "count": 39,
+      "sha256": "c414db1fd4b8d0c38d2a6359ae1bb933a4da3d4fdccd7fb08571c2e3251bd666"
+    },
+    {
+      "file": "blocks/0018.json",
+      "count": 40,
+      "sha256": "79b40b473f1a1010d4fd3ace2588d2814f301c6d9e358acfbc7b28cf3d87ded7"
+    }
+  ],
+  "questionCount": 742,
+  "createdAt": "2026-10-04T00:00:00.000Z"
+}

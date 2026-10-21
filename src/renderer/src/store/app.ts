@@ -7,6 +7,7 @@ export type Route =
   | { name: 'stats' }
   | { name: 'settings' }
   | { name: 'catalogs' }
+  | { name: 'history' }
   | { name: 'chapters'; moduleId: string }
   | { name: 'session'; moduleId: string; chapter?: string | null; partial?: boolean }
   | { name: 'bank'; moduleId: string; filter?: 'all' | 'flagged' }

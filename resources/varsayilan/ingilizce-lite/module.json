@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "id": "ingilizce-lite",
+  "name": "İngilizce Lite",
+  "version": "0.1.0",
+  "language": "tr",
+  "description": "Açık lisanslı kaynaklardan 2216 C1-C2 kelime kartı ve 62 kuraldan 735 dil bilgisi sorusu. Kelime düzeyleri Octanove Vocabulary Profile'dan gelir. Lisans: CC BY-SA 4.0.",
+  "tags": [
+    "ingilizce"
+  ],
+  "source": {
+    "title": "Lisans: CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/); Octanove Vocabulary Profile C1/C2 1.0, Octanove Labs (https://github.com/openlanguageprofiles/olp-en-cefrj), CC BY-SA 4.0; Open English WordNet 2025 (https://en-word.net), CC BY 4.0; Wiktionary katkıcıları, Türkçe girişler, Kaikki.org dökümü (https://kaikki.org), CC BY-SA 4.0; ipa-dict en_US, Open Dict Data (https://github.com/open-dict-data/ipa-dict), MIT; Kural dosyaları ve Türkçe karşılıkların bir kısmı QuizLoop üretimidir",
+    "sayfaOfseti": 0
+  },
+  "blocks": [
+    {
+      "file": "blocks/0001.json",
+      "count": 200,
+      "sha256": "4f18a0d029f4574e7f7febfaa2e23dab4179fe72ab909809ee919d3d09baec21"
+    },
+    {
+      "file": "blocks/0002.json",
+      "count": 200,
+      "sha256": "696eefc6436177397986f569d55e3d44f88811b22ce84000e077ad275b83b1bd"
+    },
+    {
+      "file": "blocks/0003.json",
+      "count": 200,
+      "sha256": "70158e2788bd5bdc6b48101e12226fd9caaf0269e1658b53b947ce066e97782c"
+    },
+    {
+      "file": "blocks/0004.json",
+      "count": 200,
+      "sha256": "dde2a8b18ea05197c31f7d9880ffe224d9052d5de027626bcb1b01bb7d5b23b0"
+    },
+    {
+      "file": "blocks/0005.json",
+      "count": 200,
+      "sha256": "5548562a9f9ecde7cd292fddac54e17153af878c0793dab84729187cb480a9ee"
+    },
+    {
+      "file": "blocks/0006.json",
+      "count": 200,
+      "sha256": "27a470f494aff80094653ad0fe2e94298945ad555875f00a9920589f088cdcbc"
+    },
+    {
+      "file": "blocks/0007.json",
+      "count": 200,
+      "sha256": "27e33d038aa2249c0aa84214658445d53197c7f580deb072d3eda6814b817c19"
+    },
+    {
+      "file": "blocks/0008.json",
+      "count": 200,
+      "sha256": "dddfd5539e3b5e9cc23e3c054ac66c3f1d2cc742456cfec8200c419ed7354141"
+    },
+    {
+      "file": "blocks/0009.json",
+      "count": 200,
+      "sha256": "03891103184125d8d69f8edcb9fe78295a891b1df4adfada09b214bde8f5ad64"
+    },
+    {
+      "file": "blocks/0010.json",
+      "count": 200,
+      "sha256": "29fdb5f7e50f726579d0f69b9f43409a0666d366f64486f8f9510bca38b6c0ac"
+    },
+    {
+      "file": "blocks/0011.json",
+      "count": 200,
+      "sha256": "1e1165e59b66f47d098d548dcf5a66129e5348d73da0e642c691c2d1d3b8039a"
+    },
+    {
+      "file": "blocks/0012.json",
+      "count": 200,
+      "sha256": "99f218c54b005ae12fa40f3a9ad175973d70541f01632886986f8622dd4fd4e4"
+    },
+    {
+      "file": "blocks/0013.json",
+      "count": 200,
+      "sha256": "b9f1f1b988df12a9667381a9750bd9a8d949d77d96af6a98bd4ad7824e1ea187"
+    },
+    {
+      "file": "blocks/0014.json",
+      "count": 200,
+      "sha256": "340adb3a581293c3aa63910f80e83d312d68699f308d9dcb5294fc77ea9a595a"
+    },
+    {
+      "file": "blocks/0015.json",
+      "count": 151,
+      "sha256": "5cce15a8db280b217f3bce96ba7bcd729b4528edcc9cb4ced77272cc57132c1c"
+    }
+  ],
+  "questionCount": 2951,
+  "createdAt": "2026-10-07T18:29:44.052Z"
+}

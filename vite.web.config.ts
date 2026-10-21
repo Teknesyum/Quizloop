@@ -5,7 +5,7 @@ import react from '@vitejs/plugin-react'
 import { defineConfig, type Plugin } from 'vite'
 import { pdfWasm } from './scripts/pdfwasm'
 
-const SAMPLES = resolve('resources/ornek')
+const SAMPLES = resolve('resources/varsayilan')
 const BUNDLED = readdirSync(SAMPLES).sort()
 const OUT = resolve('out/web')
 const VERSION = (JSON.parse(readFileSync(resolve('package.json'), 'utf8')) as { version: string })
@@ -38,15 +38,23 @@ function offline(): Plugin {
         .map((f) => web(OUT, f))
         .filter((f) => f !== 'sw.js')
         .sort()
-      const hash = createHash('sha256')
-      for (const f of files) hash.update(f).update(readFileSync(join(OUT, f)))
-      const list = [
-        './',
-        ...files.map((f) => `./${f.split('/').map(encodeURIComponent).join('/')}`)
-      ]
+      const digest = (list: string[]): string => {
+        const hash = createHash('sha256')
+        for (const f of list) hash.update(f).update(readFileSync(join(OUT, f)))
+        return hash.digest('hex').slice(0, 12)
+      }
+      const address = (f: string): string => `./${f.split('/').map(encodeURIComponent).join('/')}`
+      const packOf = (f: string): string | undefined =>
+        BUNDLED.find((id) => f.startsWith(`bundled/${id}/`))
+      const packs = BUNDLED.map((id) => {
+        const list = files.filter((f) => packOf(f) === id)
+        return { cache: `ql-pack-${id}-${digest(list)}`, files: list.map(address) }
+      })
+      const list = ['./', ...files.filter((f) => !packOf(f)).map(address)]
       const sw = readFileSync(resolve('src/web/sw.js'), 'utf8')
-        .replace('__VERSION__', `${VERSION}-${hash.digest('hex').slice(0, 12)}`)
+        .replace('__VERSION__', `${VERSION}-${digest(files)}`)
         .replace('__FILES__', JSON.stringify(list))
+        .replace('__PACKS__', JSON.stringify(packs))
       writeFileSync(join(OUT, 'sw.js'), sw)
     }
   }

@@ -279,7 +279,18 @@ export function Stats(): React.JSX.Element {
           <h2 className="tk-h2">{t('stats.title')}</h2>
           <p className="tk-hint">{t('stats.subtitle')}</p>
         </div>
-        {data && <span className="tk-label">{t('stats.streak', { count: data.streakDays })}</span>}
+        <div className="ql-head-actions">
+          {data && (
+            <span className="tk-label">{t('stats.streak', { count: data.streakDays })}</span>
+          )}
+          <button
+            type="button"
+            className="tk-btn tk-btn-ghost ql-btn-sm"
+            onClick={() => useApp.getState().go({ name: 'history' })}
+          >
+            {t('history.open')}
+          </button>
+        </div>
       </header>
 
       {!data && (

@@ -13,6 +13,8 @@ import { CardInfo, CardMeter } from '@renderer/components/CardFacts'
 import { CardMenu, MenuItem } from '@renderer/components/CardMenu'
 import { Confirm } from '@renderer/components/Confirm'
 import { GoalDialog } from '@renderer/components/GoalPick'
+import { InstallGuide } from '@renderer/components/InstallGuide'
+import { RecentPanel } from '@renderer/components/RecentPanel'
 import { Skeleton } from '@renderer/components/Skeleton'
 import { ViewToggle } from '@renderer/components/ViewToggle'
 import { useOrder } from '@renderer/hooks/useOrder'
@@ -135,6 +137,7 @@ export function Library(): React.JSX.Element {
   const [sampling, setSampling] = useState<'install' | 'remove' | null>(null)
   const [dragging, setDragging] = useState(false)
   const [busy, setBusy] = useState(false)
+  const [guide, setGuide] = useState(false)
   const [active, setActive] = useState(0)
   const [view, setView] = useView()
   const go = useApp((s) => s.go)
@@ -145,7 +148,7 @@ export function Library(): React.JSX.Element {
   }, [loadModules])
 
   useEffect(() => {
-    if (!modules?.length || removing || resetting || goaling || sampling) return
+    if (!modules?.length || removing || resetting || goaling || sampling || guide) return
     const count = modules.length
     const focus = (i: number): void => {
       const next = (i + count) % count
@@ -172,17 +175,14 @@ export function Library(): React.JSX.Element {
         go({ name: 'chapters', moduleId: m.id })
       }
     })
-  }, [modules, active, removing, resetting, goaling, sampling, go])
+  }, [modules, active, removing, resetting, goaling, sampling, guide, go])
 
   const last = raw?.reduce<ModuleSummary | null>(
     (best, m) => (m.used && (!best || m.used > (best.used ?? '')) ? m : best),
     null
   )
-  const resume = (): void => {
-    if (!last) return
-    if (last.retired >= last.questionCount) go({ name: 'chapters', moduleId: last.id })
-    else go({ name: 'session', moduleId: last.id, chapter: last.lastChapter })
-  }
+  const own = raw?.some((m) => !SAMPLE_IDS.includes(m.id)) ?? false
+  const fresh = useApp((s) => s.fresh)
 
   const samples = modules?.filter((m) => SAMPLE_IDS.includes(m.id)) ?? []
   const goalOf = goaling ? modules?.find((m) => m.id === goaling) : undefined
@@ -226,19 +226,7 @@ export function Library(): React.JSX.Element {
       onDragLeave={() => setDragging(false)}
       onDrop={onDrop}
     >
-      {last && (
-        <button
-          type="button"
-          className="tk-btn tk-btn-primary ql-resume ql-transition-in"
-          onClick={resume}
-          autoFocus
-        >
-          <span className="ql-resume-title">{t('library.resume')}</span>
-          <span className="ql-resume-where">
-            {[last.name, last.lastChapter ?? t('library.resumeMixed')].join(' · ')}
-          </span>
-        </button>
-      )}
+      <RecentPanel fresh={fresh} />
 
       <header className="ql-screen-head ql-transition-in">
         <div>
@@ -246,13 +234,15 @@ export function Library(): React.JSX.Element {
           <p className="tk-hint">{t('library.subtitle')}</p>
         </div>
         <div className="ql-head-actions">
-          <button
-            type="button"
-            className="tk-btn tk-btn-ghost"
-            onClick={() => useApp.getState().showHelp(true)}
-          >
-            {t('welcome.open')}
-          </button>
+          {!own && (
+            <button
+              type="button"
+              className="tk-btn tk-btn-ghost"
+              onClick={() => useApp.getState().showHelp(true)}
+            >
+              {t('welcome.open')}
+            </button>
+          )}
           {modules !== null && samples.length > 0 && (
             <button
               type="button"
@@ -296,26 +286,17 @@ export function Library(): React.JSX.Element {
               >
                 {t('library.addFolder')}
               </button>
-              <button
-                type="button"
-                className={`tk-btn ${last ? 'tk-btn-ghost' : 'tk-btn-primary'}`}
-                disabled={busy}
-                title={busy ? t('common.loading') : t('library.addFileHelp')}
-                onClick={() => run(() => window.quizloop.module.pick('file'))}
-              >
-                {t('library.addFile')}
-              </button>
             </>
           )}
-          {window.quizloop.capabilities.packageImport && (
+          {(window.quizloop.capabilities.folders || window.quizloop.capabilities.packageImport) && (
             <button
               type="button"
               className={`tk-btn ${last ? 'tk-btn-ghost' : 'tk-btn-primary'}`}
               disabled={busy}
-              title={busy ? t('common.loading') : t('library.addFileHelp')}
-              onClick={() => run(() => window.quizloop.module.pick('file'))}
+              title={busy ? t('common.loading') : t('library.installHelp')}
+              onClick={() => setGuide(true)}
             >
-              {t('library.importPackage')}
+              {t('library.install')}
             </button>
           )}
         </div>
@@ -340,8 +321,8 @@ export function Library(): React.JSX.Element {
           <p className="tk-prose">
             {t(
               window.quizloop.capabilities.packageImport
-                ? 'library.empty.bodyPackage'
-                : 'library.empty.body'
+                ? 'library.empty.installPackage'
+                : 'library.empty.install'
             )}
           </p>
           {window.quizloop.capabilities.folders && (
@@ -379,6 +360,16 @@ export function Library(): React.JSX.Element {
       )}
 
       {dragging && <div className="ql-drop-veil tk-label">{t('library.dropHint')}</div>}
+
+      {guide && (
+        <InstallGuide
+          onClose={() => setGuide(false)}
+          onPick={() => {
+            setGuide(false)
+            void run(() => window.quizloop.module.pick('file'))
+          }}
+        />
+      )}
 
       {goalOf && (
         <GoalDialog

@@ -18,7 +18,10 @@ import type { InstallResult } from '@shared/ipc'
 import { isPackage, unpack, type Unpacked } from './paket'
 
 export function samplePaths(): string[] {
-  const root = join(__dirname, '../../resources/ornek').replace('app.asar', 'app.asar.unpacked')
+  const root = join(__dirname, '../../resources/varsayilan').replace(
+    'app.asar',
+    'app.asar.unpacked'
+  )
   if (!existsSync(root)) return []
   return readdirSync(root)
     .sort()

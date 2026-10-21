@@ -23,7 +23,7 @@ function fold(s: string): string {
   return s.toLocaleLowerCase('tr').normalize('NFD').replace(/\p{M}/gu, '')
 }
 
-function Detail({
+export function Detail({
   q,
   kitap,
   book,

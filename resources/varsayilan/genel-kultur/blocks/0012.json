@@ -1,0 +1,2605 @@
+{
+  "blockId": "0012",
+  "questions": [
+    {
+      "id": "genel-kultur-0465",
+      "conceptId": "dm-ibadet-yerleri",
+      "stem": {
+        "md": "Dinleri, toplu ibadet yerleriyle eşleştirin.\n\n1. Yahudilik\n2. Hristiyanlık\n3. İslam\n\na. cami\nb. sinagog\nc. kilise"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "1-c, 2-b, 3-a"
+        },
+        {
+          "key": "B",
+          "md": "1-a, 2-c, 3-b"
+        },
+        {
+          "key": "C",
+          "md": "1-b, 2-c, 3-a"
+        },
+        {
+          "key": "D",
+          "md": "1-b, 2-a, 3-c"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Kilise Hristiyanlığın, sinagog ise Yahudiliğin ibadet yeridir.",
+        "B": "Cami İslam'ın ibadet yeridir, Yahudiliğin değil.",
+        "D": "Cami Hristiyanlığa değil İslam'a aittir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Yahudilik: sinagog.\n- Hristiyanlık: kilise.\n- İslam: cami."
+        },
+        {
+          "type": "hint",
+          "md": "Üç dinin ibadet yerlerinin adlarını hatırla; biri Yunanca \"toplanma yeri\" kökünden gelir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "İbrahimi dinler olarak anılan üç din, kendi ibadet yapılarına sahiptir. Bu yapılar hem ibadet hem de topluluk yaşamının merkezidir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          89,
+          89
+        ],
+        "quote": "Yahudiler sinagogda, Hristiyanlar kilisede, Müslümanlar camide toplu ibadet eder.",
+        "chapter": "Din ve Mitoloji"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "din"
+      ],
+      "vurgu": [],
+      "contentHash": "7c2d7889cc642a0fe65f3b032e6c0edbef2c95d2425666d26e3e514aa208a370",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0466",
+      "conceptId": "dm-pesah",
+      "stem": {
+        "md": "Yahudilikte İsrailoğullarının Mısır'dan çıkışını anan bayram hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Hanuka"
+        },
+        {
+          "key": "B",
+          "md": "Yom Kippur"
+        },
+        {
+          "key": "C",
+          "md": "Pesah (Hamursuz Bayramı)"
+        },
+        {
+          "key": "D",
+          "md": "Roş Aşana"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Hanuka, tapınağın yeniden adanmasını anan ışık bayramıdır.",
+        "B": "Yom Kippur oruç ve tövbeyle geçirilen Kefaret Günü'dür.",
+        "D": "Roş Aşana Yahudi yılbaşıdır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Pesah'tır.\n- Bayram boyunca mayasız ekmek (matza) yenir.\n- Türkçede Hamursuz Bayramı olarak da bilinir."
+        },
+        {
+          "type": "hint",
+          "md": "Bayramın Türkçe adı, o günlerde yenen ekmeğin özelliğinden gelir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Yahudi bayramlarının çoğu, Tevrat'ta anlatılan tarihsel olayları ya da tarım döngüsünü anar. Bayramlar ay-güneş takvimine göre belirlenir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          89,
+          89
+        ],
+        "quote": "Yahudilikte Pesah (Hamursuz) Bayramı, İsrailoğullarının Mısır'dan çıkışını anar.",
+        "chapter": "Din ve Mitoloji"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "din"
+      ],
+      "vurgu": [],
+      "contentHash": "38f824babeeb7b33a4bc9efeb657f8310b17e046b7e21f56a9378003a13dfa95",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0467",
+      "conceptId": "dm-yom-kippur",
+      "stem": {
+        "md": "Yahudilikte oruç ve tövbeyle geçirilen Kefaret Günü'nün adı nedir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Yom Kippur"
+        },
+        {
+          "key": "B",
+          "md": "Pesah"
+        },
+        {
+          "key": "C",
+          "md": "Hanuka"
+        },
+        {
+          "key": "D",
+          "md": "Purim"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Pesah Mısır'dan çıkışı anan bayramdır.",
+        "C": "Hanuka sekiz gün süren ışık bayramıdır.",
+        "D": "Purim, Ester kitabında anlatılan kurtuluşu anan neşeli bir bayramdır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Yom Kippur'dur.\n- Yahudi takviminin en kutsal günü sayılır.\n- Roş Aşana'dan (yılbaşı) on gün sonra gelir."
+        },
+        {
+          "type": "hint",
+          "md": "Adındaki ilk kelime İbranicede \"gün\" demektir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Yahudi takviminde yılbaşını izleyen günler iç muhasebe ve tövbe dönemi olarak görülür. Bu dönem yılın en ağırbaşlı günüyle sona erer."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          89,
+          89
+        ],
+        "quote": "Yom Kippur, Yahudilikte oruç ve tövbeyle geçirilen Kefaret Günü'dür.",
+        "chapter": "Din ve Mitoloji"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "din"
+      ],
+      "vurgu": [],
+      "contentHash": "edf272b40006f350fe8c3fd459f8088480efac3e926c49521c4885b5c73977f8",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0468",
+      "conceptId": "dm-kitabi-mukaddes",
+      "stem": {
+        "md": "Hristiyanların kutsal kitabı Kitab-ı Mukaddes hangi iki bölümden oluşur?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Tevrat ve Talmud"
+        },
+        {
+          "key": "B",
+          "md": "Vedalar ve Upanişadlar"
+        },
+        {
+          "key": "C",
+          "md": "Eski Ahit ve Yeni Ahit"
+        },
+        {
+          "key": "D",
+          "md": "Avesta ve Gatalar"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Talmud, Yahudi din yasası ve yorumlarını içeren bir külliyattır, Hristiyan kutsal kitabının bölümü değildir.",
+        "B": "Vedalar ve Upanişadlar Hinduizmin kutsal metinleridir.",
+        "D": "Avesta ve onun bir parçası olan Gatalar Zerdüştlüğe aittir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Eski Ahit ve Yeni Ahit'tir.\n- Eski Ahit büyük ölçüde Yahudi kutsal metinleriyle ortaktır.\n- Yeni Ahit dört İncil'i ve mektupları içerir."
+        },
+        {
+          "type": "hint",
+          "md": "Bölümlerden biri Yahudi kutsal metinleriyle büyük ölçüde örtüşür."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Kutsal metinler çoğu zaman tek bir kitap değil, farklı dönemlerde yazılmış metinlerin derlemesidir. Hristiyan geleneğinde bu derleme İsa öncesi ve sonrası olarak ikiye ayrılır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          89,
+          89
+        ],
+        "quote": "Hristiyanların kutsal kitabı Kitab-ı Mukaddes, Eski Ahit ve Yeni Ahit olmak üzere iki bölümden oluşur.",
+        "chapter": "Din ve Mitoloji"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "din"
+      ],
+      "vurgu": [],
+      "contentHash": "0eaad83cbbf4ba663fd7ed6a63d574679f474c98b69f1b779f2e09f4dc270975",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0469",
+      "conceptId": "dm-paskalya",
+      "stem": {
+        "md": "Hristiyanlıkta İsa'nın dirilişini kutlayan bayram hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Paskalya"
+        },
+        {
+          "key": "B",
+          "md": "Noel"
+        },
+        {
+          "key": "C",
+          "md": "Hanuka"
+        },
+        {
+          "key": "D",
+          "md": "Diwali"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Noel İsa'nın doğumunu kutlar.",
+        "C": "Hanuka bir Yahudi bayramıdır.",
+        "D": "Diwali Hinduizmde ışık bayramıdır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Paskalya'dır.\n- Tarihi her yıl değişir; ilkbaharda kutlanır.\n- Boyanmış yumurtalar bu bayramın bilinen simgelerindendir."
+        },
+        {
+          "type": "hint",
+          "md": "Bayramın simgeleri arasında boyanmış yumurtalar vardır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Hristiyan takviminin iki büyük bayramı İsa'nın yaşamındaki iki önemli olayı anar. Biri kış ortasında, diğeri ilkbaharda kutlanır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          89,
+          89
+        ],
+        "quote": "Paskalya, Hristiyanlıkta İsa'nın dirilişini kutlayan bayramdır.",
+        "chapter": "Din ve Mitoloji"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "din"
+      ],
+      "vurgu": [],
+      "contentHash": "b82cd387a8627ca8b336c5a8a95766037e4d555303035557fd659d5e1b63b658",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0470",
+      "conceptId": "dm-kuran-sure",
+      "stem": {
+        "md": "Kur'an-ı Kerim kaç sureden oluşur?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "99"
+        },
+        {
+          "key": "B",
+          "md": "114"
+        },
+        {
+          "key": "C",
+          "md": "120"
+        },
+        {
+          "key": "D",
+          "md": "110"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "99 sayısı Allah'ın güzel isimleri (Esmaü'l-Hüsna) için anılan sayıdır.",
+        "C": "120 sure sayısını aşar.",
+        "D": "110 sure sayısının altındadır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap 114'tür.\n- Sureler ayetlerden oluşur.\n- İlk sure Fatiha'dır."
+        },
+        {
+          "type": "hint",
+          "md": "Sayı 110 ile 120 arasındadır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Kur'an bölümlere ve bölümler de ayetlere ayrılır. Sureler genel olarak uzundan kısaya doğru sıralanmıştır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          90,
+          90
+        ],
+        "quote": "Kur'an-ı Kerim 114 sureden oluşur.",
+        "chapter": "Din ve Mitoloji"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "din"
+      ],
+      "vurgu": [],
+      "contentHash": "984321dd4928b1d8bf3ffb70a78a3dae2e8bbf268f8f67404835d0a285038019",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0471",
+      "conceptId": "dm-hicret",
+      "stem": {
+        "md": "Hicri takvimin başlangıcı kabul edilen olay hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Mekke'nin fethi"
+        },
+        {
+          "key": "B",
+          "md": "Hz. Muhammed'in Mekke'den Medine'ye göçü"
+        },
+        {
+          "key": "C",
+          "md": "Bedir Savaşı"
+        },
+        {
+          "key": "D",
+          "md": "Kâbe'nin inşası"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Mekke'nin fethi göçten yıllar sonra, 630 yılında gerçekleşmiştir.",
+        "C": "Bedir Savaşı göçten sonra, 624 yılında yapılmıştır.",
+        "D": "Kâbe'nin inşası geleneksel olarak çok daha eski bir döneme, Hz. İbrahim'e bağlanır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Hicret'tir.\n- Göç 622 yılında gerçekleşmiştir.\n- Hicri takvim ay yılına dayanır."
+        },
+        {
+          "type": "hint",
+          "md": "Takvimin adı bu olayın adından türemiştir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Birçok takvim, topluluk için dönüm noktası sayılan bir olayı başlangıç alır. İslam toplumunun Medine'de bir topluluk olarak örgütlenmesi böyle bir dönüm noktasıdır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          90,
+          90
+        ],
+        "quote": "Hz. Muhammed'in 622 yılında Mekke'den Medine'ye göçü olan Hicret, Hicri takvimin başlangıcı kabul edilir.",
+        "chapter": "Din ve Mitoloji"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "din"
+      ],
+      "vurgu": [],
+      "contentHash": "b47e81e1199ea752763061ee96ca6ab9f0eff1b110a2a9617a30aa6257962f0f",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0472",
+      "conceptId": "dm-bes-sart",
+      "stem": {
+        "md": "Aşağıdakilerden hangisi İslam'ın beş şartından biri değildir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Namaz kılmak"
+        },
+        {
+          "key": "B",
+          "md": "Zekât vermek"
+        },
+        {
+          "key": "C",
+          "md": "Kurban kesmek"
+        },
+        {
+          "key": "D",
+          "md": "Hacca gitmek"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Namaz İslam'ın beş şartından biridir.",
+        "B": "Zekât İslam'ın beş şartından biridir.",
+        "D": "Hac, gücü yetenler için İslam'ın beş şartından biridir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Beş şart: kelime-i şehadet, namaz, oruç, zekât ve hac.\n- Kurban kesmek önemli bir ibadettir ama beş şart arasında sayılmaz."
+        },
+        {
+          "type": "hint",
+          "md": "Beş şartı tek tek say; listede olmayanı bul."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "İslam'da temel ibadetler \"İslam'ın şartları\" adı altında toplanır. Bunlar hem bireysel hem de toplumsal ibadetleri kapsar."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          90,
+          90
+        ],
+        "quote": "İslam'ın beş şartı kelime-i şehadet, namaz, oruç, zekât ve hacdır.",
+        "chapter": "Din ve Mitoloji"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "din"
+      ],
+      "vurgu": [],
+      "contentHash": "126baa6f9e3437901b659597b8970e0c913386f4ea6c1339ffd0d1ab80190a7d",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0473",
+      "conceptId": "dm-ramazan-bayrami",
+      "stem": {
+        "md": "Oruç ayının bitişiyle kutlanan İslami bayram hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Kurban Bayramı"
+        },
+        {
+          "key": "B",
+          "md": "Mevlit Kandili"
+        },
+        {
+          "key": "C",
+          "md": "Aşure Günü"
+        },
+        {
+          "key": "D",
+          "md": "Ramazan Bayramı"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Kurban Bayramı hac ibadetinin yapıldığı günlerde kutlanır.",
+        "B": "Mevlit Kandili Hz. Muhammed'in doğumunun anıldığı gecedir, bayram değildir.",
+        "C": "Aşure Günü Muharrem ayının onuncu günüdür."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Ramazan Bayramı'dır.\n- Şeker Bayramı olarak da bilinir.\n- Bir ay süren orucun ardından gelir."
+        },
+        {
+          "type": "hint",
+          "md": "Bayramın halk arasındaki diğer adı tatlı bir şeyi çağrıştırır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "İslam'da iki büyük bayram vardır ve ikisi de ay takvimine göre belirlenir. Bu yüzden tarihleri güneş takvimine göre her yıl yaklaşık on bir gün öne kayar."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          90,
+          90
+        ],
+        "quote": "Ramazan Bayramı, oruç ayı Ramazan'ın bitişiyle kutlanır.",
+        "chapter": "Din ve Mitoloji"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "din"
+      ],
+      "vurgu": [],
+      "contentHash": "b77a426c7a55026586be192a4f298a3e3945127ebb51b08f39d37998d920bb60",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0474",
+      "conceptId": "dm-kible-kabe",
+      "stem": {
+        "md": "Müslümanların namazda yöneldiği kıble neresidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Kudüs'teki Mescid-i Aksa"
+        },
+        {
+          "key": "B",
+          "md": "Medine'deki Mescid-i Nebevi"
+        },
+        {
+          "key": "C",
+          "md": "Mekke'deki Kâbe"
+        },
+        {
+          "key": "D",
+          "md": "Arafat Dağı"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Mescid-i Aksa ilk dönemde kıble olmuş, sonra kıble değişmiştir.",
+        "B": "Mescid-i Nebevi önemli bir camidir ama kıble değildir.",
+        "D": "Arafat hac sırasında vakfe yapılan yerdir, kıble değildir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Mekke'deki Kâbe'dir.\n- Kâbe, Mescid-i Haram'ın ortasında yer alır.\n- Hac ibadetinin merkezidir."
+        },
+        {
+          "type": "hint",
+          "md": "Hac ibadetinin etrafında tavaf edilen yapıyı düşün."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Kıble, ibadet sırasında yönelinen yöndür. Camilerde bu yön mihrap adı verilen bir nişle gösterilir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          90,
+          90
+        ],
+        "quote": "Müslümanların namazda yöneldiği kıble, Mekke'deki Kâbe'dir.",
+        "chapter": "Din ve Mitoloji"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "din"
+      ],
+      "vurgu": [],
+      "contentHash": "867bbabb16f58d63d2ac3449b4254853c2dc0b75f7ae93995032071a7889284b",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0475",
+      "conceptId": "dm-buda",
+      "stem": {
+        "md": "Budizmin kurucusu kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Siddhartha Gautama"
+        },
+        {
+          "key": "B",
+          "md": "Lao Tzu"
+        },
+        {
+          "key": "C",
+          "md": "Konfüçyüs"
+        },
+        {
+          "key": "D",
+          "md": "Guru Nanak"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Lao Tzu Taoizmle ilişkilendirilen Çinli bilgedir.",
+        "C": "Konfüçyüs ahlak ve toplum düzeni öğretisiyle tanınan Çinli düşünürdür.",
+        "D": "Guru Nanak Sihizmin kurucusudur."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Siddhartha Gautama'dır.\n- \"Buda\" bir isim değil, \"aydınlanmış kişi\" anlamına gelen bir unvandır.\n- Bugünkü Nepal-Hindistan bölgesinde yaşamıştır."
+        },
+        {
+          "type": "hint",
+          "md": "Bir prens olarak doğup sarayı terk ettiği anlatılan kişiyi düşün."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Budizm, acının nedenini ve ondan kurtuluş yolunu anlatan bir öğretidir. Dört Yüce Gerçek ve Sekiz Aşamalı Yol bu öğretinin temelidir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          91,
+          91
+        ],
+        "quote": "Budizmin kurucusu, Buda yani 'aydınlanmış kişi' unvanıyla anılan Siddhartha Gautama'dır.",
+        "chapter": "Din ve Mitoloji"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "din"
+      ],
+      "vurgu": [],
+      "contentHash": "93ef6575ab986d466b9ef6d70a0cdef9dd44149c06f19e4faa697a92552156c3",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0476",
+      "conceptId": "dm-vedalar",
+      "stem": {
+        "md": "Hinduizmin en eski kutsal metinleri hangileridir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Sutralar"
+        },
+        {
+          "key": "B",
+          "md": "Vedalar"
+        },
+        {
+          "key": "C",
+          "md": "Avesta"
+        },
+        {
+          "key": "D",
+          "md": "Tripitaka"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Sutra adı birçok gelenekte öğreti metinleri için kullanılır; Hinduizmin en eski katmanı değildir.",
+        "C": "Avesta Zerdüştlüğün kutsal kitabıdır.",
+        "D": "Tripitaka Budist kutsal metinlerinin derlemesidir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Vedalar'dır.\n- Sanskritçe yazılmıştır.\n- Rigveda bunların en eskisidir."
+        },
+        {
+          "type": "hint",
+          "md": "Kelime Sanskritçede \"bilgi\" anlamına gelir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Hinduizmin tek bir kurucusu yoktur; yüzyıllar boyunca biriken metin ve geleneklerden oluşur. Bu metinlerin en eskileri uzun süre sözlü olarak aktarılmıştır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          91,
+          91
+        ],
+        "quote": "Hinduizmin en eski kutsal metinleri Vedalar'dır.",
+        "chapter": "Din ve Mitoloji"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "din"
+      ],
+      "vurgu": [],
+      "contentHash": "041e96821ca4b7a4db3fc3bd02a7b13a772f299843d4666ea992be8fb0259a69",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0477",
+      "conceptId": "dm-sih-altin-tapinak",
+      "stem": {
+        "md": "Amritsar'daki Altın Tapınak'ın en önemli tapınağı olduğu dinin kurucusu kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Guru Nanak"
+        },
+        {
+          "key": "B",
+          "md": "Mahavira"
+        },
+        {
+          "key": "C",
+          "md": "Siddhartha Gautama"
+        },
+        {
+          "key": "D",
+          "md": "Zerdüşt"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Mahavira Jainizmin en önemli öğretmenidir.",
+        "C": "Siddhartha Gautama Budizmin kurucusudur.",
+        "D": "Zerdüşt, İran kökenli Zerdüştlüğün peygamberidir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Altın Tapınak Sihizmin en önemli tapınağıdır.\n- Sihizmin kurucusu Guru Nanak'tır.\n- Din Pencap bölgesinde doğmuştur."
+        },
+        {
+          "type": "hint",
+          "md": "Din Hindistan'ın Pencap bölgesinde ortaya çıkmıştır ve kurucusu \"guru\" unvanıyla anılır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Hindistan alt kıtası birçok dinin doğduğu bir bölgedir. Bu dinlerin bazıları tek bir kurucunun öğretisine, bazıları ise uzun bir geleneğe dayanır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          91,
+          91
+        ],
+        "quote": "Sihizmin kurucusu Guru Nanak'tır ve dinin en önemli tapınağı Amritsar'daki Altın Tapınak'tır.",
+        "chapter": "Din ve Mitoloji"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "din"
+      ],
+      "vurgu": [],
+      "contentHash": "9f5108e91d436f681a48ee2d1fd6449f9eb351298862a1f9db3fd130ca49a23f",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0478",
+      "conceptId": "dm-tao-te-ching",
+      "stem": {
+        "md": "Taoizmin temel metni Tao Te Ching geleneksel olarak kime atfedilir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Lao Tzu"
+        },
+        {
+          "key": "B",
+          "md": "Konfüçyüs"
+        },
+        {
+          "key": "C",
+          "md": "Sun Tzu"
+        },
+        {
+          "key": "D",
+          "md": "Mencius"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Konfüçyüs'ün öğretileri Analektler'de toplanmıştır.",
+        "C": "Sun Tzu Savaş Sanatı adlı eserle anılır.",
+        "D": "Mencius Konfüçyüsçü geleneğin önemli bir düşünürüdür."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Lao Tzu'dur.\n- Tao \"yol\" anlamına gelir.\n- Metin doğayla uyumlu, sade bir yaşamı öğütler."
+        },
+        {
+          "type": "hint",
+          "md": "Adı \"yaşlı usta\" anlamına gelen Çinli bilgeyi düşün."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Çin düşüncesinde Taoizm ve Konfüçyüsçülük yüzyıllarca yan yana gelişti. Biri toplumsal düzeni ve görevleri, diğeri doğanın akışıyla uyumu öne çıkardı."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          91,
+          91
+        ],
+        "quote": "Taoizmin temel metni Tao Te Ching, geleneksel olarak Lao Tzu'ya atfedilir.",
+        "chapter": "Din ve Mitoloji"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "din"
+      ],
+      "vurgu": [],
+      "contentHash": "f74eac1751a73bb0baf935851c3bfc6a8bec2bac464c5cb888a5becb10735f4e",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0479",
+      "conceptId": "dm-avesta",
+      "stem": {
+        "md": "Zerdüştlüğün kutsal kitabı hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Avesta"
+        },
+        {
+          "key": "B",
+          "md": "Vedalar"
+        },
+        {
+          "key": "C",
+          "md": "Tripitaka"
+        },
+        {
+          "key": "D",
+          "md": "Guru Granth Sahib"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Vedalar Hinduizmin en eski kutsal metinleridir.",
+        "C": "Tripitaka Budizmin kutsal metin derlemesidir.",
+        "D": "Guru Granth Sahib Sihizmin kutsal kitabıdır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Avesta'dır.\n- Zerdüştlük eski İran'da doğmuştur.\n- İyilik ile kötülük arasındaki mücadele öğretinin merkezindedir."
+        },
+        {
+          "type": "hint",
+          "md": "Kitabın adı, yazıldığı eski İran dilinin adıyla da anılır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Eski İran'da doğan bu din, ateşi kutsal sayan tapınaklarıyla bilinir. Bugün başlıca Hindistan'daki Parsi topluluğu ve İran'da yaşatılmaktadır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          91,
+          91
+        ],
+        "quote": "Zerdüştlüğün kutsal kitabı Avesta'dır.",
+        "chapter": "Din ve Mitoloji"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "din"
+      ],
+      "vurgu": [],
+      "contentHash": "f56e5d3349cb696a595aa2229bfcc08950bd20110e4201e921004fdcde9677d8",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0480",
+      "conceptId": "dm-diwali",
+      "stem": {
+        "md": "Hinduizmde ışık bayramı olarak kutlanan bayram hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Holi"
+        },
+        {
+          "key": "B",
+          "md": "Diwali"
+        },
+        {
+          "key": "C",
+          "md": "Hanuka"
+        },
+        {
+          "key": "D",
+          "md": "Vesak"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Holi renkli tozların saçıldığı bahar bayramıdır.",
+        "C": "Hanuka bir Yahudi ışık bayramıdır, Hindu bayramı değildir.",
+        "D": "Vesak, Buda'nın doğumunu ve aydınlanmasını anan Budist bayramdır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Diwali'dir.\n- Evler kandil ve ışıklarla süslenir.\n- Işığın karanlığa, iyiliğin kötülüğe üstünlüğünü simgeler."
+        },
+        {
+          "type": "hint",
+          "md": "Bu bayramda kandiller yakılır; renkli toz saçılan bayramla karıştırma."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Hindu takviminde mevsimlere ve efsanelere bağlı çok sayıda bayram vardır. Bunlardan bazıları renk, bazıları ışık temasıyla öne çıkar."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          91,
+          91
+        ],
+        "quote": "Diwali, Hinduizmde ışık bayramı olarak kutlanır.",
+        "chapter": "Din ve Mitoloji"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "din"
+      ],
+      "vurgu": [],
+      "contentHash": "c8fe2c924b9bef0b4071356f5836e5156555c0fd486192e3dbb5bef5352d3893",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0481",
+      "conceptId": "dm-zeus-olimpos",
+      "stem": {
+        "md": "Yunan mitolojisinde tanrıların başı olan ve Olimpos Dağı'nda yaşadığına inanılan tanrı kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Poseidon"
+        },
+        {
+          "key": "B",
+          "md": "Apollon"
+        },
+        {
+          "key": "C",
+          "md": "Zeus"
+        },
+        {
+          "key": "D",
+          "md": "Hermes"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Poseidon denizlerin tanrısıdır.",
+        "B": "Apollon güneş, müzik ve kehanetle ilişkilendirilir.",
+        "D": "Hermes tanrıların habercisidir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Zeus'tur.\n- Gök ve yıldırımla ilişkilendirilir.\n- Babası Kronos'u alt ederek tanrıların başına geçmiştir."
+        },
+        {
+          "type": "hint",
+          "md": "Simgesi yıldırımdır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Yunan mitolojisinde on iki büyük tanrı Olimpos Dağı'nda yaşar. Bu tanrılar insanlar gibi kıskançlık, öfke ve sevgi duyar."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          92,
+          92
+        ],
+        "quote": "Yunan mitolojisinde tanrıların başı olan Zeus, Olimpos Dağı'nda yaşar.",
+        "chapter": "Din ve Mitoloji"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "mitoloji"
+      ],
+      "vurgu": [],
+      "contentHash": "d36dc8505563fac6350032792f33576ef6e13902744425a53534bf6a9e692426",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0482",
+      "conceptId": "dm-prometheus",
+      "stem": {
+        "md": "Tanrılardan ateşi çalıp insanlara verdiği için Zeus tarafından cezalandırılan titan kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Prometheus"
+        },
+        {
+          "key": "B",
+          "md": "Atlas"
+        },
+        {
+          "key": "C",
+          "md": "Kronos"
+        },
+        {
+          "key": "D",
+          "md": "Hephaistos"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Atlas, gök kubbeyi omuzlarında taşımakla cezalandırılan titandır.",
+        "C": "Kronos, Zeus'un babasıdır ve oğulları tarafından alt edilmiştir.",
+        "D": "Hephaistos ateş ve demircilik tanrısıdır, ateşi çalan kişi değildir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Prometheus'tur.\n- Cezası bir kayaya zincirlenmek ve ciğerinin her gün bir kartal tarafından yenmesidir.\n- İnsanlığın iyiliği için tanrılara karşı gelmenin simgesi olmuştur."
+        },
+        {
+          "type": "hint",
+          "md": "Adı \"önceden düşünen\" anlamına gelir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Yunan mitolojisinde titanlar, Olimposlu tanrılardan önce dünyayı yöneten eski kuşaktır. Bazı titanlar insanlara yardım ettikleri için ağır cezalar almıştır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          92,
+          92
+        ],
+        "quote": "Prometheus, tanrılardan ateşi çalıp insanlara verdiği için Zeus tarafından cezalandırılmıştır.",
+        "chapter": "Din ve Mitoloji"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "mitoloji"
+      ],
+      "vurgu": [],
+      "contentHash": "17cdd777a9621f0a60123b8e6243ab29375827c98bd2c7edc45a973d507ec9cf",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0483",
+      "conceptId": "dm-akhilleus-topuk",
+      "stem": {
+        "md": "Truva Savaşı'nın ünlü kahramanlarından olan ve vücudundaki tek zayıf noktası topuğu olan savaşçı kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Hektor"
+        },
+        {
+          "key": "B",
+          "md": "Akhilleus"
+        },
+        {
+          "key": "C",
+          "md": "Odysseus"
+        },
+        {
+          "key": "D",
+          "md": "Herakles"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Hektor Truvalıların en büyük savaşçısıdır ve böyle bir zayıflıkla anılmaz.",
+        "C": "Odysseus gücünden çok kurnazlığıyla tanınır.",
+        "D": "Herakles on iki görevle tanınan bir kahramandır, Truva Savaşı'nda savaşmamıştır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Akhilleus'tur.\n- Annesi onu ölümsüz kılmak için Styks ırmağına batırırken topuğundan tutmuştur.\n- \"Aşil topuğu\" deyimi buradan gelir."
+        },
+        {
+          "type": "hint",
+          "md": "Vücuttaki bir tendona da adını vermiştir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Truva Savaşı, Yunan mitolojisinin en ünlü olaylarından biridir ve İlyada'da anlatılır. Savaşın kahramanları hem güçleri hem de zaaflarıyla tanınır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          92,
+          92
+        ],
+        "quote": "Akhilleus'un vücudundaki tek zayıf noktası topuğudur.",
+        "chapter": "Din ve Mitoloji"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "mitoloji"
+      ],
+      "vurgu": [],
+      "contentHash": "34be42f56b995f7405bdbffe792d1ffc3b690df2f40ed32814a4419d1ce43327",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0484",
+      "conceptId": "dm-odysseia",
+      "stem": {
+        "md": "İlyada'nın da yazarı kabul edilen ozana atfedilen ve bir kahramanın Truva Savaşı'ndan sonra evine dönüşünü anlatan destanın kahramanı kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Akhilleus"
+        },
+        {
+          "key": "B",
+          "md": "Aeneas"
+        },
+        {
+          "key": "C",
+          "md": "Odysseus"
+        },
+        {
+          "key": "D",
+          "md": "Agamemnon"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Akhilleus savaş sırasında ölür; eve dönüş yolculuğu anlatılmaz.",
+        "B": "Aeneas'ın yolculuğu Romalı şair Vergilius'un Aeneis'inde anlatılır.",
+        "D": "Agamemnon eve döner ama onun dönüşü bir destanın ana konusu değildir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Ozan Homeros'tur.\n- Destan Odysseia'dır, kahramanı Odysseus'tur.\n- Kahramanın İthaka'ya dönüşü yıllar sürer."
+        },
+        {
+          "type": "hint",
+          "md": "Destanın adı kahramanın adından türemiştir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Homeros'a atfedilen iki büyük destan Yunan edebiyatının temelini oluşturur. Biri savaşın kendisini, diğeri savaştan sonraki yolculuğu konu alır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          92,
+          92
+        ],
+        "quote": "Homeros'a atfedilen Odysseia destanı, Odysseus'un Truva Savaşı'ndan sonra evine dönüş yolculuğunu anlatır.",
+        "chapter": "Din ve Mitoloji"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "mitoloji"
+      ],
+      "vurgu": [],
+      "contentHash": "7d2236e87184cb8a85958723b7389410bd0ea3bec33bc03f12c02ed03c0d426a",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0485",
+      "conceptId": "dm-medusa-perseus",
+      "stem": {
+        "md": "Bakışı insanları taşa çeviren Medusa'nın başını kesen kahraman kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Theseus"
+        },
+        {
+          "key": "B",
+          "md": "Herakles"
+        },
+        {
+          "key": "C",
+          "md": "Iason"
+        },
+        {
+          "key": "D",
+          "md": "Perseus"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Theseus Minotauros'u öldürmesiyle tanınır.",
+        "B": "Herakles on iki görevi tamamlayan kahramandır.",
+        "C": "Iason Altın Post'u arayan Argonotların önderidir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Perseus'tur.\n- Medusa'ya doğrudan bakmamak için cilalı bir kalkanı ayna gibi kullanmıştır.\n- Kesilen baş daha sonra Athena'nın kalkanına yerleştirilmiştir."
+        },
+        {
+          "type": "hint",
+          "md": "Kahraman, canavara doğrudan bakmadan yansımadan yararlanmıştır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Yunan mitolojisindeki kahramanlar genellikle tanrıların yardımıyla canavarlarla savaşır. Gorgonlar, saçları yılanlardan oluşan üç kız kardeştir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          92,
+          92
+        ],
+        "quote": "Bakışı insanları taşa çeviren Medusa'nın başını kahraman Perseus kesmiştir.",
+        "chapter": "Din ve Mitoloji"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "mitoloji"
+      ],
+      "vurgu": [],
+      "contentHash": "9354f7178dfcd13a1df1d87c87c33be8bb2d56e00a3b69b9a96d9b9ceaf03157",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0486",
+      "conceptId": "dm-olimpos-eslestirme",
+      "stem": {
+        "md": "Tanrıları ilişkili oldukları alanlarla eşleştirin.\n\n1. Poseidon\n2. Hades\n3. Athena\n\na. yeraltı dünyası\nb. bilgelik\nc. deniz"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "1-a, 2-c, 3-b"
+        },
+        {
+          "key": "B",
+          "md": "1-c, 2-b, 3-a"
+        },
+        {
+          "key": "C",
+          "md": "1-b, 2-a, 3-c"
+        },
+        {
+          "key": "D",
+          "md": "1-c, 2-a, 3-b"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Poseidon yeraltının değil, denizlerin tanrısıdır.",
+        "B": "Hades bilgelikle değil, yeraltı dünyasıyla ilişkilidir.",
+        "C": "Poseidon bilgelik tanrısı değildir; simgesi üç dişli mızraktır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Poseidon: deniz.\n- Hades: yeraltı dünyası.\n- Athena: bilgelik; Atina kentinin koruyucusudur."
+        },
+        {
+          "type": "hint",
+          "md": "Üç dişli mızrak taşıyan tanrıyı ve baykuşla simgelenen tanrıçayı düşün."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Yunan tanrıları doğanın ve insan yaşamının farklı alanlarını yönetir. Her tanrının kendine özgü simgeleri ve kutsal hayvanları vardır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          92,
+          92
+        ],
+        "quote": "Poseidon denizlerin, Hades yeraltı dünyasının, Athena ise bilgeliğin tanrısıdır.",
+        "chapter": "Din ve Mitoloji"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "mitoloji"
+      ],
+      "vurgu": [],
+      "contentHash": "7c1dbdb629bc363640a5e10ac0ddc927adf3fdd349ec9d244fccdf285a2b7991",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0487",
+      "conceptId": "dm-roma-karsiliklar",
+      "stem": {
+        "md": "Yunan tanrılarını Roma mitolojisindeki karşılıklarıyla eşleştirin.\n\n1. Zeus\n2. Ares\n3. Afrodit\n\na. Venüs\nb. Jüpiter\nc. Mars"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "1-c, 2-b, 3-a"
+        },
+        {
+          "key": "B",
+          "md": "1-b, 2-c, 3-a"
+        },
+        {
+          "key": "C",
+          "md": "1-b, 2-a, 3-c"
+        },
+        {
+          "key": "D",
+          "md": "1-a, 2-c, 3-b"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Zeus'un karşılığı savaş tanrısı Mars değil, tanrıların başıdır.",
+        "C": "Ares savaş tanrısıdır; aşk tanrıçasıyla eşleşmez.",
+        "D": "Zeus aşk tanrıçasıyla eşleşmez."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Zeus: Jüpiter.\n- Ares: Mars.\n- Afrodit: Venüs."
+        },
+        {
+          "type": "hint",
+          "md": "Gezegen adlarının çoğu bu Roma tanrılarından gelir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Romalılar Yunan tanrılarının birçoğunu kendi tanrılarıyla özdeşleştirdi. Bu yüzden iki mitolojide aynı rollere sahip farklı adlar bulunur."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          93,
+          93
+        ],
+        "quote": "Roma mitolojisinde Zeus'un karşılığı Jüpiter, Ares'inki Mars, Afrodit'inki Venüs'tür.",
+        "chapter": "Din ve Mitoloji"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "mitoloji"
+      ],
+      "vurgu": [],
+      "contentHash": "c0152425258f82682384c0237efb5d005982fcb9a61e2c1fd9c1a89060917554",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0488",
+      "conceptId": "dm-romulus-remus",
+      "stem": {
+        "md": "Efsaneye göre Roma'nın kurucusu Romulus ve ikiz kardeşi Remus'u hangi hayvan emzirmiştir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Dişi ayı"
+        },
+        {
+          "key": "B",
+          "md": "Dişi kurt"
+        },
+        {
+          "key": "C",
+          "md": "Keçi"
+        },
+        {
+          "key": "D",
+          "md": "Dişi aslan"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Ayı Roma'nın kuruluş efsanesinde yer almaz.",
+        "C": "Keçi bazı Yunan efsanelerinde Zeus'u besleyen hayvandır, Roma efsanesinde değil.",
+        "D": "Aslan bu efsaneyle ilişkili değildir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap dişi kurttur.\n- İkizler Tiber Irmağı'na bırakılmış, kurt tarafından bulunmuştur.\n- Kurt ve ikizler heykeli Roma'nın simgesidir."
+        },
+        {
+          "type": "hint",
+          "md": "Bu hayvan Türk destanlarında da önemli bir yer tutar."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Kuruluş efsaneleri bir kentin ya da halkın kökenini olağanüstü olaylarla açıklar. Roma'nın efsanesi ikiz kardeşler ve onları kurtaran bir hayvan etrafında döner."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          93,
+          93
+        ],
+        "quote": "Efsaneye göre Roma'nın kurucusu Romulus ve ikiz kardeşi Remus'u bir dişi kurt emzirmiştir.",
+        "chapter": "Din ve Mitoloji"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "mitoloji"
+      ],
+      "vurgu": [],
+      "contentHash": "e1111ce1c7a00b0244636c616e3c8ae9fb2d774a02f7348c36c45a716fbda150",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0489",
+      "conceptId": "dm-janus",
+      "stem": {
+        "md": "İki yüzlü olarak betimlenen Roma tanrısı ____, kapıların ve başlangıçların tanrısıdır; Ocak ayının İngilizce adı ondan gelir. Boşluğa hangisi gelmelidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Jüpiter"
+        },
+        {
+          "key": "B",
+          "md": "Janus"
+        },
+        {
+          "key": "C",
+          "md": "Merkür"
+        },
+        {
+          "key": "D",
+          "md": "Satürn"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Jüpiter tanrıların başıdır, iki yüzlü betimlenmez.",
+        "C": "Merkür haberci tanrıdır ve adı bir gezegene verilmiştir.",
+        "D": "Satürn tarım ve zamanla ilişkilendirilir; adı bir haftanın gününe verilmiştir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Janus'tur.\n- Bir yüzü geçmişe, diğeri geleceğe bakar.\n- İngilizce \"January\" adı Janus'tan gelir."
+        },
+        {
+          "type": "hint",
+          "md": "İngilizcede yılın ilk ayının adını düşün."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Romalılar evdeki ve kentteki gündelik geçişleri de kutsal saydı. Kapılar, eşikler ve yeni başlangıçlar özel bir tanrının korumasına bırakıldı."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          93,
+          93
+        ],
+        "quote": "İki yüzlü olarak betimlenen Roma tanrısı Janus, kapıların ve başlangıçların tanrısıdır; Ocak ayının İngilizce adı ondan gelir.",
+        "chapter": "Din ve Mitoloji"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "mitoloji"
+      ],
+      "vurgu": [],
+      "contentHash": "665b27a504b3bd5800aac95c085415a311fb6359cac54254b9e4062ce97dd510",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0490",
+      "conceptId": "dm-misir-ra",
+      "stem": {
+        "md": "Mısır mitolojisinde güneş tanrısı kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Anubis"
+        },
+        {
+          "key": "B",
+          "md": "Osiris"
+        },
+        {
+          "key": "C",
+          "md": "Ra"
+        },
+        {
+          "key": "D",
+          "md": "Set"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Anubis mumyalama ve mezarlarla ilişkilendirilir.",
+        "B": "Osiris ölüler diyarının hükümdarıdır.",
+        "D": "Set kaos, çöl ve fırtınayla ilişkilendirilir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Ra'dır.\n- Gökyüzünde bir kayıkla yolculuk ettiğine inanılır.\n- Genellikle başında güneş kursu olan şahin başlı bir figürle betimlenir."
+        },
+        {
+          "type": "hint",
+          "md": "Adı yalnızca iki harften oluşur."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Eski Mısır'da tanrılar sıklıkla hayvan başlı insan figürleriyle betimlenirdi. Güneşin her gün doğup batması, ölüm ve yeniden doğuşla ilişkilendirilirdi."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          93,
+          93
+        ],
+        "quote": "Mısır mitolojisinde Ra, güneş tanrısıdır.",
+        "chapter": "Din ve Mitoloji"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "mitoloji"
+      ],
+      "vurgu": [],
+      "contentHash": "783cfd92771f60a60eb449246073cf3a083a909488f8c6a04b43379f142b8205",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0491",
+      "conceptId": "dm-osiris",
+      "stem": {
+        "md": "Mısır mitolojisinde ölüler diyarının hükümdarı olan tanrı kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Osiris"
+        },
+        {
+          "key": "B",
+          "md": "Ra"
+        },
+        {
+          "key": "C",
+          "md": "Horus"
+        },
+        {
+          "key": "D",
+          "md": "Thoth"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Ra güneş tanrısıdır.",
+        "C": "Horus, Osiris'in oğlu olan şahin başlı gök tanrısıdır.",
+        "D": "Thoth bilgelik ve yazıyla ilişkilendirilen tanrıdır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Osiris'tir.\n- Kardeşi Set tarafından öldürülüp eşi İsis tarafından yeniden diriltildiği anlatılır.\n- Ölülerin yargılanmasına başkanlık ettiğine inanılır."
+        },
+        {
+          "type": "hint",
+          "md": "Eşi İsis, oğlu Horus olan tanrıyı düşün."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Eski Mısırlılar ölümden sonraki yaşama büyük önem verdi. Piramitler, mumyalar ve mezar yazıtları bu inancın izlerini taşır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          93,
+          93
+        ],
+        "quote": "Osiris, Mısır mitolojisinde ölüler diyarının hükümdarıdır.",
+        "chapter": "Din ve Mitoloji"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "mitoloji"
+      ],
+      "vurgu": [],
+      "contentHash": "69df81a6559555bee18b02a7eef37f11acac9b52e16da3a89047ed830b5f5443",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0492",
+      "conceptId": "dm-anubis",
+      "stem": {
+        "md": "Çakal başlı olarak betimlenen ve mumyalama ile mezarlarla ilişkilendirilen Mısır tanrısı kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Anubis"
+        },
+        {
+          "key": "B",
+          "md": "Horus"
+        },
+        {
+          "key": "C",
+          "md": "Bastet"
+        },
+        {
+          "key": "D",
+          "md": "Thoth"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Horus şahin başlı olarak betimlenir.",
+        "C": "Bastet kedi başlı ya da kedi biçiminde betimlenen bir tanrıçadır.",
+        "D": "Thoth genellikle ibis kuşu başlı olarak betimlenir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Anubis'tir.\n- Mumyalama törenlerinin koruyucusu sayılır.\n- Ölülerin kalbini tartma sahnesinde de görülür."
+        },
+        {
+          "type": "hint",
+          "md": "Mezarlıklarda dolaşan bir yaban köpeği türünü düşün."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Mısır tanrılarının hayvan başları, o tanrının özelliklerine ya da ilişkili olduğu yere göre seçilirdi. Mezarların çevresinde dolaşan hayvanlar ölüm tanrılarıyla bağdaştırıldı."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          93,
+          93
+        ],
+        "quote": "Çakal başlı olarak betimlenen Anubis, mumyalama ve mezarlarla ilişkilendirilir.",
+        "chapter": "Din ve Mitoloji"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "mitoloji"
+      ],
+      "vurgu": [],
+      "contentHash": "887597be4ae8648474ec94e3a73abb9f2fed9fc3d1973f758331ade0d241ce4f",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0493",
+      "conceptId": "dm-valhalla",
+      "stem": {
+        "md": "İskandinav mitolojisinde savaşta ölen kahramanların götürüldüğü, baş tanrı Odin'e ait salonun adı nedir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Asgard"
+        },
+        {
+          "key": "B",
+          "md": "Midgard"
+        },
+        {
+          "key": "C",
+          "md": "Yggdrasil"
+        },
+        {
+          "key": "D",
+          "md": "Valhalla"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Asgard tanrıların yaşadığı dünyanın tamamıdır, tek bir salon değildir.",
+        "B": "Midgard insanların yaşadığı dünyadır.",
+        "C": "Yggdrasil dünyaları birbirine bağlayan ağaçtır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Valhalla'dır.\n- Kahramanları buraya Valkürler getirir.\n- Kahramanlar burada son savaşa hazırlanır."
+        },
+        {
+          "type": "hint",
+          "md": "Adı \"ölmüşlerin salonu\" anlamına gelir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "İskandinav inancında savaşta onurlu bir ölüm büyük bir değer taşırdı. Ölümden sonraki yaşam, ölümün biçimine göre farklı yerlerde geçerdi."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          94,
+          94
+        ],
+        "quote": "İskandinav mitolojisinde baş tanrı Odin'dir ve savaşta ölen kahramanlar onun Valhalla adlı salonuna götürülür.",
+        "chapter": "Din ve Mitoloji"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "mitoloji"
+      ],
+      "vurgu": [],
+      "contentHash": "b66ff410887596b8ed1619812df403b5b1d2c496e3b38d70afb2132c096d325e",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0494",
+      "conceptId": "dm-thor-mjolnir",
+      "stem": {
+        "md": "İskandinav mitolojisinde gök gürültüsü tanrısı Thor'un çekicinin adı nedir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Gungnir"
+        },
+        {
+          "key": "B",
+          "md": "Excalibur"
+        },
+        {
+          "key": "C",
+          "md": "Mjölnir"
+        },
+        {
+          "key": "D",
+          "md": "Bifröst"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Gungnir Odin'in mızrağıdır.",
+        "B": "Excalibur Kral Arthur efsanesindeki kılıçtır.",
+        "D": "Bifröst, insanların dünyasını tanrılarınkine bağlayan gökkuşağı köprüsüdür."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Mjölnir'dir.\n- Fırlatıldıktan sonra sahibine geri döndüğüne inanılır.\n- Çekiç biçimli muskalar Viking döneminde yaygındı."
+        },
+        {
+          "type": "hint",
+          "md": "Odin'in mızrağı ile karıştırma."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "İskandinav tanrılarının silahları ve eşyaları da adlarıyla anılır ve kendi hikâyeleri vardır. Bu nesneler çoğu zaman cüceler tarafından dövülmüştür."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          94,
+          94
+        ],
+        "quote": "Gök gürültüsü tanrısı Thor'un çekicinin adı Mjölnir'dir.",
+        "chapter": "Din ve Mitoloji"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "mitoloji"
+      ],
+      "vurgu": [],
+      "contentHash": "40ed016e463a690b9e756b44907d3873b34ca43a268f1b27fd03e49d4497d6eb",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0495",
+      "conceptId": "dm-yggdrasil",
+      "stem": {
+        "md": "İskandinav mitolojisinde dokuz dünyayı birbirine bağlayan dünya ağacının adı nedir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Valhalla"
+        },
+        {
+          "key": "B",
+          "md": "Ragnarök"
+        },
+        {
+          "key": "C",
+          "md": "Yggdrasil"
+        },
+        {
+          "key": "D",
+          "md": "Asgard"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Valhalla Odin'in kahramanlar salonudur.",
+        "B": "Ragnarök dünyanın sonunu anlatan son savaştır.",
+        "D": "Asgard tanrıların yaşadığı dünyadır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Yggdrasil'dir.\n- Genellikle dev bir dişbudak ağacı olarak betimlenir.\n- Kökleri ve dalları farklı dünyalara uzanır."
+        },
+        {
+          "type": "hint",
+          "md": "Dünyalar bir ağacın kökleri ve dalları arasında yer alır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Birçok mitolojide evren, yeri ve göğü birbirine bağlayan bir eksenle tasarlanır. Bu eksen kimi zaman bir dağ, kimi zaman bir ağaç olarak düşünülür."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          94,
+          94
+        ],
+        "quote": "Yggdrasil, İskandinav mitolojisinde dokuz dünyayı birbirine bağlayan dünya ağacıdır.",
+        "chapter": "Din ve Mitoloji"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "mitoloji"
+      ],
+      "vurgu": [],
+      "contentHash": "546148962bc1a921fb7c4154ec0cba02938c1c61dab50ec5925d0b2627b6b317",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0496",
+      "conceptId": "dm-ragnarok",
+      "stem": {
+        "md": "İskandinav mitolojisinde tanrıların son savaşını ve dünyanın sonunu anlatan olaya ne ad verilir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Valhalla"
+        },
+        {
+          "key": "B",
+          "md": "Yggdrasil"
+        },
+        {
+          "key": "C",
+          "md": "Midgard"
+        },
+        {
+          "key": "D",
+          "md": "Ragnarök"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Valhalla kahramanların götürüldüğü salondur.",
+        "B": "Yggdrasil dünya ağacıdır.",
+        "C": "Midgard insanların yaşadığı dünyadır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Ragnarök'tür.\n- Bu savaşta birçok tanrının öleceği anlatılır.\n- Ardından dünyanın yeniden doğacağı söylenir."
+        },
+        {
+          "type": "hint",
+          "md": "Adı \"tanrıların yazgısı\" anlamına gelir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Pek çok mitoloji, evrenin nasıl başladığı kadar nasıl sona ereceğini de anlatır. İskandinav anlatısında son büyük bir yıkımla gelir ama yeni bir başlangıç da içerir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          94,
+          94
+        ],
+        "quote": "Ragnarök, İskandinav mitolojisinde tanrıların son savaşını ve dünyanın sonunu anlatır.",
+        "chapter": "Din ve Mitoloji"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "mitoloji"
+      ],
+      "vurgu": [],
+      "contentHash": "03829ac59a81ce49a1e70a14e7c8b0527969bd7add8b6f1e58aeb9af3f471d29",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0497",
+      "conceptId": "dm-loki",
+      "stem": {
+        "md": "İskandinav mitolojisinde biçim değiştirebilen, tanrılara hem yardım eden hem de başlarına bela açan hilebaz tanrı kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Thor"
+        },
+        {
+          "key": "B",
+          "md": "Odin"
+        },
+        {
+          "key": "C",
+          "md": "Freyr"
+        },
+        {
+          "key": "D",
+          "md": "Loki"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Thor gök gürültüsü tanrısıdır, hileden çok gücüyle tanınır.",
+        "B": "Odin baş tanrıdır ve bilgelik arayışıyla bilinir.",
+        "C": "Freyr bereket ve bolluk tanrısıdır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Loki'dir.\n- Hem tanrılara yardım eder hem de onlara sorun çıkarır.\n- Ragnarök'te tanrıların karşısında yer alacağı anlatılır."
+        },
+        {
+          "type": "hint",
+          "md": "Thor'un yol arkadaşı olduğu da anlatılan, güvenilmez bir figürdür."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Pek çok mitolojide kurnazlığıyla düzeni bozan \"hilebaz\" figürler bulunur. Bu figürler hem yaratıcı hem de yıkıcı rol oynar."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          94,
+          94
+        ],
+        "quote": "Loki, İskandinav mitolojisinde biçim değiştirebilen hilebaz bir tanrıdır.",
+        "chapter": "Din ve Mitoloji"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "mitoloji"
+      ],
+      "vurgu": [],
+      "contentHash": "aea683cbc85703865f3c7da648a7e3f0aaebacc45bcc1309d2fe150491b10311",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0498",
+      "conceptId": "dm-wednesday-odin",
+      "stem": {
+        "md": "İngilizcedeki Wednesday günü, adını hangi İskandinav tanrısının Eski İngilizcedeki karşılığından alır?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Odin"
+        },
+        {
+          "key": "B",
+          "md": "Thor"
+        },
+        {
+          "key": "C",
+          "md": "Loki"
+        },
+        {
+          "key": "D",
+          "md": "Freyr"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Thor'un adı Thursday gününde yaşar.",
+        "C": "Loki'nin adı haftanın bir gününe verilmemiştir.",
+        "D": "Freyr'in adı bir haftanın gününe verilmemiştir; Friday genellikle tanrıça Frigg'le ilişkilendirilir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Odin'dir.\n- Odin'in Eski İngilizcedeki adı Woden'dır; Wednesday \"Woden'ın günü\"dür.\n- Thursday ise Thor'un günüdür."
+        },
+        {
+          "type": "hint",
+          "md": "Gün adının başındaki \"Wed\" kısmını eski bir tanrı adıyla karşılaştır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Cermen halklarının tanrıları, İngilizce gibi dillerde haftanın günlerinin adlarında yaşamaya devam eder. Bu adlar Roma'daki gezegen-tanrı adlarının karşılığı olarak seçilmiştir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          94,
+          94
+        ],
+        "quote": "İngilizcedeki Wednesday günü adını Odin'in Eski İngilizcedeki karşılığı Woden'dan, Thursday ise Thor'dan alır.",
+        "chapter": "Din ve Mitoloji"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "mitoloji"
+      ],
+      "vurgu": [],
+      "contentHash": "897cb2a16995d43714ab95e83de909161afb04c7e49226965d51c213db50678b",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0499",
+      "conceptId": "dm-ergenekon",
+      "stem": {
+        "md": "Türklerin demirden bir dağı eriterek bulundukları yerden çıktığını ve onlara bir bozkurdun yol gösterdiğini anlatan destan hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Ergenekon Destanı"
+        },
+        {
+          "key": "B",
+          "md": "Oğuz Kağan Destanı"
+        },
+        {
+          "key": "C",
+          "md": "Manas Destanı"
+        },
+        {
+          "key": "D",
+          "md": "Göç Destanı"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Oğuz Kağan Destanı, Oğuz Kağan'ın doğumunu, fetihlerini ve oğullarını anlatır.",
+        "C": "Manas Destanı Kırgız Türklerinin ulusal kahramanını anlatır.",
+        "D": "Göç Destanı Uygurların yurtlarından göçünü anlatır; demir dağı eritme motifi içermez."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Ergenekon Destanı'dır.\n- Destan Göktürklerle ilişkilendirilir.\n- Demir dağın eritilmesi kurtuluşun simgesidir."
+        },
+        {
+          "type": "hint",
+          "md": "Destanın adı, Türklerin uzun yıllar kapalı kaldığı vadinin adıdır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Türk destanları kökeni, kurtuluşu ve göçleri anlatan sözlü anlatılardır. Kurt, bu anlatılarda sık görülen bir rehber ve ata figürüdür."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          95,
+          95
+        ],
+        "quote": "Ergenekon Destanı'na göre Türkler, demirden dağı eriterek Ergenekon'dan çıkmış ve onlara bir bozkurt yol göstermiştir.",
+        "chapter": "Din ve Mitoloji"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "mitoloji"
+      ],
+      "vurgu": [],
+      "contentHash": "2d4fb5339896053c9a45698b1ac03a6c4b6bb7273292ceaf93c479502555c14f",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0500",
+      "conceptId": "dm-oguz-ogullari",
+      "stem": {
+        "md": "Aşağıdakilerden hangisi Oğuz Kağan Destanı'na göre Oğuz Kağan'ın oğullarından biri değildir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Kurt"
+        },
+        {
+          "key": "B",
+          "md": "Gün"
+        },
+        {
+          "key": "C",
+          "md": "Dağ"
+        },
+        {
+          "key": "D",
+          "md": "Deniz"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Gün, Oğuz Kağan'ın oğullarından biridir.",
+        "C": "Dağ, Oğuz Kağan'ın oğullarından biridir.",
+        "D": "Deniz, Oğuz Kağan'ın oğullarından biridir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Altı oğul: Gün, Ay, Yıldız, Gök, Dağ ve Deniz.\n- Kurt destanda Oğuz Kağan'a yol gösteren bir hayvan olarak geçer, oğullarından değildir."
+        },
+        {
+          "type": "hint",
+          "md": "Oğulların adları doğa ve gökyüzü varlıklarıdır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Oğuz Kağan Destanı, Oğuz boylarının kökenini bir kağan ve onun soyu üzerinden açıklar. Oğuz boylarının örgütlenmesi bu soy anlatısıyla ilişkilendirilir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          95,
+          95
+        ],
+        "quote": "Oğuz Kağan Destanı'na göre Oğuz Kağan'ın altı oğlunun adı Gün, Ay, Yıldız, Gök, Dağ ve Deniz'dir.",
+        "chapter": "Din ve Mitoloji"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "mitoloji"
+      ],
+      "vurgu": [],
+      "contentHash": "e0ee01c20835fa14999a2df8d753d436ebdcb75ff19be36e0da9e19cfa5353aa",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0501",
+      "conceptId": "dm-gok-tanri",
+      "stem": {
+        "md": "Eski Türk inancında gökyüzüyle özdeşleştirilen yüce varlık hangi adla anılır?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Erlik"
+        },
+        {
+          "key": "B",
+          "md": "Umay"
+        },
+        {
+          "key": "C",
+          "md": "Ülgen"
+        },
+        {
+          "key": "D",
+          "md": "Gök Tanrı (Tengri)"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Erlik Altay mitolojisinde kötülüğü ve yeraltını temsil eder.",
+        "B": "Umay doğum ve çocuklarla ilişkilendirilen koruyucu bir figürdür.",
+        "C": "Ülgen Altay mitolojisinde iyiliği temsil eden bir figürdür ama eski Türk inancının genel adı değildir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Gök Tanrı'dır (Tengri).\n- Göktürk yazıtlarında da Tengri adı geçer.\n- Kağanın yönetme yetkisinin gökten geldiğine inanılırdı."
+        },
+        {
+          "type": "hint",
+          "md": "Adı başımızın üstündeki maviliği çağrıştırır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Eski Türk inanç sisteminde gökyüzü, yer-su ve atalar önemli bir yer tutardı. Bu inançlar bozkır yaşamının doğayla iç içeliğini yansıtır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          95,
+          95
+        ],
+        "quote": "Eski Türk inancında gökyüzüyle özdeşleştirilen yüce varlık Gök Tanrı (Tengri) olarak anılır.",
+        "chapter": "Din ve Mitoloji"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "mitoloji"
+      ],
+      "vurgu": [],
+      "contentHash": "9aa16e9061caf29adf99c13ae2361a4521a019564997f34ddef25a2a55367163",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0502",
+      "conceptId": "dm-erlik",
+      "stem": {
+        "md": "Altay Türk mitolojisinde kötülüğü ve yeraltı dünyasını temsil eden figür kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Ülgen"
+        },
+        {
+          "key": "B",
+          "md": "Umay"
+        },
+        {
+          "key": "C",
+          "md": "Kayra"
+        },
+        {
+          "key": "D",
+          "md": "Erlik"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Ülgen iyiliği ve göğü temsil eder.",
+        "B": "Umay doğum ve çocukların koruyucusudur.",
+        "C": "Kayra, Altay yaratılış anlatılarında yaratıcı güç olarak anılır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Erlik'tir.\n- Ülgen'in karşıtı olarak düşünülür.\n- Ölülerin ruhlarının yeraltında onun ülkesine gittiğine inanılır."
+        },
+        {
+          "type": "hint",
+          "md": "İyiliği temsil eden Ülgen'in karşıtını düşün."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Altay yaratılış anlatılarında evren gök, yer ve yeraltı olmak üzere katmanlara ayrılır. Her katman farklı varlıkların egemenliğindedir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          95,
+          95
+        ],
+        "quote": "Altay Türk mitolojisinde Ülgen iyiliği ve göğü, Erlik ise kötülüğü ve yeraltı dünyasını temsil eder.",
+        "chapter": "Din ve Mitoloji"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "mitoloji"
+      ],
+      "vurgu": [],
+      "contentHash": "7654eeeca96081f59948dc97f80ace56897ae2f9e34d10668fee674bd8e137bd",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0503",
+      "conceptId": "dm-kam-saman",
+      "stem": {
+        "md": "Eski Türklerde ruhlar dünyasıyla aracılık ettiğine inanılan, tören ve ayinleri yöneten kişiye ne ad verilir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Ozan"
+        },
+        {
+          "key": "B",
+          "md": "Bilge"
+        },
+        {
+          "key": "C",
+          "md": "Bey"
+        },
+        {
+          "key": "D",
+          "md": "Kam (şaman)"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Ozan destanları saz eşliğinde söyleyen halk şairidir.",
+        "B": "Bilge, bilgeliği ve danışmanlığıyla saygı gören kişiye verilen unvandır.",
+        "C": "Bey bir boyun ya da topluluğun siyasi önderidir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap kamdır.\n- Batı dillerinde \"şaman\" olarak bilinir.\n- Davul ve dans eşliğinde ruhlar dünyasına yolculuk ettiğine inanılırdı."
+        },
+        {
+          "type": "hint",
+          "md": "Bu kişinin töreninde davul önemli bir araçtır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Orta Asya halklarında insanlar ile ruhlar arasında aracılık yapan kişiler büyük saygı görürdü. Hastalıkların iyileştirilmesi ve ölülerin uğurlanması bu kişilerin görevleri arasındaydı."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          95,
+          95
+        ],
+        "quote": "Eski Türklerde ruhlar dünyasıyla aracılık ettiğine inanılan din adamına kam (şaman) denir.",
+        "chapter": "Din ve Mitoloji"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "mitoloji"
+      ],
+      "vurgu": [],
+      "contentHash": "40b9ad264a67fdc3137ae2ed9d5f394f1895a43fa27af93a39e2cb5c5dfbf16e",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0504",
+      "conceptId": "dm-manas",
+      "stem": {
+        "md": "Manas Destanı hangi Türk topluluğunun ulusal destanıdır?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Kırgız Türkleri"
+        },
+        {
+          "key": "B",
+          "md": "Kazak Türkleri"
+        },
+        {
+          "key": "C",
+          "md": "Uygur Türkleri"
+        },
+        {
+          "key": "D",
+          "md": "Yakut Türkleri"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Kazak Türklerinin destan geleneği Koblandı gibi farklı kahramanlara dayanır.",
+        "C": "Uygurların bilinen destanları arasında Göç ve Türeyiş destanları vardır.",
+        "D": "Yakutların destan geleneği olonho adıyla bilinir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Kırgız Türkleri'dir.\n- Destan, kahraman Manas'ın ve soyunun hikâyesini anlatır.\n- Dünyanın en uzun destanlarından biri sayılır."
+        },
+        {
+          "type": "hint",
+          "md": "Destanın kahramanı, bugünkü başkenti Bişkek olan ülkenin ulusal simgesidir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Türk halklarının birçoğunun kendi kahramanlık destanları vardır. Bu destanlar yüzyıllar boyunca destancılar tarafından sözlü olarak aktarılmıştır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          95,
+          95
+        ],
+        "quote": "Manas Destanı, Kırgız Türklerinin ulusal destanıdır.",
+        "chapter": "Din ve Mitoloji"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "mitoloji"
+      ],
+      "vurgu": [],
+      "contentHash": "b47cdf32771054a6869e60603a949b5dd72c64216c5c923a9ab023eae0f111b1",
+      "deleted": false
+    }
+  ]
+}

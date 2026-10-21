@@ -32,7 +32,7 @@ function statusOf(c: { state: number; retired_at: string | null } | undefined): 
   return 'ogreniyor'
 }
 
-function plain(md: string): string {
+export function plain(md: string): string {
   const s = md
     .replace(/!\[[^\]]*\]\([^)]*\)/g, '')
     .replace(/[*_`#>$]/g, '')

@@ -41,8 +41,8 @@ describe('SettingsPatch goals', () => {
 })
 
 describe('SAMPLE_IDS', () => {
-  it('names every module under resources/ornek', () => {
-    const root = join(__dirname, '../../resources/ornek')
+  it('names every module under resources/varsayilan', () => {
+    const root = join(__dirname, '../../resources/varsayilan')
     const ids = readdirSync(root).filter((id) => existsSync(join(root, id, 'module.json')))
     expect([...SAMPLE_IDS].sort()).toEqual(ids.sort())
   })

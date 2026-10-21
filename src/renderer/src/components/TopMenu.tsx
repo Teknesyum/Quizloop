@@ -38,6 +38,9 @@ export function TopMenu({
         <span className="tk-hint">{t('lang.label')}</span>
         <LangSwitch lang={lang} label={t('lang.label')} onChange={onLang} />
       </div>
+      <MenuItem onPick={() => useApp.getState().go({ name: 'settings' })}>
+        {t('nav.settings')}
+      </MenuItem>
       <MenuItem onPick={() => void share()}>{t('settings.shareOpen')}</MenuItem>
       <MenuItem onPick={() => useApp.getState().showContact(true)}>
         {t('settings.contactOpen')}

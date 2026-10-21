@@ -7,6 +7,7 @@ import {
   type CatalogNet
 } from '@core/commands/catalogs'
 import { bytesSha256 } from '@core/ports'
+import { seedDefaults } from '@core/defaults'
 import { SettingsPatch } from '@core/settings'
 import { shareMessage, SOURCE_URL } from '@shared/ipc'
 import type {
@@ -89,6 +90,9 @@ export async function createShell(): Promise<QuizloopApi> {
       async (r) => (bundle.roots.includes(r.path) ? r.path : store.locate(r)),
       ports.now()
     )
+  await seedDefaults(db, bundle.roots, settings, opened.firstRun, (root) =>
+    syncFolder(db, ports, root, ports.now()).catch(installFailure)
+  )
   await c.library.reload()
   const swept = await store.sweep(db).catch(() => 0)
   const persisted = (await navigator.storage?.persist?.().catch(() => false)) ?? false
@@ -250,6 +254,10 @@ export async function createShell(): Promise<QuizloopApi> {
     },
     stats: {
       overview: () => c.stats.overview()
+    },
+    history: {
+      recent: (limit) => c.history.recent(limit),
+      page: (offset, limit) => c.history.page(offset, limit)
     }
   }
 }

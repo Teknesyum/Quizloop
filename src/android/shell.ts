@@ -4,6 +4,7 @@ import { LocalNotifications } from '@capacitor/local-notifications'
 import { Share } from '@capacitor/share'
 import { createCore, type Core } from '@core/commands'
 import { installFailure, resyncFolders, syncFolder } from '@core/commands/modules'
+import { seedDefaults } from '@core/defaults'
 import { SettingsPatch } from '@core/settings'
 import { shareMessage, SOURCE_URL } from '@shared/ipc'
 import type {
@@ -89,6 +90,9 @@ export async function createShell(): Promise<QuizloopApi> {
       async (r) => (bundle.roots.includes(r.path) ? r.path : store.locate(r)),
       ports.now()
     )
+  await seedDefaults(db, bundle.roots, settings, opened.firstRun, (root) =>
+    syncFolder(db, ports, root, ports.now()).catch(installFailure)
+  )
   await c.library.reload()
   const tSync = performance.now()
   log('boot', {
@@ -260,6 +264,10 @@ export async function createShell(): Promise<QuizloopApi> {
     },
     stats: {
       overview: () => c.stats.overview()
+    },
+    history: {
+      recent: (limit) => c.history.recent(limit),
+      page: (offset, limit) => c.history.page(offset, limit)
     }
   }
 }

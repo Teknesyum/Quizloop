@@ -38,23 +38,12 @@ interface Spec {
 
 const SPECS: Spec[] = [
   {
-    draft: 'rehber',
-    id: 'quizloop-rehberi',
-    name: 'QuizLoop Rehberi: Uygulama Nasıl Kullanılır',
-    version: '1.0.3',
-    description:
-      'Modül nedir, nasıl eklenir, oturum nasıl işler, sorular neden geri gelir: uygulamayı soru çözerek öğreten rehber.',
-    tags: ['rehber', 'örnek'],
-    title: 'QuizLoop Rehber Notları'
-  },
-  {
     draft: 'genel-kultur',
     id: 'genel-kultur',
-    name: 'Genel Kültür: Kolaydan Zora',
-    version: '1.0.1',
-    description:
-      'Bilgi yarışması tadında, kolay, orta ve zor üç bölümlük özgün genel kültür soruları.',
-    tags: ['genel-kültür', 'örnek'],
+    name: 'Genel Kültür',
+    version: '2.0.0',
+    description: 'Tarihten bilime, edebiyattan spora 18 bölümde 742 özgün genel kültür sorusu.',
+    tags: ['genel-kültür'],
     title: 'QuizLoop Genel Kültür Notları'
   }
 ]
@@ -137,7 +126,7 @@ function build(spec: Spec): number {
 
   if (errors.length) throw new Error(`${spec.draft}:\n${errors.join('\n')}`)
 
-  const out = join(root, 'resources', 'ornek', spec.id)
+  const out = join(root, 'resources', 'varsayilan', spec.id)
   rmSync(out, { recursive: true, force: true })
   mkdirSync(join(out, 'blocks'), { recursive: true })
   const refs = blocks.map((list, b) => {

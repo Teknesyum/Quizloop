@@ -10,9 +10,9 @@ const SEND_MS = 20000
 
 export const reportEnabled = REPORT_URL !== ''
 
-async function shot(): Promise<string | null> {
+async function shot(width = SHOT_WIDTH): Promise<string | null> {
   const root = document.body
-  const scale = Math.min(1, SHOT_WIDTH / Math.max(1, root.clientWidth))
+  const scale = Math.min(window.devicePixelRatio || 1, width / Math.max(1, root.clientWidth))
   const work = domToJpeg(root, {
     quality: 0.6,
     scale,
@@ -27,6 +27,21 @@ async function shot(): Promise<string | null> {
   }).catch(() => null)
   const late = new Promise<null>((done) => setTimeout(() => done(null), SHOT_MS))
   return Promise.race([work, late])
+}
+
+export async function captureScreen(width: number): Promise<Blob | null> {
+  const url = await shot(width)
+  if (!url) return null
+  const comma = url.indexOf(',')
+  if (comma < 0) return null
+  try {
+    const raw = atob(url.slice(comma + 1))
+    const bytes = new Uint8Array(raw.length)
+    for (let i = 0; i < raw.length; i++) bytes[i] = raw.charCodeAt(i)
+    return new Blob([bytes], { type: 'image/jpeg' })
+  } catch {
+    return null
+  }
 }
 
 function context(): ReportContext {

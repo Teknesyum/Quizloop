@@ -2,6 +2,7 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 import type { SourceBook } from '@shared/ipc'
 import type { SolutionBlock } from '@shared/schema/question'
 import { t } from '@renderer/i18n'
+import { ProgressBar } from './ProgressBar'
 import { Solution } from './Solution'
 import { tellSteps } from './media'
 
@@ -24,6 +25,16 @@ export function Tell({
 
   return (
     <div className="ql-tell-steps">
+      {steps.length > 1 && (
+        <div className="ql-tell-progress">
+          <ProgressBar
+            percent={(shown / steps.length) * 100}
+            step=""
+            status={shown >= steps.length ? 'done' : 'running'}
+            label={t('session.explainStep', { n: shown, total: steps.length })}
+          />
+        </div>
+      )}
       <ol className="ql-tell-list">
         {steps.slice(0, shown).map((step, i) => (
           <li
@@ -31,11 +42,6 @@ export function Tell({
             ref={i === shown - 1 ? lastRef : undefined}
             className="ql-tell-step ql-transition-in"
           >
-            {steps.length > 1 && (
-              <span className="tk-mono tk-hint">
-                {t('session.explainStep', { n: i + 1, total: steps.length })}
-              </span>
-            )}
             <Solution blocks={step} assetBase={assetBase} book={book} />
           </li>
         ))}

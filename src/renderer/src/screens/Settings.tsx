@@ -233,6 +233,25 @@ export function Settings(): React.JSX.Element {
             </div>
 
             <div className="tk-field">
+              <span className="tk-label">{t('settings.autoChoices')}</span>
+              <div className="ql-segment" role="radiogroup" aria-label={t('settings.autoChoices')}>
+                {[true, false].map((on) => (
+                  <button
+                    key={String(on)}
+                    type="button"
+                    role="radio"
+                    aria-checked={settings.autoChoices === on}
+                    className={`tk-btn ${settings.autoChoices === on ? 'tk-btn-primary' : 'tk-btn-ghost'} ql-btn-sm`}
+                    onClick={() => apply({ autoChoices: on })}
+                  >
+                    {t(on ? 'settings.autoUpdate.on' : 'settings.autoUpdate.off')}
+                  </button>
+                ))}
+              </div>
+              <span className="tk-hint">{t('settings.autoChoicesHelp')}</span>
+            </div>
+
+            <div className="tk-field">
               <span className="tk-label">{t('settings.theme')}</span>
               <div className="ql-themes" role="radiogroup" aria-label={t('settings.theme')}>
                 {THEMES.map((th) => (
@@ -487,7 +506,7 @@ export function Settings(): React.JSX.Element {
               </button>
             </div>
             <div className="ql-row">
-              <span className="tk-hint">{t('settings.welcome')}</span>
+              <span className="tk-hint">{t('settings.howTo')}</span>
               <button
                 type="button"
                 className="tk-btn tk-btn-ghost ql-btn-sm"

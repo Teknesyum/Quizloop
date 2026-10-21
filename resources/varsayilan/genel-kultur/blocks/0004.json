@@ -1,0 +1,2605 @@
+{
+  "blockId": "0004",
+  "questions": [
+    {
+      "id": "genel-kultur-0145",
+      "conceptId": "fa-eylemsizlik",
+      "stem": {
+        "md": "Üzerine net kuvvet etki etmeyen bir cismin durgunsa durgun kalmasını, hareketliyse sabit hızla düz bir çizgide gitmeyi sürdürmesini anlatan yasa hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Etki-tepki yasası"
+        },
+        {
+          "key": "B",
+          "md": "Eylemsizlik yasası"
+        },
+        {
+          "key": "C",
+          "md": "Hooke yasası"
+        },
+        {
+          "key": "D",
+          "md": "Pascal ilkesi"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Etki-tepki yasası, iki cismin birbirine eşit ve zıt yönlü kuvvet uyguladığını söyler.",
+        "C": "Hooke yasası, bir yayın uzamasının uygulanan kuvvetle orantılı olduğunu anlatır.",
+        "D": "Pascal ilkesi, kapalı bir sıvıya uygulanan basıncın her yöne iletilmesiyle ilgilidir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap eylemsizlik yasasıdır.\n- Newton'un birinci yasası olarak da bilinir.\n- Net kuvvet sıfırsa cismin hız vektörü değişmez."
+        },
+        {
+          "type": "hint",
+          "md": "Newton'un üç yasasından ilki."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Newton'un hareket yasaları kuvvet ile hareket arasındaki ilişkiyi üç ilkeyle açıklar. Otobüs aniden fren yaptığında yolcuların öne savrulması bu ilkelerden birinin gündelik örneğidir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          30,
+          30
+        ],
+        "quote": "Newton'un birinci yasası eylemsizlik yasası olarak bilinir.",
+        "chapter": "Fizik ve Astronomi"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "fizik"
+      ],
+      "vurgu": [],
+      "contentHash": "8d97e6359991df7dc05fed803e08b451b17b5e6b676e4010db4e51a3bafe54e9",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0146",
+      "conceptId": "fa-kuvvet-birimi",
+      "stem": {
+        "md": "Kuvvetin SI birimi hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Joule"
+        },
+        {
+          "key": "B",
+          "md": "Newton"
+        },
+        {
+          "key": "C",
+          "md": "Watt"
+        },
+        {
+          "key": "D",
+          "md": "Pascal"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Joule enerji ve işin birimidir.",
+        "C": "Watt gücün, yani birim zamanda yapılan işin birimidir.",
+        "D": "Pascal basıncın birimidir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Kuvvetin SI birimi newtondur.\n- 1 newton, 1 kilogramlık kütleye 1 m/s² ivme kazandıran kuvvettir."
+        },
+        {
+          "type": "hint",
+          "md": "Birim, hareket yasalarını bulan bilim insanının adını taşır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "SI, uluslararası birim sistemidir ve birçok birim ünlü bilim insanlarının adını taşır. Kuvvet, kütle ile ivmenin çarpımı olarak tanımlanır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          30,
+          30
+        ],
+        "quote": "Kuvvetin SI birimi newtondur.",
+        "chapter": "Fizik ve Astronomi"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "fizik"
+      ],
+      "vurgu": [],
+      "contentHash": "2269d2b6ffdeab7c748fdba7f2d79927e1961aa67a0165ab520d8b565ea9efe0",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0147",
+      "conceptId": "fa-serbest-dusme",
+      "stem": {
+        "md": "Hava direnci olmayan bir ortamda aynı yükseklikten bir çekiç ile bir tüy aynı anda bırakılırsa ____."
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "ikisi aynı anda yere düşer"
+        },
+        {
+          "key": "B",
+          "md": "önce çekiç yere düşer"
+        },
+        {
+          "key": "C",
+          "md": "önce tüy yere düşer"
+        },
+        {
+          "key": "D",
+          "md": "tüy havada asılı kalır"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Çekicin daha ağır olması, hava yokken onu daha hızlı düşürmez.",
+        "C": "Tüyü yavaşlatan hava direncidir; hava yokken tüy öne geçemez.",
+        "D": "Yerçekimi tüye de etki eder; hava olmasa bile tüy düşer."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- İkisi aynı anda yere düşer.\n- Hava direnci yoksa bütün cisimler aynı ivmeyle düşer.\n- Günlük hayatta tüyün yavaş düşmesinin nedeni havadır."
+        },
+        {
+          "type": "hint",
+          "md": "Tüyü yavaşlatan şeyi ortadan kaldırdık."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Serbest düşme, bir cismin yalnızca yerçekimi etkisiyle hareket etmesidir. Galileo bu konuda Aristoteles'in görüşüne karşı çıkmış, düşüşü deneylerle incelemiştir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          30,
+          30
+        ],
+        "quote": "Hava direnci olmayan bir ortamda farklı kütleli cisimler aynı ivmeyle düşer.",
+        "chapter": "Fizik ve Astronomi"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "fizik"
+      ],
+      "vurgu": [],
+      "contentHash": "f04cd5cf41cf4b8eb69c4062bbfc63ba203bb5398c3ec0557508a448fd9bff98",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0148",
+      "conceptId": "fa-yercekimi-ivmesi",
+      "stem": {
+        "md": "Dünya yüzeyinde hava direnci ihmal edildiğinde serbest düşen bir cismin hızı her saniye yaklaşık ne kadar artar?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "9,8 m/s"
+        },
+        {
+          "key": "B",
+          "md": "3,0 m/s"
+        },
+        {
+          "key": "C",
+          "md": "15,2 m/s"
+        },
+        {
+          "key": "D",
+          "md": "32,0 m/s"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "3,0 m/s Dünya için çok küçüktür; Mars'taki değerden bile düşüktür.",
+        "C": "15,2 m/s Dünya yüzeyi için fazla büyük bir değerdir.",
+        "D": "32 sayısı ivmenin fit cinsinden değerine yakındır, metre cinsinden değil."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Hız her saniye yaklaşık 9,8 m/s artar.\n- Bu, Dünya yüzeyindeki yerçekimi ivmesidir (g ≈ 9,8 m/s²)."
+        },
+        {
+          "type": "hint",
+          "md": "Hesaplarda çoğu zaman 10'a yuvarlanır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "İvme, hızın birim zamandaki değişimidir. Bir gezegenin yüzeyindeki çekim ivmesi, gezegenin kütlesine ve yarıçapına bağlıdır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          30,
+          30
+        ],
+        "quote": "Dünya yüzeyinde yerçekimi ivmesi yaklaşık 9,8 metre bölü saniye karedir.",
+        "chapter": "Fizik ve Astronomi"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "fizik"
+      ],
+      "vurgu": [],
+      "contentHash": "b1cb14609d2f7d9082754e44d9d6d5e4b185c5ed3dd5c436b7eb2377b789b6de",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0149",
+      "conceptId": "fa-arsimet",
+      "stem": {
+        "md": "Suya tamamen batırılan bir cisme etki eden kaldırma kuvveti neye eşittir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Yerini değiştirdiği suyun ağırlığına"
+        },
+        {
+          "key": "B",
+          "md": "Kaptaki suyun toplam ağırlığına"
+        },
+        {
+          "key": "C",
+          "md": "Suyun yüzey gerilimine"
+        },
+        {
+          "key": "D",
+          "md": "Cismin yüzey alanına"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Kaptaki suyun tamamı değil, yalnızca cismin yerinden ettiği kısım önemlidir.",
+        "C": "Yüzey gerilimi çok küçük cisimleri etkiler, kaldırma kuvvetini belirlemez.",
+        "D": "Yüzey alanı değil, batan hacim belirleyicidir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Kaldırma kuvveti, cismin yerini değiştirdiği sıvının ağırlığına eşittir.\n- Bu Arşimet ilkesidir.\n- Kaldırma kuvveti ağırlıktan büyükse cisim yüzer."
+        },
+        {
+          "type": "hint",
+          "md": "Küveti ağzına kadar doldurup içine girince taşan suyu düşünün."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Antik Yunan bilgini Arşimet'in adıyla anılan ilke, gemilerin neden yüzdüğünü açıklar. Rivayete göre ilkeyi hamamda yıkanırken fark etmiş ve 'Evreka!' diye bağırmıştır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          30,
+          30
+        ],
+        "quote": "Arşimet ilkesine göre sıvıya batırılan bir cisme, yerini değiştirdiği sıvının ağırlığı kadar kaldırma kuvveti etki eder.",
+        "chapter": "Fizik ve Astronomi"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "fizik"
+      ],
+      "vurgu": [],
+      "contentHash": "2a418c6980ab379d867a16031f362fd0e8360d617713703b603de9673d310cba",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0150",
+      "conceptId": "suyun-kaynama-noktasi",
+      "stem": {
+        "md": "Su, deniz seviyesinde 100 santigrat dereceye ısıtıldığında ne olur?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Kaynar"
+        },
+        {
+          "key": "B",
+          "md": "Donar"
+        },
+        {
+          "key": "C",
+          "md": "Yoğunlaşır"
+        },
+        {
+          "key": "D",
+          "md": "Katılaşır"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Donma, suyun sıfır santigrat derecede buza dönmesidir.",
+        "C": "Yoğunlaşma, buharın soğuyarak yeniden sıvıya dönmesidir.",
+        "D": "Katılaşma soğurken olur; ısıtılan su katılaşmaz."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Su, deniz seviyesinde 100 °C'de kaynar.\n- Yükseklere çıkıldıkça hava basıncı düştüğü için kaynama sıcaklığı da düşer."
+        },
+        {
+          "type": "hint",
+          "md": "Çaydanlıkta her gün gördüğümüz olay."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Maddeler ısı alıp verdikçe katı, sıvı ve gaz hâlleri arasında geçiş yapar. Santigrat ölçeği, suyun hâl değişimlerine dayanarak tanımlanmıştır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          31,
+          31
+        ],
+        "quote": "Su, deniz seviyesinde 100 santigrat derecede kaynar.",
+        "chapter": "Fizik ve Astronomi"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "fizik"
+      ],
+      "vurgu": [],
+      "contentHash": "de97b2c049fab52eb47e138214b5ed3c9a5668d0c0216006ca4865071171fc92",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0151",
+      "conceptId": "mutlak-sifir",
+      "stem": {
+        "md": "Eksi 273,15 santigrat derece hangi adla bilinir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Donma noktası"
+        },
+        {
+          "key": "B",
+          "md": "Üçlü nokta"
+        },
+        {
+          "key": "C",
+          "md": "Kritik sıcaklık"
+        },
+        {
+          "key": "D",
+          "md": "Mutlak sıfır"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Donma noktası maddeye göre değişir; suyunki sıfır santigrat derecedir.",
+        "B": "Üçlü nokta, bir maddenin üç hâlinin bir arada bulunduğu koşuldur.",
+        "C": "Kritik sıcaklık, bir gazın üstünde sıvılaştırılamadığı sıcaklıktır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Bu sıcaklık mutlak sıfırdır.\n- Kelvin ölçeğinin başlangıç noktasıdır (0 K).\n- Bundan daha düşük bir sıcaklık olamaz."
+        },
+        {
+          "type": "hint",
+          "md": "Kelvin ölçeğinin sıfırı."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Sıcaklık, maddeyi oluşturan taneciklerin hareket enerjisiyle ilgilidir. Madde soğudukça bu hareket azalır ve kuramsal bir alt sınıra yaklaşır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          31,
+          31
+        ],
+        "quote": "Mutlak sıfır, eksi 273,15 santigrat derecedir.",
+        "chapter": "Fizik ve Astronomi"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "fizik"
+      ],
+      "vurgu": [],
+      "contentHash": "c28975423cc1f6c82456dbcacb55e380cce4ff120b0db14b560aba5329c11df5",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0152",
+      "conceptId": "fa-sicaklik-olcegi",
+      "stem": {
+        "md": "Aşağıdakilerden hangisi bir sıcaklık ölçeği ya da birimi değildir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Kelvin"
+        },
+        {
+          "key": "B",
+          "md": "Desibel"
+        },
+        {
+          "key": "C",
+          "md": "Santigrat"
+        },
+        {
+          "key": "D",
+          "md": "Fahrenhayt"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Kelvin, sıcaklığın SI temel birimidir.",
+        "C": "Santigrat (Celsius), günlük hayatta en çok kullanılan sıcaklık ölçeğidir.",
+        "D": "Fahrenhayt, özellikle ABD'de kullanılan bir sıcaklık ölçeğidir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Desibel sıcaklık değil, ses düzeyi birimidir.\n- Kelvin, santigrat ve fahrenhayt sıcaklık ölçekleridir.\n- SI'da sıcaklığın temel birimi kelvindir."
+        },
+        {
+          "type": "hint",
+          "md": "Biri kulakla ilgilidir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Sıcaklık ölçekleri, suyun donma ve kaynama noktası gibi sabit noktalara dayanarak kurulmuştur. Bilimsel çalışmalarda negatif değer almayan bir ölçek tercih edilir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          31,
+          31
+        ],
+        "quote": "Sıcaklığın SI temel birimi kelvindir.",
+        "chapter": "Fizik ve Astronomi"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "fizik"
+      ],
+      "vurgu": [],
+      "contentHash": "b3604cab7954b97e82cbf2e9b563a197002ae9a311b18b4326efc669b4489de5",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0153",
+      "conceptId": "fa-isima",
+      "stem": {
+        "md": "Güneş'in ısısı, arada madde bulunmayan uzay boşluğunu geçerek Dünya'ya hangi yolla ulaşır?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "İletim"
+        },
+        {
+          "key": "B",
+          "md": "Işıma"
+        },
+        {
+          "key": "C",
+          "md": "Konveksiyon"
+        },
+        {
+          "key": "D",
+          "md": "Buharlaşma"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "İletim, taneciklerin birbirine dokunarak ısı aktarmasıdır; boşlukta tanecik yoktur.",
+        "C": "Konveksiyon, akışkanların hareketiyle olur; boşlukta akışkan yoktur.",
+        "D": "Buharlaşma bir hâl değişimidir, ısı aktarma yolu değildir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap ışımadır.\n- Işıma, ısının elektromanyetik dalgalarla taşınmasıdır.\n- Madde gerektirmediği için boşlukta da gerçekleşir."
+        },
+        {
+          "type": "hint",
+          "md": "Ateşin karşısında yüzünüzü ısıtan yol."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Isı üç yolla aktarılır: tanecikler arası temas, akışkanların hareketi ve dalgalar. Bunlardan yalnızca biri aktarım için madde gerektirmez."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          31,
+          31
+        ],
+        "quote": "Güneş'in ısısı Dünya'ya boşlukta ışıma yoluyla ulaşır.",
+        "chapter": "Fizik ve Astronomi"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "fizik"
+      ],
+      "vurgu": [],
+      "contentHash": "56d263e59c725856cb88df9fd4b9451f6e81f41d444cfe1195e0d2d6d5bbd19b",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0154",
+      "conceptId": "fa-fahrenhayt",
+      "stem": {
+        "md": "Fahrenhayt ölçeğinde suyun donma ve kaynama noktaları sırasıyla kaç derecedir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "0 ve 100"
+        },
+        {
+          "key": "B",
+          "md": "273 ve 373"
+        },
+        {
+          "key": "C",
+          "md": "-32 ve 180"
+        },
+        {
+          "key": "D",
+          "md": "32 ve 212"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "0 ve 100 santigrat ölçeğindeki değerlerdir.",
+        "B": "273 ve 373 yaklaşık kelvin değerleridir.",
+        "C": "180, fahrenhaytta donma ile kaynama arasındaki farktır; donma noktası eksi değildir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Fahrenhaytta su 32 °F'de donar, 212 °F'de kaynar.\n- İki nokta arası 180 derecedir; santigratta bu fark 100'dür."
+        },
+        {
+          "type": "hint",
+          "md": "Donma noktası sıfırın epey üstündedir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Fahrenhayt ölçeği 18. yüzyılda Alman fizikçi Daniel Gabriel Fahrenheit tarafından geliştirilmiştir. Bugün özellikle ABD'de hava durumu ve günlük ölçümlerde kullanılır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          31,
+          31
+        ],
+        "quote": "Fahrenhayt ölçeğinde su 32 derecede donar ve 212 derecede kaynar.",
+        "chapter": "Fizik ve Astronomi"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "fizik"
+      ],
+      "vurgu": [],
+      "contentHash": "c6d642639a3fbf23248b033ea8c937dc4553b3c49cc55f0a550d1b4f3e84efdd",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0155",
+      "conceptId": "fa-birim-eslestirme",
+      "stem": {
+        "md": "Büyüklükleri SI birimleriyle eşleştirin.\n\n1. Enerji\n2. Güç\n3. Basınç\n\na. pascal\nb. joule\nc. watt"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "1-c, 2-b, 3-a"
+        },
+        {
+          "key": "B",
+          "md": "1-b, 2-a, 3-c"
+        },
+        {
+          "key": "C",
+          "md": "1-b, 2-c, 3-a"
+        },
+        {
+          "key": "D",
+          "md": "1-a, 2-c, 3-b"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Watt birim zamandaki enerjidir; enerjinin kendisinin birimi değildir.",
+        "B": "Pascal birim alana düşen kuvveti ölçer, gücü değil.",
+        "D": "Pascal enerji birimi değildir; joule de basınç ölçmez."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Enerji: joule\n- Güç: watt\n- Basınç: pascal"
+        },
+        {
+          "type": "hint",
+          "md": "Ampul üzerinde yazan birim gücü gösterir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "SI birimlerinin çoğu bilim insanlarının adını taşır: James Joule, James Watt ve Blaise Pascal bunlardandır. Güç, belli bir sürede ne kadar enerji harcandığını gösterir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          31,
+          31
+        ],
+        "quote": "Enerjinin SI birimi joule, gücün SI birimi watt, basıncın SI birimi pascaldır.",
+        "chapter": "Fizik ve Astronomi"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "fizik"
+      ],
+      "vurgu": [],
+      "contentHash": "bfdf9e22f46e03991a024f77df56384368197ea15c989efd72ea7b1cdcdf7922",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0156",
+      "conceptId": "fa-isik-hizi",
+      "stem": {
+        "md": "Işığın boşluktaki hızı yaklaşık ne kadardır?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "300 km/s"
+        },
+        {
+          "key": "B",
+          "md": "30.000 km/s"
+        },
+        {
+          "key": "C",
+          "md": "3.000.000 km/s"
+        },
+        {
+          "key": "D",
+          "md": "300.000 km/s"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "300 km/s ışık hızının binde biridir.",
+        "B": "30.000 km/s gerçek değerin onda biridir.",
+        "C": "3.000.000 km/s gerçek değerin on katıdır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Işık boşlukta saniyede yaklaşık 300.000 km yol alır.\n- Evrendeki en yüksek hız sınırıdır."
+        },
+        {
+          "type": "hint",
+          "md": "Bir saniyede Dünya'nın çevresini yaklaşık yedi buçuk kez dolaşabilir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Işık, madde içinden geçerken boşluktakinden daha yavaş ilerler. Gök cisimleri arasındaki uzaklıklar çoğu zaman ışığın bu uzaklığı ne kadar sürede aldığıyla ifade edilir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          32,
+          32
+        ],
+        "quote": "Işık boşlukta saniyede yaklaşık 300.000 kilometre yol alır.",
+        "chapter": "Fizik ve Astronomi"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "fizik"
+      ],
+      "vurgu": [],
+      "contentHash": "e957763553ea9a2ac00efd6ef6b93e484c319d5a89acebdb1903de0d9409271a",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0157",
+      "conceptId": "fa-prizma",
+      "stem": {
+        "md": "Beyaz ışık bir ____ içinden geçtiğinde renklerine ayrılır."
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "düz ayna"
+        },
+        {
+          "key": "B",
+          "md": "polarize filtre"
+        },
+        {
+          "key": "C",
+          "md": "prizma"
+        },
+        {
+          "key": "D",
+          "md": "pencere camı"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Düz ayna ışığı yansıtır ama renklerine ayırmaz.",
+        "B": "Polarize filtre ışığın titreşim yönünü süzer, renklere ayırmaz.",
+        "D": "İnce ve paralel yüzlü pencere camı ışığı belirgin biçimde renklere ayırmaz."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap prizmadır.\n- Her renk farklı miktarda kırıldığı için beyaz ışık renklerine ayrılır.\n- Newton bu deneyle beyaz ışığın renklerden oluştuğunu göstermiştir."
+        },
+        {
+          "type": "hint",
+          "md": "Üçgen kesitli cam bir parça."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Beyaz ışık, farklı dalga boylarındaki renklerin karışımıdır. Gökkuşağı da benzer biçimde, ışığın yağmur damlalarında renklerine ayrılmasıyla oluşur."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          32,
+          32
+        ],
+        "quote": "Beyaz ışık prizmadan geçtiğinde renklerine ayrılır.",
+        "chapter": "Fizik ve Astronomi"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "fizik"
+      ],
+      "vurgu": [],
+      "contentHash": "c2999cdd920525a60ed8b43df9fb55bd27e209bbf3b0bbbff45dc3e5cee02c99",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0158",
+      "conceptId": "fa-kirilma",
+      "stem": {
+        "md": "Su dolu bir bardağa konan kalemin su yüzeyinde kırılmış gibi görünmesine yol açan olay hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Kırılma"
+        },
+        {
+          "key": "B",
+          "md": "Yansıma"
+        },
+        {
+          "key": "C",
+          "md": "Kırınım"
+        },
+        {
+          "key": "D",
+          "md": "Soğurulma"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Yansıma, ışığın yüzeye çarpıp geri dönmesidir; aynada görüntü oluşturur.",
+        "C": "Kırınım, ışığın dar bir açıklıktan geçerken yayılmasıdır.",
+        "D": "Soğurulma, ışığın madde tarafından emilmesidir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap kırılmadır.\n- Işık sudan havaya geçerken doğrultu değiştirir.\n- Bu yüzden kalemin su içindeki kısmı farklı yerde görünür."
+        },
+        {
+          "type": "hint",
+          "md": "Işık iki farklı ortam arasında geçiş yapıyor."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Işık farklı ortamlarda farklı hızlarla ilerler. Hızın değiştiği sınırda ışığın yolu da etkilenir; gözlük ve büyüteçler bu ilkeye dayanır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          32,
+          32
+        ],
+        "quote": "Işığın bir ortamdan başka bir ortama geçerken doğrultu değiştirmesine kırılma denir.",
+        "chapter": "Fizik ve Astronomi"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "fizik"
+      ],
+      "vurgu": [],
+      "contentHash": "ef63012687ec4fef03fedfa1629b0fc7b9c29066501f9e85a3ad36edd2d482c4",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0159",
+      "conceptId": "fa-miyopluk",
+      "stem": {
+        "md": "Uzağı net göremeyen miyop bir göz hangi tür mercekle düzeltilir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Kalın kenarlı (ıraksak) mercek"
+        },
+        {
+          "key": "B",
+          "md": "İnce kenarlı (yakınsak) mercek"
+        },
+        {
+          "key": "C",
+          "md": "Çukur ayna"
+        },
+        {
+          "key": "D",
+          "md": "Prizma"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "İnce kenarlı mercek ışığı toplar; yakını göremeyen hipermetrop gözde kullanılır.",
+        "C": "Ayna ışığı yansıtır; gözlük camı olarak kullanılmaz.",
+        "D": "Prizma ışığı saptırır ve renklere ayırır, görme kusurunu düzeltmez."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Miyopluk kalın kenarlı (ıraksak) mercekle düzeltilir.\n- Miyop gözde görüntü ağ tabakanın önüne düşer.\n- Iraksak mercek ışınları açarak görüntüyü ağ tabakaya taşır."
+        },
+        {
+          "type": "hint",
+          "md": "Görüntü fazla erken odaklanıyor; ışınları biraz açmak gerek."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Göz merceği, gelen ışığı ağ tabakanın üzerine odaklar. Odak noktası ağ tabakanın önüne ya da arkasına düştüğünde farklı görme kusurları ortaya çıkar."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          32,
+          32
+        ],
+        "quote": "Miyopluk kalın kenarlı (ıraksak) mercekle düzeltilir.",
+        "chapter": "Fizik ve Astronomi"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "fizik"
+      ],
+      "vurgu": [],
+      "contentHash": "e3a31b2e7a734fc2e08de4d25fd7b80a1904f51c639985e38dd6a67f746376ee",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0160",
+      "conceptId": "fa-gokyuzu-mavi",
+      "stem": {
+        "md": "Gökyüzünün gündüz mavi görünmesinin nedeni nedir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Okyanusların mavi rengini yansıtması"
+        },
+        {
+          "key": "B",
+          "md": "Ozon tabakasının mavi renkli olması"
+        },
+        {
+          "key": "C",
+          "md": "Kısa dalga boylu mavi ışığın atmosferde daha çok saçılması"
+        },
+        {
+          "key": "D",
+          "md": "Güneş'in yalnızca mavi ışık yayması"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Okyanustan uzak çöllerde de gökyüzü mavidir; deniz yansıması belirleyici değildir.",
+        "B": "Ozon tabakası morötesi ışını süzer, gökyüzünün rengini belirlemez.",
+        "D": "Güneş ışığı bütün renkleri içerir; yalnızca mavi yaymaz."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Atmosferdeki moleküller kısa dalga boylu mavi ışığı daha çok saçar.\n- Saçılan mavi ışık gökyüzünün her yönünden gözümüze gelir.\n- Gün batımında ışık uzun yol aldığı için mavi saçılıp kırmızı tonlar baskın olur."
+        },
+        {
+          "type": "hint",
+          "md": "Atmosferdeki gaz molekülleri ışığı her renge eşit davranmaz."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Güneş ışığı atmosfere girdiğinde hava molekülleriyle etkileşir. Bu etkileşim dalga boyuna bağlıdır ve gün batımının kızıl renklerini de açıklar."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          32,
+          32
+        ],
+        "quote": "Gökyüzü, kısa dalga boylu mavi ışık atmosferde daha çok saçıldığı için mavi görünür.",
+        "chapter": "Fizik ve Astronomi"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "fizik"
+      ],
+      "vurgu": [],
+      "contentHash": "9a62c0994e0f3c5f3f013db86b1ac9c96f8be905891c959fe4615606d74f68aa",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0161",
+      "conceptId": "fa-ses-bosluk",
+      "stem": {
+        "md": "Ses aşağıdaki ortamların hangisinde yayılamaz?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Su"
+        },
+        {
+          "key": "B",
+          "md": "Boşluk"
+        },
+        {
+          "key": "C",
+          "md": "Demir"
+        },
+        {
+          "key": "D",
+          "md": "Hava"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Ses suda yayılır; balinalar suda kilometrelerce uzağa ses iletir.",
+        "C": "Ses demirde havadakinden bile hızlı yayılır.",
+        "D": "Günlük hayatta duyduğumuz sesler havada yayılır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Ses boşlukta yayılamaz.\n- Ses mekanik bir dalgadır; titreşecek tanecik gerekir.\n- Uzay boşluğunda bu yüzden ses iletilmez."
+        },
+        {
+          "type": "hint",
+          "md": "Uzayda kimse çığlığınızı duyamaz."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Ses, maddeyi oluşturan taneciklerin titreşimiyle bir yerden başka bir yere taşınır. Işıktan farklı olarak bu taşınma için bir ortama ihtiyaç duyar."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          33,
+          33
+        ],
+        "quote": "Ses mekanik bir dalgadır ve boşlukta yayılamaz.",
+        "chapter": "Fizik ve Astronomi"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "fizik"
+      ],
+      "vurgu": [],
+      "contentHash": "2e2f014accc3f238f5e900625de611e0fcac7796deb7dbbd40638d8f89c96e3e",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0162",
+      "conceptId": "fa-ses-hizi",
+      "stem": {
+        "md": "Ses havada saniyede yaklaşık kaç metre yol alır?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "34"
+        },
+        {
+          "key": "B",
+          "md": "1.500"
+        },
+        {
+          "key": "C",
+          "md": "340"
+        },
+        {
+          "key": "D",
+          "md": "3.000"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "34 m/s ses için çok düşüktür; bir arabanın hızı kadardır.",
+        "B": "1.500 m/s sesin sudaki hızına yakındır.",
+        "D": "3.000 m/s sesin bazı katılardaki hızı mertebesindedir, havadaki değil."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Ses havada saniyede yaklaşık 340 metre yol alır.\n- Bu yüzden şimşek görüldükten sonra gök gürültüsü gecikmeli duyulur.\n- Her 3 saniyelik gecikme yaklaşık 1 kilometreye karşılık gelir."
+        },
+        {
+          "type": "hint",
+          "md": "Bir kilometreyi yaklaşık üç saniyede alır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Sesin hızı yayıldığı ortama ve sıcaklığa bağlıdır. Fırtınada şimşek ile gök gürültüsü arasındaki süre sayılarak fırtınanın uzaklığı kabaca tahmin edilebilir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          33,
+          33
+        ],
+        "quote": "Ses havada saniyede yaklaşık 340 metre yol alır.",
+        "chapter": "Fizik ve Astronomi"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "fizik"
+      ],
+      "vurgu": [],
+      "contentHash": "1efc994523d10e575904713e1d7661b6e8f1c0c446ce8571e1b0e41e7e5b2bc1",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0163",
+      "conceptId": "fa-duyma-araligi",
+      "stem": {
+        "md": "İnsan kulağı yaklaşık 20 hertz ile ____ hertz arasındaki frekansları duyar."
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "20.000"
+        },
+        {
+          "key": "B",
+          "md": "2.000"
+        },
+        {
+          "key": "C",
+          "md": "200"
+        },
+        {
+          "key": "D",
+          "md": "200.000"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "2.000 Hz insanın rahatça duyduğu bir frekanstır; üst sınır çok daha yüksektir.",
+        "C": "200 Hz konuşma sesinin alt bölgesindedir, üst sınır değildir.",
+        "D": "200.000 Hz ultrason bölgesindedir; insan bunu duyamaz."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Üst sınır yaklaşık 20.000 Hz'dir.\n- Bunun üstündeki seslere ultrason, 20 Hz'in altındakilere infrason denir.\n- Yaş ilerledikçe üst sınır düşer."
+        },
+        {
+          "type": "hint",
+          "md": "Alt sınırın tam bin katı."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Frekans, bir saniyedeki titreşim sayısıdır ve sesin inceliğini ya da kalınlığını belirler. Yarasalar ve yunuslar insanın duyamadığı frekansları kullanır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          33,
+          33
+        ],
+        "quote": "İnsan kulağı yaklaşık 20 ile 20.000 hertz arasındaki frekansları duyar.",
+        "chapter": "Fizik ve Astronomi"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "fizik"
+      ],
+      "vurgu": [],
+      "contentHash": "673d5f56a29b819eeae6845889c4b123d5d20b1f0783083bd4f49fc61bc0852a",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0164",
+      "conceptId": "fa-yanki",
+      "stem": {
+        "md": "Bir vadide yüksek sesle bağırınca sesin kısa bir süre sonra geri duyulmasına ne ad verilir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Yankı"
+        },
+        {
+          "key": "B",
+          "md": "Rezonans"
+        },
+        {
+          "key": "C",
+          "md": "Kırınım"
+        },
+        {
+          "key": "D",
+          "md": "Doppler olayı"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Rezonans, bir cismin kendi doğal frekansında uyarılınca güçlü titreşmesidir.",
+        "C": "Kırınım, dalganın bir engelin kenarından dolanarak yayılmasıdır.",
+        "D": "Doppler olayı, kaynak hareket ederken duyulan frekansın değişmesidir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Bu olay yankıdır.\n- Ses karşıdaki yamaca çarpıp yansıyarak geri döner.\n- Yarasalar ve sonar cihazları bu ilkeyle uzaklık ölçer."
+        },
+        {
+          "type": "hint",
+          "md": "Ses bir engele çarpıp geri dönüyor."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Ses dalgaları da ışık gibi yüzeylerden yansıyabilir. Konser salonları, istenmeyen yansımaları azaltacak biçimde tasarlanır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          33,
+          33
+        ],
+        "quote": "Yankı, sesin bir engelden yansıyarak geri dönmesidir.",
+        "chapter": "Fizik ve Astronomi"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "fizik"
+      ],
+      "vurgu": [],
+      "contentHash": "dfdd794387ef4d58afa78ec6196740f628ba9dcbd3ae39559fdce90adbf1ded8",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0165",
+      "conceptId": "fa-ses-ortam-sirasi",
+      "stem": {
+        "md": "Sesin yayılma hızına göre aşağıdaki ortamların en hızlıdan en yavaşa doğru sıralaması hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Su - Çelik - Hava"
+        },
+        {
+          "key": "B",
+          "md": "Hava - Su - Çelik"
+        },
+        {
+          "key": "C",
+          "md": "Çelik - Hava - Su"
+        },
+        {
+          "key": "D",
+          "md": "Çelik - Su - Hava"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Su, çelikten daha yavaş iletir; katılar genellikle daha hızlıdır.",
+        "B": "Bu sıra tam tersidir; hava en yavaş ortamdır.",
+        "C": "Hava sudan daha yavaş iletir; gazlar sıvılardan yavaştır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru sıra: Çelik - Su - Hava.\n- Ses genellikle katılarda en hızlı, gazlarda en yavaş yayılır."
+        },
+        {
+          "type": "hint",
+          "md": "Eski filmlerde treni duymak için kulağı neden raya dayarlar?"
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Sesin hızı, ortamın taneciklerinin ne kadar sıkı bağlı olduğuna ve ortamın esnekliğine bağlıdır. Maddenin hâli bu hızı belirleyen önemli bir etkendir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          33,
+          33
+        ],
+        "quote": "Ses genellikle katılarda sıvılardan, sıvılarda da gazlardan daha hızlı yayılır.",
+        "chapter": "Fizik ve Astronomi"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "fizik"
+      ],
+      "vurgu": [],
+      "contentHash": "97e6c9f8019a7876e46798f8d40540306430cabab8ad5b5586dbdc54018e7531",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0166",
+      "conceptId": "fa-amper",
+      "stem": {
+        "md": "Elektrik akımının SI birimi hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Volt"
+        },
+        {
+          "key": "B",
+          "md": "Ohm"
+        },
+        {
+          "key": "C",
+          "md": "Watt"
+        },
+        {
+          "key": "D",
+          "md": "Amper"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Volt gerilimin, yani potansiyel farkının birimidir.",
+        "B": "Ohm direncin birimidir.",
+        "C": "Watt gücün birimidir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Elektrik akımının SI birimi amperdir.\n- Birim, Fransız fizikçi André-Marie Ampère'in adını taşır.\n- Amper, SI'nın yedi temel biriminden biridir."
+        },
+        {
+          "type": "hint",
+          "md": "Ölçen alete ampermetre denir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Elektrik akımı, bir iletkenden birim zamanda geçen yük miktarıdır. Akım, gerilim ve direnç elektrik devrelerinin üç temel büyüklüğüdür."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          34,
+          34
+        ],
+        "quote": "Elektrik akımının SI birimi amperdir.",
+        "chapter": "Fizik ve Astronomi"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "fizik"
+      ],
+      "vurgu": [],
+      "contentHash": "d2512a609bffa641ddaaf61ba05a89c7e79d6b6bc248a1e7d88baa5490848ca5",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0167",
+      "conceptId": "fa-ohm-yasasi",
+      "stem": {
+        "md": "Direnci 10 ohm olan bir telden 2 amper akım geçiyorsa telin uçları arasındaki gerilim kaç volttur?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "5"
+        },
+        {
+          "key": "B",
+          "md": "12"
+        },
+        {
+          "key": "C",
+          "md": "0,2"
+        },
+        {
+          "key": "D",
+          "md": "20"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "5, direncin akıma bölünmesiyle bulunur; gerilim bölmeyle değil çarpmayla hesaplanır.",
+        "B": "12, iki değerin toplamıdır; Ohm yasası toplama içermez.",
+        "C": "0,2, akımın dirence bölünmesidir; bu bir gerilim vermez."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Ohm yasası: V = I × R.\n- V = 2 A × 10 Ω = 20 V."
+        },
+        {
+          "type": "hint",
+          "md": "Gerilim = akım × direnç."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Alman fizikçi Georg Ohm, bir iletkenden geçen akımın uçlar arasındaki gerilimle orantılı olduğunu bulmuştur. Bu ilişki, devre hesaplarının temelini oluşturur."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          34,
+          34
+        ],
+        "quote": "Ohm yasasına göre gerilim, akım ile direncin çarpımına eşittir.",
+        "chapter": "Fizik ve Astronomi"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "fizik"
+      ],
+      "vurgu": [],
+      "contentHash": "6b29b48c8771896b36650bed8a7821bc0bb1f9f479532d2b700b6e104b23a086",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0168",
+      "conceptId": "fa-faraday",
+      "stem": {
+        "md": "Değişen manyetik alanın bir iletkende elektrik akımı oluşturduğunu keşfederek jeneratörlerin temelini atan bilim insanı kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "James Clerk Maxwell"
+        },
+        {
+          "key": "B",
+          "md": "Michael Faraday"
+        },
+        {
+          "key": "C",
+          "md": "André-Marie Ampère"
+        },
+        {
+          "key": "D",
+          "md": "Nikola Tesla"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Maxwell, elektrik ve manyetizmayı denklemlerle birleştirmiştir; indüklemeyi ilk bulan o değildir.",
+        "C": "Ampère, akımlar arasındaki manyetik etkileşimi incelemiştir.",
+        "D": "Tesla alternatif akım sistemleri geliştirmiştir; indükleme ondan önce keşfedilmişti."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Michael Faraday'dir.\n- Keşfettiği olaya elektromanyetik indükleme denir.\n- Elektrik santrallerindeki jeneratörler bu ilkeyle çalışır."
+        },
+        {
+          "type": "hint",
+          "md": "Kendi kendini yetiştirmiş bir İngiliz deneyci; kapasitans birimi farad onun adını taşır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "19. yüzyılda elektrik ile manyetizmanın birbirine bağlı olduğu anlaşıldı. Bu keşifler, hareket enerjisini elektrik enerjisine dönüştüren makinelerin yolunu açtı."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          34,
+          34
+        ],
+        "quote": "Michael Faraday, değişen manyetik alanın bir iletkende elektrik akımı oluşturduğunu, yani elektromanyetik indüklemeyi keşfetmiştir.",
+        "chapter": "Fizik ve Astronomi"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "fizik"
+      ],
+      "vurgu": [],
+      "contentHash": "50bb3c4737716f5b4c64dff1be840c84830a3566e428e4ecfa857527b351e1d4",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0169",
+      "conceptId": "fa-volta",
+      "stem": {
+        "md": "İlk elektrik pilini geliştiren bilim insanının adını taşıyan birim hangi büyüklüğü ölçer?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Akım"
+        },
+        {
+          "key": "B",
+          "md": "Direnç"
+        },
+        {
+          "key": "C",
+          "md": "Güç"
+        },
+        {
+          "key": "D",
+          "md": "Gerilim"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Akımın birimi amperdir ve Ampère'in adını taşır.",
+        "B": "Direncin birimi ohmdur ve Georg Ohm'un adını taşır.",
+        "C": "Gücün birimi watttır ve James Watt'ın adını taşır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- İlk elektrik pilini İtalyan Alessandro Volta geliştirmiştir.\n- Onun adını taşıyan birim volttur.\n- Volt, gerilimin (potansiyel farkının) birimidir."
+        },
+        {
+          "type": "hint",
+          "md": "Önce pili bulan İtalyan bilim insanını hatırlayın."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "İlk pil, aralarında tuzlu suya batırılmış karton bulunan çinko ve bakır disklerin üst üste dizilmesiyle yapılmıştır. Bu buluş, sürekli elektrik akımı elde etmenin ilk yolu oldu."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          34,
+          34
+        ],
+        "quote": "Alessandro Volta ilk elektrik pilini geliştirmiştir ve gerilim birimi volt onun adını taşır.",
+        "chapter": "Fizik ve Astronomi"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "fizik"
+      ],
+      "vurgu": [],
+      "contentHash": "591abadb87813fa6287209401c755ad22ad1f0a0f8a1e66ba9b9f9e7cb7848e8",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0170",
+      "conceptId": "fa-iletken",
+      "stem": {
+        "md": "Aşağıdakilerden hangisi iyi bir elektrik iletkeni değildir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Kauçuk"
+        },
+        {
+          "key": "B",
+          "md": "Bakır"
+        },
+        {
+          "key": "C",
+          "md": "Gümüş"
+        },
+        {
+          "key": "D",
+          "md": "Alüminyum"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Bakır, elektrik kablolarında en çok kullanılan iletkendir.",
+        "C": "Gümüş, metaller içinde elektriği en iyi ileten elementtir.",
+        "D": "Alüminyum, yüksek gerilim hatlarında kullanılan bir iletkendir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Kauçuk iyi bir yalıtkandır.\n- Bakır, gümüş ve alüminyum metal olup elektriği iyi iletir.\n- Kablo kılıflarında bu yüzden yalıtkan malzemeler kullanılır."
+        },
+        {
+          "type": "hint",
+          "md": "Kabloların dışındaki kaplamayı düşünün."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Metallerde serbestçe hareket edebilen elektronlar akımı kolayca taşır. Elektronları sıkı bağlı maddeler ise akımı geçirmez ve koruma amacıyla kullanılır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          34,
+          34
+        ],
+        "quote": "Bakır iyi bir iletken, kauçuk ise iyi bir yalıtkandır.",
+        "chapter": "Fizik ve Astronomi"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "fizik"
+      ],
+      "vurgu": [],
+      "contentHash": "c1fcfa059c132e916cf665b2e2f4123b441627cf0d128c338eb52018fe4e4e85",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0171",
+      "conceptId": "gunese-en-yakin-gezegen",
+      "stem": {
+        "md": "Güneş'e en yakın gezegen hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Venüs"
+        },
+        {
+          "key": "B",
+          "md": "Mars"
+        },
+        {
+          "key": "C",
+          "md": "Merkür"
+        },
+        {
+          "key": "D",
+          "md": "Jüpiter"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Venüs Güneş'e ikinci sıradaki gezegendir.",
+        "B": "Mars dördüncü sıradadır, Dünya'dan sonra gelir.",
+        "D": "Jüpiter en büyük gezegendir ama beşinci sıradadır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Güneş'e en yakın gezegen Merkür'dür.\n- Aynı zamanda Güneş sisteminin en küçük gezegenidir."
+        },
+        {
+          "type": "hint",
+          "md": "Sistemin en küçük gezegeni."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Güneş sistemindeki gezegenler iç (kayaç) ve dış (dev) gezegenler olarak ikiye ayrılır. Güneş'e yakın gezegenler, yörüngelerini daha kısa sürede tamamlar."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          35,
+          35
+        ],
+        "quote": "Güneş'e en yakın gezegen Merkür'dür.",
+        "chapter": "Fizik ve Astronomi"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "astronomi"
+      ],
+      "vurgu": [],
+      "contentHash": "5ebd8808e90abed6447c1f317f0b10ce095c266e8bcbf75af81a95b4a45a989a",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0172",
+      "conceptId": "dunya-dogal-uydu",
+      "stem": {
+        "md": "Dünya'nın tek doğal uydusu hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Mars"
+        },
+        {
+          "key": "B",
+          "md": "Venüs"
+        },
+        {
+          "key": "C",
+          "md": "Ay"
+        },
+        {
+          "key": "D",
+          "md": "Güneş"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Mars bir uydu değil, Güneş'in çevresinde dönen bir gezegendir.",
+        "B": "Venüs de bir gezegendir; gökyüzünde parlak göründüğü için karıştırılır.",
+        "D": "Güneş bir yıldızdır; Dünya onun çevresinde döner."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Dünya'nın tek doğal uydusu Ay'dır.\n- Ay, Dünya'nın çevresindeki turunu yaklaşık bir ayda tamamlar."
+        },
+        {
+          "type": "hint",
+          "md": "Geceleri gökyüzünde evreleriyle görülür."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Uydu, bir gezegenin çevresinde dolanan gök cismidir. Yapay uydular insan yapımıdır; doğal uydular ise gezegenle birlikte ya da sonradan yakalanarak oluşmuştur."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          35,
+          35
+        ],
+        "quote": "Dünya'nın tek doğal uydusu Ay'dır.",
+        "chapter": "Fizik ve Astronomi"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "astronomi"
+      ],
+      "vurgu": [],
+      "contentHash": "a7109d85d9954f7aedee62b35a9524b768492af686d43cba07336fdc7e6b14e3",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0173",
+      "conceptId": "fa-jupiter",
+      "stem": {
+        "md": "Güneş sisteminin en büyük gezegeni hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Satürn"
+        },
+        {
+          "key": "B",
+          "md": "Neptün"
+        },
+        {
+          "key": "C",
+          "md": "Jüpiter"
+        },
+        {
+          "key": "D",
+          "md": "Dünya"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Satürn ikinci en büyük gezegendir.",
+        "B": "Neptün bir gaz devidir ama en büyüklerden değildir.",
+        "D": "Dünya, kayaç gezegenlerin en büyüğüdür ama dev gezegenlerin yanında küçük kalır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- En büyük gezegen Jüpiter'dir.\n- Bir gaz devidir ve Büyük Kırmızı Leke adlı dev bir fırtınasıyla tanınır."
+        },
+        {
+          "type": "hint",
+          "md": "Adını Roma tanrılarının başından alır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Güneş sisteminin dış bölgesindeki dev gezegenler çoğunlukla hidrojen ve helyumdan oluşur. Bunların katı bir yüzeyi yoktur."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          35,
+          35
+        ],
+        "quote": "Güneş sisteminin en büyük gezegeni Jüpiter'dir.",
+        "chapter": "Fizik ve Astronomi"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "astronomi"
+      ],
+      "vurgu": [],
+      "contentHash": "18cac303aab1583e98611d6548963bb60693fe60b7f7e68ee599edcd00ca3d99",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0174",
+      "conceptId": "fa-gezegen-sirasi",
+      "stem": {
+        "md": "Aşağıdaki gezegenlerin Güneş'e yakından uzağa doğru doğru sıralaması hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Mars - Satürn - Jüpiter - Uranüs"
+        },
+        {
+          "key": "B",
+          "md": "Mars - Jüpiter - Satürn - Uranüs"
+        },
+        {
+          "key": "C",
+          "md": "Jüpiter - Mars - Uranüs - Satürn"
+        },
+        {
+          "key": "D",
+          "md": "Mars - Jüpiter - Uranüs - Satürn"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Jüpiter, Satürn'den önce gelir.",
+        "C": "Mars, Jüpiter'den önce gelir; Uranüs de Satürn'den sonradır.",
+        "D": "Satürn, Uranüs'ten önce gelir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru sıra: Mars - Jüpiter - Satürn - Uranüs.\n- Tam sıra: Merkür, Venüs, Dünya, Mars, Jüpiter, Satürn, Uranüs, Neptün."
+        },
+        {
+          "type": "hint",
+          "md": "Kayaç gezegenlerin sonuncusu, ardından en büyük gaz devi gelir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Mars ile Jüpiter arasında asteroit kuşağı yer alır ve bu kuşak iç gezegenleri dış gezegenlerden ayırır. Dış gezegenlere doğru gidildikçe yörünge süreleri uzar."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          35,
+          35
+        ],
+        "quote": "Gezegenlerin Güneş'e yakınlık sırası Merkür, Venüs, Dünya, Mars, Jüpiter, Satürn, Uranüs ve Neptün'dür.",
+        "chapter": "Fizik ve Astronomi"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "astronomi"
+      ],
+      "vurgu": [],
+      "contentHash": "5d5f048aa80a80057b45cef19d05cd866d9df4a59a597467c5bf9b291c7f93dd",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0175",
+      "conceptId": "fa-pluton",
+      "stem": {
+        "md": "Plüton, 2006 yılında Uluslararası Astronomi Birliği tarafından hangi sınıfa alınmıştır?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Uydu"
+        },
+        {
+          "key": "B",
+          "md": "Asteroit"
+        },
+        {
+          "key": "C",
+          "md": "Cüce gezegen"
+        },
+        {
+          "key": "D",
+          "md": "Kuyruklu yıldız"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Plüton bir gezegenin değil, Güneş'in çevresinde dolanır; uydu değildir.",
+        "B": "Asteroitler çoğunlukla düzensiz biçimli küçük kayalardır; Plüton bu sınıfa alınmamıştır.",
+        "D": "Kuyruklu yıldızlar Güneş'e yaklaşınca kuyruk oluşturan buzlu cisimlerdir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Plüton 2006'da cüce gezegen olarak sınıflandırıldı.\n- Yörüngesindeki diğer cisimleri temizleyemediği için gezegen ölçütünü karşılamaz."
+        },
+        {
+          "type": "hint",
+          "md": "Hâlâ 'gezegen' sözcüğü geçer ama bir sıfatla."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Gezegen tanımı 2006'da netleştirildi: Güneş'in çevresinde dolanmak, yuvarlak olmak ve yörüngesini temizlemiş olmak gerekir. Bu tanım bazı cisimlerin sınıfını değiştirdi."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          35,
+          35
+        ],
+        "quote": "Plüton, 2006 yılında Uluslararası Astronomi Birliği tarafından cüce gezegen olarak yeniden sınıflandırılmıştır.",
+        "chapter": "Fizik ve Astronomi"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "astronomi"
+      ],
+      "vurgu": [],
+      "contentHash": "cf725efb0a57574d4dd2868dc11c798c2de5230c02bb5a88fc63ba4d3d545092",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0176",
+      "conceptId": "fa-venus-sicaklik",
+      "stem": {
+        "md": "Güneş'e en yakın gezegen olmamasına karşın yüzeyi Güneş sisteminin en sıcak gezegeni hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Merkür"
+        },
+        {
+          "key": "B",
+          "md": "Mars"
+        },
+        {
+          "key": "C",
+          "md": "Jüpiter"
+        },
+        {
+          "key": "D",
+          "md": "Venüs"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Merkür Güneş'e en yakın gezegendir ama kalın atmosferi olmadığı için ısıyı tutamaz.",
+        "B": "Mars ince atmosferli ve soğuk bir gezegendir.",
+        "C": "Jüpiter'in katı bir yüzeyi yoktur ve bulut tepeleri çok soğuktur."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- En sıcak yüzey Venüs'tedir.\n- Yoğun karbondioksit atmosferi güçlü bir sera etkisi yaratır.\n- Bu yüzden Güneş'e daha yakın olan Merkür'den bile sıcaktır."
+        },
+        {
+          "type": "hint",
+          "md": "Kalın bulutlarla kaplı, Dünya'nın 'ikizi' denen gezegen."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Bir gezegenin sıcaklığını yalnızca Güneş'e uzaklığı değil, atmosferi de belirler. Kalın bir atmosfer, gelen ısının uzaya geri kaçmasını engelleyebilir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          35,
+          35
+        ],
+        "quote": "Yoğun karbondioksit atmosferinin yarattığı sera etkisi nedeniyle Venüs, yüzeyi en sıcak gezegendir.",
+        "chapter": "Fizik ve Astronomi"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "astronomi"
+      ],
+      "vurgu": [],
+      "contentHash": "89f4adb21d2d01629514caf5df1d3372f678e20b63d90bc041d4b488fc7c2613",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0177",
+      "conceptId": "fa-gunes-fuzyon",
+      "stem": {
+        "md": "Güneş enerjisini çekirdeğinde gerçekleşen hangi süreçten alır?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Uranyumun parçalandığı fisyon"
+        },
+        {
+          "key": "B",
+          "md": "Kömür benzeri maddelerin yanması"
+        },
+        {
+          "key": "C",
+          "md": "Hidrojenin helyuma dönüştüğü füzyon"
+        },
+        {
+          "key": "D",
+          "md": "Radyoaktif karbonun bozunması"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Fisyon ağır çekirdeklerin bölünmesidir; nükleer santrallerde kullanılır.",
+        "B": "Yanma kimyasal bir tepkimedir ve Güneş'i milyarlarca yıl besleyemez.",
+        "D": "Karbon bozunması çok az enerji verir; tarihlendirmede kullanılır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Güneş enerjisini füzyondan alır.\n- Çekirdekte hidrojen çekirdekleri birleşerek helyuma dönüşür.\n- Bu sırada kütlenin küçük bir kısmı enerjiye dönüşür."
+        },
+        {
+          "type": "hint",
+          "md": "Çekirdekler bölünmüyor, birleşiyor."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Yıldızlar, çekirdeklerindeki çok yüksek sıcaklık ve basınç sayesinde nükleer tepkimeler sürdürür. Bu tepkimeler yıldızın ışığının ve ısısının kaynağıdır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          36,
+          36
+        ],
+        "quote": "Güneş, enerjisini çekirdeğinde hidrojenin helyuma dönüştüğü füzyon tepkimelerinden alır.",
+        "chapter": "Fizik ve Astronomi"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "astronomi"
+      ],
+      "vurgu": [],
+      "contentHash": "e24116d53003d02d383d06899896ae31fa9fd1f2adc6cbe90005e79fc43a14ea",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0178",
+      "conceptId": "fa-tutulmalar",
+      "stem": {
+        "md": "Tutulmaları oluşum biçimleriyle eşleştirin.\n\n1. Güneş tutulması\n2. Ay tutulması\n\na. Dünya, Güneş ile Ay arasına girer\nb. Ay, Güneş ile Dünya arasına girer"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "1-b, 2-a"
+        },
+        {
+          "key": "B",
+          "md": "1-a, 2-b"
+        },
+        {
+          "key": "C",
+          "md": "1-a, 2-a"
+        },
+        {
+          "key": "D",
+          "md": "1-b, 2-b"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Eşleşmeler ters çevrilmiştir.",
+        "C": "İki farklı tutulma aynı dizilişle açıklanamaz; Güneş tutulmasında arada Ay vardır.",
+        "D": "İki farklı tutulma aynı dizilişle açıklanamaz; Ay tutulmasında arada Dünya vardır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Güneş tutulması: Ay, Güneş ile Dünya arasına girer (1-b).\n- Ay tutulması: Dünya, Güneş ile Ay arasına girer (2-a)."
+        },
+        {
+          "type": "hint",
+          "md": "Hangi cisim karartılıyorsa ona ışığın ulaşmasını aradaki cisim engeller."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Tutulma, üç gök cisminin aynı doğru üzerine dizilmesiyle oluşur. Gölgenin hangi cismin üzerine düştüğü, tutulmanın türünü belirler."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          36,
+          36
+        ],
+        "quote": "Güneş tutulması, Ay'ın Dünya ile Güneş arasına girmesiyle oluşur.",
+        "chapter": "Fizik ve Astronomi"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "astronomi"
+      ],
+      "vurgu": [],
+      "contentHash": "6b85896a5e50de6cdb7c4605da8ef3ea78ab723798ea458f6df94f6af1c29c3c",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0179",
+      "conceptId": "fa-isik-yili",
+      "stem": {
+        "md": "Işık yılı hangi tür büyüklüğün birimidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Zaman"
+        },
+        {
+          "key": "B",
+          "md": "Uzaklık"
+        },
+        {
+          "key": "C",
+          "md": "Hız"
+        },
+        {
+          "key": "D",
+          "md": "Parlaklık"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Adında 'yıl' geçse de bir süreyi değil, ışığın o sürede aldığı yolu ölçer.",
+        "C": "Hız bir uzaklığın zamana oranıdır; ışık yılı bir oran değildir.",
+        "D": "Parlaklık kadir gibi başka ölçeklerle ifade edilir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Işık yılı bir uzaklık birimidir.\n- Işığın bir yılda aldığı yola eşittir.\n- Yıldızlar arası uzaklıkları ifade etmekte kullanılır."
+        },
+        {
+          "type": "hint",
+          "md": "Adı yanıltıcıdır; ışığın bir yılda ne yaptığını düşünün."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Gökbilimde mesafeler o kadar büyüktür ki kilometreyle yazmak elverişsiz olur. Bu yüzden ışığın hızına dayanan özel birimler kullanılır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          36,
+          36
+        ],
+        "quote": "Işık yılı, ışığın bir yılda aldığı yoldur ve bir uzaklık birimidir.",
+        "chapter": "Fizik ve Astronomi"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "astronomi"
+      ],
+      "vurgu": [],
+      "contentHash": "0b65cc204a656e75600ec65ed1523fbaed1ba432d39736f55f663ab40935cb0d",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0180",
+      "conceptId": "fa-mevsimler",
+      "stem": {
+        "md": "Dünya'da mevsimlerin oluşmasının temel nedeni nedir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Dünya'nın yazın Güneş'e çok yaklaşması"
+        },
+        {
+          "key": "B",
+          "md": "Ay'ın evreleri"
+        },
+        {
+          "key": "C",
+          "md": "Dönme ekseninin eğik olması"
+        },
+        {
+          "key": "D",
+          "md": "Güneş'in parlaklığının yıl içinde değişmesi"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Kuzey Yarımküre'de Dünya Güneş'e en yakın konumuna ocak ayında gelir; uzaklık belirleyici değildir.",
+        "B": "Ay'ın evreleri yaklaşık bir aylık döngüdür ve mevsimleri belirlemez.",
+        "D": "Güneş'in parlaklığı yıl içinde mevsim yaratacak kadar değişmez."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Mevsimlerin nedeni eksen eğikliğidir (yaklaşık 23,5 derece).\n- Eğiklik yüzünden güneş ışınları yıl boyunca farklı açılarla gelir.\n- Bu yüzden iki yarımkürede mevsimler terstir."
+        },
+        {
+          "type": "hint",
+          "md": "Yarımkürelerde mevsimlerin ters olması bir ipucudur."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Dünya hem kendi ekseni çevresinde döner hem de Güneş'in çevresinde dolanır. Güneş ışınlarının yere geliş açısı, bir bölgenin ne kadar ısındığını belirler."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          36,
+          36
+        ],
+        "quote": "Mevsimler, Dünya'nın dönme ekseninin yaklaşık 23,5 derece eğik olmasından kaynaklanır.",
+        "chapter": "Fizik ve Astronomi"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "astronomi"
+      ],
+      "vurgu": [],
+      "contentHash": "58c4e080f9a2a9c666193e4f92d54d816d4d08432dac8974caf563ac32742b70",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0181",
+      "conceptId": "fa-kutup-yildizi",
+      "stem": {
+        "md": "Kuzey yönünü bulmada kullanılan Kutup Yıldızı hangi takımyıldızında yer alır?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Büyükayı"
+        },
+        {
+          "key": "B",
+          "md": "Avcı (Orion)"
+        },
+        {
+          "key": "C",
+          "md": "Küçükayı"
+        },
+        {
+          "key": "D",
+          "md": "Kraliçe (Kassiopeia)"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Büyükayı, Kutup Yıldızı'nı bulmak için yol gösterir ama yıldız onun içinde değildir.",
+        "B": "Avcı takımyıldızı gök ekvatoruna yakındır, kuzey kutbunda değildir.",
+        "D": "Kassiopeia de Kutup Yıldızı'nı bulmaya yardım eder ama onu içermez."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Kutup Yıldızı Küçükayı takımyıldızındadır.\n- Gökyüzünün kuzey kutbuna çok yakın olduğu için neredeyse yerinden oynamaz.\n- Büyükayı'nın iki yıldızı onu bulmak için kılavuz olarak kullanılır."
+        },
+        {
+          "type": "hint",
+          "md": "Ona giden yolu gösteren takımyıldızının küçük kardeşi."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Takımyıldızlar, gökyüzünün belirli bölgelerindeki yıldız topluluklarıdır. Denizciler yüzyıllarca yön bulmak için bazı yıldızların konumundan yararlanmıştır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          36,
+          36
+        ],
+        "quote": "Kutup Yıldızı, Küçükayı takımyıldızında yer alır ve kuzey yönünü bulmada kullanılır.",
+        "chapter": "Fizik ve Astronomi"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "astronomi"
+      ],
+      "vurgu": [],
+      "contentHash": "1f7bae8ff49c902b583fb30e6c23e859dd8fb156cb15c6d58a14772e60b6b956",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0182",
+      "conceptId": "fa-gorelilik",
+      "stem": {
+        "md": "Özel görelilik kuramını 1905 yılında yayımlayan bilim insanı kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Max Planck"
+        },
+        {
+          "key": "B",
+          "md": "Albert Einstein"
+        },
+        {
+          "key": "C",
+          "md": "Niels Bohr"
+        },
+        {
+          "key": "D",
+          "md": "Isaac Newton"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Planck kuantum kuramının öncüsüdür.",
+        "C": "Bohr atom modeliyle tanınır.",
+        "D": "Newton 17. yüzyılda yaşamıştır; klasik mekaniğin kurucusudur."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Albert Einstein'dır.\n- 1905, Einstein'ın birkaç önemli makale yayımladığı için 'mucize yıl' diye anılır."
+        },
+        {
+          "type": "hint",
+          "md": "Dilini çıkarmış fotoğrafıyla da ünlüdür."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Görelilik kuramı, zaman ve uzayın gözlemcinin hareketine göre değişebileceğini öne sürer. Bu kuram, ışık hızının herkes için aynı olduğu varsayımına dayanır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          37,
+          37
+        ],
+        "quote": "Albert Einstein, özel görelilik kuramını 1905 yılında yayımlamıştır.",
+        "chapter": "Fizik ve Astronomi"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "fizik"
+      ],
+      "vurgu": [],
+      "contentHash": "203b92842f9ab852cc35b2a78fb2c8a10b5debb05288e351c9159f4ee454c672",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0183",
+      "conceptId": "fa-kepler",
+      "stem": {
+        "md": "Gezegenlerin Güneş çevresinde çember değil elips biçimli yörüngelerde dolandığını gösteren gökbilimci kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Galileo Galilei"
+        },
+        {
+          "key": "B",
+          "md": "Nikolas Kopernik"
+        },
+        {
+          "key": "C",
+          "md": "Johannes Kepler"
+        },
+        {
+          "key": "D",
+          "md": "Edmond Halley"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Galileo teleskopla önemli gözlemler yapmış ama yörüngelerin biçimini yasalaştırmamıştır.",
+        "B": "Kopernik Güneş merkezli modeli savunmuş, ancak yörüngeleri çember kabul etmiştir.",
+        "D": "Halley, adını taşıyan kuyruklu yıldızın dönüşünü öngörmesiyle tanınır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Johannes Kepler'dir.\n- Gezegen hareketlerine dair üç yasa ortaya koymuştur.\n- Birinci yasaya göre yörüngeler elipstir ve Güneş odaklardan birindedir."
+        },
+        {
+          "type": "hint",
+          "md": "Tycho Brahe'nin gözlem verileriyle çalışan Alman gökbilimci."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "17. yüzyılın başında gökbilimciler gezegen hareketlerini daha kesin ölçümlerle açıklamaya çalıştı. Çember yörünge varsayımı, gözlemlerle tam uyuşmuyordu."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          37,
+          37
+        ],
+        "quote": "Johannes Kepler, gezegenlerin Güneş çevresinde elips biçimli yörüngelerde dolandığını göstermiştir.",
+        "chapter": "Fizik ve Astronomi"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "astronomi"
+      ],
+      "vurgu": [],
+      "contentHash": "e546cd1bdc51ae6e04c30a27f9cf05ef24ff07d5474a62570773f2190467886f",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0184",
+      "conceptId": "fa-einstein-nobel",
+      "stem": {
+        "md": "Kütle-enerji eşdeğerliğini anlatan E = mc² denklemiyle tanınan bilim insanı, Nobel Fizik Ödülü'nü hangi çalışmasıyla almıştır?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Fotoelektrik olayı açıklaması"
+        },
+        {
+          "key": "B",
+          "md": "Görelilik kuramı"
+        },
+        {
+          "key": "C",
+          "md": "Radyoaktivitenin keşfi"
+        },
+        {
+          "key": "D",
+          "md": "Atom modelini geliştirmesi"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Görelilik en ünlü çalışmasıdır ama ödül gerekçesi bu değildir.",
+        "C": "Radyoaktivite çalışmaları Becquerel ve Curie'lere Nobel kazandırmıştır.",
+        "D": "Atom modeli çalışmasıyla Nobel alan Niels Bohr'dur."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Denklem Albert Einstein'a aittir.\n- Einstein Nobel'i fotoelektrik olayı açıklamasıyla almıştır.\n- Bu açıklama, ışığın tanecik (foton) yönünü ortaya koymuştur."
+        },
+        {
+          "type": "hint",
+          "md": "Işığın bir metal yüzeyden elektron koparmasıyla ilgilidir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Bazı metallere ışık düştüğünde yüzeyden elektron koptuğu gözlenmişti ve bu olay klasik fizikle açıklanamıyordu. Açıklaması, kuantum fiziğinin gelişiminde önemli bir adım oldu."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          37,
+          37
+        ],
+        "quote": "Einstein, Nobel Fizik Ödülü'nü fotoelektrik olayı açıklamasıyla almıştır.",
+        "chapter": "Fizik ve Astronomi"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "fizik"
+      ],
+      "vurgu": [],
+      "contentHash": "77beece83ad9c09ffcdff55d65f80c7198c14986dde6c4a82d144254218d591c",
+      "deleted": false
+    }
+  ]
+}

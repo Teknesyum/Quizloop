@@ -9,7 +9,7 @@ import type { Database } from '@core/db/types'
 import { QuestionIndex, readMeta } from '@core/modules/loader'
 import { syncModule } from '@core/modules/sync'
 import { chapterCounts } from '@core/scheduler/queue'
-import { SessionMachine } from './machine'
+import { SessionMachine, sessionSize } from './machine'
 
 const NOW = new Date('2026-09-08T09:00:00.000Z')
 const SAMPLE = resolve('src/core/testdata/ornek')
@@ -399,5 +399,80 @@ describe('chapterCounts', () => {
     await stamp(first, '2026-09-08T08:30:00.000Z')
     const both = await chapterCounts(db, 'ornek', NOW, NOW)
     expect(both.slice(0, 2).map((r) => r.chapter)).toEqual([first, last])
+  })
+})
+
+describe('module session size', () => {
+  async function sized(size: number | undefined): Promise<SessionMachine> {
+    const mod = await readMeta(nodePorts, SAMPLE)
+    await syncModule(db, nodePorts, mod, NOW)
+    const index = new QuestionIndex(nodePorts, { ...mod, meta: { ...mod.meta, sessionSize: size } })
+    return new SessionMachine({
+      db,
+      indexFor: () => index,
+      assetBase: (id) => `quizloop://module/${id}/`,
+      dayStart: (now) => new Date(now.getTime() - 9 * 3600000),
+      limit: () => 2,
+      now: () => NOW,
+      seed: () => 1
+    })
+  }
+
+  it('picks the module size for a chapter and the user limit otherwise', () => {
+    expect(sessionSize(5, 'FSRS', 40)).toBe(5)
+    expect(sessionSize(5, '', 40)).toBe(5)
+    expect(sessionSize(5, null, 40)).toBe(40)
+    expect(sessionSize(undefined, 'FSRS', 40)).toBe(40)
+  })
+
+  it('cuts a chapter session at the module size and a mixed one at the user limit', async () => {
+    const m = await sized(5)
+    const chapter = await m.start('ornek', 'Oturum akışı')
+    expect(chapter.total).toBe(4)
+    await m.end(chapter.sessionId)
+    const mixed = await m.start('ornek', null)
+    expect(mixed.total).toBe(2)
+  })
+
+  it('falls back to the user limit when the module sets no size', async () => {
+    const m = await sized(undefined)
+    const chapter = await m.start('ornek', 'Oturum akışı')
+    expect(chapter.total).toBe(2)
+  })
+})
+
+describe('chained questions', () => {
+  it('brings the devam question right after a correct answer', async () => {
+    const mod = await readMeta(nodePorts, SAMPLE)
+    await syncModule(db, nodePorts, mod, NOW)
+    const base = new QuestionIndex(nodePorts, mod)
+    const order = (await db.selectFrom('card').select('question_id').execute()).map(
+      (r) => r.question_id
+    )
+    const links = new Map<string, string>()
+    const index = {
+      get: async (id: string) => {
+        const q = await base.get(id)
+        const devam = links.get(id)
+        return q && devam ? { ...q, devam } : q
+      }
+    } as unknown as QuestionIndex
+    const m = new SessionMachine({
+      db,
+      indexFor: () => index,
+      assetBase: (id) => `quizloop://module/${id}/`,
+      dayStart: (now) => new Date(now.getTime() - 9 * 3600000),
+      limit: () => 50,
+      now: () => NOW,
+      seed: () => 1
+    })
+    const last = order.at(-1)!
+    for (const q of order) if (q !== last) links.set(q, last)
+    const s = await m.start('ornek')
+    expect(s.first!.questionId).not.toBe(last)
+    m.reveal(s.sessionId)
+    for (const c of s.first!.choices) if (m.answer(s.sessionId, c.key).correct) break
+    const g = await m.grade(s.sessionId, 3, 100)
+    expect(g.next?.questionId).toBe(last)
   })
 })

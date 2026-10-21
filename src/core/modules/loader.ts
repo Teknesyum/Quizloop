@@ -126,6 +126,10 @@ export class QuestionIndex {
     private readonly mod: LoadedModule
   ) {}
 
+  get sessionSize(): number | undefined {
+    return this.mod.meta.sessionSize
+  }
+
   private async load(): Promise<void> {
     for (const ref of this.mod.meta.blocks) {
       const block = await readBlock(this.ports, this.mod.root, ref.file)

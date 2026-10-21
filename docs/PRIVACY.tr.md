@@ -59,6 +59,7 @@ gönderir:
 
 - notunuz;
 - yazarsanız size ulaşma yolu (isteğe bağlı);
+- uygulama penceresinin ekran görüntüsü, kendiliğinden eklenir, göndermeden kaldırabilirsiniz (isteğe bağlı);
 - eklerseniz seçtiğiniz bir görüntü (isteğe bağlı), önce cihazda küçültülür;
 - uygulama sürümü, platform (Windows, macOS, Linux, Android ya da Web) ve arayüz dili.
 

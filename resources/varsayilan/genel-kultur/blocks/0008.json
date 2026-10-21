@@ -1,0 +1,2605 @@
+{
+  "blockId": "0008",
+  "questions": [
+    {
+      "id": "genel-kultur-0305",
+      "conceptId": "te-dede-korkut",
+      "stem": {
+        "md": "Oğuz boylarının yaşayışını, kahramanlıklarını ve geleneklerini anlatan, en eksiksiz nüshası Dresden'de bulunan anonim eser hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Kutadgu Bilig"
+        },
+        {
+          "key": "B",
+          "md": "Divanü Lügati't-Türk"
+        },
+        {
+          "key": "C",
+          "md": "Atabetü'l-Hakayık"
+        },
+        {
+          "key": "D",
+          "md": "Dede Korkut Kitabı"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Kutadgu Bilig, Yusuf Has Hacib'in devlet yönetimini işleyen öğretici eseridir; anonim değildir.",
+        "B": "Divanü Lügati't-Türk, Kaşgarlı Mahmud'un Türkçe-Arapça sözlüğüdür.",
+        "C": "Atabetü'l-Hakayık, Edip Ahmed Yükneki'nin ahlak öğütleri veren manzum eseridir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Dede Korkut Kitabı'dır.\n- Oğuz boylarının hayatını anlatan anonim hikâyelerden oluşur.\n- En eksiksiz nüshası Dresden'de, daha kısa bir nüshası Vatikan'dadır."
+        },
+        {
+          "type": "hint",
+          "md": "Hikâyeleri bir ozan-bilge kişinin adıyla anılır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Türk halk anlatı geleneğinde destandan halk hikâyesine geçişi gösteren eserler, sözlü olarak kuşaktan kuşağa aktarılmış, sonradan yazıya geçirilmiştir. Bu anlatılarda nazım ve nesir bir arada kullanılır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          60,
+          60
+        ],
+        "quote": "Dede Korkut Kitabı, Oğuz boylarının yaşayışını anlatan anonim hikâyelerden oluşur ve en eksiksiz nüshası Dresden'dedir.",
+        "chapter": "Türk Edebiyatı"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "edebiyat"
+      ],
+      "vurgu": [],
+      "contentHash": "36a61a24b21222f9c447beb5564bf96e84311bbd853183a784023c9bbbc16eed",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0306",
+      "conceptId": "te-yunus-emre",
+      "stem": {
+        "md": "Tekke şiirinin en büyük temsilcisi sayılan ve Risaletü'n-Nushiyye adlı mesneviyi yazan şair kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Yunus Emre"
+        },
+        {
+          "key": "B",
+          "md": "Karacaoğlan"
+        },
+        {
+          "key": "C",
+          "md": "Pir Sultan Abdal"
+        },
+        {
+          "key": "D",
+          "md": "Âşık Veysel"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Karacaoğlan dinî konulardan uzak duran, aşk ve doğa şiirleriyle tanınan bir âşıktır.",
+        "C": "Pir Sultan Abdal Alevi-Bektaşi şiirinin temsilcisidir; bu mesnevinin şairi değildir.",
+        "D": "Âşık Veysel 20. yüzyılda yaşamış bir halk ozanıdır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Yunus Emre'dir.\n- 13-14. yüzyılda yaşamış, tasavvufi düşünceyi sade bir Türkçeyle işlemiştir.\n- Şiirleri Divan'ında, öğütleri Risaletü'n-Nushiyye'de toplanmıştır."
+        },
+        {
+          "type": "hint",
+          "md": "Anadolu'da Türkçe tasavvuf şiirinin ilk büyük adı."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Tekke ve tasavvuf şiiri, tarikat çevrelerinde gelişen, Allah sevgisini ve insanın olgunlaşmasını işleyen şiirdir. İlahi, nefes ve deme bu geleneğin türleridir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          60,
+          60
+        ],
+        "quote": "Yunus Emre, tekke şiirinin en büyük temsilcisi sayılır ve Risaletü'n-Nushiyye adlı mesneviyi yazmıştır.",
+        "chapter": "Türk Edebiyatı"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "edebiyat"
+      ],
+      "vurgu": [],
+      "contentHash": "c62133fcdb4a4801ce51f036fbd70b88a498179bad1efe78dcc82c053a9009a7",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0307",
+      "conceptId": "te-karacaoglan",
+      "stem": {
+        "md": "Dinî ve tasavvufi konulardan uzak durup aşkı, doğayı ve gurbeti işleyen 17. yüzyıl âşığı kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Kaygusuz Abdal"
+        },
+        {
+          "key": "B",
+          "md": "Yunus Emre"
+        },
+        {
+          "key": "C",
+          "md": "Karacaoğlan"
+        },
+        {
+          "key": "D",
+          "md": "Âşık Seyrani"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Kaygusuz Abdal tekke şiirinin temsilcisidir ve tasavvufi konular işler.",
+        "B": "Yunus Emre tasavvufi şiirin en büyük adıdır; 13-14. yüzyılda yaşamıştır.",
+        "D": "Âşık Seyrani 19. yüzyılda yaşamış, toplumsal eleştirileriyle tanınan bir âşıktır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Karacaoğlan'dır.\n- Şiirlerinde aşk, doğa ve ayrılık öne çıkar; dili sade ve içtendir.\n- Koşma türünün en başarılı ustalarından sayılır."
+        },
+        {
+          "type": "hint",
+          "md": "Çukurova ve Toroslar'la anılan âşık."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Âşık edebiyatı, saz eşliğinde şiir söyleyen ozanların geleneğidir. Bu gelenekte şair, şiirin son dörtlüğünde adını söyler; buna mahlas denir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          60,
+          60
+        ],
+        "quote": "Karacaoğlan, dinî konulardan uzak durarak aşkı, doğayı ve gurbeti işleyen 17. yüzyıl âşığıdır.",
+        "chapter": "Türk Edebiyatı"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "edebiyat"
+      ],
+      "vurgu": [],
+      "contentHash": "0997d5a1e58803b0552dda8c55dcb3b689e7700d2c8ef450e48f53ddd815bc83",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0308",
+      "conceptId": "te-kosma",
+      "stem": {
+        "md": "Âşık edebiyatında genellikle 11'li hece ölçüsüyle yazılan, aşk ve doğa konulu en yaygın nazım biçimine ____ denir. Boşluğa hangisi gelir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "mani"
+        },
+        {
+          "key": "B",
+          "md": "gazel"
+        },
+        {
+          "key": "C",
+          "md": "koşma"
+        },
+        {
+          "key": "D",
+          "md": "rubai"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Mani genellikle 7'li hece ölçüsüyle söylenen, tek dörtlükten oluşan anonim bir türdür.",
+        "B": "Gazel divan şiirinin aruzla yazılan nazım biçimidir.",
+        "D": "Rubai divan şiirinde dört dizeden oluşan, felsefi konuları işleyen biçimdir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap koşmadır.\n- Dörtlüklerle kurulur ve çoğunlukla 11'li hece ölçüsü kullanılır.\n- Aşk, doğa ve ayrılık başlıca konularıdır."
+        },
+        {
+          "type": "hint",
+          "md": "Âşıkların en çok kullandığı biçim; adı 'koşmak' fiilini çağrıştırır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Halk şiirinde ölçü olarak hece, birim olarak dörtlük kullanılır. Nazım biçimleri konuya ve ölçüye göre ayrılır; koçaklama, semai ve varsağı bunlardan bazılarıdır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          60,
+          60
+        ],
+        "quote": "Koşma, âşık edebiyatında genellikle 11'li hece ölçüsüyle yazılan ve aşk ile doğayı işleyen en yaygın nazım biçimidir.",
+        "chapter": "Türk Edebiyatı"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "edebiyat"
+      ],
+      "vurgu": [],
+      "contentHash": "453866c4fca149f49a90ba2e164a64cc7cec03dec2ce21cb795308ed5fb420f6",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0309",
+      "conceptId": "te-asik-veysel",
+      "stem": {
+        "md": "Sivas'ın Şarkışla ilçesinde doğan, küçük yaşta çiçek hastalığı yüzünden gözlerini yitiren 20. yüzyıl halk ozanı kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Âşık Veysel"
+        },
+        {
+          "key": "B",
+          "md": "Neşet Ertaş"
+        },
+        {
+          "key": "C",
+          "md": "Âşık Mahzuni Şerif"
+        },
+        {
+          "key": "D",
+          "md": "Âşık Seyrani"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Neşet Ertaş Kırşehir bozlaklarıyla tanınan bir halk müzisyenidir.",
+        "C": "Âşık Mahzuni Şerif Kahramanmaraş kökenlidir ve görme engelli değildir.",
+        "D": "Âşık Seyrani 19. yüzyılda yaşamış bir âşıktır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Âşık Veysel'dir.\n- Sivas Şarkışla'da doğmuş, çocukken çiçek hastalığından gözlerini kaybetmiştir.\n- Sazı ve sade diliyle 20. yüzyıl âşık geleneğinin simgesi olmuştur."
+        },
+        {
+          "type": "hint",
+          "md": "Köy Enstitülerinde saz öğretmenliği de yapmıştır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Âşık geleneği 20. yüzyılda da sürmüş, radyo ve plaklar sayesinde geniş kitlelere ulaşmıştır. Bu dönemin ozanları köy yaşamını, toprağı ve insan sevgisini işlemiştir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          60,
+          60
+        ],
+        "quote": "Âşık Veysel, Sivas'ın Şarkışla ilçesinde doğmuş ve küçük yaşta çiçek hastalığı yüzünden gözlerini yitirmiştir.",
+        "chapter": "Türk Edebiyatı"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "edebiyat"
+      ],
+      "vurgu": [],
+      "contentHash": "9d793710fe96f74646daa46da1eeebe1a1b370ab9bad2c2d9f9405f672ec1253",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0310",
+      "conceptId": "te-gazel",
+      "stem": {
+        "md": "Divan şiirinde aşk, şarap ve güzellik gibi konuların işlendiği, ilk beytine matla, son beytine makta denen nazım biçimi hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Kaside"
+        },
+        {
+          "key": "B",
+          "md": "Mesnevi"
+        },
+        {
+          "key": "C",
+          "md": "Rubai"
+        },
+        {
+          "key": "D",
+          "md": "Gazel"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Kaside bir büyüğü övmek için yazılan, gazelden daha uzun bir biçimdir.",
+        "B": "Mesnevide her beyit kendi içinde kafiyelenir ve uzun hikâyeler anlatılır.",
+        "C": "Rubai yalnızca dört dizeden oluşur."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap gazeldir.\n- Aşk, şarap, güzellik ve ayrılık gibi lirik konuları işler.\n- İlk beyit matla, son beyit makta adını alır."
+        },
+        {
+          "type": "hint",
+          "md": "Divan şairinin en lirik, en kişisel biçimi."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Divan şiiri aruz ölçüsüyle yazılır ve birimi beyittir. Nazım biçimleri beyit sayısına, kafiye düzenine ve konuya göre birbirinden ayrılır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          61,
+          61
+        ],
+        "quote": "Gazel, aşk ve güzellik gibi konuların işlendiği, ilk beytine matla, son beytine makta denen divan nazım biçimidir.",
+        "chapter": "Türk Edebiyatı"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "edebiyat"
+      ],
+      "vurgu": [],
+      "contentHash": "9c045fa9e2aae67df4e8859230a70dd245679f21626bf40b13e18d6237f14d49",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0311",
+      "conceptId": "te-mesnevi",
+      "stem": {
+        "md": "Divan edebiyatında her beyti kendi içinde kafiyelenen ve bu nedenle uzun hikâyeleri anlatmaya elverişli olan nazım biçimi hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Gazel"
+        },
+        {
+          "key": "B",
+          "md": "Kaside"
+        },
+        {
+          "key": "C",
+          "md": "Şarkı"
+        },
+        {
+          "key": "D",
+          "md": "Mesnevi"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Gazelde kafiye aa, ba, ca diye sürer; uzun hikâyeye elverişli değildir.",
+        "B": "Kaside de tek kafiyeyle sürer ve övgü amacı taşır.",
+        "C": "Şarkı bestelenmek için yazılan, dörtlüklerden oluşan kısa bir biçimdir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap mesnevidir.\n- Her beyit kendi içinde kafiyelendiği için beyit sayısı sınırsız uzayabilir.\n- Aşk hikâyeleri ve öğretici eserler bu biçimle yazılmıştır."
+        },
+        {
+          "type": "hint",
+          "md": "Kafiye düzeni aa, bb, cc diye ilerler."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Divan şairleri beş mesneviden oluşan bir dizi yazmayı büyük ustalık sayardı; buna hamse denir. Aşk, din ve ahlak konuları bu uzun eserlerde işlenirdi."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          61,
+          61
+        ],
+        "quote": "Mesnevi, her beyti kendi içinde kafiyelenen ve uzun hikâyeleri anlatmaya elverişli olan divan nazım biçimidir.",
+        "chapter": "Türk Edebiyatı"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "edebiyat"
+      ],
+      "vurgu": [],
+      "contentHash": "49d502986547d41441f9f1f4494378862ecac9d6b6c6a9bf02251edd55447ef9",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0312",
+      "conceptId": "te-fuzuli-leyla",
+      "stem": {
+        "md": "Su Kasidesi'nin şairinin, aşkı tasavvufi bir anlayışla işlediği ünlü mesnevisi hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Hüsn ü Aşk"
+        },
+        {
+          "key": "B",
+          "md": "Hüsrev ü Şîrîn"
+        },
+        {
+          "key": "C",
+          "md": "Leylâ vü Mecnûn"
+        },
+        {
+          "key": "D",
+          "md": "Hayriyye"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Hüsn ü Aşk, Şeyh Galib'in alegorik mesnevisidir.",
+        "B": "Hüsrev ü Şîrîn'in Türk edebiyatındaki ünlü örneklerinden biri Şeyhî'ye aittir.",
+        "D": "Hayriyye, Nâbî'nin oğluna öğüt veren mesnevisidir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Su Kasidesi Fuzûlî'nindir.\n- Fuzûlî'nin en ünlü mesnevisi Leylâ vü Mecnûn'dur.\n- Eserde beşerî aşk, ilahi aşka dönüşür."
+        },
+        {
+          "type": "hint",
+          "md": "Çölde dolaşan, adı 'deli' anlamına gelen bir âşığın hikâyesi."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Kaside türünün ünlü örneklerinden Su Kasidesi, Hz. Muhammed'i övmek için yazılmış bir naattir. Şairi, 16. yüzyılda Bağdat'ta yaşamış ve Türkçe, Farsça, Arapça eser vermiştir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          61,
+          61
+        ],
+        "quote": "Su Kasidesi'nin şairi Fuzûlî'nin en ünlü mesnevisi Leylâ vü Mecnûn'dur.",
+        "chapter": "Türk Edebiyatı"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "edebiyat"
+      ],
+      "vurgu": [],
+      "contentHash": "10f64fa01822bf2c2fbe2a5a56b55e8270a2e5b2bc96304679f11ed476a4cba5",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0313",
+      "conceptId": "te-baki",
+      "stem": {
+        "md": "Kanuni Sultan Süleyman'ın ölümü üzerine yazdığı mersiyle tanınan ve \"şairlerin sultanı\" diye anılan 16. yüzyıl şairi kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Bâkî"
+        },
+        {
+          "key": "B",
+          "md": "Fuzûlî"
+        },
+        {
+          "key": "C",
+          "md": "Nedîm"
+        },
+        {
+          "key": "D",
+          "md": "Nef'î"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Fuzûlî Bağdat'ta yaşamış, sarayla bağı zayıf kalmış bir şairdir.",
+        "C": "Nedîm 18. yüzyılda, Lale Devri'nde yaşamıştır.",
+        "D": "Nef'î 17. yüzyılın kaside ve hiciv şairidir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Bâkî'dir.\n- Kanuni için yazdığı mersiye bu türün en ünlü örneklerindendir.\n- Sultânü'ş-şuarâ, yani şairlerin sultanı unvanıyla anılır."
+        },
+        {
+          "type": "hint",
+          "md": "Mahlası 'kalıcı, ölümsüz' anlamına gelir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Mersiye, ölen bir kişinin ardından duyulan acıyı anlatan ve onun iyiliklerini sayan divan şiiri türüdür. Halk edebiyatındaki karşılığı ağıttır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          61,
+          61
+        ],
+        "quote": "Bâkî, Kanuni Sultan Süleyman için yazdığı mersiyle tanınan ve şairlerin sultanı diye anılan 16. yüzyıl şairidir.",
+        "chapter": "Türk Edebiyatı"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "edebiyat"
+      ],
+      "vurgu": [],
+      "contentHash": "ff9ab5d7aaf5beb75e5e070bce90d499c3834c4b3f90b3ff07c107defed29f26",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0314",
+      "conceptId": "te-nedim",
+      "stem": {
+        "md": "Lale Devri'nin şairi olarak bilinen, şarkı türünde ustalaşan ve İstanbul'un eğlence hayatını şiirine taşıyan divan şairi kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Nef'î"
+        },
+        {
+          "key": "B",
+          "md": "Nedîm"
+        },
+        {
+          "key": "C",
+          "md": "Şeyh Galib"
+        },
+        {
+          "key": "D",
+          "md": "Bâkî"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Nef'î daha çok kasideleri ve hicivleriyle tanınır.",
+        "C": "Şeyh Galib Mevlevi bir şairdir ve alegorik mesnevisiyle bilinir.",
+        "D": "Bâkî 16. yüzyılda, Lale Devri'nden çok önce yaşamıştır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Nedîm'dir.\n- Lale Devri'nin neşeli havasını ve İstanbul'u şiirine taşımıştır.\n- Şarkı türünün en başarılı örneklerini vermiştir."
+        },
+        {
+          "type": "hint",
+          "md": "Sadabad ve Lale Devri ile anılır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Lale Devri, 18. yüzyılın başında Osmanlı'da eğlence, sanat ve Batı'ya ilginin arttığı dönemdir. Bu dönemde şiir daha yerli ve gündelik bir havaya bürünmüştür."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          61,
+          61
+        ],
+        "quote": "Nedîm, Lale Devri'nin şairi olarak bilinir ve şarkı türünde ustalaşmıştır.",
+        "chapter": "Türk Edebiyatı"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "edebiyat"
+      ],
+      "vurgu": [],
+      "contentHash": "cd3962618c6f046339d15c9e73ef23d5c7dc147522c0fb33abba045524d7c8a6",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0315",
+      "conceptId": "te-fahriye",
+      "stem": {
+        "md": "Kasidenin bölümlerinden hangisinde şair kendi sanatını ve kendini över?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Methiye"
+        },
+        {
+          "key": "B",
+          "md": "Girizgâh"
+        },
+        {
+          "key": "C",
+          "md": "Tegazzül"
+        },
+        {
+          "key": "D",
+          "md": "Fahriye"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Methiye, kasidenin sunulduğu kişinin övüldüğü bölümdür.",
+        "B": "Girizgâh, giriş bölümünden övgüye geçilen beyittir.",
+        "C": "Tegazzül, kasidenin içine yerleştirilen gazel bölümüdür."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap fahriyedir.\n- Şair burada kendi şiirini ve yeteneğini över.\n- Ardından genellikle dua bölümüyle kaside tamamlanır."
+        },
+        {
+          "type": "hint",
+          "md": "Adı 'övünmek' anlamındaki bir sözcükten gelir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Kaside, din ve devlet büyüklerini övmek için yazılan uzun bir divan nazım biçimidir. Belirli bir sırayla dizilen bölümlerden oluşur: giriş, geçiş, övgü ve dua bunların başlıcalarıdır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          61,
+          61
+        ],
+        "quote": "Kasidenin fahriye bölümünde şair kendi sanatını ve kendini över.",
+        "chapter": "Türk Edebiyatı"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "edebiyat"
+      ],
+      "vurgu": [],
+      "contentHash": "af05b784f23e29ac14d2c7c523912dc13bd4df551036220a0db8f3343f478adf",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0316",
+      "conceptId": "te-divan-eslestirme",
+      "stem": {
+        "md": "Aşağıdaki eserleri şairleriyle eşleştiriniz.\n\n1. Hüsn ü Aşk\n2. Hayriyye\n3. Sihâm-ı Kazâ\n\na) Nef'î\nb) Şeyh Galib\nc) Nâbî"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "1-b, 2-c, 3-a"
+        },
+        {
+          "key": "B",
+          "md": "1-c, 2-b, 3-a"
+        },
+        {
+          "key": "C",
+          "md": "1-b, 2-a, 3-c"
+        },
+        {
+          "key": "D",
+          "md": "1-a, 2-c, 3-b"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Hayriyye Şeyh Galib'in değil, öğretici şiirleriyle tanınan Nâbî'nin eseridir.",
+        "C": "Hayriyye'yi Nef'î yazmamıştır; onun adı hicivleriyle anılır.",
+        "D": "Hüsn ü Aşk, Nef'î'nin değil Mevlevi bir şairin alegorik eseridir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Hüsn ü Aşk Şeyh Galib'in alegorik mesnevisidir.\n- Hayriyye, Nâbî'nin oğluna öğütler verdiği eserdir.\n- Sihâm-ı Kazâ, Nef'î'nin hicivlerini topladığı eserdir."
+        },
+        {
+          "type": "hint",
+          "md": "Hiciv, öğüt ve alegori: her eserin türünü düşünün."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Divan edebiyatının son yüzyıllarında şairler farklı yönlere ayrılmıştır: kimi öğretici ve hikemî şiire, kimi hicve, kimi de sebk-i Hindî denen ince hayallere dayalı üsluba yönelmiştir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          61,
+          61
+        ],
+        "quote": "Hüsn ü Aşk Şeyh Galib'in, Hayriyye Nâbî'nin, Sihâm-ı Kazâ Nef'î'nin eseridir.",
+        "chapter": "Türk Edebiyatı"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "edebiyat"
+      ],
+      "vurgu": [],
+      "contentHash": "ea61425b95b73702943df12e228856626f836a3419841a693b08d3c2e21515d2",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0317",
+      "conceptId": "te-sair-evlenmesi",
+      "stem": {
+        "md": "Türk edebiyatında Batılı anlamda yazılmış ilk yerli tiyatro eseri hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Vatan yahut Silistre"
+        },
+        {
+          "key": "B",
+          "md": "Zavallı Çocuk"
+        },
+        {
+          "key": "C",
+          "md": "Akif Bey"
+        },
+        {
+          "key": "D",
+          "md": "Şair Evlenmesi"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Vatan yahut Silistre, Namık Kemal'in daha sonra yazdığı vatansever bir oyundur.",
+        "B": "Zavallı Çocuk, Namık Kemal'in görücü usulü evliliği eleştiren oyunudur.",
+        "C": "Akif Bey de Namık Kemal'in sonraki yıllarda yazdığı bir oyundur."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Şair Evlenmesi'dir.\n- Şinasi tarafından yazılmış tek perdelik bir komedidir.\n- Görücü usulüyle evliliği eleştirir."
+        },
+        {
+          "type": "hint",
+          "md": "Tek perdelik bir komedi; bir şairin başına gelen evlilik oyununu anlatır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Tanzimat döneminde yazarlar, Batı'dan aldıkları roman ve tiyatro gibi türleri halkı eğitmek için kullanmıştır. Bu dönemin eserlerinde eski gelenekler, özellikle evlilik ve aile düzeni sıkça eleştirilmiştir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          62,
+          62
+        ],
+        "quote": "Batılı anlamda ilk yerli tiyatro eseri Şinasi'nin yazdığı Şair Evlenmesi'dir.",
+        "chapter": "Türk Edebiyatı"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "edebiyat"
+      ],
+      "vurgu": [],
+      "contentHash": "f2b94704c293dafb9159ade602a65179eb83403d58252d7ccdfd141e63025ea8",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0318",
+      "conceptId": "te-tercuman-i-ahval",
+      "stem": {
+        "md": "İlk yerli tiyatro eserini yazan kişinin Agâh Efendi ile birlikte çıkardığı, ilk özel Türk gazetesi kabul edilen yayın hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Takvim-i Vekayi"
+        },
+        {
+          "key": "B",
+          "md": "Tasvir-i Efkâr"
+        },
+        {
+          "key": "C",
+          "md": "Tercüman-ı Ahvâl"
+        },
+        {
+          "key": "D",
+          "md": "Ceride-i Havadis"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Takvim-i Vekayi devletin çıkardığı resmî gazetedir.",
+        "B": "Tasvir-i Efkâr'ı Şinasi daha sonra tek başına çıkarmıştır.",
+        "D": "Ceride-i Havadis, bir İngiliz olan William Churchill tarafından çıkarılmıştır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- İlk yerli tiyatro eseri Şinasi'nin Şair Evlenmesi'dir.\n- Şinasi, Agâh Efendi ile birlikte 1860'ta Tercüman-ı Ahvâl'i çıkarmıştır.\n- Bu gazete ilk özel Türk gazetesi kabul edilir."
+        },
+        {
+          "type": "hint",
+          "md": "Adı 'durumların tercümanı' anlamına gelir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Tanzimat aydınları gazeteyi halka seslenmenin ve yeni fikirleri yaymanın aracı olarak gördü. Gazeteler, sade bir yazı dilinin gelişmesine de katkı sağladı."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          62,
+          62
+        ],
+        "quote": "Şinasi ile Agâh Efendi'nin 1860'ta çıkardığı Tercüman-ı Ahvâl, ilk özel Türk gazetesi kabul edilir.",
+        "chapter": "Türk Edebiyatı"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "edebiyat"
+      ],
+      "vurgu": [],
+      "contentHash": "128b834d6750acc35b370583be79b8128043e61eae99aeb416053557941951b6",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0319",
+      "conceptId": "te-namik-kemal",
+      "stem": {
+        "md": "Vatan yahut Silistre oyunuyla tanınan ve \"vatan şairi\" diye anılan Tanzimat yazarı kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Şinasi"
+        },
+        {
+          "key": "B",
+          "md": "Ziya Paşa"
+        },
+        {
+          "key": "C",
+          "md": "Namık Kemal"
+        },
+        {
+          "key": "D",
+          "md": "Recaizade Mahmut Ekrem"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Şinasi ilk yerli tiyatroyu yazmıştır ama vatan şairi diye anılmaz.",
+        "B": "Ziya Paşa daha çok Terkib-i Bend'i ve Harabat antolojisiyle tanınır.",
+        "D": "Recaizade Mahmut Ekrem, Araba Sevdası romanının yazarıdır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Namık Kemal'dir.\n- Vatan, millet ve hürriyet kavramlarını edebiyata taşımıştır.\n- Vatan yahut Silistre oyunu sahnelendiğinde büyük coşku yaratmıştır."
+        },
+        {
+          "type": "hint",
+          "md": "Hürriyet ve vatan kavramlarını işlediği için sürgüne de gönderilmiştir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Tanzimat'ın ilk kuşağı edebiyatı toplumu değiştirmenin aracı saymış ve vatan, hürriyet, adalet gibi kavramları ilk kez yaygın biçimde işlemiştir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          62,
+          62
+        ],
+        "quote": "Vatan yahut Silistre oyununun yazarı Namık Kemal, vatan şairi diye anılır.",
+        "chapter": "Türk Edebiyatı"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "edebiyat"
+      ],
+      "vurgu": [],
+      "contentHash": "128e45aa26c536d1f70344ee4827813bed3226a3d582c4eba59db369459c14d9",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0320",
+      "conceptId": "te-ilk-yerli-roman",
+      "stem": {
+        "md": "Türk edebiyatının ilk yerli romanı kabul edilen eser hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "İntibah"
+        },
+        {
+          "key": "B",
+          "md": "Karabibik"
+        },
+        {
+          "key": "C",
+          "md": "Taaşşuk-ı Talat ve Fitnat"
+        },
+        {
+          "key": "D",
+          "md": "Araba Sevdası"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "İntibah, Namık Kemal'in romanıdır ve ilk edebî roman sayılır.",
+        "B": "Karabibik, Nabizade Nazım'ın ilk köy romanı sayılan eseridir.",
+        "D": "Araba Sevdası, Recaizade Mahmut Ekrem'in daha sonra yazdığı realist romandır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Taaşşuk-ı Talat ve Fitnat'tır.\n- Şemsettin Sami tarafından yazılmıştır.\n- Görücü usulü evliliğin yol açtığı acıları anlatır."
+        },
+        {
+          "type": "hint",
+          "md": "Yazarı, Kamus-ı Türkî sözlüğüyle de tanınır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Roman Türk edebiyatına Tanzimat döneminde, önce çeviriler, ardından yerli denemelerle girmiştir. İlk romanlarda olay örgüsü kadar ahlak dersi vermek de amaçlanmıştır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          62,
+          62
+        ],
+        "quote": "Şemsettin Sami'nin Taaşşuk-ı Talat ve Fitnat adlı eseri ilk yerli roman kabul edilir.",
+        "chapter": "Türk Edebiyatı"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "edebiyat"
+      ],
+      "vurgu": [],
+      "contentHash": "c89c4b10fff7bc7602ecb1ed167c3c1cf3420f6f12f5805ca66fe72f031e49f5",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0321",
+      "conceptId": "te-araba-sevdasi",
+      "stem": {
+        "md": "Alafranga züppe tipi Bihruz Bey'i anlatan roman ve yazarı hangi seçenekte doğru verilmiştir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Araba Sevdası – Ahmet Mithat Efendi"
+        },
+        {
+          "key": "B",
+          "md": "Araba Sevdası – Recaizade Mahmut Ekrem"
+        },
+        {
+          "key": "C",
+          "md": "Felâtun Bey ile Râkım Efendi – Recaizade Mahmut Ekrem"
+        },
+        {
+          "key": "D",
+          "md": "Mai ve Siyah – Halit Ziya Uşaklıgil"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Ahmet Mithat Efendi bu romanın yazarı değildir.",
+        "C": "Felâtun Bey ile Râkım Efendi'yi Recaizade yazmamıştır.",
+        "D": "Mai ve Siyah'ın kahramanı Bihruz Bey değil, şair Ahmet Cemil'dir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru eşleşme Araba Sevdası – Recaizade Mahmut Ekrem'dir.\n- Bihruz Bey, Batı'yı yüzeysel taklit eden alafranga züppe tipinin örneğidir.\n- Roman, Türk edebiyatında realizmin ilk örneklerinden sayılır."
+        },
+        {
+          "type": "hint",
+          "md": "Kahramanın tutkusu, Çamlıca'da gezintiye çıktığı bir taşıttır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Alafranga züppe tipi, Batılılaşmayı giyim, dil ve eğlence gibi dış görünüşte kalan bir taklit olarak yaşayan karakterdir. Tanzimat romancıları bu tipi sıkça eleştirmiştir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          62,
+          62
+        ],
+        "quote": "Alafranga züppe Bihruz Bey'i anlatan Araba Sevdası romanını Recaizade Mahmut Ekrem yazmıştır.",
+        "chapter": "Türk Edebiyatı"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "edebiyat"
+      ],
+      "vurgu": [],
+      "contentHash": "d44ef0e6639cdcc9a674e1f791b371d9f6421050d22e1ea5a50f1d7966dd8b4b",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0322",
+      "conceptId": "te-ahmet-mithat",
+      "stem": {
+        "md": "Felâtun Bey ile Râkım Efendi romanının yazarı ____, halkı eğitmek amacıyla çok sayıda roman ve hikâye yazmıştır. Boşluğa hangisi gelir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Ahmet Mithat Efendi"
+        },
+        {
+          "key": "B",
+          "md": "Namık Kemal"
+        },
+        {
+          "key": "C",
+          "md": "Şemsettin Sami"
+        },
+        {
+          "key": "D",
+          "md": "Ziya Paşa"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Namık Kemal az sayıda roman yazmış, daha çok şiir ve oyunla tanınmıştır.",
+        "C": "Şemsettin Sami tek roman yazmış, daha çok sözlükleriyle tanınmıştır.",
+        "D": "Ziya Paşa roman yazmamış, şiir ve düzyazılarıyla tanınmıştır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Ahmet Mithat Efendi'dir.\n- Felâtun Bey ile Râkım Efendi'de yüzeysel Batılılaşmayı eleştirir.\n- Halkı eğitmek için çok sayıda eser verdiği için Hâce-i Evvel diye anılır."
+        },
+        {
+          "type": "hint",
+          "md": "Halkın öğretmeni anlamında Hâce-i Evvel diye anılır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Tanzimat döneminde bazı yazarlar sanatı halkı eğitmenin aracı olarak gördü. Bu yazarlar okurla konuşur gibi yazdı ve olay akışını kesip bilgi vermekten çekinmedi."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          62,
+          62
+        ],
+        "quote": "Felâtun Bey ile Râkım Efendi romanının yazarı Ahmet Mithat Efendi, halkı eğitmek için çok sayıda eser yazmıştır.",
+        "chapter": "Türk Edebiyatı"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "edebiyat"
+      ],
+      "vurgu": [],
+      "contentHash": "00b3d3b4983ee63d906a0dce42e17ebd39f34bbd95334b26a57c5ce0d84dbf3d",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0323",
+      "conceptId": "te-ask-i-memnu-toplulugu",
+      "stem": {
+        "md": "Aşk-ı Memnu romanının yazarı hangi edebî topluluğun romancısıdır?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Servet-i Fünun"
+        },
+        {
+          "key": "B",
+          "md": "Fecr-i Âtî"
+        },
+        {
+          "key": "C",
+          "md": "Millî Edebiyat"
+        },
+        {
+          "key": "D",
+          "md": "Garip"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Fecr-i Âtî, Servet-i Fünun'dan sonra kurulan ve daha çok şiirle öne çıkan topluluktur.",
+        "C": "Millî Edebiyat sade dil ve yerli konular üzerine kurulmuştur; bu romanın dili ağırdır.",
+        "D": "Garip, Cumhuriyet döneminde ortaya çıkan bir şiir akımıdır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Aşk-ı Memnu, Halit Ziya Uşaklıgil'in romanıdır.\n- Halit Ziya, Servet-i Fünun topluluğunun en önemli romancısıdır.\n- Roman, Batılı teknikle yazılmış ilk olgun Türk romanlarından sayılır."
+        },
+        {
+          "type": "hint",
+          "md": "Topluluk adını aynı adlı dergiden alır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Servet-i Fünun yazarları sanatı sanat için gördü, ağır ve süslü bir dil kullandı. Konularını genellikle İstanbul'un varlıklı çevrelerinden ve bireyin iç dünyasından seçtiler."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          63,
+          63
+        ],
+        "quote": "Aşk-ı Memnu romanının yazarı Halit Ziya Uşaklıgil, Servet-i Fünun topluluğunun en önemli romancısıdır.",
+        "chapter": "Türk Edebiyatı"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "edebiyat"
+      ],
+      "vurgu": [],
+      "contentHash": "f130840958053b43f3999cf9c6141e7929c49b22b7865d84be3d09ff2c012ec7",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0324",
+      "conceptId": "te-tevfik-fikret",
+      "stem": {
+        "md": "Rübab-ı Şikeste adlı kitabıyla tanınan, Servet-i Fünun şiirinin önde gelen şairi kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Cenap Şahabettin"
+        },
+        {
+          "key": "B",
+          "md": "Ahmet Haşim"
+        },
+        {
+          "key": "C",
+          "md": "Mehmet Akif Ersoy"
+        },
+        {
+          "key": "D",
+          "md": "Tevfik Fikret"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Cenap Şahabettin de Servet-i Fünun şairidir ama bu kitabın sahibi değildir.",
+        "B": "Ahmet Haşim, Fecr-i Âtî döneminde sembolist şiirleriyle tanınmıştır.",
+        "C": "Mehmet Akif Ersoy şiirlerini Safahat'ta toplamıştır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Tevfik Fikret'tir.\n- Rübab-ı Şikeste, kırık saz anlamına gelir.\n- Servet-i Fünun şiirinin öncüsü ve en etkili şairidir."
+        },
+        {
+          "type": "hint",
+          "md": "Kitabının adı 'kırık saz' anlamına gelir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Servet-i Fünun şiiri aruzu konuşma diline yaklaştırmaya çalıştı ve serbest müstezat gibi yeni biçimler denedi. Bu dönemde şiirde bireyin karamsarlığı ve kaçış teması öne çıktı."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          63,
+          63
+        ],
+        "quote": "Tevfik Fikret, Rübab-ı Şikeste adlı kitabıyla tanınan ve Servet-i Fünun şiirinin önde gelen şairidir.",
+        "chapter": "Türk Edebiyatı"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "edebiyat"
+      ],
+      "vurgu": [],
+      "contentHash": "a5b352570d4cc6b5b0e8c9f14283fa6ec0aa1cccac948d2763b2e2a56abd9da1",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0325",
+      "conceptId": "te-ahmet-hasim",
+      "stem": {
+        "md": "Göl Saatleri ve Piyale adlı kitaplarıyla sembolizmin Türk şiirindeki önemli temsilcisi olan şair kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Ahmet Haşim"
+        },
+        {
+          "key": "B",
+          "md": "Yahya Kemal Beyatlı"
+        },
+        {
+          "key": "C",
+          "md": "Cenap Şahabettin"
+        },
+        {
+          "key": "D",
+          "md": "Faruk Nafiz Çamlıbel"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Yahya Kemal Beyatlı neoklasik bir şairdir ve şiirlerinde tarih ve İstanbul öne çıkar.",
+        "C": "Cenap Şahabettin Servet-i Fünun şairidir, bu kitapların sahibi değildir.",
+        "D": "Faruk Nafiz Çamlıbel hece ölçüsüyle yazan Beş Hececiler'dendir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Ahmet Haşim'dir.\n- Şiiri anlamdan çok müzik ve izlenim üzerine kurar.\n- Fecr-i Âtî döneminde öne çıkmış, sembolist şiirin Türkçedeki ustası olmuştur."
+        },
+        {
+          "type": "hint",
+          "md": "Akşam, gölge ve renk imgeleri şiirinin temelidir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Sembolizm, 19. yüzyıl sonunda Fransa'da doğan, şiirde açık anlatım yerine telkin, müzik ve imgeye dayanan akımdır. Türk şiirine 20. yüzyılın başında yansımıştır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          63,
+          63
+        ],
+        "quote": "Ahmet Haşim, Göl Saatleri ve Piyale adlı şiir kitaplarıyla sembolizmin Türk şiirindeki önemli temsilcisidir.",
+        "chapter": "Türk Edebiyatı"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "edebiyat"
+      ],
+      "vurgu": [],
+      "contentHash": "3820dbdc789a64600f6e2a9bd6c43114a276676bbbea68e565459e7d38b11d86",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0326",
+      "conceptId": "te-donem-sirasi",
+      "stem": {
+        "md": "Aşağıdaki edebî dönemlerin kronolojik sıralaması hangisinde doğru verilmiştir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Servet-i Fünun – Tanzimat – Millî Edebiyat – Fecr-i Âtî"
+        },
+        {
+          "key": "B",
+          "md": "Tanzimat – Servet-i Fünun – Fecr-i Âtî – Millî Edebiyat"
+        },
+        {
+          "key": "C",
+          "md": "Tanzimat – Fecr-i Âtî – Servet-i Fünun – Millî Edebiyat"
+        },
+        {
+          "key": "D",
+          "md": "Tanzimat – Servet-i Fünun – Millî Edebiyat – Fecr-i Âtî"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Servet-i Fünun, Tanzimat'tan sonra gelir; önce olamaz.",
+        "C": "Fecr-i Âtî, Servet-i Fünun'un dağılmasından sonra kurulmuştur.",
+        "D": "Millî Edebiyat, Fecr-i Âtî'den sonra güçlenmiştir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru sıra Tanzimat – Servet-i Fünun – Fecr-i Âtî – Millî Edebiyat'tır.\n- Servet-i Fünun 1890'larda, Fecr-i Âtî 1909'da ortaya çıkmıştır.\n- Millî Edebiyat 1911'den sonra sade dil hareketiyle güçlenmiştir."
+        },
+        {
+          "type": "hint",
+          "md": "Sade dil hareketi en son gelir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Batı etkisindeki Türk edebiyatı, 1860'lardan Cumhuriyet'e kadar birbirine tepki olarak doğan dönemlerden geçmiştir. Her dönem dil, konu ve sanat anlayışında bir öncekinden ayrılır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          63,
+          63
+        ],
+        "quote": "Tanzimat edebiyatını sırasıyla Servet-i Fünun, Fecr-i Âtî ve Millî Edebiyat dönemleri izlemiştir.",
+        "chapter": "Türk Edebiyatı"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "edebiyat"
+      ],
+      "vurgu": [],
+      "contentHash": "cbfe664a307d73ce4d58932d7759b371f681fa8f2c7d0dab20b7b7726aefa97a",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0327",
+      "conceptId": "te-ziya-gokalp",
+      "stem": {
+        "md": "Türkçülüğün Esasları adlı eseriyle Millî Edebiyat akımının fikir öncüsü sayılan yazar kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Ömer Seyfettin"
+        },
+        {
+          "key": "B",
+          "md": "Mehmet Emin Yurdakul"
+        },
+        {
+          "key": "C",
+          "md": "Ziya Gökalp"
+        },
+        {
+          "key": "D",
+          "md": "Ali Canip Yöntem"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Ömer Seyfettin Millî Edebiyat'ın öykücüsüdür; fikir kitabıyla değil öyküleriyle tanınır.",
+        "B": "Mehmet Emin Yurdakul hece ölçüsüyle yazan ilk şairlerdendir; bu eserin yazarı değildir.",
+        "D": "Ali Canip Yöntem Genç Kalemler'de yazmış bir edebiyat tarihçisidir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Ziya Gökalp'tir.\n- Türkçülüğün Esasları, Türk milliyetçiliğinin düşünce temellerini anlatır.\n- Millî Edebiyat'ın fikir öncüsü sayılır."
+        },
+        {
+          "type": "hint",
+          "md": "Diyarbakırlı bir sosyolog ve şair."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Millî Edebiyat akımı, Genç Kalemler dergisinin başlattığı Yeni Lisan hareketiyle konuşma diline yakın bir Türkçeyi ve yerli konuları savunmuştur."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          63,
+          63
+        ],
+        "quote": "Ziya Gökalp, Türkçülüğün Esasları adlı eseriyle Millî Edebiyat akımının fikir öncüsü sayılır.",
+        "chapter": "Türk Edebiyatı"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "edebiyat"
+      ],
+      "vurgu": [],
+      "contentHash": "0aa41b339076c78bd7d82d5264c2345d674327183df3dbde9341640a302aca85",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0328",
+      "conceptId": "istiklal-marsi-sairi",
+      "stem": {
+        "md": "İstiklal Marşı'nın şairi kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Namık Kemal"
+        },
+        {
+          "key": "B",
+          "md": "Yahya Kemal Beyatlı"
+        },
+        {
+          "key": "C",
+          "md": "Mehmet Akif Ersoy"
+        },
+        {
+          "key": "D",
+          "md": "Ziya Gökalp"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Namık Kemal vatan şiirleriyle tanınır ama marş yazılmadan çok önce ölmüştür.",
+        "B": "Yahya Kemal Beyatlı aynı dönemin şairidir, marşı o yazmamıştır.",
+        "D": "Ziya Gökalp daha çok düşünce yazılarıyla bilinir, marşın şairi değildir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Mehmet Akif Ersoy'dur.\n- Marş, 12 Mart 1921'de Türkiye Büyük Millet Meclisi'nde kabul edilmiştir.\n- Şair, yarışmanın para ödülünü kabul etmemiştir."
+        },
+        {
+          "type": "hint",
+          "md": "Marş için açılan yarışmaya ödül parası yüzünden katılmak istememiştir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "İstiklal Marşı, Kurtuluş Savaşı sürerken Maarif Vekâletinin açtığı bir yarışma sonucunda seçilmiştir. Meclis'te kabul edildiği 12 Mart, her yıl anma günü olarak kutlanır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          64,
+          64
+        ],
+        "quote": "İstiklal Marşı'nın şairi Mehmet Akif Ersoy'dur.",
+        "chapter": "Türk Edebiyatı"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "edebiyat"
+      ],
+      "vurgu": [],
+      "contentHash": "1e1d5e19482ba2fb4c3f1a59fbec03e6e604369014e769c9b87fc20f990cd161",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0329",
+      "conceptId": "te-safahat",
+      "stem": {
+        "md": "İstiklal Marşı'nın şairi, şiirlerini yedi kitaptan oluşan hangi eserde toplamıştır?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Kendi Gök Kubbemiz"
+        },
+        {
+          "key": "B",
+          "md": "Han Duvarları"
+        },
+        {
+          "key": "C",
+          "md": "Safahat"
+        },
+        {
+          "key": "D",
+          "md": "Kızıl Elma"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Kendi Gök Kubbemiz, Yahya Kemal Beyatlı'nın şiir kitabıdır.",
+        "B": "Han Duvarları, Faruk Nafiz Çamlıbel'in ünlü bir şiiridir.",
+        "D": "Kızıl Elma, Ziya Gökalp'in şiir kitabıdır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- İstiklal Marşı'nın şairi Mehmet Akif Ersoy'dur.\n- Şiirlerini yedi kitaptan oluşan Safahat'ta toplamıştır.\n- Safahat'taki şiirler toplumsal konuları ve gözleme dayalı sahneleri işler."
+        },
+        {
+          "type": "hint",
+          "md": "Adı 'evreler, aşamalar' anlamına gelir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Mehmet Akif, şiirde aruz ölçüsünü konuşma diline yaklaştırarak manzum hikâyeler yazmıştır. Şiirlerinde İstanbul'un mahalleleri, kahveleri ve toplumsal sorunlar canlı sahnelerle anlatılır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          64,
+          64
+        ],
+        "quote": "Mehmet Akif Ersoy, şiirlerini yedi kitaptan oluşan Safahat'ta toplamıştır.",
+        "chapter": "Türk Edebiyatı"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "edebiyat"
+      ],
+      "vurgu": [],
+      "contentHash": "9a4b39a4685350184046b65724ad8c9e35200f450d9ea71f011573f86c4609b9",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0330",
+      "conceptId": "calikusu-yazari",
+      "stem": {
+        "md": "Çalıkuşu romanının yazarı kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Halide Edib Adıvar"
+        },
+        {
+          "key": "B",
+          "md": "Yakup Kadri Karaosmanoğlu"
+        },
+        {
+          "key": "C",
+          "md": "Halit Ziya Uşaklıgil"
+        },
+        {
+          "key": "D",
+          "md": "Reşat Nuri Güntekin"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Halide Edib Adıvar, Mor Salkımlı Ev adlı anılarıyla da tanınan başka bir romancıdır.",
+        "B": "Yakup Kadri Karaosmanoğlu, Kiralık Konak ve Sodom ve Gomore'nin yazarıdır.",
+        "C": "Halit Ziya Uşaklıgil, Servet-i Fünun döneminin romancısıdır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Reşat Nuri Güntekin'dir.\n- Roman, Anadolu'da öğretmenlik yapan Feride'nin öyküsünü anlatır.\n- Yazarın Yaprak Dökümü de tanınmış romanlarındandır."
+        },
+        {
+          "type": "hint",
+          "md": "Yaprak Dökümü de aynı yazarındır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Cumhuriyet'in ilk yıllarında romancılar Anadolu'yu, öğretmenleri ve taşra hayatını konu edinmeye başladı. İstanbul dışındaki hayat romanın merkezine bu dönemde yerleşti."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          64,
+          64
+        ],
+        "quote": "Çalıkuşu romanının yazarı Reşat Nuri Güntekin'dir.",
+        "chapter": "Türk Edebiyatı"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "edebiyat"
+      ],
+      "vurgu": [],
+      "contentHash": "ae1a079de0d9746e892ec798b4b1ddd84e4a01803490a3ee4c9668c5a6946683",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0331",
+      "conceptId": "te-yaban",
+      "stem": {
+        "md": "Kurtuluş Savaşı yıllarında bir Anadolu köyüne yerleşen yedek subay Ahmet Celal'in gözünden köylüyü anlatan Yaban romanının yazarı kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Reşat Nuri Güntekin"
+        },
+        {
+          "key": "B",
+          "md": "Halide Edib Adıvar"
+        },
+        {
+          "key": "C",
+          "md": "Refik Halit Karay"
+        },
+        {
+          "key": "D",
+          "md": "Yakup Kadri Karaosmanoğlu"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Reşat Nuri Güntekin, Anadolu'yu Çalıkuşu ve Yaprak Dökümü gibi eserlerinde işlemiştir.",
+        "B": "Halide Edib Adıvar Millî Mücadele'yi başka romanlarında anlatmıştır.",
+        "C": "Refik Halit Karay, Memleket Hikâyeleri ile tanınan bir yazardır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Yakup Kadri Karaosmanoğlu'dur.\n- Roman, aydın ile köylü arasındaki kopukluğu anlatır.\n- Olaylar Ahmet Celal'in tuttuğu notlar biçiminde aktarılır."
+        },
+        {
+          "type": "hint",
+          "md": "Kiralık Konak'ın yazarı."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Aydın-halk çatışması, Cumhuriyet döneminin ilk romanlarında sıkça işlenen bir konudur. Bu eserlerde İstanbul'dan gelen aydının Anadolu'da yabancı kalışı anlatılır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          64,
+          64
+        ],
+        "quote": "Yaban romanının yazarı Yakup Kadri Karaosmanoğlu'dur ve roman, yedek subay Ahmet Celal'in gözünden köylüyü anlatır.",
+        "chapter": "Türk Edebiyatı"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "edebiyat"
+      ],
+      "vurgu": [],
+      "contentHash": "a4739bae39ed88233c12426ae67a8abc3ed593500622c70717c4d5fc33bf2af7",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0332",
+      "conceptId": "te-atesten-gomlek",
+      "stem": {
+        "md": "Millî Mücadele'yi konu alan Ateşten Gömlek romanının yazarı kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Halide Edib Adıvar"
+        },
+        {
+          "key": "B",
+          "md": "Reşat Nuri Güntekin"
+        },
+        {
+          "key": "C",
+          "md": "Peyami Safa"
+        },
+        {
+          "key": "D",
+          "md": "Sabahattin Ali"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Reşat Nuri Güntekin, Çalıkuşu'nun yazarıdır.",
+        "C": "Peyami Safa daha çok psikolojik romanlarıyla, örneğin Dokuzuncu Hariciye Koğuşu ile tanınır.",
+        "D": "Sabahattin Ali daha sonraki kuşağın yazarıdır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Halide Edib Adıvar'dır.\n- Yazar, Millî Mücadele'ye bizzat katılmıştır.\n- Ateşten Gömlek, Kurtuluş Savaşı'nı anlatan ilk romanlardandır."
+        },
+        {
+          "type": "hint",
+          "md": "Sultanahmet mitinginde konuşma yapan bir kadın yazar."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Millî Mücadele romanları, Kurtuluş Savaşı'nı yaşayan kuşağın tanıklığını edebiyata taşır. Bu romanlarda bireysel aşklar ile vatan sevgisi iç içe anlatılır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          64,
+          64
+        ],
+        "quote": "Millî Mücadele'yi anlatan Ateşten Gömlek romanının yazarı Halide Edib Adıvar'dır.",
+        "chapter": "Türk Edebiyatı"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "edebiyat"
+      ],
+      "vurgu": [],
+      "contentHash": "7ed2d44f6cf9cb57435ec1adc9312cf9b21770df21b8b3437823dd334cccb0c5",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0333",
+      "conceptId": "te-bes-hececiler",
+      "stem": {
+        "md": "Aşağıdakilerden hangisi Beş Hececiler topluluğunda yer almaz?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Faruk Nafiz Çamlıbel"
+        },
+        {
+          "key": "B",
+          "md": "Orhan Seyfi Orhon"
+        },
+        {
+          "key": "C",
+          "md": "Yusuf Ziya Ortaç"
+        },
+        {
+          "key": "D",
+          "md": "Ahmet Kutsi Tecer"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Faruk Nafiz Çamlıbel Beş Hececiler'in en tanınmış şairidir.",
+        "B": "Orhan Seyfi Orhon topluluğun üyelerindendir.",
+        "C": "Yusuf Ziya Ortaç da topluluğun üyelerindendir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Ahmet Kutsi Tecer'dir.\n- Beş Hececiler: Faruk Nafiz Çamlıbel, Enis Behiç Koryürek, Halit Fahri Ozansoy, Orhan Seyfi Orhon ve Yusuf Ziya Ortaç.\n- Ahmet Kutsi Tecer hece ölçüsünü kullanmış ama bu topluluğa katılmamıştır."
+        },
+        {
+          "type": "hint",
+          "md": "Topluluk beş kişidir; seçeneklerde görünmeyen iki üye Enis Behiç ve Halit Fahri'dir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Beş Hececiler, aruz yerine hece ölçüsünü benimseyerek şiiri halk diline ve millî ölçüye yaklaştıran şairlerdir. Topluluk Millî Edebiyat anlayışının şiirdeki devamı sayılır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          64,
+          64
+        ],
+        "quote": "Beş Hececiler topluluğu Faruk Nafiz Çamlıbel, Enis Behiç Koryürek, Halit Fahri Ozansoy, Orhan Seyfi Orhon ve Yusuf Ziya Ortaç'tan oluşur.",
+        "chapter": "Türk Edebiyatı"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "edebiyat"
+      ],
+      "vurgu": [],
+      "contentHash": "c60516505923dae49302603bab234e18378ba446f38426df8116ed4317149f1a",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0334",
+      "conceptId": "te-garip",
+      "stem": {
+        "md": "Orhan Veli, Oktay Rifat ve Melih Cevdet Anday'ın 1941'de birlikte çıkardığı şiir kitabının, aynı zamanda başlattıkları akımın adı nedir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Garip"
+        },
+        {
+          "key": "B",
+          "md": "İkinci Yeni"
+        },
+        {
+          "key": "C",
+          "md": "Yedi Meşaleciler"
+        },
+        {
+          "key": "D",
+          "md": "Hisarcılar"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "İkinci Yeni, 1950'lerde ortaya çıkan ve kapalı şiiri savunan bir akımdır.",
+        "C": "Yedi Meşaleciler 1928'de ortaya çıkan, yedi gençten oluşan bir topluluktur.",
+        "D": "Hisarcılar 1950'lerde geleneğe bağlı şiiri savunan bir topluluktur."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Garip'tir.\n- Şiiri ölçü, kafiye ve süsten arındırmayı savunmuştur.\n- Sıradan insanı ve gündelik hayatı şiire taşımıştır."
+        },
+        {
+          "type": "hint",
+          "md": "Akım adını o kitabın adından alır; Birinci Yeni diye de anılır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "1940'larda ortaya çıkan bu akım, şiirin söz sanatlarından ve ağır dilden kurtulması gerektiğini savundu. Konuşma dilini ve küçük insanın gündelik hayatını şiirin merkezine koydu."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          65,
+          65
+        ],
+        "quote": "Orhan Veli, Oktay Rifat ve Melih Cevdet Anday 1941'de birlikte Garip adlı şiir kitabını çıkarmıştır.",
+        "chapter": "Türk Edebiyatı"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "edebiyat"
+      ],
+      "vurgu": [],
+      "contentHash": "462868cc5e4fe58b2fd959a26fbd40cddf939e35ca1338e9f4761f89764ca425",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0335",
+      "conceptId": "te-ikinci-yeni",
+      "stem": {
+        "md": "1950'lerde ortaya çıkan, anlamı kapalı ve imgeli bir şiiri savunan, Cemal Süreya, Turgut Uyar ve Edip Cansever'in temsil ettiği akım hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "İkinci Yeni"
+        },
+        {
+          "key": "B",
+          "md": "Garip"
+        },
+        {
+          "key": "C",
+          "md": "Hisarcılar"
+        },
+        {
+          "key": "D",
+          "md": "Toplumcu Gerçekçiler"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Garip, yalın ve konuşma diline yakın bir şiiri savunmuştur.",
+        "C": "Hisarcılar geleneğe bağlı, daha ölçülü bir şiiri savunmuştur.",
+        "D": "Toplumcu gerçekçiler şiiri toplumsal mesaj için kullanmış, kapalılığa karşı çıkmıştır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap İkinci Yeni'dir.\n- Anlamı kapalı, imgeye dayalı ve dili zorlayan bir şiir anlayışı getirmiştir.\n- Garip'in yalınlığına tepki olarak doğmuştur."
+        },
+        {
+          "type": "hint",
+          "md": "Adı kendinden önceki akıma göre konmuştur."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "1950'lerde bir grup genç şair, şiirin düzyazıya yaklaşmasına itiraz ederek imgeyi ve sözcüklerin çağrışım gücünü öne çıkardı. Bu şairler bir bildiri yayımlamadan, benzer şiirleriyle bir akım oluşturdu."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          65,
+          65
+        ],
+        "quote": "Garip'e tepki olarak doğan İkinci Yeni akımını Cemal Süreya, Turgut Uyar ve Edip Cansever gibi şairler temsil eder.",
+        "chapter": "Türk Edebiyatı"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "edebiyat"
+      ],
+      "vurgu": [],
+      "contentHash": "71465a356b92dafe1aceeee046cf75eb3529191e97e6aad680e1834886daa7ae",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0336",
+      "conceptId": "te-nazim-hikmet",
+      "stem": {
+        "md": "Memleketimden İnsan Manzaraları adlı destansı eserin şairi kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Orhan Veli Kanık"
+        },
+        {
+          "key": "B",
+          "md": "Ahmet Arif"
+        },
+        {
+          "key": "C",
+          "md": "Attilâ İlhan"
+        },
+        {
+          "key": "D",
+          "md": "Nazım Hikmet"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Orhan Veli Kanık, Garip akımının öncüsüdür.",
+        "B": "Ahmet Arif, Hasretinden Prangalar Eskittim adlı tek kitabıyla tanınır.",
+        "C": "Attilâ İlhan Mavi akımıyla anılan bir şairdir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Nazım Hikmet'tir.\n- Eser, farklı insanların hayatlarından bir toplum panoraması çizer.\n- Nazım Hikmet serbest ölçüyü Türk şiirinde yaygınlaştırmıştır."
+        },
+        {
+          "type": "hint",
+          "md": "Serbest ve basamaklı dizeleriyle tanınan şair."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Serbest nazım, ölçü ve kafiye zorunluluğu olmadan yazılan şiirdir. Türk şiirinde 1920'lerden sonra yaygınlaşmış ve dizelerin basamaklı dizilmesi gibi yeniliklerle anılmıştır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          65,
+          65
+        ],
+        "quote": "Memleketimden İnsan Manzaraları adlı destansı eserin şairi Nazım Hikmet'tir.",
+        "chapter": "Türk Edebiyatı"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "edebiyat"
+      ],
+      "vurgu": [],
+      "contentHash": "5aa48568ce85a2baa7189efcb494b22143617ceb12849f8bc799dd6f3e33b8fa",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0337",
+      "conceptId": "te-yahya-kemal",
+      "stem": {
+        "md": "Aruz ölçüsünü Türkçeye başarıyla uygulayan, şiirlerinde İstanbul'u ve tarihi işleyen, Kendi Gök Kubbemiz kitabının şairi kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Yahya Kemal Beyatlı"
+        },
+        {
+          "key": "B",
+          "md": "Ahmet Haşim"
+        },
+        {
+          "key": "C",
+          "md": "Necip Fazıl Kısakürek"
+        },
+        {
+          "key": "D",
+          "md": "Mehmet Akif Ersoy"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Ahmet Haşim sembolist bir şairdir; tarih ve İstanbul şiirinin merkezinde değildir.",
+        "C": "Necip Fazıl Kısakürek daha çok hece ölçüsüyle ve mistik şiirleriyle tanınır.",
+        "D": "Mehmet Akif Ersoy şiirlerini Safahat'ta toplamıştır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Yahya Kemal Beyatlı'dır.\n- Aruzu Türkçenin ses yapısına uydurmakta ustalaşmıştır.\n- Şiirlerinde İstanbul, tarih ve Osmanlı geçmişi öne çıkar."
+        },
+        {
+          "type": "hint",
+          "md": "Kitapları ölümünden sonra yayımlanmıştır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Neoklasik şiir, divan şiirinin biçim mükemmeliyetini korurken onu çağdaş bir duyarlılıkla yeniden yorumlar. Bu anlayışta ses uyumu ve dizelerin kusursuzluğu önemlidir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          65,
+          65
+        ],
+        "quote": "Kendi Gök Kubbemiz kitabının şairi Yahya Kemal Beyatlı, aruz ölçüsünü Türkçeye başarıyla uygulamıştır.",
+        "chapter": "Türk Edebiyatı"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "edebiyat"
+      ],
+      "vurgu": [],
+      "contentHash": "559614acd0f77badd698dca66362a581e6f2a207a9af15c9e15f40dd8d7c65bd",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0338",
+      "conceptId": "te-bes-sehir",
+      "stem": {
+        "md": "Aşağıdaki şehirlerden hangisi Ahmet Hamdi Tanpınar'ın Beş Şehir adlı kitabında anlatılan şehirlerden biri değildir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Konya"
+        },
+        {
+          "key": "B",
+          "md": "Erzurum"
+        },
+        {
+          "key": "C",
+          "md": "İzmir"
+        },
+        {
+          "key": "D",
+          "md": "Bursa"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Konya, kitapta anlatılan beş şehirden biridir.",
+        "B": "Erzurum, kitapta anlatılan beş şehirden biridir.",
+        "D": "Bursa, kitapta anlatılan beş şehirden biridir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap İzmir'dir.\n- Beş Şehir'de Ankara, Erzurum, Konya, Bursa ve İstanbul anlatılır.\n- Tanpınar bu şehirler üzerinden geçmiş ile bugün arasındaki bağı işler."
+        },
+        {
+          "type": "hint",
+          "md": "Kitaptaki şehirlerin hiçbiri Ege kıyısında değildir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Tanpınar şiir, roman ve denemeleriyle zaman, rüya ve geçmiş kültür arasındaki bağı işlemiş bir yazardır. Denemelerinde şehirleri tarihleri, mimarileri ve insanlarıyla birlikte anlatır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          65,
+          65
+        ],
+        "quote": "Ahmet Hamdi Tanpınar'ın Beş Şehir adlı kitabında Ankara, Erzurum, Konya, Bursa ve İstanbul anlatılır.",
+        "chapter": "Türk Edebiyatı"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "edebiyat"
+      ],
+      "vurgu": [],
+      "contentHash": "977b8dfb869c3ff84dbc723620d4aedf085406cd9d644af73368e28d4e0b8287",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0339",
+      "conceptId": "tutunamayanlar-yazari",
+      "stem": {
+        "md": "Tutunamayanlar romanının yazarı kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Yusuf Atılgan"
+        },
+        {
+          "key": "B",
+          "md": "Orhan Pamuk"
+        },
+        {
+          "key": "C",
+          "md": "Oğuz Atay"
+        },
+        {
+          "key": "D",
+          "md": "Ahmet Hamdi Tanpınar"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Yusuf Atılgan, Aylak Adam ve Anayurt Oteli'nin yazarıdır.",
+        "B": "Orhan Pamuk daha sonraki kuşağın romancısıdır.",
+        "D": "Ahmet Hamdi Tanpınar, Huzur romanının yazarıdır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Oğuz Atay'dır.\n- Roman, Selim Işık'ın ölümünün ardından arkadaşı Turgut Özben'in arayışını anlatır.\n- Türk edebiyatında modernist romanın önemli örneklerindendir."
+        },
+        {
+          "type": "hint",
+          "md": "Tehlikeli Oyunlar da aynı yazarındır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Modernist roman, olay örgüsünden çok bireyin iç dünyasına yönelir; bilinç akışı, iç monolog ve parodi gibi tekniklerle anlatımı parçalar. Türk edebiyatında bu anlayış 1970'lerde güçlenmiştir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          66,
+          66
+        ],
+        "quote": "Tutunamayanlar romanının yazarı Oğuz Atay'dır.",
+        "chapter": "Türk Edebiyatı"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "edebiyat"
+      ],
+      "vurgu": [],
+      "contentHash": "d419f08a63bb4cb1f4ef3d065cfea3c5f5d98d0fa38be9d39120ca3082bc2299",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0340",
+      "conceptId": "te-ince-memed",
+      "stem": {
+        "md": "Çukurova'da ağalara karşı dağa çıkan bir eşkıyanın öyküsünü anlatan İnce Memed romanının yazarı kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Orhan Kemal"
+        },
+        {
+          "key": "B",
+          "md": "Yaşar Kemal"
+        },
+        {
+          "key": "C",
+          "md": "Kemal Tahir"
+        },
+        {
+          "key": "D",
+          "md": "Fakir Baykurt"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Orhan Kemal de Çukurova'yı anlatmıştır ama İnce Memed'in yazarı değildir.",
+        "C": "Kemal Tahir daha çok tarihî romanlarıyla, örneğin Devlet Ana ile tanınır.",
+        "D": "Fakir Baykurt, Yılanların Öcü ile tanınan köy romancısıdır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Yaşar Kemal'dir.\n- İnce Memed, Çukurova'da toprak ağalarına karşı çıkan bir eşkıyayı anlatır.\n- Yazar, Çukurova'yı destansı bir anlatımla işlemiştir."
+        },
+        {
+          "type": "hint",
+          "md": "Yazarın asıl adı Kemal Sadık Gökçeli'dir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Köy romanı, Anadolu köylüsünün yoksulluğunu, toprak sorununu ve ağalık düzenini anlatan roman türüdür. Türk edebiyatında 1950'lerden sonra güçlü bir akım hâline gelmiştir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          66,
+          66
+        ],
+        "quote": "Çukurova'da ağalara karşı dağa çıkan bir eşkıyayı anlatan İnce Memed romanının yazarı Yaşar Kemal'dir.",
+        "chapter": "Türk Edebiyatı"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "edebiyat"
+      ],
+      "vurgu": [],
+      "contentHash": "3ddafdda65717a632c483b6a9666b858a36ce759fd31b96f59b39f585a2d495f",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0341",
+      "conceptId": "te-sabahattin-ali",
+      "stem": {
+        "md": "Kuyucaklı Yusuf ve Kürk Mantolu Madonna romanlarının yazarı kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Sabahattin Ali"
+        },
+        {
+          "key": "B",
+          "md": "Sait Faik Abasıyanık"
+        },
+        {
+          "key": "C",
+          "md": "Orhan Kemal"
+        },
+        {
+          "key": "D",
+          "md": "Kemal Tahir"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Sait Faik Abasıyanık daha çok öyküleriyle tanınır.",
+        "C": "Orhan Kemal, Bereketli Topraklar Üzerinde'nin yazarıdır.",
+        "D": "Kemal Tahir, Devlet Ana gibi tarihî romanlarıyla tanınır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Sabahattin Ali'dir.\n- Kuyucaklı Yusuf'ta taşra hayatını, Kürk Mantolu Madonna'da yalnız bir bireyin aşkını anlatır.\n- Toplumcu gerçekçi çizgide eserler vermiştir."
+        },
+        {
+          "type": "hint",
+          "md": "Raif Efendi'nin defterini okuduğumuz romanın yazarı."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Toplumcu gerçekçilik, edebiyatı toplumsal sorunları ve sınıf çatışmalarını yansıtmanın aracı olarak gören anlayıştır. Türk edebiyatında 1930'lardan sonra öne çıkmıştır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          66,
+          66
+        ],
+        "quote": "Kuyucaklı Yusuf ve Kürk Mantolu Madonna romanlarının yazarı Sabahattin Ali'dir.",
+        "chapter": "Türk Edebiyatı"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "edebiyat"
+      ],
+      "vurgu": [],
+      "contentHash": "c887a0a53d5f5a1aa44bc65467b1f04784f0ee1fc29209e8fe66f1c78c098af2",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0342",
+      "conceptId": "te-sait-faik",
+      "stem": {
+        "md": "Semaver ve Alemdağ'da Var Bir Yılan kitaplarıyla modern Türk öykücülüğünün öncüsü sayılan yazar kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Memduh Şevket Esendal"
+        },
+        {
+          "key": "B",
+          "md": "Ömer Seyfettin"
+        },
+        {
+          "key": "C",
+          "md": "Haldun Taner"
+        },
+        {
+          "key": "D",
+          "md": "Sait Faik Abasıyanık"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Memduh Şevket Esendal sade ve gözleme dayalı öyküleriyle tanınır; bu kitapların yazarı değildir.",
+        "B": "Ömer Seyfettin Millî Edebiyat döneminin olay öykücüsüdür.",
+        "C": "Haldun Taner daha çok oyunları ve mizahi öyküleriyle tanınır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Sait Faik Abasıyanık'tır.\n- Olaydan çok durum ve duygu anlatan öykünün Türkçedeki öncüsüdür.\n- Öykülerinde İstanbul, adalar ve balıkçılar sıkça yer alır."
+        },
+        {
+          "type": "hint",
+          "md": "Burgazada ile özdeşleşmiş yazar."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Öykü türünde iki ana yaklaşım vardır: serim, düğüm ve çözümle ilerleyen olay öyküsü ile bir anı, duyguyu ya da kesiti anlatan durum öyküsü. İkincisi Türk edebiyatında 20. yüzyılın ortasında güçlenmiştir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          66,
+          66
+        ],
+        "quote": "Sait Faik Abasıyanık, Semaver ve Alemdağ'da Var Bir Yılan kitaplarıyla modern Türk öykücülüğünün öncüsü sayılır.",
+        "chapter": "Türk Edebiyatı"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "edebiyat"
+      ],
+      "vurgu": [],
+      "contentHash": "04cd5d0b2d925e841e3cbf57c8402fab255df18c4be606035e8e165624a2ffd6",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0343",
+      "conceptId": "te-nobel-pamuk",
+      "stem": {
+        "md": "2006 yılında Nobel Edebiyat Ödülü'nü alan Türk yazar kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Yaşar Kemal"
+        },
+        {
+          "key": "B",
+          "md": "Nazım Hikmet"
+        },
+        {
+          "key": "C",
+          "md": "Orhan Pamuk"
+        },
+        {
+          "key": "D",
+          "md": "Ahmet Hamdi Tanpınar"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Yaşar Kemal uzun yıllar adı anılan bir yazar olmuştur ama bu ödülü almamıştır.",
+        "B": "Nazım Hikmet 1963'te ölmüştür ve Nobel almamıştır.",
+        "D": "Ahmet Hamdi Tanpınar 1962'de ölmüştür ve Nobel almamıştır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Orhan Pamuk'tur.\n- 2006'da bu ödülü alarak Nobel kazanan ilk Türk yazar olmuştur.\n- Benim Adım Kırmızı ve Kar romanlarının yazarıdır."
+        },
+        {
+          "type": "hint",
+          "md": "Masumiyet Müzesi'ni hem roman hem gerçek bir müze olarak kurmuştur."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Nobel Edebiyat Ödülü 1901'den beri İsveç Akademisi tarafından verilir. Ödül belirli bir eser için değil, yazarın tüm yapıtı için verilir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          66,
+          66
+        ],
+        "quote": "Orhan Pamuk, 2006 yılında Nobel Edebiyat Ödülü'nü alan ilk Türk yazardır.",
+        "chapter": "Türk Edebiyatı"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "edebiyat"
+      ],
+      "vurgu": [],
+      "contentHash": "8bad87cbafe9372c369c183161655c2abccb5b077e92fc4e1f0080c1c7db4f35",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0344",
+      "conceptId": "te-deneme-turu",
+      "stem": {
+        "md": "Yazarın herhangi bir konudaki kişisel görüşlerini kanıtlama kaygısı taşımadan, kendi kendine konuşur gibi samimi bir dille anlattığı düzyazı türü hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Deneme"
+        },
+        {
+          "key": "B",
+          "md": "Makale"
+        },
+        {
+          "key": "C",
+          "md": "Fıkra"
+        },
+        {
+          "key": "D",
+          "md": "Eleştiri"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Makalede yazar düşüncesini kanıtlarla savunur ve nesnel bir dil kullanır.",
+        "C": "Fıkra, gazetelerde güncel bir konuyu kısa ve günlük bir dille işleyen yazıdır.",
+        "D": "Eleştiri bir eseri değerlendirmeyi amaçlar."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap denemedir.\n- Yazar kesin yargıya varmaz ve okuru ikna etme zorunluluğu duymaz.\n- Türün Batı'daki öncüsü Montaigne'dir."
+        },
+        {
+          "type": "hint",
+          "md": "Adı bir 'tecrübe, sınama' anlamı taşır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Düşünce yazıları, amaçlarına ve dillerine göre ayrılır: kimi kanıtlamayı, kimi bilgilendirmeyi, kimi de kişisel bir sohbeti amaçlar. Bu türler genellikle gazete ve dergilerde gelişmiştir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          66,
+          66
+        ],
+        "quote": "Deneme, yazarın kişisel görüşlerini kanıtlama kaygısı taşımadan samimi bir dille anlattığı düzyazı türüdür.",
+        "chapter": "Türk Edebiyatı"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "edebiyat"
+      ],
+      "vurgu": [],
+      "contentHash": "46f5d3226ff24fb9c01dd5e351bc24adac5e26cb9cae5f38f2a96380f5478f73",
+      "deleted": false
+    }
+  ]
+}

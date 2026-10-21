@@ -1,0 +1,2605 @@
+{
+  "blockId": "0006",
+  "questions": [
+    {
+      "id": "genel-kultur-0225",
+      "conceptId": "by-hucre-tanimi",
+      "stem": {
+        "md": "Canlıların yapı ve işlev bakımından en küçük birimi hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Doku"
+        },
+        {
+          "key": "B",
+          "md": "Organ"
+        },
+        {
+          "key": "C",
+          "md": "Hücre"
+        },
+        {
+          "key": "D",
+          "md": "Sistem"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Doku, benzer hücrelerin bir araya gelmesiyle oluşur.",
+        "B": "Organ, birden çok dokudan oluşan daha büyük bir yapıdır.",
+        "D": "Sistem, birlikte çalışan organlardan oluşur."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: Hücre.\n- Tek hücreli canlılarda bütün yaşam işlevleri tek bir hücrede yürür.\n- Doku, organ ve sistem hücrelerden kurulur."
+        },
+        {
+          "type": "hint",
+          "md": "Mikroskopla görülür; bazı canlılar yalnızca bir tanesinden oluşur."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Canlılar küçükten büyüğe basamaklı bir düzen içinde yapılanır. Her basamak bir öncekinin birleşmesiyle oluşur ve yaşamın bütün özellikleri en alttaki basamakta bile görülür."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          45,
+          45
+        ],
+        "quote": "Hücre, canlıların yapı ve işlev bakımından en küçük birimidir.",
+        "chapter": "Biyoloji"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "biyoloji"
+      ],
+      "vurgu": [],
+      "contentHash": "88fb6d4802e36d4ff6d43616a177666930a0df3fa5aafd0e25b66668191c4088",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0226",
+      "conceptId": "by-yapilanma-sirasi",
+      "stem": {
+        "md": "Çok hücreli bir canlıda yapılanma basamaklarının küçükten büyüğe doğru sırası hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Doku - Hücre - Organ - Sistem"
+        },
+        {
+          "key": "B",
+          "md": "Hücre - Doku - Organ - Sistem"
+        },
+        {
+          "key": "C",
+          "md": "Hücre - Organ - Doku - Sistem"
+        },
+        {
+          "key": "D",
+          "md": "Hücre - Doku - Sistem - Organ"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Doku hücrelerden oluştuğu için hücreden önce gelemez.",
+        "C": "Organ dokulardan oluşur, dokudan önce gelemez.",
+        "D": "Sistem organlardan oluşur, organdan küçük olamaz."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru sıra: Hücre - Doku - Organ - Sistem.\n- Benzer hücreler dokuyu, dokular organı, organlar sistemi oluşturur."
+        },
+        {
+          "type": "hint",
+          "md": "Her basamak bir öncekinin birleşmesinden doğar."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Çok hücreli canlılarda hücreler iş bölümü yaparak gruplar oluşturur. Bu gruplar da kendi aralarında birleşerek daha karmaşık görevleri üstlenen yapılara dönüşür."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          45,
+          45
+        ],
+        "quote": "Canlılarda yapılanma hücreden dokuya, dokudan organa, organdan sisteme doğru ilerler.",
+        "chapter": "Biyoloji"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "biyoloji"
+      ],
+      "vurgu": [],
+      "contentHash": "0fec45accdabd361dfcfae29b46516959b6129accea1a20270279af1bd3d047e",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0227",
+      "conceptId": "by-organel-eslestirme",
+      "stem": {
+        "md": "Organelleri işlevleriyle eşleştirin.\n\n1. Mitokondri\n2. Kloroplast\n3. Ribozom\n\na. Protein sentezi\nb. Fotosentez\nc. Enerji üretimi"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "1-b, 2-c, 3-a"
+        },
+        {
+          "key": "B",
+          "md": "1-a, 2-b, 3-c"
+        },
+        {
+          "key": "C",
+          "md": "1-c, 2-a, 3-b"
+        },
+        {
+          "key": "D",
+          "md": "1-c, 2-b, 3-a"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Mitokondri fotosentez yapmaz; bu iş bitkilere özgü başka bir organelde olur.",
+        "B": "Mitokondri protein değil, enerji üretir.",
+        "C": "Kloroplast protein sentezi değil, ışıkla besin üretimi yapar."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Mitokondri: enerji üretimi (1-c).\n- Kloroplast: fotosentez (2-b).\n- Ribozom: protein sentezi (3-a)."
+        },
+        {
+          "type": "hint",
+          "md": "Yalnızca bitki hücrelerinde bulunan organel ışığı kullanır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Organeller hücre içindeki özelleşmiş yapılardır; her biri belirli bir işi üstlenir. Bu iş bölümü sayesinde hücre enerji üretimini, besin yapımını ve yapı maddesi üretimini aynı anda yürütebilir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          45,
+          45
+        ],
+        "quote": "Mitokondri, hücrede enerji üretiminin gerçekleştiği organeldir.",
+        "chapter": "Biyoloji"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "biyoloji"
+      ],
+      "vurgu": [],
+      "contentHash": "0cd08bc1e3018415f6b224454d6b8689236f851d6b84c159567d07e2bd58927b",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0228",
+      "conceptId": "by-prokaryot",
+      "stem": {
+        "md": "Aşağıdakilerden hangisi zarla çevrili bir çekirdeği olmayan prokaryot bir canlıdır?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Bakteri"
+        },
+        {
+          "key": "B",
+          "md": "Maya mantarı"
+        },
+        {
+          "key": "C",
+          "md": "Amip"
+        },
+        {
+          "key": "D",
+          "md": "Paramesyum"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Maya mantarı tek hücreli olsa da zarla çevrili çekirdeği olan bir ökaryottur.",
+        "C": "Amip çekirdekli tek hücreli bir ökaryottur.",
+        "D": "Paramesyumun zarla çevrili çekirdeği vardır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: Bakteri.\n- Bakterilerde kalıtım maddesi sitoplazmada serbest durur.\n- Tek hücreli olmak prokaryot olmak demek değildir; maya, amip ve paramesyum ökaryottur."
+        },
+        {
+          "type": "hint",
+          "md": "Tek hücreli olmak yetmez; çekirdeğe bakın."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Canlılar hücre yapısına göre iki büyük gruba ayrılır: kalıtım maddesi bir zarla çevrili çekirdekte bulunanlar ve böyle bir çekirdeği olmayanlar. İkinci grup daha basit yapılı ve genellikle çok küçüktür."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          45,
+          45
+        ],
+        "quote": "Bakteriler, zarla çevrili bir çekirdeği olmayan prokaryot canlılardır.",
+        "chapter": "Biyoloji"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "biyoloji"
+      ],
+      "vurgu": [],
+      "contentHash": "bd8e2b91c3576fe88dbb86945654c1cd9f51bd949a364318b4a66c309fc47a35",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0229",
+      "conceptId": "by-seluloz",
+      "stem": {
+        "md": "Bitki hücresini dıştan saran hücre duvarının temel yapı maddesi hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Selüloz"
+        },
+        {
+          "key": "B",
+          "md": "Kitin"
+        },
+        {
+          "key": "C",
+          "md": "Nişasta"
+        },
+        {
+          "key": "D",
+          "md": "Keratin"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Kitin mantarların hücre duvarında ve böceklerin dış iskeletinde bulunur.",
+        "C": "Nişasta bitkilerde depo besinidir, duvar yapısında yer almaz.",
+        "D": "Keratin hayvanlarda saç, tırnak ve boynuzda bulunan bir proteindir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: Selüloz.\n- Selüloz glikozdan oluşan, lifli ve dayanıklı bir karbonhidrattır.\n- Hücre duvarı bitki hücresine sağlamlık ve biçim verir."
+        },
+        {
+          "type": "hint",
+          "md": "Kâğıt ve pamuk da büyük ölçüde bu maddeden oluşur."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Bitki hücreleri hücre zarının dışında ikinci, sert bir katman taşır. Bu katman hücreye destek verir ve bitkinin dik durmasına yardım eder; hayvan hücrelerinde bulunmaz."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          45,
+          45
+        ],
+        "quote": "Bitki hücresini dıştan saran hücre duvarı büyük ölçüde selülozdan oluşur.",
+        "chapter": "Biyoloji"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "biyoloji"
+      ],
+      "vurgu": [],
+      "contentHash": "7e0a6933df124cc31938f6567633cc677ae70fc3065c90c5698f3bff290c5a43",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0230",
+      "conceptId": "by-hooke",
+      "stem": {
+        "md": "1665'te mantar dokusunda gördüğü küçük bölmelere \"hücre\" adını veren İngiliz bilim insanı kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Antonie van Leeuwenhoek"
+        },
+        {
+          "key": "B",
+          "md": "Matthias Schleiden"
+        },
+        {
+          "key": "C",
+          "md": "Robert Hooke"
+        },
+        {
+          "key": "D",
+          "md": "Robert Brown"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Leeuwenhoek Hollandalıdır ve mikroskopla canlı mikroorganizmaları gözlemesiyle bilinir.",
+        "B": "Schleiden 19. yüzyılda bitkilerin hücrelerden oluştuğunu öne süren Alman botanikçidir.",
+        "D": "Robert Brown hücre çekirdeğini tanımlamasıyla bilinir, hücreye ad vermemiştir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: Robert Hooke.\n- Hooke, gözlemlerini 1665'te yayımlanan Micrographia adlı kitabında anlattı.\n- Gördüğü bölmeleri küçük odalara benzeterek adlandırdı."
+        },
+        {
+          "type": "hint",
+          "md": "Esneklik yasasıyla fizik derslerinde de adı geçer."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "17. yüzyılda mikroskobun gelişmesiyle gözle görülemeyen dünyayı inceleme olanağı doğdu. İlk gözlemler ölü bitki dokularında yapıldı ve canlıların küçük bölmelerden oluştuğu fikrinin temelini attı."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          45,
+          45
+        ],
+        "quote": "Robert Hooke 1665'te mantar dokusunda gördüğü küçük bölmelere hücre adını verdi.",
+        "chapter": "Biyoloji"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "biyoloji"
+      ],
+      "vurgu": [],
+      "contentHash": "98d3793bc3b3f34931ab784fc3bbbbbcd2b8179e51a3f8233c8cd1aaab6ee016",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0231",
+      "conceptId": "by-mendel",
+      "stem": {
+        "md": "Bezelyelerle yaptığı deneylerle kalıtımın temel kurallarını ortaya koyan bilim insanı kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Charles Darwin"
+        },
+        {
+          "key": "B",
+          "md": "Louis Pasteur"
+        },
+        {
+          "key": "C",
+          "md": "Jean-Baptiste Lamarck"
+        },
+        {
+          "key": "D",
+          "md": "Gregor Mendel"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Darwin evrim ve doğal seçilim kuramıyla bilinir.",
+        "B": "Pasteur mikrobiyoloji ve aşı çalışmalarıyla bilinir.",
+        "C": "Lamarck kazanılmış özelliklerin kalıtımı görüşüyle bilinir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: Gregor Mendel.\n- Mendel, bezelyelerde renk ve biçim gibi özelliklerin kuşaktan kuşağa nasıl geçtiğini sayarak inceledi.\n- Çalışmaları bugün genetiğin temeli sayılır."
+        },
+        {
+          "type": "hint",
+          "md": "Bir manastırda bahçeyle uğraşan bir din adamıydı."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Kalıtım, özelliklerin anne babadan yavrulara aktarılmasıdır. Bu alanın temeli, kuşaklar boyunca çok sayıda bitkinin dikkatle sayılıp karşılaştırılmasıyla atıldı."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          46,
+          46
+        ],
+        "quote": "Gregor Mendel bezelyelerle yaptığı deneylerle kalıtımın temel kurallarını ortaya koydu.",
+        "chapter": "Biyoloji"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "biyoloji"
+      ],
+      "vurgu": [],
+      "contentHash": "b435e8be067c1584e885332ce1ca86eecfe86780753626b4ee1d0204601197e4",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0232",
+      "conceptId": "by-cift-sarmal",
+      "stem": {
+        "md": "DNA'nın çift sarmal yapısını 1953'te tanımlayan bilim insanları kimlerdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Gregor Mendel ve Thomas Morgan"
+        },
+        {
+          "key": "B",
+          "md": "James Watson ve Francis Crick"
+        },
+        {
+          "key": "C",
+          "md": "Charles Darwin ve Alfred Wallace"
+        },
+        {
+          "key": "D",
+          "md": "Robert Hooke ve Antonie van Leeuwenhoek"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Mendel 19. yüzyılda yaşadı; DNA'nın yapısı onun döneminde bilinmiyordu.",
+        "C": "Darwin ve Wallace doğal seçilim fikriyle bilinir.",
+        "D": "Hooke ve Leeuwenhoek 17. yüzyılın mikroskop öncüleridir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: James Watson ve Francis Crick.\n- İki iplikçiğin birbirine sarıldığı merdiven benzeri yapıyı 1953'te tanımladılar.\n- Rosalind Franklin'in X ışını görüntüleri bu çalışmada önemli rol oynadı."
+        },
+        {
+          "type": "hint",
+          "md": "Biri Amerikalı, biri İngiliz iki araştırmacı; Cambridge'de çalıştılar."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "DNA, canlının kalıtsal bilgisini taşıyan moleküldür. 20. yüzyılın ortasında bu molekülün biçiminin anlaşılması, bilginin nasıl kopyalandığını açıklayarak modern genetiğin önünü açtı."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          46,
+          46
+        ],
+        "quote": "DNA'nın çift sarmal yapısı 1953'te James Watson ve Francis Crick tarafından tanımlandı.",
+        "chapter": "Biyoloji"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "biyoloji"
+      ],
+      "vurgu": [],
+      "contentHash": "1d4c30cb542bf87166fdddad52cc84ac15b1c001b0adb834989305736b8126eb",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0233",
+      "conceptId": "by-dna-bazlari",
+      "stem": {
+        "md": "Aşağıdakilerden hangisi DNA'da bulunan bazlardan biri değildir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Adenin"
+        },
+        {
+          "key": "B",
+          "md": "Guanin"
+        },
+        {
+          "key": "C",
+          "md": "Urasil"
+        },
+        {
+          "key": "D",
+          "md": "Sitozin"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Adenin DNA'nın dört bazından biridir.",
+        "B": "Guanin DNA'nın dört bazından biridir.",
+        "D": "Sitozin DNA'nın dört bazından biridir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: Urasil.\n- DNA'daki bazlar adenin, timin, guanin ve sitozindir.\n- Urasil, RNA'da timinin yerini alır."
+        },
+        {
+          "type": "hint",
+          "md": "Bu baz, DNA'nın kardeş molekülünde bulunur."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Kalıtsal bilgi, nükleik asitlerde bazların diziliş sırasıyla yazılır. DNA ile RNA benzer bazlar kullanır ama aralarında küçük bir farklılık vardır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          46,
+          46
+        ],
+        "quote": "DNA'da adenin, timin, guanin ve sitozin olmak üzere dört baz bulunur.",
+        "chapter": "Biyoloji"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "biyoloji"
+      ],
+      "vurgu": [],
+      "contentHash": "37688eddf428cdb842ee45b8c5f486c0b8105ffb6599a8c511a9621f6edbeba6",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0234",
+      "conceptId": "by-kromozom-sayisi",
+      "stem": {
+        "md": "İnsan vücut hücrelerinde ____ çift kromozom bulunur. Boşluğa hangisi gelmelidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "22"
+        },
+        {
+          "key": "B",
+          "md": "24"
+        },
+        {
+          "key": "C",
+          "md": "46"
+        },
+        {
+          "key": "D",
+          "md": "23"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "22 çift yalnızca eşey kromozomları dışındaki çiftlerin sayısıdır.",
+        "B": "24 çift, toplamı 48 eder; bu insanda değil bazı başka canlılarda görülür.",
+        "C": "46 çift değil, toplam kromozom sayısıdır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: 23 çift.\n- Toplamda 46 kromozom eder.\n- Çiftlerin biri anneden, biri babadan gelir."
+        },
+        {
+          "type": "hint",
+          "md": "Toplam sayının yarısını düşünün."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Kromozomlar, DNA'nın hücre bölünmesi sırasında paketlenmiş hâlidir. Her türün vücut hücrelerinde kendine özgü, sabit sayıda kromozom bulunur."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          46,
+          46
+        ],
+        "quote": "İnsan vücut hücrelerinde 23 çift, yani 46 kromozom bulunur.",
+        "chapter": "Biyoloji"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "biyoloji"
+      ],
+      "vurgu": [],
+      "contentHash": "7ab0631c844c3889a79c33f9a32c271e4ca6076fc62f013a13970f5d3e6c7b28",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0235",
+      "conceptId": "by-mayoz",
+      "stem": {
+        "md": "Kromozom sayısı yarıya inmiş üreme hücrelerini oluşturan hücre bölünmesi hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Mayoz"
+        },
+        {
+          "key": "B",
+          "md": "Mitoz"
+        },
+        {
+          "key": "C",
+          "md": "Tomurcuklanma"
+        },
+        {
+          "key": "D",
+          "md": "Rejenerasyon"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Mitoz, kromozom sayısını koruyarak birbirinin aynı hücreler üretir.",
+        "C": "Tomurcuklanma bir eşeysiz üreme biçimidir, kromozom sayısını yarıya indirmez.",
+        "D": "Rejenerasyon kopan bir parçanın yeniden oluşmasıdır, bir bölünme türü değildir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: Mayoz.\n- Mayozla oluşan yumurta ve sperm hücrelerinde kromozom sayısı yarıdır.\n- Döllenmede iki hücre birleşince sayı yeniden tamamlanır."
+        },
+        {
+          "type": "hint",
+          "md": "Bu bölünme yalnızca üreme organlarında olur."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Eşeyli üremede iki hücre birleşir. Bu birleşme kuşaktan kuşağa kromozom sayısının ikiye katlanmasına yol açmasın diye, üreme hücreleri özel bir bölünmeyle oluşur."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          46,
+          46
+        ],
+        "quote": "Mayoz bölünme, kromozom sayısı yarıya inmiş üreme hücrelerini oluşturur.",
+        "chapter": "Biyoloji"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "biyoloji"
+      ],
+      "vurgu": [],
+      "contentHash": "6d79f9d99dd2ca6a882417f85f3d424ae8f8eb287ef388e74ff4e18d4e6568c1",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0236",
+      "conceptId": "by-dolly",
+      "stem": {
+        "md": "Yetişkin bir hücreden klonlanan ilk memeli olan Dolly hangi hayvandır?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Koyun"
+        },
+        {
+          "key": "B",
+          "md": "İnek"
+        },
+        {
+          "key": "C",
+          "md": "Fare"
+        },
+        {
+          "key": "D",
+          "md": "Keçi"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "İnekler de sonradan klonlandı ama ilk memeli bir inek değildi.",
+        "C": "Fareler sonradan klonlanan türler arasındadır, Dolly değildir.",
+        "D": "Keçi Dolly'nin türü değildir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: Koyun.\n- Dolly İskoçya'da doğdu.\n- Yetişkin bir hücreden tüm bir memelinin elde edilebileceğini gösterdi."
+        },
+        {
+          "type": "hint",
+          "md": "Yünüyle bilinen bir çiftlik hayvanı."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Klonlama, bir canlının kalıtsal olarak aynısı olan bir kopyasının elde edilmesidir. 1990'larda yetişkin bir vücut hücresinden doğan bir memeli bilim dünyasında büyük ses getirdi."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          46,
+          46
+        ],
+        "quote": "Dolly adlı koyun, yetişkin bir hücreden klonlanan ilk memelidir.",
+        "chapter": "Biyoloji"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "biyoloji"
+      ],
+      "vurgu": [],
+      "contentHash": "5b7aa060e0aeae854b150ce3e9186ffaa2096e6358e2f8f432c13af24836acfe",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0237",
+      "conceptId": "by-turlerin-kokeni",
+      "stem": {
+        "md": "1859'da yayımlanan Türlerin Kökeni adlı kitabın yazarının açıkladığı kuram hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Kalıtımın temel yasaları"
+        },
+        {
+          "key": "B",
+          "md": "Hücre kuramı"
+        },
+        {
+          "key": "C",
+          "md": "Kazanılmış özelliklerin kalıtımı"
+        },
+        {
+          "key": "D",
+          "md": "Doğal seçilim"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Kalıtımın temel yasaları bezelye deneyleri yapan başka bir bilim insanına aittir.",
+        "B": "Hücre kuramı bitki ve hayvan hücrelerini inceleyen Alman bilim insanlarıyla anılır.",
+        "C": "Kazanılmış özelliklerin kalıtımı Lamarck'ın görüşüdür."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Kitabın yazarı Charles Darwin'dir.\n- Darwin bu kitapta doğal seçilim kuramını açıkladı.\n- Ortama daha uygun bireylerin hayatta kalıp daha çok yavru bıraktığını savunur."
+        },
+        {
+          "type": "hint",
+          "md": "Ortama uyum sağlayanın ayakta kaldığını söyler."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "19. yüzyılda canlı türlerinin zaman içinde değiştiği fikri tartışılıyordu. Bu kitap, değişimin nasıl gerçekleştiğine dair kanıtlarla desteklenmiş bir mekanizma önererek biyolojinin yönünü değiştirdi."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          47,
+          47
+        ],
+        "quote": "Charles Darwin doğal seçilim kuramını 1859'da yayımlanan Türlerin Kökeni adlı kitabında açıkladı.",
+        "chapter": "Biyoloji"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "biyoloji"
+      ],
+      "vurgu": [],
+      "contentHash": "59da3cb40cfcb5997b292bad9ad33288a425a7c22888f98ad48ed6e94d198f0a",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0238",
+      "conceptId": "by-galapagos",
+      "stem": {
+        "md": "Türlerin Kökeni'nin yazarının gözlemlerinde önemli yer tutan ispinozlar hangi adalarda yaşar?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Hawaii Adaları"
+        },
+        {
+          "key": "B",
+          "md": "Galápagos Adaları"
+        },
+        {
+          "key": "C",
+          "md": "Kanarya Adaları"
+        },
+        {
+          "key": "D",
+          "md": "Madagaskar"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Hawaii Adaları Darwin'in yolculuğunun durakları arasında değildi.",
+        "C": "Kanarya Adaları Atlas Okyanusu'ndadır; bu ispinozlar orada yaşamaz.",
+        "D": "Madagaskar kendine özgü canlılarıyla ünlüdür ama bu ispinozların yurdu değildir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: Galápagos Adaları.\n- Darwin bu adalara Beagle gemisiyle yaptığı yolculukta uğradı.\n- Adadan adaya gaga biçimi farklı ispinozlar, uyum fikrine örnek oldu."
+        },
+        {
+          "type": "hint",
+          "md": "Ekvador'a bağlı, Pasifik'teki volkanik adalar."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Yalıtılmış adalar, canlıların farklı ortamlara nasıl uyum sağladığını gözlemlemek için doğal birer laboratuvardır. Yakın akraba türlerin farklı adalarda farklı özellikler geliştirmesi evrim düşüncesini besledi."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          47,
+          47
+        ],
+        "quote": "Darwin'in gözlemlerinde Galápagos Adaları'ndaki ispinozlar önemli bir yer tutar.",
+        "chapter": "Biyoloji"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "biyoloji"
+      ],
+      "vurgu": [],
+      "contentHash": "111c52ce90c1f43fe5e6c231bd59faf475bcd47dcf102565c472864193baf604",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0239",
+      "conceptId": "by-wallace",
+      "stem": {
+        "md": "Doğal seçilim fikrine Darwin'den bağımsız olarak ulaşan Britanyalı doğa bilimci kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Thomas Henry Huxley"
+        },
+        {
+          "key": "B",
+          "md": "Jean-Baptiste Lamarck"
+        },
+        {
+          "key": "C",
+          "md": "Carl Linnaeus"
+        },
+        {
+          "key": "D",
+          "md": "Alfred Russel Wallace"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Huxley Darwin'in kuramını hararetle savundu ama fikri kendisi bulmadı.",
+        "B": "Lamarck Fransız'dır ve kazanılmış özelliklerin kalıtımını savundu.",
+        "C": "Linnaeus İsveçlidir ve canlıların adlandırılmasıyla bilinir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: Alfred Russel Wallace.\n- Wallace Güneydoğu Asya adalarındaki gözlemlerinden aynı sonuca vardı.\n- Darwin ile Wallace'ın görüşleri 1858'de birlikte sunuldu."
+        },
+        {
+          "type": "hint",
+          "md": "Malay Takımadaları'nda uzun yıllar canlı topladı."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Bilim tarihinde aynı buluşa iki kişinin birbirinden habersiz ulaştığı durumlar vardır. Evrimin işleyişine dair temel fikir de böyle iki ayrı yolculuktan doğdu."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          47,
+          47
+        ],
+        "quote": "Alfred Russel Wallace, doğal seçilim fikrine Darwin'den bağımsız olarak ulaştı.",
+        "chapter": "Biyoloji"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "biyoloji"
+      ],
+      "vurgu": [],
+      "contentHash": "6cf4a7daf7432050ea0001bde97ccf40a3ecec3beabcd8724e340cf1511cb0f8",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0240",
+      "conceptId": "by-linnaeus",
+      "stem": {
+        "md": "Canlılara cins ve tür adından oluşan iki adlı adlandırma sistemini yaygınlaştıran bilim insanı kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Gregor Mendel"
+        },
+        {
+          "key": "B",
+          "md": "Georges Cuvier"
+        },
+        {
+          "key": "C",
+          "md": "Carl Linnaeus"
+        },
+        {
+          "key": "D",
+          "md": "Charles Darwin"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Mendel kalıtım deneyleriyle bilinir.",
+        "B": "Cuvier fosiller ve karşılaştırmalı anatomiyle bilinir.",
+        "D": "Darwin evrim kuramıyla bilinir, adlandırma sistemiyle değil."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: Carl Linnaeus.\n- Örneğin insanın bilimsel adı Homo sapiens'tir: Homo cins, sapiens tür adıdır.\n- Bu sistem bugün de kullanılır."
+        },
+        {
+          "type": "hint",
+          "md": "18. yüzyılda yaşamış İsveçli bir botanikçi."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Bilim insanlarının bir canlıdan söz ederken aynı şeyi kastetmesi için ortak bir adlandırma gerekir. Latince temelli bu düzen, her canlıya dünya genelinde tek bir bilimsel ad verir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          47,
+          47
+        ],
+        "quote": "Carl Linnaeus, canlılara cins ve tür adından oluşan iki adlı adlandırma sistemini yaygınlaştırdı.",
+        "chapter": "Biyoloji"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "biyoloji"
+      ],
+      "vurgu": [],
+      "contentHash": "635c59344be2097bbdc2e08030eea96e0b625fee78879f33dfe576f80395c4c9",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0241",
+      "conceptId": "by-fosil",
+      "stem": {
+        "md": "Geçmişte yaşamış canlıların kayaçlarda korunmuş kalıntı ve izlerine ne ad verilir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Mineral"
+        },
+        {
+          "key": "B",
+          "md": "Kristal"
+        },
+        {
+          "key": "C",
+          "md": "Fosil"
+        },
+        {
+          "key": "D",
+          "md": "Magma"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Mineral doğal yolla oluşan cansız bir maddedir.",
+        "B": "Kristal atomların düzenli dizilmesiyle oluşan katıdır.",
+        "D": "Magma yerin derinliklerindeki erimiş kayaçtır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: Fosil.\n- Fosiller kemik, kabuk, yaprak izi ya da ayak izi olabilir.\n- Geçmişteki canlıları ve değişimlerini anlamamızı sağlar."
+        },
+        {
+          "type": "hint",
+          "md": "Dinozorları bunlar sayesinde tanıyoruz."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Tortul kayaçlar katman katman birikir ve içlerinde eski canlıların izlerini saklayabilir. Bu izler, yeryüzündeki yaşamın tarihini okumamıza yarayan bir arşiv gibidir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          47,
+          47
+        ],
+        "quote": "Fosiller, geçmişte yaşamış canlıların kayaçlarda korunmuş kalıntı ve izleridir.",
+        "chapter": "Biyoloji"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "biyoloji"
+      ],
+      "vurgu": [],
+      "contentHash": "193aa4f00a98c3746c42dbf66b739c726482a12ce5a0cce96755f8ce81696e83",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0242",
+      "conceptId": "by-kendiliginden-olusum",
+      "stem": {
+        "md": "Louis Pasteur'ün kuğu boyunlu şişe deneyiyle çürüttüğü görüş hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Türlerin doğal seçilimle değişmesi"
+        },
+        {
+          "key": "B",
+          "md": "Canlıların cansız maddeden kendiliğinden oluşması"
+        },
+        {
+          "key": "C",
+          "md": "Canlıların hücrelerden oluşması"
+        },
+        {
+          "key": "D",
+          "md": "Özelliklerin kuşaktan kuşağa aktarılması"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Doğal seçilim Darwin'in kuramıdır; Pasteur'ün deneyi bununla ilgili değildi.",
+        "C": "Hücre kuramı Pasteur'ün deneyiyle desteklenen ya da çürütülen bir görüş değildir.",
+        "D": "Kalıtım Mendel'in çalışma alanıdır, bu deneyin konusu değildir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: Kendiliğinden oluşum görüşü.\n- Şişenin kıvrık boynu tozu ve mikropları tuttu, et suyu bozulmadı.\n- Boyun kırılınca et suyunda mikroplar üredi; canlı ancak canlıdan oluşur."
+        },
+        {
+          "type": "hint",
+          "md": "Kokmuş etten sineklerin kendiliğinden çıktığına inanılan eski bir düşünce."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Yüzyıllarca bazı canlıların çamurdan ya da çürüyen maddeden kendiliğinden oluştuğuna inanıldı. 19. yüzyılda dikkatle tasarlanmış bir deney, havadaki mikropların rolünü ortaya koyarak bu tartışmayı sonlandırdı."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          47,
+          47
+        ],
+        "quote": "Louis Pasteur, canlıların cansız maddeden kendiliğinden oluştuğu görüşünü kuğu boyunlu şişe deneyiyle çürüttü.",
+        "chapter": "Biyoloji"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "biyoloji"
+      ],
+      "vurgu": [],
+      "contentHash": "3838f2f5c7c8d691a4913474ddf233c279ee84b6b100317330ac66ba1f27dee5",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0243",
+      "conceptId": "by-fotosentez-gazi",
+      "stem": {
+        "md": "Bitkiler fotosentez sırasında havaya hangi gazı bırakır?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Karbondioksit"
+        },
+        {
+          "key": "B",
+          "md": "Azot"
+        },
+        {
+          "key": "C",
+          "md": "Oksijen"
+        },
+        {
+          "key": "D",
+          "md": "Metan"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Karbondioksit fotosentezde bitkinin aldığı gazdır, bıraktığı değil.",
+        "B": "Azot fotosentezde ne alınır ne de açığa çıkar.",
+        "D": "Metan fotosentezin bir ürünü değildir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: Oksijen.\n- Bitkiler karbondioksit ve suyu ışık enerjisiyle glikoza dönüştürür.\n- Bu sırada oksijen açığa çıkar."
+        },
+        {
+          "type": "hint",
+          "md": "Soluduğumuz gaz."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Fotosentez, ışık enerjisinin besindeki kimyasal enerjiye dönüştürüldüğü süreçtir. Yeryüzündeki yaşamın büyük bölümü bu sürecin ürünlerine dayanır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          48,
+          48
+        ],
+        "quote": "Bitkiler fotosentezde karbondioksit ve suyu ışık enerjisiyle glikoza dönüştürür ve oksijen açığa çıkarır.",
+        "chapter": "Biyoloji"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "biyoloji"
+      ],
+      "vurgu": [],
+      "contentHash": "63719b7a6f6710fc4f3d2d0b0588215ab6d812614b95a1ba4a5f45a4a1f28888",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0244",
+      "conceptId": "by-klorofil",
+      "stem": {
+        "md": "Bitkilere yeşil rengini veren pigment ____ adını taşır. Boşluğa hangisi gelmelidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Karoten"
+        },
+        {
+          "key": "B",
+          "md": "Klorofil"
+        },
+        {
+          "key": "C",
+          "md": "Melanin"
+        },
+        {
+          "key": "D",
+          "md": "Hemoglobin"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Karoten turuncu-sarı renk veren pigmenttir; havuçta bol bulunur.",
+        "C": "Melanin insan ve hayvanlarda deri ve saça renk veren pigmenttir.",
+        "D": "Hemoglobin kana kırmızı rengini veren proteindir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: Klorofil.\n- Klorofil ışığı soğurarak fotosentezi başlatır.\n- Yeşil ışığı yansıttığı için yapraklar yeşil görünür."
+        },
+        {
+          "type": "hint",
+          "md": "Kloroplastların içinde bulunur."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Pigmentler belirli renkteki ışığı soğurup diğerlerini yansıtan maddelerdir. Sonbaharda bazı pigmentler azalınca yapraklarda gizli kalan sarı ve turuncu renkler ortaya çıkar."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          48,
+          48
+        ],
+        "quote": "Klorofil, bitkilere yeşil rengini veren pigmenttir.",
+        "chapter": "Biyoloji"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "biyoloji"
+      ],
+      "vurgu": [],
+      "contentHash": "939938c57542fd88d7cc49cde9af7e15aabc7bf6fec9b93383675b4efeb01e7e",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0245",
+      "conceptId": "by-ksilem",
+      "stem": {
+        "md": "Bitkilerde suyu ve suda çözünmüş mineralleri kökten yapraklara taşıyan iletim dokusu hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Floem (soymuk boruları)"
+        },
+        {
+          "key": "B",
+          "md": "Kambiyum"
+        },
+        {
+          "key": "C",
+          "md": "Epidermis"
+        },
+        {
+          "key": "D",
+          "md": "Ksilem (odun boruları)"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Floem yapraklarda üretilen besinleri bitkinin diğer kısımlarına taşır.",
+        "B": "Kambiyum yeni iletim dokusu hücreleri üreten bölünür dokudur.",
+        "C": "Epidermis bitkiyi dıştan örten koruyucu dokudur."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: Ksilem (odun boruları).\n- Su kökten yukarı doğru tek yönde taşınır.\n- Besin taşıyan floemle karıştırılmamalıdır."
+        },
+        {
+          "type": "hint",
+          "md": "Ağacın odunsu kısmı büyük ölçüde bu dokudan oluşur."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Kara bitkileri iki ayrı taşıma sistemine sahiptir: biri topraktan alınanı yukarı taşır, diğeri yapraklarda üretileni dağıtır. Bu borular bitkinin damarları gibi çalışır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          48,
+          48
+        ],
+        "quote": "Bitkiler topraktan aldıkları suyu ksilem adı verilen odun borularıyla yapraklara taşır.",
+        "chapter": "Biyoloji"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "biyoloji"
+      ],
+      "vurgu": [],
+      "contentHash": "fe6e2c22f2647544a4d70b229973264ac3de446c4ff0a4c895c9b379c679d4c1",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0246",
+      "conceptId": "by-stoma",
+      "stem": {
+        "md": "Yapraklarda gaz alışverişinin yapıldığı küçük gözeneklere ____ denir. Boşluğa hangisi gelmelidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Lentisel"
+        },
+        {
+          "key": "B",
+          "md": "Kök tüyü"
+        },
+        {
+          "key": "C",
+          "md": "Stoma"
+        },
+        {
+          "key": "D",
+          "md": "Kütikula"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Lentiseller gövde ve dal kabuğundaki gözeneklerdir, yaprakta değil.",
+        "B": "Kök tüyleri topraktan su ve mineral emer.",
+        "D": "Kütikula yaprağı kaplayan, su kaybını azaltan mumsu tabakadır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: Stoma.\n- Stomalardan karbondioksit girer, oksijen ve su buharı çıkar.\n- Çoğunlukla yaprağın alt yüzeyinde bulunur."
+        },
+        {
+          "type": "hint",
+          "md": "Açılıp kapanabilen, iki hücreyle çevrili delikler."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Yapraklar fotosentez için havadan gaz almak zorundadır ama bu sırada su da kaybeder. Bitki, açılıp kapanabilen küçük açıklıklarla bu dengeyi kurar."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          48,
+          48
+        ],
+        "quote": "Yapraklardaki stomalar, gaz alışverişinin yapıldığı küçük gözeneklerdir.",
+        "chapter": "Biyoloji"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "biyoloji"
+      ],
+      "vurgu": [],
+      "contentHash": "022c975a945cdb9e35c026589174e277cafa9db5bc8fdb0c19286a63d608df97",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0247",
+      "conceptId": "by-egrelti",
+      "stem": {
+        "md": "Aşağıdaki bitkilerden hangisi tohum oluşturmaz, sporla ürer?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Çam"
+        },
+        {
+          "key": "B",
+          "md": "Buğday"
+        },
+        {
+          "key": "C",
+          "md": "Gül"
+        },
+        {
+          "key": "D",
+          "md": "Eğrelti otu"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Çam açık tohumlu bir bitkidir; tohumları kozalakta oluşur.",
+        "B": "Buğday kapalı tohumlu bir bitkidir; tanesi tohumdur.",
+        "C": "Gül çiçekli ve tohumlu bir bitkidir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: Eğrelti otu.\n- Eğreltiler yapraklarının altındaki keseciklerde spor üretir.\n- Çam, buğday ve gül tohumla çoğalır."
+        },
+        {
+          "type": "hint",
+          "md": "Nemli ormanlarda büyüyen, tüy gibi yapraklı bir bitki."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Bitkiler çoğalma biçimlerine göre gruplanır. Bazıları tohum ve çiçek oluştururken, daha eski bir grup tek hücreli, toz gibi üreme birimleriyle yayılır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          48,
+          48
+        ],
+        "quote": "Eğrelti otları tohum oluşturmaz, sporla ürer.",
+        "chapter": "Biyoloji"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "biyoloji"
+      ],
+      "vurgu": [],
+      "contentHash": "5a11edfd380356034979cd376f1fb27f09e2f4ee36dfee9e5d44441717f710c3",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0248",
+      "conceptId": "by-fototropizma",
+      "stem": {
+        "md": "Bitkilerin ışığa doğru yönelerek büyümesine ne ad verilir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Geotropizma"
+        },
+        {
+          "key": "B",
+          "md": "Fototropizma"
+        },
+        {
+          "key": "C",
+          "md": "Fotoperiyodizm"
+        },
+        {
+          "key": "D",
+          "md": "Terleme"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Geotropizma yer çekimine göre yönelmedir; kökün aşağı büyümesi buna örnektir.",
+        "C": "Fotoperiyodizm gün uzunluğuna verilen tepkidir, ışığa doğru eğilme değildir.",
+        "D": "Terleme yapraklardan su buharı kaybıdır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: Fototropizma.\n- Pencere önündeki saksı bitkisi ışığa doğru eğilir.\n- Işık almayan taraftaki hücreler daha hızlı uzar."
+        },
+        {
+          "type": "hint",
+          "md": "Adı Yunanca \"ışık\" ve \"dönme\" sözcüklerinden gelir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Bitkiler yer değiştiremez ama çevresel uyarılara büyüme yönünü değiştirerek yanıt verir. Bu yönelimler uyarının türüne göre farklı adlar alır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          48,
+          48
+        ],
+        "quote": "Bitkilerin ışığa doğru yönelerek büyümesine fototropizma denir.",
+        "chapter": "Biyoloji"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "biyoloji"
+      ],
+      "vurgu": [],
+      "contentHash": "962c79754b3332853d96b9154e728f7f3ca226cbfd2eec50128286f80e0f26d6",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0249",
+      "conceptId": "bal-ureten-bocek",
+      "stem": {
+        "md": "Çiçek özünden bal üreten böcek hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Karınca"
+        },
+        {
+          "key": "B",
+          "md": "Kelebek"
+        },
+        {
+          "key": "C",
+          "md": "Arı"
+        },
+        {
+          "key": "D",
+          "md": "Sinek"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Karınca da topluluk hâlinde yaşar ama bal üretmez.",
+        "B": "Kelebek çiçek özüyle beslenir, onu bala çevirmez.",
+        "D": "Sinek çiçeklere konabilir ama bal yapmaz."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: Arı.\n- Bal arıları çiçek özünü kovana taşır ve bala dönüştürür.\n- Bal, balmumundan yapılan peteklerde saklanır."
+        },
+        {
+          "type": "hint",
+          "md": "Kovanda yaşar."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Bazı böcekler çiçeklerden topladıkları tatlı özü yoğunlaştırıp kış için besin olarak depolar. Bu böcekler çiçekten çiçeğe polen taşıyarak bitkilerin tozlaşmasına da yardım eder."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          49,
+          49
+        ],
+        "quote": "Bal arıları çiçek özünden bal üretir.",
+        "chapter": "Biyoloji"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "biyoloji"
+      ],
+      "vurgu": [],
+      "contentHash": "f9e9c27e62e477c7f058a22a73776fe1327511d4c54bcbe0c485ea3753b948f4",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0250",
+      "conceptId": "by-yunus-memeli",
+      "stem": {
+        "md": "Aşağıdaki deniz canlılarından hangisi bir memelidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Köpekbalığı"
+        },
+        {
+          "key": "B",
+          "md": "Yunus"
+        },
+        {
+          "key": "C",
+          "md": "Ton balığı"
+        },
+        {
+          "key": "D",
+          "md": "Ahtapot"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Köpekbalığı solungaçla soluyan kıkırdaklı bir balıktır.",
+        "C": "Ton balığı kemikli bir balıktır, yavrusunu sütle beslemez.",
+        "D": "Ahtapot bir yumuşakçadır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: Yunus.\n- Yunuslar akciğerle solur ve nefes almak için su yüzüne çıkar.\n- Yavrularını sütle beslerler."
+        },
+        {
+          "type": "hint",
+          "md": "Nefes almak için su yüzüne çıkması gerekir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Denizde yaşamak bir canlıyı balık yapmaz. Bazı deniz hayvanları karadaki atalarından gelir ve akciğerle soluma, yavruyu sütle besleme gibi özellikleri korur."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          49,
+          49
+        ],
+        "quote": "Balinalar ve yunuslar, yavrularını sütle besleyen deniz memelileridir.",
+        "chapter": "Biyoloji"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "biyoloji"
+      ],
+      "vurgu": [],
+      "contentHash": "3252f1712a209e87380c4ea4970c65340b2b96087c0efa305ac5bc46b82f70f4",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0251",
+      "conceptId": "by-iribas",
+      "stem": {
+        "md": "Kurbağanın suda yaşayan ve solungaçla soluyan yavru evresine ne ad verilir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Tırtıl"
+        },
+        {
+          "key": "B",
+          "md": "Pupa"
+        },
+        {
+          "key": "C",
+          "md": "İribaş"
+        },
+        {
+          "key": "D",
+          "md": "Kurtçuk"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Tırtıl kelebeklerin larva evresidir.",
+        "B": "Pupa böceklerde larva ile ergin arasındaki dinlenme evresidir.",
+        "D": "Kurtçuk sineklerin larvasına verilen addır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: İribaş.\n- İribaş zamanla bacak geliştirir, kuyruğu kaybolur ve akciğerle solumaya başlar.\n- Bu değişim kurbağanın başkalaşımıdır."
+        },
+        {
+          "type": "hint",
+          "md": "Büyük başlı, kuyruklu, balığa benzer bir yavru."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "İki yaşamlılar adlarını hem suda hem karada geçen bir yaşam döngüsünden alır. Yavrular ile erginler görünüş ve yaşam biçimi bakımından birbirinden çok farklıdır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          49,
+          49
+        ],
+        "quote": "Kurbağalar yaşamlarına suda solungaçla soluyan iribaş olarak başlar.",
+        "chapter": "Biyoloji"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "biyoloji"
+      ],
+      "vurgu": [],
+      "contentHash": "c4cf1505b451a2cff699ac4eaae81155752570419f74d363aaed047e2da5491d",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0252",
+      "conceptId": "by-bocek-bacak",
+      "stem": {
+        "md": "Böceklerin kaç bacağı vardır?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "8"
+        },
+        {
+          "key": "B",
+          "md": "4"
+        },
+        {
+          "key": "C",
+          "md": "10"
+        },
+        {
+          "key": "D",
+          "md": "6"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Sekiz bacak örümcekler gibi örümceğimsilerin özelliğidir.",
+        "B": "Dört bacak böceklerde değil, birçok kara omurgalısında görülür.",
+        "C": "On bacak yengeç gibi kabuklularda görülür."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: 6.\n- Böceklerin vücudu baş, göğüs ve karın olarak üç bölümdür.\n- Üç çift bacak göğüs bölümüne bağlıdır."
+        },
+        {
+          "type": "hint",
+          "md": "Üç çift."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Böcekler eklembacaklılar içinde en kalabalık gruptur. Onları akrabalarından ayırmak için vücut bölümlerine ve bacak sayısına bakılır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          49,
+          49
+        ],
+        "quote": "Böceklerin vücudu baş, göğüs ve karın olmak üzere üç bölümden oluşur ve altı bacakları vardır.",
+        "chapter": "Biyoloji"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "biyoloji"
+      ],
+      "vurgu": [],
+      "contentHash": "0054c00be1d2995e0cbc24225761d7bcbcf281262362120320118f77906006f7",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0253",
+      "conceptId": "by-orumcek",
+      "stem": {
+        "md": "Aşağıdakilerden hangisi bir böcek değildir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Karınca"
+        },
+        {
+          "key": "B",
+          "md": "Örümcek"
+        },
+        {
+          "key": "C",
+          "md": "Uğur böceği"
+        },
+        {
+          "key": "D",
+          "md": "Çekirge"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Karınca altı bacaklı bir böcektir.",
+        "C": "Uğur böceği altı bacaklı bir böcektir.",
+        "D": "Çekirge altı bacaklı bir böcektir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: Örümcek.\n- Örümcekler sekiz bacaklıdır ve örümceğimsiler grubundandır.\n- Böceklerin altı bacağı vardır."
+        },
+        {
+          "type": "hint",
+          "md": "Bacaklarını sayın."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Günlük dilde küçük, bacaklı her canlıya böcek denebilir; biyolojide ise böcek belirli özellikleri olan bir gruptur. Akrep, kene ve benzerleri ayrı bir grupta toplanır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          49,
+          49
+        ],
+        "quote": "Örümcekler sekiz bacaklıdır ve böcek değil, örümceğimsiler grubundandır.",
+        "chapter": "Biyoloji"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "biyoloji"
+      ],
+      "vurgu": [],
+      "contentHash": "5045d2cf83a4244f5cfb3977c9823808c4ce81fa5cf6cfc386da5bcc4452d040",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0254",
+      "conceptId": "by-ornitorenk",
+      "stem": {
+        "md": "Avustralya'da yaşayan, ördeğinkine benzer gagası olan ve yumurtlayan memeli hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Ornitorenk"
+        },
+        {
+          "key": "B",
+          "md": "Kanguru"
+        },
+        {
+          "key": "C",
+          "md": "Koala"
+        },
+        {
+          "key": "D",
+          "md": "Vombat"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Kanguru keselidir; yavrusunu doğurur ve kesesinde büyütür.",
+        "C": "Koala keseli bir memelidir, yumurtlamaz.",
+        "D": "Vombat da keselidir ve yavru doğurur."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: Ornitorenk.\n- Yumurtlayan memelilerin bilinen örneğidir.\n- Yumurtadan çıkan yavrularını yine sütle besler."
+        },
+        {
+          "type": "hint",
+          "md": "Kunduza benzer kuyruğu, perdeli ayakları vardır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Memelilerin büyük çoğunluğu yavru doğurur. Avustralya ve çevresinde ise memelilerin en eski kollarından birine ait, hem süt veren hem yumurtlayan birkaç tür yaşar."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          49,
+          49
+        ],
+        "quote": "Ornitorenk, yumurtlayan memelilere örnektir.",
+        "chapter": "Biyoloji"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "biyoloji"
+      ],
+      "vurgu": [],
+      "contentHash": "a457ba30a328d95519a086c40501b5af7e08a5c9d0f46304c64f92f0cbadfa2c",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0255",
+      "conceptId": "by-metamorfoz-sirasi",
+      "stem": {
+        "md": "Kelebeğin gelişim evrelerinin doğru sırası hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Yumurta - Tırtıl - Pupa - Kelebek"
+        },
+        {
+          "key": "B",
+          "md": "Yumurta - Pupa - Tırtıl - Kelebek"
+        },
+        {
+          "key": "C",
+          "md": "Tırtıl - Yumurta - Pupa - Kelebek"
+        },
+        {
+          "key": "D",
+          "md": "Yumurta - Tırtıl - Kelebek - Pupa"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Pupa tırtıldan sonra gelir; yumurtadan doğrudan pupa çıkmaz.",
+        "C": "Tırtıl yumurtadan çıkar, yumurtadan önce gelemez.",
+        "D": "Pupa ergin kelebekten önceki evredir, sonra değil."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru sıra: Yumurta - Tırtıl - Pupa - Kelebek.\n- Tırtıl beslenip büyür, sonra koza içinde pupaya dönüşür.\n- Pupadan ergin kelebek çıkar."
+        },
+        {
+          "type": "hint",
+          "md": "Koza evresi en sondan bir önce gelir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Bazı hayvanlar gelişirken biçim ve yaşam tarzı bakımından köklü bir değişim geçirir. Bu değişim sırasında larva ile ergin farklı besinlerle beslenebilir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          49,
+          49
+        ],
+        "quote": "Kelebekler yumurta, tırtıl, pupa ve ergin evrelerinden geçerek başkalaşım (metamorfoz) geçirir.",
+        "chapter": "Biyoloji"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "biyoloji"
+      ],
+      "vurgu": [],
+      "contentHash": "b7cbfe16ff1c3fe9a76d819409cc0a71a9a6ae9451ddf3c06de57b0b52def0d5",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0256",
+      "conceptId": "by-uretici",
+      "stem": {
+        "md": "Besin zincirinde güneş enerjisini kullanarak kendi besinini yapan canlılara ne ad verilir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Tüketici"
+        },
+        {
+          "key": "B",
+          "md": "Ayrıştırıcı"
+        },
+        {
+          "key": "C",
+          "md": "Asalak"
+        },
+        {
+          "key": "D",
+          "md": "Üretici"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Tüketiciler besinlerini başka canlılardan hazır alır.",
+        "B": "Ayrıştırıcılar ölü canlıları parçalayarak beslenir.",
+        "C": "Asalak, başka bir canlının üzerinde ya da içinde yaşayıp ondan beslenir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: Üretici.\n- Yeşil bitkiler fotosentezle kendi besinini yapar.\n- Besin zincirinin ilk halkasını oluştururlar."
+        },
+        {
+          "type": "hint",
+          "md": "Zincirin ilk halkası."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Besin zinciri, enerjinin bir canlıdan diğerine aktarılma yolunu gösterir. Her halkadaki canlı, enerjiyi bir öncekinden ya da doğrudan güneşten sağlar."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          50,
+          50
+        ],
+        "quote": "Besin zincirinde üreticiler, güneş enerjisini kullanarak kendi besinini yapan yeşil bitkilerdir.",
+        "chapter": "Biyoloji"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "biyoloji"
+      ],
+      "vurgu": [],
+      "contentHash": "8e99eefb74392ab3bbf93db5e00d55d8a71d89356573088d85d81d6987b36c81",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0257",
+      "conceptId": "by-iliski-eslestirme",
+      "stem": {
+        "md": "Canlılar arası ilişkileri tanımlarıyla eşleştirin.\n\n1. Mutualizm\n2. Parazitlik\n3. Kommensalizm\n\na. Biri yararlanır, diğeri etkilenmez.\nb. İki taraf da yararlanır.\nc. Biri yararlanır, diğeri zarar görür."
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "1-a, 2-c, 3-b"
+        },
+        {
+          "key": "B",
+          "md": "1-b, 2-a, 3-c"
+        },
+        {
+          "key": "C",
+          "md": "1-c, 2-b, 3-a"
+        },
+        {
+          "key": "D",
+          "md": "1-b, 2-c, 3-a"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Mutualizmde iki taraf da kazanır; birinin etkilenmemesi kommensalizmin özelliğidir.",
+        "B": "Parazitlikte konak zarar görür; etkilenmeden kalmaz.",
+        "C": "Mutualizmde zarar gören taraf yoktur."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Mutualizm: iki taraf da yararlanır (1-b).\n- Parazitlik: biri yararlanır, diğeri zarar görür (2-c).\n- Kommensalizm: biri yararlanır, diğeri etkilenmez (3-a)."
+        },
+        {
+          "type": "hint",
+          "md": "Bitlerin konağına ne yaptığını düşünün."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Farklı türler aynı ortamda yaşarken birbirini çeşitli biçimlerde etkiler. Bu ilişkiler, tarafların kazanç ya da kayıp durumuna göre adlandırılır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          50,
+          50
+        ],
+        "quote": "İki farklı türün birlikte yaşayıp her ikisinin de yarar sağladığı ilişkiye mutualizm denir.",
+        "chapter": "Biyoloji"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "biyoloji"
+      ],
+      "vurgu": [],
+      "contentHash": "adb4355b4a7d35773bb09de0d5b83f16225eb9ab89dd47338d1c9ffeaae2b232",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0258",
+      "conceptId": "by-liken",
+      "stem": {
+        "md": "Bir mantar ile bir alg ya da siyanobakterinin oluşturduğu, çıplak kayalar üzerinde bile yaşayabilen ortak yaşam birliği hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Yosun"
+        },
+        {
+          "key": "B",
+          "md": "Plankton"
+        },
+        {
+          "key": "C",
+          "md": "Mantar kökü (mikoriza)"
+        },
+        {
+          "key": "D",
+          "md": "Liken"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Yosun kendi başına bir bitkidir, iki canlının ortaklığı değildir.",
+        "B": "Plankton suda sürüklenen küçük canlıların genel adıdır.",
+        "C": "Mikoriza mantar ile bitki kökü arasındaki ortaklıktır, alg içermez."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: Liken.\n- Mantar barınak ve nem sağlar, alg ya da siyanobakteri fotosentezle besin üretir.\n- Kayaları aşındırarak toprak oluşumuna katkı yaparlar."
+        },
+        {
+          "type": "hint",
+          "md": "Kirli havaya duyarlı oldukları için hava kirliliği göstergesi olarak kullanılır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Bazı canlılar o kadar sıkı bir ortaklık kurar ki birlikte tek bir canlı gibi görünür. Bu birlikler, tek başına hiçbirinin yaşayamayacağı zorlu ortamlara ilk yerleşenler arasındadır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          50,
+          50
+        ],
+        "quote": "Liken, bir mantar ile bir alg ya da siyanobakterinin oluşturduğu ortak yaşam birliğidir.",
+        "chapter": "Biyoloji"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "biyoloji"
+      ],
+      "vurgu": [],
+      "contentHash": "01c2fcd9c9c03f0382d6aebd2872288eaa8ec74657d10f6cfe0e2006a64e2441",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0259",
+      "conceptId": "by-azot-baglama",
+      "stem": {
+        "md": "Baklagillerin köklerindeki yumrularda yaşayıp havadaki azotu bağlayan canlılar hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Virüsler"
+        },
+        {
+          "key": "B",
+          "md": "Algler"
+        },
+        {
+          "key": "C",
+          "md": "Bakteriler"
+        },
+        {
+          "key": "D",
+          "md": "Mayalar"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Virüsler hücre dışında çoğalamaz ve azot bağlamaz.",
+        "B": "Algler fotosentez yapar ama baklagil köklerinde yumru oluşturmaz.",
+        "D": "Mayalar şekerleri mayalandırır, azot bağlamaz."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: Bakteriler.\n- Bu bakteriler havadaki azotu bitkinin kullanabileceği bileşiklere çevirir.\n- Bu yüzden baklagiller toprağı azotça zenginleştirir."
+        },
+        {
+          "type": "hint",
+          "md": "Fasulye ve nohut köklerindeki küçük şişliklere bakın."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Azot canlılar için gereklidir ama havadaki azotu bitkiler doğrudan kullanamaz. Bazı mikroskobik canlılar bu azotu dönüştürerek doğadaki azot döngüsünü sürdürür."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          50,
+          50
+        ],
+        "quote": "Baklagillerin köklerindeki yumrularda yaşayan bakteriler havadaki azotu bağlar.",
+        "chapter": "Biyoloji"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "biyoloji"
+      ],
+      "vurgu": [],
+      "contentHash": "28b4fd31bc576234c38ef5c014d275ecb071e98735b0a1cfda4953cf064d6d02",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0260",
+      "conceptId": "en-kucuk-kemik",
+      "stem": {
+        "md": "İnsan vücudundaki en küçük kemik hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Çekiç"
+        },
+        {
+          "key": "B",
+          "md": "Örs"
+        },
+        {
+          "key": "C",
+          "md": "Köprücük"
+        },
+        {
+          "key": "D",
+          "md": "Üzengi"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Çekiç de orta kulaktadır ama üzengiden büyüktür.",
+        "B": "Örs de orta kulak kemiğidir; üzengiden büyüktür.",
+        "C": "Köprücük kemiği omuzdadır ve çok daha büyüktür."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: Üzengi.\n- Orta kulakta yer alır.\n- Ses titreşimlerini iç kulağa iletir."
+        },
+        {
+          "type": "hint",
+          "md": "Orta kulakta, adını bir binicilik gerecinden alır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Orta kulakta, kulak zarından gelen titreşimleri iç kulağa aktaran üç küçük kemikten oluşan bir zincir bulunur. Bu kemikler titreşimi güçlendirerek işitmeye yardım eder."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          51,
+          51
+        ],
+        "quote": "İnsan vücudundaki en küçük kemik, orta kulaktaki üzengi kemiğidir.",
+        "chapter": "Biyoloji"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "biyoloji"
+      ],
+      "vurgu": [],
+      "contentHash": "895679ff73df52b819871a271090c113b0a87e94fb60285fc3e7c14d3a85e489",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0261",
+      "conceptId": "by-femur",
+      "stem": {
+        "md": "İnsan vücudundaki en uzun kemik hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Kaval kemiği"
+        },
+        {
+          "key": "B",
+          "md": "Pazu kemiği"
+        },
+        {
+          "key": "C",
+          "md": "Uyluk kemiği (femur)"
+        },
+        {
+          "key": "D",
+          "md": "Omurga"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Kaval kemiği bacağın alt kısmındadır ve uyluk kemiğinden kısadır.",
+        "B": "Pazu kemiği kolun üst kemiğidir, uyluk kemiğinden kısadır.",
+        "D": "Omurga tek bir kemik değil, omurlardan oluşan bir dizidir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: Uyluk kemiği (femur).\n- Kalça ile diz arasında yer alır.\n- Aynı zamanda vücudun en güçlü kemiklerindendir."
+        },
+        {
+          "type": "hint",
+          "md": "Kalça ile diz arasında."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "İskelet, vücudu taşıyan ve hareket etmesini sağlayan bir çatıdır. Bacak kemikleri tüm vücut ağırlığını taşıdığı için uzun ve kalın yapılıdır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          51,
+          51
+        ],
+        "quote": "İnsan vücudundaki en uzun kemik, uyluk kemiğidir (femur).",
+        "chapter": "Biyoloji"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "biyoloji"
+      ],
+      "vurgu": [],
+      "contentHash": "6539df63731b90393c865ccacb78c0d6878ba1efb4dc79ad1632828734128388",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0262",
+      "conceptId": "by-kemik-sayisi",
+      "stem": {
+        "md": "Yetişkin bir insanın iskeletinde genellikle kaç kemik bulunur?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "186"
+        },
+        {
+          "key": "B",
+          "md": "206"
+        },
+        {
+          "key": "C",
+          "md": "226"
+        },
+        {
+          "key": "D",
+          "md": "300"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "186, yetişkin iskeletindeki kemik sayısının altında kalır.",
+        "C": "226, yetişkin iskeletindeki kemik sayısını aşar.",
+        "D": "300'e yakın sayı yeni doğan bebeklerde görülür; büyüdükçe bazı kemikler kaynaşır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: 206.\n- Bebeklerde kemik sayısı daha fazladır.\n- Büyüme sırasında kafatası gibi bölgelerde bazı kemikler birleşir."
+        },
+        {
+          "type": "hint",
+          "md": "200'ü biraz geçer."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "İnsan iskeleti doğumdan yetişkinliğe değişir. Bebeklikte ayrı olan bazı kemikler zamanla kaynaşarak tek kemik hâline gelir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          51,
+          51
+        ],
+        "quote": "Yetişkin bir insanın iskeletinde genellikle 206 kemik bulunur.",
+        "chapter": "Biyoloji"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "biyoloji"
+      ],
+      "vurgu": [],
+      "contentHash": "fb02972a192ed6a3354215f0709f4f3fdc0ab7fcdb4e3b50c7a06d35ff081bc7",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0263",
+      "conceptId": "by-noron",
+      "stem": {
+        "md": "Sinir sisteminin temel hücresi hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Alyuvar"
+        },
+        {
+          "key": "B",
+          "md": "Kas hücresi"
+        },
+        {
+          "key": "C",
+          "md": "Yağ hücresi"
+        },
+        {
+          "key": "D",
+          "md": "Nöron"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Alyuvar kanda oksijen taşıyan hücredir.",
+        "B": "Kas hücresi kasılarak hareketi sağlar, uyarı iletmez.",
+        "C": "Yağ hücresi enerji depolar."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: Nöron.\n- Nöronlar elektriksel ve kimyasal uyarıları iletir.\n- Beyin milyarlarca nörondan oluşur."
+        },
+        {
+          "type": "hint",
+          "md": "Uzun uzantılarıyla mesaj taşır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Vücudun farklı bölümleri arasında bilgi akışı özel hücrelerle sağlanır. Bu hücreler uzun uzantılarla birbirine bağlanarak bir iletişim ağı kurar."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          51,
+          51
+        ],
+        "quote": "Sinir sisteminin temel hücresi nörondur.",
+        "chapter": "Biyoloji"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "biyoloji"
+      ],
+      "vurgu": [],
+      "contentHash": "8590c35df1ab4ab1727b15c76dcd92329c528d7faf366e5d9167757e89faae55",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0264",
+      "conceptId": "by-deri",
+      "stem": {
+        "md": "İnsan vücudunun en büyük organı hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Karaciğer"
+        },
+        {
+          "key": "B",
+          "md": "Deri"
+        },
+        {
+          "key": "C",
+          "md": "Beyin"
+        },
+        {
+          "key": "D",
+          "md": "Akciğer"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Karaciğer en büyük iç organdır ama deriden küçüktür.",
+        "C": "Beyin deriye göre çok daha küçüktür.",
+        "D": "Akciğerler büyük olsa da deri tüm vücudu kaplar."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: Deri.\n- Deri vücudun tamamını kaplar.\n- Koruma, ısı düzenleme ve duyu işlevleri vardır."
+        },
+        {
+          "type": "hint",
+          "md": "Vücudu dıştan sarar."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Organ denince çoğu zaman vücudun içindeki yapılar akla gelir. Oysa vücudu dış etkenlere karşı koruyan, terleyerek ısıyı düzenleyen ve dokunmayı algılayan yapı da bir organdır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          51,
+          51
+        ],
+        "quote": "Deri, insan vücudunun en büyük organıdır.",
+        "chapter": "Biyoloji"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "biyoloji"
+      ],
+      "vurgu": [],
+      "contentHash": "07e4555c2822438123b70bbb25fbe7f80149b2b530d1525d97e4c4530cd4ff1b",
+      "deleted": false
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 import type { Question } from './schema/question'
 
-export const STANDART = '1.1.0'
+export const STANDART = '1.2.0'
 
 export const BOLGE_STANDART = '1.1.0'
 

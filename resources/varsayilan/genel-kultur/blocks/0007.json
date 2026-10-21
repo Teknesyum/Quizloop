@@ -1,0 +1,2605 @@
+{
+  "blockId": "0007",
+  "questions": [
+    {
+      "id": "genel-kultur-0265",
+      "conceptId": "saat-kac-dakika",
+      "stem": {
+        "md": "Bir saat kaç dakikadır?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Altmış"
+        },
+        {
+          "key": "B",
+          "md": "Otuz"
+        },
+        {
+          "key": "C",
+          "md": "Yüz"
+        },
+        {
+          "key": "D",
+          "md": "Yirmi dört"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Otuz dakika yarım saattir.",
+        "C": "Yüz, onluk sayma alışkanlığından gelir; saat altmışlık düzenle bölünür.",
+        "D": "Yirmi dört, bir gündeki saat sayısıdır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Bir saat altmış dakikadır.\n- Bir dakika da altmış saniyedir; zaman altmışlık düzende bölünür."
+        },
+        {
+          "type": "hint",
+          "md": "Bir dakikadaki saniye sayısıyla aynıdır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Zamanı bölmede kullanılan altmışlık düzen Mezopotamya'dan kalmadır. Altmış, birçok sayıya tam bölündüğü için pratik bir taban olmuştur."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          52,
+          52
+        ],
+        "quote": "Bir saat altmış dakikadır.",
+        "chapter": "Matematik"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "ölçü-birimleri"
+      ],
+      "vurgu": [],
+      "contentHash": "6d27b2ae8c158b2d973d676f2cfc9956bf45086ee74bb83a45d848d9856d58e4",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0266",
+      "conceptId": "duzine-kac-adet",
+      "stem": {
+        "md": "Bir düzine kaç adettir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "On"
+        },
+        {
+          "key": "B",
+          "md": "Yirmi dört"
+        },
+        {
+          "key": "C",
+          "md": "Yüz kırk dört"
+        },
+        {
+          "key": "D",
+          "md": "On iki"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "On adet bir deste eder, düzine etmez.",
+        "B": "Yirmi dört adet iki düzinedir.",
+        "C": "Yüz kırk dört adet on iki düzinedir; buna grosa denir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Bir düzine on iki adettir.\n- Yarım düzine altı adet eder."
+        },
+        {
+          "type": "hint",
+          "md": "Bir yıldaki ay sayısı kadar."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Düzine, yumurta ve çatal bıçak gibi eşyaların satışında kullanılan eski bir sayma birimidir. Kolayca ikiye, üçe ve dörde bölünebilmesi onu kullanışlı kılar."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          52,
+          52
+        ],
+        "quote": "Bir düzine on iki adettir.",
+        "chapter": "Matematik"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "ölçü-birimleri"
+      ],
+      "vurgu": [],
+      "contentHash": "4c68fa4f682625fe058aadd0e42cb41d861f41f9c099608c29714e7845928849",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0267",
+      "conceptId": "mt-grosa",
+      "stem": {
+        "md": "Yüz kırk dört adetlik sayma birimine ne ad verilir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Düzine"
+        },
+        {
+          "key": "B",
+          "md": "Deste"
+        },
+        {
+          "key": "C",
+          "md": "Grosa"
+        },
+        {
+          "key": "D",
+          "md": "Batman"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Düzine on iki adettir.",
+        "B": "Deste on adettir.",
+        "D": "Batman sayı değil, eski bir ağırlık ölçüsüdür."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- 144 adet bir grosadır.\n- Hesap: 12 düzine × 12 adet = 144 adet."
+        },
+        {
+          "type": "hint",
+          "md": "Düzinenin düzinesidir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Ticarette küçük eşyalar on ikilik katlarla sayılırdı. Bu birimler, düzineyi kendi içinde çoğaltarak elde edilir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          52,
+          52
+        ],
+        "quote": "On iki düzine, yani yüz kırk dört adet, bir grosa eder.",
+        "chapter": "Matematik"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "ölçü-birimleri"
+      ],
+      "vurgu": [],
+      "contentHash": "4ebf7e3af3ce30aca266b7268ebac2979df9944acc53ca84db3923fb73a606de",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0268",
+      "conceptId": "mt-gun-saniye",
+      "stem": {
+        "md": "Bir günde kaç saniye vardır?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "8.640"
+        },
+        {
+          "key": "B",
+          "md": "86.400"
+        },
+        {
+          "key": "C",
+          "md": "1.440"
+        },
+        {
+          "key": "D",
+          "md": "3.600"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "8.640, doğru sonucun onda biridir; bir sıfır eksik kalmıştır.",
+        "C": "1.440, bir gündeki dakika sayısıdır.",
+        "D": "3.600, bir saatteki saniye sayısıdır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap 86.400 saniyedir.\n- Hesap: 24 saat × 60 dakika = 1.440 dakika.\n- 1.440 dakika × 60 saniye = 86.400 saniye."
+        },
+        {
+          "type": "hint",
+          "md": "Önce bir saatteki saniyeyi bul, sonra gündeki saat sayısıyla çarp."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Zaman birimleri arasında geçiş, her adımda çarpanla ilerler: gün saate, saat dakikaya, dakika saniyeye bölünür."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          52,
+          52
+        ],
+        "quote": "Bir gün yirmi dört saattir.",
+        "chapter": "Matematik"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "hesap"
+      ],
+      "vurgu": [],
+      "contentHash": "720c5b240046fdc647ac19146641059d6ad91b05de9c2bae7a0cc0fcb8243874",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0269",
+      "conceptId": "mt-en-kucuk-asal",
+      "stem": {
+        "md": "En küçük asal sayı hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "1"
+        },
+        {
+          "key": "B",
+          "md": "3"
+        },
+        {
+          "key": "C",
+          "md": "0"
+        },
+        {
+          "key": "D",
+          "md": "2"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "1 asal sayı sayılmaz; asal sayı 1'den büyük olmalıdır.",
+        "B": "3 asaldır ama kendinden küçük bir asal vardır.",
+        "C": "0 her sayıya bölünebildiği için asal değildir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- En küçük asal sayı 2'dir.\n- 2 aynı zamanda tek çift asal sayıdır; diğer çift sayılar 2'ye bölünür."
+        },
+        {
+          "type": "hint",
+          "md": "Hem asal hem de çift olan tek sayıdır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Asal sayılar, başka sayıların çarpımı olarak yazılamayan doğal sayılardır. Her doğal sayı asal çarpanlarına ayrılabilir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          53,
+          53
+        ],
+        "quote": "2, hem en küçük asal sayı hem de tek çift asal sayıdır.",
+        "chapter": "Matematik"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "sayılar"
+      ],
+      "vurgu": [],
+      "contentHash": "b12de36afa83f3f65b52e7fcbca590cbda5dbb48a0e70d87fd9dc90f2135d18f",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0270",
+      "conceptId": "mt-bir-asal-mi",
+      "stem": {
+        "md": "1 sayısı için aşağıdakilerden hangisi doğrudur?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Ne asal ne de bileşik sayıdır"
+        },
+        {
+          "key": "B",
+          "md": "En küçük asal sayıdır"
+        },
+        {
+          "key": "C",
+          "md": "En küçük bileşik sayıdır"
+        },
+        {
+          "key": "D",
+          "md": "Tek çift asal sayıdır"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Asal sayı tanımı 1'den büyük olmayı şart koşar.",
+        "C": "Bileşik sayı, 1 ve kendisinden başka böleni olan sayıdır; 1'in böyle bir böleni yoktur.",
+        "D": "1 tek sayıdır; tek çift asal 2'dir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- 1 ne asal ne de bileşik sayıdır.\n- Asal sayı 1'den büyük olmalıdır; bileşik sayının ise 1 ve kendisi dışında böleni olmalıdır."
+        },
+        {
+          "type": "hint",
+          "md": "Tanımların ikisinde de bir şart 1'i dışarıda bırakır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Doğal sayılar bölenlerine göre sınıflanır: yalnızca iki böleni olanlar ve daha fazla böleni olanlar. Bu sınıflamada bazı sayılar özel bir konumdadır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          53,
+          53
+        ],
+        "quote": "1 asal sayı da bileşik sayı da değildir.",
+        "chapter": "Matematik"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "sayılar"
+      ],
+      "vurgu": [],
+      "contentHash": "fb6ad56029e20eb4b0144dd3b69bb0e3f5f1d7b59812249988596e3ae83c089a",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0271",
+      "conceptId": "mt-asal-degil",
+      "stem": {
+        "md": "Aşağıdaki sayılardan hangisi asal sayı değildir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "53"
+        },
+        {
+          "key": "B",
+          "md": "51"
+        },
+        {
+          "key": "C",
+          "md": "47"
+        },
+        {
+          "key": "D",
+          "md": "59"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "53'ün 1 ve kendisinden başka böleni yoktur.",
+        "C": "47'nin 1 ve kendisinden başka böleni yoktur.",
+        "D": "59'un 1 ve kendisinden başka böleni yoktur."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- 51 asal değildir.\n- Hesap: 5 + 1 = 6, 3'e bölünür; 51 = 3 × 17.\n- 53, 47 ve 59 yalnızca 1'e ve kendilerine bölünür."
+        },
+        {
+          "type": "hint",
+          "md": "Rakamlarını toplayıp 3'e bölünebilirliği dene."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Bir sayının asal olup olmadığını anlamak için, karekökünü aşmayan asal sayılara bölünüp bölünmediğine bakmak yeterlidir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          53,
+          53
+        ],
+        "quote": "Asal sayı, yalnızca 1'e ve kendisine bölünebilen, 1'den büyük doğal sayıdır.",
+        "chapter": "Matematik"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "sayılar"
+      ],
+      "vurgu": [],
+      "contentHash": "2453dda641b64722aa07937cf67f3bcb0e549f8d9af4843b5d0dcddfa2389353",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0272",
+      "conceptId": "mt-3-bolunebilme",
+      "stem": {
+        "md": "Aşağıdaki sayılardan hangisi 3'e tam bölünür?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "2.457"
+        },
+        {
+          "key": "B",
+          "md": "2.458"
+        },
+        {
+          "key": "C",
+          "md": "1.234"
+        },
+        {
+          "key": "D",
+          "md": "5.111"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Rakamları toplamı 19'dur; 3'e bölünmez.",
+        "C": "Rakamları toplamı 10'dur; 3'e bölünmez.",
+        "D": "Rakamları toplamı 8'dir; 3'e bölünmez."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- 2.457 sayısı 3'e tam bölünür.\n- Hesap: 2 + 4 + 5 + 7 = 18, 18 de 3'e bölünür.\n- Sağlama: 2.457 ÷ 3 = 819."
+        },
+        {
+          "type": "hint",
+          "md": "Bölme yapmadan rakamların toplamına bak."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Bölünebilme kuralları, büyük sayıları bölmeden bir sayıya tam bölünüp bölünmediğini anlamayı sağlar. Kimi kural son basamaklara, kimi rakamların toplamına bakar."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          53,
+          53
+        ],
+        "quote": "Rakamlarının toplamı 3'e bölünebilen bir sayı 3'e tam bölünür.",
+        "chapter": "Matematik"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "hesap"
+      ],
+      "vurgu": [],
+      "contentHash": "da6cfcd9cf906d839f0fe6a8973bfaf311f954460521dd0e6b759152a4df3fed",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0273",
+      "conceptId": "mt-asal-sonsuz",
+      "stem": {
+        "md": "Öklid'in Elemanlar adlı eserinde asal sayılarla ilgili yer alan ünlü ispat hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Asal sayıların sonsuz sayıda olduğu"
+        },
+        {
+          "key": "B",
+          "md": "En büyük asal sayının 97 olduğu"
+        },
+        {
+          "key": "C",
+          "md": "Bütün asal sayıların tek olduğu"
+        },
+        {
+          "key": "D",
+          "md": "Ardışık iki asal sayı arasındaki farkın hep 2 olduğu"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Her zaman daha büyük bir asal bulunabildiği için en büyük asal yoktur.",
+        "C": "2 çift olduğu hâlde asal sayıdır.",
+        "D": "Örneğin 7 ile 11 arasındaki fark 4'tür."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Elemanlar'da asal sayıların sonsuz sayıda olduğu ispatlanır.\n- Bu, sonucun bilinen ilk ispatıdır."
+        },
+        {
+          "type": "hint",
+          "md": "Asal sayıların listesinin bir sonu olup olmadığıyla ilgilidir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Antik Yunan matematiği, sonuçları gözlemle değil mantıksal ispatla kurmasıyla öne çıkar. Asal sayılar bu ispatların en eski konularındandır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          53,
+          53
+        ],
+        "quote": "Asal sayıların sonsuz sayıda olduğunun bilinen ilk ispatı Öklid'in Elemanlar adlı eserinde yer alır.",
+        "chapter": "Matematik"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "sayılar"
+      ],
+      "vurgu": [],
+      "contentHash": "90ed2789b633d2afd01b9641a54016d4ec2e0f909acff4af7c956973277185d7",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0274",
+      "conceptId": "mt-4-bolunebilme",
+      "stem": {
+        "md": "Bir sayının 4'e tam bölünmesi için son ____ basamağının oluşturduğu sayının 4'e bölünmesi yeterlidir. Boşluğa ne gelmelidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "bir"
+        },
+        {
+          "key": "B",
+          "md": "iki"
+        },
+        {
+          "key": "C",
+          "md": "üç"
+        },
+        {
+          "key": "D",
+          "md": "dört"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Yalnızca son basamak 2'ye bölünebilmeyi gösterir; 4 için yetmez.",
+        "C": "Son üç basamak 8'e bölünebilme kuralında kullanılır.",
+        "D": "Son dört basamağa bakmak gerekmez; daha azı yeterlidir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Son iki basamağa bakılır.\n- Örnek: 1.316 için 16, 4'e bölünür; demek ki 1.316 da 4'e bölünür."
+        },
+        {
+          "type": "hint",
+          "md": "100, 4'e tam bölünür; geriye kalan kısma bak."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Bölünebilme kurallarının çoğu, onun kuvvetlerinin o sayıya bölünüp bölünmediğine dayanır. Bu yüzden kimi kurallarda yalnızca son basamaklara bakmak yeter."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          53,
+          53
+        ],
+        "quote": "Son iki basamağının oluşturduğu sayı 4'e bölünebilen bir sayı 4'e tam bölünür.",
+        "chapter": "Matematik"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "sayılar"
+      ],
+      "vurgu": [],
+      "contentHash": "79fdca560b8623f98ed94531878340e6bdcf5502708b38585f11cf6b3693b1e9",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0275",
+      "conceptId": "mt-ucgen-ic-aci",
+      "stem": {
+        "md": "Bir üçgenin iç açılarının toplamı kaç derecedir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "180"
+        },
+        {
+          "key": "B",
+          "md": "360"
+        },
+        {
+          "key": "C",
+          "md": "90"
+        },
+        {
+          "key": "D",
+          "md": "270"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "360 derece, dörtgenin iç açılarının toplamıdır.",
+        "C": "90 derece, dik açının ölçüsüdür.",
+        "D": "270 derece, üç dik açının toplamıdır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Üçgenin iç açılarının toplamı 180 derecedir.\n- Bu, düzlemdeki her üçgen için geçerlidir."
+        },
+        {
+          "type": "hint",
+          "md": "Bir doğru açının ölçüsüne eşittir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Çokgenlerin iç açıları toplamı kenar sayısına bağlıdır. Her köşegen çokgeni üçgenlere ayırarak bu toplamın hesaplanmasını sağlar."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          54,
+          54
+        ],
+        "quote": "Bir üçgenin iç açılarının toplamı 180 derecedir.",
+        "chapter": "Matematik"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "geometri"
+      ],
+      "vurgu": [],
+      "contentHash": "b1d0002ac5a7a38040de4751ee53b1197171c9337293ec9b61bc8356f8fb3e9d",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0276",
+      "conceptId": "mt-dortgen-aci-hesap",
+      "stem": {
+        "md": "Bir dörtgenin üç iç açısı 80°, 95° ve 105° ise dördüncü iç açısı kaç derecedir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "80°"
+        },
+        {
+          "key": "B",
+          "md": "100°"
+        },
+        {
+          "key": "C",
+          "md": "90°"
+        },
+        {
+          "key": "D",
+          "md": "70°"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "100° ile toplam 380° olur, 360°'ı aşar.",
+        "C": "90° ile toplam 370° olur.",
+        "D": "70° ile toplam 350° olur."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Dördüncü açı 80°'dir.\n- Hesap: 80 + 95 + 105 = 280.\n- 360 − 280 = 80."
+        },
+        {
+          "type": "hint",
+          "md": "Önce dörtgenin iç açıları toplamını hatırla."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Bir dörtgen, bir köşegenle iki üçgene ayrılabilir. Bu yüzden iç açılar toplamı iki üçgeninkine eşittir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          54,
+          54
+        ],
+        "quote": "Bir dörtgenin iç açılarının toplamı 360 derecedir.",
+        "chapter": "Matematik"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "hesap"
+      ],
+      "vurgu": [],
+      "contentHash": "c7b72e34a1fcfc9ccd898777e4449ed82a261babb2a91cedaf4e27f82bc2787c",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0277",
+      "conceptId": "mt-pisagor-hesap",
+      "stem": {
+        "md": "Dik kenarları 6 cm ve 8 cm olan bir dik üçgenin hipotenüsü kaç cm'dir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "14"
+        },
+        {
+          "key": "B",
+          "md": "12"
+        },
+        {
+          "key": "C",
+          "md": "10"
+        },
+        {
+          "key": "D",
+          "md": "7"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "14, iki dik kenarın düz toplamıdır; kareler toplanmamıştır.",
+        "B": "12 cm'nin karesi 144'tür, 100 etmez.",
+        "D": "7 cm, kısa dik kenardan bile yalnızca biraz uzundur; hipotenüs bundan uzun olmalıdır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Hipotenüs 10 cm'dir.\n- Hesap: 6² + 8² = 36 + 64 = 100.\n- √100 = 10."
+        },
+        {
+          "type": "hint",
+          "md": "Kenarların karelerini topla, sonra karekök al."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Dik üçgende kenarlar arasında karelerle kurulan bir ilişki vardır. Bu ilişki, ölçülmesi zor uzaklıkların hesaplanmasında kullanılır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          54,
+          54
+        ],
+        "quote": "Pisagor teoremine göre bir dik üçgende hipotenüsün karesi, dik kenarların karelerinin toplamına eşittir.",
+        "chapter": "Matematik"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "hesap"
+      ],
+      "vurgu": [],
+      "contentHash": "7c6e488af3aaec70eb13eaf0cf31ed959f542171ac2b988df279c3f529d64f44",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0278",
+      "conceptId": "mt-pi-tanima",
+      "stem": {
+        "md": "Yaklaşık değeri 3,14 olan, kesirle tam olarak yazılamayan ve dairenin çevresinin çapına oranını veren sayı hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Pi (π)"
+        },
+        {
+          "key": "B",
+          "md": "e sayısı"
+        },
+        {
+          "key": "C",
+          "md": "Altın oran (φ)"
+        },
+        {
+          "key": "D",
+          "md": "Karekök 2"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "e sayısı yaklaşık 2,718'dir.",
+        "C": "Altın oran yaklaşık 1,618'dir.",
+        "D": "Karekök 2 yaklaşık 1,414'tür."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Bu sayı pi'dir.\n- Çevre = çap × π; π ≈ 3,14 ve irrasyoneldir."
+        },
+        {
+          "type": "hint",
+          "md": "Yunan alfabesinden bir harfle gösterilir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "İrrasyonel sayılar, iki tam sayının oranı olarak yazılamaz; ondalık basamakları tekrarsız sürer. Matematikte birkaç ünlü sabit bu türdendir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          54,
+          54
+        ],
+        "quote": "Pi sayısı yaklaşık 3,14'tür ve kesirle tam olarak yazılamayan irrasyonel bir sayıdır.",
+        "chapter": "Matematik"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "geometri"
+      ],
+      "vurgu": [],
+      "contentHash": "4c549b2b475421340fc38f3d35e3c90d37ee7477e72f02c804f2173a946a1b88",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0279",
+      "conceptId": "mt-daire-cevre",
+      "stem": {
+        "md": "Çapı 10 cm olan bir dairenin çevresi yaklaşık kaç cm'dir? (π ≈ 3,14)"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "78,5"
+        },
+        {
+          "key": "B",
+          "md": "31,4"
+        },
+        {
+          "key": "C",
+          "md": "15,7"
+        },
+        {
+          "key": "D",
+          "md": "62,8"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "78,5, yarıçapı 5 cm olan dairenin alanıdır.",
+        "C": "15,7, çevrenin yarısıdır.",
+        "D": "62,8, 2πr formülünde yarıçap yerine çap kullanıldığında çıkar."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Çevre yaklaşık 31,4 cm'dir.\n- Hesap: Çevre = çap × π = 10 × 3,14 = 31,4."
+        },
+        {
+          "type": "hint",
+          "md": "Çap ile pi'yi çarp."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Dairenin çevresi ile alanı farklı formüllerle bulunur; biri uzunluk, öteki yüzey ölçer. İkisinde de pi sayısı yer alır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          54,
+          54
+        ],
+        "quote": "Bir dairenin çevresi, çapının pi sayısıyla çarpımına eşittir.",
+        "chapter": "Matematik"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "hesap"
+      ],
+      "vurgu": [],
+      "contentHash": "ae9a7c5dc977f7689e90d6c589b757d3a211a5905d18abf6b02e5a205c780705",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0280",
+      "conceptId": "mt-eskenar-aci",
+      "stem": {
+        "md": "Eşkenar üçgenin her bir iç açısı kaç derecedir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "45"
+        },
+        {
+          "key": "B",
+          "md": "60"
+        },
+        {
+          "key": "C",
+          "md": "90"
+        },
+        {
+          "key": "D",
+          "md": "120"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "45 derece, ikizkenar dik üçgenin dar açılarıdır.",
+        "C": "90 derece dik açıdır; eşkenar üçgende dik açı yoktur.",
+        "D": "120 derece, düzgün altıgenin iç açısıdır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Her iç açı 60 derecedir.\n- Hesap: 180 ÷ 3 = 60."
+        },
+        {
+          "type": "hint",
+          "md": "Üç eşit açı, üçgenin açı toplamını paylaşır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Eşkenar üçgende üç kenar eşit uzunluktadır. Kenarları eşit olan üçgenlerde karşılarındaki açılar da eşit olur."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          54,
+          54
+        ],
+        "quote": "Eşkenar üçgenin her iç açısı 60 derecedir.",
+        "chapter": "Matematik"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "geometri"
+      ],
+      "vurgu": [],
+      "contentHash": "0527a8e8bc48b76bc83eb0dc536f8144c50843eb3ef599e539a1bfbaef71bf94",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0281",
+      "conceptId": "mt-hektar",
+      "stem": {
+        "md": "Bir hektar kaç metrekaredir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "1.000"
+        },
+        {
+          "key": "B",
+          "md": "10.000"
+        },
+        {
+          "key": "C",
+          "md": "100"
+        },
+        {
+          "key": "D",
+          "md": "100.000"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "1.000 metrekare bir dönümdür.",
+        "C": "100 metrekare bir ardır.",
+        "D": "100.000 metrekare on hektardır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Bir hektar 10.000 m²'dir.\n- Bu, kenarı 100 metre olan kare bir alana eşittir."
+        },
+        {
+          "type": "hint",
+          "md": "Kenarı yüz metre olan bir kareyi düşün."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Tarım arazileri ve ormanlar gibi geniş alanlar metrekare yerine daha büyük alan birimleriyle ölçülür."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          55,
+          55
+        ],
+        "quote": "Bir hektar on bin metrekaredir.",
+        "chapter": "Matematik"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "ölçü-birimleri"
+      ],
+      "vurgu": [],
+      "contentHash": "09a6590bb964f67487b5eb6d2c0589b585539bf7a854928983918b7dfc3fb174",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0282",
+      "conceptId": "mt-donum-hektar",
+      "stem": {
+        "md": "Bir hektar kaç dönüm eder?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "10"
+        },
+        {
+          "key": "B",
+          "md": "100"
+        },
+        {
+          "key": "C",
+          "md": "4"
+        },
+        {
+          "key": "D",
+          "md": "1.000"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "100 dönüm on hektar eder.",
+        "C": "4 dönüm 4.000 m²'dir, hektarın yarısına bile ulaşmaz.",
+        "D": "1.000, bir dönümdeki metrekare sayısıdır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Bir hektar 10 dönümdür.\n- Hesap: 10.000 m² ÷ 1.000 m² = 10."
+        },
+        {
+          "type": "hint",
+          "md": "İki birimin metrekare karşılıklarını birbirine böl."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Dönüm, Türkiye'de tarla ve bahçe ölçümünde yaygın kullanılan geleneksel bir alan birimidir. Resmî ölçülerde aynı alan dekar olarak da anılır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          55,
+          55
+        ],
+        "quote": "Türkiye'de kullanılan dönüm bin metrekaredir.",
+        "chapter": "Matematik"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "hesap"
+      ],
+      "vurgu": [],
+      "contentHash": "f92cfa69aac647391ae6f6a9719a5049cf3a3ab4115bfddc0d5d2cb92007a5bd",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0283",
+      "conceptId": "mt-birim-esleme",
+      "stem": {
+        "md": "Aşağıdaki birimleri karşılıklarıyla eşleştir.\n\n1. Bir ton\n2. Bir litre\n3. Bir kilometre\n\na) 1.000 santimetreküp\nb) 1.000 kilogram\nc) 1.000 metre"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "1-a, 2-b, 3-c"
+        },
+        {
+          "key": "B",
+          "md": "1-b, 2-a, 3-c"
+        },
+        {
+          "key": "C",
+          "md": "1-c, 2-a, 3-b"
+        },
+        {
+          "key": "D",
+          "md": "1-b, 2-c, 3-a"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Ton bir hacim değil, kütle birimidir.",
+        "C": "Ton uzunluk ölçmez; kilometre de kütle ölçmez.",
+        "D": "Litre uzunluk ölçmez; kilometre de hacim ölçmez."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Ton kütle: 1.000 kg (1-b).\n- Litre hacim: 1.000 cm³ (2-a).\n- Kilometre uzunluk: 1.000 m (3-c)."
+        },
+        {
+          "type": "hint",
+          "md": "Önce her birimin ne ölçtüğünü belirle: kütle, hacim, uzunluk."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Metrik sistemde birimler genellikle onun kuvvetleriyle büyür. Kilo ön eki bin kat anlamına gelir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          55,
+          55
+        ],
+        "quote": "Bir ton bin kilogramdır.",
+        "chapter": "Matematik"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "ölçü-birimleri"
+      ],
+      "vurgu": [],
+      "contentHash": "5fbb20a4d0935c35bcee84a39d44c155043e98bad286935c2e66738043d9c1a7",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0284",
+      "conceptId": "mt-metre-santimetre",
+      "stem": {
+        "md": "2,5 metre kaç santimetredir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "250"
+        },
+        {
+          "key": "B",
+          "md": "25"
+        },
+        {
+          "key": "C",
+          "md": "2.500"
+        },
+        {
+          "key": "D",
+          "md": "205"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "25 cm, metrenin dörtte birinden az bir uzunluktur.",
+        "C": "2.500, milimetreye çevrildiğinde çıkan sayıdır.",
+        "D": "205, virgülün sıfırla karıştırılmasıyla çıkar."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- 2,5 m = 250 cm.\n- Hesap: 2,5 × 100 = 250."
+        },
+        {
+          "type": "hint",
+          "md": "Metreyi santimetreye çevirirken yüzle çarp."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Metre, metrik sistemin temel uzunluk birimidir. Santi ön eki yüzde bir anlamına gelir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          55,
+          55
+        ],
+        "quote": "Bir metre yüz santimetredir.",
+        "chapter": "Matematik"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "hesap"
+      ],
+      "vurgu": [],
+      "contentHash": "58b776afa53329ef4a720a79457a3ca39fa6d99395b70c6167c30d8c1f6cc578",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0285",
+      "conceptId": "mt-yuzde-25",
+      "stem": {
+        "md": "240'ın yüzde 25'i kaçtır?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "80"
+        },
+        {
+          "key": "B",
+          "md": "60"
+        },
+        {
+          "key": "C",
+          "md": "120"
+        },
+        {
+          "key": "D",
+          "md": "24"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "80, 240'ın üçte biridir.",
+        "C": "120, 240'ın yarısıdır.",
+        "D": "24, 240'ın yüzde 10'udur."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Sonuç 60'tır.\n- Hesap: Yüzde 25 dörtte birdir; 240 ÷ 4 = 60."
+        },
+        {
+          "type": "hint",
+          "md": "Yüzde 25'i dörtte bir diye düşün."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Yüzde, bir bütünü yüz eşit parça kabul ederek oran bildirir. Bazı yüzdeler basit kesirlere karşılık gelir ve zihinden hesaplanır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          56,
+          56
+        ],
+        "quote": "Bir sayının yüzde 25'i, o sayının dörtte biridir.",
+        "chapter": "Matematik"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "hesap"
+      ],
+      "vurgu": [],
+      "contentHash": "36bc88d55f5bee103eeb872329e43cedf5c9896cc1054cc201eb447d8f22bf2a",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0286",
+      "conceptId": "mt-sifirinci-kuvvet",
+      "stem": {
+        "md": "7⁰ işleminin sonucu kaçtır?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "0"
+        },
+        {
+          "key": "B",
+          "md": "7"
+        },
+        {
+          "key": "C",
+          "md": "Tanımsız"
+        },
+        {
+          "key": "D",
+          "md": "1"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Sıfırıncı kuvvet sonucu sıfıra götürmez.",
+        "B": "7, sayının birinci kuvvetidir.",
+        "C": "Tanımsız olan 0⁰ gibi özel durumlardır; 7⁰ tanımlıdır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- 7⁰ = 1'dir.\n- Sıfırdan farklı her sayının sıfırıncı kuvveti 1'dir."
+        },
+        {
+          "type": "hint",
+          "md": "Bir sayıyı kendine bölünce ne çıkar?"
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Üslü sayılarda kuvvet bir azaldıkça sonuç tabana bölünür. Bu kural sürdürüldüğünde sıfırıncı kuvvetin değeri kendiliğinden ortaya çıkar."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          56,
+          56
+        ],
+        "quote": "Sıfır dışındaki her sayının sıfırıncı kuvveti 1'dir.",
+        "chapter": "Matematik"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "hesap"
+      ],
+      "vurgu": [],
+      "contentHash": "ba9122879fb1beb75c3b26f39b39598f4e4d4f9db1b53224a17e31c2d0fcefa0",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0287",
+      "conceptId": "mt-sifira-bolme",
+      "stem": {
+        "md": "Aşağıdaki işlemlerden hangisinin sonucu tanımsızdır?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "0 ÷ 5"
+        },
+        {
+          "key": "B",
+          "md": "0 × 5"
+        },
+        {
+          "key": "C",
+          "md": "5 ÷ 0"
+        },
+        {
+          "key": "D",
+          "md": "5 − 5"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Sıfırın 5'e bölümü 0'dır.",
+        "B": "Sıfırla çarpım 0'dır.",
+        "D": "Bir sayıdan kendisini çıkarmak 0 verir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- 5 ÷ 0 tanımsızdır.\n- Hiçbir sayı 0 ile çarpıldığında 5 vermez; bu yüzden bölümün sonucu yoktur."
+        },
+        {
+          "type": "hint",
+          "md": "Bölmeyi çarpmanın tersi olarak düşün."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Bölme, çarpmanın tersidir: a ÷ b sorusu, b ile çarpılınca a veren sayıyı arar. Bu tanım bazı işlemlerde sonuç bulunamamasına yol açar."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          56,
+          56
+        ],
+        "quote": "Bir sayının sıfıra bölümü tanımsızdır.",
+        "chapter": "Matematik"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "hesap"
+      ],
+      "vurgu": [],
+      "contentHash": "549ea6dae767cded8160095fa2fc8ec253b901ef428147fff0735b55a511aa9b",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0288",
+      "conceptId": "mt-gauss-toplam",
+      "stem": {
+        "md": "1'den 100'e kadar olan doğal sayıların toplamı kaçtır?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "5000"
+        },
+        {
+          "key": "B",
+          "md": "5050"
+        },
+        {
+          "key": "C",
+          "md": "10.100"
+        },
+        {
+          "key": "D",
+          "md": "4950"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "5000, ortalamanın 50 alınmasıyla çıkan yuvarlak bir tahmindir.",
+        "C": "10.100, n × (n + 1) çarpımının ikiye bölünmemiş hâlidir.",
+        "D": "4950, 1'den 99'a kadar olan sayıların toplamıdır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Toplam 5050'dir.\n- Hesap: 1 + 100, 2 + 99, ... 50 çift, her biri 101 eder.\n- 50 × 101 = 5050."
+        },
+        {
+          "type": "hint",
+          "md": "Baştaki ve sondaki sayıları eşleştir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Ardışık sayıları baştan ve sondan eşleyerek toplamak, uzun toplamları kısaltan eski bir yöntemdir. Gauss'a atfedilen bir okul anısıyla ünlenmiştir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          56,
+          56
+        ],
+        "quote": "1'den 100'e kadar olan doğal sayıların toplamı 5050'dir.",
+        "chapter": "Matematik"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "hesap"
+      ],
+      "vurgu": [],
+      "contentHash": "aa6e2074f76bc01ee52cf4130b6a04c2a984c913cb4bb6d9ac88a6711cf97aaf",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0289",
+      "conceptId": "mt-faktoriyel",
+      "stem": {
+        "md": "5! (5 faktöriyel) kaçtır?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "25"
+        },
+        {
+          "key": "B",
+          "md": "60"
+        },
+        {
+          "key": "C",
+          "md": "15"
+        },
+        {
+          "key": "D",
+          "md": "120"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "25, 5'in karesidir.",
+        "B": "60, sonucun yarısıdır; bir çarpan eksik kalmıştır.",
+        "C": "15, 1'den 5'e kadar sayıların toplamıdır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- 5! = 120.\n- Hesap: 1 × 2 × 3 × 4 × 5 = 120."
+        },
+        {
+          "type": "hint",
+          "md": "Toplama değil, çarpma yapılır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Faktöriyel, ünlem işaretiyle gösterilir ve sıralama sayılarını hesaplamakta kullanılır. Örneğin birkaç kitabın rafa kaç farklı biçimde dizilebileceğini verir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          56,
+          56
+        ],
+        "quote": "5 faktöriyel, yani 1'den 5'e kadar olan doğal sayıların çarpımı, 120'dir.",
+        "chapter": "Matematik"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "hesap"
+      ],
+      "vurgu": [],
+      "contentHash": "a51c4ff80d87b4dfad9847bb8e0116966139888bc01a2c1428497a636a046182",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0290",
+      "conceptId": "mt-cebir-koken",
+      "stem": {
+        "md": "Cebir sözcüğü hangi matematikçinin kitabının adından gelir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Öklid"
+        },
+        {
+          "key": "B",
+          "md": "Pisagor"
+        },
+        {
+          "key": "C",
+          "md": "Ömer Hayyam"
+        },
+        {
+          "key": "D",
+          "md": "Harezmi"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Öklid geometri üzerine yazmıştır; eserinin adı Elemanlar'dır.",
+        "B": "Pisagor'dan bize ulaşan bir kitap yoktur.",
+        "C": "Ömer Hayyam cebirle uğraşmış ama sözcük ondan daha önceki bir kitaptan gelir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Cebir sözcüğü Harezmi'nin kitabının adındaki el-cebr kelimesinden gelir.\n- Harezmi 9. yüzyılda Bağdat'ta çalışmıştır."
+        },
+        {
+          "type": "hint",
+          "md": "Aynı bilginin adı başka bir matematik terimine de dönüşmüştür."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Denklemlerle bilinmeyeni bulma yöntemleri, Orta Çağ İslam dünyasında sistemli bir dal hâline geldi. Bu dalın adı Arapçadan Batı dillerine geçmiştir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          57,
+          57
+        ],
+        "quote": "Cebir sözcüğü, Harezmi'nin kitabının adındaki el-cebr kelimesinden gelir.",
+        "chapter": "Matematik"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "matematik-tarihi"
+      ],
+      "vurgu": [],
+      "contentHash": "5b5e7987cf0bf5aa4824c394b9639aedcc38984ea95393a68511c17dce5a704d",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0291",
+      "conceptId": "mt-algoritma-beytulhikme",
+      "stem": {
+        "md": "Adının Latinceleşmiş biçiminden \"algoritma\" sözcüğü türemiş olan bilgin, hangi şehirdeki Beytülhikme'de çalışmıştır?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Kahire"
+        },
+        {
+          "key": "B",
+          "md": "Semerkant"
+        },
+        {
+          "key": "C",
+          "md": "Bağdat"
+        },
+        {
+          "key": "D",
+          "md": "İskenderiye"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Kahire'deki büyük ilim kurumları daha sonraki dönemlere aittir.",
+        "B": "Semerkant, 15. yüzyılda Uluğ Bey'in gözlemevi ile anılır.",
+        "D": "İskenderiye, Antik Çağ'daki kütüphanesiyle bilinir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Algoritma sözcüğü Harezmi'nin adından türemiştir.\n- Harezmi, Bağdat'taki Beytülhikme'de çalışmıştır."
+        },
+        {
+          "type": "hint",
+          "md": "Abbasi halifelerinin başkentini düşün."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Beytülhikme, Abbasiler döneminde Yunanca, Farsça ve Hintçe eserlerin çevrildiği bir bilgi merkeziydi. Matematik ve astronomi burada gelişti."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          57,
+          57
+        ],
+        "quote": "Harezmi, 9. yüzyılda Bağdat'taki Beytülhikme'de çalışmış bir matematikçidir.",
+        "chapter": "Matematik"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "matematik-tarihi"
+      ],
+      "vurgu": [],
+      "contentHash": "69c35c273f25d0d6f86455e2dc19eb48795a5935b0539f7be50ff10b9ecdb894",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0292",
+      "conceptId": "mt-oklid-elemanlar",
+      "stem": {
+        "md": "Geometriyi tanım ve aksiyomlara dayandıran Elemanlar adlı eserin yazarı kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Pisagor"
+        },
+        {
+          "key": "B",
+          "md": "Arşimet"
+        },
+        {
+          "key": "C",
+          "md": "Thales"
+        },
+        {
+          "key": "D",
+          "md": "Öklid"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Pisagor, adını taşıyan teoremle bilinir; Elemanlar'ı yazmamıştır.",
+        "B": "Arşimet daha çok kaldıraç, kaldırma kuvveti ve pi hesabıyla tanınır.",
+        "C": "Thales, Elemanlar'dan yaklaşık üç yüzyıl önce yaşamıştır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Elemanlar'ın yazarı Öklid'dir.\n- Eser, okullarda okutulan düzlem geometrisinin temelini oluşturur."
+        },
+        {
+          "type": "hint",
+          "md": "Okulda öğrenilen düzlem geometrisi bazen onun adıyla anılır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Aksiyomatik yöntemde birkaç temel kabulden yola çıkılarak bütün sonuçlar mantıksal ispatla elde edilir. Bu yaklaşım Antik Yunan'da sistemleşti."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          57,
+          57
+        ],
+        "quote": "Öklid, geometriyi tanım ve aksiyomlara dayandıran Elemanlar adlı eseri yazmıştır.",
+        "chapter": "Matematik"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "matematik-tarihi"
+      ],
+      "vurgu": [],
+      "contentHash": "82d6b8b5d996bc7a60b04a6815231294f278dc901733e7f5c10eaf245b845976",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0293",
+      "conceptId": "mt-brahmagupta-sifir",
+      "stem": {
+        "md": "Sıfırın bir sayı olarak işlem kurallarını 7. yüzyılda yazan Brahmagupta hangi matematik geleneğine mensuptur?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Antik Yunan"
+        },
+        {
+          "key": "B",
+          "md": "Hint"
+        },
+        {
+          "key": "C",
+          "md": "Roma"
+        },
+        {
+          "key": "D",
+          "md": "Antik Mısır"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Antik Yunan matematiği sıfırı bir sayı olarak kullanmamıştır.",
+        "C": "Roma rakamlarında sıfırı gösteren bir sembol yoktur.",
+        "D": "Antik Mısır matematiğinde sıfır bir sayı olarak işlenmemiştir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Brahmagupta bir Hint matematikçisidir.\n- Sıfırla toplama, çıkarma ve çarpma kurallarını yazmıştır."
+        },
+        {
+          "type": "hint",
+          "md": "Bugün kullandığımız rakamlara verilen adla ilgili bir ülke."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Sıfırın hem yer tutucu hem de kendi başına bir sayı olarak kullanılması, onluk basamak sisteminin gelişmesini sağladı. Bu sistem sonra İslam dünyası aracılığıyla Avrupa'ya geçti."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          57,
+          57
+        ],
+        "quote": "Sıfırın bir sayı olarak işlem kurallarını 7. yüzyılda Hint matematikçisi Brahmagupta yazmıştır.",
+        "chapter": "Matematik"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "matematik-tarihi"
+      ],
+      "vurgu": [],
+      "contentHash": "0686f4eed6b5d355583747d961acc3f431443eea09793ac40e44e62ce86a49d0",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0294",
+      "conceptId": "mt-arsimet-pi",
+      "stem": {
+        "md": "Pi sayısının değerini, daireye iç ve dış çokgenler çizerek yaklaşık olarak hesaplayan Antik Çağ matematikçisi kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Arşimet"
+        },
+        {
+          "key": "B",
+          "md": "Pisagor"
+        },
+        {
+          "key": "C",
+          "md": "Öklid"
+        },
+        {
+          "key": "D",
+          "md": "Thales"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Pisagor dik üçgen teoremiyle bilinir.",
+        "C": "Öklid geometriyi aksiyomlara dayandıran eseriyle bilinir.",
+        "D": "Thales benzer üçgenler ve gölge ölçümüyle anılır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Bu yöntemi Arşimet kullanmıştır.\n- Kenar sayısı arttıkça çokgenlerin çevresi dairenin çevresine yaklaşır."
+        },
+        {
+          "type": "hint",
+          "md": "Kaldırma kuvvetiyle de anılan Sirakuzalı bilgin."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Bir eğrinin uzunluğunu, kenar sayısı giderek artan çokgenlerle sıkıştırarak bulmak, limit fikrinin erken bir örneğidir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          57,
+          57
+        ],
+        "quote": "Arşimet, pi sayısının değerini daireye iç ve dış çokgenler çizerek yaklaşık olarak hesaplamıştır.",
+        "chapter": "Matematik"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "matematik-tarihi"
+      ],
+      "vurgu": [],
+      "contentHash": "b20b5b2443d90d9818308daba967a89968adebf607b8c5bc66b7d2a0ef17b09d",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0295",
+      "conceptId": "mt-pisagor-sisam",
+      "stem": {
+        "md": "Dik üçgenlerle ilgili ünlü teoreme adını veren Antik Yunan matematikçisi hangi adada doğmuştur?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Girit"
+        },
+        {
+          "key": "B",
+          "md": "Rodos"
+        },
+        {
+          "key": "C",
+          "md": "Sisam"
+        },
+        {
+          "key": "D",
+          "md": "Sicilya"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Girit, Minos uygarlığıyla bilinir.",
+        "B": "Rodos, Antik Çağ'daki dev heykeliyle bilinir.",
+        "D": "Sicilya, Arşimet'in doğduğu Sirakuza'nın bulunduğu adadır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Teorem Pisagor'un adını taşır.\n- Pisagor, Ege'deki Sisam Adası'nda doğmuştur."
+        },
+        {
+          "type": "hint",
+          "md": "Ege'de, Kuşadası'nın hemen karşısındadır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Pisagorcular sayıları evrenin temeli sayan bir okul kurdu. Müzikteki aralıkları da sayı oranlarıyla açıklamaya çalıştılar."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          58,
+          58
+        ],
+        "quote": "Pisagor, Antik Yunan'da Sisam Adası'nda doğmuş bir filozof ve matematikçidir.",
+        "chapter": "Matematik"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "matematik-tarihi"
+      ],
+      "vurgu": [],
+      "contentHash": "9dc9663f5385b0b205851a255cf8ffe7fff520d568b3ec79ae3f7c070ab20fb2",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0296",
+      "conceptId": "mt-fibonacci-sonraki",
+      "stem": {
+        "md": "1, 1, 2, 3, 5, 8, 13, ____ dizisinde boşluğa hangi sayı gelir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "21"
+        },
+        {
+          "key": "B",
+          "md": "18"
+        },
+        {
+          "key": "C",
+          "md": "20"
+        },
+        {
+          "key": "D",
+          "md": "26"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "18, ardışık farkların 5 olduğu varsayılınca çıkar.",
+        "C": "20, son terime 7 eklenerek bulunur; dizi sabit artışla ilerlemez.",
+        "D": "26, son terimin iki katıdır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Boşluğa 21 gelir.\n- Hesap: Her terim önceki iki terimin toplamıdır; 8 + 13 = 21."
+        },
+        {
+          "type": "hint",
+          "md": "Son iki terime bak."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Bu dizi, Orta Çağ'da tavşan çoğalmasıyla ilgili bir problemle Avrupa'da tanındı. Ardışık terimlerin oranı giderek altın orana yaklaşır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          58,
+          58
+        ],
+        "quote": "Fibonacci dizisinde her terim, kendinden önceki iki terimin toplamıdır.",
+        "chapter": "Matematik"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "sayılar"
+      ],
+      "vurgu": [],
+      "contentHash": "be4aae199f3702dfd839ce7bd958b4c8c9b241d5a9de402265b4c07520ad1b54",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0297",
+      "conceptId": "mt-descartes-koordinat",
+      "stem": {
+        "md": "Noktaların konumunu sayı çiftleriyle gösteren koordinat sistemini geliştiren düşünür kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Isaac Newton"
+        },
+        {
+          "key": "B",
+          "md": "René Descartes"
+        },
+        {
+          "key": "C",
+          "md": "Blaise Pascal"
+        },
+        {
+          "key": "D",
+          "md": "Gottfried Leibniz"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Newton hareket yasaları ve kalkülüsle tanınır.",
+        "C": "Pascal olasılık ve basınç üzerine çalışmalarıyla tanınır.",
+        "D": "Leibniz kalkülüs ve ikili sayı sistemi üzerine çalışmalarıyla tanınır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Koordinat sistemini René Descartes geliştirmiştir.\n- Bu sistem geometri ile cebiri birleştiren analitik geometrinin temelidir."
+        },
+        {
+          "type": "hint",
+          "md": "\"Düşünüyorum, öyleyse varım\" sözüyle de bilinir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Koordinat düzlemi, şekilleri denklemlerle, denklemleri de şekillerle göstermeyi sağlar. Bu yolla geometrik sorular cebirle çözülebilir hâle geldi."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          58,
+          58
+        ],
+        "quote": "René Descartes, noktaların konumunu sayı çiftleriyle gösteren koordinat sistemini geliştirmiştir.",
+        "chapter": "Matematik"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "matematik-tarihi"
+      ],
+      "vurgu": [],
+      "contentHash": "ae8f532eda7fa3d4f9a66b75ed1e396518155978819f81dfbad3928b00e68201",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0298",
+      "conceptId": "mt-kalkulus-ikili",
+      "stem": {
+        "md": "Kalkülüsü birbirinden bağımsız olarak geliştiren iki matematikçi hangi seçenekte birlikte verilmiştir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Isaac Newton ve René Descartes"
+        },
+        {
+          "key": "B",
+          "md": "Gottfried Leibniz ve Öklid"
+        },
+        {
+          "key": "C",
+          "md": "Isaac Newton ve Gottfried Leibniz"
+        },
+        {
+          "key": "D",
+          "md": "Blaise Pascal ve Pierre de Fermat"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Descartes koordinat sistemiyle bilinir; kalkülüsün kurucularından değildir.",
+        "B": "Öklid Antik Çağ'da yaşamıştır; kalkülüs 17. yüzyılda doğmuştur.",
+        "D": "Pascal ile Fermat olasılık kuramının temellerini birlikte atmıştır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Kalkülüsü Newton ve Leibniz bağımsız olarak geliştirmiştir.\n- Bugün kullanılan gösterimlerin çoğu Leibniz'den gelir."
+        },
+        {
+          "type": "hint",
+          "md": "Biri İngiliz, öteki Alman'dır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Kalkülüs, değişimi ve birikimi inceleyen matematik dalıdır; türev ve integral kavramlarına dayanır. 17. yüzyılda kimin önce bulduğu üzerine uzun bir tartışma yaşandı."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          58,
+          58
+        ],
+        "quote": "Isaac Newton ve Gottfried Leibniz, kalkülüsü birbirinden bağımsız olarak geliştirmiştir.",
+        "chapter": "Matematik"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "matematik-tarihi"
+      ],
+      "vurgu": [],
+      "contentHash": "784f69a388696d3cbb68b4032e747e101fecc4edaf1c7d38a3e67fe41d7c680b",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0299",
+      "conceptId": "mt-cahit-arf",
+      "stem": {
+        "md": "Adı cebirde kullanılan bir değişmeze verilmiş olan Türk matematikçi kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Ali Kuşçu"
+        },
+        {
+          "key": "B",
+          "md": "Cahit Arf"
+        },
+        {
+          "key": "C",
+          "md": "Kerim Erim"
+        },
+        {
+          "key": "D",
+          "md": "Takiyüddin"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Ali Kuşçu 15. yüzyılda yaşamış bir matematik ve astronomi bilginidir.",
+        "C": "Kerim Erim, Türkiye'de modern matematik eğitiminin öncülerindendir ama adı bir değişmeze verilmemiştir.",
+        "D": "Takiyüddin 16. yüzyılda İstanbul'da gözlemevi kuran astronomdur."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Bu matematikçi Cahit Arf'tır.\n- Arf değişmezi, cebir ve topolojide kullanılan bir kavramdır."
+        },
+        {
+          "type": "hint",
+          "md": "Soyadı, kavramın adında da geçer."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Matematikte önemli kavramlar çoğunlukla onları ilk tanımlayan kişinin adıyla anılır. Cumhuriyet döneminde yetişen Türk matematikçilerinden biri de böyle bir kavrama adını vermiştir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          58,
+          58
+        ],
+        "quote": "Cahit Arf, adını taşıyan Arf değişmeziyle tanınan Türk matematikçidir.",
+        "chapter": "Matematik"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "matematik-tarihi"
+      ],
+      "vurgu": [],
+      "contentHash": "611352d3971675d6914378acdd4a18aaee99f5f5985247a88fcae7d9384deac9",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0300",
+      "conceptId": "mt-ali-kuscu",
+      "stem": {
+        "md": "15. yüzyılda Semerkant'tan İstanbul'a gelerek matematik ve astronomi dersleri veren bilgin kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Uluğ Bey"
+        },
+        {
+          "key": "B",
+          "md": "Ali Kuşçu"
+        },
+        {
+          "key": "C",
+          "md": "Takiyüddin"
+        },
+        {
+          "key": "D",
+          "md": "Harezmi"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Uluğ Bey Semerkant'ın hükümdarı ve gözlemevinin kurucusuydu; İstanbul'a gelmedi.",
+        "C": "Takiyüddin 16. yüzyılda yaşamıştır.",
+        "D": "Harezmi 9. yüzyılda Bağdat'ta yaşamıştır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Bu bilgin Ali Kuşçu'dur.\n- Semerkant'ta Uluğ Bey'in yanında çalıştıktan sonra İstanbul'a gelmiştir."
+        },
+        {
+          "type": "hint",
+          "md": "Adı, Uluğ Bey'in doğancısı olan babasından gelir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Semerkant'taki gözlemevi, 15. yüzyılın önemli astronomi merkezlerindendi. Buradan yetişen bilginler Osmanlı medreselerinde matematik ve astronominin gelişmesine katkı verdi."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          58,
+          58
+        ],
+        "quote": "Ali Kuşçu, 15. yüzyılda Semerkant'tan İstanbul'a gelerek matematik ve astronomi dersleri vermiş bir bilgindir.",
+        "chapter": "Matematik"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "matematik-tarihi"
+      ],
+      "vurgu": [],
+      "contentHash": "699c60a0874d4402dd427b1f1f2ab01a3cb645f6eff1e49c77e5b8e51aba9c5c",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0301",
+      "conceptId": "mt-roma-l",
+      "stem": {
+        "md": "Roma rakamlarında L hangi değeri gösterir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "100"
+        },
+        {
+          "key": "B",
+          "md": "50"
+        },
+        {
+          "key": "C",
+          "md": "500"
+        },
+        {
+          "key": "D",
+          "md": "5"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "100, C ile gösterilir.",
+        "C": "500, D ile gösterilir.",
+        "D": "5, V ile gösterilir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- L, 50 değerindedir.\n- Örnek: LX = 60, XL = 40."
+        },
+        {
+          "type": "hint",
+          "md": "X'in beş katıdır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Roma rakamları yedi harf sembolden oluşur ve sayılar bu sembollerin yan yana yazılmasıyla elde edilir. Bugün saat kadranlarında ve yüzyıl adlarında hâlâ kullanılır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          59,
+          59
+        ],
+        "quote": "Roma rakamlarında I bir, V beş, X on, L elli, C yüz, D beş yüz, M bin değerindedir.",
+        "chapter": "Matematik"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "roma-rakamları"
+      ],
+      "vurgu": [],
+      "contentHash": "cf3af4d71e6727590552beb0045f28be6da9dd04952a126abdae107881ad65fc",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0302",
+      "conceptId": "mt-roma-xl",
+      "stem": {
+        "md": "XL Roma rakamıyla yazılmış sayı kaçtır?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "40"
+        },
+        {
+          "key": "B",
+          "md": "60"
+        },
+        {
+          "key": "C",
+          "md": "90"
+        },
+        {
+          "key": "D",
+          "md": "400"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "60, LX biçiminde yazılır.",
+        "C": "90, XC biçiminde yazılır.",
+        "D": "400, CD biçiminde yazılır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- XL = 40'tır.\n- Hesap: X (10), L'nin (50) solunda olduğu için çıkarılır: 50 − 10 = 40."
+        },
+        {
+          "type": "hint",
+          "md": "Küçük sembolün büyüğün hangi yanında durduğuna dikkat et."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Roma rakamlarında sembollerin sırası anlamı değiştirir. Aynı iki sembol farklı dizildiğinde farklı sayılar verir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          59,
+          59
+        ],
+        "quote": "Küçük değerli bir sembol büyük değerli bir sembolün soluna yazıldığında çıkarılır.",
+        "chapter": "Matematik"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "roma-rakamları"
+      ],
+      "vurgu": [],
+      "contentHash": "b6ecfa1fa7c7ba73ab34470716cfa19115c19922ca605e5bc16c7c3e7bde887e",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0303",
+      "conceptId": "mt-roma-yil",
+      "stem": {
+        "md": "MCMXXIII Roma rakamıyla yazılmış hangi yılı gösterir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "1932"
+        },
+        {
+          "key": "B",
+          "md": "1823"
+        },
+        {
+          "key": "C",
+          "md": "2123"
+        },
+        {
+          "key": "D",
+          "md": "1923"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "1932, MCMXXXII biçiminde yazılır.",
+        "B": "1823, MDCCCXXIII biçiminde yazılır.",
+        "C": "2123, MMCXXIII biçiminde yazılır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- MCMXXIII = 1923.\n- Hesap: M = 1000, CM = 900, XX = 20, III = 3.\n- 1000 + 900 + 20 + 3 = 1923."
+        },
+        {
+          "type": "hint",
+          "md": "Parçalara ayır: M, CM, XX, III."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Uzun Roma rakamları soldan sağa, büyük değerden küçüğe doğru gruplar hâlinde okunur. Çıkarma yalnızca bir grubun içinde, iki sembol arasında yapılır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          59,
+          59
+        ],
+        "quote": "Küçük değerli bir sembol büyük değerli bir sembolün sağına yazıldığında eklenir.",
+        "chapter": "Matematik"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "roma-rakamları"
+      ],
+      "vurgu": [],
+      "contentHash": "494c91a4e5a036c9f13b1cd4988935f6e3c46e4c5c4c2367c75deea19b3161a4",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0304",
+      "conceptId": "mt-roma-sifir",
+      "stem": {
+        "md": "Roma rakamları için aşağıdakilerden hangisi doğrudur?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Sıfırı gösteren bir sembol yoktur"
+        },
+        {
+          "key": "B",
+          "md": "D sembolü bin değerindedir"
+        },
+        {
+          "key": "C",
+          "md": "Aynı sembol yan yana dört kez yazılır"
+        },
+        {
+          "key": "D",
+          "md": "Soldaki küçük sembol her zaman eklenir"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "D beş yüzdür; bin M ile gösterilir.",
+        "C": "Kurala göre aynı sembol en fazla üç kez yan yana yazılır.",
+        "D": "Büyük sembolün solundaki küçük sembol çıkarılır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Roma rakamlarında sıfır sembolü yoktur.\n- Sıfır, sayı olarak Hint matematiğinden gelmiştir."
+        },
+        {
+          "type": "hint",
+          "md": "Bir sayının yokluğunu yazmayı düşün."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Roma sayı sistemi basamak değerine dayanmaz; her sembolün sabit bir değeri vardır. Bu yüzden hesap yapmak yerine daha çok sayı kaydetmek için kullanıldı."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          59,
+          59
+        ],
+        "quote": "Roma rakamlarında sıfırı gösteren bir sembol yoktur.",
+        "chapter": "Matematik"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "roma-rakamları"
+      ],
+      "vurgu": [],
+      "contentHash": "d5537c6d5aa8666b59c789f1f1a5d8434600da3a8f4362fb47e3242e4c330f26",
+      "deleted": false
+    }
+  ]
+}

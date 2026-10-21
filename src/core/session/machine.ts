@@ -20,6 +20,7 @@ interface Current {
   phase: Phase
   knownWithoutChoices: boolean
   wrongPicks: number
+  picks: ChoiceKey[]
   relearn: boolean
 }
 
@@ -51,6 +52,14 @@ export interface MachineDeps {
 }
 
 export class SessionError extends Error {}
+
+export function sessionSize(
+  moduleSize: number | undefined,
+  chapter: string | null,
+  userLimit: number
+): number {
+  return chapter !== null && moduleSize ? moduleSize : userLimit
+}
 
 const SCORE_FIRST_TRY = 10
 const SCORE_KNOWN_BONUS = 5
@@ -117,6 +126,7 @@ export class SessionMachine {
         phase: 'stem',
         knownWithoutChoices: false,
         wrongPicks: 0,
+        picks: [],
         relearn
       }
       return this.view(s, s.current)
@@ -130,11 +140,12 @@ export class SessionMachine {
   ): Promise<{ sessionId: string; first: QuestionView | null; total: number }> {
     const now = this.clock()
     await this.closeStale()
+    const index = await this.deps.indexFor(moduleId)
     const queue = await buildQueue(this.deps.db, {
       moduleId,
       now,
       dayStart: this.deps.dayStart(now),
-      limit: this.deps.limit(),
+      limit: sessionSize(index.sessionSize, chapter ?? null, this.deps.limit()),
       seed: this.seed(),
       chapter: chapter ?? null,
       partial
@@ -143,7 +154,7 @@ export class SessionMachine {
     const s: Live = {
       id,
       moduleId,
-      index: await this.deps.indexFor(moduleId),
+      index,
       queue,
       relearn: [],
       pos: 0,
@@ -166,7 +177,9 @@ export class SessionMachine {
         ended_at: null,
         seen: 0,
         correct: 0,
-        score: 0
+        score: 0,
+        chapter: chapter ?? null,
+        mixed: chapter == null ? 1 : 0
       })
       .execute()
     return { sessionId: id, first: await this.advance(s), total: queue.length }
@@ -226,6 +239,7 @@ export class SessionMachine {
     if (c.phase === 'stem') c.phase = 'choices'
     const q = c.question
     if (!q.choices.some((ch) => ch.key === key)) throw new SessionError('unknown choice')
+    c.picks.push(key)
     if (key === q.correct) {
       c.phase = 'solved'
       return {
@@ -288,6 +302,7 @@ export class SessionMachine {
           known_without_choices: c.knownWithoutChoices ? 1 : 0,
           wrong_picks: c.wrongPicks,
           duration_ms: Math.max(0, Math.round(durationMs)),
+          picks: c.picks.length ? c.picks.join(',') : null,
           state_before: row.state,
           due_before: row.due,
           stability_before: row.stability,
@@ -316,6 +331,7 @@ export class SessionMachine {
         .executeTakeFirst()
       if (fresh) s.relearn.push(fresh)
     }
+    if (self !== 1 && c.question.devam) await this.chain(s, row.module_id, c.question.devam)
 
     return {
       rating,
@@ -367,6 +383,23 @@ export class SessionMachine {
       startedAt: s.startedAt.toISOString(),
       endedAt: now.toISOString()
     }
+  }
+
+  private async chain(s: Live, moduleId: string, questionId: string): Promise<void> {
+    const match = (k: Card): boolean => k.module_id === moduleId && k.question_id === questionId
+    if (s.queue.slice(0, s.pos).some(match)) return
+    const at = s.queue.findIndex((k, i) => i >= s.pos && match(k))
+    if (at === s.pos) return
+    const card =
+      at > s.pos
+        ? s.queue.splice(at, 1)[0]
+        : await this.deps.db
+            .selectFrom('card')
+            .selectAll()
+            .where('module_id', '=', moduleId)
+            .where('question_id', '=', questionId)
+            .executeTakeFirst()
+    if (card) s.queue.splice(s.pos, 0, card)
   }
 
   pending(id: string): { queued: number; relearn: number } {

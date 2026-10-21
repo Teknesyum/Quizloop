@@ -25,6 +25,7 @@ import { Settings } from './screens/Settings'
 import { Goals } from './screens/Goals'
 import { Stats } from './screens/Stats'
 import { Catalogs } from './screens/Catalogs'
+import { History } from './screens/History'
 import { refreshCatalogs } from './catalog'
 import { nextScale, scaleLabels } from './scale'
 import { applyTheme } from '@renderer/theme'
@@ -252,6 +253,7 @@ export default function App(): React.JSX.Element {
           {route.name === 'stats' && <Stats />}
           {route.name === 'settings' && <Settings />}
           {route.name === 'catalogs' && <Catalogs />}
+          {route.name === 'history' && <History />}
           {route.name === 'chapters' && <Chapters moduleId={route.moduleId} />}
           {route.name === 'bank' && <Bank moduleId={route.moduleId} filter={route.filter} />}
           {route.name === 'session' && (

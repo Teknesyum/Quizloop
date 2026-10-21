@@ -1,11 +1,21 @@
 const VERSION = '__VERSION__'
 const FILES = __FILES__
+const PACKS = __PACKS__
 const SHELL = `ql-shell-${VERSION}`
 const SCOPE = new URL(self.registration.scope).pathname
 const MODULES = `${SCOPE}m/`
 
+async function fillPack(pack) {
+  const cache = await caches.open(pack.cache)
+  const have = new Set((await cache.keys()).map((r) => new URL(r.url).pathname))
+  const missing = pack.files.filter((f) => !have.has(new URL(f, self.registration.scope).pathname))
+  await cache.addAll(missing)
+}
+
 self.addEventListener('install', (event) => {
-  event.waitUntil(caches.open(SHELL).then((cache) => cache.addAll(FILES)))
+  event.waitUntil(
+    Promise.all([caches.open(SHELL).then((cache) => cache.addAll(FILES)), ...PACKS.map(fillPack)])
+  )
 })
 
 self.addEventListener('message', (event) => {
@@ -18,7 +28,13 @@ self.addEventListener('activate', (event) => {
       .keys()
       .then((keys) =>
         Promise.all(
-          keys.filter((k) => k.startsWith('ql-shell-') && k !== SHELL).map((k) => caches.delete(k))
+          keys
+            .filter(
+              (k) =>
+                (k.startsWith('ql-shell-') && k !== SHELL) ||
+                (k.startsWith('ql-pack-') && !PACKS.some((p) => p.cache === k))
+            )
+            .map((k) => caches.delete(k))
         )
       )
       .then(() => self.clients.claim())
@@ -46,8 +62,13 @@ async function moduleFile(url) {
 
 async function shellFile(request) {
   const cache = await caches.open(SHELL)
-  const hit = await cache.match(request, { ignoreSearch: true, ignoreVary: true })
+  const loose = { ignoreSearch: true, ignoreVary: true }
+  const hit = await cache.match(request, loose)
   if (hit) return hit
+  for (const pack of PACKS) {
+    const packed = await (await caches.open(pack.cache)).match(request, loose)
+    if (packed) return packed
+  }
   if (request.mode === 'navigate') {
     const index = await cache.match(`${SCOPE}index.html`)
     if (index) return index

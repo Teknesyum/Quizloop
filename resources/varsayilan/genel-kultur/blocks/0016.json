@@ -1,0 +1,2605 @@
+{
+  "blockId": "0016",
+  "questions": [
+    {
+      "id": "genel-kultur-0624",
+      "conceptId": "unlu-harf-sayisi",
+      "stem": {
+        "md": "Türk alfabesinde kaç ünlü harf vardır?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Sekiz"
+        },
+        {
+          "key": "B",
+          "md": "Beş"
+        },
+        {
+          "key": "C",
+          "md": "Dokuz"
+        },
+        {
+          "key": "D",
+          "md": "Yirmi bir"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Beş, a e i o u diye sayılan Latin ünlüleriyle karıştırılır.",
+        "C": "Dokuz değildir; şapkalı yazımlar ayrı harf sayılmaz.",
+        "D": "Yirmi bir, alfabedeki ünsüz harflerin sayısıdır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: sekiz.\n- Ünlüler: a, e, ı, i, o, ö, u, ü.\n- Kalan yirmi bir harf ünsüzdür."
+        },
+        {
+          "type": "hint",
+          "md": "Dördü kalın, dördü ince."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Türk alfabesinin yirmi dokuz harfi ünlü ve ünsüz olarak ikiye ayrılır. Ünlüler; dilin konumuna, dudakların durumuna ve ağzın açıklığına göre sınıflandırılır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          119,
+          119
+        ],
+        "quote": "Türk alfabesinde sekiz ünlü harf vardır.",
+        "chapter": "Dil ve Sözcük Bilgisi"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "dil"
+      ],
+      "vurgu": [],
+      "contentHash": "747c660b01947df14284d12302d31c6f81ae145117ce294454d95f6075d093c0",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0625",
+      "conceptId": "ds-buyuk-unlu-uyumu",
+      "stem": {
+        "md": "Aşağıdaki sözcüklerden hangisi büyük ünlü uyumuna uymaz?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "kapı"
+        },
+        {
+          "key": "B",
+          "md": "kardeş"
+        },
+        {
+          "key": "C",
+          "md": "okul"
+        },
+        {
+          "key": "D",
+          "md": "çiçek"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "\"Kapı\" sözcüğündeki a ve ı ünlülerinin ikisi de kalındır.",
+        "C": "\"Okul\" sözcüğündeki o ve u ünlülerinin ikisi de kalındır.",
+        "D": "\"Çiçek\" sözcüğündeki i ve e ünlülerinin ikisi de incedir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: kardeş.\n- Kalın a ünlüsünden sonra ince e ünlüsü gelmiştir.\n- Türkçe kökenli olduğu hâlde kurala uymayan sözcüklerin bilinen örneklerindendir."
+        },
+        {
+          "type": "hint",
+          "md": "Ünlüleri kalın ve ince diye ayırın."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Kalın ünlüler a, ı, o, u; ince ünlüler e, i, ö, ü'dür. Türkçe sözcüklerin çoğunda ünlüler bu iki gruptan yalnızca birinden seçilir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          119,
+          119
+        ],
+        "quote": "Büyük ünlü uyumuna göre Türkçe bir sözcükte kalın ünlüden sonra kalın, ince ünlüden sonra ince ünlü gelir.",
+        "chapter": "Dil ve Sözcük Bilgisi"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "dil"
+      ],
+      "vurgu": [],
+      "contentHash": "d6b8c64a753a54e02e8d950318d1ab6c5842e3e672500228a1ad06a350cb91a8",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0626",
+      "conceptId": "ds-unsuz-yumusamasi",
+      "stem": {
+        "md": "\"Dolap\" sözcüğünün \"-ı\" ekini alarak \"dolabı\" biçimine girmesi hangi ses olayıdır?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Ünsüz benzeşmesi"
+        },
+        {
+          "key": "B",
+          "md": "Ünsüz yumuşaması"
+        },
+        {
+          "key": "C",
+          "md": "Ünlü düşmesi"
+        },
+        {
+          "key": "D",
+          "md": "Ünlü daralması"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Ünsüz benzeşmesinde ekin başındaki yumuşak ünsüz sertleşir; burada sözcük sonu değişmiştir.",
+        "C": "Ünlü düşmesinde sözcükteki bir ünlü kaybolur; burada ünlü eksilmemiştir.",
+        "D": "Ünlü daralmasında geniş bir ünlü dar ünlüye dönüşür; burada değişen bir ünsüzdür."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: ünsüz yumuşaması.\n- Sondaki sert p, ünlüyle başlayan ek gelince yumuşak b olmuştur."
+        },
+        {
+          "type": "hint",
+          "md": "Sert bir ünsüz, ünlüyle karşılaşınca ne olur?"
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Türkçede ek alan sözcüklerde sesler birbirini etkiler. Bu değişimler ünlülerde ve ünsüzlerde ayrı adlarla sınıflandırılır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          119,
+          119
+        ],
+        "quote": "Ünlüyle başlayan bir ek aldığında sözcük sonundaki p, ç, t, k ünsüzlerinin b, c, d, g ya da ğ ünsüzlerine dönüşmesine ünsüz yumuşaması denir.",
+        "chapter": "Dil ve Sözcük Bilgisi"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "dil"
+      ],
+      "vurgu": [],
+      "contentHash": "7b00810a832d0f36fef843f0ecb4e79841be5f972d62bd80980d3a30f3f30d1c",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0627",
+      "conceptId": "ds-unsuz-benzesmesi",
+      "stem": {
+        "md": "Aşağıdaki sözcüklerin hangisinde ünsüz benzeşmesi vardır?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "dolabı"
+        },
+        {
+          "key": "B",
+          "md": "sütçü"
+        },
+        {
+          "key": "C",
+          "md": "ağzı"
+        },
+        {
+          "key": "D",
+          "md": "başlıyor"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "\"Dolabı\" sözcüğünde sondaki p yumuşamıştır; bu ünsüz yumuşamasıdır.",
+        "C": "\"Ağzı\" sözcüğünde ı ünlüsü düşmüştür; bu ünlü düşmesidir.",
+        "D": "\"Başlıyor\" sözcüğünde a ünlüsü ı'ya dönüşmüştür; bu ünlü daralmasıdır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: sütçü.\n- \"Süt\" sert t ile bittiği için \"-cü\" eki \"-çü\" olmuştur.\n- Ekin başındaki c, önceki sert ünsüze benzeyip ç'ye dönüşmüştür."
+        },
+        {
+          "type": "hint",
+          "md": "Ekin ilk ünsüzü değişen sözcüğü arayın."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Ses olayları değişimin nerede olduğuna göre ayrılır: sözcüğün kendi sesinde mi, yoksa ona eklenen ekin sesinde mi?"
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          119,
+          119
+        ],
+        "quote": "Sert ünsüzle biten bir sözcüğe c, d, g ile başlayan bir ek geldiğinde bu ünsüzlerin ç, t, k ünsüzlerine dönüşmesine ünsüz benzeşmesi denir.",
+        "chapter": "Dil ve Sözcük Bilgisi"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "dil"
+      ],
+      "vurgu": [],
+      "contentHash": "06dc5403bdfa6f4ff640450432d61fa8c5cd3859bb3c812b0b4e8446b307c950",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0628",
+      "conceptId": "ds-fistikci-sahap",
+      "stem": {
+        "md": "\"Fıstıkçı Şahap\" sözü dil bilgisinde neyi hatırlatmak için kullanılır?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Kalın ünlüleri"
+        },
+        {
+          "key": "B",
+          "md": "Sert ünsüzleri"
+        },
+        {
+          "key": "C",
+          "md": "İnce ünlüleri"
+        },
+        {
+          "key": "D",
+          "md": "Yumuşak ünsüzleri"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Kalın ünlüler a, ı, o, u'dur; bu sözdeki harfler ünsüzdür.",
+        "C": "İnce ünlüler e, i, ö, ü'dür; bu sözdeki harfler ünsüzdür.",
+        "D": "Yumuşak ünsüzler b, c, d, g gibi seslerdir; bu sözde yer almazlar."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: sert ünsüzler.\n- Sözdeki ünsüzler f, s, t, k, ç, ş, h, p'dir.\n- Bu sekiz ünsüz ses olaylarını ayırt etmede kullanılır."
+        },
+        {
+          "type": "hint",
+          "md": "Sözdeki ünsüzleri tek tek sayın."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Ünsüzler, söylenirken ses tellerinin titreşip titreşmemesine göre iki gruba ayrılır. Öğrenciler bu grupları akılda tutmak için kalıp sözler kullanır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          119,
+          119
+        ],
+        "quote": "\"Fıstıkçı Şahap\" sözü Türkçedeki sert ünsüzleri hatırlatmak için kullanılır.",
+        "chapter": "Dil ve Sözcük Bilgisi"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "dil"
+      ],
+      "vurgu": [],
+      "contentHash": "705f7f35ad2ab14bfacf9509bce0f23db1c0c769b91a9fc193cab844a0b7c8f0",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0629",
+      "conceptId": "ds-kok",
+      "stem": {
+        "md": "Sözcüğün anlamlı en küçük parçasına ne ad verilir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Gövde"
+        },
+        {
+          "key": "B",
+          "md": "Kök"
+        },
+        {
+          "key": "C",
+          "md": "Ek"
+        },
+        {
+          "key": "D",
+          "md": "Hece"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Gövde, köke yapım eki getirilerek oluşan daha büyük birimdir.",
+        "C": "Ek tek başına anlam taşımaz, köke eklenerek işlev kazanır.",
+        "D": "Hece anlamla değil, sesletimle ilgili bir birimdir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: kök.\n- Kök daha küçük anlamlı parçalara ayrılamaz.\n- Örneğin \"gözlük\" sözcüğünün kökü \"göz\"dür."
+        },
+        {
+          "type": "hint",
+          "md": "Ağacın toprağın altındaki kısmı."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Türkçe sözcükler bir çekirdek parça ile ona eklenen parçalardan oluşur. Sözcüğü bu parçalara ayırmaya yapı çözümlemesi denir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          120,
+          120
+        ],
+        "quote": "Sözcüğün anlamlı en küçük parçasına kök denir.",
+        "chapter": "Dil ve Sözcük Bilgisi"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "dil"
+      ],
+      "vurgu": [],
+      "contentHash": "7cc531cd2e4fa8f0ec5cbbf9d0f51abdb22f405764a96faeb431dc71f4f133b0",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0630",
+      "conceptId": "ds-gozlukcu",
+      "stem": {
+        "md": "\"Gözlükçü\" sözcüğü köküne kaç yapım eki almıştır?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Bir"
+        },
+        {
+          "key": "B",
+          "md": "Üç"
+        },
+        {
+          "key": "C",
+          "md": "İki"
+        },
+        {
+          "key": "D",
+          "md": "Hiç almamıştır"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Bir değildir; \"-lük\" ekinden sonra gelen ek de yeni bir anlam türetir.",
+        "B": "Üç değildir; sözcükte kökten sonra yalnızca iki ek vardır.",
+        "D": "Sözcük kökten farklı bir anlam taşıdığına göre yapım eki almıştır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: iki.\n- göz (kök) + -lük + -çü.\n- Her ek yeni bir anlam türetir: göz, gözlük, gözlük satan kişi."
+        },
+        {
+          "type": "hint",
+          "md": "Göz, gözlük, gözlükçü."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Ekler, sözcüğe yeni bir anlam kazandırıp kazandırmamalarına göre iki türe ayrılır. Bir sözcük art arda birden çok ek alabilir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          120,
+          120
+        ],
+        "quote": "\"Gözlükçü\" sözcüğü \"göz\" köküne iki yapım eki almıştır.",
+        "chapter": "Dil ve Sözcük Bilgisi"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "dil"
+      ],
+      "vurgu": [],
+      "contentHash": "faf2f53a2732194fac96b6508a8f3058f594119bb7a149c5ea1116bda4d3ef3e",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0631",
+      "conceptId": "ds-cekim-eki",
+      "stem": {
+        "md": "Aşağıdaki sözcüklerden hangisi yalnızca çekim eki almıştır?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "evler"
+        },
+        {
+          "key": "B",
+          "md": "evli"
+        },
+        {
+          "key": "C",
+          "md": "evcil"
+        },
+        {
+          "key": "D",
+          "md": "evsiz"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "\"-li\" eki \"ev\" sözcüğünden yeni bir anlam türetir; yapım ekidir.",
+        "C": "\"-cil\" eki \"ev\" sözcüğünden yeni bir anlam türetir; yapım ekidir.",
+        "D": "\"-siz\" eki \"ev\" sözcüğünden yeni bir anlam türetir; yapım ekidir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: evler.\n- \"-ler\" çoğul ekidir; sözcüğün anlamını değiştirmez.\n- Diğer seçeneklerdeki ekler yeni sözcükler türetmiştir."
+        },
+        {
+          "type": "hint",
+          "md": "Hangisi hâlâ aynı varlığı anlatıyor?"
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Bazı ekler sözcükten yepyeni bir kavram türetirken bazıları yalnızca çokluk, iyelik ya da hâl gibi dil bilgisel bir görev ekler."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          120,
+          120
+        ],
+        "quote": "Çekim ekleri ise sözcüğün anlamını değiştirmeden ona görev kazandırır.",
+        "chapter": "Dil ve Sözcük Bilgisi"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "dil"
+      ],
+      "vurgu": [],
+      "contentHash": "bd26099da2db46f4b52502426e205cfaae9cee6af20a715c8c67d3aaae5d5ed2",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0632",
+      "conceptId": "ds-birlesik-sozcuk",
+      "stem": {
+        "md": "Aşağıdakilerden hangisi birleşik sözcüktür?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "hanımeli"
+        },
+        {
+          "key": "B",
+          "md": "kitaplık"
+        },
+        {
+          "key": "C",
+          "md": "güzellik"
+        },
+        {
+          "key": "D",
+          "md": "yolcu"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "\"Kitaplık\" bir kök ile bir yapım ekinden oluşur.",
+        "C": "\"Güzellik\" bir kök ile bir yapım ekinden oluşur.",
+        "D": "\"Yolcu\" bir kök ile bir yapım ekinden oluşur."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: hanımeli.\n- \"Hanım\" ve \"el\" sözcükleri birleşip bir çiçeğin adı olmuştur.\n- Diğer seçenekler kök ve ekten oluşan türemiş sözcüklerdir."
+        },
+        {
+          "type": "hint",
+          "md": "İçinde iki ayrı sözcük saklı olanı arayın."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Türkçede yeni sözcükler iki yolla oluşur: köke ek getirerek ya da birden fazla sözcüğü kaynaştırarak. Bitki ve hayvan adlarında ikinci yol sık görülür."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          120,
+          120
+        ],
+        "quote": "\"Hanımeli\" gibi iki sözcüğün birleşerek yeni bir varlığı karşıladığı sözcüklere birleşik sözcük denir.",
+        "chapter": "Dil ve Sözcük Bilgisi"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "dil"
+      ],
+      "vurgu": [],
+      "contentHash": "7a04ecc1541dcd99725da7acd6562df4e6850a86b26c29686dbb4a58068b5db9",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0633",
+      "conceptId": "ds-yuklem",
+      "stem": {
+        "md": "Cümlede yargıyı bildiren temel öge hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Yüklem"
+        },
+        {
+          "key": "B",
+          "md": "Özne"
+        },
+        {
+          "key": "C",
+          "md": "Nesne"
+        },
+        {
+          "key": "D",
+          "md": "Zarf tümleci"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Özne, yüklemin bildirdiği işi yapandır; yargıyı kendisi taşımaz.",
+        "C": "Nesne, işten etkilenen ögedir.",
+        "D": "Zarf tümleci, yüklemi zaman ve durum gibi yönlerden tamamlar."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: yüklem.\n- Yüklemi olmayan söz dizisi cümle sayılmaz.\n- Diğer ögeler yükleme sorulan sorularla bulunur."
+        },
+        {
+          "type": "hint",
+          "md": "Diğer ögeleri bulmak için soruları ona sorarsınız."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Cümle çözümlemesinde ögeler, cümlenin taşıdığı yargıya hangi açıdan katkı yaptıklarına göre adlandırılır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          121,
+          121
+        ],
+        "quote": "Cümlede yargıyı bildiren temel öge yüklemdir.",
+        "chapter": "Dil ve Sözcük Bilgisi"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "dil"
+      ],
+      "vurgu": [],
+      "contentHash": "4d35d8becbe8b9fde3c9562f7e014b275f6d2cac53f7db560641a1c9bdf7d65d",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0634",
+      "conceptId": "ds-dolayli-tumlec",
+      "stem": {
+        "md": "\"Ali dün okula yürüdü.\" cümlesinde dolaylı tümleç hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Ali"
+        },
+        {
+          "key": "B",
+          "md": "dün"
+        },
+        {
+          "key": "C",
+          "md": "yürüdü"
+        },
+        {
+          "key": "D",
+          "md": "okula"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "\"Ali\" işi yapandır; öznedir.",
+        "B": "\"Dün\" işin zamanını bildirir; zarf tümlecidir.",
+        "C": "\"Yürüdü\" yargıyı bildirir; yüklemdir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: okula.\n- Yükleme \"nereye yürüdü?\" sorusu sorulunca bulunur.\n- Yönelme hâli eki \"-a\" almıştır."
+        },
+        {
+          "type": "hint",
+          "md": "Yükleme \"nereye?\" diye sorun."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Ögeler yükleme sorulan sorularla bulunur: işi yapan, işten etkilenen, işin zamanı ve yönü ayrı ayrı adlandırılır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          121,
+          121
+        ],
+        "quote": "Yükleme \"nereye, nerede, nereden\" soruları sorularak dolaylı tümleç bulunur.",
+        "chapter": "Dil ve Sözcük Bilgisi"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "dil"
+      ],
+      "vurgu": [],
+      "contentHash": "bb9b4a984eef45a358ca01acb3b5bad734fd8f368b138fe654ffc55c3f3171a2",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0635",
+      "conceptId": "ds-belirtili-nesne",
+      "stem": {
+        "md": "\"Annem pastayı fırından çıkardı.\" cümlesinde belirtili nesne hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "pastayı"
+        },
+        {
+          "key": "B",
+          "md": "Annem"
+        },
+        {
+          "key": "C",
+          "md": "fırından"
+        },
+        {
+          "key": "D",
+          "md": "çıkardı"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "\"Annem\" işi yapan ögedir; öznedir.",
+        "C": "\"Fırından\" yükleme \"nereden?\" sorusunun cevabıdır; dolaylı tümleçtir.",
+        "D": "\"Çıkardı\" yargıyı bildirir; yüklemdir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: pastayı.\n- Yükleme \"neyi çıkardı?\" sorusu sorulunca bulunur.\n- Belirtme hâli eki \"-yı\" aldığı için belirtilidir."
+        },
+        {
+          "type": "hint",
+          "md": "Yükleme \"neyi?\" diye sorun."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "İşten etkilenen öge, hâl eki alıp almamasına göre iki türe ayrılır. Bu ayrım, sorulan soruyla da kendini gösterir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          121,
+          121
+        ],
+        "quote": "Yükleme \"neyi\" ya da \"kimi\" sorusu sorularak belirtili nesne bulunur.",
+        "chapter": "Dil ve Sözcük Bilgisi"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "dil"
+      ],
+      "vurgu": [],
+      "contentHash": "4c9ffcc9122f62467823e2a6b44bcc0ad35b5f3d84c2334a0669a8bf279eb761",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0636",
+      "conceptId": "ds-devrik-cumle",
+      "stem": {
+        "md": "Aşağıdakilerden hangisi devrik cümledir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Onu dün akşam gördüm."
+        },
+        {
+          "key": "B",
+          "md": "Dün akşam onu gördüm."
+        },
+        {
+          "key": "C",
+          "md": "Gördüm onu dün akşam."
+        },
+        {
+          "key": "D",
+          "md": "Akşam onu gördüm."
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Bu cümlede yüklem \"gördüm\" sondadır; cümle kurallıdır.",
+        "B": "Bu cümlede yüklem sondadır; ögelerin yeri değişse de cümle kurallıdır.",
+        "D": "Bu cümlede de yüklem sondadır; cümle kurallıdır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: \"Gördüm onu dün akşam.\"\n- Yüklem \"gördüm\" cümlenin başına alınmıştır.\n- Devrik cümleler konuşma dilinde ve şiirde vurgu için sık kullanılır."
+        },
+        {
+          "type": "hint",
+          "md": "Yüklemin yerine bakın."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Türkçede ögelerin olağan dizilişi özne, tümleçler ve en sonda yüklem biçimindedir. Bu dizilişin bozulup bozulmadığına göre cümleler sınıflandırılır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          121,
+          121
+        ],
+        "quote": "Yüklemi sonda olmayan cümlelere devrik cümle denir.",
+        "chapter": "Dil ve Sözcük Bilgisi"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "dil"
+      ],
+      "vurgu": [],
+      "contentHash": "3b755da5c904626f90ccf8db059aac84453846aa77b0b7f2991a760d9cce952b",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0637",
+      "conceptId": "ds-etekleri-zil",
+      "stem": {
+        "md": "\"Etekleri zil çalmak\" deyimi hangi anlama gelir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Çok sevinmek"
+        },
+        {
+          "key": "B",
+          "md": "Çok korkmak"
+        },
+        {
+          "key": "C",
+          "md": "Telaşla koşturmak"
+        },
+        {
+          "key": "D",
+          "md": "Çok utanmak"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Korkuyu anlatan deyimler \"ödü kopmak\" gibi kalıplardır.",
+        "C": "Telaş anlamı \"ayağı yere değmemek\" gibi deyimlerle anlatılır.",
+        "D": "Utanma anlamı \"yerin dibine geçmek\" gibi deyimlerle anlatılır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: çok sevinmek.\n- Sevinçten yerinde duramayan kişinin hâli zil sesine benzetilir."
+        },
+        {
+          "type": "hint",
+          "md": "Yerinde duramayacak kadar coşkulu biri."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Deyimler sözcüklerin gerçek anlamlarından uzaklaşarak bir durumu canlı bir imgeyle anlatır. Bu deyimdeki imge, hareket edince ses çıkaran bir giysidir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          122,
+          122
+        ],
+        "quote": "\"Etekleri zil çalmak\" deyimi çok sevinmek anlamına gelir.",
+        "chapter": "Dil ve Sözcük Bilgisi"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "dil"
+      ],
+      "vurgu": [],
+      "contentHash": "94192ae9554eb5af57ae787abdf90d6164c52658afbcccb5e1f34415e1ffab92",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0638",
+      "conceptId": "ds-goz-boyamak",
+      "stem": {
+        "md": "\"Göz boyamak\" deyimi hangi anlama gelir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Makyaj yapmak"
+        },
+        {
+          "key": "B",
+          "md": "Aldatıcı bir görünüşle yanıltmak"
+        },
+        {
+          "key": "C",
+          "md": "Birini dikkatle izlemek"
+        },
+        {
+          "key": "D",
+          "md": "Bir şeyi çok beğenmek"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Makyaj yapmak, sözcüklerin gerçek anlamına dayalı bir yorumdur; deyim mecazdır.",
+        "C": "Dikkatle izlemek \"göz kulak olmak\" gibi deyimlerle anlatılır.",
+        "D": "Beğenmek \"gözü tutmak\" gibi deyimlerle anlatılır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: aldatıcı bir görünüşle yanıltmak.\n- Gerçeği gizleyip iş yapılmış gibi göstermeyi anlatır."
+        },
+        {
+          "type": "hint",
+          "md": "Gerçek anlamını değil, mecaz anlamını düşünün."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Göz ile ilgili deyimler Türkçede çok sayıdadır ve çoğu algı, dikkat ya da istek kavramlarını mecaz yoluyla anlatır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          122,
+          122
+        ],
+        "quote": "\"Göz boyamak\" deyimi aldatıcı bir görünüşle karşısındakini yanıltmak anlamına gelir.",
+        "chapter": "Dil ve Sözcük Bilgisi"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "dil"
+      ],
+      "vurgu": [],
+      "contentHash": "1f95d999e04377c11b589104fce519b344d07ac9da55a5dfe938d55454270229",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0639",
+      "conceptId": "ds-deyim-eslestirme",
+      "stem": {
+        "md": "Deyimleri anlamlarıyla eşleştirin.\n\n1. Kulak asmamak\n2. Pabucu dama atılmak\n3. Burnu havada olmak\n\na. Kibirli olmak\nb. Gözden düşmek\nc. Bir söze önem vermemek"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "1-b, 2-c, 3-a"
+        },
+        {
+          "key": "B",
+          "md": "1-c, 2-a, 3-b"
+        },
+        {
+          "key": "C",
+          "md": "1-c, 2-b, 3-a"
+        },
+        {
+          "key": "D",
+          "md": "1-a, 2-b, 3-c"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "\"Kulak asmamak\" gözden düşmeyi değil, söylenene aldırmamayı anlatır.",
+        "B": "\"Pabucu dama atılmak\" kibri değil, değerini yitirmeyi anlatır.",
+        "D": "\"Kulak asmamak\" kibri değil, söylenene önem vermemeyi anlatır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Kulak asmamak: bir söze önem vermemek (1-c).\n- Pabucu dama atılmak: gözden düşmek (2-b).\n- Burnu havada olmak: kibirli olmak (3-a)."
+        },
+        {
+          "type": "hint",
+          "md": "Başını dik tutan kişiyi düşünün."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Vücut bölümleri ve günlük eşyalar Türkçe deyimlerin en sık başvurduğu imgelerdir; bu imgeler insan davranışlarını mecaz yoluyla anlatır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          122,
+          122
+        ],
+        "quote": "\"Kulak asmamak\" bir söze önem vermemek, \"pabucu dama atılmak\" gözden düşmek, \"burnu havada olmak\" kibirli olmak anlamına gelir.",
+        "chapter": "Dil ve Sözcük Bilgisi"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "dil"
+      ],
+      "vurgu": [],
+      "contentHash": "b830a0451be3406a0c3f6c0e4e16740a7477dc22171253565a265e4abea36838",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0640",
+      "conceptId": "ds-damlaya-damlaya",
+      "stem": {
+        "md": "\"Damlaya damlaya göl olur\" atasözü ne anlatır?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Aceleyle yapılan iş bozuk olur."
+        },
+        {
+          "key": "B",
+          "md": "Küçük birikimler zamanla büyük bir varlık oluşturur."
+        },
+        {
+          "key": "C",
+          "md": "Bir işi yapan, sonuna da katlanır."
+        },
+        {
+          "key": "D",
+          "md": "Az konuşmak çok konuşmaktan iyidir."
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Acelenin zararını anlatan atasözü \"acele işe şeytan karışır\"dır.",
+        "C": "Sonuca katlanmayı anlatan bir anlam bu atasözünde yoktur.",
+        "D": "Sözü az tutmayı öğütleyen atasözleri başkadır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: küçük birikimlerin zamanla büyük bir varlık oluşturması.\n- Tutumluluğu ve sabırla biriktirmeyi öğütler."
+        },
+        {
+          "type": "hint",
+          "md": "Damlalar nereye varır?"
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Atasözleri, uzun deneyimlerden süzülmüş ve kalıplaşmış öğütlerdir. Çoğu doğadan alınmış bir imgeyle genel bir ders verir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          122,
+          122
+        ],
+        "quote": "\"Damlaya damlaya göl olur\" atasözü küçük birikimlerin zamanla büyük bir varlık oluşturacağını anlatır.",
+        "chapter": "Dil ve Sözcük Bilgisi"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "dil"
+      ],
+      "vurgu": [],
+      "contentHash": "24cf96328c99fd16c629aa628e9ebf48ecc014cccb5de1ddb0044e631b4b1a51",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0641",
+      "conceptId": "ds-sakla-samani",
+      "stem": {
+        "md": "Değersiz görünen şeylerin bir gün işe yarayabileceğini anlatan atasözünü tamamlayın: \"Sakla samanı, ____ zamanı.\""
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "geçer"
+        },
+        {
+          "key": "B",
+          "md": "döner"
+        },
+        {
+          "key": "C",
+          "md": "bulunur"
+        },
+        {
+          "key": "D",
+          "md": "gelir"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "\"Geçer\" sözcüğü, saklanan şeyin işe yarayacağı anın geleceği anlamını vermez.",
+        "B": "\"Döner\" atasözünün kalıplaşmış biçiminde yer almaz.",
+        "C": "\"Bulunur\" atasözünün kalıplaşmış biçiminde yer almaz."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: gelir.\n- Atasözü: \"Sakla samanı, gelir zamanı.\"\n- Bugün gereksiz görünen bir şeyi atmamayı öğütler."
+        },
+        {
+          "type": "hint",
+          "md": "Ummadık bir anda ihtiyacın çıkageleceğini düşünün."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Atasözleri kalıplaşmış sözlerdir; sözcükleri değiştirilmez ve çoğunda akılda kalmayı kolaylaştıran bir uyak bulunur."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          122,
+          122
+        ],
+        "quote": "\"Sakla samanı, gelir zamanı\" atasözü değersiz görünen şeylerin bir gün işe yarayabileceğini anlatır.",
+        "chapter": "Dil ve Sözcük Bilgisi"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "dil"
+      ],
+      "vurgu": [],
+      "contentHash": "0aa4c5c858c00185b01ca2806390e571165cc36792c8ba6d2eeb184e0f8ff30b",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0642",
+      "conceptId": "ds-siyah-kara",
+      "stem": {
+        "md": "\"Siyah\" sözcüğünün eş anlamlısı hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "kara"
+        },
+        {
+          "key": "B",
+          "md": "ak"
+        },
+        {
+          "key": "C",
+          "md": "al"
+        },
+        {
+          "key": "D",
+          "md": "boz"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "\"Ak\" beyaz anlamındadır; siyahın zıt anlamlısıdır.",
+        "C": "\"Al\" kırmızı anlamındadır.",
+        "D": "\"Boz\" toprak rengini anlatır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: kara.\n- \"Siyah\" Farsça kökenli, \"kara\" Türkçe kökenlidir; anlamları aynıdır."
+        },
+        {
+          "type": "hint",
+          "md": "Türkçe kökenli eski bir renk adı."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Türkçede eski renk adları ile sonradan başka dillerden geçen renk adları yan yana yaşar. Bu durum çok sayıda eş anlamlı çift doğurmuştur."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          123,
+          123
+        ],
+        "quote": "\"Siyah\" sözcüğünün eş anlamlısı \"kara\"dır.",
+        "chapter": "Dil ve Sözcük Bilgisi"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "dil"
+      ],
+      "vurgu": [],
+      "contentHash": "0c86cf3c252af6d05587e9d0628fc88e96f2442540a06e5a11ae0724ba718dbb",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0643",
+      "conceptId": "ds-es-anlamli-degil",
+      "stem": {
+        "md": "Aşağıdaki sözcük çiftlerinden hangisi eş anlamlı değildir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "hekim - doktor"
+        },
+        {
+          "key": "B",
+          "md": "yanıt - cevap"
+        },
+        {
+          "key": "C",
+          "md": "cimri - cömert"
+        },
+        {
+          "key": "D",
+          "md": "ak - beyaz"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "\"Hekim\" ile \"doktor\" aynı mesleği anlatır.",
+        "B": "\"Yanıt\" ile \"cevap\" aynı anlamı taşır.",
+        "D": "\"Ak\" ile \"beyaz\" aynı rengi anlatır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: cimri - cömert.\n- Bu iki sözcük birbirinin zıt anlamlısıdır.\n- Diğer çiftler eş anlamlıdır."
+        },
+        {
+          "type": "hint",
+          "md": "Bir çift aynı şeyi değil, karşıtını anlatıyor."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Sözcükler arasındaki anlam ilişkileri eş anlamlılık, zıt anlamlılık ve yakın anlamlılık gibi türlere ayrılır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          123,
+          123
+        ],
+        "quote": "\"Cimri\" sözcüğünün zıt anlamlısı \"cömert\"tir.",
+        "chapter": "Dil ve Sözcük Bilgisi"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "dil"
+      ],
+      "vurgu": [],
+      "contentHash": "ab56cfe9825fbc422536e127eaad40f134f6c8ac20de389a6be7eec15f19d8bd",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0644",
+      "conceptId": "ds-es-sesli",
+      "stem": {
+        "md": "Yazılışları aynı, anlamları farklı sözcüklere ne ad verilir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Eş anlamlı sözcük"
+        },
+        {
+          "key": "B",
+          "md": "Zıt anlamlı sözcük"
+        },
+        {
+          "key": "C",
+          "md": "Yakın anlamlı sözcük"
+        },
+        {
+          "key": "D",
+          "md": "Eş sesli sözcük"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Eş anlamlı sözcüklerin yazılışı farklı, anlamı aynıdır.",
+        "B": "Zıt anlamlı sözcükler birbirinin karşıtı olan kavramları anlatır.",
+        "C": "Yakın anlamlı sözcüklerin anlamları benzer ama tam aynı değildir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: eş sesli (sesteş) sözcük.\n- Örnek: \"yüz\" hem sayıyı hem de çehreyi bildirir."
+        },
+        {
+          "type": "hint",
+          "md": "Kulağa aynı gelir, anlamı başkadır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Bir sözcüğün anlamı çoğu zaman ancak cümle içinde netleşir. Aynı biçimin farklı anlamlar taşıması, bulmaca ve şiirde sıkça kullanılan bir oyundur."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          123,
+          123
+        ],
+        "quote": "Yazılışları aynı, anlamları farklı sözcüklere eş sesli sözcük denir.",
+        "chapter": "Dil ve Sözcük Bilgisi"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "dil"
+      ],
+      "vurgu": [],
+      "contentHash": "2693011c5bdd965cd810a1eee8d0d4e7d90c7bcf6721b57b2973267d8d19a796",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0645",
+      "conceptId": "ds-mutevazi",
+      "stem": {
+        "md": "\"Mütevazı\" sözcüğü hangi anlama gelir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Kibirli"
+        },
+        {
+          "key": "B",
+          "md": "Çalışkan"
+        },
+        {
+          "key": "C",
+          "md": "Alçak gönüllü"
+        },
+        {
+          "key": "D",
+          "md": "Cömert"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "\"Kibirli\" bu sözcüğün zıt anlamlısıdır.",
+        "B": "\"Çalışkan\" emek ve gayretle ilgilidir, gösterişsizlikle değil.",
+        "D": "\"Cömert\" eli açık olmayı anlatır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: alçak gönüllü.\n- Kendini olduğundan büyük göstermeyen, gösterişsiz kişiyi anlatır."
+        },
+        {
+          "type": "hint",
+          "md": "Kendini övmeyen biri."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Arapça kökenli bazı sıfatlar günlük dilde yaşamaya devam ederken Türkçe karşılıklarıyla birlikte kullanılır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          123,
+          123
+        ],
+        "quote": "\"Mütevazı\" sözcüğü alçak gönüllü anlamına gelir.",
+        "chapter": "Dil ve Sözcük Bilgisi"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "dil"
+      ],
+      "vurgu": [],
+      "contentHash": "1348caaacf7827903dbe77445a7058ed1923fd96b498dd33b8ee0864e3a48519",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0646",
+      "conceptId": "ds-de-baglaci",
+      "stem": {
+        "md": "Aşağıdaki cümlelerin hangisinde bir yazım yanlışı vardır?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Ben de yarın geleceğim."
+        },
+        {
+          "key": "B",
+          "md": "Kitap masada duruyor."
+        },
+        {
+          "key": "C",
+          "md": "Evde kimse yok."
+        },
+        {
+          "key": "D",
+          "md": "Bende yarın geleceğim."
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Bu cümlede \"de\" bağlacı doğru biçimde ayrı yazılmıştır.",
+        "B": "Bu cümlede \"-da\" bulunma hâli ekidir ve doğru biçimde bitişik yazılmıştır.",
+        "C": "Bu cümlede \"-de\" bulunma hâli ekidir ve doğru biçimde bitişik yazılmıştır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: \"Bende yarın geleceğim.\"\n- Buradaki \"de\" \"dahi, da\" anlamında bağlaçtır, ayrı yazılmalıdır: \"Ben de\".\n- Sınama: bağlaç cümleden çıkarılınca anlam bozulmaz, yalnızca daralır."
+        },
+        {
+          "type": "hint",
+          "md": "\"de\" çıkarılınca cümle hâlâ kuruluyor mu?"
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Türkçede aynı biçimde görünen ama görevleri farklı olan iki öge vardır: biri sözcüğe ek olarak bağlanır, diğeri bağımsız bir sözcüktür. Yazımı bu göreve göre değişir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          124,
+          124
+        ],
+        "quote": "Bağlaç olan \"de, da\" kendinden önceki sözcükten ayrı yazılır, bulunma hâli eki olan \"-de, -da\" ise bitişik yazılır.",
+        "chapter": "Dil ve Sözcük Bilgisi"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "dil"
+      ],
+      "vurgu": [],
+      "contentHash": "7aca41d0b347f2d6e3a350f34a2e02acee9e0a642fcb82b766da36d5beeb6be4",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0647",
+      "conceptId": "ds-soru-eki",
+      "stem": {
+        "md": "Aşağıdakilerin hangisinde soru eki doğru yazılmıştır?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Yarın gelecekmisin?"
+        },
+        {
+          "key": "B",
+          "md": "Yarın gelecekmi sin?"
+        },
+        {
+          "key": "C",
+          "md": "Yarın gelecek-misin?"
+        },
+        {
+          "key": "D",
+          "md": "Yarın gelecek misin?"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Soru eki önceki sözcüğe bitişik yazılmaz.",
+        "B": "Soru ekinden sonra gelen kişi eki soru ekinden ayrılmaz.",
+        "C": "Soru eki kısa çizgiyle bağlanmaz."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: \"Yarın gelecek misin?\"\n- \"mı, mi, mu, mü\" önceki sözcükten ayrı yazılır.\n- Ondan sonra gelen ekler soru ekine bitişik yazılır."
+        },
+        {
+          "type": "hint",
+          "md": "Soru eki kendinden önceki sözcükle birleşmez."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Soru eki, ünlü uyumuna uyduğu hâlde ayrı yazılan ender eklerden biridir. Bu durum yazımda en sık yapılan yanlışların başında gelir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          124,
+          124
+        ],
+        "quote": "Soru eki \"mı, mi, mu, mü\" kendinden önceki sözcükten ayrı yazılır.",
+        "chapter": "Dil ve Sözcük Bilgisi"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "dil"
+      ],
+      "vurgu": [],
+      "contentHash": "1ba2bbc62923e55f6661e309376d540d768f992c75e24d320be2886e2f4b75dc",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0648",
+      "conceptId": "ds-kesme-isareti",
+      "stem": {
+        "md": "Aşağıdaki cümlelerin hangisinde kesme işareti doğru kullanılmıştır?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Ankaraya trenle gittik."
+        },
+        {
+          "key": "B",
+          "md": "Ayşeye bir mektup yazdım."
+        },
+        {
+          "key": "C",
+          "md": "İstanbulda yaşıyorum."
+        },
+        {
+          "key": "D",
+          "md": "Ankara'ya trenle gittik."
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Özel ad olan \"Ankara\" sözcüğüne gelen ek kesmeyle ayrılmalıdır.",
+        "B": "Kişi adı olan \"Ayşe\" sözcüğüne gelen ek kesmeyle ayrılmalıdır.",
+        "C": "Şehir adı olan \"İstanbul\" sözcüğüne gelen ek kesmeyle ayrılmalıdır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: \"Ankara'ya trenle gittik.\"\n- Özel adlara gelen çekim ekleri kesme işaretiyle ayrılır."
+        },
+        {
+          "type": "hint",
+          "md": "Özel adlara dikkat."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Yazıda özel adlar büyük harfle başlar; bu adlara gelen eklerin nasıl yazılacağı ayrı bir noktalama kuralıyla belirlenir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          124,
+          124
+        ],
+        "quote": "Özel adlara getirilen çekim ekleri kesme işaretiyle ayrılır.",
+        "chapter": "Dil ve Sözcük Bilgisi"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "dil"
+      ],
+      "vurgu": [],
+      "contentHash": "8e8bfeb956980478fd841ea43bf91d4e2153f7f5960d25e284666ccf95318bc5",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0649",
+      "conceptId": "ds-her-sey-yazimi",
+      "stem": {
+        "md": "Aşağıdaki sözcüklerden hangisinin yazımı yanlıştır?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "birçok"
+        },
+        {
+          "key": "B",
+          "md": "herşey"
+        },
+        {
+          "key": "C",
+          "md": "hiçbir"
+        },
+        {
+          "key": "D",
+          "md": "pek çok"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "\"Birçok\" kalıplaşmış olduğu için bitişik yazılır.",
+        "C": "\"Hiçbir\" kalıplaşmış olduğu için bitişik yazılır.",
+        "D": "\"Pek çok\" ayrı yazılır ve burada doğru yazılmıştır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: \"herşey\".\n- Doğrusu \"her şey\" biçiminde ayrı yazımdır.\n- \"Birçok\" ve \"hiçbir\" bitişik, \"pek çok\" ayrı yazılır."
+        },
+        {
+          "type": "hint",
+          "md": "\"Her\" sözcüğü sonraki sözcükle çoğunlukla birleşmez."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Birleşik yazılan ve ayrı yazılan söz grupları Türkçe yazımın en çok karıştırılan konularındandır; kural için Türk Dil Kurumunun yazım kılavuzu esas alınır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          124,
+          124
+        ],
+        "quote": "\"Her şey\" ve \"pek çok\" ayrı, \"birçok\" ve \"hiçbir\" bitişik yazılır.",
+        "chapter": "Dil ve Sözcük Bilgisi"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "dil"
+      ],
+      "vurgu": [],
+      "contentHash": "4393be3507231ac3408270b7c3a29944d0daa3d823015be61d222b616ca09dd5",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0650",
+      "conceptId": "ds-yalniz-yanlis",
+      "stem": {
+        "md": "Aşağıdaki sözcük çiftlerinden hangisinde iki sözcük de doğru yazılmıştır?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "yalnız - yanlış"
+        },
+        {
+          "key": "B",
+          "md": "yanlız - yalnış"
+        },
+        {
+          "key": "C",
+          "md": "yalnız - yalnış"
+        },
+        {
+          "key": "D",
+          "md": "yanlız - yanlış"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Bu çiftteki iki sözcüğün de harfleri yer değiştirmiştir.",
+        "C": "Bu çiftte \"yalnış\" yanlış yazılmıştır.",
+        "D": "Bu çiftte \"yanlız\" yanlış yazılmıştır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: yalnız - yanlış.\n- \"Yalnız\" sözcüğünde l, n'den önce gelir.\n- \"Yanlış\" sözcüğünde n, l'den önce gelir."
+        },
+        {
+          "type": "hint",
+          "md": "İki sözcükte l ve n harflerinin sırası farklıdır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Bazı sözcüklerde benzer seslerin yer değiştirmesi konuşmada fark edilmez ama yazımda yanlış sayılır. Bu sözcükler yazım sınavlarının klasik konularıdır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          124,
+          124
+        ],
+        "quote": "Doğru yazımlar \"yalnız\" ve \"yanlış\" biçimleridir.",
+        "chapter": "Dil ve Sözcük Bilgisi"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "dil"
+      ],
+      "vurgu": [],
+      "contentHash": "ab93dabe14a9c3b70f28f961a3a5dcc4e32efee74b493346d3297dd137fac2d6",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0651",
+      "conceptId": "ds-kitap-koken",
+      "stem": {
+        "md": "\"Kitap\" sözcüğü Türkçeye hangi dilden geçmiştir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Arapça"
+        },
+        {
+          "key": "B",
+          "md": "Farsça"
+        },
+        {
+          "key": "C",
+          "md": "Fransızca"
+        },
+        {
+          "key": "D",
+          "md": "Yunanca"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Farsçadan geçen sözcüklere \"pencere\" örnek verilebilir.",
+        "C": "Fransızcadan geçen sözcüklere \"şoför\" örnek verilebilir.",
+        "D": "Yunancadan geçen sözcükler daha çok denizcilik ve balık adlarında görülür."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: Arapça.\n- Aynı kökten \"kâtip\" ve \"mektup\" sözcükleri de dilimize geçmiştir."
+        },
+        {
+          "type": "hint",
+          "md": "\"Mektup\" ve \"kâtip\" ile aynı kökten."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "İslamiyet'in kabulünden sonra Türkçeye din, bilim ve yazı alanlarında çok sayıda sözcük girmiştir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          125,
+          125
+        ],
+        "quote": "\"Kitap\" sözcüğü Türkçeye Arapçadan geçmiştir.",
+        "chapter": "Dil ve Sözcük Bilgisi"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "dil"
+      ],
+      "vurgu": [],
+      "contentHash": "2407ac41d4427aa0f8fe586eb14d2cdf46dfe8092c2200f5250fe4b46266d619",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0652",
+      "conceptId": "ds-koken-eslestirme",
+      "stem": {
+        "md": "Sözcükleri geldikleri dillerle eşleştirin.\n\n1. Şoför\n2. Pencere\n3. Lokanta\n\na. İtalyanca\nb. Fransızca\nc. Farsça"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "1-a, 2-c, 3-b"
+        },
+        {
+          "key": "B",
+          "md": "1-b, 2-c, 3-a"
+        },
+        {
+          "key": "C",
+          "md": "1-b, 2-a, 3-c"
+        },
+        {
+          "key": "D",
+          "md": "1-c, 2-b, 3-a"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "\"Şoför\" İtalyancadan değil, Fransızcadan gelir.",
+        "C": "\"Pencere\" İtalyancadan değil, Farsçadan gelir.",
+        "D": "\"Şoför\" Farsçadan değil, Fransızcadan gelir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Şoför: Fransızca (1-b).\n- Pencere: Farsça (2-c).\n- Lokanta: İtalyanca (3-a)."
+        },
+        {
+          "type": "hint",
+          "md": "Taşıt sürücüsü sözcüğü otomobil çağının bir Avrupa dilinden gelir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Türkçeye giren sözcükler, temas edilen kültürlere göre farklı alanlarda yoğunlaşır: Farsçadan ev ve sanat, İtalyancadan denizcilik ve ticaret, Fransızcadan modern yaşam sözcükleri."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          125,
+          125
+        ],
+        "quote": "\"Pencere\" sözcüğü Farsça, \"şoför\" Fransızca, \"lokanta\" İtalyanca kökenlidir.",
+        "chapter": "Dil ve Sözcük Bilgisi"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "dil"
+      ],
+      "vurgu": [],
+      "contentHash": "9d83da4d29880b9476e08bd4a05023c64d6555d64dcf7288c2a0213b684b2612",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0653",
+      "conceptId": "ds-okul-koken",
+      "stem": {
+        "md": "\"Okul\" sözcüğü, Türkçe \"oku-\" fiilinden türetilirken hangi yabancı sözcüğe ses bakımından benzetilmiştir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "İngilizce \"school\""
+        },
+        {
+          "key": "B",
+          "md": "Fransızca \"école\""
+        },
+        {
+          "key": "C",
+          "md": "Almanca \"Schule\""
+        },
+        {
+          "key": "D",
+          "md": "Arapça \"mektep\""
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "İngilizce \"school\" Türkçe sözcüğün sesine örnek alınmamıştır.",
+        "C": "Almanca \"Schule\" Türkçe sözcüğün sesine örnek alınmamıştır.",
+        "D": "\"Mektep\" yeni sözcüğün yerini aldığı eski sözcüktür, ses örneği değildir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: Fransızca \"école\".\n- Sözcük Dil Devrimi döneminde türetilmiştir.\n- Hem Türkçe bir köke dayanır hem de Batı dillerindeki karşılığa benzer."
+        },
+        {
+          "type": "hint",
+          "md": "Dönemin aydınlarının en çok bildiği Batı dili."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Dil Devrimi döneminde türetilen bazı sözcükler, hem Türkçe bir köke dayanacak hem de bir Batı dilindeki karşılığını çağrıştıracak biçimde oluşturulmuştur."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          125,
+          125
+        ],
+        "quote": "\"Okul\" sözcüğü, \"oku-\" fiilinden Fransızca \"école\" sözcüğüne ses bakımından benzetilerek türetilmiştir.",
+        "chapter": "Dil ve Sözcük Bilgisi"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "dil"
+      ],
+      "vurgu": [],
+      "contentHash": "0783fbcbd7867bd36ab09bce8a3c43202437a9004c9b82b0e71db0d1e1aec2da",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0654",
+      "conceptId": "gokturk-alfabesi-aniti",
+      "stem": {
+        "md": "Göktürk alfabesiyle yazılmış olan eser hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Kutadgu Bilig"
+        },
+        {
+          "key": "B",
+          "md": "Orhun Yazıtları"
+        },
+        {
+          "key": "C",
+          "md": "Rosetta Taşı"
+        },
+        {
+          "key": "D",
+          "md": "Hammurabi Kanunları"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Kutadgu Bilig Karahanlı döneminde yazılmış bir kitaptır, yazıt değildir.",
+        "C": "Rosetta Taşı Mısır'da bulunmuştur; hiyeroglif ve Yunanca içerir.",
+        "D": "Hammurabi Kanunları Babil'de çivi yazısıyla yazılmıştır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: Orhun Yazıtları.\n- Sekizinci yüzyılda bugünkü Moğolistan'da dikilmiştir.\n- Türk adının geçtiği bilinen en eski Türkçe metinlerdendir."
+        },
+        {
+          "type": "hint",
+          "md": "Bugünkü Moğolistan'da dikili taşlar."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Eski Türkler kendilerine özgü, runik harflere benzeyen ve taşa kazınmaya uygun bir yazı kullanmıştır. Bu yazının çözülmesi on dokuzuncu yüzyıl sonunda gerçekleşmiştir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          126,
+          126
+        ],
+        "quote": "Orhun Yazıtları Göktürk alfabesiyle yazılmıştır.",
+        "chapter": "Dil ve Sözcük Bilgisi"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "dil"
+      ],
+      "vurgu": [],
+      "contentHash": "fb820fd70e8ba23cc949d815020b411ce7a137a555616797190ab31d908e5b4a",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0655",
+      "conceptId": "ds-harf-devrimi",
+      "stem": {
+        "md": "Türkiye'de Latin harflerine dayalı yeni Türk alfabesi ____ yılında kabul edilmiştir."
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "1923"
+        },
+        {
+          "key": "B",
+          "md": "1932"
+        },
+        {
+          "key": "C",
+          "md": "1934"
+        },
+        {
+          "key": "D",
+          "md": "1928"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "1923, Cumhuriyet'in ilan edildiği yıldır.",
+        "B": "1932, Türk Dil Kurumunun kurulduğu yıldır.",
+        "C": "1934, Soyadı Kanunu'nun çıkarıldığı yıldır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: 1928.\n- Yeni alfabe Arap harflerinin yerini almıştır.\n- Ardından halkın okuma yazma öğrenmesi için Millet Mektepleri açılmıştır."
+        },
+        {
+          "type": "hint",
+          "md": "Cumhuriyet'in ilk on yılı içinde."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Cumhuriyet'in ilk yıllarında yazı, ölçü birimleri ve takvim gibi alanlarda kapsamlı yenilikler yapılmıştır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          126,
+          126
+        ],
+        "quote": "Türkiye'de Latin harflerine dayalı yeni Türk alfabesi 1928'de kabul edilmiştir.",
+        "chapter": "Dil ve Sözcük Bilgisi"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "dil"
+      ],
+      "vurgu": [],
+      "contentHash": "9f35be2faad640f64c51a00f1168c5abf33a641c10dbae4ef98d676955667ecb",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0656",
+      "conceptId": "ds-kiril-alfabesi",
+      "stem": {
+        "md": "Aşağıdaki dillerden hangisi Kiril alfabesiyle yazılmaz?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Rusça"
+        },
+        {
+          "key": "B",
+          "md": "Bulgarca"
+        },
+        {
+          "key": "C",
+          "md": "Sırpça"
+        },
+        {
+          "key": "D",
+          "md": "Lehçe"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Rusça Kiril alfabesiyle yazılır.",
+        "B": "Bulgarca Kiril alfabesiyle yazılır.",
+        "C": "Sırpça Kiril alfabesiyle de yazılır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: Lehçe.\n- Lehçe bir Slav dili olmasına karşın Latin alfabesiyle yazılır.\n- Rusça, Bulgarca ve Sırpça Kiril alfabesini kullanır."
+        },
+        {
+          "type": "hint",
+          "md": "Katolik geleneğe bağlı bir Slav ülkesinin dili."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Slav dilleri aynı aileden olsa da farklı alfabelerle yazılır; bu ayrım büyük ölçüde Ortodoks ve Katolik kiliselerinin tarihî etkisini yansıtır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          126,
+          126
+        ],
+        "quote": "Lehçe ise Latin alfabesiyle yazılır.",
+        "chapter": "Dil ve Sözcük Bilgisi"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "dil"
+      ],
+      "vurgu": [],
+      "contentHash": "bad24d4c98cf79ec12f945cc0e9728d2cfea05511763b3d8c0e8dad918f17d49",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0657",
+      "conceptId": "ds-sagdan-sola",
+      "stem": {
+        "md": "Aşağıdaki dillerden hangisi sağdan sola yazılır?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Yunanca"
+        },
+        {
+          "key": "B",
+          "md": "İbranice"
+        },
+        {
+          "key": "C",
+          "md": "Rusça"
+        },
+        {
+          "key": "D",
+          "md": "Ermenice"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Yunanca kendi alfabesiyle soldan sağa yazılır.",
+        "C": "Rusça Kiril alfabesiyle soldan sağa yazılır.",
+        "D": "Ermenice kendi alfabesiyle soldan sağa yazılır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: İbranice.\n- İbranice ve Arapça gibi dillerin yazısı sağdan sola ilerler."
+        },
+        {
+          "type": "hint",
+          "md": "İsrail'in resmî dili."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Yazı yönü, alfabenin tarihsel kökenine bağlıdır. Fenike yazısından türeyen bazı yazılar sağdan sola yönünü korurken bazıları yönünü değiştirmiştir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          126,
+          126
+        ],
+        "quote": "Arapça ve İbranice sağdan sola yazılır.",
+        "chapter": "Dil ve Sözcük Bilgisi"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "dil"
+      ],
+      "vurgu": [],
+      "contentHash": "c4aacaabbef58a5beb92380b787a8a7be6324ac9ac3d72a1b115830fd4e29d34",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0658",
+      "conceptId": "ds-hangul",
+      "stem": {
+        "md": "Hangul hangi dilin yazımı için geliştirilmiş bir alfabedir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Japonca"
+        },
+        {
+          "key": "B",
+          "md": "Çince"
+        },
+        {
+          "key": "C",
+          "md": "Korece"
+        },
+        {
+          "key": "D",
+          "md": "Vietnamca"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Japonca kanji ile hiragana ve katakana hece yazılarını kullanır.",
+        "B": "Çince her biri bir anlam birimini gösteren karakterlerle yazılır.",
+        "D": "Vietnamca bugün Latin alfabesine dayalı bir yazıyla yazılır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: Korece.\n- Hangul, on beşinci yüzyılda Kral Sejong döneminde geliştirilmiştir.\n- Harfleri hece blokları hâlinde bir araya getirilir."
+        },
+        {
+          "type": "hint",
+          "md": "Kral Sejong'un adıyla anılır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Doğu Asya'da Çin yazısı uzun süre ortak yazı dili olmuştur. Bazı ülkeler zamanla kendi dillerinin seslerine uygun özgün yazılar geliştirmiştir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          126,
+          126
+        ],
+        "quote": "Hangul, Korece için geliştirilmiş bir alfabedir.",
+        "chapter": "Dil ve Sözcük Bilgisi"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "dil"
+      ],
+      "vurgu": [],
+      "contentHash": "cd2d77395bce0a2b2d5cb699c933df3e3dd744800940c19c112fed7727d92f78",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0659",
+      "conceptId": "avusturya-resmi-dil",
+      "stem": {
+        "md": "Avusturya'nın resmi dili hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Macarca"
+        },
+        {
+          "key": "B",
+          "md": "Almanca"
+        },
+        {
+          "key": "C",
+          "md": "İtalyanca"
+        },
+        {
+          "key": "D",
+          "md": "Fransızca"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Macarca komşu Macaristan'ın dilidir; iki ülke eskiden aynı imparatorluktaydı.",
+        "C": "İtalyanca güney komşusu İtalya'nın dilidir.",
+        "D": "Fransızca İsviçre'nin resmi dillerinden biridir, Avusturya'nın değil."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: Almanca.\n- Avusturya, Almanya'nın güneydoğu komşusudur."
+        },
+        {
+          "type": "hint",
+          "md": "Kuzeybatıdaki büyük komşusuyla aynı dil."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Orta Avrupa'da bazı diller birden fazla ülkede resmî dil olarak kullanılır. Ülke sınırları ile dil sınırları her zaman örtüşmez."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          127,
+          127
+        ],
+        "quote": "Avusturya'nın resmi dili Almancadır.",
+        "chapter": "Dil ve Sözcük Bilgisi"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "dil"
+      ],
+      "vurgu": [],
+      "contentHash": "0cac3d6cfd01396ed9ab00e305d4abb25d672d7f51af0767bd0996cd521b776b",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0660",
+      "conceptId": "zamenhof-yapay-dil",
+      "stem": {
+        "md": "Ludwik Zamenhof'un tasarladığı yapay dil hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Volapük"
+        },
+        {
+          "key": "B",
+          "md": "Interlingua"
+        },
+        {
+          "key": "C",
+          "md": "Klingonca"
+        },
+        {
+          "key": "D",
+          "md": "Esperanto"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Volapük daha eski bir yapay dildir; onu Johann Martin Schleyer tasarlamıştır.",
+        "B": "Interlingua yirminci yüzyılda bir dil derneği tarafından geliştirilmiştir.",
+        "C": "Klingonca bir bilimkurgu dizisi için uydurulmuş bir dildir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: Esperanto.\n- Farklı dilleri konuşan insanlar arasında ortak bir ikinci dil olsun diye tasarlanmıştır."
+        },
+        {
+          "type": "hint",
+          "md": "Adı, umut eden anlamına gelir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "On dokuzuncu yüzyılda uluslararası iletişimi kolaylaştırmak için kuralları düzenli ve öğrenmesi kolay yapay diller tasarlanmıştır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          127,
+          127
+        ],
+        "quote": "Esperanto, Ludwik Zamenhof'un tasarladığı yapay bir dildir.",
+        "chapter": "Dil ve Sözcük Bilgisi"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "dil"
+      ],
+      "vurgu": [],
+      "contentHash": "cbc0fd50004b590651862c9adc8b76c171374aaab709c9582dc191b03de629d4",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0661",
+      "conceptId": "ds-sondan-eklemeli",
+      "stem": {
+        "md": "Kökü sabit kalan ve ekleri sözcüğün sonuna getiren Türkçe, yapı bakımından nasıl bir dildir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Tek heceli"
+        },
+        {
+          "key": "B",
+          "md": "Sondan eklemeli"
+        },
+        {
+          "key": "C",
+          "md": "Önden eklemeli"
+        },
+        {
+          "key": "D",
+          "md": "Kök değişimli (bükümlü)"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Tek heceli dillerde sözcükler ek almaz; Çince bu türe örnektir.",
+        "C": "Önden eklemeli dillerde ekler sözcüğün başına gelir.",
+        "D": "Bükümlü dillerde kökün kendisi değişebilir; Arapça bu türe örnektir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: sondan eklemeli.\n- Örnek: göz, gözlük, gözlükçü, gözlükçüler.\n- Kök değişmez, ekler arka arkaya sona eklenir."
+        },
+        {
+          "type": "hint",
+          "md": "\"Evlerimizden\" sözcüğünü parçalarına ayırın."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Diller kökenlerine göre ailelere, sözcük yapılarına göre de tiplere ayrılır. Yapı sınıflaması, eklerin köke nasıl bağlandığına bakar."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          127,
+          127
+        ],
+        "quote": "Türkçe, kökün sabit kaldığı ve eklerin sona getirildiği sondan eklemeli bir dildir.",
+        "chapter": "Dil ve Sözcük Bilgisi"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "dil"
+      ],
+      "vurgu": [],
+      "contentHash": "e3fbb61eea317d2bd1ce930d676bac3263e75e1fbe9f1cc20b43c25a769c8959",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0662",
+      "conceptId": "ds-ural-dilleri",
+      "stem": {
+        "md": "Aşağıdaki dillerden hangisi Ural dil ailesindendir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Romence"
+        },
+        {
+          "key": "B",
+          "md": "Yunanca"
+        },
+        {
+          "key": "C",
+          "md": "Macarca"
+        },
+        {
+          "key": "D",
+          "md": "Arnavutça"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Romence Latinceden gelişmiş bir Roman dilidir.",
+        "B": "Yunanca Hint-Avrupa ailesinin kendi başına bir koludur.",
+        "D": "Arnavutça Hint-Avrupa ailesinin kendi başına bir koludur."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: Macarca.\n- Fince ve Estonca ile aynı aileye bağlıdır.\n- Avrupa'nın ortasında konuşulmasına karşın komşularının dilleriyle akraba değildir."
+        },
+        {
+          "type": "hint",
+          "md": "Fince ile akraba bir Orta Avrupa dili."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Avrupa dillerinin büyük çoğunluğu tek bir büyük aileye bağlıdır. Ancak birkaç dil bu ailenin dışında kalır ve farklı bir kökene sahiptir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          127,
+          127
+        ],
+        "quote": "Macarca ve Fince Ural dil ailesindendir.",
+        "chapter": "Dil ve Sözcük Bilgisi"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "dil"
+      ],
+      "vurgu": [],
+      "contentHash": "e1d5167c8d3bf47d898e7f8fe7a6af27170caefbf0b27d8e3cecc9a8565eedf3",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0663",
+      "conceptId": "ds-roman-dilleri",
+      "stem": {
+        "md": "Aşağıdaki dillerden hangisi Roman dillerinden değildir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "İspanyolca"
+        },
+        {
+          "key": "B",
+          "md": "İtalyanca"
+        },
+        {
+          "key": "C",
+          "md": "Almanca"
+        },
+        {
+          "key": "D",
+          "md": "Portekizce"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "İspanyolca Latinceden gelişmiş bir Roman dilidir.",
+        "B": "İtalyanca Latinceden gelişmiş bir Roman dilidir.",
+        "D": "Portekizce Latinceden gelişmiş bir Roman dilidir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: Almanca.\n- Almanca, İngilizce ve Hollandaca ile birlikte Cermen dillerindendir.\n- Roman dilleri Latinceden gelişmiştir."
+        },
+        {
+          "type": "hint",
+          "md": "Kökeni Latince olmayan dili arayın."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Hint-Avrupa dil ailesi birçok kola ayrılır. Batı Avrupa'da en yaygın iki kol, Roma İmparatorluğu'nun dilinden gelişenler ile kuzeydeki kavimlerin dilleridir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          127,
+          127
+        ],
+        "quote": "İspanyolca, Portekizce, İtalyanca ve Fransızca Latinceden gelişmiş Roman dilleridir.",
+        "chapter": "Dil ve Sözcük Bilgisi"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "dil"
+      ],
+      "vurgu": [],
+      "contentHash": "69f2341eb77236d0e91705bcafbda163f49a0f954a2dfa85ab97a6d7822cd349",
+      "deleted": false
+    }
+  ]
+}

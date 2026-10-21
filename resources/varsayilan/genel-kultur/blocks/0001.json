@@ -1,0 +1,4430 @@
+{
+  "blockId": "0001",
+  "questions": [
+    {
+      "id": "genel-kultur-0001",
+      "conceptId": "cumhuriyetin-ilani",
+      "stem": {
+        "md": "Türkiye Cumhuriyeti hangi tarihte ilan edilmiştir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "23 Nisan 1920"
+        },
+        {
+          "key": "B",
+          "md": "19 Mayıs 1919"
+        },
+        {
+          "key": "C",
+          "md": "30 Ağustos 1922"
+        },
+        {
+          "key": "D",
+          "md": "29 Ekim 1923"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "23 Nisan 1920, Türkiye Büyük Millet Meclisi'nin açıldığı gündür.",
+        "B": "19 Mayıs 1919, Mustafa Kemal'in Samsun'a çıktığı gündür.",
+        "C": "30 Ağustos 1922, Büyük Taarruz'un zaferle sonuçlandığı gündür."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Cumhuriyet 29 Ekim 1923'te ilan edilmiştir.\n- Bu gün her yıl Cumhuriyet Bayramı olarak kutlanır."
+        },
+        {
+          "type": "hint",
+          "md": "Cumhuriyet Bayramı'nın günü."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Cumhuriyet, Kurtuluş Savaşı'nın ardından yeni devletin yönetim biçimini belirledi. İlan, TBMM'de yapılan anayasa değişikliğiyle gerçekleşti ve ilk cumhurbaşkanı aynı gün seçildi."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          1,
+          1
+        ],
+        "quote": "Türkiye Cumhuriyeti 29 Ekim 1923'te ilan edilmiştir.",
+        "chapter": "Türkiye Tarihi"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "tarih"
+      ],
+      "vurgu": [],
+      "contentHash": "3b2672cc5bba03b02e61d3a9eefd65cdc5729c9361b1c44a0bc01fba96dc4ae2",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0002",
+      "conceptId": "istanbul-fethi-padisah",
+      "stem": {
+        "md": "İstanbul'u 1453'te fetheden Osmanlı padişahı kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "II. Mehmed"
+        },
+        {
+          "key": "B",
+          "md": "II. Murad"
+        },
+        {
+          "key": "C",
+          "md": "I. Selim"
+        },
+        {
+          "key": "D",
+          "md": "II. Bayezid"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "II. Murad fatihin babasıdır; şehri kuşatmış ama alamamıştır.",
+        "C": "I. Selim, 1517'de Mısır'ı alan padişahtır.",
+        "D": "II. Bayezid fatihin oğludur ve fetihten sonra tahta çıkmıştır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- İstanbul'u II.\n- Mehmed fethetmiştir.\n- Bu fetihten sonra Fatih unvanıyla anılmıştır."
+        },
+        {
+          "type": "hint",
+          "md": "Fatih unvanıyla bilinir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Bizans'ın başkenti Konstantinopolis, kara surları ve Haliç zinciriyle uzun süre kuşatmalara dayandı. Kuşatmada büyük toplar ve gemilerin karadan Haliç'e indirilmesi belirleyici oldu."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          1,
+          1
+        ],
+        "quote": "İstanbul, 1453'te II. Mehmed tarafından fethedilmiştir.",
+        "chapter": "Türkiye Tarihi"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "tarih"
+      ],
+      "vurgu": [],
+      "contentHash": "b332fa5016e0340f0643c90151943a0ecce62524a728a1edd86d06092f0ec2e2",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0003",
+      "conceptId": "tt-ilk-turk-devleti-adi",
+      "stem": {
+        "md": "Türk adını taşıyan ilk Türk devleti hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Hunlar"
+        },
+        {
+          "key": "B",
+          "md": "Uygurlar"
+        },
+        {
+          "key": "C",
+          "md": "Avarlar"
+        },
+        {
+          "key": "D",
+          "md": "Göktürkler"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Asya Hun Devleti daha eskidir ama devlet adında \"Türk\" sözcüğü geçmez.",
+        "B": "Uygurlar Göktürklerden sonra kurulmuştur.",
+        "C": "Avarlar Avrupa'ya göç eden bir topluluktur, adlarında Türk sözcüğü yoktur."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Göktürk Devleti 552'de Bumin Kağan tarafından kuruldu.\n- Devletin adında \"Türk\" adı resmen kullanıldı.\n- Orhun Yazıtları bu devletten kalmıştır."
+        },
+        {
+          "type": "hint",
+          "md": "Orhun Yazıtları bu devletten kalmadır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "İslamiyet öncesi Orta Asya'da birçok Türk topluluğu devlet kurdu. Bunlardan biri, kendi adını resmî olarak \"Türk\" diye kullanan ilk devlet olarak bilinir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          1,
+          1
+        ],
+        "quote": "Türk adını taşıyan ilk Türk devleti Göktürklerdir.",
+        "chapter": "Türkiye Tarihi"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "tarih"
+      ],
+      "vurgu": [],
+      "contentHash": "c3890b64e442478c7375e4b31ccaab05e6d9bbf4fc92ac70120c6168f99ddf49",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0004",
+      "conceptId": "tt-mete-han-onlu-sistem",
+      "stem": {
+        "md": "Orduyu onlu sisteme göre düzenleyen Asya Hun hükümdarı kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Bumin Kağan"
+        },
+        {
+          "key": "B",
+          "md": "Attila"
+        },
+        {
+          "key": "C",
+          "md": "Bilge Kağan"
+        },
+        {
+          "key": "D",
+          "md": "Mete Han"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Bumin Kağan Göktürk Devleti'nin kurucusudur.",
+        "B": "Attila Avrupa Hun hükümdarıdır.",
+        "C": "Bilge Kağan Göktürk hükümdarıdır, adı Orhun Yazıtlarında geçer."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Mete Han, MÖ 209'da Asya Hun tahtına geçti.\n- Orduyu onluk, yüzlük, binlik ve on binlik birliklere ayırdı.\n- Bu düzen sonraki Türk ordularına örnek oldu."
+        },
+        {
+          "type": "hint",
+          "md": "Asya Hun Devleti'nin en güçlü hükümdarı."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Onlu sistem, askerleri on, yüz, bin ve on bin kişilik birliklere ayıran askerî düzendir. Türk ordularında yüzyıllarca kullanılmış ve düzenli ordunun temeli sayılmıştır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          1,
+          1
+        ],
+        "quote": "Mete Han orduyu onlu sisteme göre düzenlemiştir.",
+        "chapter": "Türkiye Tarihi"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "tarih"
+      ],
+      "vurgu": [],
+      "contentHash": "1bdcee1f8736fa3cfbe3aa90e5f68b339164616c46a043804d6b20d63bad5883",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0005",
+      "conceptId": "tt-malazgirt-yili",
+      "stem": {
+        "md": "Anadolu'nun kapılarını Türklere açan Malazgirt Meydan Muharebesi hangi yıl yapılmıştır?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "1071"
+        },
+        {
+          "key": "B",
+          "md": "1176"
+        },
+        {
+          "key": "C",
+          "md": "1243"
+        },
+        {
+          "key": "D",
+          "md": "1453"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "1176 Miryokefalon Savaşı'nın yılıdır.",
+        "C": "1243 Kösedağ Savaşı'nın yılıdır.",
+        "D": "1453 İstanbul'un fethinin yılıdır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Malazgirt Savaşı 1071'de yapıldı.\n- Büyük Selçuklu Sultanı Alparslan, Bizans İmparatoru Romen Diyojen'i yendi.\n- Savaştan sonra Anadolu'ya Türk göçü hızlandı."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Büyük Selçuklu Devleti ile Bizans arasındaki bu savaş, Doğu Anadolu'da yapıldı. Sonucunda Türk boyları Anadolu'ya kitleler hâlinde yerleşmeye başladı."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          1,
+          1
+        ],
+        "quote": "Malazgirt Meydan Muharebesi 1071 yılında yapılmıştır.",
+        "chapter": "Türkiye Tarihi"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "tarih"
+      ],
+      "vurgu": [],
+      "contentHash": "f4ad0456052c0d2ecfef74060b8c149a05803e97dc1623f801ba87c1a37be604",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0006",
+      "conceptId": "tt-malazgirt-komutan",
+      "stem": {
+        "md": "Malazgirt Muharebesi'nde Selçuklu ordusunu yöneten sultan kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Tuğrul Bey"
+        },
+        {
+          "key": "B",
+          "md": "Melikşah"
+        },
+        {
+          "key": "C",
+          "md": "Kılıç Arslan"
+        },
+        {
+          "key": "D",
+          "md": "Alparslan"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Tuğrul Bey Büyük Selçuklu Devleti'nin kurucusudur, bu savaştan önce ölmüştür.",
+        "B": "Melikşah savaşı yöneten sultanın oğludur.",
+        "C": "Kılıç Arslan Anadolu Selçuklu sultanlarındandır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Savaşı Büyük Selçuklu Sultanı Alparslan kazandı.\n- Bizans İmparatoru Romen Diyojen esir alındı.\n- Zafer, Anadolu'nun Türkleşmesinin başlangıcı sayılır."
+        },
+        {
+          "type": "hint",
+          "md": "Adı \"aslan\" sözcüğünü içerir; Tuğrul Bey'in yeğenidir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Büyük Selçuklu Devleti, 11. yüzyılda İran ve Irak'tan Anadolu sınırına uzanan bir Türk devletiydi. Hükümdarları \"sultan\" unvanını kullanırdı."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          2,
+          2
+        ],
+        "quote": "Malazgirt'te Selçuklu ordusunu Sultan Alparslan yönetmiştir.",
+        "chapter": "Türkiye Tarihi"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "tarih"
+      ],
+      "vurgu": [],
+      "contentHash": "ae487f852f317c997276d5937e09457e0f0127bc6f7544df8a87fa46d14792e9",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0007",
+      "conceptId": "tt-osmanli-kurucusu",
+      "stem": {
+        "md": "Osmanlı Devleti'ne adını veren kurucu kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Orhan Bey"
+        },
+        {
+          "key": "B",
+          "md": "Ertuğrul Gazi"
+        },
+        {
+          "key": "C",
+          "md": "I. Murad"
+        },
+        {
+          "key": "D",
+          "md": "Osman Bey"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Orhan Bey kurucunun oğlu ve ikinci hükümdardır.",
+        "B": "Ertuğrul Gazi kurucunun babasıdır, devlet onun adını taşımaz.",
+        "C": "I. Murad üçüncü Osmanlı hükümdarıdır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Osmanlı Beyliği Osman Bey tarafından kuruldu.\n- Devlet adını kurucusundan aldı.\n- Söğüt ve çevresinde bir uç beyliği olarak doğdu."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Osmanlılar, Anadolu Selçuklu Devleti'nin dağılmasıyla ortaya çıkan beyliklerden biriydi. Bizans sınırındaki konumu büyümesinde önemli rol oynadı."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          2,
+          2
+        ],
+        "quote": "Osmanlı Devleti adını kurucusu Osman Bey'den almıştır.",
+        "chapter": "Türkiye Tarihi"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "tarih"
+      ],
+      "vurgu": [],
+      "contentHash": "5759ab55317cd0e4f78b228fbbd007d3dc53234f3251d632fb754931afcba18b",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0008",
+      "conceptId": "tt-ilk-osmanli-baskenti",
+      "stem": {
+        "md": "Osmanlı Devleti'nin başkentlerinin doğru sırası hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Edirne - Bursa - İstanbul"
+        },
+        {
+          "key": "B",
+          "md": "İstanbul - Bursa - Edirne"
+        },
+        {
+          "key": "C",
+          "md": "Bursa - Edirne - İstanbul"
+        },
+        {
+          "key": "D",
+          "md": "Bursa - İstanbul - Edirne"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Edirne, Bursa'dan sonra başkent oldu.",
+        "B": "İstanbul en son başkenttir.",
+        "D": "Edirne, İstanbul'dan önce başkentti."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Bursa 1326'da alındı ve başkent oldu.\n- Rumeli'deki genişlemeyle başkent Edirne'ye taşındı.\n- 1453'te İstanbul başkent oldu."
+        },
+        {
+          "type": "hint",
+          "md": "Devlet önce Anadolu'da, sonra Rumeli'de büyüdü."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Osmanlı başkenti, devletin genişleme yönünü izleyerek yer değiştirdi. Her yeni başkent bir öncekinden daha batıdaydı veya stratejik açıdan daha merkezdeydi."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          2,
+          2
+        ],
+        "quote": "Osmanlı başkentleri sırasıyla Bursa, Edirne ve İstanbul olmuştur.",
+        "chapter": "Türkiye Tarihi"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "tarih"
+      ],
+      "vurgu": [],
+      "contentHash": "ce56f2581e7ed718781aa5c95b218dbfab6be39aac8915f95224644dd4e6de7c",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0009",
+      "conceptId": "tt-ankara-savasi",
+      "stem": {
+        "md": "1402 Ankara Savaşı'nda Yıldırım Bayezid'i yenen hükümdar kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Cengiz Han"
+        },
+        {
+          "key": "B",
+          "md": "Uzun Hasan"
+        },
+        {
+          "key": "C",
+          "md": "Şah İsmail"
+        },
+        {
+          "key": "D",
+          "md": "Timur"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Cengiz Han 13. yüzyılda yaşamıştır.",
+        "B": "Uzun Hasan Akkoyunlu hükümdarıdır, Fatih döneminde Otlukbeli'nde yenildi.",
+        "C": "Şah İsmail Safevî hükümdarıdır, Yavuz Sultan Selim'le savaştı."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Ankara Savaşı 1402'de yapıldı.\n- Timur, Yıldırım Bayezid'i yenip esir aldı.\n- Ardından Osmanlı'da Fetret Devri başladı."
+        },
+        {
+          "type": "hint",
+          "md": "Semerkant merkezli bir devletin hükümdarı."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Ankara Savaşı, iki büyük Türk-İslam devletinin çatışmasıdır. Yenilgiden sonra Osmanlı tahtı için şehzadeler arasında on yılı aşan bir mücadele yaşandı."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          2,
+          2
+        ],
+        "quote": "1402 Ankara Savaşı'nda Timur, Yıldırım Bayezid'i yenmiştir.",
+        "chapter": "Türkiye Tarihi"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "tarih"
+      ],
+      "vurgu": [],
+      "contentHash": "309a125eeb6355d120fb5c0208081648f74692b2ff3beb57e585e2cb73771a0f",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0010",
+      "conceptId": "tt-fetret-devri",
+      "stem": {
+        "md": "Osmanlı tarihinde \"Fetret Devri\"ni sona erdirip devlet birliğini yeniden sağlayan padişah kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "II. Murad"
+        },
+        {
+          "key": "B",
+          "md": "Yıldırım Bayezid"
+        },
+        {
+          "key": "C",
+          "md": "I. Murad"
+        },
+        {
+          "key": "D",
+          "md": "Çelebi Mehmed"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "II. Murad bu padişahın oğludur, tahta sonra çıkmıştır.",
+        "B": "Yıldırım Bayezid'in yenilgisi bu dönemi başlatmıştır.",
+        "C": "I. Murad dönem başlamadan önce ölmüştür."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Fetret Devri 1402–1413 arasındaki taht kavgası dönemidir.\n- Çelebi Mehmed kardeşlerini yenerek birliği sağladı.\n- Bu nedenle devletin ikinci kurucusu sayılır."
+        },
+        {
+          "type": "hint",
+          "md": "Yıldırım Bayezid'in oğullarından biri."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Fetret, \"kesinti, ara dönem\" anlamına gelir. Ankara yenilgisinden sonra şehzadeler ülkeyi paylaştı ve merkezi yönetim bir süre ortadan kalktı."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          2,
+          2
+        ],
+        "quote": "Fetret Devri'ni Çelebi Mehmed sona erdirmiştir.",
+        "chapter": "Türkiye Tarihi"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "tarih"
+      ],
+      "vurgu": [],
+      "contentHash": "883119acda2c7dd38ef8867c3aa80dda063e9faf5836f2ef1b0fe5934b482d26",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0011",
+      "conceptId": "tt-kanuni-mohac",
+      "stem": {
+        "md": "1526 Mohaç Meydan Muharebesi'nde Osmanlı ordusu hangi devlete karşı savaştı?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Avusturya"
+        },
+        {
+          "key": "B",
+          "md": "Venedik"
+        },
+        {
+          "key": "C",
+          "md": "Macaristan"
+        },
+        {
+          "key": "D",
+          "md": "Lehistan"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Avusturya ile 1529'da Viyana kuşatılmıştır, Mohaç'ta karşı taraf değildir.",
+        "B": "Venedik ile savaşlar daha çok denizde yapılmıştır.",
+        "D": "Lehistan bu savaşın tarafı değildir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Mohaç Savaşı 1526'da Kanuni Sultan Süleyman döneminde yapıldı.\n- Macar ordusu kısa sürede yenildi.\n- Macaristan büyük ölçüde Osmanlı denetimine girdi."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Mohaç, tarihin en kısa süren meydan savaşlarından biri olarak anılır. Osmanlı topçusu ve hilal taktiği zaferde etkili oldu."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          3,
+          3
+        ],
+        "quote": "1526 Mohaç Muharebesi'nde Osmanlı ordusu Macaristan'ı yenmiştir.",
+        "chapter": "Türkiye Tarihi"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "tarih"
+      ],
+      "vurgu": [],
+      "contentHash": "6abf6ea633fb6f3dd6356414ef8279402e34f92185c3fbb8ee736a4febe3662b",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0012",
+      "conceptId": "tt-preveze",
+      "stem": {
+        "md": "1538 Preveze Deniz Savaşı'nda Osmanlı donanmasını yöneten amiral kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Turgut Reis"
+        },
+        {
+          "key": "B",
+          "md": "Barbaros Hayreddin Paşa"
+        },
+        {
+          "key": "C",
+          "md": "Piri Reis"
+        },
+        {
+          "key": "D",
+          "md": "Kılıç Ali Paşa"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Turgut Reis aynı dönemin denizcisidir ama başkomutan değildir.",
+        "C": "Piri Reis daha çok haritası ve Kitab-ı Bahriye'siyle tanınır.",
+        "D": "Kılıç Ali Paşa İnebahtı'dan sonra donanmayı yeniden kurmuştur."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Preveze Savaşı 1538'de yapıldı.\n- Osmanlı donanmasını Barbaros Hayreddin Paşa yönetti.\n- Haçlı donanması yenildi ve Akdeniz'de Osmanlı üstünlüğü kuruldu."
+        },
+        {
+          "type": "hint",
+          "md": "Kızıl sakalıyla anılan Kaptan-ı Derya."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Preveze, Osmanlı'nın Akdeniz'deki deniz gücünün zirvesi sayılır. Karşı tarafta Papalık, Venedik ve İspanya'nın oluşturduğu birleşik bir donanma vardı."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          3,
+          3
+        ],
+        "quote": "Preveze Deniz Savaşı'nda Osmanlı donanmasını Barbaros Hayreddin Paşa yönetmiştir.",
+        "chapter": "Türkiye Tarihi"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "tarih"
+      ],
+      "vurgu": [],
+      "contentHash": "d3c0d2ba07c5ea0ea1604c69f12c3483a021ea875dc709d3ec4e335682e77a4b",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0013",
+      "conceptId": "tt-lale-devri",
+      "stem": {
+        "md": "Osmanlı'da Lale Devri hangi antlaşmayla başlayıp hangi isyanla sona ermiştir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Karlofça Antlaşması - Kabakçı Mustafa İsyanı"
+        },
+        {
+          "key": "B",
+          "md": "Küçük Kaynarca Antlaşması - Celali İsyanları"
+        },
+        {
+          "key": "C",
+          "md": "Zitvatorok Antlaşması - Vaka-i Hayriye"
+        },
+        {
+          "key": "D",
+          "md": "Pasarofça Antlaşması - Patrona Halil İsyanı"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Karlofça 1699'dadır; Kabakçı Mustafa İsyanı III. Selim dönemindedir.",
+        "B": "Küçük Kaynarca 1774'tedir; Celali İsyanları daha erkendir.",
+        "C": "Zitvatorok 1606'dadır; Vaka-i Hayriye 1826'da Yeniçeri Ocağı'nın kaldırılmasıdır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Lale Devri 1718 Pasarofça Antlaşması ile başladı.\n- 1730 Patrona Halil İsyanı ile sona erdi.\n- Bu dönemde matbaa kuruldu ve Batı ile ilişkiler arttı."
+        },
+        {
+          "type": "hint",
+          "md": "Başlangıçtaki antlaşma 1718 yılına aittir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Lale Devri, III. Ahmed ve Sadrazam Nevşehirli Damat İbrahim Paşa dönemine verilen addır. Barış, eğlence, mimari ve Batı'ya ilk elçilerin gönderilmesiyle bilinir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          3,
+          3
+        ],
+        "quote": "Lale Devri Pasarofça Antlaşması ile başlamış, Patrona Halil İsyanı ile sona ermiştir.",
+        "chapter": "Türkiye Tarihi"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "tarih"
+      ],
+      "vurgu": [],
+      "contentHash": "215b39fa964d3cd66420b31c5e585f022703198cba0665fe7a82f1b3f716c2cc",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0014",
+      "conceptId": "tt-ilk-matbaa",
+      "stem": {
+        "md": "Osmanlı'da Türkçe eser basan ilk matbaayı kim kurmuştur?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Katip Çelebi"
+        },
+        {
+          "key": "B",
+          "md": "Evliya Çelebi"
+        },
+        {
+          "key": "C",
+          "md": "Şinasi"
+        },
+        {
+          "key": "D",
+          "md": "İbrahim Müteferrika"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Katip Çelebi 17. yüzyılda yaşamış bir bilgindir; eserleri sonradan basılmıştır.",
+        "B": "Evliya Çelebi Seyahatname'nin yazarıdır.",
+        "C": "Şinasi ilk özel Türk gazetesini çıkaranlardandır, çok daha sonra yaşamıştır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Matbaa Lale Devri'nde, 1720'lerin sonunda kuruldu.\n- Kurucusu İbrahim Müteferrika'dır.\n- İlk basılan kitap Vankulu Lügati'dir."
+        },
+        {
+          "type": "hint",
+          "md": "Lale Devri'nde yaşamıştır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Osmanlı'da gayrimüslim topluluklar daha önce kendi dillerinde matbaa kullanıyordu. Türkçe ve Arap harfli basım ise 18. yüzyılda başladı."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          3,
+          3
+        ],
+        "quote": "Osmanlı'da Türkçe eser basan ilk matbaayı İbrahim Müteferrika kurmuştur.",
+        "chapter": "Türkiye Tarihi"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "tarih"
+      ],
+      "vurgu": [],
+      "contentHash": "70c53f4995b73b81fe1bf93596e916c17b932ba0720ee579c92265385f348bac",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0015",
+      "conceptId": "tt-tanzimat-fermani",
+      "stem": {
+        "md": "Tanzimat Fermanı hangi padişah döneminde ilan edilmiştir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "II. Mahmud"
+        },
+        {
+          "key": "B",
+          "md": "Abdülaziz"
+        },
+        {
+          "key": "C",
+          "md": "II. Abdülhamid"
+        },
+        {
+          "key": "D",
+          "md": "Abdülmecid"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "II. Mahmud yenileşme hareketleriyle tanınır ama ferman ondan sonra ilan edildi.",
+        "B": "Abdülaziz Islahat Fermanı'ndan sonra tahta çıkmıştır.",
+        "C": "II. Abdülhamid döneminde I. Meşrutiyet ilan edildi."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Tanzimat Fermanı 1839'da Gülhane Parkı'nda okundu.\n- Padişah Abdülmecid'di; metni Mustafa Reşit Paşa hazırladı.\n- Can, mal ve namus güvenliğini güvence altına aldı."
+        },
+        {
+          "type": "hint",
+          "md": "II. Mahmud'un oğludur."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Tanzimat, \"düzenlemeler\" anlamına gelir. Ferman, padişahın da yasalara uyacağını kabul ettiği ilk belge olarak hukukun üstünlüğü yolunda bir adım sayılır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          3,
+          3
+        ],
+        "quote": "Tanzimat Fermanı 1839'da Abdülmecid döneminde ilan edilmiştir.",
+        "chapter": "Türkiye Tarihi"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "tarih"
+      ],
+      "vurgu": [],
+      "contentHash": "b4768f5b00a2b7958049635eacc0229b2a83aaed425b13ad161e76e15df03bb0",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0016",
+      "conceptId": "tt-birinci-mesrutiyet",
+      "stem": {
+        "md": "Osmanlı'nın ilk anayasası Kanun-i Esasi hangi yıl ilan edilmiştir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "1876"
+        },
+        {
+          "key": "B",
+          "md": "1839"
+        },
+        {
+          "key": "C",
+          "md": "1856"
+        },
+        {
+          "key": "D",
+          "md": "1908"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "1839 Tanzimat Fermanı'nın yılıdır.",
+        "C": "1856 Islahat Fermanı'nın yılıdır.",
+        "D": "1908 II. Meşrutiyet'in yılıdır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Kanun-i Esasi 1876'da ilan edildi.\n- Böylece I. Meşrutiyet dönemi başladı.\n- Meclis-i Mebusan kısa süre sonra kapatıldı."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Meşrutiyet, hükümdarın yetkilerinin bir anayasa ve meclisle sınırlandığı yönetim biçimidir. Osmanlı'da iki kez ilan edilmiştir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          4,
+          4
+        ],
+        "quote": "Kanun-i Esasi 1876 yılında ilan edilmiştir.",
+        "chapter": "Türkiye Tarihi"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "tarih"
+      ],
+      "vurgu": [],
+      "contentHash": "ea6a55b3d8031ff71e7aac85991c4b39d73e8f0b6fb2f5d2a9176ca5cdb90b4d",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0017",
+      "conceptId": "tt-canakkale-yili",
+      "stem": {
+        "md": "Çanakkale Savaşları hangi savaşın içinde yapılmıştır?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Birinci Dünya Savaşı"
+        },
+        {
+          "key": "B",
+          "md": "Balkan Savaşları"
+        },
+        {
+          "key": "C",
+          "md": "Kurtuluş Savaşı"
+        },
+        {
+          "key": "D",
+          "md": "Kırım Savaşı"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Balkan Savaşları 1912–1913'te yapılmıştır.",
+        "C": "Kurtuluş Savaşı 1919'da başlamıştır.",
+        "D": "Kırım Savaşı 19. yüzyılın ortasındadır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Çanakkale Savaşları 1915–1916'da yapıldı.\n- Birinci Dünya Savaşı'nın cephelerinden biridir.\n- İtilaf Devletleri boğazı geçemedi."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "İtilaf Devletleri, Rusya'ya yardım ulaştırmak ve İstanbul'u almak için boğazı zorladı. Deniz ve kara harekâtının ikisi de başarısız oldu."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          4,
+          4
+        ],
+        "quote": "Çanakkale Savaşları Birinci Dünya Savaşı sırasında yapılmıştır.",
+        "chapter": "Türkiye Tarihi"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "tarih"
+      ],
+      "vurgu": [],
+      "contentHash": "c495ab67024b4154719562c6a01d811e2f9be17ebf82d7586e690e8d5c029855",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0018",
+      "conceptId": "tt-18-mart",
+      "stem": {
+        "md": "Çanakkale Deniz Zaferi her yıl hangi tarihte anılır?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "18 Mart"
+        },
+        {
+          "key": "B",
+          "md": "19 Mayıs"
+        },
+        {
+          "key": "C",
+          "md": "30 Ağustos"
+        },
+        {
+          "key": "D",
+          "md": "9 Eylül"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "19 Mayıs Mustafa Kemal'in Samsun'a çıkışıdır.",
+        "C": "30 Ağustos Büyük Taarruz'un sonucudur.",
+        "D": "9 Eylül İzmir'in kurtuluşudur."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Deniz zaferi 18 Mart 1915'te kazanıldı.\n- İtilaf donanması boğazda ağır kayıp verdi.\n- Bu gün Şehitleri Anma Günü olarak da anılır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Boğaza döşenen mayınlar ve kıyı tabyaları deniz harekâtının başarısız olmasında belirleyiciydi. Nusret mayın gemisi bu savunmanın simgelerindendir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          4,
+          4
+        ],
+        "quote": "Çanakkale Deniz Zaferi 18 Mart'ta anılır.",
+        "chapter": "Türkiye Tarihi"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "tarih"
+      ],
+      "vurgu": [],
+      "contentHash": "1d4caa65931c9a109e804fa04c529bf4117217d5aa5f53647a3f298145270645",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0019",
+      "conceptId": "tt-samsuna-cikis",
+      "stem": {
+        "md": "Mustafa Kemal'in Samsun'a çıkarak Millî Mücadele'yi başlattığı tarih hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "23 Nisan 1920"
+        },
+        {
+          "key": "B",
+          "md": "29 Ekim 1923"
+        },
+        {
+          "key": "C",
+          "md": "19 Mayıs 1919"
+        },
+        {
+          "key": "D",
+          "md": "30 Ağustos 1922"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "23 Nisan 1920 TBMM'nin açılışıdır.",
+        "B": "29 Ekim 1923 Cumhuriyet'in ilanıdır.",
+        "D": "30 Ağustos 1922 Başkomutanlık Meydan Muharebesi'nin kazanıldığı gündür."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Mustafa Kemal 19 Mayıs 1919'da Samsun'a çıktı.\n- Bu tarih Millî Mücadele'nin başlangıcı kabul edilir.\n- Atatürk'ü Anma, Gençlik ve Spor Bayramı olarak kutlanır."
+        },
+        {
+          "type": "hint",
+          "md": "Bugün Gençlik ve Spor Bayramı olarak kutlanır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Mondros Ateşkesi'nden sonra Anadolu'nun birçok bölgesi işgal edildi. Samsun'a çıkış, örgütlü direnişin başlangıcı olarak kabul edilir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          4,
+          4
+        ],
+        "quote": "Mustafa Kemal 19 Mayıs 1919'da Samsun'a çıkmıştır.",
+        "chapter": "Türkiye Tarihi"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "tarih"
+      ],
+      "vurgu": [],
+      "contentHash": "906a5fd1c49620728508d729f474a5d2e5d078b7491fee1d34ee8afc915a45cd",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0020",
+      "conceptId": "tt-kongreler-sira",
+      "stem": {
+        "md": "Aşağıdaki olayların kronolojik sırası hangisidir?\\n- Amasya Genelgesi\\n- Erzurum Kongresi\\n- Sivas Kongresi\\n- TBMM'nin açılışı"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Amasya Genelgesi - Erzurum Kongresi - Sivas Kongresi - TBMM'nin açılışı"
+        },
+        {
+          "key": "B",
+          "md": "Erzurum Kongresi - Amasya Genelgesi - Sivas Kongresi - TBMM'nin açılışı"
+        },
+        {
+          "key": "C",
+          "md": "Amasya Genelgesi - Sivas Kongresi - Erzurum Kongresi - TBMM'nin açılışı"
+        },
+        {
+          "key": "D",
+          "md": "Sivas Kongresi - Erzurum Kongresi - Amasya Genelgesi - TBMM'nin açılışı"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Amasya Genelgesi Haziran 1919'dadır, Erzurum Kongresi'nden önce yayımlandı.",
+        "C": "Erzurum Kongresi Temmuz, Sivas Kongresi Eylül 1919'dadır.",
+        "D": "Bu sıra tamamen tersine çevrilmiştir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Amasya Genelgesi: Haziran 1919.\n- Erzurum Kongresi: Temmuz–Ağustos 1919.\n- Sivas Kongresi: Eylül 1919.\n- TBMM'nin açılışı: 23 Nisan 1920."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Millî Mücadele'nin ilk yılı, dağınık direniş örgütlerinin tek bir çatı altında toplanma sürecidir. Genelge ve kongreler bu birleşmenin adımlarıdır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          4,
+          4
+        ],
+        "quote": "Amasya Genelgesi, Erzurum Kongresi, Sivas Kongresi ve TBMM'nin açılışı bu sırayla gerçekleşmiştir.",
+        "chapter": "Türkiye Tarihi"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "tarih"
+      ],
+      "vurgu": [],
+      "contentHash": "69b0f361f35ad1e18c251909c07eca525f26656ee95e8592a1cf4e2d85452ca8",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0021",
+      "conceptId": "tt-tbmm-acilis",
+      "stem": {
+        "md": "Türkiye Büyük Millet Meclisi hangi tarihte açılmıştır?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "29 Ekim 1923"
+        },
+        {
+          "key": "B",
+          "md": "23 Nisan 1920"
+        },
+        {
+          "key": "C",
+          "md": "19 Mayıs 1919"
+        },
+        {
+          "key": "D",
+          "md": "3 Mart 1924"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "29 Ekim 1923 Cumhuriyet'in ilan tarihidir.",
+        "C": "19 Mayıs 1919 Samsun'a çıkış tarihidir.",
+        "D": "3 Mart 1924 halifeliğin kaldırıldığı tarihtir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- TBMM 23 Nisan 1920'de Ankara'da açıldı.\n- Bu gün Ulusal Egemenlik ve Çocuk Bayramı olarak kutlanır."
+        },
+        {
+          "type": "hint",
+          "md": "Bugün çocuklara armağan edilmiş bir bayramdır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Meclis, işgal altındaki İstanbul'daki Meclis-i Mebusan'ın kapatılmasından sonra Ankara'da toplandı. Hem yasama hem yürütme yetkisini kendinde topladı."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          5,
+          5
+        ],
+        "quote": "TBMM 23 Nisan 1920'de açılmıştır.",
+        "chapter": "Türkiye Tarihi"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "tarih"
+      ],
+      "vurgu": [],
+      "contentHash": "d162f5c380628e36ad5aa40b91ffedf7da2779c168abb551dfa94eca51288438",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0022",
+      "conceptId": "tt-sakarya",
+      "stem": {
+        "md": "Mustafa Kemal'e \"Gazi\" unvanı ve mareşal rütbesi hangi savaştan sonra verilmiştir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Sakarya Meydan Muharebesi"
+        },
+        {
+          "key": "B",
+          "md": "Birinci İnönü Muharebesi"
+        },
+        {
+          "key": "C",
+          "md": "Büyük Taarruz"
+        },
+        {
+          "key": "D",
+          "md": "Kütahya-Eskişehir Muharebeleri"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Birinci İnönü'den sonra İsmet Bey'e paşalık rütbesi verildi.",
+        "C": "Büyük Taarruz bu unvanlardan sonra yapılmıştır.",
+        "D": "Kütahya-Eskişehir'de Türk ordusu geri çekilmiştir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Sakarya Meydan Muharebesi 1921'de kazanıldı.\n- TBMM, Mustafa Kemal'e Gazi unvanı ve mareşal rütbesi verdi.\n- Bu savaşla Türk ordusu savunmadan saldırıya geçme gücü kazandı."
+        },
+        {
+          "type": "hint",
+          "md": "Savaş 22 gün 22 gece sürmüştür."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Kurtuluş Savaşı'nın batı cephesinde art arda büyük muharebeler yapıldı. Bunlardan biri, Yunan ilerleyişinin durdurulduğu dönüm noktası sayılır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          5,
+          5
+        ],
+        "quote": "Mustafa Kemal'e Gazi unvanı ve mareşal rütbesi Sakarya Meydan Muharebesi'nden sonra verilmiştir.",
+        "chapter": "Türkiye Tarihi"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "tarih"
+      ],
+      "vurgu": [],
+      "contentHash": "9a07d770d57fceeb557f077a09a7dfd09b1be49b3e397fe10518727a0db05fe4",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0023",
+      "conceptId": "tt-lozan",
+      "stem": {
+        "md": "Türkiye'nin bağımsızlığının uluslararası alanda tanındığı antlaşma hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Lozan Barış Antlaşması"
+        },
+        {
+          "key": "B",
+          "md": "Mudanya Ateşkes Antlaşması"
+        },
+        {
+          "key": "C",
+          "md": "Sevr Antlaşması"
+        },
+        {
+          "key": "D",
+          "md": "Ankara Antlaşması"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Mudanya bir ateşkes antlaşmasıdır, barışı sağlamaz.",
+        "C": "Sevr hiç uygulanmayan ve TBMM'nin tanımadığı bir antlaşmadır.",
+        "D": "Ankara Antlaşması yalnız Fransa ile güney sınırını düzenler."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Lozan Barış Antlaşması 24 Temmuz 1923'te imzalandı.\n- Türk heyetine İsmet Paşa başkanlık etti.\n- Yeni Türk devletinin bağımsızlığı tanındı."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Kurtuluş Savaşı'nın askerî zaferi, uluslararası bir barış konferansında siyasal sonuca bağlandı. Kapitülasyonlar ve sınırlar burada görüşüldü."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          5,
+          5
+        ],
+        "quote": "Türkiye'nin bağımsızlığı Lozan Barış Antlaşması ile uluslararası alanda tanınmıştır.",
+        "chapter": "Türkiye Tarihi"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "tarih"
+      ],
+      "vurgu": [],
+      "contentHash": "e702cc6a717360965e597341597ec7806215be9d9085945296d6a9e370b9f22e",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0024",
+      "conceptId": "tt-lozan-heyet",
+      "stem": {
+        "md": "Lozan Konferansı'nda Türk heyetine kim başkanlık etmiştir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Rauf Bey"
+        },
+        {
+          "key": "B",
+          "md": "Fevzi Paşa"
+        },
+        {
+          "key": "C",
+          "md": "Kâzım Karabekir"
+        },
+        {
+          "key": "D",
+          "md": "İsmet Paşa"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Rauf Bey Mondros Ateşkesi'ni imzalayan heyetin başkanıdır.",
+        "B": "Fevzi Paşa Genelkurmay Başkanıdır.",
+        "C": "Kâzım Karabekir Doğu Cephesi komutanıdır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Türk heyetinin başkanı İsmet Paşa'dır (İnönü).\n- Antlaşma 1923'te imzalandı.\n- İsmet Paşa sonradan ikinci cumhurbaşkanı oldu."
+        },
+        {
+          "type": "hint",
+          "md": "Batı Cephesi'ndeki iki muharebe onun soyadına kaynaklık etti."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Konferans uzun ve zorlu geçti; bir ara kesintiye uğradı. Heyet başkanı Ankara ile sürekli yazışarak görüşmeleri yürüttü."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          5,
+          5
+        ],
+        "quote": "Lozan Konferansı'nda Türk heyetine İsmet Paşa başkanlık etmiştir.",
+        "chapter": "Türkiye Tarihi"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "tarih"
+      ],
+      "vurgu": [],
+      "contentHash": "33749ea4d106a0a0b481a60d8182e0f1892611ef0c09db2816143fc73709440d",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0025",
+      "conceptId": "tt-saltanat-kaldirma",
+      "stem": {
+        "md": "Aşağıdaki inkılapların kronolojik sırası hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Cumhuriyetin ilanı - Saltanatın kaldırılması - Halifeliğin kaldırılması - Soyadı Kanunu"
+        },
+        {
+          "key": "B",
+          "md": "Saltanatın kaldırılması - Cumhuriyetin ilanı - Halifeliğin kaldırılması - Soyadı Kanunu"
+        },
+        {
+          "key": "C",
+          "md": "Saltanatın kaldırılması - Halifeliğin kaldırılması - Cumhuriyetin ilanı - Soyadı Kanunu"
+        },
+        {
+          "key": "D",
+          "md": "Halifeliğin kaldırılması - Saltanatın kaldırılması - Soyadı Kanunu - Cumhuriyetin ilanı"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Saltanat 1922'de, Cumhuriyet ilanından önce kaldırıldı.",
+        "C": "Halifelik 1924'te, Cumhuriyetten sonra kaldırıldı.",
+        "D": "Halifelik saltanattan sonra kaldırılmıştır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Saltanatın kaldırılması: 1 Kasım 1922.\n- Cumhuriyetin ilanı: 29 Ekim 1923.\n- Halifeliğin kaldırılması: 3 Mart 1924.\n- Soyadı Kanunu: 1934."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Cumhuriyetin kuruluş yıllarında siyasal yapı adım adım değiştirildi. Önce eski yönetimin kurumları kaldırıldı, sonra toplumsal hayatı düzenleyen yasalar çıktı."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          5,
+          5
+        ],
+        "quote": "Saltanat 1922'de, halifelik 1924'te kaldırılmıştır.",
+        "chapter": "Türkiye Tarihi"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "tarih"
+      ],
+      "vurgu": [],
+      "contentHash": "ff4b951e7a751328262bddb18f7a562cd1d79eda794121960473dcd314d5582b",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0026",
+      "conceptId": "tt-harf-inkilabi",
+      "stem": {
+        "md": "Yeni Türk alfabesi hangi yıl kabul edilmiştir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "1928"
+        },
+        {
+          "key": "B",
+          "md": "1923"
+        },
+        {
+          "key": "C",
+          "md": "1934"
+        },
+        {
+          "key": "D",
+          "md": "1938"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "1923 Cumhuriyet'in ilan yılıdır.",
+        "C": "1934 Soyadı Kanunu'nun yılıdır.",
+        "D": "1938 Atatürk'ün vefat yılıdır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Latin harflerine dayalı yeni Türk alfabesi 1928'de kabul edildi.\n- Halkın okuma yazma öğrenmesi için Millet Mektepleri açıldı."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Arap harfleri Türkçenin ünlülerini göstermekte yetersiz kalıyordu. Yeni alfabe Türkçenin ses yapısına göre düzenlendi."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          6,
+          6
+        ],
+        "quote": "Yeni Türk alfabesi 1928'de kabul edilmiştir.",
+        "chapter": "Türkiye Tarihi"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "tarih"
+      ],
+      "vurgu": [],
+      "contentHash": "f347fe5b7c9eff780aafdbcd0e755ce4540cf99a6fb43d47f5e903169b3be7fb",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0027",
+      "conceptId": "tt-kadinlara-secme-hakki",
+      "stem": {
+        "md": "Türk kadınları milletvekili seçme ve seçilme hakkını hangi yıl kazanmıştır?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "1934"
+        },
+        {
+          "key": "B",
+          "md": "1923"
+        },
+        {
+          "key": "C",
+          "md": "1930"
+        },
+        {
+          "key": "D",
+          "md": "1946"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "1923 Cumhuriyet'in ilan yılıdır.",
+        "C": "1930'da yalnız belediye seçimlerine katılma hakkı verildi.",
+        "D": "1946 çok partili hayata geçiş yılıdır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Kadınlara 1930'da belediye, 1933'te muhtarlık seçimlerinde hak tanındı.\n- 1934'te milletvekili seçme ve seçilme hakkı verildi.\n- 1935 seçimlerinde Meclis'e ilk kadın milletvekilleri girdi."
+        },
+        {
+          "type": "hint",
+          "md": "Soyadı Kanunu ile aynı yıl."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Kadınların siyasal hakları Türkiye'de aşamalı olarak genişletildi. Bu hak birçok Avrupa ülkesinden daha erken tanındı."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          6,
+          6
+        ],
+        "quote": "Türk kadınları 1934'te milletvekili seçme ve seçilme hakkını kazanmıştır.",
+        "chapter": "Türkiye Tarihi"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "tarih"
+      ],
+      "vurgu": [],
+      "contentHash": "6d5032b05182780b763f62c0056c9c1ce310d5fb1e246918db3fdc6e2ec67f38",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0028",
+      "conceptId": "tt-soyadi-kanunu",
+      "stem": {
+        "md": "Mustafa Kemal'e \"Atatürk\" soyadı hangi kanunun ardından verilmiştir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Medeni Kanun"
+        },
+        {
+          "key": "B",
+          "md": "Tevhid-i Tedrisat Kanunu"
+        },
+        {
+          "key": "C",
+          "md": "Soyadı Kanunu"
+        },
+        {
+          "key": "D",
+          "md": "Şapka Kanunu"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Medeni Kanun aile ve kişi hukukunu düzenler.",
+        "B": "Tevhid-i Tedrisat eğitimin birleştirilmesidir.",
+        "D": "Şapka Kanunu kıyafetle ilgilidir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Soyadı Kanunu 1934'te çıktı.\n- TBMM aynı yıl Mustafa Kemal'e \"Atatürk\" soyadını verdi.\n- Kanunla lakap ve unvanlar da kaldırıldı."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Yasadan önce kişiler çoğunlukla lakap, baba adı veya memleketle anılırdı. Bu durum resmî kayıtlarda karışıklığa yol açıyordu."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          6,
+          6
+        ],
+        "quote": "Atatürk soyadı Soyadı Kanunu'nun ardından TBMM tarafından verilmiştir.",
+        "chapter": "Türkiye Tarihi"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "tarih"
+      ],
+      "vurgu": [],
+      "contentHash": "96bea825a7afd1ffe272b68ef6342cc0a0f17528c8324c75636032f6755d2008",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0029",
+      "conceptId": "tt-tevhid-i-tedrisat",
+      "stem": {
+        "md": "\"Öğretim birliği\" anlamına gelen ve eğitim kurumlarını Maarif Vekâletine bağlayan kanun hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Tevhid-i Tedrisat Kanunu"
+        },
+        {
+          "key": "B",
+          "md": "Maarif Teşkilatı Kanunu"
+        },
+        {
+          "key": "C",
+          "md": "Harf Kanunu"
+        },
+        {
+          "key": "D",
+          "md": "Medeni Kanun"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Maarif Teşkilatı Kanunu sonradan çıkarılan bir teşkilat yasasıdır.",
+        "C": "Harf Kanunu alfabe değişikliğidir.",
+        "D": "Medeni Kanun özel hukuku düzenler."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Tevhid-i Tedrisat Kanunu 3 Mart 1924'te kabul edildi.\n- Medreseler kapatıldı, okullar tek çatı altında toplandı.\n- Halifeliğin kaldırılmasıyla aynı gün çıktı."
+        },
+        {
+          "type": "hint",
+          "md": "Adı Osmanlıca iki sözcükten oluşur."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Osmanlı'nın son döneminde medrese, mektep ve yabancı okullar gibi farklı eğitim sistemleri bir arada bulunuyordu. Cumhuriyet bu dağınıklığı gidermeyi hedefledi."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          6,
+          6
+        ],
+        "quote": "Tevhid-i Tedrisat Kanunu eğitim kurumlarını tek çatı altında toplamıştır.",
+        "chapter": "Türkiye Tarihi"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "tarih"
+      ],
+      "vurgu": [],
+      "contentHash": "b7b7358c7b6760b3e2ba58971c90da80239d36fa51e35c2ae471001115ef11c2",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0030",
+      "conceptId": "tt-medeni-kanun-kaynak",
+      "stem": {
+        "md": "1926'da kabul edilen Türk Medeni Kanunu hangi ülkenin medeni kanunu örnek alınarak hazırlanmıştır?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Fransa"
+        },
+        {
+          "key": "B",
+          "md": "İsviçre"
+        },
+        {
+          "key": "C",
+          "md": "İtalya"
+        },
+        {
+          "key": "D",
+          "md": "Almanya"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Fransa'nın medeni kanunu Napolyon dönemine aittir, Türkiye'de örnek alınmamıştır.",
+        "C": "İtalya ceza kanunu için örnek alınmıştır.",
+        "D": "Almanya ticaret kanunu için örnek alınmıştır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Türk Medeni Kanunu 1926'da kabul edildi.\n- İsviçre Medeni Kanunu örnek alındı.\n- Tek eşlilik ve kadın-erkek eşitliği gibi ilkeler getirdi."
+        },
+        {
+          "type": "hint",
+          "md": "Alplerde yer alan, çok dilli bir ülke."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Cumhuriyet döneminde hukuk sistemi Avrupa ülkelerinin yasaları örnek alınarak yenilendi. Farklı alanlar için farklı ülkelerin kanunlarından yararlanıldı."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          6,
+          6
+        ],
+        "quote": "Türk Medeni Kanunu İsviçre Medeni Kanunu örnek alınarak hazırlanmıştır.",
+        "chapter": "Türkiye Tarihi"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "tarih"
+      ],
+      "vurgu": [],
+      "contentHash": "b47417d0e17c99bd1a604f3dda2e3edd0ebd93673ce7b26506f8916e9d682c83",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0031",
+      "conceptId": "tt-ilk-cumhurbaskani-degil",
+      "stem": {
+        "md": "Aşağıdakilerden hangisi Türkiye Cumhuriyeti'nin ilk üç cumhurbaşkanından biri değildir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Mustafa Kemal Atatürk"
+        },
+        {
+          "key": "B",
+          "md": "İsmet İnönü"
+        },
+        {
+          "key": "C",
+          "md": "Adnan Menderes"
+        },
+        {
+          "key": "D",
+          "md": "Celal Bayar"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Atatürk ilk cumhurbaşkanıdır.",
+        "B": "İsmet İnönü ikinci cumhurbaşkanıdır.",
+        "D": "Celal Bayar üçüncü cumhurbaşkanıdır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- İlk üç cumhurbaşkanı: Atatürk, İnönü, Bayar.\n- Adnan Menderes cumhurbaşkanı değil, başbakan olmuştur."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Cumhurbaşkanlığı makamı Cumhuriyet'in ilanıyla kuruldu. Tek partili dönemden çok partili döneme geçişte makamın sahipleri değişti."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          7,
+          7
+        ],
+        "quote": "Türkiye'nin ilk üç cumhurbaşkanı Atatürk, İsmet İnönü ve Celal Bayar'dır.",
+        "chapter": "Türkiye Tarihi"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "tarih"
+      ],
+      "vurgu": [],
+      "contentHash": "178a9fc9c33c327bd66330a81bafd0571b7c39904948754a2bb82829a657c7f0",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0032",
+      "conceptId": "tt-cok-partili-ilk-secim",
+      "stem": {
+        "md": "Türkiye'de çok partili ilk genel seçim hangi yıl yapılmıştır?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "1946"
+        },
+        {
+          "key": "B",
+          "md": "1950"
+        },
+        {
+          "key": "C",
+          "md": "1923"
+        },
+        {
+          "key": "D",
+          "md": "1938"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "1950 seçimiyle iktidar ilk kez seçimle değişti; ilk çok partili seçim değildir.",
+        "C": "1923'te tek parti vardı.",
+        "D": "1938 Atatürk'ün vefat yılıdır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Çok partili ilk genel seçim 1946'da yapıldı.\n- 1950 seçiminde iktidar ilk kez seçimle el değiştirdi."
+        },
+        {
+          "type": "hint",
+          "md": "İkinci Dünya Savaşı'nın bitiminden hemen sonra."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Türkiye'de birkaç denemeden sonra kalıcı çok partili hayata İkinci Dünya Savaşı'nın ardından geçildi. İlk seçimde açık oy, gizli tasnif uygulandı."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          7,
+          7
+        ],
+        "quote": "Türkiye'de çok partili ilk genel seçim 1946'da yapılmıştır.",
+        "chapter": "Türkiye Tarihi"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "tarih"
+      ],
+      "vurgu": [],
+      "contentHash": "a91982237a52ffeb5a48c9506a94fd1a18c10d0d3c71016acd62736cc6f0e8cd",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0033",
+      "conceptId": "tt-kurulus-kutadgu",
+      "stem": {
+        "md": "Karahanlılar döneminde Yusuf Has Hacib'in yazdığı, devlet yönetimi üzerine öğütler içeren eser hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Divan-ı Lügati't-Türk"
+        },
+        {
+          "key": "B",
+          "md": "Kutadgu Bilig"
+        },
+        {
+          "key": "C",
+          "md": "Atabetü'l-Hakayık"
+        },
+        {
+          "key": "D",
+          "md": "Siyasetname"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Divan-ı Lügati't-Türk Kaşgarlı Mahmud'un sözlüğüdür.",
+        "C": "Atabetü'l-Hakayık Edib Ahmed'in ahlak kitabıdır.",
+        "D": "Siyasetname Selçuklu veziri Nizamülmülk'ün eseridir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Kutadgu Bilig 11. yüzyılda yazıldı.\n- Yazarı Yusuf Has Hacib'dir.\n- Adı \"mutluluk veren bilgi\" anlamına gelir."
+        },
+        {
+          "type": "hint",
+          "md": "Adı \"mutluluk veren bilgi\" anlamına gelir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Karahanlılar, İslamiyet'i devlet dini olarak kabul eden ilk Türk devletlerindendir. Bu dönemde Türkçe yazılmış ilk büyük eserler ortaya çıktı."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          7,
+          7
+        ],
+        "quote": "Kutadgu Bilig, Karahanlılar döneminde Yusuf Has Hacib tarafından yazılmıştır.",
+        "chapter": "Türkiye Tarihi"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "tarih"
+      ],
+      "vurgu": [],
+      "contentHash": "5a20ddc91e7e906544edbafc6b9aed17e94a181748672a6ed3f67cdb8e60d6a2",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0034",
+      "conceptId": "tt-kanuni-unvan",
+      "stem": {
+        "md": "Osmanlı'da hukuk alanındaki düzenlemeleri nedeniyle \"Kanuni\" unvanıyla anılan padişah kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "II. Mehmed"
+        },
+        {
+          "key": "B",
+          "md": "I. Selim"
+        },
+        {
+          "key": "C",
+          "md": "I. Süleyman"
+        },
+        {
+          "key": "D",
+          "md": "II. Bayezid"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "II. Mehmed \"Fatih\" unvanıyla anılır.",
+        "B": "I. Selim \"Yavuz\" unvanıyla anılır.",
+        "D": "II. Bayezid \"Veli\" lakabıyla bilinir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Kanuni Sultan Süleyman 1520–1566 arasında hüküm sürdü.\n- Batı'da \"Muhteşem Süleyman\" olarak bilinir.\n- Dönemi Osmanlı'nın en geniş sınırlara ulaştığı dönemlerdendir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Osmanlı padişahları sıklıkla bir lakapla anılır. Bu lakaplar çoğu zaman hükümdarın en çok bilinen icraatını yansıtır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          7,
+          7
+        ],
+        "quote": "Kanuni unvanıyla anılan padişah I. Süleyman'dır.",
+        "chapter": "Türkiye Tarihi"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "tarih"
+      ],
+      "vurgu": [],
+      "contentHash": "044e741c702ef3f2c7969f67af3ac5872d4b19c42fab30de7cb728ccff456893",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0035",
+      "conceptId": "tt-yavuz-hilafet",
+      "stem": {
+        "md": "Halifeliğin Osmanlı padişahlarına geçmesine yol açan Mısır seferini yapan padişah kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Kanuni Sultan Süleyman"
+        },
+        {
+          "key": "B",
+          "md": "Yavuz Sultan Selim"
+        },
+        {
+          "key": "C",
+          "md": "Fatih Sultan Mehmed"
+        },
+        {
+          "key": "D",
+          "md": "II. Bayezid"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Kanuni seferi yapan padişahın oğludur.",
+        "C": "Fatih döneminde Memlükler'le büyük bir sefer yapılmadı.",
+        "D": "II. Bayezid döneminde Memlükler'le savaşıldı ama Mısır alınmadı."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Yavuz Sultan Selim, 1516 Mercidabık ve 1517 Ridaniye'de Memlükleri yendi.\n- Mısır alındı.\n- Halifelik Osmanlı'ya geçti."
+        },
+        {
+          "type": "hint",
+          "md": "Çaldıran Savaşı'nı da o kazanmıştır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Memlük Devleti, Mısır ve Suriye'yi yöneten güçlü bir devletti ve Abbasi halifelerini himayesinde bulunduruyordu. Bu devletin yıkılmasıyla kutsal emanetler İstanbul'a getirildi."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          7,
+          7
+        ],
+        "quote": "Mısır seferini yapan Yavuz Sultan Selim döneminde halifelik Osmanlı'ya geçmiştir.",
+        "chapter": "Türkiye Tarihi"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "tarih"
+      ],
+      "vurgu": [],
+      "contentHash": "91bb0860c66dc0f8a509a1231a9c07d21667cb2fe0d4c1382814f65365e3c04c",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0036",
+      "conceptId": "tt-nizam-i-cedit",
+      "stem": {
+        "md": "\"Nizam-ı Cedit\" adlı yeni orduyu kuran Osmanlı padişahı kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "II. Mahmud"
+        },
+        {
+          "key": "B",
+          "md": "III. Ahmed"
+        },
+        {
+          "key": "C",
+          "md": "Abdülmecid"
+        },
+        {
+          "key": "D",
+          "md": "III. Selim"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "II. Mahmud Yeniçeri Ocağı'nı kaldırıp Asakir-i Mansure-i Muhammediye'yi kurdu.",
+        "B": "III. Ahmed Lale Devri padişahıdır.",
+        "C": "Abdülmecid Tanzimat döneminin padişahıdır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Nizam-ı Cedit \"yeni düzen\" demektir.\n- III. Selim döneminde kuruldu.\n- Kabakçı Mustafa İsyanı'yla dağıtıldı."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "18. yüzyılın sonunda Osmanlı ordusu Avrupa ordularının gerisinde kalmıştı. Batı tarzı düzenli bir ordu kurma girişimi yeniçerilerin tepkisini çekti."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          8,
+          8
+        ],
+        "quote": "Nizam-ı Cedit ordusunu III. Selim kurmuştur.",
+        "chapter": "Türkiye Tarihi"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "tarih"
+      ],
+      "vurgu": [],
+      "contentHash": "913d9403c5d2c61caa22cc67ae531a39c18aff858dadc8a4eac508c80ddaa021",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0037",
+      "conceptId": "tt-vaka-i-hayriye",
+      "stem": {
+        "md": "1826'da Yeniçeri Ocağı'nın kaldırılmasına ne ad verilir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Vaka-i Vakvakiye"
+        },
+        {
+          "key": "B",
+          "md": "Kabakçı Mustafa İsyanı"
+        },
+        {
+          "key": "C",
+          "md": "31 Mart Vakası"
+        },
+        {
+          "key": "D",
+          "md": "Vaka-i Hayriye"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Vaka-i Vakvakiye 1688 tarihli bir yeniçeri ayaklanmasıdır.",
+        "B": "Kabakçı Mustafa İsyanı Nizam-ı Cedit'i ortadan kaldırmıştır.",
+        "C": "31 Mart Vakası 1909'da II. Meşrutiyet'e karşı çıkan ayaklanmadır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Yeniçeri Ocağı 1826'da II. Mahmud tarafından kaldırıldı.\n- Olay \"hayırlı olay\" anlamında Vaka-i Hayriye diye anılır.\n- Yerine Asakir-i Mansure-i Muhammediye kuruldu."
+        },
+        {
+          "type": "hint",
+          "md": "Adı \"hayırlı olay\" anlamına gelir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Yeniçeri Ocağı kuruluşunda Osmanlı'nın en güçlü askerî birliğiydi. Zamanla yeniliklere karşı çıkan ve sık isyan eden bir yapıya dönüştü."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          8,
+          8
+        ],
+        "quote": "Yeniçeri Ocağı'nın kaldırılmasına Vaka-i Hayriye denir.",
+        "chapter": "Türkiye Tarihi"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "tarih"
+      ],
+      "vurgu": [],
+      "contentHash": "3235ed2c85791c7680d3b222e23b75aee5bcc23d7c78cb19fda2a36ccab539f9",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0038",
+      "conceptId": "tt-dumlupinar",
+      "stem": {
+        "md": "Büyük Taarruz'un sonunda kazanılan Başkomutanlık Meydan Muharebesi'nin yıl dönümü hangi bayram olarak kutlanır?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Cumhuriyet Bayramı"
+        },
+        {
+          "key": "B",
+          "md": "Zafer Bayramı"
+        },
+        {
+          "key": "C",
+          "md": "Ulusal Egemenlik ve Çocuk Bayramı"
+        },
+        {
+          "key": "D",
+          "md": "Gençlik ve Spor Bayramı"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Cumhuriyet Bayramı 29 Ekim'dir.",
+        "C": "Ulusal Egemenlik ve Çocuk Bayramı 23 Nisan'dır.",
+        "D": "Gençlik ve Spor Bayramı 19 Mayıs'tır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Başkomutanlık Meydan Muharebesi 30 Ağustos 1922'de kazanıldı.\n- Bu gün Zafer Bayramı olarak kutlanır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Büyük Taarruz, Kurtuluş Savaşı'nın son büyük saldırı harekâtıdır. Ardından Yunan ordusu Anadolu'dan çıkarıldı."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          8,
+          8
+        ],
+        "quote": "Başkomutanlık Meydan Muharebesi'nin yıl dönümü Zafer Bayramı olarak kutlanır.",
+        "chapter": "Türkiye Tarihi"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "tarih"
+      ],
+      "vurgu": [],
+      "contentHash": "ea37a1e154cb90d44934b3da1e3215947dfc7e8a8927ba50604a3fc049939107",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0039",
+      "conceptId": "tt-kavimler-gocu",
+      "stem": {
+        "md": "Kavimler Göçü, ____ yılında Hunların batıya ilerlemesiyle başlamıştır."
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "476"
+        },
+        {
+          "key": "B",
+          "md": "375"
+        },
+        {
+          "key": "C",
+          "md": "622"
+        },
+        {
+          "key": "D",
+          "md": "1071"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "476, Batı Roma İmparatorluğu'nun yıkıldığı yıldır.",
+        "C": "622, Hz. Muhammed'in Mekke'den Medine'ye hicret ettiği yıldır.",
+        "D": "1071, Malazgirt Savaşı'nın yapıldığı yıldır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap 375'tir.\n- Hunların batıya ilerlemesi Germen kavimlerini yerinden etmiştir.\n- Bu göç dalgası Batı Roma'nın zayıflamasına yol açmıştır."
+        },
+        {
+          "type": "hint",
+          "md": "Batı Roma'nın yıkılışından yaklaşık bir asır önce."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Kavimler Göçü, Hunların baskısıyla Germen kavimlerinin Roma topraklarına doğru yer değiştirmesidir. Avrupa'nın etnik ve siyasi haritasını kökten değiştirmiştir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          9,
+          9
+        ],
+        "quote": "Kavimler Göçü, 375 yılında Hunların batıya ilerlemesiyle başlamıştır.",
+        "chapter": "Türkiye Tarihi"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "tarih"
+      ],
+      "vurgu": [],
+      "contentHash": "c414f12dfc9d8f9c2875e2a97b63025d387c500658cb83ce37b5856d211b8f90",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0040",
+      "conceptId": "tt-kok-turk-adi",
+      "stem": {
+        "md": "Türk adını resmî devlet adı olarak kullanan ilk Türk devleti hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Asya Hun Devleti"
+        },
+        {
+          "key": "B",
+          "md": "Uygur Devleti"
+        },
+        {
+          "key": "C",
+          "md": "Kök Türk Devleti"
+        },
+        {
+          "key": "D",
+          "md": "Hazar Kağanlığı"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Asya Hun Devleti Türk adını devlet adı olarak kullanmamıştır.",
+        "B": "Uygur Devleti, Kök Türklerden sonra kurulmuş ve kendi boy adını taşımıştır.",
+        "D": "Hazar Kağanlığı adını Hazar boyundan almıştır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Kök Türk Devleti'dir.\n- Devlet adında Türk adı resmî olarak ilk kez bu devlette yer almıştır.\n- Orhun Yazıtları da bu devletin dönemine aittir."
+        },
+        {
+          "type": "hint",
+          "md": "Adında bir renk ya da gök anlamı taşıyan kelime geçer."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Bumin Kağan'ın 552'de kurduğu bu devlet, Orta Asya bozkırlarında geniş bir alanı denetlemiştir. Kısa süre sonra doğu ve batı olarak iki kola ayrılmıştır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          9,
+          9
+        ],
+        "quote": "Kök Türk Devleti, Türk adını resmî devlet adı olarak kullanan ilk Türk devletidir.",
+        "chapter": "Türkiye Tarihi"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "tarih"
+      ],
+      "vurgu": [],
+      "contentHash": "b66285a2a368cb5413d8ee3f3e01a0dcf10fab7ab07b7619c38c8ee2a602149e",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0041",
+      "conceptId": "tt-orhun-thomsen",
+      "stem": {
+        "md": "Orhun Yazıtları'nı 1893'te çözen bilim insanı kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Wilhelm Radloff"
+        },
+        {
+          "key": "B",
+          "md": "Jean-François Champollion"
+        },
+        {
+          "key": "C",
+          "md": "Henry Rawlinson"
+        },
+        {
+          "key": "D",
+          "md": "Vilhelm Thomsen"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Radloff yazıtlar üzerinde çalışan bir Türkologdur, ancak çözümü ilk duyuran o değildir.",
+        "B": "Champollion, Mısır hiyerogliflerini çözen Fransız bilim insanıdır.",
+        "C": "Rawlinson, Behistun Yazıtı'ndaki çivi yazısını çözmesiyle tanınır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Vilhelm Thomsen'dir.\n- Danimarkalı dil bilimci yazıları 1893'te çözmüştür.\n- İlk okunan kelimeler arasında Tanrı ve Türk sözcükleri vardır."
+        },
+        {
+          "type": "hint",
+          "md": "Danimarkalı bir dil bilimci."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Orhun Yazıtları, Moğolistan'da Orhun Vadisi'nde bulunan ve Kök Türk alfabesiyle yazılmış taş anıtlardır. Uzun süre okunamamış, çözülmeleri Türkoloji için bir dönüm noktası olmuştur."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          9,
+          9
+        ],
+        "quote": "Orhun Yazıtları'nı 1893'te Danimarkalı dil bilimci Vilhelm Thomsen çözmüştür.",
+        "chapter": "Türkiye Tarihi"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "tarih"
+      ],
+      "vurgu": [],
+      "contentHash": "fc48833178c77d79647e3b12fa083dc19d7db5ca0bcbc723b58f278f3fdb4a37",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0042",
+      "conceptId": "tt-uygurlar-yerlesik",
+      "stem": {
+        "md": "Yerleşik hayata geçen ilk Türk topluluğu olarak bilinen hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Uygurlar"
+        },
+        {
+          "key": "B",
+          "md": "Kök Türkler"
+        },
+        {
+          "key": "C",
+          "md": "Avrupa Hunları"
+        },
+        {
+          "key": "D",
+          "md": "Peçenekler"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Kök Türkler büyük ölçüde göçebe bozkır düzenini sürdürmüştür.",
+        "C": "Avrupa Hunları atlı göçebe bir topluluktur.",
+        "D": "Peçenekler Karadeniz'in kuzeyinde göçebe yaşamış bir boydur."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Uygurlar'dır.\n- Şehirler, tapınaklar ve kütüphaneler kurmuşlardır.\n- Tarım ve ticaretle uğraşan yerleşik bir düzene geçmişlerdir."
+        },
+        {
+          "type": "hint",
+          "md": "Mani dinini benimseyen Türk topluluğu."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Bozkır Türk toplulukları uzun süre hayvancılığa dayalı göçebe bir yaşam sürmüştür. Yerleşik hayata geçiş; mimari, yazı ve kültürde büyük değişiklikler getirmiştir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          9,
+          9
+        ],
+        "quote": "Uygurlar, yerleşik hayata geçen ilk Türk topluluğu olarak bilinir.",
+        "chapter": "Türkiye Tarihi"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "tarih"
+      ],
+      "vurgu": [],
+      "contentHash": "866f63513512c077ea32d19827676d1f5853f84302079e69318115b23ea2762c",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0043",
+      "conceptId": "tt-talas-savasi",
+      "stem": {
+        "md": "751 Talas Savaşı'nda Abbasilerin karşısındaki güç hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Bizans"
+        },
+        {
+          "key": "B",
+          "md": "Çinliler"
+        },
+        {
+          "key": "C",
+          "md": "Sasaniler"
+        },
+        {
+          "key": "D",
+          "md": "Emeviler"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Bizans çok daha batıda, Anadolu'da Abbasilerle mücadele etmiştir.",
+        "C": "Sasani Devleti bu savaştan yaklaşık bir asır önce yıkılmıştı.",
+        "D": "Emeviler bu savaştan bir yıl önce yıkılmış ve yerlerini Abbasiler almıştı."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Çinliler'dir.\n- Savaş Orta Asya'da, Talas Irmağı yakınlarında yapılmıştır.\n- Sonrasında Türkler arasında İslamiyet hızla yayılmıştır."
+        },
+        {
+          "type": "hint",
+          "md": "Doğudan gelen büyük imparatorluk."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Talas Savaşı, Orta Asya'nın kontrolü için yapılmış bir hesaplaşmadır. Türklerin İslamiyet'e geçiş sürecinde önemli bir dönüm noktası sayılır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          10,
+          10
+        ],
+        "quote": "Talas Savaşı 751'de Abbasiler ile Çinliler arasında yapılmıştır.",
+        "chapter": "Türkiye Tarihi"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "tarih"
+      ],
+      "vurgu": [],
+      "contentHash": "309bdae17fe7c0449406983bdf7e7ae3f7d4620d99d1fa0b3739142954cab5c6",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0044",
+      "conceptId": "tt-karahanlilar-islam",
+      "stem": {
+        "md": "İslamiyet'i resmî din olarak kabul eden ilk Türk devleti hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Gazneliler"
+        },
+        {
+          "key": "B",
+          "md": "Büyük Selçuklular"
+        },
+        {
+          "key": "C",
+          "md": "Karahanlılar"
+        },
+        {
+          "key": "D",
+          "md": "Osmanlılar"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Gazneliler, Karahanlılardan sonra ortaya çıkmış Müslüman bir Türk devletidir.",
+        "B": "Büyük Selçuklular 11. yüzyılda kurulmuştur.",
+        "D": "Osmanlılar çok daha sonra, 13. yüzyılın sonunda ortaya çıkmıştır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Karahanlılar'dır.\n- Satuk Buğra Han döneminde Müslüman olmuşlardır.\n- Türk-İslam kültürünün ilk eserleri bu devlette verilmiştir."
+        },
+        {
+          "type": "hint",
+          "md": "Kutadgu Bilig bu devlette yazılmıştır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Türklerin İslamiyet'e geçişi 8. yüzyıldan itibaren adım adım olmuştur. Bir devletin İslamiyet'i resmî din yapması, Türk-İslam kültürünün kurumsal olarak başlaması anlamına gelir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          10,
+          10
+        ],
+        "quote": "Karahanlılar, İslamiyet'i resmî din olarak kabul eden ilk Türk devletidir.",
+        "chapter": "Türkiye Tarihi"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "tarih"
+      ],
+      "vurgu": [],
+      "contentHash": "885d484e8442a5c0db2c8c49caf0143e9f0c8090278d43a69b777ec985e795af",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0045",
+      "conceptId": "tt-karahanli-eserleri",
+      "stem": {
+        "md": "Eserleri yazarlarıyla eşleştirin.\n\n1. Kutadgu Bilig\n2. Divanü Lügati't-Türk\n3. Atabetü'l-Hakayık\n\na. Kaşgarlı Mahmud\nb. Edip Ahmed Yükneki\nc. Yusuf Has Hacip"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "1-a, 2-c, 3-b"
+        },
+        {
+          "key": "B",
+          "md": "1-b, 2-a, 3-c"
+        },
+        {
+          "key": "C",
+          "md": "1-c, 2-a, 3-b"
+        },
+        {
+          "key": "D",
+          "md": "1-c, 2-b, 3-a"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Kutadgu Bilig bir sözlük değil, siyasetname türünde manzum bir eserdir.",
+        "B": "Kutadgu Bilig'in yazarı Edip Ahmed değildir.",
+        "D": "Divanü Lügati't-Türk bir sözlüktür ve Edip Ahmed'in eseri değildir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Kutadgu Bilig: Yusuf Has Hacip (1-c).\n- Divanü Lügati't-Türk: Kaşgarlı Mahmud (2-a).\n- Atabetü'l-Hakayık: Edip Ahmed Yükneki (3-b)."
+        },
+        {
+          "type": "hint",
+          "md": "Sözlük, adında Kaşgar geçen yazara aittir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Karahanlı dönemi, Türkçenin İslam kültürüyle buluştuğu ilk edebî eserleri vermiştir. Bu eserler öğüt, ahlak ve dil konularında yazılmıştır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          10,
+          10
+        ],
+        "quote": "Kutadgu Bilig'i Yusuf Has Hacip yazmıştır.",
+        "chapter": "Türkiye Tarihi"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "tarih"
+      ],
+      "vurgu": [],
+      "contentHash": "21cad6ae732e5d7de02a339986b21ed743d01e1d88b25b0482dda56c7dc51ffe",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0046",
+      "conceptId": "tt-divan-amaci",
+      "stem": {
+        "md": "Divanü Lügati't-Türk hangi amaçla yazılmıştır?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Araplara Türkçe öğretmek"
+        },
+        {
+          "key": "B",
+          "md": "Hükümdara devlet yönetimi hakkında öğüt vermek"
+        },
+        {
+          "key": "C",
+          "md": "Türk boylarının tarihini kronolojik olarak anlatmak"
+        },
+        {
+          "key": "D",
+          "md": "Kuran'ı Türkçeye çevirmek"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Hükümdara öğüt veren eserler siyasetname türündendir.",
+        "C": "Eser bir tarih kitabı değil, sözlüktür.",
+        "D": "Eser bir çeviri değil, Türkçe kelimeleri Arapça açıklayan bir sözlüktür."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Eser Araplara Türkçe öğretmek için yazılmıştır.\n- Türkçe kelimeleri Arapça açıklayan bir sözlüktür.\n- İçinde Türk boyları, atasözleri ve şiirler hakkında bilgi de bulunur."
+        },
+        {
+          "type": "hint",
+          "md": "Sözlük olduğunu ve Arapça açıklandığını düşünün."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Kaşgarlı Mahmud'un eseri 11. yüzyılda Bağdat'ta tamamlanmıştır. İçindeki dünya haritası ve boy bilgileri onu dil kadar tarih için de değerli kılar."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          10,
+          10
+        ],
+        "quote": "Divanü Lügati't-Türk'ü Kaşgarlı Mahmud, Araplara Türkçe öğretmek amacıyla yazmıştır.",
+        "chapter": "Türkiye Tarihi"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "tarih"
+      ],
+      "vurgu": [],
+      "contentHash": "dd99668e3e99e315fe9c6b66d434fb7e766fb89201161c0d89527e95453d0857",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0047",
+      "conceptId": "tt-malazgirt-alparslan",
+      "stem": {
+        "md": "1071 Malazgirt Savaşı'nda Selçuklu ordusunu yöneten sultan kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Alparslan"
+        },
+        {
+          "key": "B",
+          "md": "Tuğrul Bey"
+        },
+        {
+          "key": "C",
+          "md": "Melikşah"
+        },
+        {
+          "key": "D",
+          "md": "Sultan Sencer"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Tuğrul Bey, Büyük Selçuklu Devleti'nin kurucusudur ve 1063'te ölmüştür.",
+        "C": "Melikşah, Malazgirt'ten sonra tahta çıkan sultandır.",
+        "D": "Sultan Sencer, devletin son büyük sultanıdır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Alparslan'dır.\n- Bizans İmparatoru Romen Diyojen'i yenmiştir.\n- Zafer Anadolu'nun kapılarını Türklere açmıştır."
+        },
+        {
+          "type": "hint",
+          "md": "Adı yiğit aslan anlamına gelir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Malazgirt Savaşı Büyük Selçuklu Devleti ile Bizans arasında Doğu Anadolu'da yapılmıştır. Bu zaferden sonra Türkler Anadolu'ya kalıcı olarak yerleşmeye başlamıştır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          11,
+          11
+        ],
+        "quote": "Malazgirt Savaşı 1071'de Sultan Alparslan ile Bizans İmparatoru Romen Diyojen arasında yapılmıştır.",
+        "chapter": "Türkiye Tarihi"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "tarih"
+      ],
+      "vurgu": [],
+      "contentHash": "c6903a5fb1521b21bac542ebacd3be97abf04f2cdfc61f5ec8031d57a263b5e4",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0048",
+      "conceptId": "tt-dandanakan",
+      "stem": {
+        "md": "1040 Dandanakan Savaşı'nda Selçukluların yendiği devlet hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Bizans"
+        },
+        {
+          "key": "B",
+          "md": "Karahanlılar"
+        },
+        {
+          "key": "C",
+          "md": "Gazneliler"
+        },
+        {
+          "key": "D",
+          "md": "Abbasiler"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Bizans ile büyük hesaplaşma 1071'de Malazgirt'te olmuştur.",
+        "B": "Karahanlılar bu savaşın tarafı değildir.",
+        "D": "Abbasiler, Selçukluların hamiliğini üstlendiği halifeliktir, rakibi değildir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Gazneliler'dir.\n- Bu zaferle Büyük Selçuklu Devleti resmen kurulmuştur.\n- Horasan Selçukluların denetimine geçmiştir."
+        },
+        {
+          "type": "hint",
+          "md": "Başkenti bugünkü Afganistan'da olan devlet."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Selçuklular, Horasan'a göç ettikten sonra bölgenin hâkimi olan güçle karşı karşıya gelmiştir. Bu savaş, bir boy birliğinin büyük bir devlete dönüşmesini sağlamıştır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          11,
+          11
+        ],
+        "quote": "Dandanakan Savaşı 1040'ta Selçuklular ile Gazneliler arasında yapılmıştır.",
+        "chapter": "Türkiye Tarihi"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "tarih"
+      ],
+      "vurgu": [],
+      "contentHash": "05d8b2154d76af7eec79b304b2b36a91736883f76e8432777c55f5a751277996",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0049",
+      "conceptId": "tt-selcuklu-savas-sirasi",
+      "stem": {
+        "md": "Aşağıdaki savaşların eskiden yeniye doğru sıralanışı hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Malazgirt - Dandanakan - Kösedağ - Miryokefalon"
+        },
+        {
+          "key": "B",
+          "md": "Dandanakan - Miryokefalon - Malazgirt - Kösedağ"
+        },
+        {
+          "key": "C",
+          "md": "Malazgirt - Miryokefalon - Dandanakan - Kösedağ"
+        },
+        {
+          "key": "D",
+          "md": "Dandanakan - Malazgirt - Miryokefalon - Kösedağ"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Malazgirt, Dandanakan'dan sonra ve Kösedağ, Miryokefalon'dan sonradır.",
+        "B": "Miryokefalon 1176'da, Malazgirt ise ondan yaklaşık bir asır önce yapılmıştır.",
+        "C": "Dandanakan bu savaşların en eskisidir, üçüncü sırada olamaz."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Dandanakan 1040, Malazgirt 1071.\n- Miryokefalon 1176, Kösedağ 1243.\n- İlk ikisi Büyük Selçuklu, son ikisi Türkiye Selçuklu dönemidir."
+        },
+        {
+          "type": "hint",
+          "md": "Selçuklu Devleti'nin kuruluş savaşı ilk sıradadır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Selçuklu tarihi, Horasan'da devlet kurulmasından Anadolu'nun yurt edinilmesine ve Moğol baskısına uzanır. Her savaş bu sürecin bir aşamasını temsil eder."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          11,
+          11
+        ],
+        "quote": "Miryokefalon Savaşı 1176'da II. Kılıçarslan komutasındaki Türkiye Selçukluları tarafından kazanılmıştır.",
+        "chapter": "Türkiye Tarihi"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "tarih"
+      ],
+      "vurgu": [],
+      "contentHash": "af8ddd4aa5f3fa886f4239070a9551aa9bd6c4e496274c012b5d869038a9c921",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0050",
+      "conceptId": "tt-nizamulmulk",
+      "stem": {
+        "md": "Nizamiye Medreselerini kurduran ve Siyasetname'yi yazan Büyük Selçuklu veziri kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Kaşgarlı Mahmud"
+        },
+        {
+          "key": "B",
+          "md": "Sadeddin Köpek"
+        },
+        {
+          "key": "C",
+          "md": "Çandarlı Kara Halil"
+        },
+        {
+          "key": "D",
+          "md": "Nizamülmülk"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Kaşgarlı Mahmud Karahanlı döneminde yaşamış bir dil bilginidir.",
+        "B": "Sadeddin Köpek, Türkiye Selçuklularında bir devlet adamıdır.",
+        "C": "Çandarlı Kara Halil, Osmanlı'nın ilk vezirlerindendir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Nizamülmülk'tür.\n- Alparslan ve Melikşah dönemlerinde vezirlik yapmıştır.\n- Kurduğu medreseler İslam dünyasında örnek eğitim kurumları olmuştur."
+        },
+        {
+          "type": "hint",
+          "md": "Adı ile kurduğu medreselerin adı birbirine benzer."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Siyasetname türü, hükümdarlara devletin nasıl yönetileceğini anlatan öğüt kitaplarıdır. Selçuklu döneminde medreseler devletin eğitim sistemini düzenlemiştir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          11,
+          11
+        ],
+        "quote": "Büyük Selçuklu veziri Nizamülmülk, Nizamiye Medreselerini kurdurmuş ve Siyasetname'yi yazmıştır.",
+        "chapter": "Türkiye Tarihi"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "tarih"
+      ],
+      "vurgu": [],
+      "contentHash": "481dfa1b5bd5cf33769faebec8f7998324e5257ee45e7a4d5a0cf45ea1e9eb10",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0051",
+      "conceptId": "tt-kosedag",
+      "stem": {
+        "md": "Türkiye Selçuklularının Moğol egemenliğine girmesine yol açan 1243 savaşı hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Miryokefalon Savaşı"
+        },
+        {
+          "key": "B",
+          "md": "Kösedağ Savaşı"
+        },
+        {
+          "key": "C",
+          "md": "Yassıçemen Savaşı"
+        },
+        {
+          "key": "D",
+          "md": "Malazgirt Savaşı"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Miryokefalon, Bizans'a karşı kazanılmış bir zaferdir.",
+        "C": "Yassıçemen, 1230'da Harezmşahlara karşı kazanılmıştır.",
+        "D": "Malazgirt, 1071'de Bizans'a karşı kazanılmıştır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Kösedağ Savaşı'dır.\n- Moğollara karşı kaybedilmiştir.\n- Ardından Anadolu'da beylikler dönemi başlamıştır."
+        },
+        {
+          "type": "hint",
+          "md": "Sivas yakınlarında bir dağın adını taşır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "13. yüzyılda Moğol akınları Orta Asya'dan Anadolu'ya kadar ulaşmıştır. Türkiye Selçuklu Devleti bu baskı altında giderek zayıflamıştır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          11,
+          11
+        ],
+        "quote": "Kösedağ Savaşı 1243'te Moğollara karşı kaybedilmiş ve Türkiye Selçukluları Moğol egemenliğine girmiştir.",
+        "chapter": "Türkiye Tarihi"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "tarih"
+      ],
+      "vurgu": [],
+      "contentHash": "037c72185271a435b4b085d8fcdeee8777af455cf5b83c26614c60b6542a6bfc",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0052",
+      "conceptId": "tt-selcuklu-konya",
+      "stem": {
+        "md": "Türkiye Selçuklu Devleti'nin uzun süre başkenti olan şehir hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Konya"
+        },
+        {
+          "key": "B",
+          "md": "Bursa"
+        },
+        {
+          "key": "C",
+          "md": "Sivas"
+        },
+        {
+          "key": "D",
+          "md": "Edirne"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Bursa, Osmanlı'nın ilk başkentidir.",
+        "C": "Sivas önemli bir ticaret ve medrese şehridir, ancak başkent olmamıştır.",
+        "D": "Edirne, Osmanlı'nın ikinci başkentidir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Konya'dır.\n- Şehir Selçuklu döneminde cami, medrese ve saraylarla donatılmıştır.\n- Mevlana da bu şehirde yaşamıştır."
+        },
+        {
+          "type": "hint",
+          "md": "Mevlana'nın şehri."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Türkiye Selçukluları Anadolu'da kervansaraylar ve medreselerle dolu bir şehir kültürü kurmuştur. Başkent, bu kültürün merkezi olmuştur."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          11,
+          11
+        ],
+        "quote": "Türkiye Selçuklu Devleti'nin uzun süre başkenti Konya olmuştur.",
+        "chapter": "Türkiye Tarihi"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "tarih"
+      ],
+      "vurgu": [],
+      "contentHash": "d707045b41a5e12ecedfa65973c757aacac2ce7b15af6a92671512b7528260fa",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0053",
+      "conceptId": "tt-osmanli-kurulus-yeri",
+      "stem": {
+        "md": "Osmanlı Beyliği, ____ ve Domaniç çevresinde Osman Bey tarafından kurulmuştur."
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Söğüt"
+        },
+        {
+          "key": "B",
+          "md": "Bergama"
+        },
+        {
+          "key": "C",
+          "md": "Kastamonu"
+        },
+        {
+          "key": "D",
+          "md": "Manisa"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Bergama, Karesioğulları Beyliği'nin bölgesindedir.",
+        "C": "Kastamonu, Candaroğulları Beyliği'nin merkezidir.",
+        "D": "Manisa, Saruhanoğulları Beyliği'nin merkezidir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Söğüt'tür.\n- Beylik Bizans sınırında bir uç beyliği olarak kurulmuştur.\n- Bu konum fetihlerle büyümesini kolaylaştırmıştır."
+        },
+        {
+          "type": "hint",
+          "md": "Bugün Bilecik iline bağlı bir ilçedir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Selçuklu Devleti dağılırken Anadolu'da çok sayıda beylik kurulmuştur. Bizans sınırındaki küçük bir beylik zamanla bir imparatorluğa dönüşmüştür."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          12,
+          12
+        ],
+        "quote": "Osmanlı Beyliği, Söğüt ve Domaniç çevresinde Osman Bey tarafından kurulmuştur.",
+        "chapter": "Türkiye Tarihi"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "tarih"
+      ],
+      "vurgu": [],
+      "contentHash": "a145c343da12b1a09b93e914c041944521d94e4d4dc2795c9666c73049c73c02",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0054",
+      "conceptId": "tt-bursa-baskent",
+      "stem": {
+        "md": "Orhan Bey döneminde alınarak Osmanlı'nın başkenti yapılan şehir hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Bursa"
+        },
+        {
+          "key": "B",
+          "md": "Edirne"
+        },
+        {
+          "key": "C",
+          "md": "Konya"
+        },
+        {
+          "key": "D",
+          "md": "Manisa"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Edirne, Bursa'dan sonra başkent olmuştur.",
+        "C": "Konya, Türkiye Selçuklularının başkentidir.",
+        "D": "Manisa, şehzadelerin yetiştirildiği bir sancak merkezidir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Bursa'dır.\n- 1326'da alınmıştır.\n- Osmanlı'nın ilk başkenti olmuştur."
+        },
+        {
+          "type": "hint",
+          "md": "Uludağ'ın eteğindeki şehir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Osmanlı başkenti, devlet büyüdükçe batıya doğru kaymıştır. Her yeni başkent, fetihlerin yönünü de gösterir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          12,
+          12
+        ],
+        "quote": "Bursa, 1326'da Orhan Bey döneminde alınarak Osmanlı'nın başkenti yapılmıştır.",
+        "chapter": "Türkiye Tarihi"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "tarih"
+      ],
+      "vurgu": [],
+      "contentHash": "5368f8561ef28799d5e144f51c0934c1fb47b7e7b590d8d137b9270af47506c2",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0055",
+      "conceptId": "tt-mercidabik-ridaniye",
+      "stem": {
+        "md": "Mercidabık ve Ridaniye savaşlarını kazanan padişahın bu savaşlarda yendiği devlet hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Memlükler"
+        },
+        {
+          "key": "B",
+          "md": "Safeviler"
+        },
+        {
+          "key": "C",
+          "md": "Akkoyunlular"
+        },
+        {
+          "key": "D",
+          "md": "Venedik"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Safeviler 1514'te Çaldıran'da yenilmiştir, bu iki savaşın tarafı değildir.",
+        "C": "Akkoyunlular 1473'te Otlukbeli'nde yenilmiştir.",
+        "D": "Venedik bir deniz gücüdür ve bu kara savaşlarına katılmamıştır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Memlükler'dir.\n- Savaşları Yavuz Sultan Selim kazanmıştır.\n- Suriye, Filistin ve Mısır Osmanlı'ya geçmiş, halifelik de Osmanlılara geçmiştir."
+        },
+        {
+          "type": "hint",
+          "md": "Kahire merkezli devlet."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "16. yüzyılın başında Osmanlı, doğuda ve güneyde büyük bir genişleme yaşamıştır. Bu seferlerle kutsal şehirlerin koruyuculuğu da Osmanlı'ya geçmiştir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          12,
+          12
+        ],
+        "quote": "Yavuz Sultan Selim, 1516'da Mercidabık'ta ve 1517'de Ridaniye'de Memlükleri yenmiştir.",
+        "chapter": "Türkiye Tarihi"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "tarih"
+      ],
+      "vurgu": [],
+      "contentHash": "645c54c60c21189524b32e67423bf807389b41f4fee8ef1aa97968afdffbf73b",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0056",
+      "conceptId": "tt-ibrahim-muteferrika",
+      "stem": {
+        "md": "Lale Devri'nde ilk Türk matbaasını kuran kişi kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "İbrahim Müteferrika"
+        },
+        {
+          "key": "B",
+          "md": "Kâtip Çelebi"
+        },
+        {
+          "key": "C",
+          "md": "Evliya Çelebi"
+        },
+        {
+          "key": "D",
+          "md": "Piri Reis"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Kâtip Çelebi, Keşfü'z-Zünun adlı bibliyografyasıyla tanınan bir bilgindir.",
+        "C": "Evliya Çelebi, Seyahatname'nin yazarıdır.",
+        "D": "Piri Reis 16. yüzyılda yaşamış bir denizcidir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap İbrahim Müteferrika'dır.\n- Matbaa Lale Devri'nde, 1720'lerde kurulmuştur.\n- İlk basılan kitaplar arasında sözlük, tarih ve coğrafya eserleri vardır."
+        },
+        {
+          "type": "hint",
+          "md": "Macar asıllı bir Osmanlı aydını."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Lale Devri, Osmanlı'nın Avrupa'yı yakından tanımaya başladığı barış dönemidir. Bu dönemde kültür ve sanatta yenilikler denenmiştir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          13,
+          13
+        ],
+        "quote": "İbrahim Müteferrika, Lale Devri'nde ilk Türk matbaasını kurmuştur.",
+        "chapter": "Türkiye Tarihi"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "tarih"
+      ],
+      "vurgu": [],
+      "contentHash": "da35ba76369733f435c2e98e77a6825db63838381809f7909ca97d20694b34d4",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0057",
+      "conceptId": "tt-lale-devri-sonu",
+      "stem": {
+        "md": "Lale Devri hangi olayla sona ermiştir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Patrona Halil İsyanı"
+        },
+        {
+          "key": "B",
+          "md": "Kabakçı Mustafa İsyanı"
+        },
+        {
+          "key": "C",
+          "md": "Vaka-i Hayriye"
+        },
+        {
+          "key": "D",
+          "md": "Edirne Vakası"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Kabakçı Mustafa İsyanı 1807'de III. Selim'in tahttan indirilmesine yol açmıştır.",
+        "C": "Vaka-i Hayriye, 1826'da Yeniçeri Ocağının kaldırılmasıdır.",
+        "D": "Edirne Vakası 1703'te II. Mustafa'nın tahttan indirilmesidir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Patrona Halil İsyanı'dır.\n- 1730'da çıkmıştır.\n- III. Ahmed tahttan inmiş, Sadrazam Nevşehirli Damat İbrahim Paşa öldürülmüştür."
+        },
+        {
+          "type": "hint",
+          "md": "İsyanın lideri bir Arnavut eskicidir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Lale Devri adını dönemin lale merakından alır. Saray çevresindeki eğlence ve harcamalar halk arasında hoşnutsuzluk yaratmıştır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          13,
+          13
+        ],
+        "quote": "Lale Devri, 1730'da Patrona Halil İsyanı ile sona ermiştir.",
+        "chapter": "Türkiye Tarihi"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "tarih"
+      ],
+      "vurgu": [],
+      "contentHash": "6a777ede75a2877fe95004673d7a36f3515d418f5355e6db819a1b5fb024ee9b",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0058",
+      "conceptId": "tt-osmanli-antlasma-sirasi",
+      "stem": {
+        "md": "Osmanlı tarihindeki aşağıdaki gelişmelerin eskiden yeniye sıralanışı hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Karlofça Antlaşması - Küçük Kaynarca Antlaşması - Tanzimat Fermanı - Kanun-i Esasi"
+        },
+        {
+          "key": "B",
+          "md": "Küçük Kaynarca Antlaşması - Karlofça Antlaşması - Tanzimat Fermanı - Kanun-i Esasi"
+        },
+        {
+          "key": "C",
+          "md": "Karlofça Antlaşması - Tanzimat Fermanı - Küçük Kaynarca Antlaşması - Kanun-i Esasi"
+        },
+        {
+          "key": "D",
+          "md": "Karlofça Antlaşması - Küçük Kaynarca Antlaşması - Kanun-i Esasi - Tanzimat Fermanı"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Küçük Kaynarca 1774'te, Karlofça ondan önce 1699'da imzalanmıştır.",
+        "C": "Tanzimat Fermanı 1839'da, Küçük Kaynarca'dan sonra okunmuştur.",
+        "D": "Kanun-i Esasi 1876'da, Tanzimat'tan sonra ilan edilmiştir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Karlofça 1699, Küçük Kaynarca 1774.\n- Tanzimat Fermanı 1839, Kanun-i Esasi 1876.\n- Sıra toprak kayıplarından yönetim reformlarına doğru ilerler."
+        },
+        {
+          "type": "hint",
+          "md": "İlk büyük toprak kaybı en başta yer alır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Osmanlı'nın son iki yüzyılı, savaşlarda kaybedilen topraklar ve bunlara karşı yapılan reformlarla geçmiştir. Antlaşmalar ile fermanlar bu dönüşümün kilometre taşlarıdır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          13,
+          13
+        ],
+        "quote": "Karlofça Antlaşması 1699'da imzalanmış ve Osmanlı Devleti ilk kez büyük toprak kaybına uğramıştır.",
+        "chapter": "Türkiye Tarihi"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "tarih"
+      ],
+      "vurgu": [],
+      "contentHash": "de6751ccf0672d3324a4a9d13a2792360efec37dfe90e0427613f34b5ab6c033",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0059",
+      "conceptId": "tt-kucuk-kaynarca",
+      "stem": {
+        "md": "Kırım'ın bağımsız olmasını öngören 1774 antlaşması hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Karlofça Antlaşması"
+        },
+        {
+          "key": "B",
+          "md": "Pasarofça Antlaşması"
+        },
+        {
+          "key": "C",
+          "md": "Yaş Antlaşması"
+        },
+        {
+          "key": "D",
+          "md": "Küçük Kaynarca Antlaşması"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Karlofça 1699'da Kutsal İttifak devletleriyle imzalanmıştır.",
+        "B": "Pasarofça 1718'de Avusturya ve Venedik ile imzalanmıştır.",
+        "C": "Yaş Antlaşması 1792'de Kırım'ın Rusya'ya bağlandığını tanımıştır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Küçük Kaynarca Antlaşması'dır.\n- Rusya ile imzalanmıştır.\n- Kırım, Osmanlı'dan ayrılan ilk Müslüman Türk toprağı olmuştur."
+        },
+        {
+          "type": "hint",
+          "md": "Adında küçüklük bildiren bir kelime var."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "18. yüzyılda Rusya, Karadeniz'e ve sıcak denizlere inmek için Osmanlı ile sık sık savaşmıştır. Bu savaşların sonunda imzalanan antlaşmalar Karadeniz'deki dengeyi değiştirmiştir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          13,
+          13
+        ],
+        "quote": "Küçük Kaynarca Antlaşması 1774'te Rusya ile imzalanmış ve Kırım bağımsız olmuştur.",
+        "chapter": "Türkiye Tarihi"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "tarih"
+      ],
+      "vurgu": [],
+      "contentHash": "b46c519b7346bbb923db753735209344e3c4060f3b28e340591fdc97b51664da",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0060",
+      "conceptId": "tt-yeniceri-kaldirilmasi",
+      "stem": {
+        "md": "Yeniçeri Ocağını 1826'da kaldıran padişah kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "II. Mahmud"
+        },
+        {
+          "key": "B",
+          "md": "III. Selim"
+        },
+        {
+          "key": "C",
+          "md": "Abdülmecid"
+        },
+        {
+          "key": "D",
+          "md": "II. Abdülhamid"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "III. Selim, Nizam-ı Cedit ordusunu kurmuş ama ocağı kaldıramadan tahttan indirilmiştir.",
+        "C": "Abdülmecid, II. Mahmud'un oğludur ve 1839'da tahta çıkmıştır.",
+        "D": "II. Abdülhamid 1876'da tahta çıkmıştır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap II. Mahmud'dur.\n- Olay Vaka-i Hayriye adıyla anılır.\n- Yerine Asakir-i Mansure-i Muhammediye ordusu kurulmuştur."
+        },
+        {
+          "type": "hint",
+          "md": "Tanzimat'ı ilan eden padişahın babası."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Yeniçeri Ocağı, Osmanlı'nın yüzyıllarca en güçlü askeri birliği olmuştur. Zamanla bozulmuş ve yenilik girişimlerine karşı çıkan bir güce dönüşmüştür."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          13,
+          13
+        ],
+        "quote": "II. Mahmud, 1826'da Yeniçeri Ocağını kaldırmıştır.",
+        "chapter": "Türkiye Tarihi"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "tarih"
+      ],
+      "vurgu": [],
+      "contentHash": "8c16f8a79078c59f147572e56adcb997ee15eb8965dc46fcdde9d4447e20a886",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0061",
+      "conceptId": "tt-tanzimat-okuyan",
+      "stem": {
+        "md": "Tanzimat Fermanı 1839'da ____ tarafından okunmuştur."
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Mithat Paşa"
+        },
+        {
+          "key": "B",
+          "md": "Âli Paşa"
+        },
+        {
+          "key": "C",
+          "md": "Fuat Paşa"
+        },
+        {
+          "key": "D",
+          "md": "Mustafa Reşit Paşa"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Mithat Paşa, Kanun-i Esasi'nin hazırlanmasında öncü olmuştur.",
+        "B": "Âli Paşa, Tanzimat'ın sonraki kuşağından bir sadrazamdır.",
+        "C": "Fuat Paşa, Tanzimat'ın sonraki kuşağından bir devlet adamıdır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Mustafa Reşit Paşa'dır.\n- Ferman Gülhane Parkı'nda okunmuştur.\n- Bu yüzden Gülhane Hatt-ı Hümayunu diye de anılır."
+        },
+        {
+          "type": "hint",
+          "md": "Dönemin dışişleri bakanı."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Tanzimat Fermanı can, mal ve namus güvenliğini padişahın kendi gücünü sınırlayarak güvence altına almıştır. Osmanlı modernleşmesinde yeni bir dönemin başlangıcıdır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          13,
+          13
+        ],
+        "quote": "Tanzimat Fermanı 1839'da Sultan Abdülmecid döneminde Mustafa Reşit Paşa tarafından okunmuştur.",
+        "chapter": "Türkiye Tarihi"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "tarih"
+      ],
+      "vurgu": [],
+      "contentHash": "0b83e8e7195f5aa637a6772e5d35e3445509c6f8cb3684ab084cb5e13ec4e628",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0062",
+      "conceptId": "tt-kanun-i-esasi",
+      "stem": {
+        "md": "İlk Osmanlı anayasası Kanun-i Esasi hangi padişah döneminde ilan edilmiştir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "II. Abdülhamid"
+        },
+        {
+          "key": "B",
+          "md": "Abdülaziz"
+        },
+        {
+          "key": "C",
+          "md": "V. Murad"
+        },
+        {
+          "key": "D",
+          "md": "V. Mehmed Reşad"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Abdülaziz, anayasa ilanından önce tahttan indirilmiştir.",
+        "C": "V. Murad yalnızca birkaç ay tahtta kalmıştır.",
+        "D": "V. Mehmed Reşad, II. Meşrutiyet'ten sonra tahta çıkmıştır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap II. Abdülhamid'dir.\n- Anayasa 1876'da ilan edilmiştir.\n- Böylece I. Meşrutiyet dönemi başlamıştır."
+        },
+        {
+          "type": "hint",
+          "md": "Otuz yılı aşkın tahtta kalan padişah."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Meşrutiyet, padişahın yanında halkın seçtiği bir meclisin bulunduğu yönetim biçimidir. Osmanlı'da anayasal düzene geçiş Genç Osmanlılar'ın baskısıyla gerçekleşmiştir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          13,
+          13
+        ],
+        "quote": "İlk Osmanlı anayasası Kanun-i Esasi, 1876'da II. Abdülhamid döneminde ilan edilmiştir.",
+        "chapter": "Türkiye Tarihi"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "tarih"
+      ],
+      "vurgu": [],
+      "contentHash": "548f85b0836282e921263a625c5fe771e5a57b1409575fec46dfa21b3698ec9b",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0063",
+      "conceptId": "tt-mondros",
+      "stem": {
+        "md": "Osmanlı Devleti'nin Birinci Dünya Savaşı'ndan çekilmesini sağlayan ateşkes hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Mondros Ateşkes Antlaşması"
+        },
+        {
+          "key": "B",
+          "md": "Mudanya Ateşkes Antlaşması"
+        },
+        {
+          "key": "C",
+          "md": "Brest-Litovsk Antlaşması"
+        },
+        {
+          "key": "D",
+          "md": "Compiègne Ateşkesi"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Mudanya Ateşkesi 1922'de, Kurtuluş Savaşı'nın sonunda imzalanmıştır.",
+        "C": "Brest-Litovsk, Rusya'nın savaştan çekildiği antlaşmadır.",
+        "D": "Compiègne Ateşkesi, Almanya'nın savaşı bıraktığı ateşkestir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Mondros Ateşkes Antlaşması'dır.\n- 30 Ekim 1918'de imzalanmıştır.\n- İtilaf devletlerine Osmanlı topraklarını işgal etme yolunu açmıştır."
+        },
+        {
+          "type": "hint",
+          "md": "Limni Adası'ndaki bir limanın adını taşır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Birinci Dünya Savaşı'nda Osmanlı, İttifak devletlerinin yanında yer almıştır. Savaşın sonunda imzalanan ateşkes, Anadolu'nun işgaline ve Millî Mücadele'ye giden süreci başlatmıştır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          14,
+          14
+        ],
+        "quote": "Mondros Ateşkes Antlaşması 30 Ekim 1918'de imzalanmıştır.",
+        "chapter": "Türkiye Tarihi"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "tarih"
+      ],
+      "vurgu": [],
+      "contentHash": "2c0ad7bd4390540dc6c07da908bfc291ed949ead6dd0825d1b368759ccedf779",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0064",
+      "conceptId": "tt-milli-mucadele-sirasi",
+      "stem": {
+        "md": "Millî Mücadele dönemindeki aşağıdaki gelişmelerin eskiden yeniye sıralanışı hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Erzurum Kongresi - Samsun'a çıkış - Sivas Kongresi - TBMM'nin açılışı"
+        },
+        {
+          "key": "B",
+          "md": "Samsun'a çıkış - Sivas Kongresi - Erzurum Kongresi - TBMM'nin açılışı"
+        },
+        {
+          "key": "C",
+          "md": "Samsun'a çıkış - Erzurum Kongresi - TBMM'nin açılışı - Sivas Kongresi"
+        },
+        {
+          "key": "D",
+          "md": "Samsun'a çıkış - Erzurum Kongresi - Sivas Kongresi - TBMM'nin açılışı"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Erzurum Kongresi, Samsun'a çıkıştan iki ay sonra toplanmıştır.",
+        "B": "Sivas Kongresi, Erzurum Kongresi'nden sonra toplanmıştır.",
+        "C": "TBMM, Sivas Kongresi'nden yaklaşık sekiz ay sonra açılmıştır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Samsun'a çıkış 19 Mayıs 1919.\n- Erzurum Kongresi 23 Temmuz 1919, Sivas Kongresi 4 Eylül 1919.\n- TBMM 23 Nisan 1920'de açılmıştır."
+        },
+        {
+          "type": "hint",
+          "md": "Doğudaki kongre, ortadaki kongreden önce toplanmıştır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Millî Mücadele'nin ilk yılında yerel direniş örgütleri kongrelerle tek çatı altında toplanmıştır. Bu süreç Ankara'da yeni bir meclisin kurulmasıyla sonuçlanmıştır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          14,
+          14
+        ],
+        "quote": "Erzurum Kongresi 23 Temmuz 1919'da, Sivas Kongresi 4 Eylül 1919'da toplanmıştır.",
+        "chapter": "Türkiye Tarihi"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "tarih"
+      ],
+      "vurgu": [],
+      "contentHash": "27f8f021706bb85d6ff64e142d20d9405f8a005fa647a0eac5249848b81685b4",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0065",
+      "conceptId": "tt-sakarya-gazi",
+      "stem": {
+        "md": "TBMM'nin Mustafa Kemal'e mareşal rütbesi ve gazi unvanını verdiği zafer hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Birinci İnönü Muharebesi"
+        },
+        {
+          "key": "B",
+          "md": "Başkomutan Meydan Muharebesi"
+        },
+        {
+          "key": "C",
+          "md": "İkinci İnönü Muharebesi"
+        },
+        {
+          "key": "D",
+          "md": "Sakarya Meydan Muharebesi"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Birinci İnönü'de orduyu İsmet Bey yönetmiştir ve böyle bir unvan verilmemiştir.",
+        "B": "Başkomutan Meydan Muharebesi'nden önce Mustafa Kemal zaten mareşaldi.",
+        "C": "İkinci İnönü zaferi de İsmet Bey komutasında kazanılmıştır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Sakarya Meydan Muharebesi'dir.\n- 1921'de 22 gün 22 gece sürmüştür.\n- Ardından mareşallik ve gazilik verilmiştir."
+        },
+        {
+          "type": "hint",
+          "md": "Yirmi iki gün yirmi iki gece süren savaş."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Kurtuluş Savaşı'nın en kritik savunma muharebesinde Türk ordusu Ankara'ya ilerleyen Yunan ordusunu durdurmuştur. Bu muharebe savaşın yönünü değiştiren dönüm noktası sayılır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          14,
+          14
+        ],
+        "quote": "Sakarya Meydan Muharebesi'nden sonra TBMM, Mustafa Kemal'e mareşal rütbesi ve gazi unvanı vermiştir.",
+        "chapter": "Türkiye Tarihi"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "tarih"
+      ],
+      "vurgu": [],
+      "contentHash": "b184a215b435b8a304cf8edf05d8f0930665225e4c56310a5c7697dab4672543",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0066",
+      "conceptId": "tt-baskomutan-muharebesi",
+      "stem": {
+        "md": "Büyük Taarruz, 30 Ağustos 1922'deki ____ ile zaferle sonuçlanmıştır."
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Sakarya Meydan Muharebesi"
+        },
+        {
+          "key": "B",
+          "md": "İkinci İnönü Muharebesi"
+        },
+        {
+          "key": "C",
+          "md": "Kütahya-Eskişehir Muharebeleri"
+        },
+        {
+          "key": "D",
+          "md": "Başkomutan Meydan Muharebesi"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Sakarya Meydan Muharebesi 1921'de yapılmıştır.",
+        "B": "İkinci İnönü Muharebesi 1921 baharında yapılmıştır.",
+        "C": "Kütahya-Eskişehir Muharebeleri 1921'de yapılmış ve geri çekilmeyle sonuçlanmıştır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Başkomutan Meydan Muharebesi'dir.\n- 30 Ağustos Zafer Bayramı olarak kutlanır.\n- Bu zaferle Anadolu düşman işgalinden kurtarılmıştır."
+        },
+        {
+          "type": "hint",
+          "md": "Muharebeyi bizzat ordunun en üst komutanı yönetmiştir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Büyük Taarruz, Afyonkarahisar yakınlarında başlayan kesin sonuçlu bir saldırıdır. Ardından Türk ordusu kısa sürede İzmir'e ulaşmıştır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          14,
+          14
+        ],
+        "quote": "Büyük Taarruz 26 Ağustos 1922'de başlamış ve 30 Ağustos'taki Başkomutan Meydan Muharebesi ile zaferle sonuçlanmıştır.",
+        "chapter": "Türkiye Tarihi"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "tarih"
+      ],
+      "vurgu": [],
+      "contentHash": "4a57fa13a8642929755a1abdbfd2d3177c88f0b9fbf7326b263e1fdbdd2b1ceb",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0067",
+      "conceptId": "tt-medeni-kanun-isvicre",
+      "stem": {
+        "md": "1926 Türk Medeni Kanunu hangi ülkenin medeni kanunu örnek alınarak hazırlanmıştır?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "İtalya"
+        },
+        {
+          "key": "B",
+          "md": "Fransa"
+        },
+        {
+          "key": "C",
+          "md": "Almanya"
+        },
+        {
+          "key": "D",
+          "md": "İsviçre"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "İtalya'nın kanunu medeni kanuna değil, aynı yıl kabul edilen ceza kanununa örnek olmuştur.",
+        "B": "Fransız medeni kanunu bu düzenlemede örnek alınmamıştır.",
+        "C": "Alman kanunu daha çok ticaret hukukunda örnek alınmıştır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap İsviçre'dir.\n- Kanun 1926'da kabul edilmiştir.\n- Tek eşliliği, resmî nikâhı ve kadın-erkek eşitliğini güvence altına almıştır."
+        },
+        {
+          "type": "hint",
+          "md": "Lozan şehrinin bulunduğu ülke."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Medeni kanun; evlilik, miras ve kişi haklarını düzenleyen temel yasadır. Cumhuriyet'in ilk yıllarında hukuk sistemi Avrupa'daki modern kanunlar örnek alınarak yenilenmiştir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          15,
+          15
+        ],
+        "quote": "1926'da kabul edilen Türk Medeni Kanunu, İsviçre Medeni Kanunu örnek alınarak hazırlanmıştır.",
+        "chapter": "Türkiye Tarihi"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "tarih"
+      ],
+      "vurgu": [],
+      "contentHash": "73f493421f77ba26bf8224e3fbac28aff3e90811f51b4e62c3729280984e3ae9",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0068",
+      "conceptId": "tt-inkilap-sirasi",
+      "stem": {
+        "md": "Aşağıdaki inkılapların eskiden yeniye doğru sıralanışı hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Halifeliğin kaldırılması - Cumhuriyetin ilanı - Türk Medeni Kanunu - Yeni Türk alfabesi"
+        },
+        {
+          "key": "B",
+          "md": "Cumhuriyetin ilanı - Türk Medeni Kanunu - Halifeliğin kaldırılması - Yeni Türk alfabesi"
+        },
+        {
+          "key": "C",
+          "md": "Cumhuriyetin ilanı - Halifeliğin kaldırılması - Türk Medeni Kanunu - Yeni Türk alfabesi"
+        },
+        {
+          "key": "D",
+          "md": "Cumhuriyetin ilanı - Halifeliğin kaldırılması - Yeni Türk alfabesi - Türk Medeni Kanunu"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Halifelik, Cumhuriyetin ilanından sonra 1924'te kaldırılmıştır.",
+        "B": "Medeni Kanun 1926'da, halifeliğin kaldırılmasından sonra kabul edilmiştir.",
+        "D": "Yeni Türk alfabesi 1928'de, Medeni Kanun'dan sonra kabul edilmiştir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Cumhuriyetin ilanı 1923, halifeliğin kaldırılması 1924.\n- Türk Medeni Kanunu 1926.\n- Yeni Türk alfabesi 1928."
+        },
+        {
+          "type": "hint",
+          "md": "Önce yönetim biçimi, en son yazı değişmiştir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Atatürk inkılapları siyasi, hukuki, eğitim ve kültür alanlarında birkaç yıl içinde art arda yapılmıştır. Her biri bir öncekinin açtığı yolu izlemiştir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          15,
+          15
+        ],
+        "quote": "Yeni Türk alfabesi 1 Kasım 1928'de kabul edilmiştir.",
+        "chapter": "Türkiye Tarihi"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "tarih"
+      ],
+      "vurgu": [],
+      "contentHash": "551c0c76509c60ca7c59c7ce58abdb1b28ab8f50959968f0d6ba6bceb4dc29a7",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0069",
+      "conceptId": "tt-1934-olmayan",
+      "stem": {
+        "md": "Aşağıdakilerden hangisi 1934 yılında GERÇEKLEŞMEMİŞTİR?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Yeni Türk alfabesinin kabulü"
+        },
+        {
+          "key": "B",
+          "md": "Soyadı Kanunu'nun çıkarılması"
+        },
+        {
+          "key": "C",
+          "md": "Mustafa Kemal'e Atatürk soyadının verilmesi"
+        },
+        {
+          "key": "D",
+          "md": "Kadınlara milletvekili seçme ve seçilme hakkının tanınması"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Soyadı Kanunu 1934'te çıkarılmıştır.",
+        "C": "Atatürk soyadı 1934'te TBMM tarafından verilmiştir.",
+        "D": "Kadınlar milletvekili seçme ve seçilme hakkını 1934'te kazanmıştır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Yeni Türk alfabesinin kabulüdür.\n- Alfabe 1928'de kabul edilmiştir.\n- Diğer üç gelişme 1934 yılına aittir."
+        },
+        {
+          "type": "hint",
+          "md": "Bu yıl soyadları ve seçim hakkıyla anılır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "1934, Türkiye'de kişi kimliği ve siyasal haklar açısından önemli düzenlemelerin yapıldığı bir yıldır. Bu yılki kararlar vatandaşlık anlayışını da etkilemiştir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          15,
+          15
+        ],
+        "quote": "Soyadı Kanunu 1934'te çıkarılmış ve TBMM, Mustafa Kemal'e Atatürk soyadını vermiştir.",
+        "chapter": "Türkiye Tarihi"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "tarih"
+      ],
+      "vurgu": [],
+      "contentHash": "0054b51a4fb956f287e17d764868aa3d1932a1abce2cf0f3d2bbc30634849830",
+      "deleted": false
+    }
+  ]
+}

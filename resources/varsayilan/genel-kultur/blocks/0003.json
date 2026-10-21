@@ -1,0 +1,2605 @@
+{
+  "blockId": "0003",
+  "questions": [
+    {
+      "id": "genel-kultur-0105",
+      "conceptId": "fransa-baskent",
+      "stem": {
+        "md": "Fransa'nın başkenti hangi şehirdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Paris"
+        },
+        {
+          "key": "B",
+          "md": "Londra"
+        },
+        {
+          "key": "C",
+          "md": "Roma"
+        },
+        {
+          "key": "D",
+          "md": "Madrid"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Londra, Birleşik Krallık'ın başkentidir.",
+        "C": "Roma, İtalya'nın başkentidir.",
+        "D": "Madrid, İspanya'nın başkentidir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Fransa'nın başkenti Paris'tir.\n- Şehir, Seine Nehri kıyısında kurulmuştur."
+        },
+        {
+          "type": "hint",
+          "md": "Eyfel Kulesi bu şehirdedir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Fransa, Batı Avrupa’nın en geniş yüzölçümlü ülkesidir; yönetimi uzun zamandır tek bir büyük merkezde toplanmıştır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          23,
+          23
+        ],
+        "quote": "Fransa'nın başkenti Paris'tir.",
+        "chapter": "Coğrafya"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "coğrafya"
+      ],
+      "vurgu": [],
+      "contentHash": "79639e43459b24f219a14932399827db3f33648b6c658312b51f10ba85bd306a",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0106",
+      "conceptId": "avustralya-baskent",
+      "stem": {
+        "md": "Avustralya'nın başkenti hangi şehirdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Canberra"
+        },
+        {
+          "key": "B",
+          "md": "Sidney"
+        },
+        {
+          "key": "C",
+          "md": "Melbourne"
+        },
+        {
+          "key": "D",
+          "md": "Perth"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Sidney ülkenin en tanınan şehridir ama başkent değildir.",
+        "C": "Melbourne yalnızca geçici olarak hükümet merkezi olmuştur.",
+        "D": "Perth batı kıyısındaki büyük bir şehirdir, başkent olmamıştır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Avustralya'nın başkenti Canberra'dır.\n- Şehir, iki büyük şehir arasındaki rekabete son vermek için başkent olarak planlanıp kurulmuştur."
+        },
+        {
+          "type": "hint",
+          "md": "Ülkenin en kalabalık iki şehrinden biri değildir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Bazı ülkeler başkentlerini en büyük şehirlerine değil, yönetim için sonradan planlanmış bir şehre yerleştirmiştir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          23,
+          23
+        ],
+        "quote": "Avustralya'nın başkenti Canberra'dır.",
+        "chapter": "Coğrafya"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "coğrafya"
+      ],
+      "vurgu": [],
+      "contentHash": "fabcfc0258b39ba898fc8a2f38d7abdfcdf594edaddfed76a57c2a17f326d45d",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0107",
+      "conceptId": "cg-kanada-baskent",
+      "stem": {
+        "md": "Kanada'nın başkenti hangi şehirdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Ottawa"
+        },
+        {
+          "key": "B",
+          "md": "Toronto"
+        },
+        {
+          "key": "C",
+          "md": "Montreal"
+        },
+        {
+          "key": "D",
+          "md": "Vancouver"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Toronto ülkenin en kalabalık şehridir ama başkent değildir.",
+        "C": "Montreal Fransızca konuşulan en büyük şehirdir, başkent değildir.",
+        "D": "Vancouver Pasifik kıyısındaki liman şehridir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Kanada'nın başkenti Ottawa'dır.\n- Şehir, Ontario eyaletinde, İngilizce ve Fransızca konuşulan bölgelerin sınırına yakındır."
+        },
+        {
+          "type": "hint",
+          "md": "Adını taşıdığı nehrin kıyısındadır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Kanada, İngilizce ve Fransızcanın birlikte resmî dil olduğu federal bir ülkedir; başkent seçimi bu iki toplumu dengeleme kaygısını yansıtır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          23,
+          23
+        ],
+        "quote": "Kanada'nın başkenti Ottawa'dır.",
+        "chapter": "Coğrafya"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "coğrafya"
+      ],
+      "vurgu": [],
+      "contentHash": "e4da3aea755c8b684be4f5a133a6d690c487bc95bdf1d84d4a141f0c77ab56eb",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0108",
+      "conceptId": "cg-brezilya-baskent",
+      "stem": {
+        "md": "Brezilya'nın başkenti hangi şehirdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Rio de Janeiro"
+        },
+        {
+          "key": "B",
+          "md": "Brasília"
+        },
+        {
+          "key": "C",
+          "md": "São Paulo"
+        },
+        {
+          "key": "D",
+          "md": "Salvador"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Rio de Janeiro 1960’a kadar başkentti ama bugün değildir.",
+        "C": "São Paulo ülkenin en kalabalık şehridir, başkent değildir.",
+        "D": "Salvador sömürge döneminin ilk başkentiydi, bugünkü başkent değildir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Brezilya'nın başkenti Brasília'dır.\n- 1960'ta başkent olan, iç bölgelere kurulmuş planlı bir şehirdir."
+        },
+        {
+          "type": "hint",
+          "md": "Ülkeyle neredeyse aynı adı taşır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Brezilya, nüfusun kıyıda yığılmasını dengelemek için yönetim merkezini iç bölgelere taşımaya karar vermiş ve sıfırdan bir şehir kurmuştur."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          23,
+          23
+        ],
+        "quote": "Brezilya'nın başkenti, 1960'ta başkent olan planlı şehir Brasília'dır.",
+        "chapter": "Coğrafya"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "coğrafya"
+      ],
+      "vurgu": [],
+      "contentHash": "c0eea9a0c74008f4d5a9dc1a0fb8b1728f98b740dcf3b5dd8c4d94db0ea214c5",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0109",
+      "conceptId": "cg-baskent-eslestirme",
+      "stem": {
+        "md": "Ülkeleri başkentleriyle eşleştirin.\n\n**Ülkeler:** 1. Japonya, 2. Mısır, 3. Arjantin\n\n**Başkentler:** a. Kahire, b. Tokyo, c. Buenos Aires"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "1-a, 2-b, 3-c"
+        },
+        {
+          "key": "B",
+          "md": "1-b, 2-a, 3-c"
+        },
+        {
+          "key": "C",
+          "md": "1-c, 2-a, 3-b"
+        },
+        {
+          "key": "D",
+          "md": "1-b, 2-c, 3-a"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Japonya’nın başkenti Kahire değildir; Kahire Nil kıyısındadır.",
+        "C": "Japonya ile Buenos Aires arasında bir bağ yoktur; Buenos Aires Güney Amerika’dadır.",
+        "D": "Mısır’ın başkenti Buenos Aires olamaz; o şehir Atlantik kıyısındaki bir Güney Amerika şehridir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Japonya – Tokyo, Mısır – Kahire, Arjantin – Buenos Aires.\n- Kahire Nil kıyısında, Buenos Aires La Plata Halici kıyısındadır."
+        },
+        {
+          "type": "hint",
+          "md": "Nil kıyısındaki şehri bulmak, ikinci eşleşmeyi çözer."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Başkentler çoğu zaman ülkenin en eski ya da en büyük ticaret ve liman merkezleridir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          23,
+          23
+        ],
+        "quote": "Japonya'nın başkenti Tokyo, Mısır'ınki Kahire, Arjantin'inki Buenos Aires'tir.",
+        "chapter": "Coğrafya"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "coğrafya"
+      ],
+      "vurgu": [],
+      "contentHash": "bc582d1aa3a2b40a5727785830f5b1458da936eb84d61b7fe3f24ca82f944d34",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0110",
+      "conceptId": "cg-isvicre-bern",
+      "stem": {
+        "md": "Aşağıdaki ülke – başkent eşleşmelerinden hangisi yanlıştır?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Norveç – Oslo"
+        },
+        {
+          "key": "B",
+          "md": "İsviçre – Zürih"
+        },
+        {
+          "key": "C",
+          "md": "Macaristan – Budapeşte"
+        },
+        {
+          "key": "D",
+          "md": "Portekiz – Lizbon"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Oslo gerçekten Norveç'in başkentidir.",
+        "C": "Budapeşte gerçekten Macaristan'ın başkentidir.",
+        "D": "Lizbon gerçekten Portekiz'in başkentidir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- İsviçre'nin yönetim merkezi Zürih değil Bern'dir.\n- Zürih ülkenin en büyük şehri ve finans merkezidir; bu yüzden sık karıştırılır."
+        },
+        {
+          "type": "hint",
+          "md": "En büyük şehir her zaman başkent değildir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Federal yapıdaki bazı ülkelerde ekonomi merkezi ile yönetim merkezi ayrı şehirlerdedir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          23,
+          23
+        ],
+        "quote": "İsviçre'nin federal yönetim merkezi Zürih değil Bern'dir.",
+        "chapter": "Coğrafya"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "coğrafya"
+      ],
+      "vurgu": [],
+      "contentHash": "3e8348162e4df04ae525c5ef61ba9f65af82a7f131687d5f412de742c2420151",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0111",
+      "conceptId": "en-buyuk-okyanus",
+      "stem": {
+        "md": "Dünya'nın en büyük okyanusu hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Pasifik"
+        },
+        {
+          "key": "B",
+          "md": "Atlantik"
+        },
+        {
+          "key": "C",
+          "md": "Hint"
+        },
+        {
+          "key": "D",
+          "md": "Arktik"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Atlantik ikinci büyük okyanustur.",
+        "C": "Hint Okyanusu ondan da küçüktür.",
+        "D": "Arktik okyanusların en küçüğüdür."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- En büyük okyanus Pasifik Okyanusu’dur.\n- Türkçede Büyük Okyanus adıyla da anılır."
+        },
+        {
+          "type": "hint",
+          "md": "Asya ile Amerika arasında uzanır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Okyanuslar Dünya yüzeyinin yaklaşık üçte ikisini kaplar ve birbirine bağlı tek bir su kütlesinin bölümleri sayılır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          24,
+          24
+        ],
+        "quote": "Dünya'nın en büyük okyanusu Pasifik Okyanusu'dur.",
+        "chapter": "Coğrafya"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "coğrafya"
+      ],
+      "vurgu": [],
+      "contentHash": "69ad684cc4c6dae474509ad7d1c299498df9453c2ea58f7bbe50c7345ddc993a",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0112",
+      "conceptId": "cg-okyanus-sirala",
+      "stem": {
+        "md": "Aşağıdaki dört okyanusun yüzölçümüne göre büyükten küçüğe doğru sıralanışı hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Pasifik – Atlantik – Hint – Arktik"
+        },
+        {
+          "key": "B",
+          "md": "Atlantik – Pasifik – Hint – Arktik"
+        },
+        {
+          "key": "C",
+          "md": "Pasifik – Hint – Atlantik – Arktik"
+        },
+        {
+          "key": "D",
+          "md": "Pasifik – Atlantik – Arktik – Hint"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Atlantik büyük olsa da Pasifik’i geçemez.",
+        "C": "Hint Okyanusu Atlantik’ten küçüktür.",
+        "D": "Arktik, Hint Okyanusu’ndan çok daha küçüktür."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru sıra: Pasifik, Atlantik, Hint, Arktik.\n- Arktik, Kuzey Kutbu’nu çevreleyen en küçük okyanustur."
+        },
+        {
+          "type": "hint",
+          "md": "Kuzey Kutbu çevresindeki okyanus en sondadır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Okyanusların sınırları kıtalar ve uzlaşılmış hatlarla çizilir; yüzölçümleri arasında büyük farklar vardır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          24,
+          24
+        ],
+        "quote": "Bu dört okyanus yüzölçümüne göre büyükten küçüğe Pasifik, Atlantik, Hint ve Arktik diye sıralanır.",
+        "chapter": "Coğrafya"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "coğrafya"
+      ],
+      "vurgu": [],
+      "contentHash": "1f1810b3b3b9a649160137d34f0dcec96d24978f5251ef775ea2a02a909f5831",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0113",
+      "conceptId": "cg-mariana",
+      "stem": {
+        "md": "Okyanuslardaki bilinen en derin nokta hangi çukurdadır?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Porto Riko Çukuru"
+        },
+        {
+          "key": "B",
+          "md": "Mariana Çukuru"
+        },
+        {
+          "key": "C",
+          "md": "Sunda Çukuru"
+        },
+        {
+          "key": "D",
+          "md": "Güney Sandviç Çukuru"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Porto Riko Çukuru Atlantik’in en derin yeridir ama daha sığdır.",
+        "C": "Sunda Çukuru Hint Okyanusu’ndadır ve daha sığdır.",
+        "D": "Güney Sandviç Çukuru Güney Atlantik’tedir, en derin nokta değildir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- En derin nokta Pasifik’teki Mariana Çukuru’dur.\n- Derinliği 10 bin metreyi aşar."
+        },
+        {
+          "type": "hint",
+          "md": "Batı Pasifik’te, Guam yakınlarındadır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Okyanus çukurları, bir levhanın diğerinin altına daldığı yerlerde oluşan uzun ve derin yarıklardır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          24,
+          24
+        ],
+        "quote": "Okyanuslardaki bilinen en derin nokta Pasifik'teki Mariana Çukuru'dur.",
+        "chapter": "Coğrafya"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "coğrafya"
+      ],
+      "vurgu": [],
+      "contentHash": "6eb5c8800e7497688b732e1cf4edf6983cc832431cb3f7f499fd7cc04ff2d8ff",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0114",
+      "conceptId": "cg-panama-kanali",
+      "stem": {
+        "md": "Orta Amerika’da bir kıstağı keserek Atlas ve Büyük okyanusları birleştiren yapay su yolu hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Süveyş Kanalı"
+        },
+        {
+          "key": "B",
+          "md": "Kiel Kanalı"
+        },
+        {
+          "key": "C",
+          "md": "Korint Kanalı"
+        },
+        {
+          "key": "D",
+          "md": "Panama Kanalı"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Süveyş Kanalı Mısır’dadır ve Akdeniz’i Kızıldeniz’e bağlar.",
+        "B": "Kiel Kanalı Almanya’dadır ve Kuzey Denizi ile Baltık’ı birleştirir.",
+        "C": "Korint Kanalı Yunanistan’da, Mora Yarımadası’nın kıstağındadır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Bu su yolu Panama Kanalı’dır.\n- Gemileri Güney Amerika’nın güney ucunu dolaşmaktan kurtarır."
+        },
+        {
+          "type": "hint",
+          "md": "Adını bulunduğu ülkeden alır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Kanallar, iki denizi ayıran dar kara parçalarını keserek gemi yolunu kısaltmak için açılır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          24,
+          24
+        ],
+        "quote": "Panama Kanalı, Orta Amerika'da Atlas Okyanusu ile Büyük Okyanus'u birleştirir.",
+        "chapter": "Coğrafya"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "coğrafya"
+      ],
+      "vurgu": [],
+      "contentHash": "b5909ecc1e4fcab70146b2d02c764477b472ff567f5702e3993771bc6e475963",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0115",
+      "conceptId": "cg-suveys",
+      "stem": {
+        "md": "Süveyş Kanalı Akdeniz’i ____ ile birleştirir."
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Kızıldeniz"
+        },
+        {
+          "key": "B",
+          "md": "Basra Körfezi"
+        },
+        {
+          "key": "C",
+          "md": "Arap Denizi"
+        },
+        {
+          "key": "D",
+          "md": "Karadeniz"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Basra Körfezi Arap Yarımadası’nın doğusundadır, kanala bağlı değildir.",
+        "C": "Arap Denizi Hint Okyanusu’nun bir parçasıdır, kanalın ucunda değildir.",
+        "D": "Karadeniz’e Akdeniz’den boğazlarla geçilir, kanalla değil."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Süveyş Kanalı Akdeniz’i Kızıldeniz’e bağlar.\n- Mısır topraklarındadır; Avrupa ile Asya arasındaki deniz yolunu kısaltır."
+        },
+        {
+          "type": "hint",
+          "md": "Adı bir renk içeren bir deniz."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Mısır’daki bu kanal açılmadan önce Avrupa’dan Hindistan’a giden gemiler Afrika’nın güney ucunu dolaşmak zorundaydı."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          24,
+          24
+        ],
+        "quote": "Mısır'daki Süveyş Kanalı Akdeniz'i Kızıldeniz'e bağlar.",
+        "chapter": "Coğrafya"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "coğrafya"
+      ],
+      "vurgu": [],
+      "contentHash": "84bf9041baca39b25caacc4dc4a73c0e10d84ba3641095e3371a223e6d318650",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0116",
+      "conceptId": "cg-cebelitarik",
+      "stem": {
+        "md": "Avrupa ile Afrika’yı ayıran ve Akdeniz’i Atlas Okyanusu’na bağlayan boğaz hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Hürmüz Boğazı"
+        },
+        {
+          "key": "B",
+          "md": "Cebelitarık Boğazı"
+        },
+        {
+          "key": "C",
+          "md": "Babülmendep Boğazı"
+        },
+        {
+          "key": "D",
+          "md": "Macellan Boğazı"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Hürmüz Boğazı Basra Körfezi’nin ağzındadır.",
+        "C": "Babülmendep Kızıldeniz ile Aden Körfezi arasındadır.",
+        "D": "Macellan Boğazı Güney Amerika’nın güney ucundadır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Bu boğaz Cebelitarık Boğazı’dır.\n- Kuzeyinde İspanya, güneyinde Fas bulunur."
+        },
+        {
+          "type": "hint",
+          "md": "İspanya ile Fas arasındadır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Boğazlar iki deniz arasındaki dar geçitlerdir; deniz ticaretinin yoğunlaştığı bu noktalar tarih boyunca stratejik önem taşımıştır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          24,
+          24
+        ],
+        "quote": "Cebelitarık Boğazı, Avrupa'yı Afrika'dan ayırır ve Akdeniz'i Atlas Okyanusu'na bağlar.",
+        "chapter": "Coğrafya"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "coğrafya"
+      ],
+      "vurgu": [],
+      "contentHash": "0ee6d5c2677a4c6b270af7b567b4f561a10b4a661b0a05ba3d4e9143aa7b0846",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0117",
+      "conceptId": "cg-en-buyuk-kita",
+      "stem": {
+        "md": "Yüzölçümü en büyük kıta hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Afrika"
+        },
+        {
+          "key": "B",
+          "md": "Kuzey Amerika"
+        },
+        {
+          "key": "C",
+          "md": "Antarktika"
+        },
+        {
+          "key": "D",
+          "md": "Asya"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Afrika ikinci büyük kıtadır.",
+        "B": "Kuzey Amerika üçüncü sıradadır.",
+        "C": "Antarktika büyüktür ama ilk üçe giremez."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- En büyük kıta Asya’dır.\n- Kara yüzeyinin yaklaşık üçte birini kaplar."
+        },
+        {
+          "type": "hint",
+          "md": "Türkiye’nin büyük bölümü bu kıtadadır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Kıtalar, okyanuslarla birbirinden ayrılan büyük kara kütleleridir; yaygın sayımda yedi kıta kabul edilir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          25,
+          25
+        ],
+        "quote": "Yüzölçümü en büyük kıta Asya’dır.",
+        "chapter": "Coğrafya"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "coğrafya"
+      ],
+      "vurgu": [],
+      "contentHash": "bdea153c0d0aa9a01307a8e1dff4880a8f8947115a684110e941e5b127406aed",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0118",
+      "conceptId": "cg-everest",
+      "stem": {
+        "md": "Deniz seviyesinden en yüksek dağ hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Everest"
+        },
+        {
+          "key": "B",
+          "md": "K2"
+        },
+        {
+          "key": "C",
+          "md": "Kilimanjaro"
+        },
+        {
+          "key": "D",
+          "md": "Mont Blanc"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "K2 ikinci yüksek dağdır.",
+        "C": "Kilimanjaro Afrika’nın en yükseğidir ama Everest’ten çok alçaktır.",
+        "D": "Mont Blanc Alplerin en yükseğidir, dünya sıralamasında geridedir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- En yüksek dağ Everest’tir.\n- Himalayalarda, Nepal ile Çin sınırındadır."
+        },
+        {
+          "type": "hint",
+          "md": "Himalayalardadır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Himalayalar, sekiz bin metreyi aşan zirvelerin çoğunu barındıran genç bir sıradağdır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          25,
+          25
+        ],
+        "quote": "Deniz seviyesinden en yüksek dağ, Himalayalardaki Everest'tir.",
+        "chapter": "Coğrafya"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "coğrafya"
+      ],
+      "vurgu": [],
+      "contentHash": "35c6619487c1330d5146061f86ebae53b88e9b17ae17b8b6da451334a9c6f108",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0119",
+      "conceptId": "cg-kilimanjaro",
+      "stem": {
+        "md": "Afrika kıtasının en yüksek dağı hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Kenya Dağı"
+        },
+        {
+          "key": "B",
+          "md": "Rwenzori Dağları"
+        },
+        {
+          "key": "C",
+          "md": "Atlas Dağları"
+        },
+        {
+          "key": "D",
+          "md": "Kilimanjaro"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Kenya Dağı yüksektir ama ikinci sıradadır.",
+        "B": "Rwenzori Dağları Uganda sınırındadır ve daha alçaktır.",
+        "C": "Atlas Dağları kuzeybatı Afrika’da, çok daha alçak bir sıradağdır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Afrika’nın en yüksek dağı Kilimanjaro’dur.\n- Tanzanya’da bulunan, tek başına yükselen volkanik bir dağdır."
+        },
+        {
+          "type": "hint",
+          "md": "Tanzanya’da, zirvesi karla örtülü bir volkan."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Doğu Afrika’daki yarık vadisi boyunca volkanik etkinlik pek çok yüksek ve tek başına duran dağ oluşturmuştur."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          25,
+          25
+        ],
+        "quote": "Afrika'nın en yüksek dağı, Tanzanya'daki Kilimanjaro'dur.",
+        "chapter": "Coğrafya"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "coğrafya"
+      ],
+      "vurgu": [],
+      "contentHash": "cde114ca9673a1b11c3182c69c70aecee011707ca95663eb200c99e18506de3b",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0120",
+      "conceptId": "cg-and-daglari",
+      "stem": {
+        "md": "Güney Amerika’nın batı kıyısı boyunca uzanan, karalardaki en uzun sıradağ hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Kayalık Dağlar"
+        },
+        {
+          "key": "B",
+          "md": "And Dağları"
+        },
+        {
+          "key": "C",
+          "md": "Himalayalar"
+        },
+        {
+          "key": "D",
+          "md": "Ural Dağları"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Kayalık Dağlar Kuzey Amerika’dadır.",
+        "C": "Himalayalar Asya’dadır ve daha kısadır.",
+        "D": "Ural Dağları Rusya’da, daha kısa ve alçak bir sıradağdır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Bu sıradağ And Dağları’dır.\n- Venezuela’dan Ateş Toprakları’na kadar uzanır."
+        },
+        {
+          "type": "hint",
+          "md": "Titikaka Gölü bu dağların arasındadır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Okyanus levhasının kıta levhası altına daldığı kıyılarda uzun sıradağlar ve volkan zincirleri oluşur."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          25,
+          25
+        ],
+        "quote": "Güney Amerika'nın batı kıyısı boyunca uzanan And Dağları, karalardaki en uzun sıradağdır.",
+        "chapter": "Coğrafya"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "coğrafya"
+      ],
+      "vurgu": [],
+      "contentHash": "26b46b914f8355cc7c56b98463d545b9a0eb4190d91f447a2b00b9f2e49a02cb",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0121",
+      "conceptId": "cg-ural-sinir",
+      "stem": {
+        "md": "Avrupa ile Asya arasındaki kara sınırı geleneksel olarak ____ boyunca çizilir."
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Ural Dağları"
+        },
+        {
+          "key": "B",
+          "md": "Kafkas Dağları"
+        },
+        {
+          "key": "C",
+          "md": "Karpat Dağları"
+        },
+        {
+          "key": "D",
+          "md": "Altay Dağları"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Kafkaslar sınırın güney kesimiyle ilişkilidir ama ana kuzey–güney hattı değildir.",
+        "C": "Karpatlar tümüyle Avrupa içindedir.",
+        "D": "Altay Dağları tümüyle Asya içindedir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Geleneksel sınır Ural Dağları’dır.\n- Rusya’yı kuzeyden güneye ikiye bölen bu sıradağ, iki kıtayı ayıran hat sayılır."
+        },
+        {
+          "type": "hint",
+          "md": "Rusya’yı kuzeyden güneye bölen alçak bir sıradağ."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Avrupa ile Asya aynı kara kütlesinin parçalarıdır; aralarındaki sınır doğal bir okyanus değil, uzlaşıyla seçilmiş yer şekilleridir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          25,
+          25
+        ],
+        "quote": "Avrupa ile Asya arasındaki kara sınırı geleneksel olarak Ural Dağları boyunca çizilir.",
+        "chapter": "Coğrafya"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "coğrafya"
+      ],
+      "vurgu": [],
+      "contentHash": "d959b08c399f293f0709f44252bb686ff58c86422d2ec4e35b5cf4ad7147afc0",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0122",
+      "conceptId": "cg-antarktika",
+      "stem": {
+        "md": "Güney Kutbu’nu içine alan ve kalıcı yerleşik nüfusu olmayan kıta hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Okyanusya"
+        },
+        {
+          "key": "B",
+          "md": "Güney Amerika"
+        },
+        {
+          "key": "C",
+          "md": "Antarktika"
+        },
+        {
+          "key": "D",
+          "md": "Afrika"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Okyanusya’da milyonlarca insan yaşar.",
+        "B": "Güney Amerika kalabalık bir kıtadır.",
+        "D": "Afrika nüfus bakımından ikinci büyük kıtadır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Bu kıta Antarktika’dır.\n- Burada yalnızca bilim istasyonlarında dönemsel olarak çalışan araştırmacılar bulunur."
+        },
+        {
+          "type": "hint",
+          "md": "Neredeyse tamamı buzla kaplıdır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Kutup bölgeleri yıl boyu çok soğuktur; bu koşullar insanların kalıcı olarak yerleşmesini olanaksız kılar."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          25,
+          25
+        ],
+        "quote": "Güney Kutbu'nu içine alan Antarktika'nın kalıcı yerleşik nüfusu yoktur.",
+        "chapter": "Coğrafya"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "coğrafya"
+      ],
+      "vurgu": [],
+      "contentHash": "2620843d5da5b706a3f2859bd46c46488eeb7f320042ac8d2a5c448cc9c0e739",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0123",
+      "conceptId": "cg-nil",
+      "stem": {
+        "md": "Afrika’nın en uzun nehri olan ve Akdeniz’e dökülen akarsu hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Kongo"
+        },
+        {
+          "key": "B",
+          "md": "Nijer"
+        },
+        {
+          "key": "C",
+          "md": "Nil"
+        },
+        {
+          "key": "D",
+          "md": "Zambezi"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Kongo Atlas Okyanusu’na dökülür ve Nil’den kısadır.",
+        "B": "Nijer Gine Körfezi’ne dökülür.",
+        "D": "Zambezi Hint Okyanusu’na dökülür."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Bu nehir Nil’dir.\n- Mısır’dan geçerek bir delta oluşturur ve Akdeniz’e ulaşır."
+        },
+        {
+          "type": "hint",
+          "md": "Antik Mısır uygarlığı bu nehrin kıyısında gelişti."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Çöllerden geçen büyük nehirler, kıyılarında verimli tarım şeritleri oluşturarak ilk uygarlıkların doğduğu yerler olmuştur."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          26,
+          26
+        ],
+        "quote": "Afrika'nın en uzun nehri Nil, Mısır'dan geçerek Akdeniz'e dökülür.",
+        "chapter": "Coğrafya"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "coğrafya"
+      ],
+      "vurgu": [],
+      "contentHash": "ceae713d5839348c6c823a26e0ce09f440de418edd2f2f598464fe7bacccd946",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0124",
+      "conceptId": "cg-amazon",
+      "stem": {
+        "md": "Denize taşıdığı su miktarı bakımından dünyanın en büyük nehri hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Nil"
+        },
+        {
+          "key": "B",
+          "md": "Mississippi"
+        },
+        {
+          "key": "C",
+          "md": "Yangtze"
+        },
+        {
+          "key": "D",
+          "md": "Amazon"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Nil uzundur ama taşıdığı su miktarı çok azdır.",
+        "B": "Mississippi Kuzey Amerika’nın büyük nehridir, su miktarında çok geridedir.",
+        "C": "Yangtze Asya’nın en uzunudur ama su miktarında ilk sırada değildir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Bu nehir Amazon’dur.\n- Yağmur ormanlarındaki bol yağış sayesinde Atlas Okyanusu’na en fazla suyu taşır."
+        },
+        {
+          "type": "hint",
+          "md": "Tropikal yağmur ormanlarının ortasından akar."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Bir nehrin taşıdığı su miktarı, havzasının genişliğine ve aldığı yağışa bağlıdır; uzunlukla aynı şey değildir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          26,
+          26
+        ],
+        "quote": "Denize taşıdığı su miktarı bakımından dünyanın en büyük nehri Amazon'dur.",
+        "chapter": "Coğrafya"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "coğrafya"
+      ],
+      "vurgu": [],
+      "contentHash": "5d2121916d322b361e8ecb79f0da07cb160527150f094f783dde1d818d6678fb",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0125",
+      "conceptId": "en-derin-gol",
+      "stem": {
+        "md": "Dünya'nın en derin gölü hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Tanganika"
+        },
+        {
+          "key": "B",
+          "md": "Viktorya"
+        },
+        {
+          "key": "C",
+          "md": "Baykal"
+        },
+        {
+          "key": "D",
+          "md": "Hazar"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Tanganika ikinci en derin göldür.",
+        "B": "Viktorya Afrika’nın en büyük gölüdür ama sığdır.",
+        "D": "Hazar yüzölçümü en büyük göldür, en derini değildir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- En derin göl Sibirya’daki Baykal Gölü’dür.\n- Derinliği 1600 metreyi aşar."
+        },
+        {
+          "type": "hint",
+          "md": "Sibirya’da bir tatlı su gölü."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Çok derin göller genellikle yer kabuğunun çekilip ayrıldığı yarık vadilerinde oluşur."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          26,
+          26
+        ],
+        "quote": "Dünya'nın en derin gölü Sibirya'daki Baykal Gölü'dür.",
+        "chapter": "Coğrafya"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "coğrafya"
+      ],
+      "vurgu": [],
+      "contentHash": "25a115028e0cb6ce317c137d4f03101ccadc206c42a399c1a03c80ae63249862",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0126",
+      "conceptId": "titikaka-sinir",
+      "stem": {
+        "md": "Titikaka Gölü, Peru ile hangi ülke arasındaki sınırda yer alır?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Şili"
+        },
+        {
+          "key": "B",
+          "md": "Ekvador"
+        },
+        {
+          "key": "C",
+          "md": "Bolivya"
+        },
+        {
+          "key": "D",
+          "md": "Kolombiya"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Şili Peru’nun güney komşusudur ama gölde kıyısı yoktur.",
+        "B": "Ekvador Peru’nun kuzeyindedir, göle uzaktır.",
+        "D": "Kolombiya da kuzeydedir ve gölle sınırı yoktur."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Göl, Peru ile Bolivya arasındadır.\n- And Dağları’nda, yaklaşık 3800 metre yükseklikte yer alır."
+        },
+        {
+          "type": "hint",
+          "md": "Denize kıyısı olmayan bir And ülkesi."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "And Dağları’ndaki yüksek platolarda geniş göller bulunur; bunlardan biri büyük gemilerin dolaşabildiği en yüksek göllerden sayılır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          26,
+          26
+        ],
+        "quote": "Titikaka Gölü, Peru ile Bolivya arasındaki sınırda yer alır.",
+        "chapter": "Coğrafya"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "coğrafya"
+      ],
+      "vurgu": [],
+      "contentHash": "99b8d3010cd617f96a86ca76cfb5fb1f335fc418546d04bbf406b8c1769193e6",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0127",
+      "conceptId": "cg-hazar",
+      "stem": {
+        "md": "Adında “deniz” geçmesine rağmen yüzölçümü bakımından dünyanın en büyük gölü sayılan su kütlesi hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Aral Gölü"
+        },
+        {
+          "key": "B",
+          "md": "Hazar Denizi"
+        },
+        {
+          "key": "C",
+          "md": "Ölü Deniz"
+        },
+        {
+          "key": "D",
+          "md": "Superior Gölü"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Aral Gölü büyük ölçüde kurumuştur ve çok küçülmüştür.",
+        "C": "Ölü Deniz çok tuzludur ama küçüktür.",
+        "D": "Superior Gölü en büyük tatlı su göllerindendir ama Hazar’dan küçüktür."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Bu su kütlesi Hazar Denizi’dir.\n- Okyanusa bağlantısı olmadığı için göl sayılır."
+        },
+        {
+          "type": "hint",
+          "md": "Kafkasya ile Orta Asya arasındadır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Bir su kütlesinin göl sayılması için okyanusla doğal bağlantısının olmaması gerekir; adının ne olduğu belirleyici değildir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          26,
+          26
+        ],
+        "quote": "Yüzölçümü bakımından dünyanın en büyük gölü Hazar Denizi'dir.",
+        "chapter": "Coğrafya"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "coğrafya"
+      ],
+      "vurgu": [],
+      "contentHash": "45371b355bde6dc38411daefed5eea8821e8626fa49c8aced4dc8b0cce262058",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0128",
+      "conceptId": "cg-tuna-baskentler",
+      "stem": {
+        "md": "Tuna Nehri aşağıdaki başkentlerden hangisinden geçmez?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Viyana"
+        },
+        {
+          "key": "B",
+          "md": "Prag"
+        },
+        {
+          "key": "C",
+          "md": "Budapeşte"
+        },
+        {
+          "key": "D",
+          "md": "Belgrad"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Viyana Tuna kıyısındadır.",
+        "C": "Budapeşte, Tuna’nın iki yakasındaki Buda ve Peşte’nin birleşmesiyle oluşmuştur.",
+        "D": "Belgrad, Sava’nın Tuna’ya karıştığı yerde kuruludur."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Prag’dır.\n- Prag, Vltava Nehri kıyısındadır.\n- Tuna; Viyana, Bratislava, Budapeşte ve Belgrad’dan geçer."
+        },
+        {
+          "type": "hint",
+          "md": "Çek Cumhuriyeti’nin başkenti farklı bir nehir kıyısındadır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Tuna, Almanya’dan doğup Karadeniz’e dökülen ve Avrupa’da en çok ülkeden geçen nehirdir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          26,
+          26
+        ],
+        "quote": "Tuna Nehri Viyana, Bratislava, Budapeşte ve Belgrad'dan geçer.",
+        "chapter": "Coğrafya"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "coğrafya"
+      ],
+      "vurgu": [],
+      "contentHash": "34abfe9ce21fea8ee0a6f72806c8579a02d2561a98726ae89c2d8c9e85e6306b",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0129",
+      "conceptId": "cg-sahra",
+      "stem": {
+        "md": "Dünyanın en büyük sıcak çölü hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Gobi"
+        },
+        {
+          "key": "B",
+          "md": "Kalahari"
+        },
+        {
+          "key": "C",
+          "md": "Atacama"
+        },
+        {
+          "key": "D",
+          "md": "Sahra"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Gobi soğuk kışları olan bir Asya çölüdür ve daha küçüktür.",
+        "B": "Kalahari güney Afrika’da, çok daha küçük bir çöldür.",
+        "C": "Atacama çok kuraktır ama dar bir şerittir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- En büyük sıcak çöl Sahra’dır.\n- Kuzey Afrika’nın büyük bölümünü kaplar."
+        },
+        {
+          "type": "hint",
+          "md": "Kuzey Afrika’dadır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Çöl, yağışın çok az olduğu yerdir; sıcak ya da soğuk olabilir, bu yüzden kutup bölgeleri de çöl sayılır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          27,
+          27
+        ],
+        "quote": "Dünyanın en büyük sıcak çölü, Kuzey Afrika'daki Sahra'dır.",
+        "chapter": "Coğrafya"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "coğrafya"
+      ],
+      "vurgu": [],
+      "contentHash": "575bbd3edf6b041608e27133ca2a6cc25542218cb0b1ad8bd006a7e8e082d75c",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0130",
+      "conceptId": "cg-atacama",
+      "stem": {
+        "md": "Kutup bölgeleri dışında dünyanın en kurak çölü hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Sahra"
+        },
+        {
+          "key": "B",
+          "md": "Gobi"
+        },
+        {
+          "key": "C",
+          "md": "Namib"
+        },
+        {
+          "key": "D",
+          "md": "Atacama"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Sahra en büyük sıcak çöldür ama en kurak değildir.",
+        "B": "Gobi Asya’da, mevsimsel yağış alan bir çöldür.",
+        "C": "Namib çok kuraktır ama sıralamada geridedir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Bu çöl Şili’deki Atacama’dır.\n- Bazı istasyonlarında yıllarca yağış ölçülmemiştir."
+        },
+        {
+          "type": "hint",
+          "md": "Güney Amerika’nın Pasifik kıyısında, And Dağları ile okyanus arasında."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Soğuk okyanus akıntılarının yanındaki kıyılarda hava alttan soğur, yağış bulutu oluşmaz ve aşırı kurak çöller ortaya çıkar."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          27,
+          27
+        ],
+        "quote": "Kutup bölgeleri dışında dünyanın en kurak çölü Şili'deki Atacama'dır.",
+        "chapter": "Coğrafya"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "coğrafya"
+      ],
+      "vurgu": [],
+      "contentHash": "30d4bc6996cb1cf2676403cf09c6f033a047d8c41467e535fcb44af19c856fb7",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0131",
+      "conceptId": "cg-akdeniz-iklimi",
+      "stem": {
+        "md": "Yazları sıcak ve kurak, kışları ılık ve yağışlı geçen iklim tipi hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Karasal iklim"
+        },
+        {
+          "key": "B",
+          "md": "Okyanusal iklim"
+        },
+        {
+          "key": "C",
+          "md": "Tundra iklimi"
+        },
+        {
+          "key": "D",
+          "md": "Akdeniz iklimi"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Karasal iklimde kışlar soğuk ve karlıdır.",
+        "B": "Okyanusal iklimde yazlar serin, yağış her mevsim düzenlidir.",
+        "C": "Tundra ikliminde yazlar kısa ve serindir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Bu iklim Akdeniz iklimidir.\n- Zeytin ve turunçgiller bu iklimin tipik bitkileridir."
+        },
+        {
+          "type": "hint",
+          "md": "Zeytin ağacını düşün."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "İklim tipleri sıcaklık ve yağışın yıl içindeki dağılımına göre adlandırılır; kıyılar ile iç kesimler aynı enlemde bile farklı iklimlere sahip olabilir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          27,
+          27
+        ],
+        "quote": "Yazları sıcak ve kurak, kışları ılık ve yağışlı geçen iklime Akdeniz iklimi denir.",
+        "chapter": "Coğrafya"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "coğrafya"
+      ],
+      "vurgu": [],
+      "contentHash": "47c0596a3fbbfddbed52cd3f986b552359c0697606b3f62180318926a119e633",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0132",
+      "conceptId": "cg-muson",
+      "stem": {
+        "md": "Güney ve Güneydoğu Asya’da yazın denizden karaya, kışın karadan denize esen ve yağmur mevsimini getiren mevsimlik rüzgâr hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Alize"
+        },
+        {
+          "key": "B",
+          "md": "Muson"
+        },
+        {
+          "key": "C",
+          "md": "Fön"
+        },
+        {
+          "key": "D",
+          "md": "Poyraz"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Alizeler yıl boyu dönencelerden Ekvator’a doğru esen sürekli rüzgârlardır.",
+        "C": "Fön, dağı aşıp inen sıcak ve kuru bir yerel rüzgârdır.",
+        "D": "Poyraz kuzeydoğudan esen soğuk bir yerel rüzgârdır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Bu rüzgâr musondur.\n- Kara ile deniz arasındaki mevsimlik sıcaklık farkından doğar ve yön değiştirir."
+        },
+        {
+          "type": "hint",
+          "md": "Hindistan’daki yağmur mevsimiyle anılır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Kara deniz suyundan daha çabuk ısınıp soğur; bu fark büyük ölçekte mevsimden mevsime yön değiştiren rüzgârlar doğurur."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          27,
+          27
+        ],
+        "quote": "Güney Asya’da yazın denizden karaya esip yağmur getiren mevsimlik rüzgâra muson denir.",
+        "chapter": "Coğrafya"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "coğrafya"
+      ],
+      "vurgu": [],
+      "contentHash": "faf91982ebc718820eec8e1805598f1605bc321a9b81f8142ebaa395a2626d48",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0133",
+      "conceptId": "cg-ekvatoral-iklim",
+      "stem": {
+        "md": "Yıl boyunca sıcak ve her mevsim yağışlı olan, gür tropikal yağmur ormanlarının yayıldığı iklim tipi hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Savan iklimi"
+        },
+        {
+          "key": "B",
+          "md": "Step iklimi"
+        },
+        {
+          "key": "C",
+          "md": "Çöl iklimi"
+        },
+        {
+          "key": "D",
+          "md": "Ekvatoral iklim"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Savan ikliminde belirgin bir kurak mevsim vardır.",
+        "B": "Step iklimi yarı kuraktır, orman değil ot örtüsü görülür.",
+        "C": "Çöl ikliminde yağış çok azdır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Bu iklim Ekvatoral iklimdir.\n- Amazon ve Kongo havzalarında görülür."
+        },
+        {
+          "type": "hint",
+          "md": "Adını Dünya’yı ortadan bölen çizgiden alır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Güneş ışınlarının yıl boyu dike yakın geldiği alçak enlemlerde sıcaklık mevsimden mevsime pek değişmez."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          27,
+          27
+        ],
+        "quote": "Yıl boyu sıcak ve her mevsim yağışlı olan, tropikal yağmur ormanlarının yayıldığı iklime Ekvatoral iklim denir.",
+        "chapter": "Coğrafya"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "coğrafya"
+      ],
+      "vurgu": [],
+      "contentHash": "ea044da344c4eb96038c035565b850f5a1dcf767900642971ab8f642b999dc0f",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0134",
+      "conceptId": "cg-tundra",
+      "stem": {
+        "md": "Kutuplara yakın, ağaç yetişmeyen, yosun ve likenlerin hâkim olduğu bitki örtüsüne ____ denir."
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "tayga"
+        },
+        {
+          "key": "B",
+          "md": "maki"
+        },
+        {
+          "key": "C",
+          "md": "tundra"
+        },
+        {
+          "key": "D",
+          "md": "savan"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Tayga iğne yapraklı ağaçlardan oluşan bir ormandır.",
+        "B": "Maki Akdeniz ikliminin kısa boylu çalılığıdır.",
+        "D": "Savan tropikal bölgelerde uzun otlardan oluşur."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Bu bitki örtüsü tundradır.\n- Toprağın alt katmanı yıl boyu donmuş kaldığı için ağaç kökleri tutunamaz."
+        },
+        {
+          "type": "hint",
+          "md": "Orman sınırının daha da kuzeyindedir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Enlem arttıkça yaz mevsimi kısalır; bir noktadan sonra büyüme süresi ağaçların yetişmesine yetmez."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          27,
+          27
+        ],
+        "quote": "Kutuplara yakın, ağaç yetişmeyen, yosun ve likenlerin hâkim olduğu bitki örtüsüne tundra denir.",
+        "chapter": "Coğrafya"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "coğrafya"
+      ],
+      "vurgu": [],
+      "contentHash": "d46842133aafe8146c1ce38c3be10d332ef6e0e28a45552d4d8567de6d548727",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0135",
+      "conceptId": "cg-delta",
+      "stem": {
+        "md": "Bir akarsuyun denize döküldüğü yerde taşıdığı alüvyonları biriktirerek oluşturduğu, çoğu zaman üçgene benzeyen düzlüğe ne denir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Haliç"
+        },
+        {
+          "key": "B",
+          "md": "Fiyort"
+        },
+        {
+          "key": "C",
+          "md": "Kanyon"
+        },
+        {
+          "key": "D",
+          "md": "Delta"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Haliç, akarsu ağzının denize doğru genişleyip su ile dolmasıdır; birikinti değildir.",
+        "B": "Fiyort buzulların oyduğu derin bir koydur.",
+        "C": "Kanyon akarsuyun derine oyduğu dar ve dik vadidir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Bu yer şekli deltadır.\n- Adı, biçimi büyük Yunan harfi Δ’ya benzediği için verilmiştir."
+        },
+        {
+          "type": "hint",
+          "md": "Adı bir Yunan harfinden gelir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Akarsular yatak eğimi azaldıkça hızını yitirir ve taşıdığı malzemeyi biriktirmeye başlar."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          28,
+          28
+        ],
+        "quote": "Akarsuyun denize döküldüğü yerde biriktirdiği alüvyonların oluşturduğu düzlüğe delta denir.",
+        "chapter": "Coğrafya"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "coğrafya"
+      ],
+      "vurgu": [],
+      "contentHash": "70dab8a1c3055d25cf7f5c736d1e8506ee1b327360a6f858188bee14f19a9bc4",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0136",
+      "conceptId": "cg-fiyort",
+      "stem": {
+        "md": "Buzulların oyduğu vadilerin deniz suyuyla dolmasıyla oluşan, dik yamaçlı ve derin koylara ne ad verilir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Fiyort"
+        },
+        {
+          "key": "B",
+          "md": "Lagün"
+        },
+        {
+          "key": "C",
+          "md": "Atol"
+        },
+        {
+          "key": "D",
+          "md": "Delta"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Lagün, kıyı okuyla denizden ayrılmış sığ bir göldür.",
+        "C": "Atol, mercanların oluşturduğu halka biçimli adadır.",
+        "D": "Delta akarsuyun biriktirdiği bir düzlüktür, oyulmuş koy değildir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Bu koylar fiyorttur.\n- Norveç kıyıları bu yer şekliyle ünlüdür."
+        },
+        {
+          "type": "hint",
+          "md": "Norveç kıyılarını düşün."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Buzul çağlarında kalın buz kütleleri vadileri U biçiminde derinleştirmiş, buzlar eriyince deniz bu vadilere dolmuştur."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          28,
+          28
+        ],
+        "quote": "Buzulların oyduğu vadilerin deniz suyuyla dolmasıyla oluşan derin koylara fiyort denir.",
+        "chapter": "Coğrafya"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "coğrafya"
+      ],
+      "vurgu": [],
+      "contentHash": "4a80c3b2b556783ddb08e0ed968d404fd983fb551cf7721ab541786beda40934",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0137",
+      "conceptId": "cg-ates-cemberi",
+      "stem": {
+        "md": "Büyük Okyanus’u çevreleyen ve depremlerle yanardağların yoğunlaştığı kuşağa ne ad verilir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Ateş Çemberi"
+        },
+        {
+          "key": "B",
+          "md": "Alp-Himalaya Kuşağı"
+        },
+        {
+          "key": "C",
+          "md": "Orta Atlantik Sırtı"
+        },
+        {
+          "key": "D",
+          "md": "Doğu Afrika Yarığı"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Alp-Himalaya Kuşağı Avrupa’dan Asya’ya uzanır, Büyük Okyanus’u çevrelemez.",
+        "C": "Orta Atlantik Sırtı Atlas Okyanusu’nun ortasındadır.",
+        "D": "Doğu Afrika Yarığı kıta içinde bir ayrılma hattıdır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Bu kuşak Ateş Çemberi’dir.\n- Japonya, Endonezya ve Şili bu kuşak üzerindedir."
+        },
+        {
+          "type": "hint",
+          "md": "Adında bir geometrik şekil var."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Yer kabuğu levhalardan oluşur; levhaların birbirine çarptığı ya da altına daldığı sınırlarda deprem ve volkanizma yoğunlaşır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          28,
+          28
+        ],
+        "quote": "Büyük Okyanus'u çevreleyen ve depremlerle yanardağların yoğunlaştığı kuşağa Ateş Çemberi denir.",
+        "chapter": "Coğrafya"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "coğrafya"
+      ],
+      "vurgu": [],
+      "contentHash": "bbad281fc6bec67f98efa404f56afc88ab508c4a91156b37a665f58c35806953",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0138",
+      "conceptId": "cg-himalaya-levha",
+      "stem": {
+        "md": "Dünyanın en yüksek dağını barındıran sıradağ, hangi iki levhanın çarpışmasıyla yükselmiştir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Hint ve Avrasya levhaları"
+        },
+        {
+          "key": "B",
+          "md": "Afrika ve Avrasya levhaları"
+        },
+        {
+          "key": "C",
+          "md": "Pasifik ve Kuzey Amerika levhaları"
+        },
+        {
+          "key": "D",
+          "md": "Nazka ve Güney Amerika levhaları"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Afrika ile Avrasya’nın çarpışması Alpleri yükseltmiştir.",
+        "C": "Pasifik ile Kuzey Amerika levhaları Kaliforniya kıyısında yan yana kayar.",
+        "D": "Nazka ile Güney Amerika levhaları And Dağları’nı oluşturmuştur."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Everest Himalayalardadır.\n- Himalayalar, Hint levhasının Avrasya levhasına çarpmasıyla yükselmiştir.\n- Çarpışma sürdüğü için sıradağ hâlâ yükselmektedir."
+        },
+        {
+          "type": "hint",
+          "md": "Önce dağı ve sıradağı bul, sonra güneyden gelen kara parçasını düşün."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "İki kıta levhası çarpıştığında hiçbiri kolayca alta dalamaz; kabuk kıvrılıp kalınlaşır ve çok yüksek sıradağlar oluşur."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          28,
+          28
+        ],
+        "quote": "Himalayalar, Hint levhasının Avrasya levhasına çarpmasıyla yükselmiştir.",
+        "chapter": "Coğrafya"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "coğrafya"
+      ],
+      "vurgu": [],
+      "contentHash": "8fd84b9871aba0b85c371e39811a5587e6f0ef063f9f55b8ff3cc9d99133f583",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0139",
+      "conceptId": "cg-ekvator-ulkeler",
+      "stem": {
+        "md": "Ekvator çizgisi aşağıdaki ülkelerden hangisinden geçmez?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Ekvador"
+        },
+        {
+          "key": "B",
+          "md": "Kenya"
+        },
+        {
+          "key": "C",
+          "md": "Endonezya"
+        },
+        {
+          "key": "D",
+          "md": "Peru"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Ekvador adını zaten bu çizgiden alır.",
+        "B": "Kenya’nın ortasından Ekvator geçer.",
+        "C": "Endonezya adalarının bir kısmı Ekvator’un üzerindedir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Peru’dur.\n- Peru’nun tamamı Ekvator’un hemen güneyinde kalır.\n- Ekvator’un geçtiği ülkeler arasında Kolombiya ve Brezilya da vardır."
+        },
+        {
+          "type": "hint",
+          "md": "Kuzey komşusunun adı çizginin kendisidir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Ekvator, Dünya’yı kuzey ve güney yarımküre olarak ikiye bölen 0 derecelik paraleldir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          28,
+          28
+        ],
+        "quote": "Ekvator çizgisi Ekvador, Kolombiya, Brezilya, Kenya ve Endonezya'dan geçer; Peru ise tümüyle Ekvator'un güneyinde kalır.",
+        "chapter": "Coğrafya"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "coğrafya"
+      ],
+      "vurgu": [],
+      "contentHash": "8651fd9f1fb1e4d675af41fc9a5947637f4029a3be6efa7423afb1d0e5bbbb8b",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0140",
+      "conceptId": "cg-greenwich",
+      "stem": {
+        "md": "Başlangıç meridyeni (0° boylamı) hangi şehrin yakınındaki gözlemevinden geçer?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Paris"
+        },
+        {
+          "key": "B",
+          "md": "Londra"
+        },
+        {
+          "key": "C",
+          "md": "Roma"
+        },
+        {
+          "key": "D",
+          "md": "Berlin"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Paris’ten geçen meridyen bir dönem Fransa’da kullanılsa da uluslararası başlangıç olarak seçilmedi.",
+        "C": "Roma’dan başlangıç meridyeni geçmez.",
+        "D": "Berlin’den başlangıç meridyeni geçmez."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Başlangıç meridyeni Londra’daki Greenwich Gözlemevi’nden geçer.\n- 1884’teki uluslararası bir konferansla kabul edilmiştir."
+        },
+        {
+          "type": "hint",
+          "md": "Greenwich adını duymuş olabilirsin."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Boylamlar kuzey ve güney kutuplarını birleştiren yarım çemberlerdir; başlangıç olarak hangisinin seçileceği bir uzlaşı meselesidir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          29,
+          29
+        ],
+        "quote": "Başlangıç meridyeni Londra'daki Greenwich Gözlemevi'nden geçer.",
+        "chapter": "Coğrafya"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "coğrafya"
+      ],
+      "vurgu": [],
+      "contentHash": "92f0f6a3aa0cf5d4493aefb318c9350546557d693c93bb58402cd3ec12e39cc4",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0141",
+      "conceptId": "cg-enlem-sirala",
+      "stem": {
+        "md": "Aşağıdaki şehirlerin kuzeyden güneye sıralanışı hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Paris – Oslo – Kahire – Nairobi"
+        },
+        {
+          "key": "B",
+          "md": "Oslo – Kahire – Paris – Nairobi"
+        },
+        {
+          "key": "C",
+          "md": "Oslo – Paris – Nairobi – Kahire"
+        },
+        {
+          "key": "D",
+          "md": "Oslo – Paris – Kahire – Nairobi"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Oslo, Paris’ten çok daha kuzeydedir.",
+        "B": "Kahire Afrika’da, Paris’in güneyindedir.",
+        "C": "Nairobi Ekvator’un hemen güneyindedir, Kahire’nin kuzeyine geçemez."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru sıra: Oslo, Paris, Kahire, Nairobi.\n- Oslo İskandinavya’da, Nairobi ise Ekvator’un hemen güneyindedir."
+        },
+        {
+          "type": "hint",
+          "md": "Ekvator’a en yakın şehir en sondadır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Enlem, bir yerin Ekvator’a göre ne kadar kuzeyde ya da güneyde olduğunu derece olarak gösterir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          29,
+          29
+        ],
+        "quote": "Kuzeyden güneye doğru Oslo, Paris, Kahire ve Nairobi sıralanır.",
+        "chapter": "Coğrafya"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "coğrafya"
+      ],
+      "vurgu": [],
+      "contentHash": "5254883de254de5b487031b4e08895a0b4643b50c9be922907e2f7ad76671fce",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0142",
+      "conceptId": "cg-tarih-degistirme",
+      "stem": {
+        "md": "Uluslararası tarih değiştirme çizgisi büyük ölçüde ____ meridyeni boyunca uzanır."
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "0°"
+        },
+        {
+          "key": "B",
+          "md": "180°"
+        },
+        {
+          "key": "C",
+          "md": "90° Doğu"
+        },
+        {
+          "key": "D",
+          "md": "90° Batı"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "0° başlangıç meridyenidir, tarih orada değişmez.",
+        "C": "90° Doğu meridyeni Hindistan ve Bangladeş civarından geçer.",
+        "D": "90° Batı meridyeni Kuzey Amerika’dan geçer."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Çizgi büyük ölçüde 180° meridyenini izler.\n- Büyük Okyanus’tan geçer; ülkeleri bölmemek için yer yer kırılır."
+        },
+        {
+          "type": "hint",
+          "md": "Başlangıç meridyeninin tam karşısını düşün."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Dünya kendi çevresinde dönerken bir yerde takvim gününün değişmesi gerekir; bu hat çoğunlukla açık denizden geçirilmiştir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          29,
+          29
+        ],
+        "quote": "Uluslararası tarih değiştirme çizgisi büyük ölçüde 180° meridyeni boyunca uzanır.",
+        "chapter": "Coğrafya"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "coğrafya"
+      ],
+      "vurgu": [],
+      "contentHash": "649aecdf011b31f1e79e73d8166eef4ae58f0be74a961b72976dbe276f4b275d",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0143",
+      "conceptId": "cg-yengec-donencesi",
+      "stem": {
+        "md": "Haziran gündönümünde öğle vakti Güneş ışınları hangi paralele dik gelir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Yengeç Dönencesi"
+        },
+        {
+          "key": "B",
+          "md": "Oğlak Dönencesi"
+        },
+        {
+          "key": "C",
+          "md": "Ekvator"
+        },
+        {
+          "key": "D",
+          "md": "Kuzey Kutup Dairesi"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Oğlak Dönencesi’ne ışınlar Aralık gündönümünde dik gelir.",
+        "C": "Ekvator’a ışınlar ekinokslarda dik gelir.",
+        "D": "Kuzey Kutup Dairesi’ne ışınlar hiçbir zaman dik gelmez."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Işınlar Yengeç Dönencesi’ne dik gelir.\n- Bu paralel yaklaşık 23,5° kuzey enlemindedir.\n- Bu tarihte Kuzey Yarımküre’de en uzun gündüz yaşanır."
+        },
+        {
+          "type": "hint",
+          "md": "Kuzey Yarımküre’deki dönenceyi düşün."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Dünya’nın ekseni eğik olduğu için Güneş ışınlarının dik geldiği yer yıl içinde iki dönence arasında gidip gelir; mevsimler bundan doğar."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          29,
+          29
+        ],
+        "quote": "Haziran gündönümünde öğle vakti Güneş ışınları Yengeç Dönencesi'ne dik gelir.",
+        "chapter": "Coğrafya"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "coğrafya"
+      ],
+      "vurgu": [],
+      "contentHash": "6ee5a74351938d6d045cf8f21b87783d1e9502e4a07d576834441d114653c336",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0144",
+      "conceptId": "cg-gronland",
+      "stem": {
+        "md": "Kıtalar sayılmazsa dünyanın en büyük adası hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Grönland"
+        },
+        {
+          "key": "B",
+          "md": "Madagaskar"
+        },
+        {
+          "key": "C",
+          "md": "Borneo"
+        },
+        {
+          "key": "D",
+          "md": "Büyük Britanya"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Madagaskar büyük bir adadır ama Grönland’ın yarısından da küçüktür.",
+        "C": "Borneo üçüncü büyük adadır.",
+        "D": "Büyük Britanya Avrupa’nın en büyük adasıdır, dünya sıralamasında geridedir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- En büyük ada Grönland’dır.\n- Danimarka Krallığı’na bağlı, büyük bölümü buzla kaplı bir adadır."
+        },
+        {
+          "type": "hint",
+          "md": "Kuzey Atlantik’te, büyük bölümü buzla kaplıdır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Avustralya bir ada gibi denizle çevrili olsa da kıta sayıldığı için ada sıralamasına alınmaz."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          29,
+          29
+        ],
+        "quote": "Kıtalar sayılmazsa dünyanın en büyük adası Grönland'dır.",
+        "chapter": "Coğrafya"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "coğrafya"
+      ],
+      "vurgu": [],
+      "contentHash": "2ddb7548831b70553c8c2305be058b8ac63355c0ed107584b6f8e75ec848df3a",
+      "deleted": false
+    }
+  ]
+}

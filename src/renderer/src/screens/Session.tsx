@@ -95,20 +95,42 @@ export function Session({
   const [book, setBook] = useState<SourceBook | null>(null)
   const [whyOpen, setWhyOpen] = useState<{ at: string; keys: ChoiceKey[] }>({ at: '', keys: [] })
   const [telling, setTelling] = useState<string | null>(null)
+  const [peek, setPeek] = useState<string | null>(null)
   const [flagging, setFlagging] = useState(false)
   const solvedRef = useRef<HTMLDivElement | null>(null)
   const speed = settings?.typerSpeed ?? 'normal'
   const bookAuto = settings?.bookAuto === true
+  const autoChoices = settings?.autoChoices === true
   const state = s.state
   const startMarking = s.reveal
   const markingStem =
     state.phase === 'stem' && state.q.kind === 'isaretleme'
       ? `${state.q.questionId}:${state.q.index}`
       : null
+  const choiceStem =
+    autoChoices && state.phase === 'stem' && state.q.kind === 'coktan-secmeli'
+      ? `${state.q.questionId}:${state.q.index}`
+      : null
 
   useEffect(() => {
     if (markingStem) void startMarking()
   }, [markingStem, startMarking])
+
+  useEffect(() => {
+    if (choiceStem) void startMarking()
+  }, [choiceStem, startMarking])
+
+  const toggleBook = useCallback(
+    (at: string): void => {
+      if (bookAuto) {
+        setPeek(null)
+        void saveSettings({ bookAuto: false })
+        return
+      }
+      setPeek((p) => (p === at ? null : at))
+    },
+    [bookAuto, saveSettings]
+  )
 
   useEffect(() => {
     s.start(moduleId, chapter, partial)
@@ -226,11 +248,11 @@ export function Session({
       },
       [KEYS.flag]: () => flag(),
       KeyK: () => {
-        if (book?.available) void saveSettings({ bookAuto: !bookAuto })
+        if (book?.available && 'q' in state) toggleBook(`${state.q.questionId}:${state.q.index}`)
       },
       [KEYS.end]: () => void finish()
     })
-  }, [state, flagging, book, bookAuto, saveSettings])
+  }, [state, flagging, book, toggleBook])
 
   if (state.phase === 'summary') {
     return (
@@ -353,6 +375,17 @@ export function Session({
   const whyHint = hasOthers && whyKeys.length === 0 && (
     <p className="tk-hint ql-why-hint">{t('session.whyTap')}</p>
   )
+  const bookShown = bookAuto || peek === here
+  const tellButton = (
+    <button
+      type="button"
+      className={`tk-btn tk-btn-ghost ${showChoices ? 'ql-btn-sm' : ''}`}
+      aria-expanded={telling === here}
+      onClick={() => setTelling(telling === here ? null : here)}
+    >
+      {t('session.explain')}
+    </button>
+  )
 
   return (
     <section className="ql-screen ql-session">
@@ -412,29 +445,11 @@ export function Session({
         />
         <Stem key={here} q={q} speed={speed} />
 
-        <div className="ql-tell">
-          <button
-            type="button"
-            className="tk-btn tk-btn-ghost ql-btn-sm"
-            aria-expanded={telling === here}
-            onClick={() => setTelling(telling === here ? null : here)}
-          >
-            {t('session.explain')}
-          </button>
-          {telling === here && (
-            <div className="ql-tell-body ql-transition-in">
-              <span className="tk-label">{t('session.explainTitle')}</span>
-              {q.anlatim ? (
-                <Tell key={here} blocks={q.anlatim} assetBase={q.assetBase} book={book} />
-              ) : (
-                <p className="tk-hint">{t('session.explainNone')}</p>
-              )}
-            </div>
-          )}
-        </div>
+        {showChoices && <div className="ql-tell">{tellButton}</div>}
 
         {!showChoices && (
           <div className="ql-actions">
+            {tellButton}
             <button type="button" className="tk-btn tk-btn-ghost" onClick={s.known}>
               {t('session.known')}
               <kbd>B</kbd>
@@ -447,6 +462,17 @@ export function Session({
                   : t('session.showChoices')}
               <kbd>{t('session.key.space')}</kbd>
             </button>
+          </div>
+        )}
+
+        {telling === here && (
+          <div className="ql-tell-body ql-transition-in">
+            <span className="tk-label">{t('session.explainTitle')}</span>
+            {q.anlatim ? (
+              <Tell key={here} blocks={q.anlatim} assetBase={q.assetBase} book={book} />
+            ) : (
+              <p className="tk-hint">{t('session.explainNone')}</p>
+            )}
           </div>
         )}
 
@@ -589,7 +615,7 @@ export function Session({
               <Solution blocks={solved.solution} assetBase={q.assetBase} book={book} />
             )}
             {solved.source && kaynakGoster(q.tags) && (
-              <blockquote className="ql-source">
+              <blockquote className={`ql-source ${open ? 'ql-source-open' : ''}`}>
                 <span className="tk-label ql-source-label">{t('session.source')}</span>
                 <p className="ql-source-quote">{solved.source.quote}</p>
                 <span className="tk-hint ql-source-line">
@@ -613,7 +639,8 @@ export function Session({
                       type="button"
                       className="tk-btn tk-btn-ghost ql-btn-sm ql-book-open"
                       title={t('settings.bookAutoHelp')}
-                      onClick={() => void saveSettings({ bookAuto: true })}
+                      aria-expanded={peek === here}
+                      onClick={() => toggleBook(here)}
                     >
                       {bookLabel(solved.source.file)}
                       <kbd>K</kbd>
@@ -622,7 +649,7 @@ export function Session({
                 )}
               </blockquote>
             )}
-            {solved.source && kaynakGoster(q.tags) && book?.available && bookAuto && (
+            {solved.source && kaynakGoster(q.tags) && book?.available && bookShown && (
               <BookViewer
                 key={`${book.path ?? 'kesit'}:${here}`}
                 book={book}
@@ -639,7 +666,10 @@ export function Session({
                     aria-checked={bookAuto}
                     className="ql-switch"
                     title={t('settings.bookAutoHelp')}
-                    onClick={() => void saveSettings({ bookAuto: false })}
+                    onClick={() => {
+                      setPeek(null)
+                      void saveSettings({ bookAuto: !bookAuto })
+                    }}
                   >
                     <span className="ql-switch-track" aria-hidden="true">
                       <span className="ql-switch-thumb" />

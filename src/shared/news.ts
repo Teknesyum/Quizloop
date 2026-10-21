@@ -6,6 +6,29 @@ export interface NewsEntry {
 
 export const NEWS: NewsEntry[] = [
   {
+    version: '0.8.0',
+    tr: [
+      'QuizLoop artık Google Play’de herkese açık.',
+      'Üç modül kurulu geliyor: Arapça, İngilizce Lite ve 18 bölümde 742 soruluk yeni Genel Kültür. Örnek modüller kaldırıldı.',
+      'Ana ekranda son üç oturumun ve günlük hedef çubuğu var; Geçmiş ekranında eski oturumlarını ve verdiğin cevapları görebilirsin.',
+      'Oturumda ilerleme çubuğu, üç nokta menüsünde Ayarlar; istersen şıklar kendiliğinden açılıyor.',
+      'Kitap görünümünde bölgeye yumuşak yakınlaşma ve iki parmakla büyütme.',
+      'Her modülün oturum başına soru sayısı ayrı ayarlanabiliyor.',
+      'Bize Ulaş formu uygulamanın ekran görüntüsünü ekliyor; istemezsen kaldırabilirsin.',
+      'Birbirine bağlı sorular art arda geliyor; vaka sorularında başlık ve önemli terimler renkli.'
+    ],
+    en: [
+      'QuizLoop is now public on Google Play.',
+      'Three modules come installed: Arabic, English Lite and a new General Knowledge with 742 questions in 18 chapters. The sample modules are gone.',
+      'The home screen shows your last three sessions and a daily goal bar; the History screen lists past sessions and your answers.',
+      'Sessions have a progress bar and Settings in the three-dot menu; choices can open on their own.',
+      'The book view zooms smoothly to the region and supports pinch to zoom.',
+      'Questions per session can be set for each module.',
+      'Contact Us attaches a screenshot of the app, which you can remove.',
+      'Linked questions come one after another; case questions show their header and key terms in colour.'
+    ]
+  },
+  {
     version: '0.7.70',
     tr: [
       'Bize Ulaş artık uygulamanın içinde bir form: notunu, istersen sana ulaşma yolunu ve bir görüntü yazıp doğrudan bize gönderebilirsin.',

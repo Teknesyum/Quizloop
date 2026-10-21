@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState } from 'react'
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import type { PDFDocumentProxy } from 'pdfjs-dist'
 import type { SourceBook } from '@shared/ipc'
 import type { SolutionBlock } from '@shared/schema/question'
@@ -6,6 +6,7 @@ import { t } from '@renderer/i18n'
 import { Leaf } from './BookViewer'
 import { Figure } from './Figure'
 import { Skeleton } from './Skeleton'
+import { ZoomBox } from './ZoomBox'
 import { bookTarget, openBook } from './bookdoc'
 
 type PageBlock = Extract<SolutionBlock, { type: 'sayfa' }>
@@ -24,6 +25,9 @@ export function PageStep({
   const [doc, setDoc] = useState<PDFDocumentProxy | null>(null)
   const [ratio, setRatio] = useState(Math.SQRT2)
   const [failed, setFailed] = useState(false)
+  const [focus, setFocus] = useState<HTMLElement | null>(null)
+  const [sharp, setSharp] = useState(1)
+  const onMarks = useCallback((sheet: HTMLElement) => setFocus(sheet), [])
   const target = bookTarget(book, b.pdfSayfa)
   const url = target?.url ?? null
   const path = target?.path ?? null
@@ -71,14 +75,7 @@ export function PageStep({
   )
 
   if (!url || failed) {
-    if (b.ref)
-      return (
-        <Figure
-          src={assetBase + b.ref}
-          alt={t('book.pageOf', { page: folio })}
-          caption={t('book.pageOf', { page: folio })}
-        />
-      )
+    if (b.ref) return <Figure src={assetBase + b.ref} alt={t('book.pageOf', { page: folio })} />
     return (
       <p className="tk-hint ql-tell-nopage">
         {t('book.pageMissing', { page: folio })}
@@ -89,20 +86,22 @@ export function PageStep({
 
   return (
     <figure className="ql-tell-page ql-transition-in">
-      <figcaption className="tk-label">{t('book.pageOf', { page: folio })}</figcaption>
       <div ref={hostRef} className="ql-tell-sheet">
         {doc && width > 0 ? (
-          <Leaf
-            doc={doc}
-            pdfPage={local}
-            folio={folio}
-            width={width}
-            renderWidth={width}
-            ratio={ratio}
-            highlight={highlight}
-            shown
-            follow={false}
-          />
+          <ZoomBox target={focus} label={t('book.pageOf', { page: folio })} onSharp={setSharp}>
+            <Leaf
+              doc={doc}
+              pdfPage={local}
+              folio={folio}
+              width={width}
+              renderWidth={Math.round(width * sharp)}
+              ratio={ratio}
+              highlight={highlight}
+              shown
+              follow={false}
+              onMarks={onMarks}
+            />
+          </ZoomBox>
         ) : (
           <Skeleton lines={6} />
         )}

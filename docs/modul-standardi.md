@@ -1,6 +1,6 @@
 # Modül Standardı
 
-**Sürüm: 1.1.0** — 2026-10-18 · En düşük uygulama: 0.7.69
+**Sürüm: 1.2.0** — 2026-10-21 · En düşük uygulama: 0.8.0
 
 Bir QuizLoop modülünün uyması gereken kurallar. Modül üreten oturuma "modülü standarda göre
 güncelle" demek yeter: o oturum bu dosyayı okur, kuralları uygular, `module.json` içindeki
@@ -114,9 +114,57 @@ anlatımıdır; sorunun çözümü (`solution`) ayrı kalır ve onu tekrar etmez
 - Kutular (`masks`, şık `box`) görsele göre 0–1 oranıyla yazılır; görsel bölgeden çizilince
   de aynı kalır.
 
+## 5. Soru Yazımı
+
+**Kök ve vurgu**
+
+- Kökte sorunun dayandığı kilit parça `vurgu` alanına birebir yazılır; uygulama kökte o
+  parçayı tema vurgu rengiyle gösterir. Soru başına bir iki vurgu; her şey vurgulanırsa
+  hiçbiri öne çıkmaz.
+- Klinik vaka uzun cümleyle başlamaz, sabit başlıkla başlar:
+  - 1. satır: yaş + cinsiyet harfi + tanı ya da yakınma, kalın: `**3K-İnguinal Herni**`,
+       `**67E-Göğüs Ağrısı**`. Harf `K` kadın/kız, `E` erkek; `vurgu` alanına `3K` gibi yazılır.
+       Uygulama kalın başlıktaki harfi boyar: `E` temanın birinci rengi (mavi), `K` ikinci
+       rengi (pembe).
+  - 2. satır: eşlik eden hastalıklar, kısaltmayla, virgülle: `DM, HT, KOAH`. Yoksa `Ek hastalık yok`.
+  - 3. satır: laboratuvar, `ad değer birim` virgülle: `Hb 9,8 g/dL, Kr 1,4 mg/dL`. Yoksa satır yazılmaz.
+  - Ardından soru cümlesi, kısa.
+
+**Şıklar ve açıklamaları**
+
+- Şık açıklaması o şıkkın neden doğru ya da yanlış olduğunu söyler; başka şıkkın doğru
+  olduğunu ele vermez, doğru cevabı tekrar etmez. Şıklar açılmadan görünen hiçbir metin
+  cevabı söylemez.
+
+**Anlat ve çözüm**
+
+- Uzun paragraf yok. İlk `text` bloğu bir iki cümlelik öz; geri kalan madde listesi
+  (`- `), her madde tek bilgi.
+- Anlatım soruyu tam karşılar: soruyu çözmek için gereken her bilgi anlatımda vardır.
+- Kilit sözcükler `**…**` ile vurgulanır; karşılaştırma varsa `table`.
+- Konu anlatımları (bölüm kartı, kavram anlatımı) da aynı kurala uyar: maddeli, vurgulu, öz.
+
+**Çeşitlilik ve zincir**
+
+- Modül tek tip sorudan oluşmaz: çoktan seçmeli, açık uçlu, işaretleme ve zincirli sorular
+  karışık kullanılır.
+- **Zincirli soru:** bir hikâyeyi adım adım ilerletir. İlk soru bir adımı sorar
+  ("Bu aşamada hava yolu için ne kullanılır?"), cevaptan sonra gelen soru onu sürdürür
+  ("Evet, LMA. LMA'nın en çok korkulan riski nedir?"). Sonraki soru öncekinin `devam`
+  alanında kimliğiyle yazılır; uygulama doğru cevaptan hemen sonra onu getirir. Zincirin
+  sonraki halkası ilk halkanın cevabını kökünde söyleyebilir; ilk halkanın kökü
+  sonrakini ele vermez.
+
+**Oturum boyu**
+
+- Modül `sessionSize` ile oturum başına soru sayısını önerebilir (5–200). Yazılmazsa
+  kullanıcının ayarı geçer (varsayılan 40). Kısa kartlı dil modülleri daha büyük, uzun
+  vakalı modüller daha küçük değer seçer.
+
 ## Sürüm Geçmişi
 
-| Sürüm | Tarih      | Değişiklik                                                                                                                                                                                                             |
-| ----- | ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 1.1.0 | 2026-10-18 | `standart` alanı zorunlu. Kitabı gömülü modülde bölgesi kayıtlı görseller paketten çıkar, uygulama gömülü PDF'ten çizer. `image` bloğunda `ref` ya da `bolge`. En düşük uygulama 0.7.69.                               |
-| 1.0.0 | 2026-10-18 | İlk numaralı sürüm. Paket yapısı ve iz kuralları yazıya geçti. Kavram başına `anlatim` zorunlu. Görseller WebP. Sahipsiz dosya pakete girmez. Kitaptan alınan görsel `bolge` kaydeder. Modül `standart` alanını taşır. |
+| Sürüm | Tarih      | Değişiklik                                                                                                                                                                                                                                         |
+| ----- | ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1.2.0 | 2026-10-21 | Soru Yazımı bölümü: kökte `vurgu`, klinik vakada `3K-Tanı` başlığı ve ek hastalık, laboratuvar satırları, şık açıklaması cevabı ele vermez, Anlat ve konu anlatımı maddeli ve öz, zincirli soru (`devam`), `sessionSize`. En düşük uygulama 0.8.0. |
+| 1.1.0 | 2026-10-18 | `standart` alanı zorunlu. Kitabı gömülü modülde bölgesi kayıtlı görseller paketten çıkar, uygulama gömülü PDF'ten çizer. `image` bloğunda `ref` ya da `bolge`. En düşük uygulama 0.7.69.                                                           |
+| 1.0.0 | 2026-10-18 | İlk numaralı sürüm. Paket yapısı ve iz kuralları yazıya geçti. Kavram başına `anlatim` zorunlu. Görseller WebP. Sahipsiz dosya pakete girmez. Kitaptan alınan görsel `bolge` kaydeder. Modül `standart` alanını taşır.                             |

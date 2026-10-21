@@ -6,6 +6,36 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.8.0] - 2026-10-21
+
+### Added
+
+- Three modules ship built in and install on first run: Arabic, English Lite (open-licence
+  sources only) and General Knowledge, rewritten with 742 questions in 18 chapters.
+- Home screen: the last three sessions and a daily goal bar. A History screen lists past
+  sessions with the answers given.
+- A short Install Module guide; How To Use moves to Settings once a module is installed.
+- Questions per session can be set for each module (default 40).
+- An optional setting opens the choices automatically.
+- Module standard 1.2.0: highlighted stem terms (`vurgu`), chained questions (`devam`),
+  clinical case headers whose sex letter is coloured, `sessionSize`.
+- Contact Us attaches a removable screenshot of the app.
+- Android release builds carry native debug symbols.
+
+### Changed
+
+- Android updates go to the Google Play production track; Share includes the Play link.
+- Updating from an earlier version adds the new built-in modules once and drops the retired
+  guide module; a built-in you remove later is not brought back.
+- Session screen: a smooth progress bar replaces the step counter, Settings sits in the
+  three-dot menu, Explain and Show Choices share one row.
+- The book view draws each page once, zooms smoothly to the region and supports pinch zoom.
+- The Contact Us dialog is larger, on a dark backdrop, with the description above the field.
+
+### Removed
+
+- The sample modules, including the app guide module.
+
 ## [0.7.70] - 2026-10-18
 
 ### Added

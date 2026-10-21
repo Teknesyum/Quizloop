@@ -113,6 +113,7 @@ export const Question = z
     difficulty: Difficulty,
     tags: z.array(z.string()).default([]),
     vurgu: z.array(z.string()).default([]),
+    devam: z.string().min(1).optional(),
     contentHash: z.string().length(64),
     deleted: z.boolean().default(false)
   })

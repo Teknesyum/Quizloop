@@ -1,6 +1,6 @@
 {
   "name": "quizloop",
-  "version": "0.7.70",
+  "version": "0.8.0",
   "description": "Cross-platform spaced-repetition quiz engine",
   "main": "./out/main/boot.js",
   "author": "Teknesyum",
@@ -33,6 +33,7 @@
     "icon:gen": "node scripts/icon.mjs",
     "kod": "tsx scripts/kod.ts",
     "ornek": "tsx scripts/ornek.ts",
+    "varsayilan": "tsx scripts/varsayilan/uret.ts",
     "web:build": "npm run bildirim:anahtar && npm run typecheck && vite build -c vite.web.config.ts",
     "web:serve": "vite preview -c vite.web.config.ts --port 4173 --strictPort",
     "android:build": "npm run bildirim:anahtar && npm run typecheck && vite build -c vite.android.config.ts",

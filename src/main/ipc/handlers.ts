@@ -242,6 +242,15 @@ export function registerHandlers(ctx: Context): {
   })
 
   ipcMain.handle(CH.statsOverview, (): Promise<StatsOverview> => core.stats.overview())
+  ipcMain.handle(CH.historyRecent, (_e, limit: unknown) =>
+    core.history.recent(z.number().int().min(1).max(20).optional().parse(limit))
+  )
+  ipcMain.handle(CH.historyPage, (_e, offset: unknown, limit: unknown) =>
+    core.history.page(
+      z.number().int().min(0).parse(offset),
+      z.number().int().min(1).max(200).optional().parse(limit)
+    )
+  )
 
   registerBank(core)
 

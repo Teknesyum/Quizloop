@@ -1,0 +1,2540 @@
+{
+  "blockId": "0017",
+  "questions": [
+    {
+      "id": "genel-kultur-0664",
+      "conceptId": "turkiye-baskent",
+      "stem": {
+        "md": "Türkiye'nin başkenti hangi şehirdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "İstanbul"
+        },
+        {
+          "key": "B",
+          "md": "İzmir"
+        },
+        {
+          "key": "C",
+          "md": "Ankara"
+        },
+        {
+          "key": "D",
+          "md": "Bursa"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "İstanbul en kalabalık şehirdir ama başkent değildir; Osmanlı döneminde başkentti.",
+        "B": "İzmir bir Ege liman şehridir, başkent olmamıştır.",
+        "D": "Bursa Osmanlı’nın ilk başkentlerindendir, Cumhuriyet’in başkenti değildir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Türkiye’nin başkenti Ankara’dır.\n- Kurtuluş Savaşı yıllarında yönetim merkezi olan şehir, Cumhuriyet’le birlikte resmen başkent oldu."
+        },
+        {
+          "type": "hint",
+          "md": "İç Anadolu’da bir şehir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Kurtuluş Savaşı, İstanbul işgal altındayken Anadolu’nun içlerinden yönetildi; bu durum başkent seçimini de belirledi."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          128,
+          128
+        ],
+        "quote": "Türkiye'nin başkenti Ankara'dır.",
+        "chapter": "Türkiye Genel Bilgisi"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "coğrafya"
+      ],
+      "vurgu": [],
+      "contentHash": "17292cc259a5b719b5210db2a2d86ac70d4e8be074f8e3a22f10b7bac828b3ba",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0665",
+      "conceptId": "tg-bolge-sayisi",
+      "stem": {
+        "md": "Türkiye kaç coğrafi bölgeye ayrılır?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "5"
+        },
+        {
+          "key": "B",
+          "md": "6"
+        },
+        {
+          "key": "C",
+          "md": "7"
+        },
+        {
+          "key": "D",
+          "md": "8"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Beş bölgelik bir ayrım resmî olarak kullanılmaz.",
+        "B": "Altı bölge sayısı eksik kalır.",
+        "D": "Sekiz bölgelik bir ayrım yoktur."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Türkiye yedi coğrafi bölgeye ayrılır.\n- Bölgeler: Marmara, Ege, Akdeniz, Karadeniz, İç Anadolu, Doğu Anadolu, Güneydoğu Anadolu."
+        },
+        {
+          "type": "hint",
+          "md": "Kıyı bölgelerini ve Anadolu bölgelerini tek tek say."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Coğrafi bölgeler idari birim değildir; iklim, yer şekilleri ve bitki örtüsü benzerliğine göre çizilmiştir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          128,
+          128
+        ],
+        "quote": "Türkiye yedi coğrafi bölgeye ayrılır.",
+        "chapter": "Türkiye Genel Bilgisi"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "coğrafya"
+      ],
+      "vurgu": [],
+      "contentHash": "eff134dc1f11cd1252d186d9b4d300a49898080a5369ce1f4e58f97971bc8f14",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0666",
+      "conceptId": "tg-cografya-kongresi",
+      "stem": {
+        "md": "Türkiye’nin bugünkü coğrafi bölgeleri ____ yılında Ankara’da toplanan Birinci Coğrafya Kongresi’nde belirlenmiştir."
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "1941"
+        },
+        {
+          "key": "B",
+          "md": "1923"
+        },
+        {
+          "key": "C",
+          "md": "1933"
+        },
+        {
+          "key": "D",
+          "md": "1950"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "1923 Cumhuriyet’in ilan edildiği yıldır.",
+        "C": "1933 Cumhuriyet’in onuncu yılıdır; kongre o yıl toplanmadı.",
+        "D": "1950 çok partili döneme geçiş seçimleriyle anılır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Kongre 1941’de Ankara’da toplanmıştır.\n- Bölgelerin sınırları ve adları bu kongrede kararlaştırılmıştır."
+        },
+        {
+          "type": "hint",
+          "md": "İkinci Dünya Savaşı yıllarına denk gelir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Cumhuriyet’in ilk yıllarında okullarda ve haritalarda birlik sağlamak için ülkenin coğrafyasını sistemli biçimde tanımlama çalışmaları yapıldı."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          128,
+          128
+        ],
+        "quote": "Bu bölgeler 1941'de Ankara'da toplanan Birinci Coğrafya Kongresi'nde belirlenmiştir.",
+        "chapter": "Türkiye Genel Bilgisi"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "coğrafya"
+      ],
+      "vurgu": [],
+      "contentHash": "1e8dc2ced1bb1dc6114f92b8d1aabfe63d973ebdd4ff08309379ff9065f6bf4b",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0667",
+      "conceptId": "tg-agri-dagi",
+      "stem": {
+        "md": "Türkiye’nin en yüksek dağı hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Ağrı Dağı"
+        },
+        {
+          "key": "B",
+          "md": "Erciyes Dağı"
+        },
+        {
+          "key": "C",
+          "md": "Süphan Dağı"
+        },
+        {
+          "key": "D",
+          "md": "Uludağ"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Erciyes İç Anadolu’nun en yükseğidir ama Ağrı’dan alçaktır.",
+        "C": "Süphan Dağı Van Gölü’nün kuzeyindedir ve daha alçaktır.",
+        "D": "Uludağ Marmara Bölgesi’nin en yükseğidir, sıralamada çok geridedir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Türkiye’nin en yüksek dağı Ağrı Dağı’dır.\n- İran ve Ermenistan sınırına yakın, sönmüş bir volkandır."
+        },
+        {
+          "type": "hint",
+          "md": "Doğu sınırına yakın, zirvesi yıl boyu karlı bir volkan."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Doğu Anadolu’daki yüksek dağların birçoğu, levha hareketlerinin yol açtığı eski volkanik etkinlikle oluşmuştur."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          128,
+          128
+        ],
+        "quote": "Türkiye'nin en yüksek dağı Doğu Anadolu'daki Ağrı Dağı'dır.",
+        "chapter": "Türkiye Genel Bilgisi"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "coğrafya"
+      ],
+      "vurgu": [],
+      "contentHash": "c7889010814f4c58383c77625bd094df4f742af53e8e2c9c33265c9d2c489477",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0668",
+      "conceptId": "tg-en-buyuk-bolge",
+      "stem": {
+        "md": "Yüzölçümü en büyük coğrafi bölgemiz hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Doğu Anadolu"
+        },
+        {
+          "key": "B",
+          "md": "İç Anadolu"
+        },
+        {
+          "key": "C",
+          "md": "Karadeniz"
+        },
+        {
+          "key": "D",
+          "md": "Akdeniz"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "İç Anadolu geniştir ama ikinci sıradadır.",
+        "C": "Karadeniz Bölgesi uzun bir kıyı şerididir, en büyük değildir.",
+        "D": "Akdeniz Bölgesi daha küçüktür."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- En büyük bölge Doğu Anadolu’dur.\n- Aynı zamanda ortalama yükseltisi en fazla olan bölgedir."
+        },
+        {
+          "type": "hint",
+          "md": "Yükseltisi en fazla olan bölgeyi düşün."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Bölgelerin büyüklüğü, sınırların yer şekillerine göre çizilmesinden doğar; dağlık iç kesimler geniş alanlar kaplar."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          128,
+          128
+        ],
+        "quote": "Yüzölçümü en büyük coğrafi bölgemiz Doğu Anadolu'dur.",
+        "chapter": "Türkiye Genel Bilgisi"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "coğrafya"
+      ],
+      "vurgu": [],
+      "contentHash": "8d36c75becd6e75e356e9d41268c4e5038b5b9e28783d067d10e9a0656e6b5fb",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0669",
+      "conceptId": "tg-erciyes",
+      "stem": {
+        "md": "Kayseri yakınlarında yükselen, İç Anadolu Bölgesi’nin en yüksek dağı olan sönmüş volkan hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Hasan Dağı"
+        },
+        {
+          "key": "B",
+          "md": "Uludağ"
+        },
+        {
+          "key": "C",
+          "md": "Palandöken Dağı"
+        },
+        {
+          "key": "D",
+          "md": "Erciyes Dağı"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Hasan Dağı Aksaray’dadır ve Erciyes’ten alçaktır.",
+        "B": "Uludağ Bursa’dadır, Marmara Bölgesi’ndedir.",
+        "C": "Palandöken Erzurum’dadır, Doğu Anadolu’dadır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Bu dağ Erciyes’tir.\n- Kapadokya’nın tüf katmanları büyük ölçüde bu ve çevresindeki volkanların püskürmeleriyle oluşmuştur."
+        },
+        {
+          "type": "hint",
+          "md": "Bir kayak merkezi olarak da bilinir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "İç Anadolu’daki volkanların püskürttüğü kül ve lavlar, zamanla aşınarak peribacaları gibi ilginç yer şekilleri doğurmuştur."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          128,
+          128
+        ],
+        "quote": "İç Anadolu'nun en yüksek dağı Kayseri yakınlarındaki Erciyes'tir.",
+        "chapter": "Türkiye Genel Bilgisi"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "coğrafya"
+      ],
+      "vurgu": [],
+      "contentHash": "428b9408fee93eeffec990c1d0ac84fc7e745bbd1c5439623654649d2a752b52",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0670",
+      "conceptId": "turkiye-en-buyuk-gol",
+      "stem": {
+        "md": "Türkiye'nin en büyük gölü hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Tuz Gölü"
+        },
+        {
+          "key": "B",
+          "md": "Van Gölü"
+        },
+        {
+          "key": "C",
+          "md": "Beyşehir Gölü"
+        },
+        {
+          "key": "D",
+          "md": "Eğirdir Gölü"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Tuz Gölü ikinci büyük göldür ve çok sığdır.",
+        "C": "Beyşehir Gölü en büyük tatlı su gölüdür ama daha küçüktür.",
+        "D": "Eğirdir Gölü Göller Yöresi’ndedir ve çok daha küçüktür."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Türkiye’nin en büyük gölü Van Gölü’dür.\n- Suyu sodalıdır ve Doğu Anadolu’da yer alır."
+        },
+        {
+          "type": "hint",
+          "md": "Doğu Anadolu’da, suyu sodalı bir göl."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Bazı göller lav akıntılarının bir vadinin önünü kesmesiyle oluşur; bu tür göllere set gölü denir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          129,
+          129
+        ],
+        "quote": "Türkiye'nin en büyük gölü Van Gölü'dür.",
+        "chapter": "Türkiye Genel Bilgisi"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "coğrafya"
+      ],
+      "vurgu": [],
+      "contentHash": "6209f3ad70ff65e59405bdadcc3285538eeddf4e55076d026c27c61a05d258e7",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0671",
+      "conceptId": "turkiye-en-uzun-nehir",
+      "stem": {
+        "md": "Türkiye'de doğup yine Türkiye'de denize dökülen en uzun nehir hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Yeşilırmak"
+        },
+        {
+          "key": "B",
+          "md": "Kızılırmak"
+        },
+        {
+          "key": "C",
+          "md": "Sakarya"
+        },
+        {
+          "key": "D",
+          "md": "Büyük Menderes"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Yeşilırmak da Karadeniz’e dökülür ama çok daha kısadır.",
+        "C": "Sakarya uzun bir nehirdir ama Kızılırmak’tan kısadır.",
+        "D": "Büyük Menderes Ege’ye dökülür ve daha kısadır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Bu nehir Kızılırmak’tır.\n- Sivas’ta doğar, geniş bir yay çizer ve Bafra’da Karadeniz’e dökülür."
+        },
+        {
+          "type": "hint",
+          "md": "Sivas’ta doğar, Bafra’da denize ulaşır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Anadolu’nun iç kesimlerinden doğan nehirler, kıyıdaki dağ sıralarını derin vadilerle yararak denize ulaşır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          129,
+          129
+        ],
+        "quote": "Türkiye'de doğup yine Türkiye'de denize dökülen en uzun nehir Kızılırmak'tır.",
+        "chapter": "Türkiye Genel Bilgisi"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "coğrafya"
+      ],
+      "vurgu": [],
+      "contentHash": "846407cdef95a9ce081c7707a0d8fb3390a7fdcf1ddf77e3a123130ebd925994",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0672",
+      "conceptId": "tg-tuz-golu",
+      "stem": {
+        "md": "İç Anadolu’da yer alan, çok sığ olan ve tuz üretiminin yapıldığı, Türkiye’nin ikinci büyük gölü hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Beyşehir Gölü"
+        },
+        {
+          "key": "B",
+          "md": "Burdur Gölü"
+        },
+        {
+          "key": "C",
+          "md": "Tuz Gölü"
+        },
+        {
+          "key": "D",
+          "md": "Acıgöl"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Beyşehir Gölü tatlı sudur, tuz üretilmez.",
+        "B": "Burdur Gölü Göller Yöresi’ndedir ve daha küçüktür.",
+        "D": "Acıgöl tuzludur ama çok daha küçüktür."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Bu göl Tuz Gölü’dür.\n- Yazın suyu büyük ölçüde çekilir ve yüzeyi tuz tabakasıyla örtülür."
+        },
+        {
+          "type": "hint",
+          "md": "Adı içindekini söyler."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Akarsuyla denize bağlantısı olmayan kapalı havzalardaki göllerde buharlaşma, suyun tuzlanmasına yol açar."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          129,
+          129
+        ],
+        "quote": "Türkiye'nin ikinci büyük gölü olan Tuz Gölü çok sığdır ve tuz üretimi yapılır.",
+        "chapter": "Türkiye Genel Bilgisi"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "coğrafya"
+      ],
+      "vurgu": [],
+      "contentHash": "76a5d59fae937040213ac41cadeb11cbd6234130de70a4ab1be0754aef2b889d",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0673",
+      "conceptId": "tg-firat-dicle",
+      "stem": {
+        "md": "Türkiye’de doğan, Irak’ta birleşerek Şattülarap adını alan ve Basra Körfezi’ne dökülen iki nehir hangileridir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Aras ve Kura"
+        },
+        {
+          "key": "B",
+          "md": "Fırat ve Dicle"
+        },
+        {
+          "key": "C",
+          "md": "Seyhan ve Ceyhan"
+        },
+        {
+          "key": "D",
+          "md": "Kızılırmak ve Yeşilırmak"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Aras ve Kura Kafkasya’da birleşip Hazar Denizi’ne dökülür.",
+        "C": "Seyhan ve Ceyhan Akdeniz’e dökülür.",
+        "D": "Kızılırmak ve Yeşilırmak Karadeniz’e dökülür."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Bu nehirler Fırat ve Dicle’dir.\n- Aralarındaki topraklara Mezopotamya denir."
+        },
+        {
+          "type": "hint",
+          "md": "İki nehrin arasındaki topraklar “nehirler arası” anlamında bir adla bilinir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Güneydoğu Anadolu’dan doğan büyük nehirler, binlerce yıl önce ilk tarım topluluklarının ve şehirlerin geliştiği ovaları besledi."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          129,
+          129
+        ],
+        "quote": "Fırat ve Dicle Türkiye'de doğar, Irak'ta birleşip Şattülarap adını alır ve Basra Körfezi'ne dökülür.",
+        "chapter": "Türkiye Genel Bilgisi"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "coğrafya"
+      ],
+      "vurgu": [],
+      "contentHash": "72baa0a9782d94517a418c9e7df6add2c5933db08e40013a3e60bf18a9665dd9",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0674",
+      "conceptId": "tg-dort-deniz",
+      "stem": {
+        "md": "Aşağıdakilerden hangisi Türkiye’nin kıyısı olan denizlerden biri değildir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Hazar Denizi"
+        },
+        {
+          "key": "B",
+          "md": "Karadeniz"
+        },
+        {
+          "key": "C",
+          "md": "Ege Denizi"
+        },
+        {
+          "key": "D",
+          "md": "Marmara Denizi"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Karadeniz kuzey kıyılarımızı oluşturur.",
+        "C": "Ege Denizi batı kıyılarımızı oluşturur.",
+        "D": "Marmara Denizi tümüyle Türkiye toprakları içindedir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Hazar Denizi’dir.\n- Türkiye’nin kıyısı Karadeniz, Marmara, Ege ve Akdeniz’edir.\n- Hazar, Kafkasya’nın doğusunda kalan kapalı bir su kütlesidir."
+        },
+        {
+          "type": "hint",
+          "md": "Türkiye’nin doğu sınırının da ötesinde kalan bir su kütlesi."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Türkiye üç yanı denizlerle çevrili bir yarımada ülkesidir; bu konum iklimini ve ticaret yollarını derinden etkiler."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          129,
+          129
+        ],
+        "quote": "Türkiye'nin kıyısı Karadeniz, Marmara Denizi, Ege Denizi ve Akdeniz'edir.",
+        "chapter": "Türkiye Genel Bilgisi"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "coğrafya"
+      ],
+      "vurgu": [],
+      "contentHash": "f3a0eff4e9e5a243b7dd3f712fa9fdc31c51c08bae6559f9ce997f0df49355ae",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0675",
+      "conceptId": "tg-canakkale-bogazi",
+      "stem": {
+        "md": "Çanakkale Boğazı Marmara Denizi’ni ____ bağlar."
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Karadeniz’e"
+        },
+        {
+          "key": "B",
+          "md": "Akdeniz’e"
+        },
+        {
+          "key": "C",
+          "md": "Ege Denizi’ne"
+        },
+        {
+          "key": "D",
+          "md": "Azak Denizi’ne"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Marmara’yı Karadeniz’e bağlayan İstanbul Boğazı’dır.",
+        "B": "Akdeniz’e doğrudan değil, Ege üzerinden ulaşılır.",
+        "D": "Azak Denizi Karadeniz’in kuzeyindedir ve çok uzaktır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Çanakkale Boğazı Marmara’yı Ege Denizi’ne bağlar.\n- İstanbul Boğazı ise Marmara’yı Karadeniz’e bağlar; ikisine birlikte Türk Boğazları denir."
+        },
+        {
+          "type": "hint",
+          "md": "Gelibolu Yarımadası’nın batısındaki denizi düşün."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Türk Boğazları, Karadeniz’i dünya denizlerine bağlayan tek su yoludur; bu yüzden tarih boyunca büyük önem taşımıştır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          129,
+          129
+        ],
+        "quote": "Çanakkale Boğazı Marmara Denizi'ni Ege Denizi'ne bağlar.",
+        "chapter": "Türkiye Genel Bilgisi"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "coğrafya"
+      ],
+      "vurgu": [],
+      "contentHash": "05c3913fee6042b3dab865cb13de3a1b7b2eb03bfe7f66e320daccbb5b510657",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0676",
+      "conceptId": "tg-konya-yuzolcum",
+      "stem": {
+        "md": "Yüzölçümü en büyük ilimiz hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Konya"
+        },
+        {
+          "key": "B",
+          "md": "Sivas"
+        },
+        {
+          "key": "C",
+          "md": "Ankara"
+        },
+        {
+          "key": "D",
+          "md": "Erzurum"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Sivas geniş bir ildir ama ikinci sıradadır.",
+        "C": "Ankara büyük bir ildir ama Konya’dan küçüktür.",
+        "D": "Erzurum Doğu Anadolu’nun büyük illerindendir, ilk sırada değildir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- En büyük il Konya’dır.\n- Geniş ovalarıyla tahıl üretiminde önemli bir yer tutar."
+        },
+        {
+          "type": "hint",
+          "md": "Geniş ovalarıyla tahıl ambarı olarak anılır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "İllerin büyüklüğü nüfusla değil, sınırların kapsadığı alanla ölçülür; ova illeri çoğu zaman geniş alanlara yayılır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          130,
+          130
+        ],
+        "quote": "Yüzölçümü en büyük ilimiz Konya'dır.",
+        "chapter": "Türkiye Genel Bilgisi"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "coğrafya"
+      ],
+      "vurgu": [],
+      "contentHash": "5685414de273fd7310c2409af045738d2b1db53016aaf46a9bd3706a0a3d6765",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0677",
+      "conceptId": "tg-il-urun-eslestirme",
+      "stem": {
+        "md": "İlleri ünlü oldukları ürünlerle eşleştirin.\n\n**İller:** 1. Gaziantep, 2. Kayseri, 3. Rize\n\n**Ürünler:** a. pastırma, b. baklava, c. çay"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "1-a, 2-b, 3-c"
+        },
+        {
+          "key": "B",
+          "md": "1-c, 2-a, 3-b"
+        },
+        {
+          "key": "C",
+          "md": "1-b, 2-a, 3-c"
+        },
+        {
+          "key": "D",
+          "md": "1-b, 2-c, 3-a"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Pastırma Gaziantep değil Kayseri ile anılır.",
+        "B": "Çay Gaziantep’le değil, Karadeniz’in nemli kıyısıyla anılır.",
+        "D": "Kayseri’nin iklimi çay tarımına uygun değildir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Gaziantep – baklava, Kayseri – pastırma, Rize – çay.\n- Rize’nin bol yağışlı iklimi çay tarımına elverişlidir."
+        },
+        {
+          "type": "hint",
+          "md": "Çay bitkisi bol yağış ister."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Yöresel ürünler çoğu zaman bölgenin iklimine, tarım ürünlerine ve kervan yolları üzerindeki ticaret geçmişine bağlıdır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          130,
+          130
+        ],
+        "quote": "Gaziantep baklavasıyla, Kayseri pastırmasıyla, Rize çayıyla tanınır.",
+        "chapter": "Türkiye Genel Bilgisi"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "gelenekler"
+      ],
+      "vurgu": [],
+      "contentHash": "eb7a75c09a14b051b9b18bd519e0605444833e09728cfbd07c141186bb719117",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0678",
+      "conceptId": "tg-plaka-sirala",
+      "stem": {
+        "md": "Aşağıdaki illerin plaka kodlarına göre küçükten büyüğe sıralanışı hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Ankara – Adana – İstanbul – İzmir"
+        },
+        {
+          "key": "B",
+          "md": "Adana – Ankara – İzmir – İstanbul"
+        },
+        {
+          "key": "C",
+          "md": "Adana – İstanbul – Ankara – İzmir"
+        },
+        {
+          "key": "D",
+          "md": "Adana – Ankara – İstanbul – İzmir"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Adana, Ankara’dan önce gelir.",
+        "B": "İzmir’in kodu İstanbul’unkinden büyüktür.",
+        "C": "Ankara’nın kodu İstanbul’unkinden küçüktür."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru sıra: Adana (01), Ankara (06), İstanbul (34), İzmir (35).\n- İlk plaka kodları illerin o dönemki alfabetik sırasına göre verilmiştir."
+        },
+        {
+          "type": "hint",
+          "md": "Kodlar alfabeyle ilişkilidir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Trafik plakalarındaki ilk iki rakam ili gösterir; sonradan il olan yerler listenin sonuna eklenmiştir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          130,
+          130
+        ],
+        "quote": "Plaka kodlarında Adana 01, Ankara 06, İstanbul 34, İzmir 35'tir.",
+        "chapter": "Türkiye Genel Bilgisi"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "türkiye"
+      ],
+      "vurgu": [],
+      "contentHash": "ebd68a7e7e505e07a9b2c7e714e7d5d0af845058738b86506986c5e76de0894d",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0679",
+      "conceptId": "tg-zonguldak",
+      "stem": {
+        "md": "Türkiye’nin taş kömürü yataklarıyla tanınan ili hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Manisa"
+        },
+        {
+          "key": "B",
+          "md": "Kütahya"
+        },
+        {
+          "key": "C",
+          "md": "Zonguldak"
+        },
+        {
+          "key": "D",
+          "md": "Kahramanmaraş"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Manisa’nın Soma yöresi linyitle tanınır, taş kömürüyle değil.",
+        "B": "Kütahya’daki yataklar da linyittir.",
+        "D": "Kahramanmaraş’ın Afşin-Elbistan yöresi linyit yataklarıyla bilinir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Bu il Zonguldak’tır.\n- Taş kömürü, linyite göre daha yaşlı ve ısı değeri daha yüksek bir kömürdür."
+        },
+        {
+          "type": "hint",
+          "md": "Batı Karadeniz kıyısında bir il."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Kömür, bitki kalıntılarının milyonlarca yıl boyunca basınç ve ısı altında dönüşmesiyle oluşur; yaşı ilerledikçe kalitesi artar."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          130,
+          130
+        ],
+        "quote": "Türkiye'nin başlıca taş kömürü havzası Zonguldak'tadır.",
+        "chapter": "Türkiye Genel Bilgisi"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "coğrafya"
+      ],
+      "vurgu": [],
+      "contentHash": "20e0a2cf0313cc793864cef20636cdbc35e5586efa182dd605588f4ad3fc1ab5",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0680",
+      "conceptId": "tg-karadeniz-kiyi",
+      "stem": {
+        "md": "Aşağıdaki illerden hangisinin Karadeniz’e kıyısı yoktur?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Çankırı"
+        },
+        {
+          "key": "B",
+          "md": "Sinop"
+        },
+        {
+          "key": "C",
+          "md": "Ordu"
+        },
+        {
+          "key": "D",
+          "md": "Bartın"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Sinop Karadeniz’e uzanan bir yarımadadadır.",
+        "C": "Ordu Karadeniz kıyısında bir ildir.",
+        "D": "Bartın’ın Amasra ilçesi Karadeniz kıyısındadır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Çankırı’dır.\n- Çankırı İç Anadolu Bölgesi’nde, denizden uzak bir ildir."
+        },
+        {
+          "type": "hint",
+          "md": "İç Anadolu’da kalan ili ara."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Kıyı illeri ile iç illerin iklimi belirgin biçimde ayrılır; dağ sıraları deniz etkisinin içeri girmesini engeller."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          130,
+          130
+        ],
+        "quote": "Çankırı İç Anadolu'dadır ve denize kıyısı yoktur.",
+        "chapter": "Türkiye Genel Bilgisi"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "coğrafya"
+      ],
+      "vurgu": [],
+      "contentHash": "93a3b2ab60a20022188d5f69c6724de27756751b409c9f96160173401ec28ed1",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0681",
+      "conceptId": "tg-inceburun",
+      "stem": {
+        "md": "Türkiye’nin en kuzey noktası olan İnceburun hangi ilin sınırları içindedir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Kastamonu"
+        },
+        {
+          "key": "B",
+          "md": "Kırklareli"
+        },
+        {
+          "key": "C",
+          "md": "Artvin"
+        },
+        {
+          "key": "D",
+          "md": "Sinop"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Kastamonu Sinop’un batısındadır ama en kuzey nokta orada değildir.",
+        "B": "Kırklareli Trakya’dadır, en kuzey nokta orada değildir.",
+        "C": "Artvin en doğudaki kıyı ilidir, en kuzey değildir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- İnceburun Sinop’tadır.\n- Karadeniz kıyısının kuzeye doğru en çok çıkıntı yaptığı yerdir."
+        },
+        {
+          "type": "hint",
+          "md": "Doğal limanıyla tanınan bir Karadeniz ili."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Türkiye’nin uç noktaları dört yönde farklı illere düşer; bunlar genellikle kıyıdaki burunlar ya da sınır köşeleridir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          130,
+          130
+        ],
+        "quote": "Türkiye'nin en kuzey noktası Sinop'taki İnceburun'dur.",
+        "chapter": "Türkiye Genel Bilgisi"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "coğrafya"
+      ],
+      "vurgu": [],
+      "contentHash": "bcf450310c3d80ce272686addf07fdf83299acfb3fb9da6f0e5d15edfda82d2e",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0682",
+      "conceptId": "tg-ankara-baskent-tarih",
+      "stem": {
+        "md": "Ankara, Cumhuriyet’in ilanından kısa süre önce, ____ tarihinde çıkarılan bir yasayla başkent olmuştur."
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "23 Nisan 1920"
+        },
+        {
+          "key": "B",
+          "md": "29 Ekim 1923"
+        },
+        {
+          "key": "C",
+          "md": "13 Ekim 1923"
+        },
+        {
+          "key": "D",
+          "md": "3 Mart 1924"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "23 Nisan 1920 TBMM’nin açılış tarihidir.",
+        "B": "29 Ekim 1923 Cumhuriyet’in ilanıdır; başkent kararı bundan önce alınmıştır.",
+        "D": "3 Mart 1924 halifeliğin kaldırıldığı tarihtir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Ankara 13 Ekim 1923’te başkent olmuştur.\n- Bu karardan iki hafta sonra Cumhuriyet ilan edilmiştir."
+        },
+        {
+          "type": "hint",
+          "md": "Cumhuriyet’in ilanından yaklaşık iki hafta öncesi."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Başkentin Anadolu’nun ortasında olması, savaş yıllarındaki güvenlik kaygılarını ve yeni devletin yüzünü Anadolu’ya dönmesini yansıtıyordu."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          131,
+          131
+        ],
+        "quote": "Ankara, 13 Ekim 1923'te çıkarılan bir yasayla başkent olmuştur.",
+        "chapter": "Türkiye Genel Bilgisi"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "türkiye"
+      ],
+      "vurgu": [],
+      "contentHash": "6ef2f6e677486c6251dc0e67f6da04560f50b1bbf75adc94763059430688c3e8",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0683",
+      "conceptId": "tg-istiklal-marsi-sair",
+      "stem": {
+        "md": "İstiklal Marşı’nın şairi kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Mehmet Akif Ersoy"
+        },
+        {
+          "key": "B",
+          "md": "Namık Kemal"
+        },
+        {
+          "key": "C",
+          "md": "Ziya Gökalp"
+        },
+        {
+          "key": "D",
+          "md": "Tevfik Fikret"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Namık Kemal “Vatan Şairi” olarak bilinir ama Cumhuriyet’ten önce yaşamıştır.",
+        "C": "Ziya Gökalp düşünür ve şairdir, marşı yazmamıştır.",
+        "D": "Tevfik Fikret Servetifünun şairidir, marşı yazmamıştır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- İstiklal Marşı’nın şairi Mehmet Akif Ersoy’dur.\n- Şiir, açılan bir yarışma sonucunda seçilmiştir."
+        },
+        {
+          "type": "hint",
+          "md": "Safahat adlı eserin şairi."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Milli marş, Kurtuluş Savaşı yıllarında halkın moralini yükseltmek amacıyla TBMM’nin düzenlediği bir yarışmayla belirlendi."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          131,
+          131
+        ],
+        "quote": "İstiklal Marşı'nın şairi Mehmet Akif Ersoy'dur.",
+        "chapter": "Türkiye Genel Bilgisi"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "türkiye"
+      ],
+      "vurgu": [],
+      "contentHash": "b44a9be5fad7b39a935e814d413c50b2404bd6c620c373fd1fd8aec921e13299",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0684",
+      "conceptId": "tg-istiklal-marsi-yil",
+      "stem": {
+        "md": "İstiklal Marşı TBMM’de hangi yıl kabul edilmiştir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "1921"
+        },
+        {
+          "key": "B",
+          "md": "1920"
+        },
+        {
+          "key": "C",
+          "md": "1923"
+        },
+        {
+          "key": "D",
+          "md": "1924"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "1920 TBMM’nin açıldığı yıldır; marş henüz kabul edilmemişti.",
+        "C": "1923 Cumhuriyet’in ilan edildiği yıldır.",
+        "D": "1924 ilk Cumhuriyet anayasasının kabul edildiği yıldır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Marş 12 Mart 1921’de kabul edilmiştir.\n- Kurtuluş Savaşı henüz sürerken kabul edilmiştir."
+        },
+        {
+          "type": "hint",
+          "md": "Kurtuluş Savaşı sürerken, Sakarya Meydan Muharebesi’nden önce."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Milli marş, savaşın en zor günlerinde birlik duygusunu güçlendirmek için TBMM’nin gündemine geldi."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          131,
+          131
+        ],
+        "quote": "İstiklal Marşı 12 Mart 1921'de TBMM'de kabul edilmiştir.",
+        "chapter": "Türkiye Genel Bilgisi"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "türkiye"
+      ],
+      "vurgu": [],
+      "contentHash": "b1db238be9ed3fdfb87a93c4c61a4e72ea97c870effc9b5584032514b7480321",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0685",
+      "conceptId": "tg-ilk-basbakan",
+      "stem": {
+        "md": "Cumhuriyet’in ilanından sonra kurulan ilk hükümetin başbakanı kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "İsmet İnönü"
+        },
+        {
+          "key": "B",
+          "md": "Fethi Okyar"
+        },
+        {
+          "key": "C",
+          "md": "Celal Bayar"
+        },
+        {
+          "key": "D",
+          "md": "Rauf Orbay"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Fethi Okyar Cumhuriyet’ten önceki hükümetin başındaydı; başbakanlığı daha sonradır.",
+        "C": "Celal Bayar çok daha sonra, 1937’de başbakan olmuştur.",
+        "D": "Rauf Orbay Cumhuriyet’ten önce İcra Vekilleri Heyeti Reisiydi."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- İlk başbakan İsmet İnönü’dür.\n- Atatürk’ün ölümünden sonra ikinci cumhurbaşkanı olmuştur."
+        },
+        {
+          "type": "hint",
+          "md": "Daha sonra ikinci cumhurbaşkanı olan isim."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Cumhuriyet’in ilanıyla devletin başına bir cumhurbaşkanı geçti, hükümetin yönetimi ise bir başbakana verildi."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          131,
+          131
+        ],
+        "quote": "Cumhuriyet'in ilk başbakanı İsmet İnönü'dür.",
+        "chapter": "Türkiye Genel Bilgisi"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "türkiye"
+      ],
+      "vurgu": [],
+      "contentHash": "0fb568a65deeb8bd3da3273662430ea19142f3112e3f2997565ee9359caa1e7b",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0686",
+      "conceptId": "tg-23-nisan",
+      "stem": {
+        "md": "Türkiye Büyük Millet Meclisi’nin açıldığı günün yıl dönümünde kutlanan bayram hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Cumhuriyet Bayramı"
+        },
+        {
+          "key": "B",
+          "md": "Ulusal Egemenlik ve Çocuk Bayramı"
+        },
+        {
+          "key": "C",
+          "md": "Zafer Bayramı"
+        },
+        {
+          "key": "D",
+          "md": "Atatürk’ü Anma, Gençlik ve Spor Bayramı"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Cumhuriyet Bayramı Cumhuriyet’in ilanını kutlar.",
+        "C": "Zafer Bayramı bir askerî zaferi anar.",
+        "D": "Gençlik ve Spor Bayramı Samsun’a çıkışın yıl dönümüdür."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Meclis 23 Nisan 1920’de açılmıştır.\n- Bu gün Ulusal Egemenlik ve Çocuk Bayramı olarak kutlanır."
+        },
+        {
+          "type": "hint",
+          "md": "Atatürk bu bayramı çocuklara armağan etmiştir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Milli bayramlar Kurtuluş Savaşı ve Cumhuriyet’in kuruluşundaki dönüm noktalarını anar; her birinin kendine özgü kutlama gelenekleri vardır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          132,
+          132
+        ],
+        "quote": "23 Nisan 1920'de açılan TBMM'nin yıl dönümü Ulusal Egemenlik ve Çocuk Bayramı olarak kutlanır.",
+        "chapter": "Türkiye Genel Bilgisi"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "gelenekler"
+      ],
+      "vurgu": [],
+      "contentHash": "3368ac6453cfcc7ca13a22bf6a95ca6406c5f416d879220d3adf1db2546803e1",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0687",
+      "conceptId": "tg-bayram-sirala",
+      "stem": {
+        "md": "Aşağıdaki milli bayramların takvim yılı içindeki sıralanışı hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "23 Nisan – 19 Mayıs – 30 Ağustos – 29 Ekim"
+        },
+        {
+          "key": "B",
+          "md": "19 Mayıs – 23 Nisan – 30 Ağustos – 29 Ekim"
+        },
+        {
+          "key": "C",
+          "md": "23 Nisan – 19 Mayıs – 29 Ekim – 30 Ağustos"
+        },
+        {
+          "key": "D",
+          "md": "23 Nisan – 30 Ağustos – 19 Mayıs – 29 Ekim"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Nisan, Mayıs’tan önce gelir.",
+        "C": "Ağustos, Ekim’den önce gelir.",
+        "D": "Mayıs, Ağustos’tan önce gelir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru sıra: 23 Nisan, 19 Mayıs, 30 Ağustos, 29 Ekim.\n- Sırasıyla Ulusal Egemenlik ve Çocuk, Gençlik ve Spor, Zafer ve Cumhuriyet bayramlarıdır."
+        },
+        {
+          "type": "hint",
+          "md": "Ayları takvimdeki sırasıyla diz."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Dört milli bayram, Kurtuluş Savaşı’nın başlangıcından Cumhuriyet’in ilanına uzanan süreci adım adım anar."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          132,
+          132
+        ],
+        "quote": "Milli bayramlar takvimde 23 Nisan, 19 Mayıs, 30 Ağustos ve 29 Ekim sırasıyla gelir.",
+        "chapter": "Türkiye Genel Bilgisi"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "gelenekler"
+      ],
+      "vurgu": [],
+      "contentHash": "677a9f55f98af3231266a1f209c95a7a0fe1fd2b5e7db63119257c807245b238",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0688",
+      "conceptId": "tg-19-mayis",
+      "stem": {
+        "md": "19 Mayıs, Mustafa Kemal’in 1919’da ____ çıkışının yıl dönümüdür."
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Erzurum’a"
+        },
+        {
+          "key": "B",
+          "md": "Sivas’a"
+        },
+        {
+          "key": "C",
+          "md": "Amasya’ya"
+        },
+        {
+          "key": "D",
+          "md": "Samsun’a"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Erzurum’da daha sonra bir kongre toplanmıştır.",
+        "B": "Sivas Kongresi de Samsun’a çıkıştan sonradır.",
+        "C": "Amasya Genelgesi de Samsun’a çıkıştan sonra yayımlanmıştır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Mustafa Kemal 19 Mayıs 1919’da Samsun’a çıkmıştır.\n- Bu gün Atatürk’ü Anma, Gençlik ve Spor Bayramı olarak kutlanır."
+        },
+        {
+          "type": "hint",
+          "md": "Karadeniz kıyısında bir liman şehri."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Kurtuluş Savaşı’nın başlangıcı sayılan bu yolculuk, ardından gelen genelge ve kongrelerle ulusal direnişin örgütlenmesine yol açtı."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          132,
+          132
+        ],
+        "quote": "19 Mayıs, Mustafa Kemal'in 1919'da Samsun'a çıkışının yıl dönümüdür.",
+        "chapter": "Türkiye Genel Bilgisi"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "gelenekler"
+      ],
+      "vurgu": [],
+      "contentHash": "af1da2e243c84cee8517845b375962327bcd1211b82446647242333d3db058b6",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0689",
+      "conceptId": "tg-30-agustos",
+      "stem": {
+        "md": "Zafer Bayramı hangi muharebenin kazanılmasını anar?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Sakarya Meydan Muharebesi"
+        },
+        {
+          "key": "B",
+          "md": "Birinci İnönü Muharebesi"
+        },
+        {
+          "key": "C",
+          "md": "Çanakkale Kara Savaşları"
+        },
+        {
+          "key": "D",
+          "md": "Başkomutanlık Meydan Muharebesi"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Sakarya Meydan Muharebesi 1921’de, Ağustos–Eylül aylarında yapılmıştır.",
+        "B": "Birinci İnönü Muharebesi Ocak 1921’dedir.",
+        "C": "Çanakkale Savaşları Birinci Dünya Savaşı sırasında, 1915’tedir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Zafer Bayramı Başkomutanlık Meydan Muharebesi’ni anar.\n- Muharebe 30 Ağustos 1922’de Dumlupınar yakınlarında kazanılmıştır."
+        },
+        {
+          "type": "hint",
+          "md": "Büyük Taarruz’un sonunda kazanılmıştır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Kurtuluş Savaşı’nın batı cephesi, savunma muharebelerinden sonra büyük bir taarruzla sonuçlandı."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          132,
+          132
+        ],
+        "quote": "Zafer Bayramı, 30 Ağustos 1922'de kazanılan Başkomutanlık Meydan Muharebesi'ni anar.",
+        "chapter": "Türkiye Genel Bilgisi"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "gelenekler"
+      ],
+      "vurgu": [],
+      "contentHash": "0c16b03742db0a52170e29d331cc0ade594c16d5b1737612d85492513b633f80",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0690",
+      "conceptId": "tg-seker-bayrami",
+      "stem": {
+        "md": "Ramazan ayının ardından kutlanan Ramazan Bayramı’nın halk arasındaki diğer adı nedir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Kurban Bayramı"
+        },
+        {
+          "key": "B",
+          "md": "Hıdırellez"
+        },
+        {
+          "key": "C",
+          "md": "Şeker Bayramı"
+        },
+        {
+          "key": "D",
+          "md": "Nevruz"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Kurban Bayramı ayrı bir dini bayramdır.",
+        "B": "Hıdırellez baharın gelişini kutlayan bir halk şenliğidir.",
+        "D": "Nevruz baharın ve yeni yılın başlangıcını kutlayan bir bayramdır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Ramazan Bayramı’na Şeker Bayramı da denir.\n- Bayramda büyükler ziyaret edilir, çocuklara tatlı ve şeker ikram edilir."
+        },
+        {
+          "type": "hint",
+          "md": "Bayram ziyaretlerinde çocuklara ikram edilenleri düşün."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Dini bayramlar ay takvimine göre belirlendiği için her yıl yaklaşık on bir gün öne kayar."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          132,
+          132
+        ],
+        "quote": "Ramazan Bayramı'na halk arasında Şeker Bayramı da denir.",
+        "chapter": "Türkiye Genel Bilgisi"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "gelenekler"
+      ],
+      "vurgu": [],
+      "contentHash": "7c43d2cc5b04d96d75892c8f842211816c243c0810590c6b3a6b36dc3b15d3e2",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0691",
+      "conceptId": "tg-goreme",
+      "stem": {
+        "md": "Peribacaları ve kayaya oyulmuş kiliseleriyle UNESCO Dünya Mirası Listesi’nde bulunan Göreme Milli Parkı hangi ildedir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Kayseri"
+        },
+        {
+          "key": "B",
+          "md": "Aksaray"
+        },
+        {
+          "key": "C",
+          "md": "Nevşehir"
+        },
+        {
+          "key": "D",
+          "md": "Niğde"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Kayseri Kapadokya’ya komşudur ama Göreme bu ilde değildir.",
+        "B": "Aksaray’da Ihlara Vadisi vardır, Göreme yoktur.",
+        "D": "Niğde Kapadokya’nın güneyindedir, Göreme orada değildir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Göreme Nevşehir’dedir.\n- Alan, 1985’te listeye giren ilk Türkiye alanları arasındadır."
+        },
+        {
+          "type": "hint",
+          "md": "Ürgüp ve Avanos da bu ilin ilçeleridir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Kapadokya’nın yumuşak volkanik tüfü kolay oyulduğu için insanlar yüzyıllar boyunca kayalara ev, kilise ve yer altı şehirleri açmıştır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          133,
+          133
+        ],
+        "quote": "Peribacalarıyla tanınan Göreme Milli Parkı Nevşehir'dedir.",
+        "chapter": "Türkiye Genel Bilgisi"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "kültür-mirası"
+      ],
+      "vurgu": [],
+      "contentHash": "e3d6e82f47dd6a746cdd62e9806977cafb68d5719e1e1f4be1506d2dbf08f1ba",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0692",
+      "conceptId": "tg-pamukkale",
+      "stem": {
+        "md": "Bembeyaz travertenleri ve Hierapolis antik kentiyle UNESCO Dünya Mirası Listesi’nde yer alan alan hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Efes"
+        },
+        {
+          "key": "B",
+          "md": "Bergama"
+        },
+        {
+          "key": "C",
+          "md": "Pamukkale"
+        },
+        {
+          "key": "D",
+          "md": "Afrodisias"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Efes İzmir’dedir, travertenleri yoktur.",
+        "B": "Bergama İzmir’dedir, travertenleriyle değil antik kentiyle tanınır.",
+        "D": "Afrodisias Aydın’dadır ve travertenleri yoktur."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Bu alan Denizli’deki Pamukkale’dir.\n- Travertenler, kalsiyumlu sıcak su kaynaklarının çökelttiği kireçtaşından oluşur."
+        },
+        {
+          "type": "hint",
+          "md": "Adı “pamuktan kale” anlamına gelir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Kireç bakımından zengin termal sular yüzeye çıkıp soğudukça içlerindeki kireci bırakır ve basamak basamak beyaz teraslar oluşturur."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          133,
+          133
+        ],
+        "quote": "Denizli'deki Pamukkale, travertenleri ve Hierapolis antik kentiyle UNESCO listesindedir.",
+        "chapter": "Türkiye Genel Bilgisi"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "kültür-mirası"
+      ],
+      "vurgu": [],
+      "contentHash": "19eea7576553fba87d8755e06a5328ccd460bd9d66aabed4a206d2378b57a82d",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0693",
+      "conceptId": "tg-nemrut",
+      "stem": {
+        "md": "Kommagene Kralı I. Antiokhos’un tümülüsü ve dev taş heykelleriyle UNESCO listesindeki dağ hangi ilimizdedir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Malatya"
+        },
+        {
+          "key": "B",
+          "md": "Adıyaman"
+        },
+        {
+          "key": "C",
+          "md": "Şanlıurfa"
+        },
+        {
+          "key": "D",
+          "md": "Gaziantep"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Malatya komşu ildir ama Nemrut Dağı’nın bulunduğu il değildir.",
+        "C": "Şanlıurfa’daki UNESCO alanı Göbeklitepe’dir.",
+        "D": "Gaziantep’te Zeugma vardır ama bu dağ orada değildir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Önce dağ: Nemrut Dağı.\n- Nemrut Dağı Adıyaman’dadır.\n- Gün doğumu ve batımı manzarasıyla da ünlüdür."
+        },
+        {
+          "type": "hint",
+          "md": "Önce dağın adını bul, sonra hangi ilde olduğunu düşün."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Kommagene, Helenistik dönemde Fırat çevresinde kurulmuş küçük bir krallıktı; hükümdarları Doğu ve Batı geleneklerini birleştiren anıtlar yaptırdı."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          133,
+          133
+        ],
+        "quote": "Kommagene Kralı I. Antiokhos'un tümülüsünün bulunduğu Nemrut Dağı Adıyaman'dadır.",
+        "chapter": "Türkiye Genel Bilgisi"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "kültür-mirası"
+      ],
+      "vurgu": [],
+      "contentHash": "f87e63463bfd58b30b46fa80e75563970523902f020a4d55a91d7bef55aac2a7",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0694",
+      "conceptId": "tg-gobeklitepe",
+      "stem": {
+        "md": "T biçimli dikilitaşlarıyla tanınan, Neolitik döneme ait ve 2018’de UNESCO listesine giren Şanlıurfa’daki alan hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Çatalhöyük"
+        },
+        {
+          "key": "B",
+          "md": "Hattuşa"
+        },
+        {
+          "key": "C",
+          "md": "Truva"
+        },
+        {
+          "key": "D",
+          "md": "Göbeklitepe"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Çatalhöyük de Neolitiktir ama Konya’dadır ve dikilitaşlarıyla tanınmaz.",
+        "B": "Hattuşa Çorum’daki Hitit başkentidir.",
+        "C": "Truva Çanakkale’deki antik kenttir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Bu alan Göbeklitepe’dir.\n- Bilinen en eski anıtsal yapı topluluklarından biri kabul edilir."
+        },
+        {
+          "type": "hint",
+          "md": "Adı “göbekli” bir tepeden gelir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Neolitik dönem, insanların avcı-toplayıcılıktan yerleşik yaşama ve tarıma geçtiği çağdır; bu döneme ait anıtsal yapılar çok nadirdir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          133,
+          133
+        ],
+        "quote": "Şanlıurfa'daki Göbeklitepe, T biçimli dikilitaşlarıyla 2018'de UNESCO listesine girmiştir.",
+        "chapter": "Türkiye Genel Bilgisi"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "kültür-mirası"
+      ],
+      "vurgu": [],
+      "contentHash": "419757960ce07e583272b46e007651eb60949785be6ca8845a3eb6cfacfa32d9",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0695",
+      "conceptId": "tg-divrigi",
+      "stem": {
+        "md": "Taş işçiliğiyle ünlü Divriği Ulu Camii ve Darüşşifası hangi ildedir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Erzurum"
+        },
+        {
+          "key": "B",
+          "md": "Malatya"
+        },
+        {
+          "key": "C",
+          "md": "Kayseri"
+        },
+        {
+          "key": "D",
+          "md": "Sivas"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Erzurum’da Çifte Minareli Medrese vardır, Divriği yoktur.",
+        "B": "Malatya komşu ildir ama Divriği bu ilde değildir.",
+        "C": "Kayseri’de Selçuklu eserleri çoktur ama Divriği orada değildir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Divriği Ulu Camii ve Darüşşifası Sivas’tadır.\n- 1985’te UNESCO listesine giren ilk Türkiye alanlarındandır."
+        },
+        {
+          "type": "hint",
+          "md": "Bir kongreyle de tarihe geçen İç Anadolu ili."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Anadolu’da Selçuklu ve beylikler döneminde cami, medrese ve şifahaneler çoğu zaman bir külliye olarak birlikte yapılırdı."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          133,
+          133
+        ],
+        "quote": "Divriği Ulu Camii ve Darüşşifası Sivas'tadır.",
+        "chapter": "Türkiye Genel Bilgisi"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "kültür-mirası"
+      ],
+      "vurgu": [],
+      "contentHash": "175020f7a150e97609669f3091d5f4bc75cf445132cd3de8ae8d7aa252f6f3ba",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0696",
+      "conceptId": "tg-safranbolu",
+      "stem": {
+        "md": "Osmanlı dönemi ahşap konaklarıyla UNESCO Dünya Mirası Listesi’nde yer alan Safranbolu hangi ildedir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Kastamonu"
+        },
+        {
+          "key": "B",
+          "md": "Bartın"
+        },
+        {
+          "key": "C",
+          "md": "Bolu"
+        },
+        {
+          "key": "D",
+          "md": "Karabük"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Kastamonu komşu ildir ama Safranbolu ona bağlı değildir.",
+        "B": "Bartın kıyı ilidir, Safranbolu bu ilde değildir.",
+        "C": "Bolu Batı Karadeniz’in iç kesimindedir, Safranbolu bu ilde değildir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Safranbolu Karabük’e bağlıdır.\n- Adını eskiden çevresinde yetiştirilen safran bitkisinden alır."
+        },
+        {
+          "type": "hint",
+          "md": "Demir-çelik fabrikalarıyla tanınan bir il."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Osmanlı şehir dokusunun iyi korunduğu yerlerde ahşap çıkmalı evler, çarşılar ve hanlar bir arada görülür."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          133,
+          133
+        ],
+        "quote": "Osmanlı dönemi konaklarıyla tanınan Safranbolu Karabük'tedir.",
+        "chapter": "Türkiye Genel Bilgisi"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "kültür-mirası"
+      ],
+      "vurgu": [],
+      "contentHash": "3ff175f5185a216c450f01e65abcdfcbc31545a277ba9e7746ed1e26ff606379",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0697",
+      "conceptId": "trafik-isigi-dur",
+      "stem": {
+        "md": "Trafik ışığında hangi renk dur anlamına gelir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Yeşil"
+        },
+        {
+          "key": "B",
+          "md": "Sarı"
+        },
+        {
+          "key": "C",
+          "md": "Kırmızı"
+        },
+        {
+          "key": "D",
+          "md": "Lacivert"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Yeşil ışık geçilebileceğini gösterir.",
+        "B": "Sarı ışık, ışığın değişmek üzere olduğunu bildirir.",
+        "D": "Trafik ışıklarında lacivert renk bulunmaz."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Kırmızı ışık dur anlamına gelir.\n- Trafik ışığında kırmızı en üstte yer alır."
+        },
+        {
+          "type": "hint",
+          "md": "Işığın en üstteki rengi."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Trafik ışıkları renklerin herkesçe hızla tanınmasına dayanır; renklerin yeri de renk körlüğü olanlar için sabit tutulur."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          134,
+          134
+        ],
+        "quote": "Trafik ışığında kırmızı ışık dur anlamına gelir.",
+        "chapter": "Türkiye Genel Bilgisi"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "gündelik-hayat"
+      ],
+      "vurgu": [],
+      "contentHash": "d0825e316f7de42b8b8446a073f1ae63444d4064d0d6d1e14e509a987723f500",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0698",
+      "conceptId": "tg-turk-kahvesi",
+      "stem": {
+        "md": "Köpüğü ve fincanda kalan telvesiyle bilinen, 2013’te UNESCO Somut Olmayan Kültürel Miras listesine giren içecek kültürü hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Salep"
+        },
+        {
+          "key": "B",
+          "md": "Türk kahvesi"
+        },
+        {
+          "key": "C",
+          "md": "Boza"
+        },
+        {
+          "key": "D",
+          "md": "Şalgam suyu"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Salep sıcak sütle hazırlanır, telvesi olmaz.",
+        "C": "Boza fermente bir tahıl içeceğidir, fincanda telve bırakmaz.",
+        "D": "Şalgam suyu soğuk içilen fermente bir içecektir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Bu kültür Türk kahvesidir.\n- Cezvede pişirilir ve genellikle yanında su ile sunulur."
+        },
+        {
+          "type": "hint",
+          "md": "Cezvede pişirilir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Somut Olmayan Kültürel Miras listesi yapıları değil, yaşayan gelenekleri, ustalıkları ve toplumsal pratikleri korumayı amaçlar."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          134,
+          134
+        ],
+        "quote": "Türk kahvesi kültürü 2013'te UNESCO Somut Olmayan Kültürel Miras listesine girmiştir.",
+        "chapter": "Türkiye Genel Bilgisi"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "gelenekler"
+      ],
+      "vurgu": [],
+      "contentHash": "fa7d96faf6f48bc06bd554d24c5cc55801fbb2acec4cc99c9b808bcdb5d007da",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0699",
+      "conceptId": "tg-kirkpinar",
+      "stem": {
+        "md": "Her yıl düzenlenen Kırkpınar Yağlı Güreşleri hangi ilde yapılır?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Tekirdağ"
+        },
+        {
+          "key": "B",
+          "md": "Kırklareli"
+        },
+        {
+          "key": "C",
+          "md": "Edirne"
+        },
+        {
+          "key": "D",
+          "md": "Çanakkale"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Tekirdağ Trakya’dadır ama Kırkpınar orada yapılmaz.",
+        "B": "Kırklareli adı benzese de Kırkpınar orada yapılmaz.",
+        "D": "Çanakkale’de bu güreşler düzenlenmez."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Kırkpınar Edirne’de yapılır.\n- Pehlivanlar zeytinyağıyla yağlanıp kispet adlı deri giysiyle güreşir."
+        },
+        {
+          "type": "hint",
+          "md": "Selimiye Camii’nin bulunduğu şehir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Yağlı güreş, pehlivanların vücutlarını yağlayarak kispet giydiği geleneksel bir Türk güreşidir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          134,
+          134
+        ],
+        "quote": "Kırkpınar Yağlı Güreşleri her yıl Edirne'de yapılır.",
+        "chapter": "Türkiye Genel Bilgisi"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "gelenekler"
+      ],
+      "vurgu": [],
+      "contentHash": "b0da902bfb8894be52ba8dad47a9cfc9d26ff5e93a49f1baa547a01cdcc3e4e5",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0700",
+      "conceptId": "tg-ebru",
+      "stem": {
+        "md": "Yoğunlaştırılmış su üzerine serpilen boyalarla desen oluşturulup kâğıda aktarılan geleneksel süsleme sanatı hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Hat"
+        },
+        {
+          "key": "B",
+          "md": "Tezhip"
+        },
+        {
+          "key": "C",
+          "md": "Minyatür"
+        },
+        {
+          "key": "D",
+          "md": "Ebru"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Hat, yazının güzel yazılması sanatıdır.",
+        "B": "Tezhip, kitapları altın ve boyayla süsleme sanatıdır; su kullanılmaz.",
+        "C": "Minyatür, küçük boyutlu resim sanatıdır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Bu sanat ebrudur.\n- Her baskı tek ve benzersizdir; aynı desen ikinci kez elde edilemez."
+        },
+        {
+          "type": "hint",
+          "md": "Su üzerinde yapılır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Geleneksel Türk kitap sanatları hat, tezhip, minyatür ve ciltçilik gibi birbirini tamamlayan dallardan oluşur."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          134,
+          134
+        ],
+        "quote": "Su üzerine serpilen boyalarla desen oluşturulup kâğıda aktarılan sanata ebru denir.",
+        "chapter": "Türkiye Genel Bilgisi"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "gelenekler"
+      ],
+      "vurgu": [],
+      "contentHash": "1b333a5ec76b418b401b3636f5b5f4c4e6c221a4bbc7b1cae2933a2fdd65b2c3",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0701",
+      "conceptId": "tg-karagoz",
+      "stem": {
+        "md": "Karagöz ile ____ geleneksel Türk gölge oyununun iki ana karakteridir."
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Pişekâr"
+        },
+        {
+          "key": "B",
+          "md": "Keloğlan"
+        },
+        {
+          "key": "C",
+          "md": "Nasreddin Hoca"
+        },
+        {
+          "key": "D",
+          "md": "Hacivat"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Pişekâr orta oyununun karakteridir.",
+        "B": "Keloğlan masal kahramanıdır.",
+        "C": "Nasreddin Hoca fıkralarıyla bilinen bir halk kişisidir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Karagöz’ün eşi Hacivat’tır.\n- Hacivat okumuş ve süslü konuşur, Karagöz ise saf ve dobradır."
+        },
+        {
+          "type": "hint",
+          "md": "Süslü konuşan, okumuş karakter."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Gölge oyununda deriden kesilmiş renkli tasvirler, arkadan ışıklandırılan beyaz bir perdeye yansıtılır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          134,
+          134
+        ],
+        "quote": "Karagöz ile Hacivat gölge oyununun iki ana karakteridir.",
+        "chapter": "Türkiye Genel Bilgisi"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "gelenekler"
+      ],
+      "vurgu": [],
+      "contentHash": "3821371eb119740beb0266dedd1f637c6d9c1c7fb14d661bd804e765d6fa009d",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0702",
+      "conceptId": "tg-seb-i-arus",
+      "stem": {
+        "md": "Mesnevi’nin şairinin ölüm yıl dönümünde düzenlenen Şeb-i Arus törenleri hangi ilde yapılır?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Bursa"
+        },
+        {
+          "key": "B",
+          "md": "Konya"
+        },
+        {
+          "key": "C",
+          "md": "Kütahya"
+        },
+        {
+          "key": "D",
+          "md": "Kayseri"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Bursa Osmanlı’nın ilk başkentlerindendir, bu törenlerin merkezi değildir.",
+        "C": "Kütahya çini sanatıyla tanınır.",
+        "D": "Kayseri Selçuklu eserleriyle tanınır ama törenler orada yapılmaz."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Mesnevi’nin şairi Mevlana Celaleddin Rumi’dir.\n- Mevlana Konya’da yaşamış ve orada vefat etmiştir.\n- Şeb-i Arus törenleri her Aralık’ta Konya’da yapılır."
+        },
+        {
+          "type": "hint",
+          "md": "Önce şairi bul; türbesinin olduğu şehir cevaptır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Şeb-i Arus “düğün gecesi” anlamına gelir; Mevlevilikte ölüm, Allah’a kavuşma olarak görülür ve bu gece semazenlerin dönüşüyle anılır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          134,
+          134
+        ],
+        "quote": "Mevlana'nın ölüm yıl dönümünde Şeb-i Arus törenleri her Aralık'ta Konya'da yapılır.",
+        "chapter": "Türkiye Genel Bilgisi"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "gelenekler"
+      ],
+      "vurgu": [],
+      "contentHash": "7bd889b9565e577e990949ef4e16373e07ae5d99439c4ccff36082877bfb0871",
+      "deleted": false
+    }
+  ]
+}

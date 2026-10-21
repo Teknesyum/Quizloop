@@ -44,7 +44,13 @@ export function Welcome({ onClose }: Props): React.JSX.Element {
             >
               <p className="tk-label">{t(`welcome.${n}.title`)}</p>
               <p className="tk-modal-body">
-                {t(n === 'add' && phone ? 'welcome.add.bodyPackage' : `welcome.${n}.body`)}
+                {t(
+                  n === 'add'
+                    ? phone
+                      ? 'welcome.add.installPackage'
+                      : 'welcome.add.install'
+                    : `welcome.${n}.body`
+                )}
               </p>
             </li>
           ))}

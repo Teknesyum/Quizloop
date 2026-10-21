@@ -1,0 +1,2605 @@
+{
+  "blockId": "0011",
+  "questions": [
+    {
+      "id": "genel-kultur-0425",
+      "conceptId": "fl-thales-su",
+      "stem": {
+        "md": "Her şeyin ana maddesinin (arkhe) su olduğunu ileri süren Miletli filozof kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Demokritos"
+        },
+        {
+          "key": "B",
+          "md": "Thales"
+        },
+        {
+          "key": "C",
+          "md": "Herakleitos"
+        },
+        {
+          "key": "D",
+          "md": "Parmenides"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Demokritos evrenin atomlardan oluştuğunu savunmuştur.",
+        "C": "Herakleitos sürekli değişimi ve karşıtların çatışmasını öne çıkarmıştır.",
+        "D": "Parmenides değişmez ve tek bir varlık fikrini savunmuştur."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Thales'tir.\n- Thales, ilk filozof sayılan Miletli düşünürdür.\n- Arkhe, her şeyin kendisinden türediği ilk ilkedir."
+        },
+        {
+          "type": "hint",
+          "md": "Canlıların hayatta kalması için vazgeçilmez olan madde aklına gelsin."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "İlk Yunan filozofları evrendeki çokluğun ardında tek bir ilk madde aradı. Bu ilkeye arkhe dediler ve her biri farklı bir öğe önerdi."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          82,
+          82
+        ],
+        "quote": "Miletli Thales, her şeyin ana maddesinin (arkhe) su olduğunu ileri sürmüştür.",
+        "chapter": "Felsefe"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "felsefe"
+      ],
+      "vurgu": [],
+      "contentHash": "348fdf090b705051f992664b2c9325378d9498a6c62cb30d13393cb9ebe88f28",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0426",
+      "conceptId": "fl-herakleitos-degisim",
+      "stem": {
+        "md": "Evrende her şeyin sürekli değiştiğini ve bu değişimin karşıtların çatışmasıyla gerçekleştiğini savunan filozof kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Parmenides"
+        },
+        {
+          "key": "B",
+          "md": "Thales"
+        },
+        {
+          "key": "C",
+          "md": "Herakleitos"
+        },
+        {
+          "key": "D",
+          "md": "Pisagor"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Parmenides tam tersine değişimin bir yanılsama olduğunu söylemiştir.",
+        "B": "Thales ilk madde olarak suyu öne sürmüş, değişim felsefesiyle öne çıkmamıştır.",
+        "D": "Pisagor evrenin temelini sayıda görmüştür."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Herakleitos'tur.\n- Ona göre aynı ırmağa iki kez girilemez, çünkü su da insan da değişir.\n- Ateşi değişimin simgesi olarak görmüştür."
+        },
+        {
+          "type": "hint",
+          "md": "Akan bir ırmak benzetmesiyle anılan Efesli düşünürü düşün."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Sokrates öncesi düşünürler arasında oluş ve varlık üzerine büyük bir tartışma vardı. Bir taraf değişimi evrenin özü sayarken diğer taraf değişmezliği savundu."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          82,
+          82
+        ],
+        "quote": "Herakleitos, evrende her şeyin sürekli değiştiğini ve bu değişimin karşıtların çatışmasıyla gerçekleştiğini savunmuştur.",
+        "chapter": "Felsefe"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "felsefe"
+      ],
+      "vurgu": [],
+      "contentHash": "4d23a7012b2005f640e17a0bbdc789d0fc41a274a855bd0c56fcc6b99e057596",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0427",
+      "conceptId": "fl-parmenides-varlik",
+      "stem": {
+        "md": "Varlığın bir, değişmez ve hareketsiz olduğunu, değişimin yalnızca duyuların yanılsaması olduğunu savunan Elealı filozof kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Herakleitos"
+        },
+        {
+          "key": "B",
+          "md": "Parmenides"
+        },
+        {
+          "key": "C",
+          "md": "Anaksimenes"
+        },
+        {
+          "key": "D",
+          "md": "Epikuros"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Herakleitos değişimi evrenin temel gerçeği saymıştır.",
+        "C": "Anaksimenes ilk madde olarak havayı öne sürmüştür.",
+        "D": "Epikuros Helenistik dönemde mutluluk ve haz üzerine düşünmüştür."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Parmenides'tir.\n- Elea okulunun kurucusu sayılır.\n- Akla güvenip duyuların tanıklığını reddetmiştir."
+        },
+        {
+          "type": "hint",
+          "md": "Öğrencisi Zenon, hareketin imkânsızlığını gösteren paradokslarıyla ünlüdür."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Elea okulu, aklın ulaştığı sonuçların duyuların verdiği bilgiden üstün olduğunu savundu. Bu yaklaşım sonraki rasyonalist düşünceye zemin hazırladı."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          82,
+          82
+        ],
+        "quote": "Parmenides, varlığın bir, değişmez ve hareketsiz olduğunu, değişimin duyuların bir yanılsaması olduğunu öne sürmüştür.",
+        "chapter": "Felsefe"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "felsefe"
+      ],
+      "vurgu": [],
+      "contentHash": "ea403acf485fe189e989f3923cb85d68f9a13d9f5baa318fc7aec35de8e38249",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0428",
+      "conceptId": "fl-demokritos-atom",
+      "stem": {
+        "md": "Evrenin bölünemeyen küçük parçacıklardan oluştuğunu savunan ve \"atom\" kavramıyla anılan filozof kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Sokrates"
+        },
+        {
+          "key": "B",
+          "md": "Platon"
+        },
+        {
+          "key": "C",
+          "md": "Thales"
+        },
+        {
+          "key": "D",
+          "md": "Demokritos"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Sokrates doğa felsefesinden çok ahlak ve insan üzerine düşünmüştür.",
+        "B": "Platon gerçekliği idealar dünyasında aramıştır.",
+        "C": "Thales ilk madde olarak suyu göstermiştir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Demokritos'tur.\n- Atom kelimesi Yunanca \"bölünemez\" anlamına gelir.\n- Hocası Leukippos ile birlikte atomculuğun kurucusu sayılır."
+        },
+        {
+          "type": "hint",
+          "md": "Adı bugün de kimyada kullanılan bir kavramla birlikte anılır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Antik atomculuk, maddenin sonsuza dek bölünemeyeceğini ve boşlukta hareket eden en küçük birimlerden oluştuğunu öne sürdü. Bu fikir deneysel değil, akıl yürütmeye dayalıydı."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          82,
+          82
+        ],
+        "quote": "Demokritos, evrenin bölünemeyen küçük parçacıklardan, yani atomlardan oluştuğunu savunmuştur.",
+        "chapter": "Felsefe"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "felsefe"
+      ],
+      "vurgu": [],
+      "contentHash": "ba39f2ef3011f2d8db640c258cb155d038079f5f2f4301171204cc145cfcbd5e",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0429",
+      "conceptId": "fl-pisagor-sayi",
+      "stem": {
+        "md": "Pisagor ve izleyicilerine göre evrenin temel ilkesi nedir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Sayı"
+        },
+        {
+          "key": "B",
+          "md": "Su"
+        },
+        {
+          "key": "C",
+          "md": "Ateş"
+        },
+        {
+          "key": "D",
+          "md": "Atom"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Su, Thales'in önerdiği ilk maddedir.",
+        "C": "Ateş, Herakleitos'un değişimin simgesi olarak gördüğü öğedir.",
+        "D": "Atom, Demokritos'un evreni açıklamak için kullandığı kavramdır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap sayıdır.\n- Pisagorcular evrendeki düzeni ve uyumu sayısal oranlarla açıklamıştır.\n- Müzikteki armoniyi de sayı oranlarına bağlamışlardır."
+        },
+        {
+          "type": "hint",
+          "md": "Adını taşıyan teoremi düşün."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Pisagorcular hem bir felsefe okulu hem de kurallarına sıkı bağlı bir topluluktu. Matematik, müzik ve gökbilimi tek bir kozmik düzenin parçaları olarak gördüler."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          82,
+          82
+        ],
+        "quote": "Pisagor ve izleyicileri, evrenin temelinin sayı olduğunu düşünmüştür.",
+        "chapter": "Felsefe"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "felsefe"
+      ],
+      "vurgu": [],
+      "contentHash": "3b085c0fbfe392d010d0723b21646be0d68e3561c5e5ac297a9f3d577baf701e",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0430",
+      "conceptId": "fl-milet-eslestirme",
+      "stem": {
+        "md": "Filozofları önerdikleri ilk ilkeyle eşleştirin.\n\n1. Anaksimenes\n2. Anaksimandros\n3. Demokritos\n\na. atom\nb. apeiron\nc. hava"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "1-b, 2-c, 3-a"
+        },
+        {
+          "key": "B",
+          "md": "1-a, 2-b, 3-c"
+        },
+        {
+          "key": "C",
+          "md": "1-c, 2-a, 3-b"
+        },
+        {
+          "key": "D",
+          "md": "1-c, 2-b, 3-a"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Anaksimenes sınırsız bir öz değil, somut bir öğe olan havayı önermiştir.",
+        "B": "Demokritos atomları, Anaksimenes ise havayı savunmuştur.",
+        "C": "Anaksimandros atomu değil, belirsiz ve sınırsız bir özü ilk ilke saymıştır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Anaksimenes: hava.\n- Anaksimandros: apeiron, yani sınırsız ve belirsiz öz.\n- Demokritos: atom."
+        },
+        {
+          "type": "hint",
+          "md": "Apeiron Yunanca \"sınırsız\" demektir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Milet okulu, Thales ile başlayan ve evrenin ilk maddesini arayan ilk felsefe okuludur. Öğrenciler hocalarının cevabını eleştirip kendi önerilerini geliştirdi."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          82,
+          82
+        ],
+        "quote": "Anaksimenes ana maddenin hava, Anaksimandros ise sınırsız ve belirsiz bir öz olan apeiron olduğunu söylemiştir.",
+        "chapter": "Felsefe"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "felsefe"
+      ],
+      "vurgu": [],
+      "contentHash": "aaa7bc43163313c46e7455671a4039742f90c650cf50494da100af000d03672f",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0431",
+      "conceptId": "fl-sokrates-yazmadi",
+      "stem": {
+        "md": "Hiç yazılı eser bırakmamış, düşünceleri büyük ölçüde öğrencisinin diyaloglarından bilinen Atinalı filozof kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Aristoteles"
+        },
+        {
+          "key": "B",
+          "md": "Platon"
+        },
+        {
+          "key": "C",
+          "md": "Sokrates"
+        },
+        {
+          "key": "D",
+          "md": "Epikuros"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Aristoteles mantıktan siyasete pek çok alanda eser yazmıştır.",
+        "B": "Platon diyaloglarını bizzat yazan öğrencidir.",
+        "D": "Epikuros'un mektupları ve öğretileri yazılı olarak günümüze ulaşmıştır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Sokrates'tir.\n- Düşünceleri en çok Platon'un diyaloglarından öğrenilir.\n- Ksenophon'un yazıları da ikincil bir kaynaktır."
+        },
+        {
+          "type": "hint",
+          "md": "Platon'un diyaloglarında başkahraman olarak konuşan kişiyi düşün."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Antik Atina'da bazı düşünürler öğretilerini yazmak yerine sokakta, agorada konuşarak aktardı. Bu yüzden onları bize başkalarının kaleminden tanırız."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          83,
+          83
+        ],
+        "quote": "Sokrates hiç yazılı eser bırakmamıştır; düşünceleri büyük ölçüde öğrencisi Platon'un diyaloglarından bilinir.",
+        "chapter": "Felsefe"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "felsefe"
+      ],
+      "vurgu": [],
+      "contentHash": "3fa886fea128f296122f201625f7280a9abf59bab308d131198b2774d6aab61c",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0432",
+      "conceptId": "fl-dogurtma-yontemi",
+      "stem": {
+        "md": "Sokrates'in, soru sorarak karşısındakinin zihnindeki bilgiyi ortaya çıkarmaya dayanan yöntemine ne ad verilir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Diyalektik materyalizm"
+        },
+        {
+          "key": "B",
+          "md": "Doğurtma (maieutike)"
+        },
+        {
+          "key": "C",
+          "md": "Tümevarım"
+        },
+        {
+          "key": "D",
+          "md": "Kuşkuculuk"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Diyalektik materyalizm 19. yüzyılda Marx ve Engels'le ilişkilendirilen bir görüştür.",
+        "C": "Tümevarım özel durumlardan genel sonuca ulaşan bir akıl yürütme türüdür, sorgulama yönteminin adı değildir.",
+        "D": "Kuşkuculuk bilginin olanağından şüphe eden bir akımdır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap doğurtma yöntemidir.\n- Sokrates, ebe olan annesinin mesleğine benzeterek bilgiyi \"doğurttuğunu\" söylemiştir.\n- Yöntem, ironi ve ardından gelen sorgulama adımlarından oluşur."
+        },
+        {
+          "type": "hint",
+          "md": "Sokrates'in annesinin mesleği ipucu verir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Sokrates bilgeliği öğretmek yerine sorularla muhatabının kendi yanılgılarını görmesini sağlamaya çalıştı. Bu tutum \"bildiğim tek şey hiçbir şey bilmediğimdir\" sözüyle özetlenir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          83,
+          83
+        ],
+        "quote": "Sokrates'in soru sorarak karşısındakinin bilgisini ortaya çıkarmaya dayanan yöntemine doğurtma (maieutike) denir.",
+        "chapter": "Felsefe"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "felsefe"
+      ],
+      "vurgu": [],
+      "contentHash": "4fde4ec873e570428d66e06792792ba604734cc4774616bc342bb3f0430cad52",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0433",
+      "conceptId": "fl-magara-devlet",
+      "stem": {
+        "md": "Platon'un ünlü mağara alegorisi hangi eserinde yer alır?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Organon"
+        },
+        {
+          "key": "B",
+          "md": "Metafizik"
+        },
+        {
+          "key": "C",
+          "md": "İtiraflar"
+        },
+        {
+          "key": "D",
+          "md": "Devlet"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Organon, Aristoteles'in mantık eserlerinin toplamıdır.",
+        "B": "Metafizik, Aristoteles'in varlık üzerine eseridir.",
+        "C": "İtiraflar, Augustinus'un Orta Çağ'da yazdığı eserdir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Devlet'tir.\n- Alegori, gölgeleri gerçek sanan insanlar üzerinden idealar kuramını anlatır.\n- Eser ideal bir toplum düzenini de tartışır."
+        },
+        {
+          "type": "hint",
+          "md": "Eser, adalet ve ideal toplum düzeni üzerine bir diyalogdur."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Platon görünen dünyanın, değişmez idealar dünyasının yalnızca bir yansıması olduğunu düşünür. Mağarada zincirli insanlar, duvardaki gölgeleri tek gerçeklik sanır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          83,
+          83
+        ],
+        "quote": "Platon'un ünlü mağara alegorisi, Devlet adlı eserinde yer alır.",
+        "chapter": "Felsefe"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "felsefe"
+      ],
+      "vurgu": [],
+      "contentHash": "d79e39cdeb53f0e997ff572b63d7ce5939113ff60d0ab37bdc1eb9e6f8f91f36",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0434",
+      "conceptId": "fl-hoca-ogrenci-zinciri",
+      "stem": {
+        "md": "Aşağıdaki kişileri hocadan öğrenciye doğru sıralayın."
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Platon - Sokrates - Aristoteles - Büyük İskender"
+        },
+        {
+          "key": "B",
+          "md": "Sokrates - Aristoteles - Platon - Büyük İskender"
+        },
+        {
+          "key": "C",
+          "md": "Aristoteles - Platon - Sokrates - Büyük İskender"
+        },
+        {
+          "key": "D",
+          "md": "Sokrates - Platon - Aristoteles - Büyük İskender"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Platon, Sokrates'in öğrencisidir; ondan önce gelemez.",
+        "B": "Aristoteles, Platon'un Akademia'sında yetişmiştir.",
+        "C": "Sıralama tam tersine dönmüştür; Aristoteles en genç filozoftur."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Sokrates Platon'un hocasıdır.\n- Platon Aristoteles'in hocasıdır.\n- Aristoteles Makedonya'da genç İskender'e ders vermiştir."
+        },
+        {
+          "type": "hint",
+          "md": "Akademia'yı kuran kişi zincirin ortasındadır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Antik Yunan felsefesinin en etkili üç ismi birbirine öğretmen-öğrenci bağıyla bağlıdır. Bu zincir felsefenin Atina'dan Makedon sarayına uzanmasını da sağlamıştır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          83,
+          83
+        ],
+        "quote": "Sokrates Platon'un, Platon da Aristoteles'in hocasıdır; Aristoteles ise Büyük İskender'e hocalık etmiştir.",
+        "chapter": "Felsefe"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "felsefe"
+      ],
+      "vurgu": [],
+      "contentHash": "3eb73a31099ab546ead4352024287f69b1e24535fa0a45b2cca2cfe353ccd823",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0435",
+      "conceptId": "fl-organon",
+      "stem": {
+        "md": "Aristoteles'in mantıkla ilgili eserlerinin sonradan toplandığı külliyatın adı nedir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Novum Organum"
+        },
+        {
+          "key": "B",
+          "md": "Summa Theologica"
+        },
+        {
+          "key": "C",
+          "md": "Etika"
+        },
+        {
+          "key": "D",
+          "md": "Organon"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Novum Organum, Francis Bacon'ın tümevarımı savunan eseridir.",
+        "B": "Summa Theologica, Thomas Aquinas'ın teoloji eseridir.",
+        "C": "Etika, Spinoza'nın başyapıtıdır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Organon'dur.\n- Kelime \"alet, araç\" anlamına gelir; mantık düşünmenin aracı sayılmıştır.\n- Kategoriler ve Önermeler gibi eserleri içerir."
+        },
+        {
+          "type": "hint",
+          "md": "Bacon bu adı bilerek \"yeni\" sıfatıyla kendi eserine vermiştir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Aristoteles kıyas (tasım) kuramıyla biçimsel mantığın kurucusu sayılır. Mantığını bir bilim dalı değil, bütün bilimlerin aracı olarak görmüştür."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          83,
+          83
+        ],
+        "quote": "Aristoteles'in mantıkla ilgili eserleri sonradan Organon adı altında toplanmıştır.",
+        "chapter": "Felsefe"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "felsefe"
+      ],
+      "vurgu": [],
+      "contentHash": "85809ed522df3f3c00bde541848f0468ae4c1d0907c5696a355ddd6522135ca9",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0436",
+      "conceptId": "fl-akademia",
+      "stem": {
+        "md": "Platon'un Atina'da kurduğu felsefe okulunun adı nedir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Lykeion"
+        },
+        {
+          "key": "B",
+          "md": "Akademia"
+        },
+        {
+          "key": "C",
+          "md": "Stoa"
+        },
+        {
+          "key": "D",
+          "md": "Bahçe"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Lykeion, Aristoteles'in kurduğu okuldur.",
+        "C": "Stoa, Zenon'un ders verdiği ve Stoacılığa adını veren sütunlu galeridir.",
+        "D": "Bahçe, Epikuros'un okuluna verilen addır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Akademia'dır.\n- Bugünkü \"akademi\" kelimesi bu okuldan gelir.\n- Aristoteles burada yaklaşık yirmi yıl öğrenim görmüştür."
+        },
+        {
+          "type": "hint",
+          "md": "Bugün üniversite ve bilim kurumları için kullanılan bir kelimeyi düşün."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Antik Atina'daki felsefe okulları genellikle ders verilen yerin adıyla anıldı. Bu okullar yüzyıllarca öğrenci yetiştiren kurumlara dönüştü."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          83,
+          83
+        ],
+        "quote": "Platon Atina'da Akademia'yı, Aristoteles ise Lykeion'u kurmuştur.",
+        "chapter": "Felsefe"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "felsefe"
+      ],
+      "vurgu": [],
+      "contentHash": "509df5f69dd2e3332fa7af9246fd52b494841e2959d3ccde3e03bff90ecd542a",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0437",
+      "conceptId": "fl-epikuros-haz",
+      "stem": {
+        "md": "Mutluluğu acıdan ve kaygıdan uzak, ölçülü bir haz yaşamında gören Helenistik filozof kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Diyojen"
+        },
+        {
+          "key": "B",
+          "md": "Zenon"
+        },
+        {
+          "key": "C",
+          "md": "Augustinus"
+        },
+        {
+          "key": "D",
+          "md": "Epikuros"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Diyojen haz arayışını değil, her türlü gereksinimden arınmış sade yaşamı öne çıkarmıştır.",
+        "B": "Zenon'un kurduğu Stoacılık erdemi ve doğaya uygun yaşamı mutluluğun yolu saymıştır.",
+        "C": "Augustinus mutluluğu Tanrı'ya yönelmekte gören bir Hristiyan düşünürdür."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Epikuros'tur.\n- Hazdan kastı sınırsız zevk değil, ruhun dinginliğidir (ataraksia).\n- Okulu \"Bahçe\" olarak bilinir."
+        },
+        {
+          "type": "hint",
+          "md": "Atina'da bir bahçede öğrencileriyle yaşayan düşünürü düşün."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Helenistik dönemde felsefe evreni açıklamaktan çok, bireyin nasıl huzurlu yaşayacağı sorusuna yöneldi. Bu dönemin okulları mutluluğa farklı yollar önerdi."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          84,
+          84
+        ],
+        "quote": "Epikuros, mutluluğu acıdan ve kaygıdan uzak, ölçülü bir haz yaşamında görmüştür.",
+        "chapter": "Felsefe"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "felsefe"
+      ],
+      "vurgu": [],
+      "contentHash": "2c3f4b335c3a224da57db57265c179288a9d5724101363165ec031891e86696b",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0438",
+      "conceptId": "fl-marcus-stoa",
+      "stem": {
+        "md": "Kendime Düşünceler adlı eserin yazarı olan Roma imparatoru hangi felsefe okuluna bağlıdır?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Epikürcülük"
+        },
+        {
+          "key": "B",
+          "md": "Kiniklik"
+        },
+        {
+          "key": "C",
+          "md": "Skolastik"
+        },
+        {
+          "key": "D",
+          "md": "Stoacılık"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Epikürcülük hazzı ve dinginliği merkeze alır; eserin erdem ve görev vurgusuyla örtüşmez.",
+        "B": "Kiniklik toplumsal kuralları reddeden sade bir yaşamı öğütler, devlet yönetimini değil.",
+        "C": "Skolastik, Orta Çağ'a ait Hristiyan düşünce geleneğidir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Eserin yazarı Marcus Aurelius'tur.\n- Marcus Aurelius bir Stoacıdır.\n- Eser, erdem, görev ve kontrol edilemeyen şeyleri kabullenme üzerinedir."
+        },
+        {
+          "type": "hint",
+          "md": "Okulun adı, Atina'da derslerin verildiği sütunlu bir galeriden gelir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Roma döneminde bazı felsefe okulları devlet adamları arasında da yayıldı. Kendime Düşünceler, yazarının kendisine tuttuğu kişisel notlardan oluşur."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          84,
+          84
+        ],
+        "quote": "Roma imparatoru Marcus Aurelius, Stoacı düşüncelerini Kendime Düşünceler adlı eserinde kaleme almıştır.",
+        "chapter": "Felsefe"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "felsefe"
+      ],
+      "vurgu": [],
+      "contentHash": "6c5cb943cf35d95c78d349ec68029ab25f50185887129e96238f93a36e91f848",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0439",
+      "conceptId": "fl-diyojen-kinik",
+      "stem": {
+        "md": "Sinoplu Diyojen hangi felsefe okulunun en ünlü temsilcisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Kiniklik"
+        },
+        {
+          "key": "B",
+          "md": "Stoacılık"
+        },
+        {
+          "key": "C",
+          "md": "Epikürcülük"
+        },
+        {
+          "key": "D",
+          "md": "Elea okulu"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Stoacılık, Kıbrıslı Zenon'un kurduğu okuldur.",
+        "C": "Epikürcülük, Epikuros'un ölçülü haz öğretisidir.",
+        "D": "Elea okulu, Parmenides'in Sokrates öncesi okuludur."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Kiniklik'tir.\n- Diyojen'in fıçıda yaşadığı anlatılır.\n- Toplumsal gelenekleri ve gösterişi küçümseyen bir yaşamı savunmuştur."
+        },
+        {
+          "type": "hint",
+          "md": "Okulun adı Yunancada \"köpek\" kelimesiyle ilişkilidir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Bazı Antik düşünürler felsefeyi kuramdan çok bir yaşam biçimi olarak gördü. Gereksinimleri en aza indirmek ve toplumun yapay kurallarını sorgulamak bu yaşamın özüydü."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          84,
+          84
+        ],
+        "quote": "Sinoplu Diyojen, toplumsal geleneklere meydan okuyan ve sade yaşamı savunan Kinik okulun en ünlü temsilcisidir.",
+        "chapter": "Felsefe"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "felsefe"
+      ],
+      "vurgu": [],
+      "contentHash": "dba8996be5e32be55e815f2a535a28f31eb04e54532c35c549a6c7f77cb7c320",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0440",
+      "conceptId": "fl-augustinus",
+      "stem": {
+        "md": "İtiraflar ve Tanrı Devleti adlı eserleriyle Orta Çağ Hristiyan düşüncesini derinden etkileyen düşünür kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Thomas Aquinas"
+        },
+        {
+          "key": "B",
+          "md": "Farabi"
+        },
+        {
+          "key": "C",
+          "md": "Marcus Aurelius"
+        },
+        {
+          "key": "D",
+          "md": "Augustinus"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Thomas Aquinas'ın başyapıtı Summa Theologica'dır.",
+        "B": "Farabi İslam felsefesinin kurucularındandır.",
+        "C": "Marcus Aurelius bir Stoacı Roma imparatorudur."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Augustinus'tur.\n- Kuzey Afrika'da yaşamış bir kilise babasıdır.\n- Platoncu düşünceyi Hristiyan inancıyla birleştirmiştir."
+        },
+        {
+          "type": "hint",
+          "md": "Kuzey Afrika'daki Hippo kentinin piskoposunu düşün."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Geç Antik Çağ'da Hristiyan düşünürler Yunan felsefesini inançlarını açıklamak için kullanmaya başladı. Kişisel iç dökümü anlatan otobiyografik bir eser bu dönemin en bilinen metinlerindendir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          84,
+          84
+        ],
+        "quote": "Augustinus, İtiraflar ve Tanrı Devleti adlı eserleriyle Orta Çağ Hristiyan düşüncesini derinden etkilemiştir.",
+        "chapter": "Felsefe"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "felsefe"
+      ],
+      "vurgu": [],
+      "contentHash": "0addcef7b70dbbe00aa6db5d3170c29cd8b665d633020adc58be20596b9bc39d",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0441",
+      "conceptId": "fl-aquinas-summa",
+      "stem": {
+        "md": "Summa Theologica adlı eserinde Aristoteles felsefesini Hristiyan teolojisiyle uzlaştırmaya çalışan düşünür kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Augustinus"
+        },
+        {
+          "key": "B",
+          "md": "Francis Bacon"
+        },
+        {
+          "key": "C",
+          "md": "İbn Rüşd"
+        },
+        {
+          "key": "D",
+          "md": "Thomas Aquinas"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Augustinus daha çok Platoncu düşünceden yararlanmıştır.",
+        "B": "Francis Bacon Yeni Çağ'da deneysel yöntemi savunmuştur.",
+        "C": "İbn Rüşd Aristoteles şerhleri yazmış bir İslam filozofudur, Hristiyan teolojisiyle uğraşmamıştır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Thomas Aquinas'tır.\n- Skolastik felsefenin doruk noktası sayılır.\n- Tanrı'nın varlığına dair \"beş yol\" kanıtıyla bilinir."
+        },
+        {
+          "type": "hint",
+          "md": "13. yüzyılda yaşamış İtalyan bir Dominiken rahibidir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Orta Çağ Avrupası'nda Aristoteles'in eserleri yeniden tanınınca, akıl ile inancın nasıl uzlaştırılacağı büyük bir soru oldu. Skolastik düşünce bu soruya sistemli cevaplar aradı."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          84,
+          84
+        ],
+        "quote": "Thomas Aquinas, Summa Theologica adlı eserinde Aristoteles felsefesini Hristiyan teolojisiyle uzlaştırmaya çalışmıştır.",
+        "chapter": "Felsefe"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "felsefe"
+      ],
+      "vurgu": [],
+      "contentHash": "4134ba22f4caea20536d20de2aba2307d81663fd85db72b4e4bcd41199e9d164",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0442",
+      "conceptId": "fl-farabi-muallim-sani",
+      "stem": {
+        "md": "\"İkinci öğretmen\" anlamına gelen Muallim-i Sani unvanıyla anılan filozof kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "İbn Sina"
+        },
+        {
+          "key": "B",
+          "md": "İbn Rüşd"
+        },
+        {
+          "key": "C",
+          "md": "Gazali"
+        },
+        {
+          "key": "D",
+          "md": "Farabi"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "İbn Sina \"Şeyhü'r-Reis\" unvanıyla anılır.",
+        "B": "İbn Rüşd \"Şarih\" yani yorumcu olarak bilinir.",
+        "C": "Gazali \"Hüccetü'l-İslam\" unvanıyla tanınır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Farabi'dir.\n- \"Birinci öğretmen\" Aristoteles kabul edilir.\n- Mantık ve siyaset felsefesine önemli katkılar yapmıştır."
+        },
+        {
+          "type": "hint",
+          "md": "Birinci öğretmen sayılan kişi Aristoteles'tir; ondan sonra gelen İslam filozofunu düşün."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "İslam dünyasında Yunan felsefesi çeviriler yoluyla tanındı ve yeniden yorumlandı. Bu geleneğin büyük filozoflarına saygı ifade eden unvanlar verildi."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          85,
+          85
+        ],
+        "quote": "Farabi, Aristoteles'ten sonra 'ikinci öğretmen' anlamında Muallim-i Sani unvanıyla anılır.",
+        "chapter": "Felsefe"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "felsefe"
+      ],
+      "vurgu": [],
+      "contentHash": "0d1a85883e9d8316cd255f9c8f80a162e8641a2767b0646dec9b9e82135edcf7",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0443",
+      "conceptId": "fl-medinetul-fazila",
+      "stem": {
+        "md": "Erdemli insanlardan oluşan ideal bir toplumu tasarlayan El-Medinetü'l-Fazıla adlı eser kime aittir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Farabi"
+        },
+        {
+          "key": "B",
+          "md": "İbn Haldun"
+        },
+        {
+          "key": "C",
+          "md": "İbn Sina"
+        },
+        {
+          "key": "D",
+          "md": "Gazali"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "İbn Haldun'un en bilinen eseri Mukaddime'dir.",
+        "C": "İbn Sina en çok tıp ve felsefe ansiklopedileriyle tanınır.",
+        "D": "Gazali filozofları eleştiren bir eserle öne çıkmıştır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Farabi'dir.\n- Eserin adı \"Erdemli Şehir\" anlamına gelir.\n- Platon'un Devlet'inden etkilenmiştir."
+        },
+        {
+          "type": "hint",
+          "md": "Muallim-i Sani unvanlı düşünürün siyaset felsefesi eserini düşün."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "İdeal devlet tasarımları Antik Çağ'dan beri felsefenin konusudur. İslam felsefesinde de toplumun mutluluğa nasıl ulaşacağı ve kimin yönetmesi gerektiği tartışıldı."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          85,
+          85
+        ],
+        "quote": "Farabi'nin El-Medinetü'l-Fazıla adlı eseri, erdemli insanlardan oluşan ideal bir toplumu tasarlar.",
+        "chapter": "Felsefe"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "felsefe"
+      ],
+      "vurgu": [],
+      "contentHash": "60a12f2a40641eecb69144f8dba78d2ff5c571d2c6359841e8e7be9be02929e9",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0444",
+      "conceptId": "fl-ibn-sina-kanun",
+      "stem": {
+        "md": "Batı'da Avicenna adıyla tanınan ve El-Kanun fi't-Tıb adlı eseri yüzyıllarca Avrupa'da okutulan düşünür kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "İbn Sina"
+        },
+        {
+          "key": "B",
+          "md": "İbn Rüşd"
+        },
+        {
+          "key": "C",
+          "md": "Farabi"
+        },
+        {
+          "key": "D",
+          "md": "Biruni"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "İbn Rüşd Batı'da Averroes olarak bilinir.",
+        "C": "Farabi Batı'da Alpharabius olarak bilinir ve tıp eseriyle tanınmaz.",
+        "D": "Biruni daha çok astronomi ve coğrafya çalışmalarıyla tanınır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap İbn Sina'dır.\n- El-Kanun fi't-Tıb Latinceye çevrilip Avrupa tıp okullarında temel kitap olmuştur.\n- Hem hekim hem filozoftur."
+        },
+        {
+          "type": "hint",
+          "md": "Eserin adı \"Tıbbın Kanunu\" anlamına gelir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Orta Çağ'da İslam dünyasında yazılan bilim eserleri Latinceye çevrilerek Avrupa'ya ulaştı. Bu yolla bazı düşünürler Batı'da Latinceleşmiş adlarıyla tanındı."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          85,
+          85
+        ],
+        "quote": "Batı'da Avicenna adıyla tanınan İbn Sina'nın El-Kanun fi't-Tıb adlı eseri, yüzyıllarca Avrupa'da tıp eğitiminde okutulmuştur.",
+        "chapter": "Felsefe"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "felsefe"
+      ],
+      "vurgu": [],
+      "contentHash": "d41506a93319ace9130373df26500ab271ad456b4ab83bd95c426a7e1b93b5b1",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0445",
+      "conceptId": "fl-kitabus-sifa",
+      "stem": {
+        "md": "Batı'da Avicenna diye bilinen hekim-filozofun mantık, fizik, matematik ve metafiziği kapsayan felsefe ansiklopedisi hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "El-Medinetü'l-Fazıla"
+        },
+        {
+          "key": "B",
+          "md": "Kitabü'ş-Şifa"
+        },
+        {
+          "key": "C",
+          "md": "Tehafütü't-Tehafüt"
+        },
+        {
+          "key": "D",
+          "md": "Mukaddime"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "El-Medinetü'l-Fazıla Farabi'nin ideal toplum eseridir.",
+        "C": "Tehafütü't-Tehafüt İbn Rüşd'ün Gazali'ye cevabıdır.",
+        "D": "Mukaddime İbn Haldun'un tarih ve toplum üzerine eseridir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Avicenna, İbn Sina'dır.\n- Felsefe ansiklopedisi Kitabü'ş-Şifa'dır.\n- Adı \"şifa kitabı\" anlamına gelse de bir tıp kitabı değildir."
+        },
+        {
+          "type": "hint",
+          "md": "Adı tıbbı çağrıştırır ama içeriği felsefedir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Orta Çağ İslam filozofları bilgiyi bütün dallarıyla tek bir sistem içinde toplamaya çalıştı. Bu ansiklopedik eserler mantıktan başlayıp metafiziğe uzanan bir düzen izledi."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          85,
+          85
+        ],
+        "quote": "İbn Sina'nın Kitabü'ş-Şifa adlı eseri mantık, fizik, matematik ve metafiziği kapsayan bir felsefe ansiklopedisidir.",
+        "chapter": "Felsefe"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "felsefe"
+      ],
+      "vurgu": [],
+      "contentHash": "0b3b4437ad4083e983b95055225b80d1eea12d253429c3882cc0adb434ce3310",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0446",
+      "conceptId": "fl-ibn-rusd-sarih",
+      "stem": {
+        "md": "Aristoteles'in eserlerine yazdığı şerhlerle \"Şarih\" (yorumcu) diye anılan ve Batı'da Averroes olarak bilinen filozof kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "İbn Sina"
+        },
+        {
+          "key": "B",
+          "md": "Farabi"
+        },
+        {
+          "key": "C",
+          "md": "Gazali"
+        },
+        {
+          "key": "D",
+          "md": "İbn Rüşd"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "İbn Sina Batı'da Avicenna olarak bilinir.",
+        "B": "Farabi'nin unvanı \"ikinci öğretmen\"dir.",
+        "C": "Gazali filozofları eleştirmesiyle tanınır, Aristoteles şerhçisi değildir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap İbn Rüşd'dür.\n- Endülüs'te, Kurtuba'da doğmuştur.\n- Şerhleri Latin Avrupa'da Aristoteles'in yeniden anlaşılmasında etkili olmuştur."
+        },
+        {
+          "type": "hint",
+          "md": "Endülüslü bir kadı ve filozofu düşün."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Endülüs, Orta Çağ'da İslam, Hristiyan ve Yahudi düşünürlerin etkileşimine sahne oldu. Buradan yayılan Aristoteles yorumları Avrupa üniversitelerini etkiledi."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          85,
+          85
+        ],
+        "quote": "Batı'da Averroes olarak bilinen İbn Rüşd, Aristoteles'in eserlerine yazdığı şerhlerle 'Şarih' (yorumcu) diye anılmıştır.",
+        "chapter": "Felsefe"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "felsefe"
+      ],
+      "vurgu": [],
+      "contentHash": "f4f7c1c2aa49e066cfe1d63ded018122d833493f21a7bbe31602db41534c9710",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0447",
+      "conceptId": "fl-tehafut-eslestirme",
+      "stem": {
+        "md": "Eserleri yazarlarıyla eşleştirin.\n\n1. Tehafütü'l-Felasife\n2. Tehafütü't-Tehafüt\n3. El-Kanun fi't-Tıb\n\na. İbn Sina\nb. Gazali\nc. İbn Rüşd"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "1-c, 2-b, 3-a"
+        },
+        {
+          "key": "B",
+          "md": "1-b, 2-a, 3-c"
+        },
+        {
+          "key": "C",
+          "md": "1-a, 2-c, 3-b"
+        },
+        {
+          "key": "D",
+          "md": "1-b, 2-c, 3-a"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Tehafütü'l-Felasife filozofları eleştiren eserdir; filozofları savunan İbn Rüşd onu yazmamıştır.",
+        "B": "İbn Sina'nın eseri tıp kitabıdır, cevap niteliğindeki eser değildir.",
+        "C": "İbn Sina bu tartışmanın tarafı değildir; tıp kitabı Gazali'nin değildir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Tehafütü'l-Felasife (Filozofların Tutarsızlığı): Gazali.\n- Tehafütü't-Tehafüt (Tutarsızlığın Tutarsızlığı): İbn Rüşd'ün cevabı.\n- El-Kanun fi't-Tıb: İbn Sina."
+        },
+        {
+          "type": "hint",
+          "md": "İkinci eserin adı, birincisine verilmiş bir cevap olduğunu gösterir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "İslam düşüncesinde filozoflar ile kelamcılar arasında aklın ve vahyin sınırları üzerine ünlü bir tartışma yaşandı. Bu tartışma karşılıklı yazılan eserlerle sürdü."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          85,
+          85
+        ],
+        "quote": "Gazali'nin Tehafütü'l-Felasife adlı eserine İbn Rüşd, Tehafütü't-Tehafüt adlı eseriyle karşılık vermiştir.",
+        "chapter": "Felsefe"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "felsefe"
+      ],
+      "vurgu": [],
+      "contentHash": "59c4e571fb18e9901cc43a15d70e7fe69d8558474835f01d86eb519c2422baf8",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0448",
+      "conceptId": "fl-descartes-cogito",
+      "stem": {
+        "md": "Her şeyden şüphe ettikten sonra ulaştığı ilk kesin bilgiyi \"Düşünüyorum, öyleyse varım\" önermesiyle dile getiren filozof kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "John Locke"
+        },
+        {
+          "key": "B",
+          "md": "David Hume"
+        },
+        {
+          "key": "C",
+          "md": "René Descartes"
+        },
+        {
+          "key": "D",
+          "md": "Francis Bacon"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Locke bilginin kaynağını deneyimde görmüştür.",
+        "B": "Hume kuşkuculuğu nedensellik ve deneyim üzerine yoğunlaştırmış, kesin bir temel ilke kurmamıştır.",
+        "D": "Bacon deney ve gözleme dayalı tümevarımı savunmuştur."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Descartes'tır.\n- Yöntemsel şüpheyi bilginin sağlam temelini bulmak için kullanmıştır.\n- Modern felsefenin kurucusu sayılır."
+        },
+        {
+          "type": "hint",
+          "md": "Analitik geometrinin de kurucusu olan Fransız düşünürü düşün."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Yeni Çağ'da bazı filozoflar bilgiyi sarsılmaz bir temele oturtmak istedi. Bunun için önce şüphe edilebilecek her şeyi bir kenara koyup geriye kalan kesinliği aradılar."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          86,
+          86
+        ],
+        "quote": "Descartes, şüphe edemeyeceği ilk kesin bilgiyi 'Düşünüyorum, öyleyse varım' önermesiyle dile getirmiştir.",
+        "chapter": "Felsefe"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "felsefe"
+      ],
+      "vurgu": [],
+      "contentHash": "82b8fe68a5b78c2233f97f69e1d25fb7e3e57c57712250d35287aacdfc342818",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0449",
+      "conceptId": "fl-bacon-novum",
+      "stem": {
+        "md": "Novum Organum adlı eserinde deney ve gözleme dayalı tümevarım yöntemini savunan düşünür kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "René Descartes"
+        },
+        {
+          "key": "B",
+          "md": "Francis Bacon"
+        },
+        {
+          "key": "C",
+          "md": "Thomas Hobbes"
+        },
+        {
+          "key": "D",
+          "md": "Spinoza"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Descartes akıl yürütmeye ve matematiksel kesinliğe dayanan bir yöntem önermiştir.",
+        "C": "Hobbes en çok siyaset felsefesiyle tanınır.",
+        "D": "Spinoza geometrik yöntemle yazılmış bir ahlak eseriyle bilinir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Francis Bacon'dır.\n- Eserin adı Aristoteles'in Organon'una gönderme yapar.\n- Bilimsel yöntemin öncülerinden sayılır."
+        },
+        {
+          "type": "hint",
+          "md": "Eserin adı \"Yeni Araç\" anlamına gelir ve \"bilgi güçtür\" fikriyle anılan İngiliz düşünüre aittir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Bilim Devrimi döneminde doğayı anlamanın yolu tartışma konusu oldu. Kimi düşünürler otoriteye dayalı bilgiyi bırakıp sistemli gözleme yönelmeyi önerdi."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          86,
+          86
+        ],
+        "quote": "Francis Bacon, Novum Organum adlı eserinde deney ve gözleme dayalı tümevarım yöntemini savunmuştur.",
+        "chapter": "Felsefe"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "felsefe"
+      ],
+      "vurgu": [],
+      "contentHash": "09bc75ebbf679e48e7bf665a362cbdb67429ff8522880d8b25e35df04c662f9c",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0450",
+      "conceptId": "fl-spinoza-etika",
+      "stem": {
+        "md": "Etika adlı eserinde Tanrı ile doğayı tek bir töz olarak ele alan Hollandalı filozof kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Baruch Spinoza"
+        },
+        {
+          "key": "B",
+          "md": "Gottfried Leibniz"
+        },
+        {
+          "key": "C",
+          "md": "Immanuel Kant"
+        },
+        {
+          "key": "D",
+          "md": "Thomas Aquinas"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Leibniz evreni sayısız monaddan oluşan bir yapı olarak düşünmüştür.",
+        "C": "Kant Tanrı'nın varlığının kuramsal akılla kanıtlanamayacağını savunmuştur.",
+        "D": "Aquinas Tanrı'yı yaratılmış doğadan ayrı bir yaratıcı olarak görmüştür."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Spinoza'dır.\n- Etika, geometri kitabı gibi tanım ve önermelerle yazılmıştır.\n- Tanrı ile doğayı özdeş sayan görüşü panteizmle ilişkilendirilir."
+        },
+        {
+          "type": "hint",
+          "md": "Amsterdam'da doğan ve mercek yontarak geçimini sağlayan düşünürü düşün."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "17. yüzyıl rasyonalistleri evreni birkaç temel kavramdan mantıksal olarak türetmeye çalıştı. Töz, kendi başına var olan ve başka bir şeye dayanmayan varlık demektir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          86,
+          86
+        ],
+        "quote": "Spinoza, Etika adlı eserinde Tanrı ile doğayı tek bir töz olarak ele almıştır.",
+        "chapter": "Felsefe"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "felsefe"
+      ],
+      "vurgu": [],
+      "contentHash": "e331f846c4b0bdd89d356c701000e50a0e47acb031e65e4dd9264a81b4567ae0",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0451",
+      "conceptId": "fl-locke-tabula-rasa",
+      "stem": {
+        "md": "John Locke'a göre insan zihni doğuşta ____ gibidir ve bilgi deneyimle oluşur. Boşluğa hangisi gelmelidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "doğuştan fikirlerle dolu bir hazine"
+        },
+        {
+          "key": "B",
+          "md": "idealar dünyasının bir yansıması"
+        },
+        {
+          "key": "C",
+          "md": "tek ve değişmez bir töz"
+        },
+        {
+          "key": "D",
+          "md": "boş bir levha (tabula rasa)"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Doğuştan fikirler, Locke'un açıkça karşı çıktığı rasyonalist görüştür.",
+        "B": "İdealar dünyası Platon'un kavramıdır.",
+        "C": "Tek ve değişmez töz, Spinoza ve Parmenides'i çağrıştırır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap boş levhadır (tabula rasa).\n- Locke deneyciliğin (empirizm) önde gelen temsilcisidir.\n- Görüşünü İnsan Anlığı Üzerine Bir Deneme'de geliştirmiştir."
+        },
+        {
+          "type": "hint",
+          "md": "Üzerine henüz hiçbir şey yazılmamış bir yüzey düşün."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Yeni Çağ felsefesinde bilginin kaynağı büyük bir tartışma konusuydu. Bir taraf aklın doğuştan ilkelerine, diğer taraf duyu deneyimine güvendi."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          86,
+          86
+        ],
+        "quote": "John Locke, insan zihninin doğuşta boş bir levha (tabula rasa) olduğunu ve bilginin deneyimle oluştuğunu savunmuştur.",
+        "chapter": "Felsefe"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "felsefe"
+      ],
+      "vurgu": [],
+      "contentHash": "1159cbe7e3224960fbe43ccb9ed59feede142c3694530f74ca06e2bfb1055e86",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0452",
+      "conceptId": "fl-hobbes-leviathan",
+      "stem": {
+        "md": "Doğa durumunu \"herkesin herkese karşı savaşı\" olarak tanımlayan Leviathan adlı eserin yazarı kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Thomas Hobbes"
+        },
+        {
+          "key": "B",
+          "md": "Jean-Jacques Rousseau"
+        },
+        {
+          "key": "C",
+          "md": "John Locke"
+        },
+        {
+          "key": "D",
+          "md": "Niccolò Machiavelli"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Rousseau doğa durumundaki insanı daha masum ve özgür olarak betimlemiştir.",
+        "C": "Locke doğa durumunu doğal haklarla düzenlenmiş görece barışçıl bir durum olarak görmüştür.",
+        "D": "Machiavelli'nin ünlü eseri Prens'tir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Thomas Hobbes'tur.\n- Ona göre insanlar güvenlik için güçlü bir egemene yetkilerini devreder.\n- Leviathan, Kitab-ı Mukaddes'teki dev bir deniz yaratığının adıdır."
+        },
+        {
+          "type": "hint",
+          "md": "Eserin adı efsanevi bir deniz canavarından gelir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Toplum sözleşmesi kuramları, devletten önceki varsayımsal bir \"doğa durumu\"ndan yola çıkar. Her düşünür bu durumu farklı betimlediği için farklı devlet modellerine ulaştı."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          86,
+          86
+        ],
+        "quote": "Thomas Hobbes, Leviathan adlı eserinde doğa durumunu herkesin herkese karşı savaşı olarak tanımlamıştır.",
+        "chapter": "Felsefe"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "felsefe"
+      ],
+      "vurgu": [],
+      "contentHash": "382ef9508485f922902da97477ed4459aea76c41f75b308b6207c33aebefcdef",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0453",
+      "conceptId": "fl-rousseau-sozlesme",
+      "stem": {
+        "md": "Egemenliğin halkın genel iradesine dayandığını savunan Toplum Sözleşmesi adlı eserin yazarı kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Jean-Jacques Rousseau"
+        },
+        {
+          "key": "B",
+          "md": "Voltaire"
+        },
+        {
+          "key": "C",
+          "md": "Montesquieu"
+        },
+        {
+          "key": "D",
+          "md": "Thomas Hobbes"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Voltaire daha çok hoşgörü ve din eleştirisi yazılarıyla tanınır.",
+        "C": "Montesquieu'nün ünlü eseri Kanunların Ruhu'dur.",
+        "D": "Hobbes'un sözleşme kuramı Leviathan'da işlenir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Rousseau'dur.\n- \"Genel irade\" kavramı eserin merkezindedir.\n- Fransız Devrimi düşüncesini etkilemiştir."
+        },
+        {
+          "type": "hint",
+          "md": "Emile adlı eğitim romanının da yazarı olan Cenevreli düşünürü düşün."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Aydınlanma çağında meşru yönetimin kaynağı sorgulandı. Kimi düşünürler iktidarın kaynağını krallarda değil, yönetilenlerin rızasında aradı."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          86,
+          86
+        ],
+        "quote": "Jean-Jacques Rousseau'nun Toplum Sözleşmesi, egemenliğin halkın genel iradesine dayandığını savunur.",
+        "chapter": "Felsefe"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "felsefe"
+      ],
+      "vurgu": [],
+      "contentHash": "2ac9b64dbeb0fb203537500cf339f67c8d30d56c665db276d9b451c1c74ce769",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0454",
+      "conceptId": "fl-kategorik-imperatif",
+      "stem": {
+        "md": "Kant'ın ahlak felsefesinde, sonuçlarından bağımsız olarak koşulsuz geçerli olan ahlak yasasına ne ad verilir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Faydacılık ilkesi"
+        },
+        {
+          "key": "B",
+          "md": "Altın orta"
+        },
+        {
+          "key": "C",
+          "md": "Kategorik imperatif"
+        },
+        {
+          "key": "D",
+          "md": "Tabula rasa"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Faydacılık eylemi sonuçlarına göre değerlendirir; Bentham ve Mill'le ilişkilidir.",
+        "B": "Altın orta, Aristoteles'in erdemi iki aşırılık arasında görmesidir.",
+        "D": "Tabula rasa Locke'un zihin kavramıdır, ahlak yasası değildir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap kategorik imperatiftir.\n- Türkçede \"koşulsuz buyruk\" diye de çevrilir.\n- Eylemin ilkesinin evrensel bir yasa olabilmesini ölçüt alır."
+        },
+        {
+          "type": "hint",
+          "md": "Koşula bağlı buyrukların karşıtı olan kavramı düşün."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Ödev etiği, bir eylemin ahlaki değerini sonuçlarında değil, niyetinde ve ilkesinde arar. Bu yaklaşım sonuççu etik kuramlarla karşıtlık içindedir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          87,
+          87
+        ],
+        "quote": "Kant'ın ahlak felsefesinde koşulsuz geçerli ahlak yasasına kategorik imperatif (koşulsuz buyruk) denir.",
+        "chapter": "Felsefe"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "felsefe"
+      ],
+      "vurgu": [],
+      "contentHash": "a737d7b34b37b02e446e98c00bb194595ebf464230bc6bd864875a21c9474dce",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0455",
+      "conceptId": "fl-kant-elestiriler",
+      "stem": {
+        "md": "Aşağıdaki eserlerden hangisi Immanuel Kant'ın üç büyük eleştirisinden biri değildir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Saf Aklın Eleştirisi"
+        },
+        {
+          "key": "B",
+          "md": "Tinin Fenomenolojisi"
+        },
+        {
+          "key": "C",
+          "md": "Pratik Aklın Eleştirisi"
+        },
+        {
+          "key": "D",
+          "md": "Yargı Gücünün Eleştirisi"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Saf Aklın Eleştirisi, Kant'ın bilgi kuramını ortaya koyan ilk eleştirisidir.",
+        "C": "Pratik Aklın Eleştirisi, Kant'ın ahlak felsefesini işleyen eleştirisidir.",
+        "D": "Yargı Gücünün Eleştirisi, Kant'ın estetik ve amaçlılık üzerine eleştirisidir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Tinin Fenomenolojisi Hegel'in eseridir.\n- Kant'ın üç eleştirisi saf akıl, pratik akıl ve yargı gücü üzerinedir.\n- Kant Alman idealizminin başlangıç noktası sayılır."
+        },
+        {
+          "type": "hint",
+          "md": "Yanıt, Kant'tan sonra gelen bir Alman idealistin eseridir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Kant, aklın neyi bilip neyi bilemeyeceğini sınamak için \"eleştiri\" adını verdiği bir proje yürüttü. Bu proje bilgi, ahlak ve estetiği ayrı ayrı ele aldı."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          87,
+          87
+        ],
+        "quote": "Immanuel Kant'ın üç büyük eleştirisi Saf Aklın Eleştirisi, Pratik Aklın Eleştirisi ve Yargı Gücünün Eleştirisi'dir.",
+        "chapter": "Felsefe"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "felsefe"
+      ],
+      "vurgu": [],
+      "contentHash": "b6861fb2bd4cb30df13fe97553308ae1e0ba98109b8aef1222cc245574a42138",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0456",
+      "conceptId": "fl-marx-kapital",
+      "stem": {
+        "md": "Kapitalist üretim biçimini çözümlediği Kapital adlı eserin yazarı kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Adam Smith"
+        },
+        {
+          "key": "B",
+          "md": "Friedrich Nietzsche"
+        },
+        {
+          "key": "C",
+          "md": "Jean-Paul Sartre"
+        },
+        {
+          "key": "D",
+          "md": "Karl Marx"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Adam Smith'in ünlü eseri Ulusların Zenginliği'dir.",
+        "B": "Nietzsche ahlak ve değerler eleştirisiyle tanınır.",
+        "C": "Sartre 20. yüzyıl varoluşçuluğunun temsilcisidir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Karl Marx'tır.\n- Engels ile birlikte Komünist Manifesto'yu da yazmıştır.\n- Tarihi sınıflar arası çatışma üzerinden açıklar."
+        },
+        {
+          "type": "hint",
+          "md": "Komünist Manifesto'nun yazarlarından birini düşün."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "19. yüzyılda sanayileşme toplumsal yapıyı köklü biçimde değiştirdi. Bazı düşünürler emek, sermaye ve sınıf ilişkilerini felsefenin merkezine taşıdı."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          87,
+          87
+        ],
+        "quote": "Karl Marx, Kapital adlı eserinde kapitalist üretim biçimini çözümlemiştir.",
+        "chapter": "Felsefe"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "felsefe"
+      ],
+      "vurgu": [],
+      "contentHash": "b62d181df4afc78b8ea29cee6eb34fc093dfaa93e357498a03ebb95366a2eb4b",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0457",
+      "conceptId": "fl-nietzsche-zerdust",
+      "stem": {
+        "md": "Üstinsan kavramını Böyle Buyurdu Zerdüşt adlı eserinde işleyen filozof kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Arthur Schopenhauer"
+        },
+        {
+          "key": "B",
+          "md": "Søren Kierkegaard"
+        },
+        {
+          "key": "C",
+          "md": "Friedrich Nietzsche"
+        },
+        {
+          "key": "D",
+          "md": "Karl Marx"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Schopenhauer'in başyapıtı İstem ve Tasarım Olarak Dünya'dır.",
+        "B": "Kierkegaard varoluşçu felsefenin öncüsü olan Danimarkalı düşünürdür.",
+        "D": "Marx toplumsal ve ekonomik çözümlemeleriyle tanınır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Nietzsche'dir.\n- Üstinsan, geleneksel değerleri aşıp kendi değerlerini yaratan insan idealidir.\n- Eser şiirsel bir dille yazılmıştır."
+        },
+        {
+          "type": "hint",
+          "md": "\"Tanrı öldü\" sözüyle anılan Alman filozofu düşün."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "19. yüzyılın sonunda bazı düşünürler Batı'nın geleneksel ahlak değerlerini kökten sorguladı. Bu eleştiri sonraki varoluşçu ve postmodern düşünceyi etkiledi."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          87,
+          87
+        ],
+        "quote": "Friedrich Nietzsche, üstinsan kavramını Böyle Buyurdu Zerdüşt adlı eserinde işlemiştir.",
+        "chapter": "Felsefe"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "felsefe"
+      ],
+      "vurgu": [],
+      "contentHash": "586536b19dc2cd208389fa3817657cd0e69922fbefcf9d49cd58514a6d01fe9f",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0458",
+      "conceptId": "fl-sartre-varolus",
+      "stem": {
+        "md": "Varlık ve Hiçlik adlı eserin yazarı olan filozofun insan hakkındaki temel görüşü hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "İnsan önce var olur, özünü seçimleriyle sonradan oluşturur."
+        },
+        {
+          "key": "B",
+          "md": "İnsan zihni doğuştan gelen fikirlerle doludur."
+        },
+        {
+          "key": "C",
+          "md": "İnsan doğa durumunda herkese karşı savaş halindedir."
+        },
+        {
+          "key": "D",
+          "md": "İnsanın mutluluğu ölçülü hazda ve kaygısızlıktadır."
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Doğuştan fikirler rasyonalistlerin, özellikle Descartes'ın görüşüdür.",
+        "C": "Doğa durumunun savaş olduğu fikri Hobbes'a aittir.",
+        "D": "Ölçülü haz ve kaygısızlık Epikuros'un öğretisidir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Eserin yazarı Jean-Paul Sartre'dır.\n- Sartre'a göre varoluş özden önce gelir.\n- İnsan seçimlerinden sorumludur; bu onu özgürlüğe \"mahkûm\" kılar."
+        },
+        {
+          "type": "hint",
+          "md": "Yazar, 20. yüzyıl Fransız varoluşçuluğunun en bilinen ismidir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Varoluşçuluk, insanı önceden belirlenmiş bir doğaya sahip bir varlık olarak görmez. Özgürlük, sorumluluk ve kaygı bu akımın temel kavramlarıdır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          87,
+          87
+        ],
+        "quote": "Jean-Paul Sartre, insanın önce var olduğunu ve özünü kendi seçimleriyle sonradan oluşturduğunu savunmuştur.",
+        "chapter": "Felsefe"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "felsefe"
+      ],
+      "vurgu": [],
+      "contentHash": "b1ebad237701d86604676833e4faf9b49b21fe2bdc16f0d425e141ee9d99339a",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0459",
+      "conceptId": "fl-modern-kronoloji",
+      "stem": {
+        "md": "Aşağıdaki filozofları yaşadıkları döneme göre eskiden yeniye doğru sıralayın."
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Descartes - Kant - Nietzsche - Sartre"
+        },
+        {
+          "key": "B",
+          "md": "Kant - Descartes - Nietzsche - Sartre"
+        },
+        {
+          "key": "C",
+          "md": "Descartes - Nietzsche - Kant - Sartre"
+        },
+        {
+          "key": "D",
+          "md": "Descartes - Kant - Sartre - Nietzsche"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Kant, 17. yüzyılda yaşamış Descartes'tan sonra gelir.",
+        "C": "Nietzsche 19. yüzyılda yaşamıştır; 18. yüzyıl filozofu Kant'tan önce gelemez.",
+        "D": "Sartre 20. yüzyıl filozofudur; 19. yüzyılda yaşamış Nietzsche'den sonra gelir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Descartes: 17. yüzyıl.\n- Kant: 18. yüzyıl.\n- Nietzsche: 19. yüzyıl; Sartre: 20. yüzyıl."
+        },
+        {
+          "type": "hint",
+          "md": "Modern felsefenin kurucusu sayılan isimle başla, varoluşçulukla bitir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Yeni Çağ'dan 20. yüzyıla felsefenin ana sorusu bilginin temelinden insan varoluşuna doğru kaydı. Her yüzyıl bir öncekinin bıraktığı sorular üzerine kuruldu."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          87,
+          87
+        ],
+        "quote": "Kronolojik olarak Descartes 17., Kant 18., Nietzsche 19. ve Sartre 20. yüzyıl filozofudur.",
+        "chapter": "Felsefe"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "felsefe"
+      ],
+      "vurgu": [],
+      "contentHash": "73eeb21a1ffb71a6b8c99259760c2a723f0feefeb40fe01b57713ae74c0836b9",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0460",
+      "conceptId": "fl-epistemoloji",
+      "stem": {
+        "md": "Bilginin kaynağını, sınırlarını ve doğruluğunu inceleyen felsefe dalı hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Epistemoloji"
+        },
+        {
+          "key": "B",
+          "md": "Ontoloji"
+        },
+        {
+          "key": "C",
+          "md": "Estetik"
+        },
+        {
+          "key": "D",
+          "md": "Etik"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Ontoloji varlığın ne olduğunu inceler.",
+        "C": "Estetik güzellik ve sanatı inceler.",
+        "D": "Etik ahlaki değerleri ve doğru eylemi inceler."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap epistemolojidir.\n- Türkçede bilgi felsefesi olarak da anılır.\n- \"Neyi bilebilirim?\" sorusu bu dalın temel sorusudur."
+        },
+        {
+          "type": "hint",
+          "md": "Yunanca \"episteme\" bilgi demektir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Felsefe, inceledikleri temel sorulara göre dallara ayrılır. Bu dalların adları genellikle Yunanca kökenli kelimelerden türetilmiştir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          88,
+          88
+        ],
+        "quote": "Bilginin kaynağını, sınırlarını ve doğruluğunu inceleyen felsefe dalına epistemoloji (bilgi felsefesi) denir.",
+        "chapter": "Felsefe"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "felsefe"
+      ],
+      "vurgu": [],
+      "contentHash": "f92834100ce1b877fb1df77e7c447d44ee0c50ede847f4e4064b8a8aaae327c8",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0461",
+      "conceptId": "fl-ontoloji",
+      "stem": {
+        "md": "Varlığın ne olduğunu ve temel niteliklerini inceleyen felsefe dalı hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Epistemoloji"
+        },
+        {
+          "key": "B",
+          "md": "Mantık"
+        },
+        {
+          "key": "C",
+          "md": "Estetik"
+        },
+        {
+          "key": "D",
+          "md": "Ontoloji"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Epistemoloji bilginin kaynağını ve sınırlarını inceler.",
+        "B": "Mantık doğru akıl yürütmenin kurallarını inceler.",
+        "C": "Estetik güzellik ve sanatı inceler."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap ontolojidir.\n- Varlık felsefesi olarak da anılır.\n- \"Var olan nedir?\" sorusu bu dalın merkezindedir."
+        },
+        {
+          "type": "hint",
+          "md": "Yunanca \"on\" kökü \"var olan\" anlamına gelir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Metafizik geleneğinin önemli bir bölümü, gerçekte neyin var olduğu ve var olmanın ne demek olduğu sorusuyla ilgilenir. Bu soru Antik Çağ'dan beri felsefenin merkezindedir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          88,
+          88
+        ],
+        "quote": "Varlığın ne olduğunu ve temel niteliklerini inceleyen felsefe dalına ontoloji (varlık felsefesi) denir.",
+        "chapter": "Felsefe"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "felsefe"
+      ],
+      "vurgu": [],
+      "contentHash": "a51513a9c66e00e5b86d1c2f5062b3648a2e9b367d306cc8c604287884462851",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0462",
+      "conceptId": "fl-etik-dali",
+      "stem": {
+        "md": "İyi ve kötü, doğru ve yanlış eylem ile ahlaki değerleri inceleyen felsefe dalı ____ olarak adlandırılır. Boşluğa hangisi gelmelidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "estetik"
+        },
+        {
+          "key": "B",
+          "md": "mantık"
+        },
+        {
+          "key": "C",
+          "md": "etik"
+        },
+        {
+          "key": "D",
+          "md": "ontoloji"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Estetik güzellik ve sanatla ilgilenir, ahlakla değil.",
+        "B": "Mantık akıl yürütmenin geçerliliğini inceler.",
+        "D": "Ontoloji varlığın doğasını inceler."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap etiktir.\n- Ahlak felsefesi olarak da bilinir.\n- Erdem etiği, ödev etiği ve sonuççuluk başlıca yaklaşımlarıdır."
+        },
+        {
+          "type": "hint",
+          "md": "Kelime Yunanca \"ethos\" yani alışkanlık, karakter kökünden gelir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Felsefenin bazı dalları ne olduğunu değil, ne olması gerektiğini sorar. Bu değer soruları insan davranışının yargılanmasıyla ilgilidir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          88,
+          88
+        ],
+        "quote": "Etik, iyi ve kötü, doğru ve yanlış eylemi ve ahlaki değerleri inceleyen felsefe dalıdır.",
+        "chapter": "Felsefe"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "felsefe"
+      ],
+      "vurgu": [],
+      "contentHash": "fee114a1c5a149024bed765331c30c7ccb05f85ea134656ac6fffa7a72a99ae5",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0463",
+      "conceptId": "fl-tumdengelim",
+      "stem": {
+        "md": "\"Bütün insanlar ölümlüdür; Sokrates bir insandır; o hâlde Sokrates ölümlüdür.\" Bu akıl yürütme hangi türdendir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Tümdengelim"
+        },
+        {
+          "key": "B",
+          "md": "Tümevarım"
+        },
+        {
+          "key": "C",
+          "md": "Analoji"
+        },
+        {
+          "key": "D",
+          "md": "Diyalektik"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Tümevarım tek tek gözlemlerden genel bir sonuca ulaşır; burada genelden özele gidilmektedir.",
+        "C": "Analoji iki durum arasındaki benzerlikten sonuç çıkarır.",
+        "D": "Diyalektik karşıt görüşlerin çatışmasıyla ilerleyen bir yöntemdir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap tümdengelimdir.\n- Genel bir öncülden özel bir sonuca varılmıştır.\n- Bu yapı Aristoteles'in kıyas (tasım) örneklerinin en bilinenidir."
+        },
+        {
+          "type": "hint",
+          "md": "Akıl yürütmenin genelden mi özele, özelden mi genele gittiğine bak."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Mantık, akıl yürütmeleri yönlerine ve yapılarına göre sınıflandırır. Öncüller doğruysa sonucun zorunlu olarak doğru olduğu çıkarımlar geçerli sayılır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          88,
+          88
+        ],
+        "quote": "Genel önermelerden özel bir sonuca ulaşan akıl yürütmeye tümdengelim, özel durumlardan genel bir sonuca ulaşana tümevarım denir.",
+        "chapter": "Felsefe"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "felsefe"
+      ],
+      "vurgu": [],
+      "contentHash": "8446f59008053c26c518ef4901ac36d19b6c0f820016de1a7ca857123d496bab",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0464",
+      "conceptId": "fl-rasyonalizm",
+      "stem": {
+        "md": "Descartes, Spinoza ve Leibniz'in ortak olarak temsil ettiği, bilginin kaynağını akılda gören akım hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Empirizm"
+        },
+        {
+          "key": "B",
+          "md": "Pozitivizm"
+        },
+        {
+          "key": "C",
+          "md": "Pragmatizm"
+        },
+        {
+          "key": "D",
+          "md": "Rasyonalizm"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Empirizm bilginin kaynağını deneyde görür; Locke ve Hume'la ilişkilidir.",
+        "B": "Pozitivizm 19. yüzyılda Auguste Comte ile öne çıkan, bilimsel olguları esas alan akımdır.",
+        "C": "Pragmatizm bilginin değerini pratik sonuçlarında arayan Amerikan akımıdır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap rasyonalizmdir.\n- Türkçede akılcılık olarak da anılır.\n- Matematiksel kesinliği bilginin modeli olarak görür."
+        },
+        {
+          "type": "hint",
+          "md": "Latince \"ratio\" akıl demektir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Yeni Çağ'da Kıta Avrupası ve Britanya filozofları bilginin kaynağı konusunda iki büyük gruba ayrıldı. Kant sonradan bu iki yaklaşımı uzlaştırmaya çalıştı."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          88,
+          88
+        ],
+        "quote": "Bilginin kaynağını akılda gören akıma rasyonalizm, deneyde gören akıma empirizm denir.",
+        "chapter": "Felsefe"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "felsefe"
+      ],
+      "vurgu": [],
+      "contentHash": "c95f377afa3af8cc813efe7bf32faf6d99e0c91296f41b41b227fdfc33e849fa",
+      "deleted": false
+    }
+  ]
+}

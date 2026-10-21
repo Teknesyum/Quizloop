@@ -129,10 +129,29 @@ const m0003: Migration = {
   }
 }
 
+const m0004: Migration = {
+  async up(db: Kysely<unknown>) {
+    await db.schema.alterTable('session').addColumn('chapter', 'text').execute()
+    await db.schema
+      .alterTable('session')
+      .addColumn('mixed', 'integer', (c) => c.notNull().defaultTo(0))
+      .execute()
+    await db.schema.alterTable('review_log').addColumn('picks', 'text').execute()
+    await db.schema.createIndex('session_started').on('session').column('started_at').execute()
+  },
+  async down(db: Kysely<unknown>) {
+    await db.schema.dropIndex('session_started').execute()
+    await db.schema.alterTable('review_log').dropColumn('picks').execute()
+    await db.schema.alterTable('session').dropColumn('mixed').execute()
+    await db.schema.alterTable('session').dropColumn('chapter').execute()
+  }
+}
+
 export const migrations: Record<string, Migration> = {
   '0001_initial': m0001,
   '0002_card_chapter': m0002,
-  '0003_module_fingerprint': m0003
+  '0003_module_fingerprint': m0003,
+  '0004_history': m0004
 }
 
 export const provider: MigrationProvider = {

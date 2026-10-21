@@ -37,7 +37,7 @@ export interface GoalSetting {
   perDay?: number
 }
 
-export const SAMPLE_IDS: readonly string[] = ['genel-kultur', 'quizloop-rehberi']
+export const SAMPLE_IDS: readonly string[] = ['arapca', 'genel-kultur', 'ingilizce-lite']
 
 export const GOAL_DAYS = [7, 21, 30, 90, 365, 1095] as const
 
@@ -127,6 +127,43 @@ export interface StatsOverview {
   progress: { id: string; name: string; total: number; seen: number; retired: number }[]
 }
 
+export interface RecentSession {
+  sessionId: string
+  moduleId: string
+  name: string
+  chapter: string | null
+  mixed: boolean
+  startedAt: string
+  endedAt: string | null
+  seen: number
+  correct: number
+  total: number
+  retired: number
+}
+
+export interface HistoryItem {
+  id: number
+  moduleId: string
+  moduleName: string
+  questionId: string
+  chapter: string | null
+  kind: QuestionKind | null
+  stem: string
+  answer: ChoiceKey | null
+  correctKey: ChoiceKey | null
+  correct: boolean
+  ts: string
+  durationMs: number
+}
+
+export interface HistoryPage {
+  items: HistoryItem[]
+  total: number
+  offset: number
+}
+
+export const HISTORY_PAGE = 50
+
 export type CardStatus = 'yeni' | 'ogreniyor' | 'tekrar' | 'emekli'
 
 export interface BankRow {
@@ -193,9 +230,11 @@ export interface Settings {
   fontScale: number
   autoUpdate: boolean
   bookAuto: boolean
+  autoChoices: boolean
   welcomeSeen: boolean
   newsSeen: string
   samplesUsed: boolean
+  defaults: string[]
   goals: Record<string, GoalSetting>
   goalNotify: boolean
   theme: string
@@ -313,11 +352,13 @@ export interface IntegrityReport {
 export const SOURCE_URL = 'https://github.com/Teknesyum/Quizloop'
 export const SHARE_URL = 'https://teknesyum.github.io/Quizloop/'
 export const DOWNLOAD_URL = `${SOURCE_URL}/releases/latest`
+export const PLAY_URL = 'https://play.google.com/store/apps/details?id=com.teknesyum.QuizLoop'
 export function shareMessage(text: string): string {
   return `${String(text).slice(0, 300)}
 
+Android: ${PLAY_URL}
 Web: ${SHARE_URL}
-Windows · macOS · Linux · Android: ${DOWNLOAD_URL}`
+Windows · macOS · Linux: ${DOWNLOAD_URL}`
 }
 export type ShareResult = 'shared' | 'copied' | 'cancelled'
 
@@ -443,6 +484,10 @@ export interface QuizloopApi {
   stats: {
     overview(): Promise<StatsOverview>
   }
+  history: {
+    recent(limit?: number): Promise<RecentSession[]>
+    page(offset: number, limit?: number): Promise<HistoryPage>
+  }
 }
 
 export const CH = {
@@ -495,5 +540,7 @@ export const CH = {
   sourceBook: 'source:book',
   sourcePickBook: 'source:pickBook',
   sourceForgetBook: 'source:forgetBook',
-  statsOverview: 'stats:overview'
+  statsOverview: 'stats:overview',
+  historyRecent: 'history:recent',
+  historyPage: 'history:page'
 } as const

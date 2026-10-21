@@ -1,0 +1,2540 @@
+{
+  "blockId": "0015",
+  "questions": [
+    {
+      "id": "genel-kultur-0585",
+      "conceptId": "tk-gutenberg",
+      "stem": {
+        "md": "15. yüzyılın ortasında Avrupa'da hareketli metal harflerle baskı yöntemini geliştiren kişi kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Johannes Gutenberg"
+        },
+        {
+          "key": "B",
+          "md": "Leonardo da Vinci"
+        },
+        {
+          "key": "C",
+          "md": "Galileo Galilei"
+        },
+        {
+          "key": "D",
+          "md": "Isaac Newton"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Leonardo da Vinci ressam ve çizimleriyle bilinen bir tasarımcıdır; matbaayı geliştirmemiştir.",
+        "C": "Galileo 16. ve 17. yüzyılda gök gözlemleriyle tanınır.",
+        "D": "Newton 17. yüzyılda yaşamış bir fizikçidir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Yöntemi Johannes Gutenberg geliştirmiştir.\n- Matbaa, kitapların hızlı ve ucuz çoğaltılmasını sağlamıştır."
+        },
+        {
+          "type": "hint",
+          "md": "Basılan ünlü İncil onun adıyla anılır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Matbaadan önce Avrupa'da kitaplar elle kopyalanırdı. Harflerin tek tek dökülüp yeniden dizilebilmesi baskıyı hızlandırdı ve bilginin yayılmasını kolaylaştırdı."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          112,
+          112
+        ],
+        "quote": "Johannes Gutenberg, 15. yüzyılın ortasında Avrupa'da hareketli metal harflerle baskı yöntemini geliştirmiştir.",
+        "chapter": "Teknoloji"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "icatlar"
+      ],
+      "vurgu": [],
+      "contentHash": "2c76e160bdd57d45970ae3a2bf38a6581cd73fd9d06c90076d97cd2bf20743f8",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0586",
+      "conceptId": "tk-watt-birim",
+      "stem": {
+        "md": "Buhar makinesini geliştirerek verimini önemli ölçüde artıran mucidin adı hangi fiziksel büyüklüğün birimine verilmiştir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Gerilim"
+        },
+        {
+          "key": "B",
+          "md": "Elektrik akımı"
+        },
+        {
+          "key": "C",
+          "md": "Direnç"
+        },
+        {
+          "key": "D",
+          "md": "Güç"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Gerilimin birimi volttur ve Volta'dan gelir.",
+        "B": "Akımın birimi amperdir ve Ampère'den gelir.",
+        "C": "Direncin birimi ohmdur ve Ohm'dan gelir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Mucit James Watt'tır.\n- Güç birimi watt onun adını taşır."
+        },
+        {
+          "type": "hint",
+          "md": "Ampullerin üzerindeki sayının birimini düşün."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Bilimde birçok ölçü birimi, o alanda iz bırakmış bir bilim insanının ya da mucidin adıyla anılır. Buhar makinesindeki gelişmeler Sanayi Devrimi'ni hızlandırdı."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          112,
+          112
+        ],
+        "quote": "Güç birimi watt, adını James Watt'tan alır.",
+        "chapter": "Teknoloji"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "icatlar"
+      ],
+      "vurgu": [],
+      "contentHash": "9daf9cd902fd30d74816f3cc0486a7e474770c3beabfa6e812923d4ed30aad2e",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0587",
+      "conceptId": "tk-volta-pil",
+      "stem": {
+        "md": "1800 yılında ilk elektrik pilini yapan bilim insanı kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Michael Faraday"
+        },
+        {
+          "key": "B",
+          "md": "Thomas Edison"
+        },
+        {
+          "key": "C",
+          "md": "Alessandro Volta"
+        },
+        {
+          "key": "D",
+          "md": "André-Marie Ampère"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Faraday elektromanyetik indüksiyonu keşfetmiştir.",
+        "B": "Edison ampul ve fonograf gibi icatlarla tanınır; 1800'de henüz doğmamıştı.",
+        "D": "Ampère elektrik akımı ile manyetizma arasındaki ilişkiyi incelemiştir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- İlk elektrik pilini Alessandro Volta yapmıştır.\n- Gerilim birimi volt onun adını taşır."
+        },
+        {
+          "type": "hint",
+          "md": "Adı bir elektrik biriminde yaşar."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Pil, kimyasal enerjiyi elektrik enerjisine çevirir. Sürekli akım veren ilk düzenek, elektrikle ilgili deneylerin önünü açtı."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          112,
+          112
+        ],
+        "quote": "Alessandro Volta, 1800 yılında ilk elektrik pilini yapmıştır.",
+        "chapter": "Teknoloji"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "icatlar"
+      ],
+      "vurgu": [],
+      "contentHash": "439d9176c8b6adeb8634d3923f4ddacb61ebf1d4c71f1f7d81c0ce4b3eaabe91",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0588",
+      "conceptId": "tk-faraday",
+      "stem": {
+        "md": "Elektromanyetik indüksiyonu keşfederek elektrik jeneratörünün temelini atan bilim insanı kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "James Clerk Maxwell"
+        },
+        {
+          "key": "B",
+          "md": "Georg Ohm"
+        },
+        {
+          "key": "C",
+          "md": "Nikola Tesla"
+        },
+        {
+          "key": "D",
+          "md": "Michael Faraday"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Maxwell elektrik ve manyetizmayı denklemlerle birleştirmiştir.",
+        "B": "Ohm akım, gerilim ve direnç arasındaki yasayla bilinir.",
+        "C": "Tesla alternatif akım sistemleriyle tanınır; indüksiyonun keşfinden sonra doğmuştur."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- İndüksiyonu Michael Faraday keşfetmiştir.\n- Değişen manyetik alanın akım oluşturması jeneratörlerin çalışma ilkesidir."
+        },
+        {
+          "type": "hint",
+          "md": "Kapasite birimi farad onun adından gelir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Bir iletkenin yakınındaki manyetik alan değiştiğinde iletkende akım oluşur. Bugün elektrik santrallerinin çoğu bu ilkeyle çalışır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          112,
+          112
+        ],
+        "quote": "Michael Faraday, 1831 yılında elektromanyetik indüksiyonu keşfederek elektrik jeneratörünün temelini atmıştır.",
+        "chapter": "Teknoloji"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "icatlar"
+      ],
+      "vurgu": [],
+      "contentHash": "496280a3f84215157be019b49fae70f40da285b6eb4519e7445d8b519ddd57c3",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0589",
+      "conceptId": "tk-icat-siralama",
+      "stem": {
+        "md": "Aşağıdaki gelişmelerin eskiden yeniye doğru sıralaması hangisidir?\n\n- Faraday'ın indüksiyonu keşfi\n- Gutenberg'in baskı yöntemi\n- Volta'nın pili\n- Watt'ın buhar makinesini geliştirmesi"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Gutenberg - Volta - Watt - Faraday"
+        },
+        {
+          "key": "B",
+          "md": "Watt - Gutenberg - Faraday - Volta"
+        },
+        {
+          "key": "C",
+          "md": "Gutenberg - Watt - Volta - Faraday"
+        },
+        {
+          "key": "D",
+          "md": "Gutenberg - Watt - Faraday - Volta"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Watt'ın çalışmaları 18. yüzyıldadır, Volta'nın pili ise 1800'de yapılmıştır.",
+        "B": "Gutenberg 15. yüzyılda yaşamıştır, Watt'tan çok öncedir.",
+        "D": "Faraday'ın keşfi 1831'dedir, Volta'nın pilinden sonradır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Gutenberg: 15. yüzyıl ortası.\n- Watt: 18. yüzyıl.\n- Volta: 1800.\n- Faraday: 1831."
+        },
+        {
+          "type": "hint",
+          "md": "Volta ile Faraday arasında otuz yıldan fazla vardır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Bu dört gelişme, bilginin yayılmasından makineleşmeye ve elektriğe uzanan bir çizgi çizer. Her biri bir sonrakinin zeminini hazırlamıştır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          112,
+          112
+        ],
+        "quote": "Alessandro Volta, 1800 yılında ilk elektrik pilini yapmıştır.",
+        "chapter": "Teknoloji"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "icatlar"
+      ],
+      "vurgu": [],
+      "contentHash": "0c5dcf003aa9cf4229ace0a70342514c8bcc428fb6049cf729deb2a6276bbea6",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0590",
+      "conceptId": "tk-sos-mors",
+      "stem": {
+        "md": "Mors alfabesinde SOS imdat çağrısı nasıl verilir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Üç çizgi, üç nokta, üç çizgi"
+        },
+        {
+          "key": "B",
+          "md": "Dokuz nokta"
+        },
+        {
+          "key": "C",
+          "md": "Üç nokta, üç çizgi, üç nokta"
+        },
+        {
+          "key": "D",
+          "md": "Bir nokta, bir çizgi, sırayla altı kez"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Bu dizi O, S, O harflerine karşılık gelir.",
+        "B": "Dokuz nokta S harfinin üç kez yinelenmesidir; O harfi eksiktir.",
+        "D": "Nokta ve çizginin sırayla gelmesi başka harfler oluşturur."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- SOS: üç nokta (S), üç çizgi (O), üç nokta (S).\n- Kolay ayırt edildiği için imdat çağrısı olarak seçilmiştir."
+        },
+        {
+          "type": "hint",
+          "md": "S harfi noktalardan, O harfi çizgilerden oluşur."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Mors alfabesi harfleri kısa ve uzun sinyallerin dizileriyle gösterir. Işık, ses ya da elektrik sinyaliyle gönderilebildiği için denizcilikte uzun süre kullanıldı."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          113,
+          113
+        ],
+        "quote": "Mors alfabesinde SOS imdat çağrısı üç nokta, üç çizgi, üç nokta olarak verilir.",
+        "chapter": "Teknoloji"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "iletişim"
+      ],
+      "vurgu": [],
+      "contentHash": "03763dc9e93078f427229aea8d650fd54e624786c1ccd1943be17e93986bdc08",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0591",
+      "conceptId": "tk-bell-telefon",
+      "stem": {
+        "md": "1876 yılında telefon için patent alan mucit kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Thomas Edison"
+        },
+        {
+          "key": "B",
+          "md": "Guglielmo Marconi"
+        },
+        {
+          "key": "C",
+          "md": "Alexander Graham Bell"
+        },
+        {
+          "key": "D",
+          "md": "Samuel Morse"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Edison ampul ve fonografla tanınır.",
+        "B": "Marconi telsiz ve radyo iletişimiyle tanınır.",
+        "D": "Morse telgraf koduyla tanınır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Telefon patentini Alexander Graham Bell almıştır.\n- Telefon, sesi elektrik sinyaline çevirerek uzağa iletir."
+        },
+        {
+          "type": "hint",
+          "md": "Soyadı İngilizcede zil anlamına gelir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Telefondan önce uzak mesafeli iletişim yazılı kodlarla, telgrafla yapılıyordu. Sesin doğrudan iletilmesi iletişimi kökten değiştirdi."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          113,
+          113
+        ],
+        "quote": "Alexander Graham Bell, telefon için 1876 yılında patent almıştır.",
+        "chapter": "Teknoloji"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "iletişim"
+      ],
+      "vurgu": [],
+      "contentHash": "db164f0503a110410cf3db2e65a0248cdcd4c3ceeaccf20a0042d9f482630388",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0592",
+      "conceptId": "tk-marconi",
+      "stem": {
+        "md": "Telsiz telgraf ile radyo iletişiminin öncülerinden olan İtalyan mucit kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Alessandro Volta"
+        },
+        {
+          "key": "B",
+          "md": "Luigi Galvani"
+        },
+        {
+          "key": "C",
+          "md": "Guglielmo Marconi"
+        },
+        {
+          "key": "D",
+          "md": "Enrico Fermi"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Volta elektrik piliyle tanınır.",
+        "B": "Galvani hayvan dokusunda elektrik üzerine deneyleriyle tanınır.",
+        "D": "Fermi nükleer fizik çalışmalarıyla tanınır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Bu mucit Guglielmo Marconi'dir.\n- Telsiz telgraf, mesajları kablo yerine elektromanyetik dalgalarla iletir."
+        },
+        {
+          "type": "hint",
+          "md": "Kablosuz iletişimin öncüsüdür."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Radyo dalgaları, ışık gibi elektromanyetik dalgalardır ve kablo gerektirmeden uzağa ulaşır. Gemiden karaya haberleşme bu teknolojinin ilk büyük kullanım alanlarındandı."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          113,
+          113
+        ],
+        "quote": "Guglielmo Marconi, telsiz telgraf ile radyo iletişiminin öncülerinden biridir.",
+        "chapter": "Teknoloji"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "iletişim"
+      ],
+      "vurgu": [],
+      "contentHash": "e78b914ca9a8243b5142c74607f8ebe63828e8210a9f2c7584787c488dc96420",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0593",
+      "conceptId": "tk-sputnik",
+      "stem": {
+        "md": "Dünya'nın ilk yapay uydusunun adı nedir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Apollo 11"
+        },
+        {
+          "key": "B",
+          "md": "Vostok 1"
+        },
+        {
+          "key": "C",
+          "md": "Sputnik 1"
+        },
+        {
+          "key": "D",
+          "md": "Explorer 1"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Apollo 11, Ay'a insan indiren görevdir.",
+        "B": "Vostok 1, ilk insanlı uzay uçuşunu yapan araçtır.",
+        "D": "Explorer 1, ABD'nin ilk yapay uydusudur."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- İlk yapay uydu Sputnik 1'dir.\n- 1957'de Sovyetler Birliği tarafından fırlatılmıştır."
+        },
+        {
+          "type": "hint",
+          "md": "Rusça yol arkadaşı anlamına gelir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Yapay uydular bugün iletişim, hava tahmini ve konum belirleme için kullanılır. İlk uydunun fırlatılması, iki büyük güç arasındaki uzay yarışını başlattı."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          113,
+          113
+        ],
+        "quote": "Dünya'nın ilk yapay uydusu Sputnik 1, 1957 yılında Sovyetler Birliği tarafından fırlatılmıştır.",
+        "chapter": "Teknoloji"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "iletişim"
+      ],
+      "vurgu": [],
+      "contentHash": "7b0fce70ddb4ef91b3fbe981be2408e9cffca9bc37a365ad2323b832eb133171",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0594",
+      "conceptId": "tk-baird-televizyon",
+      "stem": {
+        "md": "1920'lerde ilk çalışan televizyon sistemlerinden birini gösteren İskoç mucit kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Alexander Graham Bell"
+        },
+        {
+          "key": "B",
+          "md": "Guglielmo Marconi"
+        },
+        {
+          "key": "C",
+          "md": "Samuel Morse"
+        },
+        {
+          "key": "D",
+          "md": "John Logie Baird"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Bell İskoç doğumludur ama telefonla tanınır.",
+        "B": "Marconi İtalyan'dır ve radyoyla tanınır.",
+        "C": "Morse Amerikalıdır ve telgraf koduyla tanınır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Bu mucit John Logie Baird'dir.\n- 1920'lerde hareketli görüntüyü uzağa ileten bir sistem göstermiştir."
+        },
+        {
+          "type": "hint",
+          "md": "Telefonun mucidiyle aynı ülkedendir ama ondan farklı bir alanda çalışmıştır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "İlk televizyon sistemleri görüntüyü dönen disklerle tarayan mekanik düzeneklerdi. Sonraki yıllarda yerlerini tamamen elektronik sistemler aldı."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          113,
+          113
+        ],
+        "quote": "Televizyonun ilk çalışan sistemlerinden birini 1920'lerde İskoç mucit John Logie Baird göstermiştir.",
+        "chapter": "Teknoloji"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "iletişim"
+      ],
+      "vurgu": [],
+      "contentHash": "7ec67880342943f2849f33e4b5799702c8a0c408deb339d0a8cf0fa93948c8d7",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0595",
+      "conceptId": "tk-morse-telgraf",
+      "stem": {
+        "md": "Telgrafta kullanılan nokta ve çizgilerden oluşan kodun geliştirilmesine ____ öncülük etmiştir. Boşluğa hangisi gelmelidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Thomas Edison"
+        },
+        {
+          "key": "B",
+          "md": "Samuel Morse"
+        },
+        {
+          "key": "C",
+          "md": "Nikola Tesla"
+        },
+        {
+          "key": "D",
+          "md": "Michael Faraday"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Edison telgrafçı olarak çalışmıştır ama kodu geliştirmemiştir.",
+        "C": "Tesla alternatif akım sistemleriyle tanınır.",
+        "D": "Faraday elektromanyetik indüksiyonla tanınır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Koda öncülük eden Samuel Morse'tur.\n- Kod bugün de onun adıyla anılır."
+        },
+        {
+          "type": "hint",
+          "md": "Kodun adı, kişinin soyadıdır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Telgraf, elektrik sinyalleriyle tel üzerinden mesaj gönderen ilk yaygın iletişim aracıydı. Mesajlar kısa ve uzun sinyallere çevrilerek iletiliyordu."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          113,
+          113
+        ],
+        "quote": "Samuel Morse, telgrafta kullanılan nokta ve çizgilerden oluşan kodun geliştirilmesine öncülük etmiştir.",
+        "chapter": "Teknoloji"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "iletişim"
+      ],
+      "vurgu": [],
+      "contentHash": "07bfa51123f728d91091303ec96f65bfa66674b2759c7f1befdf55e4f2246fac",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0596",
+      "conceptId": "tk-wright-ucus",
+      "stem": {
+        "md": "1903 yılında motorlu ve kontrollü ilk sürekli uçuşu kimler gerçekleştirmiştir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Montgolfier kardeşler"
+        },
+        {
+          "key": "B",
+          "md": "Wright kardeşler"
+        },
+        {
+          "key": "C",
+          "md": "Lumière kardeşler"
+        },
+        {
+          "key": "D",
+          "md": "George ve Robert Stephenson"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Montgolfier kardeşler sıcak hava balonuyla tanınır.",
+        "C": "Lumière kardeşler sinemanın öncüleridir.",
+        "D": "Stephensonlar lokomotif yapımıyla tanınır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Uçuşu Wright kardeşler gerçekleştirmiştir.\n- Uçak, motorla itilen ve pilot tarafından yönlendirilen bir hava taşıtıdır."
+        },
+        {
+          "type": "hint",
+          "md": "Orville ve Wilbur."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Havadan ağır bir taşıtın uçması için kaldırma kuvveti, itiş ve yön denetimi birlikte gerekir. Erken havacılık denemelerinin çoğu denetim sorununda başarısız oldu."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          114,
+          114
+        ],
+        "quote": "Wright kardeşler, 1903 yılında motorlu ve kontrollü ilk sürekli uçuşu gerçekleştirmiştir.",
+        "chapter": "Teknoloji"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "ulaşım"
+      ],
+      "vurgu": [],
+      "contentHash": "ffe875dc0578b823d049fa086f9c2eeb936d27feb93e7c0a6cb45a5740376bd7",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0597",
+      "conceptId": "tk-otomobil-esleme",
+      "stem": {
+        "md": "Aşağıdaki kişileri katkılarıyla eşleştir.\n\n1. Karl Benz\n2. Rudolf Diesel\n3. Henry Ford\n\na) Hareketli montaj bandıyla seri üretim\nb) Benzinli motorlu otomobil patenti\nc) Adını taşıyan içten yanmalı motor"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "1-b, 2-c, 3-a"
+        },
+        {
+          "key": "B",
+          "md": "1-c, 2-b, 3-a"
+        },
+        {
+          "key": "C",
+          "md": "1-a, 2-c, 3-b"
+        },
+        {
+          "key": "D",
+          "md": "1-b, 2-a, 3-c"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Adını taşıyan motor Diesel'e aittir, Benz'e değil.",
+        "C": "Montaj bandı Ford'la, otomobil patenti Benz'le anılır.",
+        "D": "Diesel seri üretim yöntemiyle değil, motoruyla tanınır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Benz: 1886 benzinli otomobil patenti (1-b).\n- Diesel: dizel motor (2-c).\n- Ford: montaj bandıyla seri üretim (3-a)."
+        },
+        {
+          "type": "hint",
+          "md": "İçlerinden birinin adı bugün bir yakıt türü olarak da kullanılır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Otomobil, motorun icadı ve üretim yöntemlerindeki yeniliklerle birlikte gelişti. Seri üretim, otomobili geniş kitlelerin alabileceği bir araç hâline getirdi."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          114,
+          114
+        ],
+        "quote": "Karl Benz, 1886 yılında benzinli motorlu otomobili için patent almıştır.",
+        "chapter": "Teknoloji"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "ulaşım"
+      ],
+      "vurgu": [],
+      "contentHash": "852cbb290b07faf08b4aea623bd2a790e241aaf8b818969b98c6bf5c2b58db2d",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0598",
+      "conceptId": "tk-montgolfier-balon",
+      "stem": {
+        "md": "1783 yılında ilk insanlı uçuş hangi hava aracıyla yapılmıştır?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Sıcak hava balonu"
+        },
+        {
+          "key": "B",
+          "md": "Zeplin"
+        },
+        {
+          "key": "C",
+          "md": "Planör"
+        },
+        {
+          "key": "D",
+          "md": "Helikopter"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Zeplinler 20. yüzyılın başında kullanılmaya başlanmıştır.",
+        "C": "Planörle insanlı uçuşlar 19. yüzyılda yapılmıştır.",
+        "D": "Helikopter 20. yüzyılda geliştirilmiştir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- İlk insanlı uçuş sıcak hava balonuyla yapılmıştır.\n- Balonu Montgolfier kardeşler tasarlamıştır."
+        },
+        {
+          "type": "hint",
+          "md": "Isınan havanın yükselmesinden yararlanır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Havadan hafif taşıtlar, içlerindeki gazın ya da sıcak havanın çevredeki havadan hafif olmasıyla yükselir. Havacılık tarihi bu tür taşıtlarla başladı."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          114,
+          114
+        ],
+        "quote": "Montgolfier kardeşlerin tasarladığı sıcak hava balonuyla 1783 yılında ilk insanlı uçuş yapılmıştır.",
+        "chapter": "Teknoloji"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "ulaşım"
+      ],
+      "vurgu": [],
+      "contentHash": "debe27d00eecaadbc5a42bcfc9c44f95891bf3d8c83418c2f21780d91fa0c759",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0599",
+      "conceptId": "tk-rocket-lokomotif",
+      "stem": {
+        "md": "1829'daki Rainhill yarışmasını kazanan Rocket lokomotifini yapanlar kimlerdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Wright kardeşler"
+        },
+        {
+          "key": "B",
+          "md": "Karl Benz ve Gottlieb Daimler"
+        },
+        {
+          "key": "C",
+          "md": "George ve Robert Stephenson"
+        },
+        {
+          "key": "D",
+          "md": "James Watt ve Matthew Boulton"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Wright kardeşler uçakla tanınır ve 1829'dan çok sonra yaşamıştır.",
+        "B": "Benz ve Daimler benzinli motorlu taşıtlarla tanınır.",
+        "D": "Watt ve Boulton sabit buhar makineleri üretmiştir, bu lokomotifi değil."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Rocket'ı George Stephenson ve oğlu Robert yapmıştır.\n- Lokomotif, demiryolu taşımacılığının öncü örneklerindendir."
+        },
+        {
+          "type": "hint",
+          "md": "Bir baba ile oğlu."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Buharlı lokomotif, buhar makinesinin gücünü raylar üzerindeki taşıtlara aktardı. Demiryolu, 19. yüzyılda yük ve yolcu taşımacılığını hızlandırdı."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          114,
+          114
+        ],
+        "quote": "George Stephenson ve oğlu Robert'ın yaptığı Rocket lokomotifi 1829'daki Rainhill yarışmasını kazanmıştır.",
+        "chapter": "Teknoloji"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "ulaşım"
+      ],
+      "vurgu": [],
+      "contentHash": "17b62a46c9bb06deae4e5be6c883c26ea0122f57481f4598d01a2c02f54ad561",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0600",
+      "conceptId": "tk-apollo-11",
+      "stem": {
+        "md": "1969'da Ay'a ilk kez insanın ayak bastığı uzay görevi hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Apollo 13"
+        },
+        {
+          "key": "B",
+          "md": "Sputnik 1"
+        },
+        {
+          "key": "C",
+          "md": "Apollo 11"
+        },
+        {
+          "key": "D",
+          "md": "Vostok 1"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Apollo 13 bir arıza yüzünden Ay'a inemeden geri dönmüştür.",
+        "B": "Sputnik 1 insansız ilk yapay uydudur.",
+        "D": "Vostok 1 Dünya yörüngesinde yapılan ilk insanlı uçuştur."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Görev Apollo 11'dir.\n- Neil Armstrong ve Buzz Aldrin Ay yüzeyine inmiştir."
+        },
+        {
+          "type": "hint",
+          "md": "Apollo programının on birinci görevi."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Ay'a gidiş, güçlü roketler, yörünge hesapları ve yaşam destek sistemlerinin bir arada çalışmasını gerektirdi. Apollo programı bu amaçla yürütüldü."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          114,
+          114
+        ],
+        "quote": "1969'da Apollo 11 göreviyle Ay'a ilk kez insan ayak basmıştır.",
+        "chapter": "Teknoloji"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "ulaşım"
+      ],
+      "vurgu": [],
+      "contentHash": "a75a46fd04484d4685d330c6f616b12e612c500a8a9129686efdd75664a0d299",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0601",
+      "conceptId": "tk-ulasim-siralama",
+      "stem": {
+        "md": "Aşağıdaki ulaşım gelişmelerinin eskiden yeniye doğru sıralaması hangisidir?\n\n- Wright kardeşlerin uçuşu\n- Benz'in otomobil patenti\n- Montgolfier balonuyla insanlı uçuş\n- Rocket lokomotifinin yarışı kazanması"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Rocket - Balon - Benz - Wright"
+        },
+        {
+          "key": "B",
+          "md": "Balon - Benz - Rocket - Wright"
+        },
+        {
+          "key": "C",
+          "md": "Balon - Rocket - Wright - Benz"
+        },
+        {
+          "key": "D",
+          "md": "Balon - Rocket - Benz - Wright"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Balon uçuşu 1783'te, Rocket ise 1829'da gerçekleşmiştir.",
+        "B": "Rocket 1829'da, Benz patenti 1886'dadır.",
+        "C": "Benz patenti 1886'da, Wright uçuşu 1903'tedir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Balon: 1783.\n- Rocket: 1829.\n- Benz: 1886.\n- Wright: 1903."
+        },
+        {
+          "type": "hint",
+          "md": "Havacılık hem en başta hem en sonda yer alıyor."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Ulaşım teknolojisi önce havadan hafif araçlarla, sonra buharla, ardından içten yanmalı motorlarla ilerledi."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          114,
+          114
+        ],
+        "quote": "Montgolfier kardeşlerin tasarladığı sıcak hava balonuyla 1783 yılında ilk insanlı uçuş yapılmıştır.",
+        "chapter": "Teknoloji"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "ulaşım"
+      ],
+      "vurgu": [],
+      "contentHash": "ba255f8d6763d08a65089cedf35f78f12db0e0f2ff27f046a45b3254fc32898a",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0602",
+      "conceptId": "tk-babbage",
+      "stem": {
+        "md": "19. yüzyılda Analitik Makine adlı programlanabilir mekanik hesap makinesini tasarlayan kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Charles Babbage"
+        },
+        {
+          "key": "B",
+          "md": "Alan Turing"
+        },
+        {
+          "key": "C",
+          "md": "Blaise Pascal"
+        },
+        {
+          "key": "D",
+          "md": "John von Neumann"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Turing 20. yüzyılda yaşamıştır.",
+        "C": "Pascal 17. yüzyılda toplama yapan bir hesap makinesi yapmıştır; programlanabilir değildi.",
+        "D": "Von Neumann 20. yüzyılda elektronik bilgisayar mimarisi üzerine çalışmıştır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Analitik Makine'yi Charles Babbage tasarlamıştır.\n- Makine, programlanabilir bilgisayar fikrinin öncüsü sayılır."
+        },
+        {
+          "type": "hint",
+          "md": "İngiliz bir matematikçidir; makinesi kendi döneminde tamamlanamamıştır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Programlanabilir bir makine, yalnızca tek bir hesabı değil, kendisine verilen talimat dizisini yürütür. Bu fikir elektronikten çok önce mekanik çarklarla tasarlandı."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          115,
+          115
+        ],
+        "quote": "Charles Babbage, 19. yüzyılda Analitik Makine adlı programlanabilir mekanik bir hesap makinesi tasarlamıştır.",
+        "chapter": "Teknoloji"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "bilgisayar-tarihi"
+      ],
+      "vurgu": [],
+      "contentHash": "917ef870dc57e4ca9d10c5271146809d41219c37a72e530e6becb7a3d9733282",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0603",
+      "conceptId": "tk-lovelace",
+      "stem": {
+        "md": "Analitik Makine için yazdığı notlar nedeniyle ilk bilgisayar programcısı olarak anılan kişi kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Ada Lovelace"
+        },
+        {
+          "key": "B",
+          "md": "Grace Hopper"
+        },
+        {
+          "key": "C",
+          "md": "Marie Curie"
+        },
+        {
+          "key": "D",
+          "md": "Hedy Lamarr"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Grace Hopper 20. yüzyılda COBOL gibi dillere katkı vermiştir.",
+        "C": "Marie Curie radyoaktivite üzerine çalışmıştır.",
+        "D": "Hedy Lamarr frekans atlama tekniği üzerine çalışmıştır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- İlk programcı olarak Ada Lovelace anılır.\n- Notlarında makinenin bir hesabı adım adım nasıl yapacağını göstermiştir."
+        },
+        {
+          "type": "hint",
+          "md": "Ünlü bir İngiliz şairin kızıdır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Bir makinenin sayıların ötesinde semboller üzerinde de işlem yapabileceği fikri, 19. yüzyılda ileri görüşlü bir düşünceydi."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          115,
+          115
+        ],
+        "quote": "Ada Lovelace, Analitik Makine için yazdığı notlar nedeniyle ilk bilgisayar programcısı olarak anılır.",
+        "chapter": "Teknoloji"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "bilgisayar-tarihi"
+      ],
+      "vurgu": [],
+      "contentHash": "aa52ab7fd5e99928f82b2eedffb4d82817d020b33d52bb4c8c572511b02911cc",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0604",
+      "conceptId": "tk-turing",
+      "stem": {
+        "md": "1936 yılında hesaplanabilirliği tanımlayan soyut makine modelini ortaya koyan matematikçi kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Alan Turing"
+        },
+        {
+          "key": "B",
+          "md": "Charles Babbage"
+        },
+        {
+          "key": "C",
+          "md": "Claude Shannon"
+        },
+        {
+          "key": "D",
+          "md": "Ada Lovelace"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Babbage 19. yüzyılda mekanik makine tasarlamıştır.",
+        "C": "Shannon bilgi kuramının kurucusu olarak tanınır.",
+        "D": "Lovelace 19. yüzyılda yaşamıştır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Model Alan Turing'e aittir.\n- Turing makinesi, bir bilgisayarın neleri hesaplayabileceğini tanımlar."
+        },
+        {
+          "type": "hint",
+          "md": "Model bugün de onun adıyla anılır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Soyut makine modelleri, gerçek bir cihaz yapmadan hangi problemlerin mekanik olarak çözülebileceğini incelemeyi sağlar. Bu çalışmalar bilgisayar biliminin kuramsal temelini oluşturdu."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          115,
+          115
+        ],
+        "quote": "Alan Turing, 1936 yılında hesaplanabilirliği tanımlayan soyut bir makine modeli ortaya koymuştur.",
+        "chapter": "Teknoloji"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "bilgisayar-tarihi"
+      ],
+      "vurgu": [],
+      "contentHash": "80bf210114572ae856003c3bf00f232dd5da875c6315c549a56f44cd774310c4",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0605",
+      "conceptId": "tk-eniac",
+      "stem": {
+        "md": "1940'ların ortasında ABD'de yapılan, elektronik ve genel amaçlı ilk bilgisayarlardan biri hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "ENIAC"
+        },
+        {
+          "key": "B",
+          "md": "ARPANET"
+        },
+        {
+          "key": "C",
+          "md": "COBOL"
+        },
+        {
+          "key": "D",
+          "md": "Analitik Makine"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "ARPANET bir bilgisayar değil, 1969'da kurulan bir ağdır.",
+        "C": "COBOL bir programlama dilidir.",
+        "D": "Analitik Makine 19. yüzyılda tasarlanmış mekanik bir makinedir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Bu bilgisayar ENIAC'tır.\n- Binlerce vakum tüpüyle çalışan, oda büyüklüğünde bir makineydi."
+        },
+        {
+          "type": "hint",
+          "md": "Adı bir kısaltmadır ve İngilizce \"elektronik\" sözcüğüyle başlar."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "İlk elektronik bilgisayarlar vakum tüpleriyle çalışıyordu; çok yer kaplıyor, çok enerji harcıyor ve sık arıza veriyordu."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          115,
+          115
+        ],
+        "quote": "ENIAC, 1940'ların ortasında ABD'de yapılan, elektronik ve genel amaçlı ilk bilgisayarlardan biridir.",
+        "chapter": "Teknoloji"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "bilgisayar-tarihi"
+      ],
+      "vurgu": [],
+      "contentHash": "025fe434f2461d1b3bfe8893cf5ce7aa8c4c8f6a4880d545b24aaa537d08b512",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0606",
+      "conceptId": "tk-transistor",
+      "stem": {
+        "md": "1947 yılında Bell Laboratuvarlarında icat edilen ve elektronik cihazlarda vakum tüplerinin yerini alan bileşen hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Mikroişlemci"
+        },
+        {
+          "key": "B",
+          "md": "Entegre devre"
+        },
+        {
+          "key": "C",
+          "md": "Transistör"
+        },
+        {
+          "key": "D",
+          "md": "Sabit disk"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Mikroişlemci 1970'lerin başında ortaya çıkmıştır.",
+        "B": "Entegre devre 1950'lerin sonunda geliştirilmiştir.",
+        "D": "Sabit disk bir depolama aygıtıdır, sinyal anahtarlamaz."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Bileşen transistördür.\n- Akımı yükselten ya da açıp kapayan küçük bir yarı iletken parçadır."
+        },
+        {
+          "type": "hint",
+          "md": "Yarı iletken bir anahtar ve yükselteçtir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Yarı iletken bileşenler, vakum tüplerine göre çok daha küçük, dayanıklı ve az enerji harcayan devreler kurmayı sağladı. Bugünkü yongalarda bu bileşenlerden milyarlarcası bulunur."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          115,
+          115
+        ],
+        "quote": "Transistör, 1947 yılında Bell Laboratuvarlarında icat edilmiştir.",
+        "chapter": "Teknoloji"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "bilgisayar-tarihi"
+      ],
+      "vurgu": [],
+      "contentHash": "c3cec572bbf1368c5d9fb711b46f171933b61def8302ce8a2956653b01d56db7",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0607",
+      "conceptId": "tk-hopper-cobol",
+      "stem": {
+        "md": "Programlama dillerinin insan diline yakın sözcüklerle yazılmasına öncülük eden Grace Hopper hangi dilin gelişimine katkıda bulunmuştur?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "COBOL"
+        },
+        {
+          "key": "B",
+          "md": "HTML"
+        },
+        {
+          "key": "C",
+          "md": "Python"
+        },
+        {
+          "key": "D",
+          "md": "Java"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "HTML bir programlama dili değil, işaretleme dilidir ve 1990'larda yaygınlaştı.",
+        "C": "Python 1990'ların başında ortaya çıkmıştır.",
+        "D": "Java 1990'ların ortasında ortaya çıkmıştır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Grace Hopper COBOL'un gelişimine katkıda bulunmuştur.\n- COBOL, iş ve yönetim uygulamaları için tasarlanmış eski bir dildir."
+        },
+        {
+          "type": "hint",
+          "md": "1950'lerin sonunda ortaya çıkan, iş dünyasına yönelik bir dil."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "İlk bilgisayarlar sayı kodlarıyla programlanıyordu. İngilizceye benzeyen komutlarla yazılabilen diller, programlamayı daha geniş bir kesime açtı."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          115,
+          115
+        ],
+        "quote": "Grace Hopper, programlama dillerinin insan diline yakın sözcüklerle yazılmasına öncülük etmiş ve COBOL dilinin gelişimine katkıda bulunmuştur.",
+        "chapter": "Teknoloji"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "bilgisayar-tarihi"
+      ],
+      "vurgu": [],
+      "contentHash": "58247b10bdeff8ab87a7497c2e544975fa9016c772acfac3e399eed04351837b",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0608",
+      "conceptId": "tk-arpanet",
+      "stem": {
+        "md": "1969 yılında ABD'de kurulan ve internetin öncüsü sayılan ağ hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "ENIAC"
+        },
+        {
+          "key": "B",
+          "md": "TCP/IP"
+        },
+        {
+          "key": "C",
+          "md": "World Wide Web"
+        },
+        {
+          "key": "D",
+          "md": "ARPANET"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "ENIAC bir ağ değil, tek bir bilgisayardır.",
+        "B": "TCP/IP bir ağ değil, iletişim kuralları takımıdır.",
+        "C": "World Wide Web 1989'da önerilmiştir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- İnternetin öncüsü ARPANET'tir.\n- 1969'da birkaç araştırma kurumunun bilgisayarını birbirine bağlamıştır."
+        },
+        {
+          "type": "hint",
+          "md": "Adı, onu destekleyen ABD kurumunun kısaltmasını taşır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Bilgisayar ağları, uzaktaki makinelerin veri paylaşmasını sağlar. İlk ağlar araştırma kurumlarını birbirine bağlamak için kuruldu."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          116,
+          116
+        ],
+        "quote": "İnternetin öncüsü sayılan ARPANET, 1969 yılında ABD'de kurulmuştur.",
+        "chapter": "Teknoloji"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "internet"
+      ],
+      "vurgu": [],
+      "contentHash": "47a9b55ad5f4dc55896759e625cc6ff9ecedc89438980bf6883c371ffd0163e3",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0609",
+      "conceptId": "tk-tcp-ip",
+      "stem": {
+        "md": "Vint Cerf ve Bob Kahn'ın geliştirdiği, internetin temel iletişim kuralları hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "HTTP"
+        },
+        {
+          "key": "B",
+          "md": "HTML"
+        },
+        {
+          "key": "C",
+          "md": "TCP/IP"
+        },
+        {
+          "key": "D",
+          "md": "SMTP"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "HTTP web sayfalarının aktarımını düzenler; internetin temel taşıma katmanı değildir.",
+        "B": "HTML iletişim kuralı değil, işaretleme dilidir.",
+        "D": "SMTP yalnızca e-posta gönderimini düzenler."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Cerf ve Kahn TCP/IP'yi geliştirmiştir.\n- TCP/IP, farklı ağların birbirine bağlanıp veri alışverişi yapmasını sağlar."
+        },
+        {
+          "type": "hint",
+          "md": "İki kısaltmanın eğik çizgiyle birleşimidir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Ağlar arası iletişim, verinin küçük paketlere bölünüp adreslenmesine ve karşı tarafta yeniden birleştirilmesine dayanır. Bu kurallar herkesin uyduğu ortak bir dil gibidir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          116,
+          116
+        ],
+        "quote": "Vint Cerf ve Bob Kahn, internetin temel iletişim kuralları olan TCP/IP'yi geliştirmiştir.",
+        "chapter": "Teknoloji"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "internet"
+      ],
+      "vurgu": [],
+      "contentHash": "c9c2023f60b4c1192d6f97be33a4bfc1decb15825a858fa0914b3a399a869314",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0610",
+      "conceptId": "tk-www-cern",
+      "stem": {
+        "md": "Tim Berners-Lee, World Wide Web'i 1989 yılında hangi kurumda çalışırken önermiştir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "NASA"
+        },
+        {
+          "key": "B",
+          "md": "Bell Laboratuvarları"
+        },
+        {
+          "key": "C",
+          "md": "CERN"
+        },
+        {
+          "key": "D",
+          "md": "MIT"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "NASA bir uzay ajansıdır; Web orada önerilmemiştir.",
+        "B": "Bell Laboratuvarları transistörün icadıyla bilinir.",
+        "D": "MIT bir üniversitedir; Web orada önerilmemiştir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Web, CERN'de önerilmiştir.\n- CERN, İsviçre-Fransa sınırındaki bir parçacık fiziği laboratuvarıdır."
+        },
+        {
+          "type": "hint",
+          "md": "Cenevre yakınında bir parçacık fiziği merkezi."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Web, birbirine bağlantılarla bağlanmış belgelerden oluşur ve internet üzerinde çalışan bir hizmettir. İlk amacı bilim insanlarının belge paylaşımını kolaylaştırmaktı."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          116,
+          116
+        ],
+        "quote": "Tim Berners-Lee, 1989 yılında CERN'de çalışırken World Wide Web'i önermiştir.",
+        "chapter": "Teknoloji"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "internet"
+      ],
+      "vurgu": [],
+      "contentHash": "4a85002f61ae7626d4202322d84094d57b9b1a4d3b38e7e8afbdb1dc4cf8ccd0",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0611",
+      "conceptId": "tk-eposta-at",
+      "stem": {
+        "md": "Ray Tomlinson'ın ağ üzerinden gönderdiği ilk e-postada adreslerde kullandığı işaret hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "#"
+        },
+        {
+          "key": "B",
+          "md": "&"
+        },
+        {
+          "key": "C",
+          "md": "@"
+        },
+        {
+          "key": "D",
+          "md": "/"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "# işareti e-posta adreslerinde ayırıcı olarak kullanılmaz.",
+        "B": "& işareti \"ve\" anlamına gelir; adres ayırıcısı değildir.",
+        "D": "/ işareti web adreslerinde yol ayırmak için kullanılır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Kullanılan işaret @'tir.\n- Kullanıcı adını bilgisayarın ya da alan adının adından ayırır."
+        },
+        {
+          "type": "hint",
+          "md": "Türkçede çoğunlukla \"et\" diye okunur."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "E-posta, ağ üzerinden bir kullanıcıdan diğerine mesaj göndermeyi sağlar. Adresin iki bölümü, kişiyi ve onun bulunduğu sistemi gösterir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          116,
+          116
+        ],
+        "quote": "Ray Tomlinson, 1971 yılında ağ üzerinden ilk e-postayı göndermiş ve adreslerde @ işaretini kullanmıştır.",
+        "chapter": "Teknoloji"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "internet"
+      ],
+      "vurgu": [],
+      "contentHash": "2fc8a8b6043c10cc43b345302d6f3d66f4eed0a1e98a172a803e3cc42d80aa92",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0612",
+      "conceptId": "tk-turkiye-internet",
+      "stem": {
+        "md": "Türkiye'nin internete ilk bağlantısı hangi yılda ve hangi üniversite üzerinden kurulmuştur?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "1993, ODTÜ"
+        },
+        {
+          "key": "B",
+          "md": "1989, İTÜ"
+        },
+        {
+          "key": "C",
+          "md": "1996, Bilkent"
+        },
+        {
+          "key": "D",
+          "md": "1993, Boğaziçi Üniversitesi"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "1989'da Türkiye'nin internet bağlantısı yoktu.",
+        "C": "1996, ilk bağlantıdan birkaç yıl sonrasıdır.",
+        "D": "Yıl doğru olsa da ilk bağlantı bu üniversiteden kurulmamıştır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- İlk bağlantı 12 Nisan 1993'te kurulmuştur.\n- Bağlantı Ankara'daki ODTÜ üzerinden sağlanmıştır."
+        },
+        {
+          "type": "hint",
+          "md": "Ankara'daki bir teknik üniversite."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Pek çok ülkede internet önce üniversiteler ve araştırma kurumları aracılığıyla kullanılmaya başlandı, sonra halka yayıldı."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          116,
+          116
+        ],
+        "quote": "Türkiye'nin internete ilk bağlantısı 12 Nisan 1993'te ODTÜ üzerinden kurulmuştur.",
+        "chapter": "Teknoloji"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "internet"
+      ],
+      "vurgu": [],
+      "contentHash": "9faebb95534ae555f0ad139328867772dc35357a403179a3c478cedbded1582a",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0613",
+      "conceptId": "tk-html",
+      "stem": {
+        "md": "Web sayfalarının yazıldığı işaretleme dili hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "HTML"
+        },
+        {
+          "key": "B",
+          "md": "HTTP"
+        },
+        {
+          "key": "C",
+          "md": "SMTP"
+        },
+        {
+          "key": "D",
+          "md": "DNS"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "HTTP sayfaların aktarılmasını düzenleyen protokoldür.",
+        "C": "SMTP e-posta gönderme protokolüdür.",
+        "D": "DNS alan adlarını IP adreslerine çevirir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Web sayfaları HTML ile yazılır.\n- HTML, başlık, paragraf ve bağlantı gibi öğeleri etiketlerle belirtir."
+        },
+        {
+          "type": "hint",
+          "md": "Kısaltmanın son harfi dil anlamına gelir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "İşaretleme dilleri, metnin hangi bölümünün başlık, liste ya da bağlantı olduğunu etiketlerle belirtir. Tarayıcı bu etiketleri okuyarak sayfayı görüntüler."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          116,
+          116
+        ],
+        "quote": "Web sayfaları HTML adlı işaretleme diliyle yazılır.",
+        "chapter": "Teknoloji"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "internet"
+      ],
+      "vurgu": [],
+      "contentHash": "35135fd6c1f61db3c41f21b7db80c14c0b91403fac5e59faacbc1334c98e939b",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0614",
+      "conceptId": "tk-bayt-bit",
+      "stem": {
+        "md": "Bir bayt kaç bitten oluşur?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "4"
+        },
+        {
+          "key": "B",
+          "md": "16"
+        },
+        {
+          "key": "C",
+          "md": "8"
+        },
+        {
+          "key": "D",
+          "md": "1024"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "4 bit yarım bayttır.",
+        "B": "16 bit iki bayttır.",
+        "D": "1024 sayısı daha büyük bellek birimlerinin hesabında geçer, bir baytın bit sayısı değildir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Bir bayt 8 bittir.\n- 8 bit, 256 farklı değeri gösterebilir."
+        },
+        {
+          "type": "hint",
+          "md": "Bir satranç tahtasının bir sırasındaki kare sayısı."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Bilgisayarlar veriyi bitler hâlinde saklar, ama bitleri gruplar hâlinde işler. Bellek ve dosya boyutları bu gruplar üzerinden ölçülür."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          117,
+          117
+        ],
+        "quote": "Bir bayt sekiz bitten oluşur.",
+        "chapter": "Teknoloji"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "bilişim"
+      ],
+      "vurgu": [],
+      "contentHash": "b6840dd148d1a14c01f891e670153e8ad50fc669ee4e9042a757a3312179b29f",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0615",
+      "conceptId": "tk-bit-tanima",
+      "stem": {
+        "md": "İkili sistemde 0 ya da 1 değerini alan en küçük bilgi birimi hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Bayt"
+        },
+        {
+          "key": "B",
+          "md": "Bit"
+        },
+        {
+          "key": "C",
+          "md": "Kilobayt"
+        },
+        {
+          "key": "D",
+          "md": "Piksel"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Bayt birden çok bitten oluşur.",
+        "C": "Kilobayt yaklaşık bin bayttan oluşan büyük bir birimdir.",
+        "D": "Piksel bir görüntünün en küçük noktasıdır, bilgi birimi değildir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- En küçük bilgi birimi bittir.\n- Adı İngilizce \"binary digit\", yani ikili basamak ifadesinden gelir."
+        },
+        {
+          "type": "hint",
+          "md": "Adı \"ikili basamak\" anlamına gelen İngilizce ifadenin kısaltmasıdır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Dijital cihazlar bütün bilgiyi, iki durumlu anahtarların açık ya da kapalı olmasıyla gösterir. Harfler, sesler ve görüntüler bu iki durumun dizilerine çevrilir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          117,
+          117
+        ],
+        "quote": "Bit, ikili sistemde 0 ya da 1 değerini alan en küçük bilgi birimidir.",
+        "chapter": "Teknoloji"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "bilişim"
+      ],
+      "vurgu": [],
+      "contentHash": "e197ff7f1927dce79ea8f5caab98c349c3dc45c88dfeb7f38c3a7fcfa64f76b6",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0616",
+      "conceptId": "tk-ram",
+      "stem": {
+        "md": "Bilgisayar kapandığında içeriği silinen geçici bellek hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "RAM"
+        },
+        {
+          "key": "B",
+          "md": "ROM"
+        },
+        {
+          "key": "C",
+          "md": "Sabit disk"
+        },
+        {
+          "key": "D",
+          "md": "SSD"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "ROM'daki bilgi elektrik kesilince kaybolmaz.",
+        "C": "Sabit disk verileri kalıcı olarak saklar.",
+        "D": "SSD de verileri kalıcı olarak saklayan bir depolama aygıtıdır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Geçici bellek RAM'dir.\n- Çalışan programlar ve açık dosyalar RAM'de tutulur; elektrik kesilince silinir."
+        },
+        {
+          "type": "hint",
+          "md": "Rastgele erişimli bellek."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Bilgisayarlarda hızlı ama geçici bellek ile yavaş ama kalıcı depolama birlikte kullanılır. İşlemci, o anda üzerinde çalıştığı verileri hızlı belleğe alır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          117,
+          117
+        ],
+        "quote": "RAM, bilgisayar kapandığında içeriği silinen geçici bellektir.",
+        "chapter": "Teknoloji"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "bilişim"
+      ],
+      "vurgu": [],
+      "contentHash": "439841a5bee61c94c918d8a6a933aab2ae44af7b87fbb13abda27213385b4945",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0617",
+      "conceptId": "tk-cpu",
+      "stem": {
+        "md": "Bilgisayarda komutları yürüten temel bileşen olan CPU'nun Türkçe adı nedir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Grafik işlem birimi"
+        },
+        {
+          "key": "B",
+          "md": "Güç kaynağı"
+        },
+        {
+          "key": "C",
+          "md": "Merkezi işlem birimi"
+        },
+        {
+          "key": "D",
+          "md": "Ana bellek"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Grafik işlem birimi GPU olarak kısaltılır ve görüntü hesaplarına odaklanır.",
+        "B": "Güç kaynağı bileşenlere elektrik sağlar, komut yürütmez.",
+        "D": "Ana bellek veriyi tutar, komutları kendisi yürütmez."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- CPU, merkezi işlem birimidir.\n- Programların komutlarını sırayla okuyup yürütür."
+        },
+        {
+          "type": "hint",
+          "md": "Kısaltmadaki C harfi \"merkez\" anlamına gelir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Bir bilgisayarda her bileşenin ayrı bir görevi vardır: kimi hesap yapar, kimi saklar, kimi enerji verir. İşlemci, programdaki komutların çalıştırıldığı yerdir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          117,
+          117
+        ],
+        "quote": "Merkezi işlem birimi CPU, bilgisayarda komutları yürüten temel bileşendir.",
+        "chapter": "Teknoloji"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "bilişim"
+      ],
+      "vurgu": [],
+      "contentHash": "fcc9c9bcede34bc1d7926a3817a394e0d9388836e96bec21228586f70a34b1fd",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0618",
+      "conceptId": "tk-ikili-hesap",
+      "stem": {
+        "md": "İkili sistemde 1011 olarak yazılan sayının onluk sistemdeki karşılığı kaçtır?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "13"
+        },
+        {
+          "key": "B",
+          "md": "9"
+        },
+        {
+          "key": "C",
+          "md": "1011"
+        },
+        {
+          "key": "D",
+          "md": "11"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "13, ikili sistemde 1101 olarak yazılır.",
+        "B": "9, ikili sistemde 1001 olarak yazılır.",
+        "C": "1011, sayının ikili yazılışıdır; onluğa çevrilmemiştir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Karşılığı 11'dir.\n- Hesap: 1×8 + 0×4 + 1×2 + 1×1.\n- 8 + 0 + 2 + 1 = 11."
+        },
+        {
+          "type": "hint",
+          "md": "Basamak değerleri sağdan sola 1, 2, 4, 8 diye artar."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "İkili sistemde her basamağın değeri, sağındakinin iki katıdır. Onluk sistemde aynı ilke on katla işler."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          117,
+          117
+        ],
+        "quote": "İkili sayı sisteminde yalnızca 0 ve 1 rakamları kullanılır.",
+        "chapter": "Teknoloji"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "bilişim"
+      ],
+      "vurgu": [],
+      "contentHash": "0b5a09924f98692ef69b5b477b3ac526bab94a3f6645cf4fa67bf35bb4e39a60",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0619",
+      "conceptId": "tk-ascii",
+      "stem": {
+        "md": "Standart ASCII, 7 bitlik kodlarla kaç karakter tanımlar?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "256"
+        },
+        {
+          "key": "B",
+          "md": "64"
+        },
+        {
+          "key": "C",
+          "md": "1024"
+        },
+        {
+          "key": "D",
+          "md": "128"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "256 karakter, 8 bitlik genişletilmiş tablolarda tanımlanır.",
+        "B": "64, 6 bitle gösterilebilecek değer sayısıdır.",
+        "C": "1024, 10 bitle gösterilebilecek değer sayısıdır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Standart ASCII 128 karakter tanımlar.\n- Hesap: 2⁷ = 128."
+        },
+        {
+          "type": "hint",
+          "md": "Her bit, olası değer sayısını ikiye katlar."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Karakter kodlaması, harfleri ve işaretleri bilgisayarın saklayabileceği sayılara çevirir. İlk kodlamalar yalnızca İngilizce harfleri ve temel işaretleri kapsıyordu."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          117,
+          117
+        ],
+        "quote": "Standart ASCII, 7 bitlik kodlarla 128 karakter tanımlar.",
+        "chapter": "Teknoloji"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "bilişim"
+      ],
+      "vurgu": [],
+      "contentHash": "dbb819fb29bfb07127070c453a901c2377ac28837b70d72296e2822b305df4b9",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0620",
+      "conceptId": "tk-dns",
+      "stem": {
+        "md": "Alan adlarını IP adreslerine çeviren sistem hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "HTTP"
+        },
+        {
+          "key": "B",
+          "md": "HTML"
+        },
+        {
+          "key": "C",
+          "md": "SMTP"
+        },
+        {
+          "key": "D",
+          "md": "DNS"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "HTTP tarayıcı ile sunucu arasındaki veri alışverişini düzenler.",
+        "B": "HTML web sayfalarının yazıldığı işaretleme dilidir.",
+        "C": "SMTP e-posta gönderme protokolüdür."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Bu sistem DNS'tir.\n- Akılda kalıcı alan adlarını bilgisayarların kullandığı sayısal adreslere çevirir."
+        },
+        {
+          "type": "hint",
+          "md": "İnternetin telefon rehberine benzetilir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "İnternetteki her cihazın sayısal bir adresi vardır. İnsanlar ise sayılar yerine okunabilir adları hatırlar; bu iki dünyayı bir eşleme sistemi birleştirir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          118,
+          118
+        ],
+        "quote": "DNS, alan adlarını IP adreslerine çeviren sistemdir.",
+        "chapter": "Teknoloji"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "internet"
+      ],
+      "vurgu": [],
+      "contentHash": "2ccba765cc769b78f1d9276f0d5516cde33c2e229c60d17049218e002b36262f",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0621",
+      "conceptId": "tk-https",
+      "stem": {
+        "md": "HTTPS'in HTTP'den temel farkı aşağıdakilerden hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "İletişimi şifreleyerek güvenli hâle getirir"
+        },
+        {
+          "key": "B",
+          "md": "Alan adlarını IP adreslerine çevirir"
+        },
+        {
+          "key": "C",
+          "md": "E-posta göndermek için kullanılır"
+        },
+        {
+          "key": "D",
+          "md": "Web sayfalarının görünümünü belirler"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Alan adlarını çevirmek DNS'in işidir.",
+        "C": "E-posta göndermek SMTP'nin işidir.",
+        "D": "Sayfanın yapısı HTML ile belirlenir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- HTTPS, HTTP iletişimini şifreler.\n- Sondaki S harfi güvenli anlamındaki \"secure\" sözcüğünden gelir."
+        },
+        {
+          "type": "hint",
+          "md": "Sondaki S harfinin anlamını düşün."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "İnternette gönderilen veri, yol boyunca pek çok aygıttan geçer. Şifreleme, bu verinin araya giren biri tarafından okunmasını engeller."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          118,
+          118
+        ],
+        "quote": "HTTPS, HTTP iletişimini şifreleyerek güvenli hâle getirir.",
+        "chapter": "Teknoloji"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "internet"
+      ],
+      "vurgu": [],
+      "contentHash": "3003de27574e06d7c88605f18d922449d8382adc4025172dcf6b8cf8e4cb4e00",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0622",
+      "conceptId": "tk-ipv6",
+      "stem": {
+        "md": "IPv6 adresleri kaç bit uzunluğundadır?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "32"
+        },
+        {
+          "key": "B",
+          "md": "128"
+        },
+        {
+          "key": "C",
+          "md": "64"
+        },
+        {
+          "key": "D",
+          "md": "256"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "32 bit, IPv4 adreslerinin uzunluğudur.",
+        "C": "64 bit, IPv6 adresinin yalnızca yarısıdır.",
+        "D": "256 bit, IPv6 adresinin iki katıdır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- IPv6 adresleri 128 bittir.\n- IPv4'ün 32 bitlik adresleri yetersiz kaldığı için daha uzun adresler tanımlanmıştır."
+        },
+        {
+          "type": "hint",
+          "md": "IPv4 adres uzunluğunun dört katıdır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "İnternete bağlanan cihaz sayısı arttıkça eski adres sistemi yetmez hâle geldi. Yeni sürüm, çok daha fazla adres üretilebilmesi için tasarlandı."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          118,
+          118
+        ],
+        "quote": "IPv4 adresleri 32 bit, IPv6 adresleri 128 bit uzunluğundadır.",
+        "chapter": "Teknoloji"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "internet"
+      ],
+      "vurgu": [],
+      "contentHash": "65abbe45dc4de2d74f2d12c5b1a00f75574cc546ee43211adf1cb072a45e0f76",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0623",
+      "conceptId": "tk-protokol-esleme",
+      "stem": {
+        "md": "Aşağıdaki kavramları görevleriyle eşleştir.\n\n1. HTTP\n2. SMTP\n3. URL\n\na) E-posta gönderme\nb) İnternetteki bir kaynağın adresi\nc) Tarayıcı ile sunucu arasında veri alışverişi"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "1-a, 2-c, 3-b"
+        },
+        {
+          "key": "B",
+          "md": "1-c, 2-b, 3-a"
+        },
+        {
+          "key": "C",
+          "md": "1-c, 2-a, 3-b"
+        },
+        {
+          "key": "D",
+          "md": "1-b, 2-a, 3-c"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "HTTP e-posta değil, web sayfalarının aktarımı içindir.",
+        "B": "SMTP bir adres değil, e-posta protokolüdür.",
+        "D": "HTTP bir adres değil, iletişim kuralıdır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- HTTP: tarayıcı-sunucu veri alışverişi (1-c).\n- SMTP: e-posta gönderme (2-a).\n- URL: kaynağın adresi (3-b)."
+        },
+        {
+          "type": "hint",
+          "md": "Bir web adresi çoğunlukla bu kavramlardan birinin adıyla başlar."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "İnternette her işin kendine ait kuralları ve biçimleri vardır. Protokoller iletişimin nasıl yapılacağını, adresler ise neyin isteneceğini belirler."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          118,
+          118
+        ],
+        "quote": "SMTP, e-posta göndermek için kullanılan protokoldür.",
+        "chapter": "Teknoloji"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "internet"
+      ],
+      "vurgu": [],
+      "contentHash": "a7c68f56f9be83558ade4783b676a127e4609cc2db9887ae08188a7dff216f3f",
+      "deleted": false
+    }
+  ]
+}

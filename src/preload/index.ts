@@ -117,6 +117,10 @@ const api: QuizloopApi = {
   },
   stats: {
     overview: () => ipcRenderer.invoke(CH.statsOverview)
+  },
+  history: {
+    recent: (limit?: number) => ipcRenderer.invoke(CH.historyRecent, limit),
+    page: (offset: number, limit?: number) => ipcRenderer.invoke(CH.historyPage, offset, limit)
   }
 }
 

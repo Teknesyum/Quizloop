@@ -1,0 +1,2605 @@
+{
+  "blockId": "0014",
+  "questions": [
+    {
+      "id": "genel-kultur-0545",
+      "conceptId": "ek-arz-tanimi",
+      "stem": {
+        "md": "Belirli bir fiyattan satıcıların piyasaya sunmaya hazır olduğu mal miktarına ne ad verilir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Talep"
+        },
+        {
+          "key": "B",
+          "md": "Stok"
+        },
+        {
+          "key": "C",
+          "md": "Arz"
+        },
+        {
+          "key": "D",
+          "md": "Tüketim"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Talep, alıcıların satın almak istediği miktardır.",
+        "B": "Stok, elde bekletilen mal birikimidir; satışa hazır olma isteğini anlatmaz.",
+        "D": "Tüketim, malların kullanılıp harcanmasıdır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: Arz.\n- Arz satıcı tarafını, talep alıcı tarafını anlatır."
+        },
+        {
+          "type": "hint",
+          "md": "Satıcının tarafı."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Piyasa iki taraftan oluşur: malı sunanlar ve malı isteyenler. İktisat, fiyatın bu iki tarafın davranışıyla nasıl oluştuğunu inceler."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          103,
+          103
+        ],
+        "quote": "Arz, belirli bir fiyattan satıcıların piyasaya sunmaya hazır olduğu mal miktarıdır.",
+        "chapter": "Ekonomi"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "ekonomi"
+      ],
+      "vurgu": [],
+      "contentHash": "1f4546c54805a68229d701671af13495d27b113396893d92553c0d82e6800ecf",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0546",
+      "conceptId": "ek-talep-yasasi",
+      "stem": {
+        "md": "Talep yasasına göre diğer koşullar sabitken bir malın fiyatı yükseldikçe talep edilen miktar ____."
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "artar"
+        },
+        {
+          "key": "B",
+          "md": "azalır"
+        },
+        {
+          "key": "C",
+          "md": "değişmez"
+        },
+        {
+          "key": "D",
+          "md": "önce artar, sonra azalır"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Fiyat artarken talebin artması, yasanın öngördüğü ters ilişkiye aykırıdır.",
+        "C": "Talep edilen miktar fiyata tepki verir; sabit kalmaz.",
+        "D": "Yasa iki aşamalı bir değişim öngörmez, tek yönlü bir ilişki anlatır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: azalır.\n- Fiyat ile talep edilen miktar arasında ters yönlü bir ilişki vardır.\n- Bu yüzden talep eğrisi aşağı doğru eğimlidir."
+        },
+        {
+          "type": "hint",
+          "md": "Pahalanan maldan ne kadar alırsınız?"
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Talep yasası, alıcıların fiyat değişimlerine verdiği tepkiyi genelleyen temel bir iktisat ilkesidir. \"Diğer koşullar sabitken\" kaydı, gelir ve zevk gibi etkenleri dışarıda tutar."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          103,
+          103
+        ],
+        "quote": "Talep yasasına göre diğer koşullar sabitken bir malın fiyatı yükseldikçe talep edilen miktar azalır.",
+        "chapter": "Ekonomi"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "ekonomi"
+      ],
+      "vurgu": [],
+      "contentHash": "62ea709d40f2e84288fad828dd8bbc6d2a67fe8665547c073820bc9fd8200765",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0547",
+      "conceptId": "ek-denge-fiyati",
+      "stem": {
+        "md": "Arz ve talep eğrilerinin kesiştiği nokta neyi belirler?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Piyasa denge fiyatını"
+        },
+        {
+          "key": "B",
+          "md": "Devletin koyduğu taban fiyatı"
+        },
+        {
+          "key": "C",
+          "md": "Devletin koyduğu tavan fiyatı"
+        },
+        {
+          "key": "D",
+          "md": "Enflasyon oranını"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Taban fiyat, devletin piyasanın dışından belirlediği alt sınırdır.",
+        "C": "Tavan fiyat, devletin piyasanın dışından belirlediği üst sınırdır.",
+        "D": "Enflasyon tek bir malın değil, genel fiyat düzeyinin değişimidir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: piyasa denge fiyatı.\n- Bu noktada arz edilen miktar talep edilen miktara eşittir."
+        },
+        {
+          "type": "hint",
+          "md": "Alıcı ile satıcının buluştuğu yer."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Grafikte yatay eksen miktarı, dikey eksen fiyatı gösterir. Satıcıların eğrisi yukarı, alıcıların eğrisi aşağı doğru eğimlidir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          103,
+          103
+        ],
+        "quote": "Arz ve talep eğrilerinin kesiştiği nokta piyasa denge fiyatını belirler.",
+        "chapter": "Ekonomi"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "ekonomi"
+      ],
+      "vurgu": [],
+      "contentHash": "83adf7f6db4760fa3c2280b12786153c460c111807bb7c646c1611534d21e060",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0548",
+      "conceptId": "ek-firsat-maliyeti",
+      "stem": {
+        "md": "Bir öğrenci akşamını ders çalışmak yerine sinemada geçiriyor. Bu seçimle vazgeçilen en iyi alternatifin değerine iktisatta ne ad verilir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Batık maliyet"
+        },
+        {
+          "key": "B",
+          "md": "Sabit maliyet"
+        },
+        {
+          "key": "C",
+          "md": "Fırsat maliyeti"
+        },
+        {
+          "key": "D",
+          "md": "Marjinal fayda"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Batık maliyet, geri alınamayacak biçimde geçmişte yapılmış harcamadır.",
+        "B": "Sabit maliyet, üretim miktarından bağımsız olarak katlanılan giderdir.",
+        "D": "Marjinal fayda, bir birim daha tüketmenin getirdiği ek faydadır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: fırsat maliyeti.\n- Burada vazgeçilen şey ders çalışmanın getirisidir.\n- Kıt kaynaklar yüzünden her seçimin bir fırsat maliyeti vardır."
+        },
+        {
+          "type": "hint",
+          "md": "Seçilmeyen yolun bedeli."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Kaynaklar kıt olduğu için her tercih başka bir şeyden vazgeçmek demektir. İktisat, maliyeti yalnızca ödenen parayla değil, kaçırılan seçeneklerle de ölçer."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          103,
+          103
+        ],
+        "quote": "Fırsat maliyeti, bir seçim yapıldığında vazgeçilen en iyi alternatifin değeridir.",
+        "chapter": "Ekonomi"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "ekonomi"
+      ],
+      "vurgu": [],
+      "contentHash": "cc2a799ddfbdeb3c942ef225ecfefe6c40f949081ff59373bc6866b20433a96f",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0549",
+      "conceptId": "ek-dusuk-mal",
+      "stem": {
+        "md": "Gelir arttıkça talebi azalan mallara ne ad verilir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Lüks mal"
+        },
+        {
+          "key": "B",
+          "md": "Tamamlayıcı mal"
+        },
+        {
+          "key": "C",
+          "md": "Düşük mal"
+        },
+        {
+          "key": "D",
+          "md": "İkame mal"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Lüks malın talebi gelir arttıkça hızla artar.",
+        "B": "Tamamlayıcı mal, başka bir malla birlikte tüketilen maldır.",
+        "D": "İkame mal, başka bir malın yerine kullanılabilen maldır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: düşük mal.\n- Gelir artınca tüketici bu malı bırakıp daha nitelikli olanına yönelir.\n- Normal mallarda ise gelir arttıkça talep de artar."
+        },
+        {
+          "type": "hint",
+          "md": "Gelir yükselince bırakılan ucuz seçenekler."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Mallar, tüketicinin gelirindeki değişime verdikleri tepkiye göre sınıflandırılır. Bu sınıflama malın kalitesinden çok tüketici davranışını anlatır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          103,
+          103
+        ],
+        "quote": "Gelir arttıkça talebi azalan mallara düşük mal denir.",
+        "chapter": "Ekonomi"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "ekonomi"
+      ],
+      "vurgu": [],
+      "contentHash": "0b1173c341d1a369342bc7d557b48d299f9909a0304be4ce2dbf8ff483e0249f",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0550",
+      "conceptId": "ek-enflasyon",
+      "stem": {
+        "md": "Genel fiyat düzeyinin sürekli olarak yükselmesine ne ad verilir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Deflasyon"
+        },
+        {
+          "key": "B",
+          "md": "Devalüasyon"
+        },
+        {
+          "key": "C",
+          "md": "Enflasyon"
+        },
+        {
+          "key": "D",
+          "md": "Resesyon"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Deflasyon, genel fiyat düzeyinin sürekli düşmesidir.",
+        "B": "Devalüasyon, ulusal paranın değerinin resmî kararla düşürülmesidir.",
+        "D": "Resesyon, ekonomik faaliyetin daralmasıdır; fiyat artışını anlatmaz."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: enflasyon.\n- Tek bir malın pahalanması değil, genel fiyat düzeyinin sürekli artışıdır.\n- Paranın satın alma gücü düşer."
+        },
+        {
+          "type": "hint",
+          "md": "Paranın alım gücünü eriten süreç."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Fiyat düzeyi, ekonomideki mal ve hizmetlerin ortalama fiyatını gösteren bir ölçüdür ve genellikle fiyat endeksleriyle izlenir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          104,
+          104
+        ],
+        "quote": "Enflasyon, genel fiyat düzeyinin sürekli olarak yükselmesidir.",
+        "chapter": "Ekonomi"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "ekonomi"
+      ],
+      "vurgu": [],
+      "contentHash": "34541ed62d76b2a5b76e3f3e8f3039190a2b09c214f8594d71c7edf939af59d4",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0551",
+      "conceptId": "ek-deflasyon",
+      "stem": {
+        "md": "Genel fiyat düzeyinin sürekli olarak düşmesi hangi kavramla anlatılır?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Deflasyon"
+        },
+        {
+          "key": "B",
+          "md": "Enflasyon"
+        },
+        {
+          "key": "C",
+          "md": "Stagflasyon"
+        },
+        {
+          "key": "D",
+          "md": "Hiperenflasyon"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Enflasyon, fiyat düzeyinin sürekli yükselmesidir.",
+        "C": "Stagflasyon, durgunlukla yüksek enflasyonun bir arada görülmesidir.",
+        "D": "Hiperenflasyon, fiyatların çok hızlı yükseldiği aşırı enflasyondur."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: deflasyon.\n- Enflasyonun tersi yönde bir süreçtir.\n- Tüketiciler fiyatların düşmesini bekleyip harcamayı erteleyebilir."
+        },
+        {
+          "type": "hint",
+          "md": "Ucuzlamanın genele yayılması."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Fiyatlardaki sürekli düşüş ilk bakışta iyi görünse de ekonomistler bunu da bir sorun olarak görür, çünkü harcama ve yatırımı geciktirebilir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          104,
+          104
+        ],
+        "quote": "Genel fiyat düzeyinin sürekli olarak düşmesine deflasyon denir.",
+        "chapter": "Ekonomi"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "ekonomi"
+      ],
+      "vurgu": [],
+      "contentHash": "25726817d8b4033421e7b1cc605a6fa8d04f27eab8369bb97a21080ee46cee86",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0552",
+      "conceptId": "ek-stagflasyon",
+      "stem": {
+        "md": "Bir ülkede ekonomi durgunluk içindeyken fiyatlar da hızla yükseliyorsa bu durum hangi kavramla adlandırılır?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Stagflasyon"
+        },
+        {
+          "key": "B",
+          "md": "Deflasyon"
+        },
+        {
+          "key": "C",
+          "md": "Dezenflasyon"
+        },
+        {
+          "key": "D",
+          "md": "Devalüasyon"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Deflasyon, fiyat düzeyinin düşmesidir; burada fiyatlar yükseliyor.",
+        "C": "Dezenflasyon, enflasyon oranının yavaşlamasıdır.",
+        "D": "Devalüasyon, ulusal paranın değerinin resmî kararla düşürülmesidir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: stagflasyon.\n- Durgunluk ile yüksek enflasyonun aynı anda görülmesidir.\n- Ad, İngilizce durgunluk (stagnation) ve enflasyon sözcüklerinin birleşimidir."
+        },
+        {
+          "type": "hint",
+          "md": "Ad, iki kavramın birleşiminden gelir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Klasik beklentiye göre durgunlukta fiyat artışı yavaşlar. 1970'lerdeki petrol krizlerinde bu beklentinin tersine işleyen bir tablo yaşanmıştır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          104,
+          104
+        ],
+        "quote": "Ekonomik durgunluk ile yüksek enflasyonun bir arada görülmesine stagflasyon denir.",
+        "chapter": "Ekonomi"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "ekonomi"
+      ],
+      "vurgu": [],
+      "contentHash": "ed408c3e65c30578cc576be395246291ecc7fe4a81fffc47d2143fb58bf839bc",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0553",
+      "conceptId": "ek-reel-gsyh",
+      "stem": {
+        "md": "Fiyat değişimlerinin etkisinden arındırılmış GSYH'ye ne ad verilir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Nominal GSYH"
+        },
+        {
+          "key": "B",
+          "md": "Kişi başına GSYH"
+        },
+        {
+          "key": "C",
+          "md": "Potansiyel GSYH"
+        },
+        {
+          "key": "D",
+          "md": "Reel GSYH"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Nominal GSYH cari fiyatlarla hesaplanır, fiyat etkisini içerir.",
+        "B": "Kişi başına GSYH, toplam hasılanın nüfusa bölünmesidir.",
+        "C": "Potansiyel GSYH, kaynaklar tam kullanıldığında ulaşılabilecek üretim düzeyidir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: reel GSYH.\n- Sabit bir baz yılın fiyatlarıyla hesaplanır.\n- Büyümenin gerçek üretim artışından mı yoksa fiyat artışından mı geldiğini ayırt eder."
+        },
+        {
+          "type": "hint",
+          "md": "\"Gerçek\" anlamına gelen sözcük."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Fiyatlar yükselirken üretimin parasal değeri, gerçekte daha fazla mal üretilmese bile artabilir. Bu yüzden iktisatçılar hasılayı iki farklı biçimde hesaplar."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          104,
+          104
+        ],
+        "quote": "Fiyat değişimlerinin etkisinden arındırılmış gayrisafi yurt içi hasılaya reel GSYH denir.",
+        "chapter": "Ekonomi"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "ekonomi"
+      ],
+      "vurgu": [],
+      "contentHash": "59194b5d82605d7464586a8de5d09f95fe5f55c5cfd7c4d2bd5955ee4b5e4368",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0554",
+      "conceptId": "ek-dolaysiz-vergi",
+      "stem": {
+        "md": "Aşağıdakilerden hangisi dolaysız vergiye örnektir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Gelir vergisi"
+        },
+        {
+          "key": "B",
+          "md": "Katma değer vergisi"
+        },
+        {
+          "key": "C",
+          "md": "Özel tüketim vergisi"
+        },
+        {
+          "key": "D",
+          "md": "Gümrük vergisi"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Katma değer vergisi tüketim üzerinden alınan dolaylı bir vergidir.",
+        "C": "Özel tüketim vergisi belirli malların satışı üzerinden alınan dolaylı bir vergidir.",
+        "D": "Gümrük vergisi ithal edilen mallar üzerinden alınan dolaylı bir vergidir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: gelir vergisi.\n- Dolaysız vergi doğrudan kişinin gelirinden ya da servetinden alınır.\n- Dolaylı vergi mal ve hizmet fiyatına eklenerek tüketiciye yansır."
+        },
+        {
+          "type": "hint",
+          "md": "Kazancın kendisinden alınan vergi."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Vergiler, vergi yükünün kimin üzerinde kaldığına ve neyin vergilendirildiğine göre gruplanır: gelir, servet ve harcama üzerinden alınanlar."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          105,
+          105
+        ],
+        "quote": "Gelir vergisi ve kurumlar vergisi dolaysız vergilere örnektir.",
+        "chapter": "Ekonomi"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "ekonomi"
+      ],
+      "vurgu": [],
+      "contentHash": "cb371f90c5fbb72910b3353b1b85323bf7c6cdd389519d08f934ea5b6dca1e62",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0555",
+      "conceptId": "ek-artan-oranli-vergi",
+      "stem": {
+        "md": "Gelir yükseldikçe uygulanan vergi oranının da yükseldiği vergilendirme türü hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Artan oranlı vergi"
+        },
+        {
+          "key": "B",
+          "md": "Düz oranlı vergi"
+        },
+        {
+          "key": "C",
+          "md": "Azalan oranlı vergi"
+        },
+        {
+          "key": "D",
+          "md": "Maktu vergi"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Düz oranlı vergide gelir ne olursa olsun oran sabittir.",
+        "C": "Azalan oranlı vergide gelir arttıkça oran düşer.",
+        "D": "Maktu vergi, matraha bakılmaksızın belirlenmiş sabit bir tutardır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: artan oranlı vergi.\n- Yüksek gelir dilimleri daha yüksek oranla vergilendirilir.\n- Amaç, vergi yükünü ödeme gücüne göre dağıtmaktır."
+        },
+        {
+          "type": "hint",
+          "md": "Gelir dilimleri yukarı çıktıkça oran da tırmanır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Vergi tarifeleri, gelir ile vergi oranı arasındaki ilişkiye göre sınıflandırılır. Bu tercih, vergi adaleti tartışmalarının merkezindedir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          105,
+          105
+        ],
+        "quote": "Artan oranlı vergide gelir yükseldikçe uygulanan vergi oranı da yükselir.",
+        "chapter": "Ekonomi"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "ekonomi"
+      ],
+      "vurgu": [],
+      "contentHash": "d367e719bac5ccbd346f601a0441a9fe2ca3678754732b97719fda312aa51f35",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0556",
+      "conceptId": "ek-tekel",
+      "stem": {
+        "md": "Bir malın piyasada tek bir satıcı tarafından arz edildiği piyasa yapısına ne ad verilir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Tekel"
+        },
+        {
+          "key": "B",
+          "md": "Oligopol"
+        },
+        {
+          "key": "C",
+          "md": "Tam rekabet"
+        },
+        {
+          "key": "D",
+          "md": "Monopson"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Oligopolde tek değil, az sayıda büyük satıcı vardır.",
+        "C": "Tam rekabette çok sayıda satıcı bulunur.",
+        "D": "Monopson tek satıcıyı değil, tek alıcıyı anlatır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: tekel (monopol).\n- Tek satıcı, rakibi olmadığı için fiyat üzerinde büyük güce sahiptir."
+        },
+        {
+          "type": "hint",
+          "md": "Rakipsiz satıcı."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Piyasa yapıları, alıcı ve satıcı sayısına ve bunların fiyatı etkileme gücüne göre sınıflandırılır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          105,
+          105
+        ],
+        "quote": "Bir malın piyasada tek bir satıcı tarafından arz edildiği yapıya tekel denir.",
+        "chapter": "Ekonomi"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "ekonomi"
+      ],
+      "vurgu": [],
+      "contentHash": "ff1f6e7327af6dbe9dc910aa215d49b540973af0c36de86903983b08c77d4780",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0557",
+      "conceptId": "ek-piyasa-eslestirme",
+      "stem": {
+        "md": "Piyasa yapılarını tanımlarıyla eşleştirin.\n\n1. Monopson\n2. Oligopol\n3. Tam rekabet\n\na. Çok sayıda alıcı ve satıcı vardır, hiçbiri fiyatı tek başına belirleyemez.\nb. Piyasada tek bir alıcı vardır.\nc. Piyasaya az sayıda büyük satıcı hâkimdir."
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "1-c, 2-b, 3-a"
+        },
+        {
+          "key": "B",
+          "md": "1-b, 2-c, 3-a"
+        },
+        {
+          "key": "C",
+          "md": "1-b, 2-a, 3-c"
+        },
+        {
+          "key": "D",
+          "md": "1-a, 2-c, 3-b"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Monopsonu az sayıda satıcıyla eşleştirmek, alıcı tarafını satıcı tarafıyla karıştırmaktır.",
+        "C": "Oligopolde çok sayıda değil, az sayıda satıcı vardır.",
+        "D": "Monopson çok sayıda alıcıyı değil, tek alıcıyı anlatır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Monopson: tek alıcı (1-b).\n- Oligopol: az sayıda büyük satıcı (2-c).\n- Tam rekabet: çok sayıda alıcı ve satıcı (3-a)."
+        },
+        {
+          "type": "hint",
+          "md": "\"Mono\" tek, \"oligo\" az demektir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Bu terimlerin çoğu Yunanca köklerden gelir: önek sayıyı, kök ise alıcı mı satıcı mı olduğunu bildirir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          105,
+          105
+        ],
+        "quote": "Piyasada tek bir alıcının bulunduğu yapıya monopson denir.",
+        "chapter": "Ekonomi"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "ekonomi"
+      ],
+      "vurgu": [],
+      "contentHash": "8dc5d6b221f26ea00113f494c5ff9006c142ff79d3acf052db5b3bde0de98a33",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0558",
+      "conceptId": "ek-adam-smith",
+      "stem": {
+        "md": "1776'da yayımlanan Ulusların Zenginliği adlı eserin yazarı kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Karl Marx"
+        },
+        {
+          "key": "B",
+          "md": "Adam Smith"
+        },
+        {
+          "key": "C",
+          "md": "John Maynard Keynes"
+        },
+        {
+          "key": "D",
+          "md": "David Ricardo"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Karl Marx bir sonraki yüzyılda yazmış, Kapital ile tanınmıştır.",
+        "C": "Keynes yirminci yüzyıl iktisatçısıdır.",
+        "D": "Ricardo bu eserden sonra yazmış ve ondan etkilenmiştir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: Adam Smith.\n- İskoç düşünür, eseriyle iktisat biliminin kurucusu sayılır."
+        },
+        {
+          "type": "hint",
+          "md": "İktisadın babası sayılan İskoç düşünür."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Eser, bir ulusun zenginliğinin altın birikiminden değil üretim ve iş bölümünden geldiğini savunarak merkantilizme karşı çıkmıştır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          106,
+          106
+        ],
+        "quote": "Adam Smith'in Ulusların Zenginliği adlı eseri 1776'da yayımlanmıştır.",
+        "chapter": "Ekonomi"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "ekonomi"
+      ],
+      "vurgu": [],
+      "contentHash": "2006bf1e708ab7ef67fa140b94f16c5bde7a9c103fd935e5ad176bd1632af1af",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0559",
+      "conceptId": "ek-gorunmez-el",
+      "stem": {
+        "md": "Ulusların Zenginliği'nin yazarıyla özdeşleşen, piyasadaki kendiliğinden düzeni anlatan benzetme hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Görünmez el"
+        },
+        {
+          "key": "B",
+          "md": "Yaratıcı yıkım"
+        },
+        {
+          "key": "C",
+          "md": "Demir kafes"
+        },
+        {
+          "key": "D",
+          "md": "Ortak malların trajedisi"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Yaratıcı yıkım kavramı Joseph Schumpeter'le özdeşleşmiştir.",
+        "C": "Demir kafes benzetmesi sosyolog Max Weber'e aittir.",
+        "D": "Ortak malların trajedisi Garrett Hardin'in yaygınlaştırdığı bir kavramdır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: görünmez el.\n- Eserin yazarı Adam Smith'tir.\n- Benzetme, kişisel çıkar peşindeki bireylerin farkında olmadan toplumun yararına hizmet ettiğini anlatır."
+        },
+        {
+          "type": "hint",
+          "md": "Kimsenin görmediği ama düzeni sağlayan bir şey."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Klasik iktisat, merkezi bir planlayıcı olmadan da piyasaların fiyatlar aracılığıyla kendiliğinden bir düzen kurabileceğini ileri sürmüştür."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          106,
+          106
+        ],
+        "quote": "Piyasadaki kendiliğinden düzeni anlatan görünmez el benzetmesi Adam Smith'e aittir.",
+        "chapter": "Ekonomi"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "ekonomi"
+      ],
+      "vurgu": [],
+      "contentHash": "5f6833fb61496a0ec7e0dd653304fb556eee7f72c30e4c2e60f4774cf69fe80f",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0560",
+      "conceptId": "ek-ricardo",
+      "stem": {
+        "md": "Karşılaştırmalı üstünlükler teorisi hangi iktisatçıyla özdeşleşmiştir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Adam Smith"
+        },
+        {
+          "key": "B",
+          "md": "David Ricardo"
+        },
+        {
+          "key": "C",
+          "md": "Thomas Malthus"
+        },
+        {
+          "key": "D",
+          "md": "Milton Friedman"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Adam Smith dış ticarette mutlak üstünlük fikrini ortaya koymuştur.",
+        "C": "Malthus nüfus ile besin üretimi arasındaki ilişki üzerine yazmıştır.",
+        "D": "Friedman yirminci yüzyılda para politikası üzerine çalışmıştır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: David Ricardo.\n- Teoriye göre bir ülke her malı daha pahalıya üretse bile görece daha verimli olduğu malda uzmanlaşarak ticaretten kazanç sağlar.\n- Mutlak üstünlük fikrinden bu yönüyle ayrılır."
+        },
+        {
+          "type": "hint",
+          "md": "İngiliz klasik iktisatçı; şarap ve kumaş örneğiyle bilinir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Teori, iki ülkenin ticaret yapmasının neden her ikisine de yarar sağlayabileceğini açıklar. Uluslararası ticaret kuramının temel taşlarından biridir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          106,
+          106
+        ],
+        "quote": "Karşılaştırmalı üstünlükler teorisi David Ricardo ile özdeşleşmiştir.",
+        "chapter": "Ekonomi"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "ekonomi"
+      ],
+      "vurgu": [],
+      "contentHash": "00a0be4839eb86757bd925207c6b919838f137a8b42206c21dc0d356f2203da8",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0561",
+      "conceptId": "ek-malthus",
+      "stem": {
+        "md": "Nüfusun besin üretiminden daha hızlı arttığını ileri süren iktisatçı kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "David Ricardo"
+        },
+        {
+          "key": "B",
+          "md": "Thomas Malthus"
+        },
+        {
+          "key": "C",
+          "md": "Adam Smith"
+        },
+        {
+          "key": "D",
+          "md": "John Stuart Mill"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Ricardo daha çok dış ticaret ve rant üzerine yazmıştır.",
+        "C": "Adam Smith iş bölümü ve serbest piyasa üzerine yazmıştır.",
+        "D": "John Stuart Mill özgürlük ve faydacılık üzerine yazılarıyla tanınır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: Thomas Malthus.\n- Görüşüne göre nüfus artışı besin üretimini aşınca kıtlık ve sefalet kaçınılmaz olur."
+        },
+        {
+          "type": "hint",
+          "md": "Görüşleri iktisada \"kasvetli bilim\" lakabını kazandırmıştır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "On sekizinci yüzyıl sonunda nüfus ile kaynaklar arasındaki dengeye dair karamsar bir görüş ortaya atılmış ve uzun süre tartışılmıştır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          106,
+          106
+        ],
+        "quote": "Thomas Malthus, nüfusun besin üretiminden daha hızlı arttığını ileri sürmüştür.",
+        "chapter": "Ekonomi"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "ekonomi"
+      ],
+      "vurgu": [],
+      "contentHash": "ea0d1194ca51dfae2315d8efa458e92035716c3136293a77fddb06e4d83b0607",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0562",
+      "conceptId": "ek-eser-siralama",
+      "stem": {
+        "md": "Aşağıdaki iktisat eserlerinin ilk yayımlanış sırası (eskiden yeniye) hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Ekonomi Politiğin ve Vergilendirmenin İlkeleri - Ulusların Zenginliği - Kapital - Genel Teori"
+        },
+        {
+          "key": "B",
+          "md": "Ulusların Zenginliği - Kapital - Ekonomi Politiğin ve Vergilendirmenin İlkeleri - Genel Teori"
+        },
+        {
+          "key": "C",
+          "md": "Ulusların Zenginliği - Ekonomi Politiğin ve Vergilendirmenin İlkeleri - Genel Teori - Kapital"
+        },
+        {
+          "key": "D",
+          "md": "Ulusların Zenginliği - Ekonomi Politiğin ve Vergilendirmenin İlkeleri - Kapital - Genel Teori"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Ricardo'nun eseri, Smith'in eserinden sonra ve onun etkisiyle yazılmıştır.",
+        "B": "Kapital, Ricardo'nun eserinden yarım yüzyıldan fazla sonra yayımlanmıştır.",
+        "C": "Genel Teori yirminci yüzyıl eseridir; Kapital'den sonra gelir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Ulusların Zenginliği: 1776.\n- Ekonomi Politiğin ve Vergilendirmenin İlkeleri: 1817.\n- Kapital (ilk cilt): 1867.\n- Genel Teori: 1936."
+        },
+        {
+          "type": "hint",
+          "md": "Klasik iktisat önce gelir; Büyük Buhran dönemi eseri en sonda."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "İktisat düşüncesi klasik okul, Marksist eleştiri ve Keynesçi devrim gibi aşamalardan geçmiştir. Her dönemin eseri bir öncekine yanıt niteliğindedir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          106,
+          106
+        ],
+        "quote": "Adam Smith'in Ulusların Zenginliği adlı eseri 1776'da yayımlanmıştır.",
+        "chapter": "Ekonomi"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "ekonomi"
+      ],
+      "vurgu": [],
+      "contentHash": "6ddd7759804bd3292df45f6e4691b61a1e52cca427029b1c014e1b2f85785d0d",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0563",
+      "conceptId": "ek-kapital",
+      "stem": {
+        "md": "Kapital adlı eserin yazarı kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Pierre-Joseph Proudhon"
+        },
+        {
+          "key": "B",
+          "md": "Karl Marx"
+        },
+        {
+          "key": "C",
+          "md": "John Maynard Keynes"
+        },
+        {
+          "key": "D",
+          "md": "Adam Smith"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Proudhon \"Mülkiyet nedir?\" adlı eseriyle tanınan Fransız düşünürdür.",
+        "C": "Keynes'in en bilinen eseri Genel Teori'dir.",
+        "D": "Adam Smith'in en bilinen eseri Ulusların Zenginliği'dir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: Karl Marx.\n- Eser kapitalist üretim biçimini ve emek ile sermaye ilişkisini eleştirel biçimde inceler."
+        },
+        {
+          "type": "hint",
+          "md": "Komünist Manifesto'nun yazarlarından biri."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "On dokuzuncu yüzyıl sanayi toplumu, sermaye birikimini ve emeğin sömürüsünü inceleyen kapsamlı eleştirel çalışmalara konu olmuştur."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          107,
+          107
+        ],
+        "quote": "Kapital adlı eserin yazarı Karl Marx'tır.",
+        "chapter": "Ekonomi"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "ekonomi"
+      ],
+      "vurgu": [],
+      "contentHash": "dcb7cf5379536776cd0e500306e136aab7fb4d971f08747eb4b96495b70263bd",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0564",
+      "conceptId": "ek-keynes-genel-teori",
+      "stem": {
+        "md": "Durgunluk dönemlerinde devletin kamu harcamalarıyla toplam talebi canlandırmasını savunan iktisatçının 1936'da yayımlanan kitabı hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Ulusların Zenginliği"
+        },
+        {
+          "key": "B",
+          "md": "İstihdam, Faiz ve Paranın Genel Teorisi"
+        },
+        {
+          "key": "C",
+          "md": "Kapital"
+        },
+        {
+          "key": "D",
+          "md": "Nüfus İlkesi Üzerine Bir Deneme"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Ulusların Zenginliği on sekizinci yüzyılda serbest piyasayı savunan bir eserdir.",
+        "C": "Kapital on dokuzuncu yüzyılda kapitalizmi eleştiren bir eserdir.",
+        "D": "Nüfus İlkesi Üzerine Bir Deneme, nüfus ile besin ilişkisini ele alan Malthus eseridir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Görüşün sahibi John Maynard Keynes'tir.\n- Kitabı: İstihdam, Faiz ve Paranın Genel Teorisi (1936).\n- Büyük Buhran'ın ardından makroekonomiyi yeniden biçimlendirmiştir."
+        },
+        {
+          "type": "hint",
+          "md": "Büyük Buhran'ın gölgesinde yazılmış bir eser."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Büyük Buhran, piyasaların kendiliğinden tam istihdama döneceği inancını sarsmış ve devletin ekonomideki rolü üzerine yeni bir kuram doğurmuştur."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          107,
+          107
+        ],
+        "quote": "John Maynard Keynes'in İstihdam, Faiz ve Paranın Genel Teorisi adlı kitabı 1936'da yayımlanmıştır.",
+        "chapter": "Ekonomi"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "ekonomi"
+      ],
+      "vurgu": [],
+      "contentHash": "2d7bfd30c5229bc94d943002acaafda529e8e2bab5c11c425d431166fe4aee92",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0565",
+      "conceptId": "ek-friedman",
+      "stem": {
+        "md": "Chicago Okulu'nun önde gelen parasalcı iktisatçılarından biri kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "John Maynard Keynes"
+        },
+        {
+          "key": "B",
+          "md": "Karl Marx"
+        },
+        {
+          "key": "C",
+          "md": "Milton Friedman"
+        },
+        {
+          "key": "D",
+          "md": "Thomas Malthus"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Keynes, parasalcıların eleştirdiği talep yönetimi yaklaşımının kurucusudur.",
+        "B": "Marx kapitalizmin eleştirmeni olan on dokuzuncu yüzyıl düşünürüdür.",
+        "D": "Malthus nüfus kuramıyla tanınan klasik dönem iktisatçısıdır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: Milton Friedman.\n- Parasalcılık, enflasyonun temelde para arzındaki artıştan kaynaklandığını savunur."
+        },
+        {
+          "type": "hint",
+          "md": "Amerikalı, Nobel ödüllü, serbest piyasa savunucusu."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Yirminci yüzyılın ikinci yarısında para arzının ekonomideki rolünü öne çıkaran bir akım, Keynesçi yaklaşıma güçlü bir eleştiri getirmiştir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          107,
+          107
+        ],
+        "quote": "Milton Friedman, Chicago Okulu'nun önde gelen parasalcı iktisatçılarından biridir.",
+        "chapter": "Ekonomi"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "ekonomi"
+      ],
+      "vurgu": [],
+      "contentHash": "73ea478f90aaccb4883f46bdbd7026cffe0c8d31e4de3ce6f919e8176c143ef0",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0566",
+      "conceptId": "ek-gresham",
+      "stem": {
+        "md": "\"Kötü para iyi parayı piyasadan kovar\" ilkesi hangi adla bilinir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Gresham Yasası"
+        },
+        {
+          "key": "B",
+          "md": "Say Yasası"
+        },
+        {
+          "key": "C",
+          "md": "Engel Yasası"
+        },
+        {
+          "key": "D",
+          "md": "Okun Yasası"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Say Yasası, arzın kendi talebini yarattığını ileri sürer.",
+        "C": "Engel Yasası, gelir arttıkça gıdaya ayrılan payın azaldığını anlatır.",
+        "D": "Okun Yasası, işsizlik ile üretim açığı arasındaki ilişkiyi anlatır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: Gresham Yasası.\n- Aynı itibari değerdeki iki paradan değerli olanı saklanır, değersiz olanı dolaşımda kalır."
+        },
+        {
+          "type": "hint",
+          "md": "Adını on altıncı yüzyıl İngiliz tüccarından alır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Maden paralar döneminde, içerdikleri değerli maden miktarı farklı ama itibari değeri aynı olan sikkeler aynı anda dolaşıma girebiliyordu."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          107,
+          107
+        ],
+        "quote": "Kötü paranın iyi parayı piyasadan kovduğunu söyleyen ilke Gresham Yasası olarak bilinir.",
+        "chapter": "Ekonomi"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "ekonomi"
+      ],
+      "vurgu": [],
+      "contentHash": "78313b5c7ab4b323e4ea8a98f0bb64da807150df647cd93217d352d617c59dc2",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0567",
+      "conceptId": "ek-buyuk-buhran",
+      "stem": {
+        "md": "Büyük Buhran, ____ yılında New York Borsası'nın çöküşüyle başlamıştır."
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "1929"
+        },
+        {
+          "key": "B",
+          "md": "1914"
+        },
+        {
+          "key": "C",
+          "md": "1944"
+        },
+        {
+          "key": "D",
+          "md": "1971"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "1914, Birinci Dünya Savaşı'nın başladığı yıldır.",
+        "C": "1944, Bretton Woods Konferansı'nın toplandığı yıldır.",
+        "D": "1971, ABD'nin doları altından ayırdığı yıldır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: 1929.\n- Borsa çöküşü bankacılık krizine ve kitlesel işsizliğe yol açmıştır.\n- Etkileri 1930'lar boyunca dünyaya yayılmıştır."
+        },
+        {
+          "type": "hint",
+          "md": "İki dünya savaşı arasındaki dönem."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Yirminci yüzyılın en ağır ekonomik krizi, iki dünya savaşı arasında yaşanmış ve iktisat düşüncesini derinden değiştirmiştir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          108,
+          108
+        ],
+        "quote": "Büyük Buhran, 1929'da New York Borsası'nın çöküşüyle başlamıştır.",
+        "chapter": "Ekonomi"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "ekonomi"
+      ],
+      "vurgu": [],
+      "contentHash": "d343e586db412e25f25b6fd54c8658d7f527c6e82d7f2c022b50e263b6f28c1e",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0568",
+      "conceptId": "ek-new-deal",
+      "stem": {
+        "md": "Büyük Buhran'a karşı New Deal adlı programı uygulayan ABD başkanı kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Herbert Hoover"
+        },
+        {
+          "key": "B",
+          "md": "Harry Truman"
+        },
+        {
+          "key": "C",
+          "md": "Woodrow Wilson"
+        },
+        {
+          "key": "D",
+          "md": "Franklin D. Roosevelt"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Hoover, borsa çöktüğünde görevde olan ve krize yanıtı yetersiz bulunan başkandır.",
+        "B": "Truman, İkinci Dünya Savaşı'nın sonunda göreve gelmiştir.",
+        "C": "Wilson, Birinci Dünya Savaşı döneminin başkanıdır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: Franklin D. Roosevelt.\n- New Deal; kamu işleri, bankacılık düzenlemeleri ve sosyal güvenlik adımlarını içerir."
+        },
+        {
+          "type": "hint",
+          "md": "Dört kez seçilmiş tek ABD başkanı."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "1930'larda ABD hükümeti, işsizliği azaltmak ve bankacılık sistemini düzenlemek için kapsamlı bir kamu programı başlatmıştır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          108,
+          108
+        ],
+        "quote": "ABD Başkanı Franklin D. Roosevelt, Büyük Buhran'a karşı New Deal adlı programı uygulamıştır.",
+        "chapter": "Ekonomi"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "ekonomi"
+      ],
+      "vurgu": [],
+      "contentHash": "1442e7d2dd408eabcfcaf38f2760d63aa547c55fb268e71a33c04e52d57244fa",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0569",
+      "conceptId": "ek-bretton-woods",
+      "stem": {
+        "md": "Bretton Woods sisteminde para birimleri neye bağlanmıştı?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Doğrudan gümüşe"
+        },
+        {
+          "key": "B",
+          "md": "İngiliz sterlinine, sterlin de gümüşe"
+        },
+        {
+          "key": "C",
+          "md": "Bir para birimleri sepetine"
+        },
+        {
+          "key": "D",
+          "md": "ABD dolarına, dolar da altına"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Gümüş, sistemin dayanağı değildi.",
+        "B": "Sterlin, savaş sonrası dönemde merkezi rolünü dolara bırakmıştı.",
+        "C": "Sepete dayalı kur rejimleri sistem çöktükten sonra yaygınlaşmıştır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: ABD dolarına, dolar da altına.\n- Konferans 1944'te toplanmıştır.\n- Sabit ama ayarlanabilir kurlara dayanan bir düzen kurulmuştur."
+        },
+        {
+          "type": "hint",
+          "md": "Savaştan güçlü çıkan ekonominin parası merkezdeydi."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "İkinci Dünya Savaşı'nın sonlarında Müttefik ülkeler, savaş sonrası uluslararası para düzenini belirlemek için ABD'deki bir otelde toplanmıştır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          108,
+          108
+        ],
+        "quote": "Bretton Woods sisteminde para birimleri ABD dolarına, dolar da altına bağlanmıştı.",
+        "chapter": "Ekonomi"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "ekonomi"
+      ],
+      "vurgu": [],
+      "contentHash": "ac7f0bf855e6e1c6af8ed289d4c2d08b323047c12743503c02b18049f288e5ae",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0570",
+      "conceptId": "ek-tarih-siralama",
+      "stem": {
+        "md": "Aşağıdaki olayların kronolojik sırası (eskiden yeniye) hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Bretton Woods Konferansı - Büyük Buhran'ın başlaması - Doların altına çevrilebilirliğinin askıya alınması - Dünya Ticaret Örgütü'nün kuruluşu"
+        },
+        {
+          "key": "B",
+          "md": "Büyük Buhran'ın başlaması - Doların altına çevrilebilirliğinin askıya alınması - Bretton Woods Konferansı - Dünya Ticaret Örgütü'nün kuruluşu"
+        },
+        {
+          "key": "C",
+          "md": "Büyük Buhran'ın başlaması - Bretton Woods Konferansı - Dünya Ticaret Örgütü'nün kuruluşu - Doların altına çevrilebilirliğinin askıya alınması"
+        },
+        {
+          "key": "D",
+          "md": "Büyük Buhran'ın başlaması - Bretton Woods Konferansı - Doların altına çevrilebilirliğinin askıya alınması - Dünya Ticaret Örgütü'nün kuruluşu"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Bretton Woods, Büyük Buhran'dan on beş yıl sonra toplanmıştır.",
+        "B": "Doların altından ayrılması, Bretton Woods düzeninin sonudur; ondan önce gelemez.",
+        "C": "Dünya Ticaret Örgütü doların altından ayrılmasından yaklaşık çeyrek yüzyıl sonra kurulmuştur."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Büyük Buhran: 1929.\n- Bretton Woods Konferansı: 1944.\n- Doların altına çevrilebilirliğinin askıya alınması: 1971.\n- Dünya Ticaret Örgütü: 1995."
+        },
+        {
+          "type": "hint",
+          "md": "Bir düzenin sonu, kuruluşundan önce gelemez."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Yirminci yüzyılın uluslararası ekonomi tarihi; bir büyük kriz, savaş sonrası kurulan bir para düzeni, bu düzenin çözülmesi ve küresel ticaret kurallarının yeniden örgütlenmesiyle şekillenmiştir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          108,
+          108
+        ],
+        "quote": "ABD, 1971'de doların altına çevrilebilirliğini askıya almıştır.",
+        "chapter": "Ekonomi"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "ekonomi"
+      ],
+      "vurgu": [],
+      "contentHash": "3104361b08819177abcdba9ed8c983c5f5b5e3efed0b350812e3549b4ccdfd05",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0571",
+      "conceptId": "ek-ahilik",
+      "stem": {
+        "md": "Anadolu'da esnaf ve zanaatkârları örgütleyen; mesleki eğitimi, üretim kalitesini ve ahlakı birlikte gözeten teşkilat hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Ahilik"
+        },
+        {
+          "key": "B",
+          "md": "Tımar"
+        },
+        {
+          "key": "C",
+          "md": "Devşirme"
+        },
+        {
+          "key": "D",
+          "md": "İltizam"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Tımar, vergi gelirinin hizmet karşılığı askerlere bırakıldığı toprak düzenidir.",
+        "C": "Devşirme, Osmanlı'da asker ve yönetici yetiştirme yöntemidir.",
+        "D": "İltizam, vergi toplama hakkının açık artırmayla kiraya verilmesidir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: Ahilik.\n- Çırak, kalfa ve usta basamaklarıyla meslek eğitimi verir.\n- Fiyat, kalite ve esnaf ahlakını denetler."
+        },
+        {
+          "type": "hint",
+          "md": "Adı \"kardeş\" ya da \"cömert\" anlamlarıyla ilişkilendirilir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Ortaçağ Anadolu'sunda şehirli esnaf, mesleki dayanışmayı ve ahlaki kuralları bir arada yürüten loncalara benzer yapılar kurmuştur."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          109,
+          109
+        ],
+        "quote": "Ahilik, Anadolu'da esnaf ve zanaatkârları örgütleyen bir teşkilattır.",
+        "chapter": "Ekonomi"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "ekonomi"
+      ],
+      "vurgu": [],
+      "contentHash": "1a6aae32eec6d3d31e0ed5d247a7746d22c0663223de34631fd5bf34bc36606b",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0572",
+      "conceptId": "ek-ahi-evran",
+      "stem": {
+        "md": "Ahilik teşkilatının kurucusu olarak kabul edilen kişi kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Hacı Bektaş-ı Veli"
+        },
+        {
+          "key": "B",
+          "md": "Mevlânâ Celâleddîn-i Rûmî"
+        },
+        {
+          "key": "C",
+          "md": "Ahi Evran"
+        },
+        {
+          "key": "D",
+          "md": "Yunus Emre"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Hacı Bektaş-ı Veli, Bektaşilik geleneğinin kurucusu sayılan bir mutasavvıftır.",
+        "B": "Mevlânâ, Mevlevilik geleneğinin dayandığı mutasavvıf ve şairdir.",
+        "D": "Yunus Emre, Türkçe tasavvuf şiirinin önde gelen şairidir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: Ahi Evran.\n- Kırşehir ile özdeşleşmiş, debbağ (dericilik) esnafının piri sayılır."
+        },
+        {
+          "type": "hint",
+          "md": "Adında teşkilatın adı geçer."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Selçuklu döneminde Anadolu'ya gelen bazı tasavvuf önderleri, şehirlerde esnaf örgütlenmesine de öncülük etmiştir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          109,
+          109
+        ],
+        "quote": "Ahilik teşkilatının kurucusu olarak Ahi Evran kabul edilir.",
+        "chapter": "Ekonomi"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "ekonomi"
+      ],
+      "vurgu": [],
+      "contentHash": "15350bc0b59a79f23d686a7b954c6c3513c6c1fb501d77dd1ca7e7d01f4b1eb4",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0573",
+      "conceptId": "ek-akce",
+      "stem": {
+        "md": "Osmanlı Devleti'nde uzun süre temel para birimi olarak kullanılan akçe hangi madenden basılırdı?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Altın"
+        },
+        {
+          "key": "B",
+          "md": "Gümüş"
+        },
+        {
+          "key": "C",
+          "md": "Bakır"
+        },
+        {
+          "key": "D",
+          "md": "Demir"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Osmanlı'da altın para sultani adını taşırdı.",
+        "C": "Bakırdan basılan küçük para mangır adını taşırdı.",
+        "D": "Demir, Osmanlı'da para basımında kullanılan bir maden değildi."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: gümüş.\n- Akçe adı \"beyazca\" anlamına gelir ve gümüşün rengine gönderme yapar."
+        },
+        {
+          "type": "hint",
+          "md": "Adı rengini anlatır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Osmanlı para sisteminde altın, gümüş ve bakır paralar farklı adlarla birlikte dolaşımdaydı."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          109,
+          109
+        ],
+        "quote": "Akçe, Osmanlı Devleti'nde uzun süre temel para birimi olarak kullanılan gümüş paradır.",
+        "chapter": "Ekonomi"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "ekonomi"
+      ],
+      "vurgu": [],
+      "contentHash": "ec066cb92ecc3058a189952a75d66a5e842dd82df445bc31314ffce9f244c3c0",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0574",
+      "conceptId": "ek-ilk-akce",
+      "stem": {
+        "md": "İlk Osmanlı akçesi hangi padişah döneminde basılmıştır?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Osman Gazi"
+        },
+        {
+          "key": "B",
+          "md": "I. Murad"
+        },
+        {
+          "key": "C",
+          "md": "Orhan Gazi"
+        },
+        {
+          "key": "D",
+          "md": "Fatih Sultan Mehmed"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Osman Gazi döneminden kalmış bir sikke kesin olarak kabul görmez.",
+        "B": "I. Murad, Orhan Gazi'nin halefidir; akçe ondan önce basılmıştır.",
+        "D": "Fatih döneminde akçe zaten uzun süredir kullanılıyordu."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: Orhan Gazi.\n- Akçe basımı, devletin bağımsızlık simgelerinden biri sayılır."
+        },
+        {
+          "type": "hint",
+          "md": "Bursa'yı başkent yapan padişah."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Ortaçağ İslam dünyasında bir hükümdarın kendi adına para bastırması, hutbe okutmakla birlikte egemenliğin en önemli işaretlerinden biriydi."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          109,
+          109
+        ],
+        "quote": "İlk Osmanlı akçesi Orhan Gazi döneminde basılmıştır.",
+        "chapter": "Ekonomi"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "ekonomi"
+      ],
+      "vurgu": [],
+      "contentHash": "163b90940c05e0b45dd59132e0fd3f549ba0f10293b6ccfae542c7e8030fde63",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0575",
+      "conceptId": "ek-kaime",
+      "stem": {
+        "md": "Osmanlı Devleti'nin Sultan Abdülmecid döneminde çıkardığı ilk kâğıt para hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Mangır"
+        },
+        {
+          "key": "B",
+          "md": "Sultani"
+        },
+        {
+          "key": "C",
+          "md": "Kaime"
+        },
+        {
+          "key": "D",
+          "md": "Para"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Mangır bakırdan basılmış küçük bir maden paradır.",
+        "B": "Sultani altından basılmış bir maden paradır.",
+        "D": "Para, Osmanlı'da gümüş bir sikke adıdır, kâğıt değildir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: kaime.\n- Tanzimat döneminde hazinenin para ihtiyacını karşılamak için çıkarılmıştır."
+        },
+        {
+          "type": "hint",
+          "md": "Maden paranın yerine geçen bir belge."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "On dokuzuncu yüzyılda bütçe açıkları büyüyen Osmanlı Devleti, maden paraya ek olarak yeni bir ödeme aracı denemiştir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          109,
+          109
+        ],
+        "quote": "Osmanlı Devleti'nin ilk kâğıt parası olan kaime, Sultan Abdülmecid döneminde çıkarılmıştır.",
+        "chapter": "Ekonomi"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "ekonomi"
+      ],
+      "vurgu": [],
+      "contentHash": "f7461b2f01e2bd42e6da97b853a7dce81b0bfff0b4636ad7c08ff55d09da7dd6",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0576",
+      "conceptId": "ek-duyun-u-umumiye",
+      "stem": {
+        "md": "1881'de Muharrem Kararnamesi ile kurulan ve Osmanlı borçlarını yönetmek için bazı vergi gelirlerine el koyan kurum hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Düyun-u Umumiye İdaresi"
+        },
+        {
+          "key": "B",
+          "md": "Reji İdaresi"
+        },
+        {
+          "key": "C",
+          "md": "Osmanlı Bankası"
+        },
+        {
+          "key": "D",
+          "md": "Ziraat Bankası"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Reji İdaresi tütün tekelini işletmek için kurulmuştur.",
+        "C": "Osmanlı Bankası 1863'te kurulan, devlet bankası işlevi de gören bir bankadır.",
+        "D": "Ziraat Bankası çiftçiye kredi sağlamak amacıyla kurulmuştur."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: Düyun-u Umumiye İdaresi.\n- Adı \"genel borçlar\" anlamına gelir.\n- Alacaklı ülkelerin temsilcilerinden oluşur ve Osmanlı maliyesinin bağımsızlığını zedelemiştir."
+        },
+        {
+          "type": "hint",
+          "md": "Adı \"genel borçlar\" demektir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Kırım Savaşı ile başlayan dış borçlanma, 1870'lerde ödeme güçlüğüne dönüşmüş ve alacaklılarla bir uzlaşma arayışı doğmuştur."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          109,
+          109
+        ],
+        "quote": "Düyun-u Umumiye İdaresi 1881'de Muharrem Kararnamesi ile kurulmuştur.",
+        "chapter": "Ekonomi"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "ekonomi"
+      ],
+      "vurgu": [],
+      "contentHash": "a7d28061d2a1919cade6fdcf82ccc717edb8578e3be2acf5ad369f3e2766b1e4",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0577",
+      "conceptId": "ek-imf",
+      "stem": {
+        "md": "Kuruluş amacı uluslararası parasal iş birliğini ve kur istikrarını sağlamak olan kurum hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Dünya Ticaret Örgütü"
+        },
+        {
+          "key": "B",
+          "md": "OPEC"
+        },
+        {
+          "key": "C",
+          "md": "Uluslararası Para Fonu"
+        },
+        {
+          "key": "D",
+          "md": "Avrupa Merkez Bankası"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Dünya Ticaret Örgütü ticaret kurallarını düzenler.",
+        "B": "OPEC petrol üreten ülkelerin politikalarını eşgüdümler.",
+        "D": "Avrupa Merkez Bankası avro bölgesinin para politikasını yürütür; küresel bir kurum değildir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: Uluslararası Para Fonu (IMF).\n- Bretton Woods'ta kararlaştırılmıştır.\n- Ödemeler dengesi sıkıntısı çeken ülkelere kredi sağlar."
+        },
+        {
+          "type": "hint",
+          "md": "Kısaltması dört harflidir ve Bretton Woods'tan doğmuştur."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Savaş sonrası dünyada, 1930'lardaki rekabetçi devalüasyonları ve ödeme krizlerini önlemek için uluslararası kurumlar tasarlanmıştır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          110,
+          110
+        ],
+        "quote": "Uluslararası Para Fonu, uluslararası parasal iş birliğini ve kur istikrarını sağlamak amacıyla Bretton Woods'ta kararlaştırılmıştır.",
+        "chapter": "Ekonomi"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "ekonomi"
+      ],
+      "vurgu": [],
+      "contentHash": "266ef3a8e3e44136894a1258fe26d0ea3097aeea4fa80a94471a94138274aa64",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0578",
+      "conceptId": "ek-dto",
+      "stem": {
+        "md": "1995'te GATT'ın yerini alan uluslararası kuruluş hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Dünya Ticaret Örgütü"
+        },
+        {
+          "key": "B",
+          "md": "Uluslararası Para Fonu"
+        },
+        {
+          "key": "C",
+          "md": "Dünya Bankası"
+        },
+        {
+          "key": "D",
+          "md": "OECD"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Uluslararası Para Fonu 1940'larda kurulmuştur ve parasal konularla ilgilenir.",
+        "C": "Dünya Bankası kalkınma kredileri veren bir kurumdur.",
+        "D": "OECD, üye ülkelerin ekonomi politikaları üzerine çalışan bir iş birliği örgütüdür."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: Dünya Ticaret Örgütü.\n- GATT bir anlaşmaydı; DTÖ ise kalıcı bir uluslararası örgüttür.\n- Ticaret uyuşmazlıklarını çözen bir mekanizması vardır."
+        },
+        {
+          "type": "hint",
+          "md": "Ticaret anlaşmasından kalıcı örgüte geçiş."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Savaş sonrası dönemde gümrük tarifelerini indirmek amacıyla imzalanan genel bir anlaşma, uzun müzakere turlarından sonra kalıcı bir örgüte dönüştürülmüştür."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          110,
+          110
+        ],
+        "quote": "Dünya Ticaret Örgütü 1995'te GATT'ın yerini almıştır.",
+        "chapter": "Ekonomi"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "ekonomi"
+      ],
+      "vurgu": [],
+      "contentHash": "2af35ab732414c6ef142f846fe823091acda543b4a232b725ca88f68e50dfd00",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0579",
+      "conceptId": "ek-opec",
+      "stem": {
+        "md": "OPEC 1960'ta hangi şehirde kurulmuştur?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Viyana"
+        },
+        {
+          "key": "B",
+          "md": "Riyad"
+        },
+        {
+          "key": "C",
+          "md": "Tahran"
+        },
+        {
+          "key": "D",
+          "md": "Bağdat"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Viyana, örgütün bugünkü merkezidir; kuruluş yeri değildir.",
+        "B": "Riyad, Suudi Arabistan'ın başkentidir; kuruluş toplantısına ev sahipliği yapmamıştır.",
+        "C": "Tahran, kurucu üyelerden İran'ın başkentidir; toplantı orada yapılmamıştır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: Bağdat.\n- Kurucu üyeler İran, Irak, Kuveyt, Suudi Arabistan ve Venezuela'dır.\n- Merkez sonradan Viyana'ya taşınmıştır."
+        },
+        {
+          "type": "hint",
+          "md": "Dicle kıyısındaki bir başkent."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Petrol üreten ülkeler, uluslararası petrol şirketlerinin fiyat üzerindeki gücüne karşı ortak hareket etmek için bir örgüt kurmuştur."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          110,
+          110
+        ],
+        "quote": "OPEC, petrol üreten ülkelerin politikalarını eşgüdümlemek amacıyla 1960'ta Bağdat'ta kurulmuştur.",
+        "chapter": "Ekonomi"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "ekonomi"
+      ],
+      "vurgu": [],
+      "contentHash": "6e2c5871a293a1e112dc70fd2819fa225455be02f74485ce8b6373cce0e4fc71",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0580",
+      "conceptId": "ek-yen",
+      "stem": {
+        "md": "Japonya'nın para birimi hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Won"
+        },
+        {
+          "key": "B",
+          "md": "Yuan"
+        },
+        {
+          "key": "C",
+          "md": "Baht"
+        },
+        {
+          "key": "D",
+          "md": "Yen"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Won, Kore'nin para birimidir.",
+        "B": "Yuan, Çin'in para biriminin adıdır.",
+        "C": "Baht, Tayland'ın para birimidir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: yen.\n- Doğu Asya'daki para birimleri adları birbirine benzediği için sıkça karıştırılır."
+        },
+        {
+          "type": "hint",
+          "md": "Üç harfli bir ad."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Doğu Asya'daki birçok para biriminin adı, tarihte \"yuvarlak\" anlamına gelen aynı Çince karakterden türemiştir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          111,
+          111
+        ],
+        "quote": "Japonya'nın para birimi yendir.",
+        "chapter": "Ekonomi"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "ekonomi"
+      ],
+      "vurgu": [],
+      "contentHash": "c9b96f8cdae0f2dba1a19315cce9eb654107f668185999424a928b2bc4baaaee",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0581",
+      "conceptId": "ek-sterlin",
+      "stem": {
+        "md": "Birleşik Krallık'ın para birimi hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Avro"
+        },
+        {
+          "key": "B",
+          "md": "Dolar"
+        },
+        {
+          "key": "C",
+          "md": "Sterlin"
+        },
+        {
+          "key": "D",
+          "md": "Frank"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Avro, Avrupa Birliği'ndeki avro bölgesinin para birimidir.",
+        "B": "Dolar, başta ABD olmak üzere başka ülkelerin para birimidir.",
+        "D": "Frank, İsviçre'nin para birimidir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: sterlin (pound).\n- Birleşik Krallık avroya hiç geçmemiştir."
+        },
+        {
+          "type": "hint",
+          "md": "Simgesi £ işaretidir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Avrupa'daki ülkelerin bir kısmı ortak para birimine geçmiş, bir kısmı ise kendi ulusal parasını korumuştur."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          111,
+          111
+        ],
+        "quote": "Birleşik Krallık'ın para birimi sterlindir.",
+        "chapter": "Ekonomi"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "ekonomi"
+      ],
+      "vurgu": [],
+      "contentHash": "f6d4beb51c6f361ce70cb99b595a471472cef5772b221e3c9603035b5b2d06e7",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0582",
+      "conceptId": "ek-isvicre-frangi",
+      "stem": {
+        "md": "Aşağıdaki ülkelerden hangisinin para birimi frank adını taşır?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "İsviçre"
+        },
+        {
+          "key": "B",
+          "md": "Avusturya"
+        },
+        {
+          "key": "C",
+          "md": "İsveç"
+        },
+        {
+          "key": "D",
+          "md": "Norveç"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Avusturya avro bölgesindedir.",
+        "C": "İsveç'in para birimi kronadır.",
+        "D": "Norveç'in para birimi kronedir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: İsviçre.\n- İsviçre Avrupa Birliği üyesi değildir ve kendi para birimini kullanır."
+        },
+        {
+          "type": "hint",
+          "md": "Alplerde, tarafsızlığıyla bilinen bir ülke."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Frank adı tarihte Fransa ve Belçika gibi ülkelerde de kullanılmış, bu ülkeler avroya geçince adı yalnızca birkaç ülkede yaşamaya devam etmiştir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          111,
+          111
+        ],
+        "quote": "İsviçre'nin para birimi İsviçre frangıdır.",
+        "chapter": "Ekonomi"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "ekonomi"
+      ],
+      "vurgu": [],
+      "contentHash": "0b75c994acbcf664c874ee399265ba05d0e26cb1fd3961cb7417988370c8799e",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0583",
+      "conceptId": "ek-para-eslestirme",
+      "stem": {
+        "md": "Ülkeleri para birimleriyle eşleştirin.\n\n1. Hindistan\n2. Rusya\n3. Güney Kore\n\na. Ruble\nb. Won\nc. Rupi"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "1-a, 2-c, 3-b"
+        },
+        {
+          "key": "B",
+          "md": "1-c, 2-b, 3-a"
+        },
+        {
+          "key": "C",
+          "md": "1-b, 2-a, 3-c"
+        },
+        {
+          "key": "D",
+          "md": "1-c, 2-a, 3-b"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Ruble Hindistan'ın değil, Rusya'nın para birimidir.",
+        "B": "Won Rusya'nın değil, Kore'nin para birimidir.",
+        "C": "Won Hindistan'ın para birimi değildir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Hindistan: rupi (1-c).\n- Rusya: ruble (2-a).\n- Güney Kore: won (3-b)."
+        },
+        {
+          "type": "hint",
+          "md": "Rupi ile ruble birbirine benzer ama farklı ülkelerindir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Para birimlerinin adları çoğu zaman eski ağırlık ölçülerinden ya da madenlerin adlarından gelir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          111,
+          111
+        ],
+        "quote": "Hindistan'ın para birimi rupi, Rusya'nın para birimi ruble, Güney Kore'nin para birimi wondur.",
+        "chapter": "Ekonomi"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "ekonomi"
+      ],
+      "vurgu": [],
+      "contentHash": "59f128c32710a80dfae91d0eb71db5ff0bf9ca14778812c9f6630ce6ea4a0ae0",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0584",
+      "conceptId": "ek-real",
+      "stem": {
+        "md": "Para birimi real olan ülke hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Brezilya"
+        },
+        {
+          "key": "B",
+          "md": "Arjantin"
+        },
+        {
+          "key": "C",
+          "md": "Meksika"
+        },
+        {
+          "key": "D",
+          "md": "Şili"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Arjantin'in para birimi pesodur.",
+        "C": "Meksika'nın para birimi pesodur.",
+        "D": "Şili'nin para birimi pesodur."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap: Brezilya.\n- Güney Amerika'daki birçok İspanyolca konuşan ülke peso kullanırken Brezilya'nın para birimi farklıdır."
+        },
+        {
+          "type": "hint",
+          "md": "Güney Amerika'nın Portekizce konuşan ülkesi."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Latin Amerika ülkelerinin para birimlerinin adları, büyük ölçüde sömürgeci İspanya ve Portekiz'in tarihî paralarından gelir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          111,
+          111
+        ],
+        "quote": "Brezilya'nın para birimi realdir.",
+        "chapter": "Ekonomi"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "ekonomi"
+      ],
+      "vurgu": [],
+      "contentHash": "7d20a66c75e9e71a0c5448a0bec452a01c1714686e084640fa5085951e520839",
+      "deleted": false
+    }
+  ]
+}

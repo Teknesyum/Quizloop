@@ -1,0 +1,2605 @@
+{
+  "blockId": "0010",
+  "questions": [
+    {
+      "id": "genel-kultur-0385",
+      "conceptId": "mona-lisa-ressami",
+      "stem": {
+        "md": "Mona Lisa tablosunu hangi sanatçı yapmıştır?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Leonardo da Vinci"
+        },
+        {
+          "key": "B",
+          "md": "Pablo Picasso"
+        },
+        {
+          "key": "C",
+          "md": "Vincent van Gogh"
+        },
+        {
+          "key": "D",
+          "md": "Michelangelo Buonarroti"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Pablo Picasso yirminci yüzyıl ressamıdır; Mona Lisa ondan yüzyıllar önce yapılmıştır.",
+        "C": "Vincent van Gogh on dokuzuncu yüzyılda yaşamıştır ve Yıldızlı Gece ile tanınır.",
+        "D": "Michelangelo aynı çağın sanatçısıdır ama Davut heykeli ve Sistina tavanıyla bilinir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Mona Lisa'yı Leonardo da Vinci yapmıştır.\n- Tablo Paris'teki Louvre Müzesi'nde sergilenir.\n- Leonardo ressamlığın yanında mühendis ve bilim insanıdır."
+        },
+        {
+          "type": "hint",
+          "md": "Rönesans döneminin çok yönlü İtalyan ustası."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Mona Lisa, İtalyan Rönesansı'nın en tanınmış portresidir. Yumuşak geçişli gölgeleme tekniği (sfumato) ve gizemli gülümsemesiyle ünlüdür; bugün Paris'teki Louvre Müzesi'ndedir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          74,
+          74
+        ],
+        "quote": "Mona Lisa tablosunu Leonardo da Vinci yapmıştır.",
+        "chapter": "Sanat ve Müzik"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "sanat"
+      ],
+      "vurgu": [],
+      "contentHash": "6544f42ca32958f11e34bf8dba62e40f4f42b3115aae235f7f6af0501a89f637",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0386",
+      "conceptId": "sm-sistina-tavani",
+      "stem": {
+        "md": "Vatikan'daki Sistina Şapeli'nin tavan fresklerini kim yapmıştır?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Raffaello"
+        },
+        {
+          "key": "B",
+          "md": "Michelangelo"
+        },
+        {
+          "key": "C",
+          "md": "Leonardo da Vinci"
+        },
+        {
+          "key": "D",
+          "md": "Donatello"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Raffaello, Vatikan'daki papalık odalarının fresklerini yapmıştır, şapelin tavanını değil.",
+        "C": "Leonardo da Vinci'nin ünlü duvar resmi Milano'daki Son Akşam Yemeği'dir.",
+        "D": "Donatello erken Rönesans'ın heykeltıraşıdır, fresk ressamı değildir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Sistina Şapeli tavanını Michelangelo boyamıştır.\n- Tavanda Yaratılış sahneleri, bunların içinde Âdem'in Yaratılışı yer alır.\n- Michelangelo kendini önce heykeltıraş sayardı."
+        },
+        {
+          "type": "hint",
+          "md": "Davut heykelinin de sahibi."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Fresk, yaş sıvanın üzerine boyayla yapılan duvar resmidir; boya sıvayla birlikte kuruyarak kalıcılaşır. Sistina Şapeli, papa seçimlerinin yapıldığı Vatikan'daki şapeldir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          74,
+          74
+        ],
+        "quote": "Vatikan'daki Sistina Şapeli'nin tavan fresklerini Michelangelo yapmıştır.",
+        "chapter": "Sanat ve Müzik"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "sanat"
+      ],
+      "vurgu": [],
+      "contentHash": "f2cc0a35a5d0147a8603b09160423545f70292b224738dde8ceafe6189979273",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0387",
+      "conceptId": "sm-davut-heykeli",
+      "stem": {
+        "md": "Sistina Şapeli'nin tavanını boyayan sanatçının tek bir mermer bloktan yonttuğu ünlü heykel hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Düşünen Adam"
+        },
+        {
+          "key": "B",
+          "md": "Davut"
+        },
+        {
+          "key": "C",
+          "md": "Milo Venüsü"
+        },
+        {
+          "key": "D",
+          "md": "Semadirek Nike'si"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Düşünen Adam, on dokuzuncu yüzyılda Auguste Rodin'in yaptığı bir heykeldir.",
+        "C": "Milo Venüsü antik Yunan dönemine ait, sanatçısı kesin bilinmeyen bir heykeldir.",
+        "D": "Semadirek Nike'si de antik Yunan'dan kalma kanatlı bir zafer heykelidir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Önce tavanı boyayanı bulmak gerekir: Michelangelo.\n- Michelangelo'nun tek bir mermer bloktan yonttuğu ünlü heykel Davut'tur.\n- Heykel Floransa'dadır."
+        },
+        {
+          "type": "hint",
+          "md": "Kutsal kitaplarda bir devi sapanla yenen genç."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Rönesans heykeltıraşları antik Yunan ve Roma heykellerinin oranlarını örnek almıştır. Mermerden yontma, fazlalığı atarak çalışılan ve hataya yer bırakmayan bir tekniktir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          74,
+          74
+        ],
+        "quote": "Michelangelo'nun Davut heykeli tek bir mermer bloktan yontulmuştur.",
+        "chapter": "Sanat ve Müzik"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "sanat"
+      ],
+      "vurgu": [],
+      "contentHash": "13dedf49d09d90a30b973b0e315bc416e540f8692e6ecb8cf032d0e0ad3e4889",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0388",
+      "conceptId": "sm-gece-devriyesi",
+      "stem": {
+        "md": "Gece Devriyesi tablosunu yapan Hollandalı ressam kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Claude Monet"
+        },
+        {
+          "key": "B",
+          "md": "Pieter Bruegel"
+        },
+        {
+          "key": "C",
+          "md": "Rembrandt"
+        },
+        {
+          "key": "D",
+          "md": "Paul Gauguin"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Claude Monet Fransız izlenimci ressamdır.",
+        "B": "Pieter Bruegel, Rembrandt'tan önceki yüzyılın Flaman köy sahneleri ressamıdır.",
+        "D": "Paul Gauguin Fransız ressamdır ve Tahiti tablolarıyla tanınır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Gece Devriyesi, Rembrandt'ın eseridir.\n- Tablo Amsterdam'daki Rijksmuseum'da sergilenir.\n- Rembrandt ışık ve gölge karşıtlığıyla tanınır."
+        },
+        {
+          "type": "hint",
+          "md": "Hollanda'nın on yedinci yüzyıldaki altın çağının ustası."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Gece Devriyesi, Amsterdam'daki bir sivil muhafız birliğini toplu portre olarak gösteren büyük bir tablodur. Adına karşın sahne gündüzdür; koyulaşan vernik tabloya gece havası vermiştir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          74,
+          74
+        ],
+        "quote": "Gece Devriyesi tablosu Hollandalı ressam Rembrandt'ın eseridir.",
+        "chapter": "Sanat ve Müzik"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "sanat"
+      ],
+      "vurgu": [],
+      "contentHash": "83b0327c8e07718c5636f22ee6553a55037367dc6e17efb579d38896a1fef0fc",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0389",
+      "conceptId": "sm-inci-kupeli-kiz",
+      "stem": {
+        "md": "İnci Küpeli Kız tablosu Hollandalı ressam ____'in eseridir. Boşluğa hangisi gelir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Peter Paul Rubens"
+        },
+        {
+          "key": "B",
+          "md": "Jan van Eyck"
+        },
+        {
+          "key": "C",
+          "md": "Johannes Vermeer"
+        },
+        {
+          "key": "D",
+          "md": "Hieronymus Bosch"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Peter Paul Rubens, dolgun figürlü büyük Barok tablolarıyla tanınan Flaman ressamdır.",
+        "B": "Jan van Eyck on beşinci yüzyılın Flaman ressamıdır ve Arnolfini Portresi ile tanınır.",
+        "D": "Hieronymus Bosch, Dünyevi Zevkler Bahçesi gibi düşsel sahneleriyle tanınır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- İnci Küpeli Kız, Johannes Vermeer'in eseridir.\n- Vermeer Delft'te yaşamış, az sayıda tablo bırakmıştır.\n- Tablo Lahey'deki Mauritshuis Müzesi'ndedir."
+        },
+        {
+          "type": "hint",
+          "md": "Delft kentinde yaşamış, pencereden süzülen ışığı resmeden usta."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Bu tablo, belli bir kişinin portresi değil, Hollandaca 'tronie' denen bir yüz çalışmasıdır. Mavi-sarı başörtüsü ve parlak inci küpe, ışığın ustaca kullanımını gösterir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          74,
+          74
+        ],
+        "quote": "İnci Küpeli Kız tablosu Hollandalı ressam Johannes Vermeer'in eseridir.",
+        "chapter": "Sanat ve Müzik"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "sanat"
+      ],
+      "vurgu": [],
+      "contentHash": "2367f3dab03c847862385bbb975c93aa3da190ac69453a55f2a6cb53cfed9946",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0390",
+      "conceptId": "guernica-ressami",
+      "stem": {
+        "md": "Guernica tablosunu hangi ressam yapmıştır?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Salvador Dalí"
+        },
+        {
+          "key": "B",
+          "md": "Joan Miró"
+        },
+        {
+          "key": "C",
+          "md": "Pablo Picasso"
+        },
+        {
+          "key": "D",
+          "md": "Francisco Goya"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Salvador Dalí de İspanyoldur ama eriyen saatleriyle tanınan gerçeküstücü ressamdır.",
+        "B": "Joan Miró aynı dönemin İspanyol ressamıdır, Guernica onun değildir.",
+        "D": "Francisco Goya savaşı resmetmiştir ama Guernica'dan yüz yılı aşkın süre önce yaşamıştır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Guernica, Pablo Picasso'nun eseridir.\n- Tablo, İspanya İç Savaşı'nda bombalanan Guernica kasabasını anlatır.\n- Bugün Madrid'deki Reina Sofía Müzesi'ndedir."
+        },
+        {
+          "type": "hint",
+          "md": "Kübizmin kurucularından."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Guernica, 1937'de İspanya İç Savaşı sırasında bombalanan Bask kasabasının acısını siyah, beyaz ve gri tonlarla anlatır. Parçalanmış figürleriyle savaş karşıtı sanatın simgesi olmuştur."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          75,
+          75
+        ],
+        "quote": "Guernica tablosunu Pablo Picasso yapmıştır.",
+        "chapter": "Sanat ve Müzik"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "sanat"
+      ],
+      "vurgu": [],
+      "contentHash": "a7768364a6fa399b39c6b01ad01934002179974688bf5966a9136960031b2add",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0391",
+      "conceptId": "sm-kubizm",
+      "stem": {
+        "md": "Kübizm akımını Pablo Picasso ile birlikte geliştiren Fransız ressam kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Henri Matisse"
+        },
+        {
+          "key": "B",
+          "md": "Paul Cézanne"
+        },
+        {
+          "key": "C",
+          "md": "Edgar Degas"
+        },
+        {
+          "key": "D",
+          "md": "Georges Braque"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Henri Matisse, canlı renkleriyle fovizm akımının öncüsüdür.",
+        "B": "Paul Cézanne kübistlere ilham vermiştir ama akım doğduğu sırada hayatını kaybetmişti.",
+        "C": "Edgar Degas, balerin tablolarıyla tanınan izlenimci ressamdır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Kübizmi Picasso ile Georges Braque birlikte geliştirmiştir.\n- Akım yirminci yüzyılın başında Paris'te doğmuştur.\n- Cézanne öncü sayılır ama akımın kurucusu değildir."
+        },
+        {
+          "type": "hint",
+          "md": "Soyadı B harfiyle başlar."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Kübizm, nesneleri geometrik parçalara ayırıp aynı anda birden çok açıdan gösteren bir resim akımıdır. Rönesans'tan beri süren tek bakış noktalı perspektifi bırakmıştır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          75,
+          75
+        ],
+        "quote": "Kübizm akımını Pablo Picasso ile Georges Braque birlikte geliştirmiştir.",
+        "chapter": "Sanat ve Müzik"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "sanat"
+      ],
+      "vurgu": [],
+      "contentHash": "f195acf5298ac2668affd9e357211b48087309ca8967308b12a8afaac2ad557a",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0392",
+      "conceptId": "sm-izlenimcilik",
+      "stem": {
+        "md": "Adını bir tablonun başlığından alan, ışığın ve rengin anlık etkisini yakalamaya çalışan on dokuzuncu yüzyıl Fransız akımı hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "İzlenimcilik"
+        },
+        {
+          "key": "B",
+          "md": "Romantizm"
+        },
+        {
+          "key": "C",
+          "md": "Gerçekçilik"
+        },
+        {
+          "key": "D",
+          "md": "Dışavurumculuk"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Romantizm duyguyu ve doğanın görkemini öne çıkarır, adını bir tablodan almamıştır.",
+        "C": "Gerçekçilik gündelik hayatı süslemeden yansıtmayı amaçlar, adı bir tablodan gelmez.",
+        "D": "Dışavurumculuk yirminci yüzyıl başında Almanya'da güçlenen, iç dünyayı abartılı renklerle yansıtan akımdır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap İzlenimcilik'tir.\n- Akım adını Claude Monet'nin İzlenim, Gün Doğumu tablosundan almıştır.\n- İzlenimciler çoğu zaman açık havada, hızlı fırça darbeleriyle çalışmıştır."
+        },
+        {
+          "type": "hint",
+          "md": "Bir eleştirmen bu adı alay için kullanmıştı."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Bu akımın ressamları resmi Salon sergilerinin dışında kendi sergilerini açmıştır. Boya tüplerinin yaygınlaşması, açık havada resim yapmayı kolaylaştırmıştır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          75,
+          75
+        ],
+        "quote": "İzlenimcilik akımı adını Claude Monet'nin İzlenim, Gün Doğumu tablosundan almıştır.",
+        "chapter": "Sanat ve Müzik"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "sanat"
+      ],
+      "vurgu": [],
+      "contentHash": "3e53371d562749a9df28d2d5ed868c7ff93f9f43d3613beac204db6571db920e",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0393",
+      "conceptId": "sm-bellegin-azmi",
+      "stem": {
+        "md": "Eriyen saatlerin yer aldığı Belleğin Azmi tablosu hangi akımın örneğidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Kübizm"
+        },
+        {
+          "key": "B",
+          "md": "Gerçeküstücülük"
+        },
+        {
+          "key": "C",
+          "md": "İzlenimcilik"
+        },
+        {
+          "key": "D",
+          "md": "Barok"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Kübizm nesneleri geometrik parçalara böler; düş sahneleri kurmaz.",
+        "C": "İzlenimcilik ışığın gerçek manzaradaki etkisini yakalamaya çalışır.",
+        "D": "Barok on yedinci yüzyılın dramatik ve süslü sanat üslubudur."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Tablo gerçeküstücülüğün (sürrealizm) en bilinen örneklerindendir.\n- Ressamı Salvador Dalí'dir.\n- Gerçeküstücülük düşleri ve bilinçaltını resmeder."
+        },
+        {
+          "type": "hint",
+          "md": "Akımın adı 'gerçeğin ötesi' anlamına gelir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Bu tabloda saatler bir ağaç dalına, bir masaya ve tuhaf bir yaratığa yumuşamış gibi sarkar. Zamanın akışkanlığı ve düşlerin mantığı, tablonun en çok yorumlanan konularıdır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          75,
+          75
+        ],
+        "quote": "Eriyen saatleriyle bilinen Belleğin Azmi tablosu gerçeküstücü ressam Salvador Dalí'nin eseridir.",
+        "chapter": "Sanat ve Müzik"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "sanat"
+      ],
+      "vurgu": [],
+      "contentHash": "a31e94b754b1bcaa29a0dbe6bf7b347650162c29ac95fb043d4dd691b3674023",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0394",
+      "conceptId": "sm-modern-eslestirme",
+      "stem": {
+        "md": "Tabloları ressamlarıyla eşleştirin.\n\n1. Çığlık\n2. Yıldızlı Gece\n3. Belleğin Azmi\n\na. Salvador Dalí\nb. Edvard Munch\nc. Vincent van Gogh"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "1-b, 2-c, 3-a"
+        },
+        {
+          "key": "B",
+          "md": "1-c, 2-b, 3-a"
+        },
+        {
+          "key": "C",
+          "md": "1-a, 2-c, 3-b"
+        },
+        {
+          "key": "D",
+          "md": "1-b, 2-a, 3-c"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Çığlık, Hollandalı van Gogh'un değil, Norveçli bir ressamın eseridir.",
+        "C": "Çığlık gerçeküstücü Dalí'nin değil, dışavurumculuğun öncüsü bir ressamın eseridir.",
+        "D": "Yıldızlı Gece eriyen saatlerin ressamına değil, Arles'de ve Saint-Rémy'de çalışmış bir ressama aittir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Çığlık: Edvard Munch.\n- Yıldızlı Gece: Vincent van Gogh.\n- Belleğin Azmi: Salvador Dalí."
+        },
+        {
+          "type": "hint",
+          "md": "Çığlık'ın ressamı İskandinav'dır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Bu üç tablo, on dokuzuncu yüzyıl sonundan yirminci yüzyıla uzanan modern resmin farklı yüzlerini gösterir: kaygının dışavurumu, kıvrımlı fırça darbeleriyle gece göğü ve düş mantığı."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          75,
+          75
+        ],
+        "quote": "Çığlık tablosu Norveçli ressam Edvard Munch'un eseridir.",
+        "chapter": "Sanat ve Müzik"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "sanat"
+      ],
+      "vurgu": [],
+      "contentHash": "bc69ff9ae7f0b0261b7ef2d97a3d7a1960bf6e48eb74c4e4e8cdc3ad3f7a57b5",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0395",
+      "conceptId": "kaplumbaga-terbiyecisi",
+      "stem": {
+        "md": "Kaplumbağa Terbiyecisi tablosunu hangi ressam yapmıştır?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Şeker Ahmed Paşa"
+        },
+        {
+          "key": "B",
+          "md": "İbrahim Çallı"
+        },
+        {
+          "key": "C",
+          "md": "Osman Hamdi Bey"
+        },
+        {
+          "key": "D",
+          "md": "Hoca Ali Rıza"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Şeker Ahmed Paşa aynı dönemin ressamıdır; natürmortlarıyla tanınır.",
+        "B": "İbrahim Çallı sonraki kuşağın izlenimci ressamıdır.",
+        "D": "Hoca Ali Rıza, İstanbul manzaralarıyla tanınır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Tabloyu Osman Hamdi Bey yapmıştır.\n- Kendisi aynı zamanda arkeolog ve müzecidir.\n- Tablo bugün İstanbul'daki Pera Müzesi'ndedir."
+        },
+        {
+          "type": "hint",
+          "md": "Ressamlığı kadar müzeciliğiyle de bilinir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Tabloda eski bir giysi içindeki yaşlı bir adam, ney ve nakkare taşırken yerdeki kaplumbağaları eğitmeye çalışır. Eser, değişime direnen bir düzeni ince bir alayla anlattığı biçiminde yorumlanır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          76,
+          76
+        ],
+        "quote": "Kaplumbağa Terbiyecisi tablosunu Osman Hamdi Bey yapmıştır.",
+        "chapter": "Sanat ve Müzik"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "sanat"
+      ],
+      "vurgu": [],
+      "contentHash": "5c47a5e75c4e540a54c637b8f823c8f24238cbba806c663f886a4191ab9529ae",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0396",
+      "conceptId": "sm-osman-hamdi-muze",
+      "stem": {
+        "md": "Ressam Osman Hamdi Bey, resmin yanı sıra hangi alandaki öncülüğüyle tanınır?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Mimarlık"
+        },
+        {
+          "key": "B",
+          "md": "Hat sanatı"
+        },
+        {
+          "key": "C",
+          "md": "Şiir"
+        },
+        {
+          "key": "D",
+          "md": "Müzecilik ve arkeoloji"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Mimarlıkta öncü bir rolü yoktur; yapı tasarlamamıştır.",
+        "B": "Hat sanatı onun uğraştığı bir alan değildir.",
+        "C": "Şiirle değil, kazı ve müze çalışmalarıyla tanınır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Osman Hamdi Bey müzecilik ve arkeolojinin öncüsüdür.\n- Bugünkü İstanbul Arkeoloji Müzeleri'nin kurucusu olarak bilinir.\n- Sayda'daki kazıda İskender Lahdi'ni bulan ekibi yönetmiştir."
+        },
+        {
+          "type": "hint",
+          "md": "İskender Lahdi ile ilişkili bir alan."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Osman Hamdi Bey, Paris'te hukuk okumaya gitmiş ama resme yönelmiştir. Osmanlı'da eski eserlerin yurt dışına çıkarılmasını sınırlayan düzenlemelerde de rol oynamıştır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          76,
+          76
+        ],
+        "quote": "Osman Hamdi Bey, bugünkü İstanbul Arkeoloji Müzeleri'nin kurucusu olarak bilinir.",
+        "chapter": "Sanat ve Müzik"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "sanat"
+      ],
+      "vurgu": [],
+      "contentHash": "c92505a2070a67a50636555befb9aa0dbf5b89d8afd158e4eb80f39e50422721",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0397",
+      "conceptId": "sm-seker-ahmed",
+      "stem": {
+        "md": "Natürmortlarıyla tanınan Osmanlı ressamı kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Fikret Mualla"
+        },
+        {
+          "key": "B",
+          "md": "İbrahim Çallı"
+        },
+        {
+          "key": "C",
+          "md": "Şeker Ahmed Paşa"
+        },
+        {
+          "key": "D",
+          "md": "Hoca Ali Rıza"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Fikret Mualla yirminci yüzyılda kafe ve sokak sahneleriyle tanınmıştır.",
+        "B": "İbrahim Çallı figür ve manzaralarıyla bilinen 1914 Kuşağı ressamıdır.",
+        "D": "Hoca Ali Rıza daha çok İstanbul manzaraları ve suluboyalarıyla tanınır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Şeker Ahmed Paşa'dır.\n- Meyve ve sebzeleri konu alan natürmortlarıyla bilinir.\n- Batı tarzı resmi Osmanlı'da yerleştiren ilk kuşaktandır."
+        },
+        {
+          "type": "hint",
+          "md": "Lakabı tatlı bir şeyi çağrıştırır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Natürmort, meyve, çiçek, kap kacak gibi cansız nesnelerin bir düzen içinde resmedildiği türdür. Osmanlı'da ilk Batı tarzı ressamlar arasında asker kökenli olanlar çoktur."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          76,
+          76
+        ],
+        "quote": "Şeker Ahmed Paşa, natürmortlarıyla tanınan Osmanlı ressamıdır.",
+        "chapter": "Sanat ve Müzik"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "sanat"
+      ],
+      "vurgu": [],
+      "contentHash": "e4d9348ae4f5dc81f3c746eeab50808421e08f78244d3d10cee52bd3b701a7fe",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0398",
+      "conceptId": "sm-calli-kusagi",
+      "stem": {
+        "md": "Türk resminde 1914 Kuşağı, grubun önde gelen ressamının adıyla ____ Kuşağı diye de anılır. Boşluğa hangisi gelir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Mualla"
+        },
+        {
+          "key": "B",
+          "md": "Dino"
+        },
+        {
+          "key": "C",
+          "md": "Eyüboğlu"
+        },
+        {
+          "key": "D",
+          "md": "Çallı"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Fikret Mualla bu gruptan sonra yetişmiş, tek başına üretmiş bir ressamdır.",
+        "B": "Abidin Dino sonraki kuşaktan, D Grubu ve toplumsal gerçekçi çevrelere yakın bir ressamdır.",
+        "C": "Bedri Rahmi Eyüboğlu da sonraki kuşaktandır ve D Grubu'yla anılır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- 1914 Kuşağı, İbrahim Çallı'nın adıyla Çallı Kuşağı diye de anılır.\n- Bu ressamlar izlenimciliğin etkisinde açık renkler kullanmıştır.\n- Kuşağın adı Birinci Dünya Savaşı'nın başladığı yıldan gelir."
+        },
+        {
+          "type": "hint",
+          "md": "Bu ressam, sonraki kuşaklara hocalık da yapmıştır; adı bir bitki örtüsünü çağrıştırır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "1914 Kuşağı, Avrupa'da eğitim görüp Birinci Dünya Savaşı'nın başında yurda dönen genç ressamlardan oluşur. Türk resmine açık havada çalışma ve canlı renkler getirmiştir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          76,
+          76
+        ],
+        "quote": "İbrahim Çallı, Türk resminde 1914 Kuşağı ya da Çallı Kuşağı diye anılan grubun önde gelen ressamıdır.",
+        "chapter": "Sanat ve Müzik"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "sanat"
+      ],
+      "vurgu": [],
+      "contentHash": "ae1a69d276423913e0a0bfd44652e5ff0daf940affe9d5da0373c731038ca1fd",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0399",
+      "conceptId": "sm-fikret-mualla",
+      "stem": {
+        "md": "Kafe ve sokak sahneleriyle tanınan, son yıllarını Fransa'da geçirmiş Türk ressam kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Fikret Mualla"
+        },
+        {
+          "key": "B",
+          "md": "Bedri Rahmi Eyüboğlu"
+        },
+        {
+          "key": "C",
+          "md": "Nuri İyem"
+        },
+        {
+          "key": "D",
+          "md": "Hoca Ali Rıza"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Bedri Rahmi Eyüboğlu Türkiye'de yaşamış, motifli resimleri ve mozaikleriyle tanınmıştır.",
+        "C": "Nuri İyem, iri gözlü kadın portreleriyle tanınan ve Türkiye'de yaşamış bir ressamdır.",
+        "D": "Hoca Ali Rıza on dokuzuncu yüzyıl sonunun İstanbul manzara ressamıdır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Fikret Mualla'dır.\n- Paris'te kafe, sokak ve sirk sahneleri resmetmiştir.\n- Canlı renkleri ve hızlı çizgisiyle tanınır."
+        },
+        {
+          "type": "hint",
+          "md": "Adının ikinci kelimesi 'yüce' anlamına gelir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Yirminci yüzyılda pek çok Türk ressamı Paris'te eğitim görmüş ya da orada yaşamıştır. Bu ressamlardan bazıları Paris Okulu denen kozmopolit çevrenin içinde yer almıştır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          76,
+          76
+        ],
+        "quote": "Fikret Mualla, kafe ve sokak sahneleriyle tanınan, son yıllarını Fransa'da geçirmiş bir Türk ressamıdır.",
+        "chapter": "Sanat ve Müzik"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "sanat"
+      ],
+      "vurgu": [],
+      "contentHash": "c82357dca61bf05524056a0c7b6532cdb1030459a197666b0e19c3a7c474ac15",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0400",
+      "conceptId": "sm-sinan-bas-mimar",
+      "stem": {
+        "md": "Osmanlı Devleti'nde yaklaşık elli yıl baş mimarlık yapan mimar kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Mimar Sinan"
+        },
+        {
+          "key": "B",
+          "md": "Mimar Kemaleddin"
+        },
+        {
+          "key": "C",
+          "md": "Sedefkâr Mehmed Ağa"
+        },
+        {
+          "key": "D",
+          "md": "Davud Ağa"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Mimar Kemaleddin yirminci yüzyılın başında çalışmış bir mimardır.",
+        "C": "Sedefkâr Mehmed Ağa sonraki dönemde baş mimar olmuş, bu kadar uzun görev yapmamıştır.",
+        "D": "Davud Ağa baş mimarlığa daha sonra gelmiş ve kısa süre görev yapmıştır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Mimar Sinan'dır.\n- On altıncı yüzyılda Kanuni, II. Selim ve III. Murad dönemlerinde çalışmıştır.\n- Cami, köprü, medrese, hamam gibi yüzlerce yapı inşa etmiştir."
+        },
+        {
+          "type": "hint",
+          "md": "Kanuni döneminin en ünlü mimarı."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Osmanlı'da baş mimar, Hassa Mimarları Ocağı'nın başı olarak devletin yapı işlerini yönetirdi. Bu görev, saray yapılarından su yollarına kadar geniş bir alanı kapsardı."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          77,
+          77
+        ],
+        "quote": "Mimar Sinan, Osmanlı Devleti'nde yaklaşık elli yıl baş mimarlık yapmıştır.",
+        "chapter": "Sanat ve Müzik"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "mimari"
+      ],
+      "vurgu": [],
+      "contentHash": "f66c5a95489035ec1fe735c1de2eb6b915c83841e317bae6a874b676fa5cfd93",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0401",
+      "conceptId": "sm-sinan-eserleri",
+      "stem": {
+        "md": "Mimar Sinan'ın kendi nitelendirmesine göre çıraklık, kalfalık ve ustalık eserlerinin doğru sırası hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Süleymaniye Camii – Şehzade Camii – Selimiye Camii"
+        },
+        {
+          "key": "B",
+          "md": "Şehzade Camii – Selimiye Camii – Süleymaniye Camii"
+        },
+        {
+          "key": "C",
+          "md": "Selimiye Camii – Süleymaniye Camii – Şehzade Camii"
+        },
+        {
+          "key": "D",
+          "md": "Şehzade Camii – Süleymaniye Camii – Selimiye Camii"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Bu sırada Süleymaniye çıraklık eseri olur; oysa Süleymaniye kalfalık dönemine aittir.",
+        "B": "Bu sırada Selimiye ortaya, Süleymaniye sona geçer; Sinan'ın en olgun eseri sona gelmelidir.",
+        "C": "Bu sıra tümüyle tersine çevrilmiştir; Selimiye en son yapılandır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Çıraklık: Şehzade Camii.\n- Kalfalık: Süleymaniye Camii.\n- Ustalık: Edirne'deki Selimiye Camii.\n- Sıra, yapıların inşa edildiği zaman sırasıyla da uyuşur."
+        },
+        {
+          "type": "hint",
+          "md": "Ustalık eseri İstanbul'da değildir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Mimar Sinan, merkezi kubbeyi her yapıda daha geniş ve daha yalın bir mekânla birleştirmeye çalışmıştır. Bu arayış, onun eserlerini dönem dönem ayırmayı kolaylaştırır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          77,
+          77
+        ],
+        "quote": "Mimar Sinan, Şehzade Camii'ni çıraklık, Süleymaniye Camii'ni kalfalık, Edirne'deki Selimiye Camii'ni ustalık eseri olarak nitelendirmiştir.",
+        "chapter": "Sanat ve Müzik"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "mimari"
+      ],
+      "vurgu": [],
+      "contentHash": "24b847ebb308364b833ee9a379fa63e48a83c22b907315fe284339c8baf2dcd2",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0402",
+      "conceptId": "sm-ayasofya",
+      "stem": {
+        "md": "Bugünkü Ayasofya yapısı hangi Bizans imparatorunun döneminde inşa edilmiştir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "I. Konstantinos"
+        },
+        {
+          "key": "B",
+          "md": "II. Theodosius"
+        },
+        {
+          "key": "C",
+          "md": "I. Justinianus"
+        },
+        {
+          "key": "D",
+          "md": "Herakleios"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "I. Konstantinos, kente kendi adını veren imparatordur; bugünkü yapı ondan iki yüzyıl sonradır.",
+        "B": "II. Theodosius döneminde aynı yerde daha önceki bir kilise yapılmıştı, bugünkü yapı o değildir.",
+        "D": "Herakleios yedinci yüzyılın imparatorudur; Ayasofya ondan önce tamamlanmıştır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Bugünkü Ayasofya, I. Justinianus döneminde, 6. yüzyılda yapılmıştır.\n- Mimarları Tralleisli Anthemios ve Miletli İsidoros'tur.\n- Aynı yerdeki önceki iki kilise yangınlarda yok olmuştur."
+        },
+        {
+          "type": "hint",
+          "md": "Ünlü bir hukuk derlemesi de onun adını taşır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Ayasofya, dev kubbesini dört büyük kemer ve pandantifler üzerine oturtmasıyla mimarlık tarihinde bir dönüm noktasıdır. Yapı yüzyıllar boyunca kilise, cami ve müze olarak kullanılmıştır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          77,
+          77
+        ],
+        "quote": "Bugünkü Ayasofya, Bizans İmparatoru I. Justinianus döneminde, 6. yüzyılda yapılmıştır.",
+        "chapter": "Sanat ve Müzik"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "mimari"
+      ],
+      "vurgu": [],
+      "contentHash": "bb1e9020be1130332a6480b7334b7fd02b58a854227ba67f7339e476077d6427",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0403",
+      "conceptId": "sm-sultanahmet-mimari",
+      "stem": {
+        "md": "Altı minaresiyle bilinen İstanbul'daki camiyi tasarlayan mimar kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Mimar Sinan"
+        },
+        {
+          "key": "B",
+          "md": "Davud Ağa"
+        },
+        {
+          "key": "C",
+          "md": "Mimar Kemaleddin"
+        },
+        {
+          "key": "D",
+          "md": "Sedefkâr Mehmed Ağa"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Mimar Sinan bu caminin yapımından önce hayatını kaybetmiştir.",
+        "B": "Davud Ağa, Sinan'dan sonra baş mimar olmuş, bu camiden önce ölmüştür.",
+        "C": "Mimar Kemaleddin yirminci yüzyılda çalışmıştır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Önce camiyi tanımak gerekir: altı minareli Sultanahmet Camii.\n- Mimarı Sedefkâr Mehmed Ağa'dır.\n- Cami I. Ahmed döneminde, on yedinci yüzyılın başında yapılmıştır."
+        },
+        {
+          "type": "hint",
+          "md": "Lakabı, sedef kakma işçiliğinden gelir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Sultanahmet Camii, iç mekânı süsleyen mavi tonlu İznik çinileri nedeniyle Batı'da Mavi Cami diye de anılır. Ayasofya'nın tam karşısında, eski Bizans hipodromunun yanında yer alır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          77,
+          77
+        ],
+        "quote": "Altı minaresiyle bilinen Sultanahmet Camii'nin mimarı Sedefkâr Mehmed Ağa'dır.",
+        "chapter": "Sanat ve Müzik"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "mimari"
+      ],
+      "vurgu": [],
+      "contentHash": "444d0443df8c171a8f86a05b7800fca6134d18811a89afe311fcfa454e4d71f2",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0404",
+      "conceptId": "sm-eyfel-kulesi",
+      "stem": {
+        "md": "Paris'teki Eyfel Kulesi, ____ yılındaki Dünya Fuarı için inşa edilmiştir. Boşluğa hangisi gelir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "1851"
+        },
+        {
+          "key": "B",
+          "md": "1889"
+        },
+        {
+          "key": "C",
+          "md": "1900"
+        },
+        {
+          "key": "D",
+          "md": "1925"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "1851, Londra'daki Büyük Sergi'nin ve Kristal Saray'ın yılıdır.",
+        "C": "1900'de Paris yine bir fuar düzenlemiştir ama kule o sırada zaten ayaktaydı.",
+        "D": "1925, Paris'te Art Deco akımına adını veren serginin yılıdır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Eyfel Kulesi 1889 Dünya Fuarı için yapılmıştır.\n- Fuar, Fransız Devrimi'nin yüzüncü yılına denk gelir.\n- Kule başlangıçta geçici bir yapı olarak düşünülmüştür."
+        },
+        {
+          "type": "hint",
+          "md": "Fransız Devrimi'nin yüzüncü yılı."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Kule, adını şirketi yapıyı inşa eden mühendis Gustave Eiffel'den alır. Dövme demirden yapılmıştır ve tamamlandığında uzun süre dünyanın en yüksek yapısı olmuştur."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          77,
+          77
+        ],
+        "quote": "Paris'teki Eyfel Kulesi, 1889 Dünya Fuarı için inşa edilmiştir.",
+        "chapter": "Sanat ve Müzik"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "mimari"
+      ],
+      "vurgu": [],
+      "contentHash": "95c1995936a90070cac0fd548392ab4ec814c099df0134c44b0c3068f79cf102",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0405",
+      "conceptId": "sm-tac-mahal",
+      "stem": {
+        "md": "Babür hükümdarı Şah Cihan'ın eşi için yaptırdığı anıt mezar hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Kızıl Kale"
+        },
+        {
+          "key": "B",
+          "md": "Elhamra Sarayı"
+        },
+        {
+          "key": "C",
+          "md": "Tac Mahal"
+        },
+        {
+          "key": "D",
+          "md": "Angkor Wat"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Kızıl Kale de Şah Cihan döneminde yapılmıştır ama bir saray-kaledir, mezar değildir.",
+        "B": "Elhamra Sarayı İspanya'nın Granada kentindeki Endülüs dönemi sarayıdır.",
+        "D": "Angkor Wat Kamboçya'daki Khmer dönemi tapınak kompleksidir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Tac Mahal'dir.\n- Hindistan'ın Agra kentinde, beyaz mermerden yapılmıştır.\n- Şah Cihan'ın eşi Mümtaz Mahal için yaptırılmıştır."
+        },
+        {
+          "type": "hint",
+          "md": "Hindistan'ın Agra kentindedir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Babür mimarisi, İran, Orta Asya ve Hint geleneklerini birleştirir. Simetrik bahçeler, soğan kubbeler ve beyaz mermer üzerine taş kakma bu mimarinin tanınan özellikleridir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          77,
+          77
+        ],
+        "quote": "Tac Mahal, Babür hükümdarı Şah Cihan'ın eşi için yaptırdığı anıt mezardır.",
+        "chapter": "Sanat ve Müzik"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "mimari"
+      ],
+      "vurgu": [],
+      "contentHash": "f9530f6bcb852f6883a5960b38206a5c99847b564c984c7aaf389034c73890a8",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0406",
+      "conceptId": "bolero-bestecisi",
+      "stem": {
+        "md": "Bolero adlı orkestra eserinin bestecisi kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Ravel"
+        },
+        {
+          "key": "B",
+          "md": "Debussy"
+        },
+        {
+          "key": "C",
+          "md": "Bizet"
+        },
+        {
+          "key": "D",
+          "md": "Satie"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Debussy aynı dönemin Fransız bestecisidir; Ay Işığı ile tanınır.",
+        "C": "Bizet, İspanya'da geçen Carmen operasının bestecisidir.",
+        "D": "Satie, Gymnopédies adlı piyano parçalarıyla tanınır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Bolero'yu Maurice Ravel bestelemiştir.\n- Eser, tek bir ezginin giderek güçlenerek yinelenmesi üzerine kuruludur.\n- Başlangıçta bir bale müziği olarak yazılmıştır."
+        },
+        {
+          "type": "hint",
+          "md": "Fransız besteci; adı Maurice."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Bolero, baştan sona aynı trampet ritmi üzerinde ilerleyen bir orkestra eseridir. Ezgi her tekrarda başka çalgılara geçer ve ses giderek büyüyerek doruğa ulaşır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          78,
+          78
+        ],
+        "quote": "Bolero adlı orkestra eserinin bestecisi Maurice Ravel'dir.",
+        "chapter": "Sanat ve Müzik"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "müzik"
+      ],
+      "vurgu": [],
+      "contentHash": "01c53cd4b2ac73291c39e942a35cba623a554d4d284d3477c9ab31c0ba0f2ee8",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0407",
+      "conceptId": "sm-beethoven-senfoni",
+      "stem": {
+        "md": "Ay Işığı Sonatı'nın bestecisi kaç senfoni tamamlamıştır?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Dokuz"
+        },
+        {
+          "key": "B",
+          "md": "Beş"
+        },
+        {
+          "key": "C",
+          "md": "Yedi"
+        },
+        {
+          "key": "D",
+          "md": "On iki"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Beş, bestecinin en ünlü senfonilerinden birinin sırasıdır, toplam sayı değildir.",
+        "C": "Yedi de bestecinin senfonilerinden birinin sırasıdır, toplam değildir.",
+        "D": "On iki, bestecinin tamamladığı senfoni sayısından fazladır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Ay Işığı Sonatı Ludwig van Beethoven'ındır.\n- Beethoven dokuz senfoni tamamlamıştır.\n- Dokuzuncu Senfoni'nin son bölümündeki Neşeye Övgü, bugün Avrupa Birliği'nin marşıdır."
+        },
+        {
+          "type": "hint",
+          "md": "Son senfonisinde koro da vardır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Senfoni, orkestra için yazılan, genellikle dört bölümden oluşan büyük ölçekli eserdir. Klasik dönemden Romantik döneme geçişte senfoni hem uzamış hem de daha kişisel bir anlatım kazanmıştır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          78,
+          78
+        ],
+        "quote": "Ludwig van Beethoven dokuz senfoni bestelemiştir.",
+        "chapter": "Sanat ve Müzik"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "müzik"
+      ],
+      "vurgu": [],
+      "contentHash": "4ea63eb33b0fcdf229b8e8efcd5fcf64c59fc75fc4bc6eba6809421e1d6f640a",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0408",
+      "conceptId": "sm-beethoven-isitme",
+      "stem": {
+        "md": "İlerleyen yaşlarında işitme yetisini büyük ölçüde yitirmesine karşın bestelemeyi sürdüren Bonn doğumlu besteci kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Johannes Brahms"
+        },
+        {
+          "key": "B",
+          "md": "Ludwig van Beethoven"
+        },
+        {
+          "key": "C",
+          "md": "Richard Wagner"
+        },
+        {
+          "key": "D",
+          "md": "Franz Schubert"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Brahms Hamburg doğumludur ve işitme kaybıyla anılmaz.",
+        "C": "Wagner Leipzig doğumlu bir opera bestecisidir.",
+        "D": "Schubert Viyana doğumludur ve genç yaşta hayatını kaybetmiştir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Ludwig van Beethoven'dır.\n- Son eserlerinin bir bölümünü neredeyse hiç duymadan bestelemiştir.\n- Klasik dönemden Romantik döneme geçişin en önemli bestecisi sayılır."
+        },
+        {
+          "type": "hint",
+          "md": "Ay Işığı Sonatı da onundur."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Bu bestecinin işitme kaybı yirmili yaşlarının sonunda başlamış ve zamanla ağırlaşmıştır. Yakınlarıyla yazılı konuşma defterleri aracılığıyla iletişim kurmuştur."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          78,
+          78
+        ],
+        "quote": "Beethoven, ilerleyen yaşlarında işitme yetisini büyük ölçüde yitirmiş ama bestelemeyi sürdürmüştür.",
+        "chapter": "Sanat ve Müzik"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "müzik"
+      ],
+      "vurgu": [],
+      "contentHash": "9d1114bc0775c50326e1a96cdfc92e3b897cbbc294f7592d26beb5fea445f619",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0409",
+      "conceptId": "sm-dort-mevsim",
+      "stem": {
+        "md": "Dört Mevsim adlı keman konçertolarını hangi besteci yazmıştır?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Johann Sebastian Bach"
+        },
+        {
+          "key": "B",
+          "md": "Georg Friedrich Händel"
+        },
+        {
+          "key": "C",
+          "md": "Joseph Haydn"
+        },
+        {
+          "key": "D",
+          "md": "Antonio Vivaldi"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Bach da Barok bestecidir ama Dört Mevsim onun değildir.",
+        "B": "Händel, Mesih oratoryosuyla tanınan Barok bestecidir.",
+        "C": "Haydn, Klasik dönemde senfoni ve yaylı dörtlüleriyle tanınır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Dört Mevsim'i Antonio Vivaldi bestelemiştir.\n- Eser, her biri bir mevsimi anlatan dört keman konçertosundan oluşur.\n- Vivaldi Venedikli bir Barok bestecidir."
+        },
+        {
+          "type": "hint",
+          "md": "Venedikli, kızıl saçlı bir rahip."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Konçerto, bir solo çalgı ile orkestranın karşılıklı çaldığı eserdir. Bu dört konçertoda kuş sesleri, fırtına ve buz üstünde yürüyüş gibi doğa sahneleri müzikle betimlenir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          78,
+          78
+        ],
+        "quote": "Dört Mevsim adlı keman konçertoları Antonio Vivaldi'nin eseridir.",
+        "chapter": "Sanat ve Müzik"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "müzik"
+      ],
+      "vurgu": [],
+      "contentHash": "dd8a787bf35767359aa8de2a97095ab2bd8a9259fcb1f241e55afdb301b4a996",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0410",
+      "conceptId": "sm-findikkiran",
+      "stem": {
+        "md": "Fındıkkıran balesinin müziğini hangi besteci yazmıştır?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Pyotr İlyiç Çaykovski"
+        },
+        {
+          "key": "B",
+          "md": "İgor Stravinski"
+        },
+        {
+          "key": "C",
+          "md": "Sergey Prokofyev"
+        },
+        {
+          "key": "D",
+          "md": "Sergey Rahmaninov"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Stravinski, Bahar Ayini balesiyle tanınır.",
+        "C": "Prokofyev, Romeo ve Juliet balesi ile Peter ve Kurt'un bestecisidir.",
+        "D": "Rahmaninov bale değil, daha çok piyano konçertolarıyla tanınır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Fındıkkıran'ın müziği Çaykovski'nindir.\n- Bale, Noel gecesinde geçen bir masala dayanır.\n- Çaykovski'nin Kuğu Gölü ve Uyuyan Güzel baleleri de vardır."
+        },
+        {
+          "type": "hint",
+          "md": "Kuğu Gölü'nün de bestecisi."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Fındıkkıran, bir kızın Noel gecesi hediye aldığı oyuncağın canlanmasını anlatan bir baledir. Şeker Perisi'nin Dansı gibi bölümleri bale dışında da çok tanınır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          78,
+          78
+        ],
+        "quote": "Fındıkkıran balesinin müziğini Pyotr İlyiç Çaykovski bestelemiştir.",
+        "chapter": "Sanat ve Müzik"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "müzik"
+      ],
+      "vurgu": [],
+      "contentHash": "10c18159488673260710d905f53ac75dc3a2139cb001ee57da95b83a4d31844d",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0411",
+      "conceptId": "sm-muzik-donemleri",
+      "stem": {
+        "md": "Aşağıdaki bestecilerden hangisi Barok döneme ait değildir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Wolfgang Amadeus Mozart"
+        },
+        {
+          "key": "B",
+          "md": "Johann Sebastian Bach"
+        },
+        {
+          "key": "C",
+          "md": "Antonio Vivaldi"
+        },
+        {
+          "key": "D",
+          "md": "Georg Friedrich Händel"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Bach, Barok dönemin en önemli bestecilerindendir.",
+        "C": "Vivaldi, Barok dönemin İtalyan bestecisidir.",
+        "D": "Händel de Bach'la aynı yıl doğmuş bir Barok bestecidir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Mozart'tır.\n- Mozart, Haydn ile birlikte Klasik dönemin bestecisidir.\n- Barok dönem kabaca 1600-1750, Klasik dönem 1750-1820 arasıdır."
+        },
+        {
+          "type": "hint",
+          "md": "Sihirli Flüt'ün bestecisi."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Batı müziği tarihi kabaca Barok, Klasik ve Romantik dönemlere ayrılır. Barok müzikte süslü, çok sesli dokular öne çıkar; Klasik dönem daha dengeli ve açık biçimleri tercih eder."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          78,
+          78
+        ],
+        "quote": "Johann Sebastian Bach ve Antonio Vivaldi Barok dönemin, Wolfgang Amadeus Mozart ve Joseph Haydn Klasik dönemin bestecileridir.",
+        "chapter": "Sanat ve Müzik"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "müzik"
+      ],
+      "vurgu": [],
+      "contentHash": "75f3c735efddde3417bc320a7cfdddd9e8ce1c3795064ddb52c4153ea0d965eb",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0412",
+      "conceptId": "sm-makam",
+      "stem": {
+        "md": "Türk sanat müziğinde ezginin dizisini ve seyrini belirleyen kurallar bütününe ne denir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Usul"
+        },
+        {
+          "key": "B",
+          "md": "Makam"
+        },
+        {
+          "key": "C",
+          "md": "Taksim"
+        },
+        {
+          "key": "D",
+          "md": "Peşrev"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Usul, ezginin ritim kalıbını belirler; dizisini değil.",
+        "C": "Taksim, bir çalgıyla yapılan doğaçlama çalımdır.",
+        "D": "Peşrev, genellikle bir faslın başında çalınan saz eseri biçimidir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap makamdır.\n- Makam hem kullanılan sesleri hem de ezginin nasıl dolaşacağını belirler.\n- Rast, hicaz, uşşak bilinen makamlardandır."
+        },
+        {
+          "type": "hint",
+          "md": "Hicaz ve rast bunun örnekleridir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Türk müziğinde bir eser, ezgi yönünden bir kurala, ritim yönünden başka bir kurala bağlıdır. Bu sistemde Batı müziğindeki yarım sesten daha küçük aralıklar da kullanılır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          79,
+          79
+        ],
+        "quote": "Türk sanat müziğinde ezginin dizisini ve seyrini belirleyen kurallar bütününe makam denir.",
+        "chapter": "Sanat ve Müzik"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "müzik"
+      ],
+      "vurgu": [],
+      "contentHash": "d8286f6d8077fbabd700d7d5ce22cccf7facb312b6f2150a2624de594663ce8d",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0413",
+      "conceptId": "sm-ney",
+      "stem": {
+        "md": "Kamıştan yapılan ve üflenerek çalınan çalgı hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Kanun"
+        },
+        {
+          "key": "B",
+          "md": "Kemençe"
+        },
+        {
+          "key": "C",
+          "md": "Ney"
+        },
+        {
+          "key": "D",
+          "md": "Ud"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Kanun telli bir çalgıdır, mızrapla çalınır.",
+        "B": "Kemençe yayla çalınan telli bir çalgıdır.",
+        "D": "Ud kısa saplı, mızrapla çalınan telli bir çalgıdır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap neydir.\n- Ney kamıştan yapılan, üflemeli bir çalgıdır.\n- Mevlevi müziğinin temel çalgılarındandır."
+        },
+        {
+          "type": "hint",
+          "md": "Mevlevi ayinlerinin baş çalgısı."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Üflemeli çalgılarda ses, borunun içindeki havanın titreşmesiyle oluşur. Türk müziğinde bu aileden çalgılar hem tasavvuf müziğinde hem halk müziğinde yer alır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          79,
+          79
+        ],
+        "quote": "Ney, kamıştan yapılan ve üflenerek çalınan bir çalgıdır.",
+        "chapter": "Sanat ve Müzik"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "müzik"
+      ],
+      "vurgu": [],
+      "contentHash": "720c2eb4dd1135ea3f6dab413277170055e8a55f115726661c80bd9c07bb5a1c",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0414",
+      "conceptId": "sm-kanun",
+      "stem": {
+        "md": "Diz üzerine yatırılıp parmaklara takılan mızraplarla çalınan telli çalgı hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Kanun"
+        },
+        {
+          "key": "B",
+          "md": "Ud"
+        },
+        {
+          "key": "C",
+          "md": "Tanbur"
+        },
+        {
+          "key": "D",
+          "md": "Bağlama"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Ud kucakta tutulur ve elde tutulan tek bir mızrapla çalınır.",
+        "C": "Tanbur uzun saplıdır ve kucakta tutularak çalınır.",
+        "D": "Bağlama da uzun saplıdır, kucakta tutulur."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap kanundur.\n- Kanun yamuk biçimli bir gövdeye gerilmiş çok sayıda telden oluşur.\n- Mandal denen küçük kollarla perde inceliklerini ayarlamak mümkündür."
+        },
+        {
+          "type": "hint",
+          "md": "Gövdesi yamuk biçimlidir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Telli çalgılar ses üretme biçimine göre mızrapla, yayla ya da parmakla çalınanlar diye ayrılır. Türk müziğinde bazı telli çalgılar kucakta, bazıları yatay olarak çalınır."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          79,
+          79
+        ],
+        "quote": "Kanun, diz üzerine yatırılıp parmaklara takılan mızraplarla çalınan telli bir çalgıdır.",
+        "chapter": "Sanat ve Müzik"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "müzik"
+      ],
+      "vurgu": [],
+      "contentHash": "a78f19809dfd552b07d040aa11b10ac36a658538af909f54d1e049be8990440f",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0415",
+      "conceptId": "sm-dede-efendi",
+      "stem": {
+        "md": "Mevlevi ayinleri ve şarkılarıyla tanınan Osmanlı bestecisi kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Hacı Arif Bey"
+        },
+        {
+          "key": "B",
+          "md": "Tanburi Cemil Bey"
+        },
+        {
+          "key": "C",
+          "md": "Ahmed Adnan Saygun"
+        },
+        {
+          "key": "D",
+          "md": "Hammâmîzâde İsmail Dede Efendi"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "Hacı Arif Bey daha çok on dokuzuncu yüzyılın şarkı bestecisi olarak tanınır.",
+        "B": "Tanburi Cemil Bey, tanbur ve kemençe icracılığıyla tanınan bir virtüözdür.",
+        "C": "Ahmed Adnan Saygun Cumhuriyet dönemi bestecisidir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Hammâmîzâde İsmail Dede Efendi'dir.\n- On dokuzuncu yüzyılın başında yaşamış, Mevlevi ayinleri bestelemiştir.\n- Türk müziğinin en büyük bestecilerinden sayılır."
+        },
+        {
+          "type": "hint",
+          "md": "Lakabı, babasının hamamcılığından gelir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Mevlevi ayini, Mevlevihanelerde sema sırasında icra edilen büyük biçimli dini müzik eseridir. Ney, kudüm ve insan sesi bu müziğin temelini oluşturur."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          79,
+          79
+        ],
+        "quote": "Hammâmîzâde İsmail Dede Efendi, Mevlevi ayinleri ve şarkılarıyla tanınan Osmanlı bestecisidir.",
+        "chapter": "Sanat ve Müzik"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "müzik"
+      ],
+      "vurgu": [],
+      "contentHash": "576922a7eb181f0bc9cc8730aa8fda87597591e7293e5dcc3fd0d3200da92124",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0416",
+      "conceptId": "sm-turk-besleri",
+      "stem": {
+        "md": "Aşağıdakilerden hangisi Türk Beşleri diye anılan besteciler arasında yer almaz?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Cemal Reşit Rey"
+        },
+        {
+          "key": "B",
+          "md": "Ulvi Cemal Erkin"
+        },
+        {
+          "key": "C",
+          "md": "Hacı Arif Bey"
+        },
+        {
+          "key": "D",
+          "md": "Necil Kazım Akses"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Cemal Reşit Rey, Türk Beşleri'nin üyelerindendir.",
+        "B": "Ulvi Cemal Erkin, Türk Beşleri'nin üyelerindendir.",
+        "D": "Necil Kazım Akses, Türk Beşleri'nin üyelerindendir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Hacı Arif Bey'dir; o on dokuzuncu yüzyılın şarkı bestecisidir.\n- Türk Beşleri: Ahmed Adnan Saygun, Cemal Reşit Rey, Ulvi Cemal Erkin, Hasan Ferit Alnar, Necil Kazım Akses.\n- Hepsi Cumhuriyet döneminde Batı tekniğiyle eser vermiştir."
+        },
+        {
+          "type": "hint",
+          "md": "Biri ötekilerden yaklaşık bir yüzyıl önce yaşamıştır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Türk Beşleri, Cumhuriyet'in ilk yıllarında Batı çok sesli müziğini Türk ezgileriyle birleştiren beş bestecidir. Adı, Rusya'daki ünlü Beşler grubuna benzetilerek verilmiştir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          79,
+          79
+        ],
+        "quote": "Ahmed Adnan Saygun, Türk Beşleri diye anılan Cumhuriyet dönemi bestecilerindendir.",
+        "chapter": "Sanat ve Müzik"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "müzik"
+      ],
+      "vurgu": [],
+      "contentHash": "5c6462129290d3b8b9c0278f789f8823adb71dc3f135e59c5bae5abc06a9a34a",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0417",
+      "conceptId": "sm-yunus-emre-oratoryosu",
+      "stem": {
+        "md": "Türk Beşleri'nden olup Yunus Emre Oratoryosu'nu besteleyen kimdir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Cemal Reşit Rey"
+        },
+        {
+          "key": "B",
+          "md": "Ulvi Cemal Erkin"
+        },
+        {
+          "key": "C",
+          "md": "Ahmed Adnan Saygun"
+        },
+        {
+          "key": "D",
+          "md": "Hasan Ferit Alnar"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Cemal Reşit Rey, İstanbul Şehir Orkestrası'nı kurmasıyla ve piyano eserleriyle tanınır.",
+        "B": "Ulvi Cemal Erkin, Köçekçe adlı orkestra eseriyle tanınır.",
+        "D": "Hasan Ferit Alnar, kanun konçertosuyla bilinen bir besteci ve şeftir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Yunus Emre Oratoryosu Ahmed Adnan Saygun'un eseridir.\n- Eser, Yunus Emre'nin şiirleri üzerine yazılmıştır.\n- Saygun ayrıca Atatürk'ün isteğiyle Özsoy operasını bestelemiştir."
+        },
+        {
+          "type": "hint",
+          "md": "Soyadı 'saygı' sözcüğünü çağrıştırır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Oratoryo, solistler, koro ve orkestra için yazılan, sahnelenmeden konser biçiminde seslendirilen büyük eserdir. Bu oratoryo, on üçüncü yüzyıl tasavvuf şairinin dizelerini çok sesli müzikle buluşturur."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          79,
+          79
+        ],
+        "quote": "Yunus Emre Oratoryosu, Ahmed Adnan Saygun'un eseridir.",
+        "chapter": "Sanat ve Müzik"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "müzik"
+      ],
+      "vurgu": [],
+      "contentHash": "e69e4311c5fe844fe8ab1cdfcdfa817ed02829d4c8dc744df420823e68da581c",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0418",
+      "conceptId": "piyano-tus-sayisi",
+      "stem": {
+        "md": "Standart bir piyanoda kaç tuş bulunur?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "61"
+        },
+        {
+          "key": "B",
+          "md": "76"
+        },
+        {
+          "key": "C",
+          "md": "108"
+        },
+        {
+          "key": "D",
+          "md": "88"
+        }
+      ],
+      "correct": "D",
+      "distractors": {
+        "A": "61 tuş, küçük elektronik klavyelerde yaygın olan sayıdır.",
+        "B": "76 tuş, orta boy elektronik klavyelerde görülür.",
+        "C": "108 tuş standart değildir; yalnızca birkaç özel yapım piyanoda bulunur."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Standart piyanoda 88 tuş vardır.\n- Bunların 52'si beyaz, 36'sı siyahtır.\n- Bu sayı yaklaşık yedi oktavdan biraz fazlasını kapsar."
+        },
+        {
+          "type": "hint",
+          "md": "Tuşların 52'si beyaz, 36'sı siyahtır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Piyano, tuşa basıldığında keçe kaplı bir çekicin tele vurmasıyla ses çıkarır; bu yüzden hem telli hem vurmalı özellik taşır. Adı, hem yumuşak hem güçlü çalabilmesinden gelir."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          80,
+          80
+        ],
+        "quote": "Standart bir piyanoda 88 tuş bulunur.",
+        "chapter": "Sanat ve Müzik"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "müzik"
+      ],
+      "vurgu": [],
+      "contentHash": "38b7a2aeaf59c14033844695f7c8241cc0dc137ffac69fe6e147f94862eee6f0",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0419",
+      "conceptId": "sm-yayli-degil",
+      "stem": {
+        "md": "Aşağıdakilerden hangisi orkestranın yaylı çalgılar ailesinden değildir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Obua"
+        },
+        {
+          "key": "B",
+          "md": "Viyola"
+        },
+        {
+          "key": "C",
+          "md": "Çello"
+        },
+        {
+          "key": "D",
+          "md": "Kontrbas"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Viyola, kemandan biraz büyük bir yaylı çalgıdır.",
+        "C": "Çello, oturarak çalınan bir yaylı çalgıdır.",
+        "D": "Kontrbas, yaylı ailenin en büyük üyesidir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap obuadır.\n- Obua, çift kamışla üflenen tahta üflemeli bir çalgıdır.\n- Yaylı aile keman, viyola, çello ve kontrbastan oluşur."
+        },
+        {
+          "type": "hint",
+          "md": "Orkestra akordu çoğunlukla bu çalgının verdiği sesle yapılır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Senfoni orkestrası genellikle dört çalgı ailesine ayrılır: yaylılar, tahta üflemeliler, bakır üflemeliler ve vurmalılar. Yaylılar sahnenin önünde en kalabalık grubu oluşturur."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          80,
+          80
+        ],
+        "quote": "Keman, viyola, çello ve kontrbas, orkestranın yaylı çalgılar ailesini oluşturur.",
+        "chapter": "Sanat ve Müzik"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "müzik"
+      ],
+      "vurgu": [],
+      "contentHash": "6fc5ff14fc140e859030be3ffc6589c325667a5f19a3be6aa1beb30834c92bcd",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0420",
+      "conceptId": "sm-yayli-sirasi",
+      "stem": {
+        "md": "Yaylı çalgıların tizden pese doğru sıralanışı hangisidir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Viyola – Keman – Çello – Kontrbas"
+        },
+        {
+          "key": "B",
+          "md": "Keman – Çello – Viyola – Kontrbas"
+        },
+        {
+          "key": "C",
+          "md": "Keman – Viyola – Çello – Kontrbas"
+        },
+        {
+          "key": "D",
+          "md": "Kontrbas – Çello – Viyola – Keman"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Viyola kemandan büyüktür ve daha pes ses verir, başa gelemez.",
+        "B": "Çello viyoladan büyüktür ve daha pes ses verir, viyoladan önce gelemez.",
+        "D": "Bu sıralama pesten tize doğrudur, istenenin tersidir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru sıra: keman, viyola, çello, kontrbas.\n- Çalgı büyüdükçe ses pesleşir.\n- Keman en tiz, kontrbas en pes sesli yaylıdır."
+        },
+        {
+          "type": "hint",
+          "md": "Boyut ile ses perdesi arasında ters bir ilişki var."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Telli çalgılarda tel uzadıkça ve gövde büyüdükçe titreşim yavaşlar, ses kalınlaşır. Yaylı ailesi bu yüzden birbirine benzeyen ama farklı boyutlardaki çalgılardan oluşur."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          80,
+          80
+        ],
+        "quote": "Yaylı çalgılar tizden pese doğru keman, viyola, çello ve kontrbas diye sıralanır.",
+        "chapter": "Sanat ve Müzik"
+      },
+      "difficulty": "orta",
+      "tags": [
+        "genel-kültür",
+        "müzik"
+      ],
+      "vurgu": [],
+      "contentHash": "5853f19915914ee1e172dd568e7256562ed2b784a06d32a7b075c58a7be683cb",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0421",
+      "conceptId": "sm-orkestra-sefi",
+      "stem": {
+        "md": "Bir orkestrayı yöneten kişiye ne denir?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Solist"
+        },
+        {
+          "key": "B",
+          "md": "Konsertmayster"
+        },
+        {
+          "key": "C",
+          "md": "Şef"
+        },
+        {
+          "key": "D",
+          "md": "Korist"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Solist, eserde tek başına öne çıkan icracıdır.",
+        "B": "Konsertmayster birinci kemanların başıdır, orkestrayı yönetmez.",
+        "D": "Korist, bir koroda şarkı söyleyen kişidir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap şeftir.\n- Şef tempoyu, girişleri ve yorumu belirler.\n- Çoğu zaman baton denen ince bir çubuk kullanır."
+        },
+        {
+          "type": "hint",
+          "md": "Elinde çoğu zaman ince bir çubuk vardır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Büyük orkestralarda onlarca müzisyenin aynı anda uyumlu çalması için tek bir yönetici gerekir. Bu kişi provalarda eserin nasıl yorumlanacağını da belirler."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          80,
+          80
+        ],
+        "quote": "Orkestrayı yöneten kişiye şef denir.",
+        "chapter": "Sanat ve Müzik"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "müzik"
+      ],
+      "vurgu": [],
+      "contentHash": "c3456b94733b384d684aefab9096e5bc9a9d7a83fec1a5c438e21012ee4c48b4",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0422",
+      "conceptId": "sm-lumiere",
+      "stem": {
+        "md": "1895'te Paris'te ilk halka açık ücretli sinema gösterimini kimler yapmıştır?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Lumière Kardeşler"
+        },
+        {
+          "key": "B",
+          "md": "Wright Kardeşler"
+        },
+        {
+          "key": "C",
+          "md": "Warner Kardeşler"
+        },
+        {
+          "key": "D",
+          "md": "Grimm Kardeşler"
+        }
+      ],
+      "correct": "A",
+      "distractors": {
+        "B": "Wright Kardeşler havacılığın öncüleridir, motorlu uçağı uçurmuşlardır.",
+        "C": "Warner Kardeşler yirminci yüzyılda bir Hollywood stüdyosu kurmuştur.",
+        "D": "Grimm Kardeşler masal derleyen Alman dilbilimcilerdir."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Doğru cevap Lumière Kardeşler'dir.\n- Gösterim 1895'te Paris'teki bir kafede yapılmıştır.\n- Kullandıkları sinematograf hem çekim hem gösterim yapabiliyordu."
+        },
+        {
+          "type": "hint",
+          "md": "Soyadları Fransızcada 'ışık' demektir."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Sinemanın doğuşu, hareketi fotoğraf kareleriyle yakalayıp perdeye yansıtan aygıtların gelişmesine dayanır. İlk filmler birkaç dakikalık, kurgusuz gündelik sahnelerdi."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          81,
+          81
+        ],
+        "quote": "Lumière Kardeşler, 1895'te Paris'te ilk halka açık ücretli sinema gösterimini yapmıştır.",
+        "chapter": "Sanat ve Müzik"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "sinema"
+      ],
+      "vurgu": [],
+      "contentHash": "c9f5b007075ce3516b9dd5ca747db1101a61c56697bb70627fdd8d219d1c7da6",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0423",
+      "conceptId": "sm-festival-odulleri",
+      "stem": {
+        "md": "Film festivallerini en büyük ödülleriyle eşleştirin.\n\n1. Cannes\n2. Berlin\n3. Antalya\n\na. Altın Ayı\nb. Altın Portakal\nc. Altın Palmiye"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "1-a, 2-c, 3-b"
+        },
+        {
+          "key": "B",
+          "md": "1-c, 2-a, 3-b"
+        },
+        {
+          "key": "C",
+          "md": "1-c, 2-b, 3-a"
+        },
+        {
+          "key": "D",
+          "md": "1-b, 2-a, 3-c"
+        }
+      ],
+      "correct": "B",
+      "distractors": {
+        "A": "Cannes'ın ödülü bir hayvan değil, bir bitki yaprağı biçimindedir.",
+        "C": "Antalya'nın ödülü, bölgenin narenciyesinden adını alır.",
+        "D": "Cannes'ın ödülü narenciye değil, Akdeniz kıyısının ağacından adını alır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Cannes: Altın Palmiye.\n- Berlin: Altın Ayı.\n- Antalya: Altın Portakal."
+        },
+        {
+          "type": "hint",
+          "md": "Berlin'in simgesi bir hayvandır."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Büyük film festivalleri, yarışma bölümlerinde verdikleri ödülleri çoğu zaman kentin simgesiyle adlandırır. Bu ödüller, festivale katılan filmlerin dünya dağıtımını da etkiler."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          81,
+          81
+        ],
+        "quote": "Cannes Film Festivali'nin en büyük ödülü Altın Palmiye'dir.",
+        "chapter": "Sanat ve Müzik"
+      },
+      "difficulty": "zor",
+      "tags": [
+        "genel-kültür",
+        "sinema"
+      ],
+      "vurgu": [],
+      "contentHash": "9843f0a573c9200cb9efe642d6f10aa4f9550c581b00f4c3f988bcd90b943ac0",
+      "deleted": false
+    },
+    {
+      "id": "genel-kultur-0424",
+      "conceptId": "sm-sarlo",
+      "stem": {
+        "md": "Sessiz sinemanın ünlü Şarlo karakterini hangi oyuncu yaratmıştır?"
+      },
+      "kind": "coktan-secmeli",
+      "choices": [
+        {
+          "key": "A",
+          "md": "Buster Keaton"
+        },
+        {
+          "key": "B",
+          "md": "Harold Lloyd"
+        },
+        {
+          "key": "C",
+          "md": "Charlie Chaplin"
+        },
+        {
+          "key": "D",
+          "md": "Stan Laurel"
+        }
+      ],
+      "correct": "C",
+      "distractors": {
+        "A": "Buster Keaton, hiç gülmeyen yüzüyle tanınan başka bir sessiz sinema komedyenidir.",
+        "B": "Harold Lloyd, saat kulesinden sarktığı sahneyle tanınır.",
+        "D": "Stan Laurel, Oliver Hardy ile oluşturduğu ikiliyle tanınır."
+      },
+      "solution": [
+        {
+          "type": "text",
+          "md": "- Şarlo karakteri Charlie Chaplin'e aittir.\n- Melon şapkası, bastonu ve bol pantolonuyla tanınır.\n- Chaplin filmlerinin çoğunu kendisi yazıp yönetmiştir."
+        },
+        {
+          "type": "hint",
+          "md": "Modern Zamanlar ve Büyük Diktatör filmlerinin yaratıcısı."
+        }
+      ],
+      "anlatim": [
+        {
+          "type": "text",
+          "md": "Sessiz sinemada oyuncular derdini yalnızca beden diliyle ve ara yazılarla anlatırdı. Bu yüzden fiziksel komedi, dönemin en sevilen türlerinden biri olmuştur."
+        }
+      ],
+      "source": {
+        "file": "notlar.md",
+        "pages": [
+          81,
+          81
+        ],
+        "quote": "Sessiz sinemanın ünlü Şarlo karakteri Charlie Chaplin'e aittir.",
+        "chapter": "Sanat ve Müzik"
+      },
+      "difficulty": "kolay",
+      "tags": [
+        "genel-kültür",
+        "sinema"
+      ],
+      "vurgu": [],
+      "contentHash": "f590f7619042a4ff5cbb4d6d37c43a7bfc0a1436326d343864f2ff93443f58db",
+      "deleted": false
+    }
+  ]
+}
