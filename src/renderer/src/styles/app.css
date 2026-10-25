@@ -988,6 +988,43 @@ kbd {
   box-shadow: var(--tk-shadow-panel);
 }
 
+.ql-code-toggle {
+  align-self: flex-start;
+  list-style: none;
+  cursor: pointer;
+}
+
+.ql-code-toggle::-webkit-details-marker {
+  display: none;
+}
+
+.ql-code-parts {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--tk-sp-4);
+}
+
+.ql-code-part {
+  display: flex;
+  flex-direction: column;
+  gap: var(--tk-sp-2);
+  padding-left: var(--tk-sp-3);
+  border-left: 2px solid var(--ql-paper-edge);
+}
+
+.ql-code-body {
+  margin: 0;
+  overflow-x: auto;
+  font-family: var(--font-mono, monospace);
+  font-size: var(--tk-fs-2);
+  line-height: var(--tk-lh-mono);
+  color: var(--ql-paper-ink);
+  white-space: pre;
+}
+
 .ql-source-open {
   border-color: var(--tk-border);
   border-left-color: var(--tk-border-strong);

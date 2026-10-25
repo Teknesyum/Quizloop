@@ -2,13 +2,13 @@ import { useState } from 'react'
 
 export type View = 'card' | 'list'
 
-const STORE = 'ql-view'
+const STORE = 'ql-gorunum'
 
 function readView(): View {
   try {
-    return localStorage.getItem(STORE) === 'list' ? 'list' : 'card'
+    return localStorage.getItem(STORE) === 'card' ? 'card' : 'list'
   } catch {
-    return 'card'
+    return 'list'
   }
 }
 

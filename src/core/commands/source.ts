@@ -48,6 +48,7 @@ export async function sourceBook(
     sayfaOfseti: src?.sayfaOfseti ?? 0,
     pages: src?.pages ?? null,
     parts,
-    sagdanSola: src?.sagdanSola === true
+    sagdanSola: src?.sagdanSola === true,
+    file: src?.file ?? null
   }
 }

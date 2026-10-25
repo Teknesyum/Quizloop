@@ -148,6 +148,13 @@ export class QuestionIndex {
     return this.byId.get(id)
   }
 
+  async onceki(): Promise<Map<string, string>> {
+    await this.get('')
+    const out = new Map<string, string>()
+    for (const q of this.byId.values()) if (q.devam) out.set(q.devam, q.id)
+    return out
+  }
+
   get root(): string {
     return this.mod.root
   }

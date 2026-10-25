@@ -148,7 +148,8 @@ export class SessionMachine {
       limit: sessionSize(index.sessionSize, chapter ?? null, this.deps.limit()),
       seed: this.seed(),
       chapter: chapter ?? null,
-      partial
+      partial,
+      onceki: await index.onceki()
     })
     const id = globalThis.crypto.randomUUID()
     const s: Live = {
@@ -225,6 +226,7 @@ export class SessionMachine {
         beklenenCevap: q.beklenenCevap,
         solution: q.solution,
         source: q.source,
+        kod: q.kod,
         wrongPicks: c.wrongPicks
       }
     }
@@ -249,6 +251,7 @@ export class SessionMachine {
         distractors: q.distractors,
         solution: q.solution,
         source: q.source,
+        kod: q.kod,
         wrongPicks: c.wrongPicks
       }
     }

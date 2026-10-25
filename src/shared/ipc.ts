@@ -1,6 +1,7 @@
 import type {
   Choice,
   ChoiceKey,
+  KodParca,
   QuestionKind,
   SolutionBlock,
   Source,
@@ -90,6 +91,7 @@ export interface AnswerResult {
   correctKey?: ChoiceKey
   solution?: SolutionBlock[]
   source?: Source
+  kod?: KodParca[]
   wrongPicks: number
 }
 
@@ -342,6 +344,7 @@ export interface SourceBook {
   pages: number | null
   parts?: BookPartLink[] | null
   sagdanSola?: boolean
+  file?: string | null
 }
 
 export interface IntegrityReport {

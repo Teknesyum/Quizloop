@@ -16,7 +16,7 @@ import { ChoiceImage } from '@renderer/components/BookFigure'
 import { altFor, markBoxes, plainText } from '@renderer/components/media'
 import { useTyper } from '@renderer/hooks/useTyper'
 import { lang, t, type Key } from '@renderer/i18n'
-import { kaynakGoster } from '@renderer/kaynak'
+import { kaynakGoster, kitapta, kodGoster } from '@renderer/kaynak'
 import { KEYS } from '@renderer/keys'
 import { useApp } from '@renderer/store/app'
 import { useSession } from '@renderer/store/session'
@@ -614,12 +614,35 @@ export function Session({
             {solved.solution && (
               <Solution blocks={solved.solution} assetBase={q.assetBase} book={book} />
             )}
+            {solved.source && kodGoster(q.tags) && (
+              <details key={here} className="ql-source ql-code">
+                <summary className="tk-btn tk-btn-ghost ql-btn-sm ql-code-toggle">
+                  {t('session.code')}
+                </summary>
+                {solved.kod ? (
+                  <ol className="ql-code-parts">
+                    {solved.kod.map((p, i) => (
+                      <li key={i} className="ql-code-part">
+                        <pre className="ql-code-body">
+                          <code>{p.kod}</code>
+                        </pre>
+                        <Markdown md={p.md} className="tk-prose ql-code-note" />
+                      </li>
+                    ))}
+                  </ol>
+                ) : (
+                  <pre className="ql-code-body">
+                    <code>{solved.source.quote}</code>
+                  </pre>
+                )}
+              </details>
+            )}
             {solved.source && kaynakGoster(q.tags) && (
               <blockquote className={`ql-source ${open ? 'ql-source-open' : ''}`}>
                 <span className="tk-label ql-source-label">{t('session.source')}</span>
                 <p className="ql-source-quote">{solved.source.quote}</p>
                 <span className="tk-hint ql-source-line">
-                  {book?.available ? (
+                  {kitapta(book, solved.source.file) ? (
                     <>
                       {t('session.sourceFile', { file: solved.source.file })}
                       <span>
@@ -633,7 +656,7 @@ export function Session({
                     solved.source.file
                   )}
                 </span>
-                {book?.available && !bookAuto && (
+                {kitapta(book, solved.source.file) && !bookAuto && (
                   <span className="ql-source-acts">
                     <button
                       type="button"
@@ -649,37 +672,41 @@ export function Session({
                 )}
               </blockquote>
             )}
-            {solved.source && kaynakGoster(q.tags) && book?.available && bookShown && (
-              <BookViewer
-                key={`${book.path ?? 'kesit'}:${here}`}
-                book={book}
-                moduleId={moduleId}
-                source={solved.source}
-                assetBase={q.assetBase}
-                onBook={setBook}
-                onClose={() => undefined}
-                inline
-                lead={
-                  <button
-                    type="button"
-                    role="switch"
-                    aria-checked={bookAuto}
-                    className="ql-switch"
-                    title={t('settings.bookAutoHelp')}
-                    onClick={() => {
-                      setPeek(null)
-                      void saveSettings({ bookAuto: !bookAuto })
-                    }}
-                  >
-                    <span className="ql-switch-track" aria-hidden="true">
-                      <span className="ql-switch-thumb" />
-                    </span>
-                    {t('session.bookAuto.switch')}
-                    <kbd>K</kbd>
-                  </button>
-                }
-              />
-            )}
+            {solved.source &&
+              kaynakGoster(q.tags) &&
+              book &&
+              kitapta(book, solved.source.file) &&
+              bookShown && (
+                <BookViewer
+                  key={`${book.path ?? 'kesit'}:${here}`}
+                  book={book}
+                  moduleId={moduleId}
+                  source={solved.source}
+                  assetBase={q.assetBase}
+                  onBook={setBook}
+                  onClose={() => undefined}
+                  inline
+                  lead={
+                    <button
+                      type="button"
+                      role="switch"
+                      aria-checked={bookAuto}
+                      className="ql-switch"
+                      title={t('settings.bookAutoHelp')}
+                      onClick={() => {
+                        setPeek(null)
+                        void saveSettings({ bookAuto: !bookAuto })
+                      }}
+                    >
+                      <span className="ql-switch-track" aria-hidden="true">
+                        <span className="ql-switch-thumb" />
+                      </span>
+                      {t('session.bookAuto.switch')}
+                      <kbd>K</kbd>
+                    </button>
+                  }
+                />
+              )}
             <div className="ql-grade">
               <span className="tk-label">{t('session.grade.title')}</span>
               <div className="ql-grade-row">

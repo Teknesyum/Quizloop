@@ -193,4 +193,9 @@ describe('tellSteps', () => {
   it('keeps a telling without pages as one step', () => {
     expect(tellSteps([text('a'), text('b')])).toHaveLength(1)
   })
+
+  it('opens a step at every heading block', () => {
+    const steps = tellSteps([text('öz'), text('### Aşama 1'), text('b'), text('### Aşama 2')])
+    expect(steps.map((s) => s.length)).toEqual([1, 2, 1])
+  })
 })

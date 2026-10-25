@@ -8,7 +8,7 @@ import { nodePorts } from '@main/ports'
 import type { Database } from '@core/db/types'
 import { QuestionIndex, readMeta } from '@core/modules/loader'
 import { syncModule } from '@core/modules/sync'
-import { chapterCounts } from '@core/scheduler/queue'
+import { buildQueue, chapterCounts } from '@core/scheduler/queue'
 import { SessionMachine, sessionSize } from './machine'
 
 const NOW = new Date('2026-09-08T09:00:00.000Z')
@@ -455,7 +455,8 @@ describe('chained questions', () => {
         const q = await base.get(id)
         const devam = links.get(id)
         return q && devam ? { ...q, devam } : q
-      }
+      },
+      onceki: async () => new Map([...links].map(([a, b]) => [b, a]))
     } as unknown as QuestionIndex
     const m = new SessionMachine({
       db,
@@ -474,5 +475,24 @@ describe('chained questions', () => {
     for (const c of s.first!.choices) if (m.answer(s.sessionId, c.key).correct) break
     const g = await m.grade(s.sessionId, 3, 100)
     expect(g.next?.questionId).toBe(last)
+  })
+
+  it('keeps a new middle link out of the queue until its first link is seen', async () => {
+    const mod = await readMeta(nodePorts, SAMPLE)
+    await syncModule(db, nodePorts, mod, NOW)
+    const [a, b] = (await db.selectFrom('card').select('question_id').execute()).map(
+      (r) => r.question_id
+    )
+    const opt = {
+      moduleId: 'ornek',
+      now: NOW,
+      dayStart: NOW,
+      limit: 50,
+      onceki: new Map([[b!, a!]])
+    }
+    const ids = async (): Promise<string[]> => (await buildQueue(db, opt)).map((c) => c.question_id)
+    expect(await ids()).not.toContain(b)
+    await db.updateTable('card').set({ state: 2 }).where('question_id', '=', a!).execute()
+    expect(await ids()).toContain(b)
   })
 })

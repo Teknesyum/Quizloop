@@ -1,6 +1,6 @@
 # Modül Standardı
 
-**Sürüm: 1.2.0** — 2026-10-21 · En düşük uygulama: 0.8.0
+**Sürüm: 1.3.0** — 2026-10-24 · En düşük uygulama: 0.8.1
 
 Bir QuizLoop modülünün uyması gereken kurallar. Modül üreten oturuma "modülü standarda göre
 güncelle" demek yeter: o oturum bu dosyayı okur, kuralları uygular, `module.json` içindeki
@@ -49,6 +49,15 @@ Modül oturumu "standarda göre güncelle" aldığında:
 - `assets/kaynak/` altındaki kesit yalnızca bir sorunun `source.kesit.ref` alanı ona
   bakıyorsa pakete girer.
 
+**Alt dal**
+
+- Bir modül birden çok dal taşıyabilir (ör. Teorik ve Klinik Vaka). Dal, bölüm adının
+  önekidir ve `›` ile ayrılır: `source.chapter = "Teorik › 09 Sepsis"`.
+- Uygulama iki ya da daha çok dal görünce Bölümler ekranında dal seçicisi gösterir; kartta
+  önek görünmez, bölüm kapağı önekten sonraki numarayla bulunur.
+- Tek dallı modül önek yazmaz. Aynı bölüm iki dalda varsa her dalda ayrı bölüm adıdır;
+  ilerleme ve hedef ayrı tutulur.
+
 ## 2. Kaynak ve İz
 
 - Her soru `source` taşır: dosya, sayfa aralığı, birebir alıntı. İddia kaynağa geri
@@ -56,41 +65,78 @@ Modül oturumu "standarda göre güncelle" aldığında:
 - Gerçek kitabın adı, yazarı, yayınevi, dosya adı ya da özeti depoya, belgelere, testlere,
   istemlere ve commit mesajlarına girmez (0032). Örneklerde `Example Book`, `example.pdf`.
 - Gerçek kitaptan üretilen modül açık kanala, siteye ya da kataloğa konmaz.
+- Kitap dışı kaynağa (kılavuz, makale) dayanan soruda `source.file` o kaynağın adıdır.
+  Modülün `source.file` değerinden farklıysa uygulama kitap düğmesini ve sayfa satırını
+  göstermez, yalnız alıntıyı ve dosya adını gösterir.
 
 ## 3. Anlatım (Anlat Düğmesi)
 
 Soruda Anlat düğmesine basılınca `anlatim` alanı gösterilir. Bu, **kavramın** kısa konu
-anlatımıdır; sorunun çözümü (`solution`) ayrı kalır ve onu tekrar etmez.
+anlatımıdır: soruyu hiç bilmeyen öğrenci okuduktan sonra o kavramın bütün sorularını
+çözebilmelidir. Sorunun çözümü (`solution`) ayrı kalır, anlatımı tekrar etmez.
 
-**Ne anlatılır**
+**Temel kurallar**
 
 - Kavram başına bir anlatım yazılır. Aynı `conceptId`'ye sahip her soru aynı bloklarla
   doldurulur.
-- Öğrencinin bu kavramla ilgili herhangi bir soruyu çözebilmesi için gereken çekirdek
-  bilgi: tanım, kural, ayırt edici nokta, sık karıştırılan şey.
-- İlk blok `text` olur ve kavramın özünü tek paragrafta söyler. Ardından gerektiği kadar
-  blok gelir; uzun ders metni yazılmaz.
-- Sorunun doğru cevabını ele veren cümle yazılmaz; anlatım soru çözülmeden de açılabilir.
+- Anlatım soru çözülmeden de açılabilir: sorunun doğru cevabını ele veren cümle yazılmaz.
+  Kuralı anlatır, bu sorunun şıkkını söylemez.
+- Uzun paragraf yok. Her madde (`- `) tek bilgi taşır; kilit sözcük `**…**` ile vurgulanır.
+- Kısaltma ilk geçtiği yerde açılır: `**ARDS** (akut solunum sıkıntısı sendromu)`.
+- Bölüm kartı ve konu anlatımı da aynı kurala uyar: maddeli, vurgulu, öz.
+
+**Anlatımın sırası**
+
+Bir anlatım şu basamaklarla kurulur. Kavramda karşılığı olmayan basamak atlanır, sıra
+bozulmaz.
+
+| Sıra | Basamak      | Blok    | Ne yazılır                                                                |
+| ---- | ------------ | ------- | ------------------------------------------------------------------------- |
+| 1    | Öz           | `text`  | Kavram bir iki cümlede, sade sözcüklerle: ne olduğu ve neden önemli.      |
+| 2    | Nasıl işler  | `text`  | Mekanizma ya da neden-sonuç, 2–4 madde. "Neden böyle?" sorusunu yanıtlar. |
+| 3    | Ne yapılır   | `text`  | Kural, adım, karar: tanı ölçütü, tedavi sırası, dil kuralı. Maddeli.      |
+| 4    | Sayılar      | `table` | Eşik, doz, ölçüt, sınıflama. Karşılaştırılan iki şey de tabloya girer.    |
+| 5    | Karıştırılan | `hint`  | Sık yapılan hata ya da benzer kavramdan ayırt edici nokta, tek cümle.     |
+| 6    | Kısa örnek   | `text`  | Klinik modülde iki üç satırlık vaka, dil modülünde örnek cümle.           |
+| 7    | Görsel       | `image` | Yalnızca şekil kavramı gerçekten açıklıyorsa.                             |
+| 8    | Kaynak       | `sayfa` | Kitaptaki yeri: `pdfSayfa`, birebir `alinti`, gerekiyorsa `isaretler`.    |
+
+- 1. basamak her anlatımda vardır ve ilk bloktur.
+- Kitaplı modülde 8. basamak zorunludur; öğrenci kaynağa bir dokunuşla gider.
+- Anlatım toplamda bir ekranı geçmez. Geçiyorsa kavram ikiye bölünür, ders metni yazılmaz.
+- Anlat ekranı adım adım ilerler: `sayfa` bloğu ve `#` ile başlayan `text` bloğu
+  (`### Aşama 2: …`) yeni adım açar. Aşamalı ders yazan modül adımları başlıkla ayırır.
+
+**Örnek (kısaltılmış)**
+
+```text
+text  : **Sepsis**, enfeksiyona düzensiz konak yanıtıyla gelişen, hayatı tehdit eden organ
+        işlev bozukluğudur. Erken tanı ölümü azaltır.
+text  : - Enfeksiyon yaygın **damar genişlemesi** ve kılcal sızıntı yapar.
+        - Doku perfüzyonu düşer, **laktat** yükselir.
+text  : - Şüphede ilk saatte kültür, **antibiyotik** ve sıvı başlanır.
+table : Ölçüt | Eşik  (SOFA artışı ≥2, laktat >2 mmol/L …)
+hint  : Sepsis ile **septik şok** karışır: şokta sıvıya rağmen vazopressör gerekir.
+sayfa : pdfSayfa 212, alinti "…"
+```
 
 **Nereden alınır**
 
-- Kitaplı modülde anlatım kavramın kitaptaki sayfalarından çıkarılır ve en az bir `sayfa`
-  bloğu taşır: `pdfSayfa`, birebir `alinti`, gerekiyorsa `isaretler`. Böylece öğrenci
-  kaynağa bir dokunuşla gider.
+- Kitaplı modülde anlatım kavramın kitaptaki sayfalarından çıkarılır; kitaptan sonra
+  değişen öneri güncel kılavuzdan yazılır ve "kitapta eski öneri" notu düşülür.
 - Kitapsız modülde (dil modülleri gibi) anlatım üretim kurallarından yazılır; kural
   dosyasındaki kaynak neyse o geçerlidir.
 - Dil modüllerindeki "ders anlatımı yok" kuralı ayrı bir ders ekranı olmadığını söyler;
   soru içindeki kavram anlatımını yasaklamaz. Bu modüller de anlatım taşır.
 
-**Hangi blok, ne zaman**
+**Denetim**
 
-| Blok    | Ne için                                           |
-| ------- | ------------------------------------------------- |
-| `text`  | Kavramın özü, kural, açıklama                     |
-| `hint`  | Akılda tutma ipucu, sık yapılan hata              |
-| `table` | Karşılaştırma, sınıflama, doz ya da ölçüt listesi |
-| `image` | Kitaptaki şekil kavramı gerçekten açıklıyorsa     |
-| `sayfa` | Kitaptaki yerine götüren sayfa, alıntı ve işaret  |
+Anlatım yazıldıktan sonra şu sorulara evet denmelidir:
+
+- Kavramı bilmeyen biri yalnız bunu okuyarak bu kavramın her sorusunu çözebilir mi?
+- İlk blok tek başına okununca kavram anlaşılıyor mu?
+- Hiçbir cümle belirli bir sorunun şıkkını ele vermiyor mu?
+- Her sayı tabloda ya da kaynağıyla mı?
 
 ## 4. Görseller ve Boyut
 
@@ -136,13 +182,10 @@ anlatımıdır; sorunun çözümü (`solution`) ayrı kalır ve onu tekrar etmez
   olduğunu ele vermez, doğru cevabı tekrar etmez. Şıklar açılmadan görünen hiçbir metin
   cevabı söylemez.
 
-**Anlat ve çözüm**
+**Çözüm**
 
-- Uzun paragraf yok. İlk `text` bloğu bir iki cümlelik öz; geri kalan madde listesi
-  (`- `), her madde tek bilgi.
-- Anlatım soruyu tam karşılar: soruyu çözmek için gereken her bilgi anlatımda vardır.
-- Kilit sözcükler `**…**` ile vurgulanır; karşılaştırma varsa `table`.
-- Konu anlatımları (bölüm kartı, kavram anlatımı) da aynı kurala uyar: maddeli, vurgulu, öz.
+- Çözüm (`solution`) bu sorunun neden böyle çözüldüğünü kısa söyler; kavram bilgisini §3
+  anlatımına bırakır. Uzun paragraf yok, ilk `text` bir iki cümlelik öz.
 
 **Çeşitlilik ve zincir**
 
@@ -154,6 +197,15 @@ anlatımıdır; sorunun çözümü (`solution`) ayrı kalır ve onu tekrar etmez
   alanında kimliğiyle yazılır; uygulama doğru cevaptan hemen sonra onu getirir. Zincirin
   sonraki halkası ilk halkanın cevabını kökünde söyleyebilir; ilk halkanın kökü
   sonrakini ele vermez.
+- Zincirin ara halkası ilk kez yalnız önceki halkanın ardından sorulur. Önceki halka
+  görülmüş ya da emekliyse ara halka sıradan kart gibi gelebilir.
+
+**Kod sorusu**
+
+- `kod` etiketli soruda Kaynak bloğu yerine katlanır "Kodu Göster" düğmesi çıkar.
+- Kod parça parça gösterilecekse `kod` alanı yazılır: `[{ kod, md }]`, en az bir parça;
+  her parçanın altında `md` o parçanın ne yaptığını söyler. Alan yoksa `source.quote`
+  tek blok kod olarak gösterilir.
 
 **Oturum boyu**
 
@@ -163,8 +215,9 @@ anlatımıdır; sorunun çözümü (`solution`) ayrı kalır ve onu tekrar etmez
 
 ## Sürüm Geçmişi
 
-| Sürüm | Tarih      | Değişiklik                                                                                                                                                                                                                                         |
-| ----- | ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 1.2.0 | 2026-10-21 | Soru Yazımı bölümü: kökte `vurgu`, klinik vakada `3K-Tanı` başlığı ve ek hastalık, laboratuvar satırları, şık açıklaması cevabı ele vermez, Anlat ve konu anlatımı maddeli ve öz, zincirli soru (`devam`), `sessionSize`. En düşük uygulama 0.8.0. |
-| 1.1.0 | 2026-10-18 | `standart` alanı zorunlu. Kitabı gömülü modülde bölgesi kayıtlı görseller paketten çıkar, uygulama gömülü PDF'ten çizer. `image` bloğunda `ref` ya da `bolge`. En düşük uygulama 0.7.69.                                                           |
-| 1.0.0 | 2026-10-18 | İlk numaralı sürüm. Paket yapısı ve iz kuralları yazıya geçti. Kavram başına `anlatim` zorunlu. Görseller WebP. Sahipsiz dosya pakete girmez. Kitaptan alınan görsel `bolge` kaydeder. Modül `standart` alanını taşır.                             |
+| Sürüm | Tarih      | Değişiklik                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| ----- | ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1.3.0 | 2026-10-24 | Anlatım yeniden yazıldı: sekiz basamaklı sıra (öz, nasıl işler, ne yapılır, sayılar, karıştırılan, örnek, görsel, kaynak), kısaltma ilk geçişte açılır, bir ekranı geçmez, denetim soruları; §5 Anlat kuralları §3'e taşındı. Alt dal: bölüm adı `Dal › Bölüm` (0040). Kılavuz kaynaklı soruda kitap düğmesi yok, `#` başlığı Anlat adımı açar, zincirin ara halkası önce gelmez, kod sorusunda `kod` parçaları. En düşük uygulama 0.8.1. |
+| 1.2.0 | 2026-10-21 | Soru Yazımı bölümü: kökte `vurgu`, klinik vakada `3K-Tanı` başlığı ve ek hastalık, laboratuvar satırları, şık açıklaması cevabı ele vermez, Anlat ve konu anlatımı maddeli ve öz, zincirli soru (`devam`), `sessionSize`. En düşük uygulama 0.8.0.                                                                                                                                                                                        |
+| 1.1.0 | 2026-10-18 | `standart` alanı zorunlu. Kitabı gömülü modülde bölgesi kayıtlı görseller paketten çıkar, uygulama gömülü PDF'ten çizer. `image` bloğunda `ref` ya da `bolge`. En düşük uygulama 0.7.69.                                                                                                                                                                                                                                                  |
+| 1.0.0 | 2026-10-18 | İlk numaralı sürüm. Paket yapısı ve iz kuralları yazıya geçti. Kavram başına `anlatim` zorunlu. Görseller WebP. Sahipsiz dosya pakete girmez. Kitaptan alınan görsel `bolge` kaydeder. Modül `standart` alanını taşır.                                                                                                                                                                                                                    |

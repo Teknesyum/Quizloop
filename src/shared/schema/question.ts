@@ -93,6 +93,8 @@ export const Source = z.object({
   isaretler: z.array(Isaret).optional()
 })
 
+export const KodParca = z.object({ kod: z.string().min(1), md: z.string().min(1) })
+
 export const QuestionKind = z.enum(['coktan-secmeli', 'acik-uclu', 'isaretleme'])
 
 export const Difficulty = z.enum(['kolay', 'orta', 'zor'])
@@ -114,6 +116,7 @@ export const Question = z
     tags: z.array(z.string()).default([]),
     vurgu: z.array(z.string()).default([]),
     devam: z.string().min(1).optional(),
+    kod: z.array(KodParca).min(1).optional(),
     contentHash: z.string().length(64),
     deleted: z.boolean().default(false)
   })
@@ -218,3 +221,4 @@ export type ChoiceKey = z.infer<typeof ChoiceKey>
 export type SolutionBlock = z.infer<typeof SolutionBlock>
 export type Block = z.infer<typeof Block>
 export type Source = z.infer<typeof Source>
+export type KodParca = z.infer<typeof KodParca>

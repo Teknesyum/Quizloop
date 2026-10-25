@@ -7,6 +7,7 @@ import { GoalDialog } from '@renderer/components/GoalPick'
 import { goalLabel, goalToast, saveGoal, type GoalSpec } from '@renderer/goal'
 import { tinykeys } from 'tinykeys'
 import { goalKey, type ChapterSummary } from '@shared/ipc'
+import { dalBol, dallar } from '@shared/dal'
 import { ordered, sunk } from '@shared/order'
 import { useOrder } from '@renderer/hooks/useOrder'
 import { Skeleton } from '@renderer/components/Skeleton'
@@ -16,8 +17,12 @@ import { useApp } from '@renderer/store/app'
 import { useView } from '@renderer/view'
 
 function chapterCover(c: ChapterSummary): string | null {
-  const m = c.chapter.match(/^\s*(\d+)/)
+  const m = dalBol(c.chapter).ad.match(/^\s*(\d+)/)
   return m ? `${c.assetBase}assets/bolum/${m[1]}.webp` : null
+}
+
+function chapterName(c: ChapterSummary): string {
+  return c.chapter ? dalBol(c.chapter).ad : t('chapters.unsorted')
 }
 
 export function Chapters({ moduleId }: { moduleId: string }): React.JSX.Element {
@@ -25,7 +30,7 @@ export function Chapters({ moduleId }: { moduleId: string }): React.JSX.Element 
   const modules = useApp((s) => s.modules)
   const [loaded, setRows] = useState<ChapterSummary[] | null>(null)
   const { order, move } = useOrder(moduleId)
-  const rows = useMemo(
+  const all = useMemo(
     () =>
       loaded &&
       sunk(
@@ -34,7 +39,17 @@ export function Chapters({ moduleId }: { moduleId: string }): React.JSX.Element 
       ),
     [loaded, order]
   )
-  const ids = rows?.map((c) => c.chapter) ?? []
+  const tabs = useMemo(() => dallar(loaded?.map((c) => c.chapter) ?? []), [loaded])
+  const [dal, setDal] = useState<string | null>(null)
+  const shown = dal && tabs.includes(dal) ? dal : (tabs[0] ?? null)
+  const rows = useMemo(
+    () => all && (shown ? all.filter((c) => dalBol(c.chapter).dal === shown) : all),
+    [all, shown]
+  )
+  const ids = [
+    ...(rows?.map((c) => c.chapter) ?? []),
+    ...(all?.filter((c) => !rows?.includes(c)).map((c) => c.chapter) ?? [])
+  ]
   const [resetting, setResetting] = useState<ChapterSummary | null>(null)
   const [goaling, setGoaling] = useState<ChapterSummary | null>(null)
   const toast = useApp((s) => s.toast)
@@ -147,6 +162,26 @@ export function Chapters({ moduleId }: { moduleId: string }): React.JSX.Element 
         </div>
       )}
 
+      {tabs.length > 0 && (
+        <div className="ql-segment ql-view-toggle" role="radiogroup" aria-label={t('chapters.dal')}>
+          {tabs.map((d) => (
+            <button
+              key={d}
+              type="button"
+              role="radio"
+              aria-checked={d === shown}
+              className={`tk-btn ql-btn-sm ${d === shown ? 'tk-btn-primary' : 'tk-btn-ghost'}`}
+              onClick={() => {
+                setDal(d)
+                setActive(0)
+              }}
+            >
+              {d}
+            </button>
+          ))}
+        </div>
+      )}
+
       {rows !== null && rows.length > 0 && <ViewToggle view={view} onChange={setView} />}
 
       {rows !== null && (
@@ -156,21 +191,21 @@ export function Chapters({ moduleId }: { moduleId: string }): React.JSX.Element 
               key={c.chapter || 'none'}
               id={`ql-chapter-${i}`}
               tabIndex={i === active ? 0 : -1}
-              aria-label={c.chapter || t('chapters.unsorted')}
+              aria-label={chapterName(c)}
               onFocus={() => setActive(i)}
               className={`tk-panel ql-card ql-transition-in ${i === active ? 'ql-card-active' : ''}`}
               style={{ '--ql-i': i } as React.CSSProperties}
             >
               <header className="ql-card-head">
-                <h3 className="tk-h3" title={c.chapter || t('chapters.unsorted')}>
-                  {c.chapter || t('chapters.unsorted')}
+                <h3 className="tk-h3" title={chapterName(c)}>
+                  {chapterName(c)}
                 </h3>
                 <span className="tk-mono ql-percent">
                   {c.total ? Math.round((c.retired / c.total) * 100) : 0}%
                 </span>
               </header>
               <div className="ql-card-body">
-                <CardCover src={chapterCover(c)} name={c.chapter || t('chapters.unsorted')} foot />
+                <CardCover src={chapterCover(c)} name={chapterName(c)} foot />
                 <CardInfo c={c} />
               </div>
               <CardMeter total={c.total} retired={c.retired} partial={c.partial} />
@@ -182,7 +217,7 @@ export function Chapters({ moduleId }: { moduleId: string }): React.JSX.Element 
                       {t('library.moveUp')}
                     </MenuItem>
                   )}
-                  {i < ids.length - 1 && (
+                  {i < rows.length - 1 && (
                     <MenuItem onPick={() => move(ids, c.chapter, 1)}>
                       {t('library.moveDown')}
                     </MenuItem>
@@ -224,7 +259,7 @@ export function Chapters({ moduleId }: { moduleId: string }): React.JSX.Element 
 
       {goaling && (
         <GoalDialog
-          name={goaling.chapter || t('chapters.unsorted')}
+          name={chapterName(goaling)}
           goal={goaling.goal}
           open={goaling.unseen + goaling.dueToday + goaling.learning + goaling.retiredToday}
           onClose={() => setGoaling(null)}
@@ -235,7 +270,7 @@ export function Chapters({ moduleId }: { moduleId: string }): React.JSX.Element 
       {resetting && (
         <Confirm
           title={t('library.resetConfirmTitle', {
-            name: resetting.chapter || t('chapters.unsorted')
+            name: chapterName(resetting)
           })}
           text={t('chapters.resetConfirm')}
           yes={t('library.reset')}

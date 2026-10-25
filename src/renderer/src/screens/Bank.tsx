@@ -11,7 +11,7 @@ import { Solution } from '@renderer/components/Solution'
 import { StemMedia } from '@renderer/components/StemMedia'
 import { markBoxes } from '@renderer/components/media'
 import { pushBack } from '@renderer/back'
-import { kaynakGoster } from '@renderer/kaynak'
+import { kaynakGoster, kitapta } from '@renderer/kaynak'
 import { t } from '@renderer/i18n'
 import { useApp } from '@renderer/store/app'
 
@@ -430,7 +430,7 @@ export function Bank({
               </header>
               <Detail
                 q={open}
-                kitap={book?.available === true}
+                kitap={kitapta(book, open.source.file)}
                 book={book}
                 onBook={() => setReading(true)}
               />

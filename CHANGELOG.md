@@ -6,6 +6,26 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.8.1] - 2026-10-25
+
+### Added
+
+- Library and chapter screens switch between Detailed and Simple views; Simple, the old
+  list, is the default.
+- Chapters named `Branch › Chapter` are grouped under branch tabs on the chapter screen.
+- Coding questions show a folding Show Code block; code can come in parts, each with a
+  short note under it.
+- The Tell screen opens a new step at every heading, so long lessons go stage by stage.
+
+### Changed
+
+- Module standard 1.3.0: explanations follow an eight-step order, chapters can carry a
+  branch, and the minimum app version is 0.8.1.
+- The middle link of a question chain no longer appears on its own as a new card; it comes
+  right after the link before it.
+- Questions sourced from a guideline instead of the bundled book no longer show the book
+  button or a page line.
+
 ## [0.8.0] - 2026-10-21
 
 ### Added

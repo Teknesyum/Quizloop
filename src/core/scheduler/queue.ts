@@ -10,6 +10,7 @@ export interface QueueOptions {
   seed?: number
   chapter?: string | null
   partial?: boolean
+  onceki?: Map<string, string>
 }
 
 function jitter(seed: number, id: number): number {
@@ -48,10 +49,28 @@ export async function buildQueue(db: Kysely<Database>, opt: QueueOptions): Promi
     .where('review_log.kind', '=', 'review')
     .execute()
 
+  const onceki = opt.onceki ?? new Map<string, string>()
+  const bekleyen = new Set<string>()
+  if (onceki.size) {
+    const once = await db
+      .selectFrom('card')
+      .select(['question_id', 'state', 'retired_at'])
+      .where('module_id', '=', opt.moduleId)
+      .where('question_id', 'in', [...new Set(onceki.values())])
+      .execute()
+    for (const c of once)
+      if (c.state === State.New && c.retired_at === null) bekleyen.add(c.question_id)
+  }
+  const ara = (c: Card): boolean => {
+    const o = onceki.get(c.question_id)
+    return c.state === State.New && o !== undefined && bekleyen.has(o)
+  }
+
   const buried = new Set(opt.partial ? [] : reviewedToday.map((r) => r.concept_id))
 
   const candidates = rows
     .filter((c) => (opt.partial ? c.last_self_assess === 2 : rank(c, opt.now) <= 2))
+    .filter((c) => opt.partial || !ara(c))
     .sort((a, b) => {
       const r = rank(a, opt.now) - rank(b, opt.now)
       if (r !== 0) return r

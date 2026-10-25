@@ -164,6 +164,10 @@ export function tellSteps(blocks: SolutionBlock[]): SolutionBlock[][] {
   const steps: SolutionBlock[][] = []
   let open: SolutionBlock[] = []
   for (const b of blocks) {
+    if (b.type === 'text' && b.md.startsWith('#') && open.length) {
+      steps.push(open)
+      open = []
+    }
     open.push(b)
     if (b.type === 'sayfa') {
       steps.push(open)

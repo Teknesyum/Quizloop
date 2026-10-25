@@ -6,6 +6,25 @@ export interface NewsEntry {
 
 export const NEWS: NewsEntry[] = [
   {
+    version: '0.8.1',
+    tr: [
+      'Kütüphane ve bölüm ekranında Detaylı ve Basit görünüm var; varsayılan Basit, yani eski liste.',
+      'Dallara ayrılmış modüllerde bölümler dal sekmeleriyle gruplanıyor.',
+      'Kod sorularında Kodu Göster düğmesi kodu parça parça, her parçanın altında kısa açıklamayla gösteriyor.',
+      'Anlat ekranı uzun dersleri başlık başlık, adım adım ilerletiyor.',
+      'Bağlı soruların ortadaki halkası artık tek başına yeni kart olarak gelmiyor.',
+      'Kılavuza dayanan sorularda ilgisiz kitap sayfasını açan düğme gizlendi.'
+    ],
+    en: [
+      'The library and chapter screens have Detailed and Simple views; Simple, the old list, is the default.',
+      'Modules split into branches group their chapters under branch tabs.',
+      'Coding questions have a Show Code button that shows the code in parts, each with a short note.',
+      'The Tell screen moves through long lessons heading by heading.',
+      'The middle link of linked questions no longer comes alone as a new card.',
+      'Questions based on a guideline no longer show a book button that opened an unrelated page.'
+    ]
+  },
+  {
     version: '0.8.0',
     tr: [
       'QuizLoop artık Google Play’de herkese açık.',
